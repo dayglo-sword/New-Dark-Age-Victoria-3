@@ -1,0 +1,14 @@
+{
+  "name" : "New Dark Age",
+  "id" : "NDA",
+  "version" : "0.1",
+  "supported_game_version" : "1.0.6",
+  "short_description" : "A New Dark Age - An Eldritch Horror Mod",
+  "tags" : ["Eldritch","Cthulhu"],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true,
+    "replace_paths" : [
+		]
+  }
+}

@@ -1,0 +1,17 @@
+﻿# This is executed last among all history - evan after main 00_global?
+GLOBAL = {
+	
+	# NDA start up event / screen
+	every_country = {
+		#limit = {
+		#	is_player = yes # show to players only - but is_player not working at this point, just show all
+		#}
+		trigger_event = {
+			id = nda_base.1
+			days = 1
+			popup = yes
+		}
+
+	}
+	
+}
