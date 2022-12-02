@@ -34,3 +34,287 @@ nda_base.1 = { # An Introduction to NDA
 		}
 }
 
+nda_base.2 = { # Nameless Cults published
+	type = country_event
+	placement = ROOT
+	title = nda_base.2.t
+	desc = nda_base.2.d
+	flavor =  nda_base.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1839 and owner of dusseldorf
+		game_date >= 1837 #1839
+		owns_entire_state_region = STATE_NORTH_RHINE
+
+		NOT = {has_global_variable = nda_nameless_cults_exists}
+	}
+
+	immediate = {
+		set_global_variable = nda_nameless_cults_exists
+		set_variable = nda_nameless_cults
+	}	
+	
+	option = { #"What harm can a book do?"
+		name = nda_base.2.a
+		default_option = yes
+		# annoy the clergy
+		ig:ig_devout = {
+			add_modifier = {
+	            name = permitted_obscene_publication
+	            months = 36
+	        }
+		}
+
+		# the intellectuals approve
+		ig:ig_intelligentsia = {
+			add_modifier = {
+	            name = championed_free_speech
+	            months = 36
+	        }
+		}
+	}
+
+	option = { #"Such writings must be supressed!"
+		name = nda_base.2.b
+
+		# annoy the intelectuals
+		ig:ig_intelligentsia = {
+			add_modifier = {
+	            name = curtailed_free_speech
+	            months = 36
+	        }
+		}
+		# the church approves
+		ig:ig_devout = {
+			add_modifier = {
+	            name = stopped_obscene_publication
+	            months = 36
+	        }
+		}
+	}
+}
+
+nda_base.3 = { # Imprint of Nameless Cults - as above but for other mahjor countries 
+	type = country_event
+	placement = ROOT
+	title = nda_base.3.t
+	desc = nda_base.3.d
+	flavor =  nda_base.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1840 and not dusseldorf
+		game_date >= 1838 #1840
+		has_global_variable = nda_nameless_cults_exists
+
+		NOT = { has_variable = nda_nameless_cults}
+
+		OR = {
+			country_rank = rank_value:great_power
+			country_rank = rank_value:major_power
+		}
+	}
+
+	immediate = {
+		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger.
+	}	
+	
+	option = { #"What harm can a book do?"
+		name = nda_base.3.a
+		default_option = yes
+		# annoy the clergy
+		ig:ig_devout = {
+			add_modifier = {
+	            name = permitted_obscene_publication
+	            months = 36
+	        }
+		}
+
+		# the intellectuals approve
+		ig:ig_intelligentsia = {
+			add_modifier = {
+	            name = championed_free_speech
+	            months = 36
+	        }
+		}
+
+		set_variable = nda_nameless_cults
+	}
+
+	option = { #"Such writings must be supressed!"
+		name = nda_base.3.b
+
+		# annoy the intelectuals
+		ig:ig_intelligentsia = {
+			add_modifier = {
+	            name = curtailed_free_speech
+	            months = 36
+	        }
+		}
+		# the church approves
+		ig:ig_devout = {
+			add_modifier = {
+	            name = stopped_obscene_publication
+	            months = 36
+	        }
+		}
+
+		set_variable = nda_nameless_cults
+	}
+}
+
+nda_base.4 = { # The Death of Junzt
+	type = country_event
+	placement = ROOT
+	title = nda_base.4.t
+	desc = nda_base.4.d
+	flavor =  nda_base.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1841 - msg to all players
+		game_date >= 1839 #1841
+
+		NOT = {has_global_variable = nda_nameless_cults_exists}
+	}
+
+	immediate = {
+		set_global_variable = nda_nameless_cults_junztdeath
+	}	
+	
+	option = { #So it begins
+		name = nda_base.4.a
+		default_option = yes
+		}
+}
+
+# Cultist in government - mostly hidden?
+nda_base.5 = { # First Cultist in Country
+	type = country_event
+	placement = ROOT
+	title = nda_base.5.t
+	desc = nda_base.5.d
+	flavor =  nda_base.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		has_variable = nda_nameless_cults
+		NOT = {has_journal_entry = je_nda_cult_spreads}
+	}
+
+	immediate = {
+		# set ig leader character to be Cultist - exclude devout initially?
+		random_interest_group = {
+			limit = { NOT = { is_interest_group_type = ig_devout } }
+			leader = { add_trait = cultist }
+			#save_scope_as = random_ig
+		}
+
+		#scope:random_ig.leader = { add_trait = cultist }
+
+		# start journal for initial cult spread
+		if = {
+			limit = {
+				NOT = {has_journal_entry = je_nda_cult_spreads}
+			}
+			add_journal_entry = { type = je_nda_cult_spreads }		
+		}		
+	}	
+	
+	option = { #"What can we do"
+		name = nda_base.5.a
+		default_option = yes
+	}
+}
+
+nda_base.6 = { # Secret Cultists in Country - also fired from journals: je_nda_cult_spreads 
+	type = country_event
+	placement = ROOT
+	title = nda_base.6.t
+	desc = nda_base.6.d
+	flavor =  nda_base.6.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		# set ig leader character to be Cultist - exclude devout initially?
+
+		# start journal for initial cult spread
+		if = {
+			limit = {
+				NOT = {has_journal_entry = je_nda_cult_spreads}
+			}
+			add_journal_entry = { type = je_nda_cult_spreads }		
+		}		
+	}	
+	
+	option = { #"What can we do"
+		name = nda_base.6.a
+		default_option = yes
+	}
+}
+# Conjuction and Ritual events
+

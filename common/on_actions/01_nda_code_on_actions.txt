@@ -1,0 +1,36 @@
+﻿# For custom on_actions launched by the code itself.
+
+# Root = Country
+on_monthly_pulse_country = {
+	events = {
+		nda_base.2 # Nameless Cults
+		nda_base.3 # Imprint of Nameless Cults	
+		nda_base.5 # First Cultist
+	}
+	random_events = {
+		
+	}
+}
+
+on_half_yearly_pulse_country = {
+	events = {
+		nda_base.4 # Death of Junzt (Nameless Cults)
+	}
+}
+
+on_election_campaign_start = {
+	events = {
+
+	}
+}
+on_election_campaign_end = { 
+	events = {
+
+	}
+}
+
+on_five_year_pulse_country = {
+	events = {
+
+	}
+}

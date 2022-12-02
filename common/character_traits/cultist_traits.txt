@@ -1,0 +1,103 @@
+﻿### Eldritch
+
+cultist = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+	
+	character_modifier = {
+		character_health_add = 0.1
+	}
+
+	command_modifier = {
+	}
+	
+	country_modifier = {
+		country_clergymen_pol_str_mult = -0.1
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.05
+		interest_group_pop_attraction_mult = 0.1
+		interest_group_approval_add = 1
+	}				
+	
+	possible = {
+	}
+	
+	weight = 1
+	
+	replace = {																
+	}
+	
+	value = 3
+}
+
+acolyte = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+
+	character_modifier = {
+		character_health_add = 0.2
+	}
+
+	command_modifier = {
+
+	}
+	
+	country_modifier = {
+		country_clergymen_pol_str_mult = -0.2
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.10
+		interest_group_pop_attraction_mult = 0.2
+		interest_group_approval_add = 1
+	}
+	
+	possible = {
+	}
+	
+	weight = 1
+	
+	replace = {	
+		cultist															
+	}
+	
+	value = 3
+}
+
+master = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+
+	character_modifier = {
+		character_health_add = 0.4
+	}
+
+	command_modifier = {
+
+	}
+	
+	country_modifier = {
+		country_clergymen_pol_str_mult = -0.4
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.4
+		interest_group_approval_add = 1
+	}
+	
+	possible = {
+	}
+	
+	weight = 1
+	
+	replace = {	
+		cultist		
+		acolyte													
+	}
+	
+	value = 3
+}
+

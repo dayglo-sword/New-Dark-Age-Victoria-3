@@ -1,0 +1,81 @@
+﻿je_nda_cult_spreads = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+#	is_shown_when_inactive = {
+#		
+#	}
+
+#	possible = {
+#		
+#	}
+
+	immediate = {
+		set_variable = {
+				name = nda_cult_spread_tracker
+				value = 1
+			}
+	}
+
+    complete = {
+		custom_tooltip = {
+			text = je_nda_cult_spread_complete_tt
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+    }
+
+	on_complete = {
+		#custom_tooltip = je_nda_cult_spread_complete_tt
+		trigger_event = { id = nda_base.1 }
+	}
+
+	on_monthly_pulse = {
+		# Chance that another character will become cultist
+		random_events = { # adjust randomness based upon desired speed?
+			1 = 0
+			1 = nda_base.6 
+		}
+		# check count of cultists in government. add to counter
+		effect = {
+			change_variable = { # test ticker
+					name = nda_cult_spread_tracker
+					add = 1
+				}
+
+			if = {
+				limit = {
+
+				}
+				change_variable = {
+					name = nda_cult_spread_tracker
+					add = 1
+				}
+			}
+		}
+		
+	}
+
+	current_value = {
+		value = root.var:nda_cult_spread_tracker
+	}
+
+	goal_add_value = {
+		add = 6 #100? approx 10years -> 12 months x 8 IG ?
+	}
+
+    fail = {
+		# if ritual failed or star alignment occured
+    }
+	
+	on_fail = {
+		# celebratory event?
+	}
+
+	progressbar = yes
+	weight = 100
+
+	inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

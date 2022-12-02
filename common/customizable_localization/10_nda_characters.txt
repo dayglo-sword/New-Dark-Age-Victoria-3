@@ -1,0 +1,23 @@
+﻿
+cultist_traits_loc = {
+	type = character
+	random_valid = yes
+	text = {
+		trigger = {
+			has_trait = cultist
+		}
+		localization_key = cultist
+	}
+	text = {
+		trigger = {
+			has_trait = acolyte
+		}
+		localization_key = acolyte
+	}
+	text = {
+		trigger = {
+			has_trait = master
+		}
+		localization_key = master
+	}
+}
