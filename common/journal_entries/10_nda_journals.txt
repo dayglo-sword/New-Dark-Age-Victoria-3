@@ -27,7 +27,7 @@
 
 	on_complete = {
 		#custom_tooltip = je_nda_cult_spread_complete_tt
-		trigger_event = { id = nda_base.1 }
+		trigger_event = { id = nda_base.1 }		
 	}
 
 	on_monthly_pulse = {

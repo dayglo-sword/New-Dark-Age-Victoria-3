@@ -1,0 +1,4 @@
+﻿CHARACTERS = { # leave blank for moment
+	c:NEN = {
+	}
+}

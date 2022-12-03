@@ -306,6 +306,7 @@ nda_base.6 = { # Secret Cultists in Country - also fired from journals: je_nda_c
 		if = {
 			limit = {
 				NOT = {has_journal_entry = je_nda_cult_spreads}
+				NOT = {has_variable = nda_cultists_in_open}
 			}
 			add_journal_entry = { type = je_nda_cult_spreads }		
 		}		
@@ -315,6 +316,40 @@ nda_base.6 = { # Secret Cultists in Country - also fired from journals: je_nda_c
 		name = nda_base.6.a
 		default_option = yes
 	}
+}
+
+nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' on completion
+	type = country_event
+	placement = ROOT
+	title = nda_base.7.t
+	desc = nda_base.7.d
+	flavor =  nda_base.7.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+
+	}
+
+	immediate = {
+		set_variable = nda_cultists_in_open
+	}	
+	
+	option = { #So it begins
+		name = nda_base.7.a
+		default_option = yes
+		}
 }
 # Conjuction and Ritual events
 
