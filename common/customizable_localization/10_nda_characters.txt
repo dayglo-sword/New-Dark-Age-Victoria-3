@@ -4,20 +4,20 @@ cultist_traits_loc = {
 	random_valid = yes
 	text = {
 		trigger = {
-			has_trait = cultist
+			has_trait = nda_cultist
 		}
-		localization_key = cultist
+		localization_key = nda_cultist
 	}
 	text = {
 		trigger = {
-			has_trait = acolyte
+			has_trait = nda_acolyte
 		}
-		localization_key = acolyte
+		localization_key = nda_acolyte
 	}
 	text = {
 		trigger = {
-			has_trait = master
+			has_trait = nda_master
 		}
-		localization_key = master
+		localization_key = nda_master
 	}
 }

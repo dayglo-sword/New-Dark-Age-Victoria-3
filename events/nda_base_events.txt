@@ -64,7 +64,7 @@ nda_base.2 = { # Nameless Cults published
 
 	immediate = {
 		set_global_variable = nda_nameless_cults_exists
-		set_variable = nda_nameless_cults
+		#set_variable = nda_nameless_cults  # don't set immediate as causes follow on event to trigger simultaniously.
 	}	
 	
 	option = { #"What harm can a book do?"
@@ -85,6 +85,7 @@ nda_base.2 = { # Nameless Cults published
 	            months = 36
 	        }
 		}
+		set_variable = nda_nameless_cults
 	}
 
 	option = { #"Such writings must be supressed!"
@@ -104,6 +105,7 @@ nda_base.2 = { # Nameless Cults published
 	            months = 36
 	        }
 		}
+		set_variable = nda_nameless_cults
 	}
 }
 
@@ -141,7 +143,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other mahjor count
 	}
 
 	immediate = {
-		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger.
+		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger simultaniously.
 	}	
 	
 	option = { #"What harm can a book do?"
@@ -212,11 +214,11 @@ nda_base.4 = { # The Death of Junzt
  		# 1841 - msg to all players
 		game_date >= 1839 #1841
 
-		NOT = {has_global_variable = nda_nameless_cults_exists}
+		has_global_variable = nda_nameless_cults_exists
 	}
 
 	immediate = {
-		set_global_variable = nda_nameless_cults_junztdeath
+		#set_global_variable = nda_nameless_cults_junztdeath # don't need unless notifing abroad?
 	}	
 	
 	option = { #So it begins
@@ -235,31 +237,40 @@ nda_base.5 = { # First Cultist in Country
 
 	duration = 3
 
-	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+	#event_image = {
+	#	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
 		
-	}
+	#}
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:converted_ig.leader
+
 	trigger = {
 		has_variable = nda_nameless_cults
-		NOT = {has_journal_entry = je_nda_cult_spreads}
+		NOT = {
+			has_journal_entry = je_nda_cult_spreads
+			has_variable = nda_cultists_in_open
+		}
 	}
 
 	immediate = {
 		# set ig leader character to be Cultist - exclude devout initially?
 		random_interest_group = {
 			limit = { NOT = { is_interest_group_type = ig_devout } }
-			leader = { add_trait = cultist }
-			#save_scope_as = random_ig
+			leader = { 
+				add_trait = nda_cultist 
+				save_scope_as = converted_ig_leader
+				}
+				save_scope_as = converted_ig
+	
 		}
-
-		#scope:random_ig.leader = { add_trait = cultist }
 
 		# start journal for initial cult spread
 		if = {
@@ -276,7 +287,7 @@ nda_base.5 = { # First Cultist in Country
 	}
 }
 
-nda_base.6 = { # Secret Cultists in Country - also fired from journals: je_nda_cult_spreads 
+nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_cult_spreads 
 	type = country_event
 	placement = ROOT
 	title = nda_base.6.t
@@ -285,31 +296,45 @@ nda_base.6 = { # Secret Cultists in Country - also fired from journals: je_nda_c
 
 	duration = 3
 
-	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+	#event_image = {
+	#	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
 		
-	}
+	#}
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:converted_ig.leader
 
 	trigger = {
+		#should prevent assignment if all ig already has cultist+ ?
 	}
 
 	immediate = {
 		# set ig leader character to be Cultist - exclude devout initially?
-
-		# start journal for initial cult spread
-		if = {
-			limit = {
-				NOT = {has_journal_entry = je_nda_cult_spreads}
-				NOT = {has_variable = nda_cultists_in_open}
+		random_interest_group = {
+			limit = { 
+				NOT = { 
+					leader = { 
+						OR = { 
+							has_trait = nda_cultist 
+							has_trait = nda_acolyte 
+							has_trait = nda_master    
+							}
+						}
+					} 
+				}
+			leader = { 
+				add_trait = nda_cultist 
+				save_scope_as = converted_ig_leader
 			}
-			add_journal_entry = { type = je_nda_cult_spreads }		
-		}		
+			save_scope_as = converted_ig	
+		}	
 	}	
 	
 	option = { #"What can we do"
@@ -351,5 +376,6 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 		default_option = yes
 		}
 }
+
 # Conjuction and Ritual events
 

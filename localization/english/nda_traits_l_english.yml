@@ -1,6 +1,9 @@
 ﻿l_english:
   
- cultist:0 "Eldritch Cultist"
- acolyte:0 "Eldritch Acolyte"
- master:0 "Eldritch Master"
+ nda_cultist:0 "Eldritch Cultist"
+ nda_cultist_desc:0 "This character is a Cultist, the most junior level of the Eldritch Cult."
+ nda_acolyte:0 "Eldritch Acolyte"
+ nda_cultist_desc:0 "This character is an Acolyte, a trusted member of the Eldritch Cult."
+ nda_master:0 "Eldritch Master"
+ nda_master_desc:0 "This character has become a Master of the Eldritch Cult."
  

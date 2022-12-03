@@ -1,6 +1,6 @@
 ﻿### Eldritch
 
-cultist = {
+nda_cultist = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
 	
@@ -32,7 +32,7 @@ cultist = {
 	value = 3
 }
 
-acolyte = {
+nda_acolyte = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
 
@@ -66,7 +66,7 @@ acolyte = {
 	value = 3
 }
 
-master = {
+nda_master = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
 
