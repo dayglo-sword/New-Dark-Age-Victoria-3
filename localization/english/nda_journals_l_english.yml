@@ -5,4 +5,6 @@
  je_nda_cult_spreads_goal:0 "Create Shadow Government"
  je_nda_cult_spread_complete_tt:0 "The Cult spreads throughout the government"
  je_nda_cult_spread_complete:0 "The Cult spreads throughout the government. Soon they will be able to operate in public."
+ je_nda_cult_spread_hasleader_complete_tt:0 "A member of the government is a Cultist"
+ je_nda_cult_spread_complete:0 "The Cult has control of the leader of the government."
 

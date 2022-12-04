@@ -109,7 +109,7 @@ nda_base.2 = { # Nameless Cults published
 	}
 }
 
-nda_base.3 = { # Imprint of Nameless Cults - as above but for other mahjor countries 
+nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countries 
 	type = country_event
 	placement = ROOT
 	title = nda_base.3.t
@@ -139,11 +139,16 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other mahjor count
 		OR = {
 			country_rank = rank_value:great_power
 			country_rank = rank_value:major_power
+			AND = { # Alway for New England
+				exists = c:NEN
+				c:NEN = ROOT
+			}
 		}
 	}
 
 	immediate = {
 		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger simultaniously.
+		debug_log = "Imprint of Nameless Cults"
 	}	
 	
 	option = { #"What harm can a book do?"

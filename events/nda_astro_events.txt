@@ -1,0 +1,230 @@
+﻿namespace = nda_astro
+# Conjunctions and Stars are Right events - acts as forewarning or drivers for other effects
+
+nda_astro.1 = { # 1842 conjunction
+	type = country_event
+	placement = ROOT
+	title = nda_astro.1.t
+	desc = nda_astro.1.d
+	flavor =  nda_astro.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = { 		
+		game_date = 1842.1.25	
+		# for everyone?		
+	}
+
+	immediate = {
+		set_global_variable = nda_conjunction_1
+		debug_log = "Conjuction 1"
+	}	
+	
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.1.a 
+		default_option = yes
+	}
+}
+
+nda_astro.2 = { # 1861 conjunction
+	type = country_event
+	placement = ROOT
+	title = nda_astro.2.t
+	desc = nda_astro.2.d
+	flavor =  nda_astro.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	trigger = { 		
+		game_date = 1861.10.25		
+	}
+
+	immediate = {
+		set_global_variable = nda_conjunction_2
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.2.a
+		default_option = yes		
+	}
+}
+
+nda_astro.3 = { # 1881 conjunction
+	type = country_event
+	placement = ROOT
+	title = nda_astro.3.t
+	desc = nda_astro.3.d
+	flavor =  nda_astro.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	trigger = { 		
+		game_date = 1881.4.22		
+	}
+
+	immediate = {
+		set_global_variable = nda_conjunction_3
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.3.a
+		default_option = yes		
+	}
+}
+
+nda_astro.4 = { # 1901 conjunction
+	type = country_event
+	placement = ROOT
+	title = nda_astro.4.t
+	desc = nda_astro.4.d
+	flavor =  nda_astro.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	trigger = { 		
+		game_date = 1901.11.28		
+	}
+
+	immediate = {
+		set_global_variable = nda_conjunction_4
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.4.a
+		default_option = yes		
+	}
+}
+
+nda_astro.5 = { # 1921 conjunction
+	type = country_event
+	placement = ROOT
+	title = nda_astro.5.t
+	desc = nda_astro.5.d
+	flavor =  nda_astro.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	trigger = { 		
+		game_date = 1921.9.14	
+	}
+
+	immediate = {
+		set_global_variable = nda_conjunction_4
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.5.a
+		default_option = yes		
+	}
+}
+
+nda_astro.6 = { # 1925 - The Stars are Right!
+	type = country_event
+	placement = ROOT
+	title = nda_astro.6.t
+	desc = nda_astro.6.d
+	flavor =  nda_astro.6.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	trigger = { 		
+		game_date = 1925.3.23	
+	}
+
+	immediate = {
+		# Call of Cthulhu - if ritual complete then trouble
+		#set_global_variable = nda_conjunction_4
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.6.a
+		default_option = yes		
+	}
+}
+
+nda_astro.7 = { # 1890 - The Stars are Early!
+	type = country_event
+	placement = ROOT
+	title = nda_astro.7.t
+	desc = nda_astro.7.d
+	flavor =  nda_astro.7.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	trigger = { 		
+		game_date = 1890.8.20  # HPL's Birthday	
+	}
+
+	immediate = {
+		# Call of Cthulhu - if ritual complete then trouble, otherwise ignore
+		#set_global_variable = nda_conjunction_4
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.7.a
+		default_option = yes		
+	}
+}

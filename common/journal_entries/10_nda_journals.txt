@@ -16,6 +16,7 @@
 			}
 			
 		save_scope_as = nda_je_scope
+		debug_log = "Started: Imprint of Nameless Cults"
 	}
 
     complete = {
@@ -25,16 +26,30 @@
 				is_goal_complete = yes
 			}
 		}
+
+		# Should also be head of government ??
+		custom_tooltip = {
+			text = je_nda_cult_spread_hasleader_complete_tt
+
+			any_interest_group = {	
+				leader = { 
+					OR = { 
+						has_trait = nda_cultist 
+						has_trait = nda_acolyte 
+						has_trait = nda_master    
+					}
+				}
+				is_in_government = yes				
+			}
+		}
     }
 
 	on_complete = {
-		#custom_tooltip = je_nda_cult_spread_complete_tt
-		#set_variable = nda_je_cult_spread_complete # is this local to je? could use existance of nda_cult_spread_tracker?
+		#debug_log = "Completed : Imprint of Nameless Cults"
 		trigger_event = { id = nda_base.7 }		
 	}
 
 	on_monthly_pulse = {
-
 		
 		# check count of cultists in government. add to counter
 		effect = {
@@ -42,16 +57,6 @@
 					name = nda_cult_spread_tracker
 					add = 1
 				}
-
-			#if = {
-			#	limit = {
-#
-#				}
-#				change_variable = {
-#					name = nda_cult_spread_tracker
-#					add = 1
-#				}
-#			}
 
 			every_interest_group = {
 				limit = { 
@@ -70,18 +75,46 @@
 					}					
 				}				
 			}	
-			#if = {
-			#	limit = {
-			#		ig:ig_landowners = {
-			#			is_powerful = no
-			#			is_in_government = no
-			#		}
-			#	}
-			#	change_variable = {
-			#		name = nda_cult_spread_tracker
-			#		add = 1
-			#	}
-			#}
+
+			# Extra if in government
+			every_interest_group = {
+				limit = { 
+					is_in_government = yes
+					leader = { 
+						OR = { 
+							has_trait = nda_cultist 
+							has_trait = nda_acolyte 
+							has_trait = nda_master    
+							}
+						}
+				}
+				scope:nda_je_scope = {
+					change_variable = {
+						name = nda_cult_spread_tracker
+						add = 1
+					}					
+				}				
+			}	
+
+			# Extra if powerful
+			every_interest_group = {
+				limit = { 
+					is_powerful = yes
+					leader = { 
+						OR = { 
+							has_trait = nda_cultist 
+							has_trait = nda_acolyte 
+							has_trait = nda_master    
+							}
+						}
+				}
+				scope:nda_je_scope = {
+					change_variable = {
+						name = nda_cult_spread_tracker
+						add = 1
+					}					
+				}				
+			}			
 		}
 		
 		# Chance that another character will become cultist
@@ -97,7 +130,7 @@
 	}
 
 	goal_add_value = {
-		add = 16 #100? approx 10years -> 12 months x 8 IG ?
+		add = 60 #200? approx 10years -> 12 months x 8 IG + power and govern bonus?
 	}
 
     fail = {
