@@ -19,14 +19,15 @@ nda_astro.1 = { # 1842 conjunction
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	trigger = { 		
-		game_date = 1842.1.25	
+	trigger = { 
+		NOT = { has_variable = nda_conjunction_1 }		
+		game_date >= 1842.1.25	#1836.2.15 #
 		# for everyone?		
 	}
 
 	immediate = {
-		set_global_variable = nda_conjunction_1
-		debug_log = "Conjuction 1"
+		set_variable = nda_conjunction_1
+		debug_log = "Conjunction 1"
 	}	
 	
 	option = { #"A bit worrying..." # Nothing you can do
@@ -53,12 +54,25 @@ nda_astro.2 = { # 1861 conjunction
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
-	trigger = { 		
-		game_date = 1861.10.25		
+	trigger = { 	
+		NOT = { has_variable = nda_conjunction_2 }		
+		game_date >= 1861.10.25		
 	}
 
 	immediate = {
-		set_global_variable = nda_conjunction_2
+		set_variable = nda_conjunction_2
+		debug_log = "Conjunction 2"
+
+		if = {
+			limit = {
+				has_variable = nda_cultists_in_open 
+			}
+			# give them a boost, both religion and pops
+		 	every_scope_state = {
+				convert_population = { target = rel:nda_cultist value = 0.05 }	
+		 	}
+			# try and get obligation from lower ranked cultist country. Must be cultist controlled all government leaders?			
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -86,11 +100,23 @@ nda_astro.3 = { # 1881 conjunction
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
 	trigger = { 		
-		game_date = 1881.4.22		
+		NOT = { has_variable = nda_conjunction_3 }	
+		game_date >= 1881.4.22		
 	}
 
 	immediate = {
-		set_global_variable = nda_conjunction_3
+		set_variable = nda_conjunction_3
+		debug_log = "Conjunction 3"
+
+		if = {
+			limit = {
+				has_variable = nda_cultists_in_open 
+			}
+			# give them a boost, both religion and pops
+		 	every_scope_state = {
+				convert_population = { target = rel:nda_cultist value = 0.05 }	
+		 	}			
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -117,12 +143,24 @@ nda_astro.4 = { # 1901 conjunction
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
-	trigger = { 		
-		game_date = 1901.11.28		
+	trigger = { 
+		NOT = { has_variable = nda_conjunction_4 }			
+		game_date >= 1901.11.28		
 	}
 
 	immediate = {
-		set_global_variable = nda_conjunction_4
+		set_variable = nda_conjunction_4
+		debug_log = "Conjunction 4"
+
+		if = {
+			limit = {
+				has_variable = nda_cultists_in_open 
+			}
+			# give them a boost, both religion and pops
+		 	every_scope_state = {
+				convert_population = { target = rel:nda_cultist value = 0.05 }	
+		 	}			
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -149,12 +187,23 @@ nda_astro.5 = { # 1921 conjunction
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
-	trigger = { 		
-		game_date = 1921.9.14	
+	trigger = { 	
+		NOT = { has_variable = nda_conjunction_5 }		
+		game_date >= 1921.9.14	
 	}
 
 	immediate = {
-		set_global_variable = nda_conjunction_4
+		set_variable = nda_conjunction_5
+		debug_log = "Conjunction 5"
+		if = {
+			limit = {
+				has_variable = nda_cultists_in_open 
+			}
+			# give them a boost, both religion and pops
+		 	every_scope_state = {
+				convert_population = { target = rel:nda_cultist value = 0.05 }	
+		 	}			
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -182,12 +231,12 @@ nda_astro.6 = { # 1925 - The Stars are Right!
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
 	trigger = { 		
-		game_date = 1925.3.23	
+		game_date >= 1925.3.23	
 	}
 
 	immediate = {
 		# Call of Cthulhu - if ritual complete then trouble
-		#set_global_variable = nda_conjunction_4
+		debug_log = "Stars are Right"
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -221,6 +270,7 @@ nda_astro.7 = { # 1890 - The Stars are Early!
 	immediate = {
 		# Call of Cthulhu - if ritual complete then trouble, otherwise ignore
 		#set_global_variable = nda_conjunction_4
+		debug_log = "Stars are Right"
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do

@@ -27,7 +27,7 @@
 			}
 		}
 
-		# Should also be head of government ??
+		# Should also be head of government ?? All member IG's ?
 		custom_tooltip = {
 			text = je_nda_cult_spread_hasleader_complete_tt
 
@@ -114,14 +114,31 @@
 						add = 1
 					}					
 				}				
-			}			
-		}
-		
-		# Chance that another character will become cultist
-		random_events = { # adjust randomness based upon desired speed?
-			2 = 0
-			1 = nda_base.6 
-		}
+			}	
+
+			# Chance that another character will become cultist
+			random_events = { # adjust randomness based upon desired speed?
+				5 = 0
+				1 = nda_base.6 
+			}
+			# random_event can't be nested in if - do nested on_actions
+			#if = { # reduced chance if Nameless Cults rejected
+			#	limit = {
+			#		has_variable = nda_cultists_in_open 
+			#	}
+#
+#				random_events = { # adjust randomness based upon desired speed?
+#					7 = 0
+#					1 = nda_base.6 
+#				}
+#			}
+#			else = {
+#				random_events = { # adjust randomness based upon desired speed?
+#					5 = 0
+#					1 = nda_base.6 
+#				}
+#			}				
+		}	
 		
 	}
 
@@ -130,7 +147,7 @@
 	}
 
 	goal_add_value = {
-		add = 60 #200? approx 10years -> 12 months x 8 IG + power and govern bonus?
+		add = 200 #200? approx 10years -> 12 months x 8 IG + power and govern bonus?
 	}
 
     fail = {

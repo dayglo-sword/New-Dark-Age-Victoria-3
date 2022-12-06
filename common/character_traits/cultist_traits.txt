@@ -22,6 +22,12 @@ nda_cultist = {
 	}				
 	
 	possible = {
+		NOT = { 
+			OR = {
+				has_trait = nda_acolyte
+				has_trait = nda_master
+			} 
+		}
 	}
 	
 	weight = 1
@@ -55,6 +61,7 @@ nda_acolyte = {
 	}
 	
 	possible = {
+		NOT = { has_trait = nda_master }
 	}
 	
 	weight = 1

@@ -1,0 +1,46 @@
+﻿namespace = nda_ritual
+
+nda_ritual.1 = { # Cthulhu Returns
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.1.t
+	desc = nda_ritual.1.d
+	flavor =  nda_ritual.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { # limit to eldritch cult ELD ?
+
+	}
+
+	immediate = {
+
+		# everywhere
+		every_country = {
+			every_scope_state = {
+				state_region = { # will this double up on shared regions?
+					# Cause devestation
+					add_devastation = 20
+					# and polution
+					add_pollution = 10				
+				}
+		 	}	
+		}
+	}	
+	
+	option = { #So it begins
+		name = nda_ritual.1.a
+		default_option = yes
+		}
+}

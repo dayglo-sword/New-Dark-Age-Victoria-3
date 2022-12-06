@@ -1,0 +1,19 @@
+﻿# If you add religions, and use those tags, do not change them without changing everywhere they are used.
+
+# Basic Eldritch Cultist
+nda_rel_cultist = {
+	texture = "gfx/interface/icons/religion_icons/animist.dds"
+	traits = {
+		abomination
+	}
+	color = { 0.33 0.35 0.01 }
+}
+
+# Basic Snake Worshippers
+nda_rel_yigian = {
+	texture = "gfx/interface/icons/religion_icons/animist.dds"
+	traits = {
+		abomination
+	}
+	color = {0.23 0.45 0.01 }
+}

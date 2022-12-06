@@ -1,0 +1,36 @@
+﻿ELD = {
+	use_culture_states = yes
+	
+	required_num_states = 4
+
+	ai_will_do = { always = yes }
+	
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+}
+
+YIG = {
+	use_culture_states = yes
+	
+	required_num_states = 4
+
+	ai_will_do = { always = yes }
+	
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+}
+
+DGN = {
+	use_culture_states = yes
+	
+	required_num_states = 4
+
+	ai_will_do = { always = yes }
+	
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+}
+

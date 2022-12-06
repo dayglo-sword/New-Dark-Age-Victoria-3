@@ -1,20 +1,7 @@
 ﻿l_english:
+
+ STATE_NEW_HAMPSHIRE:1 "Arkham County"
+
+ STATE_AUVERGNE:0 "Averoigne"
  
- STATE_PENNSYLVANIA:0 "Pennsylvania"
- STATE_NEW_JERSEY:0 "New Jersey"
- STATE_ILLINOIS:0 "Illinois"
- STATE_MASSACHUSETTS:0 "Massachusetts"
- STATE_NEW_HAMPSHIRE:0 "Arkham County"
- STATE_CONNECTICUT:0 "Connecticut"
- STATE_RHODE_ISLAND:0 "Rhode Island"
- STATE_VERMONT:0 "Vermont"
- STATE_MAINE:0 "Maine"
- STATE_NORTH_CAROLINA:0 "North Carolina"
- STATE_TEXAS:0 "Texas"
- STATE_YUKON_TERRITORY:0 "Yukon Territory"
- STATE_NORTHWEST_TERRITORIES:0 "Northwest Territories"
- STATE_NUNAVUT:0 "Nunavut"
- STATE_BRITISH_COLUMBIA:0 "British Columbia"
- STATE_ALBERTA:0 "Alberta"
- STATE_SASKATCHEWAN:0 "Saskatchewan"
 

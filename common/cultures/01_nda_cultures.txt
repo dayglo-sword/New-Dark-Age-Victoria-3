@@ -1,7 +1,7 @@
-﻿cultists={
+﻿nda_cul_cultist={
 	color= rgb{ 117 127 174 }
-	religion = protestant
-	traits = { anglophone celtic_people european_heritage }
+	religion = nda_rel_cultist
+	traits = { }
 	
 	male_common_first_names={
 		Abraham Abel Arthur
@@ -86,6 +86,9 @@
 	
 	ethnicities = {
 		1 = caucasian
+		1 = arab
+		1 = central_asian
+		1 = african
 	}
 	graphics = european
 }

@@ -6,6 +6,13 @@ on_monthly_pulse_country = {
 		nda_base.2 # Nameless Cults
 		nda_base.3 # Imprint of Nameless Cults	
 		nda_base.5 # First Cultist
+
+		nda_astro.1 
+		nda_astro.2 
+		nda_astro.3 
+		nda_astro.4 
+		nda_astro.5  
+		
 	}
 	random_events = {
 		

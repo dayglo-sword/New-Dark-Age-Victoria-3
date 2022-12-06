@@ -56,7 +56,7 @@ nda_base.2 = { # Nameless Cults published
 
 	trigger = {
  		# 1839 and owner of dusseldorf
-		game_date >= 1837 #1839
+		game_date >= 1839 #1837 
 		owns_entire_state_region = STATE_NORTH_RHINE
 
 		NOT = {has_global_variable = nda_nameless_cults_exists}
@@ -64,7 +64,6 @@ nda_base.2 = { # Nameless Cults published
 
 	immediate = {
 		set_global_variable = nda_nameless_cults_exists
-		#set_variable = nda_nameless_cults  # don't set immediate as causes follow on event to trigger simultaniously.
 	}	
 	
 	option = { #"What harm can a book do?"
@@ -105,7 +104,7 @@ nda_base.2 = { # Nameless Cults published
 	            months = 36
 	        }
 		}
-		set_variable = nda_nameless_cults
+		set_variable = nda_nameless_cults_supressed
 	}
 }
 
@@ -191,7 +190,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 	        }
 		}
 
-		set_variable = nda_nameless_cults
+		set_variable = nda_nameless_cults_supressed
 	}
 }
 
@@ -217,7 +216,7 @@ nda_base.4 = { # The Death of Junzt
 
 	trigger = {
  		# 1841 - msg to all players
-		game_date >= 1839 #1841
+		game_date >= 1841
 
 		has_global_variable = nda_nameless_cults_exists
 	}
@@ -242,12 +241,6 @@ nda_base.5 = { # First Cultist in Country
 
 	duration = 3
 
-	#event_image = {
-	#	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
-	#}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
@@ -258,7 +251,11 @@ nda_base.5 = { # First Cultist in Country
 	left_icon = scope:converted_ig.leader
 
 	trigger = {
-		has_variable = nda_nameless_cults
+		OR = {
+			has_variable = nda_nameless_cults
+			has_variable = nda_nameless_cults_supressed
+		}
+		
 		NOT = {
 			has_journal_entry = je_nda_cult_spreads
 			has_variable = nda_cultists_in_open
@@ -300,12 +297,6 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 	flavor =  nda_base.6.f
 
 	duration = 3
-
-	#event_image = {
-	#	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
-	#}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
@@ -374,6 +365,18 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 
 	immediate = {
 		set_variable = nda_cultists_in_open
+
+		# set country to contain cultists. need better way of differetating cultist culture and religion.
+		add_primary_culture = cu:nda_cul_cultist # Adding Culture allows for Leaders of Culture despite no pop present!
+		# set country states as homeland, convert % of pops to religion?
+		 every_scope_state = {
+			state_region = {
+				add_homeland = nda_cul_cultist
+			}
+
+			convert_population = { target = rel:nda_rel_cultist value = 0.05 }	
+		 }
+		# add new IG to country just for cultist religion ?
 	}	
 	
 	option = { #So it begins

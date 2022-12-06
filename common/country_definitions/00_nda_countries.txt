@@ -1,0 +1,44 @@
+﻿ELD = {
+	color = { 147 130 110 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { nda_cul_cultist }
+	capital = STATE_BRANDENBURG
+}
+
+YIG = {
+	color = { 147 130 110 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { nda_cul_cultist }
+	capital = STATE_BRANDENBURG # Central America?
+}
+
+DGN = {
+	color = { 147 130 110 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { nda_cul_cultist }
+	capital = STATE_BRANDENBURG # Japan?
+}
+
+IAM = {
+	color = { 147 130 110 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { nda_cul_cultist }
+	capital = STATE_BRANDENBURG # New York
+}
+
