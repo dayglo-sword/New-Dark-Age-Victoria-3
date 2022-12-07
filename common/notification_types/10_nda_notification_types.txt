@@ -1,0 +1,18 @@
+﻿#notification_example = {													#notification key
+#	type = country 															#include notification type
+#	texture = "gfx/interface/icons/notification_icons/technology.dds" 		#notification texture picture
+#
+#	notification_type = feed/toast/popup									#how the notification will be presented
+#	popup_name = acquired_technology_popup 										#gui specification for popups, must be in gui/popups.gui
+#	days = 21 																#amount of days for notification to last
+#
+#	on_created_soundeffect = "event:/SFX/UI/Notifications/notification" 	#notification on creationg sound
+#}
+
+nda_first_open_cult = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = feed
+	days = 28
+}

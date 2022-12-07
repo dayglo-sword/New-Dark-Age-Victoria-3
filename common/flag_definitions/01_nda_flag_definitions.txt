@@ -1,0 +1,10 @@
+﻿
+ELD = {	# Eldritch Realm
+	flag_definition = {
+		coa = ELD # 24 stars
+		coa_with_overlord_canton = USA
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = sub_USA_canton_star
+	}
+}

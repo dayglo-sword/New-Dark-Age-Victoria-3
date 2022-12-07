@@ -39,7 +39,8 @@
 						has_trait = nda_master    
 					}
 				}
-				is_in_government = yes				
+				is_in_government = yes	
+				is_powerful = yes			
 			}
 		}
     }
@@ -53,13 +54,10 @@
 		
 		# check count of cultists in government. add to counter
 		effect = {
-			change_variable = { # test ticker
-					name = nda_cult_spread_tracker
-					add = 1
-				}
-
+			# Every non marginal 
 			every_interest_group = {
 				limit = { 
+					is_marginal = no 
 					leader = { 
 						OR = { 
 							has_trait = nda_cultist 
@@ -114,32 +112,14 @@
 						add = 1
 					}					
 				}				
-			}	
-
-			# Chance that another character will become cultist
-			random_events = { # adjust randomness based upon desired speed?
-				5 = 0
-				1 = nda_base.6 
-			}
-			# random_event can't be nested in if - do nested on_actions
-			#if = { # reduced chance if Nameless Cults rejected
-			#	limit = {
-			#		has_variable = nda_cultists_in_open 
-			#	}
-#
-#				random_events = { # adjust randomness based upon desired speed?
-#					7 = 0
-#					1 = nda_base.6 
-#				}
-#			}
-#			else = {
-#				random_events = { # adjust randomness based upon desired speed?
-#					5 = 0
-#					1 = nda_base.6 
-#				}
-#			}				
+			}				
 		}	
-		
+
+		# Chance that another character will become cultist
+		random_events = { # adjust randomness based upon desired speed? Not sure how if IF not working
+			5 = 0
+			1 = nda_base.6 
+		}		
 	}
 
 	current_value = {
