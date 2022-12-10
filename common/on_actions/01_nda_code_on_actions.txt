@@ -41,3 +41,98 @@ on_five_year_pulse_country = {
 
 	}
 }
+
+# assign Eldritch Cultist to all leaders of that culture
+on_character_creation = {
+	effect = {
+		if = {
+			limit = {
+				has_culture = nda_cul_cultist
+			}
+			add_trait = nda_cultist
+			change_character_religion = rel:nda_rel_cultist
+		}
+	}
+}
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_independent = {
+	effect = {
+		debug_log = "ELD : released_as_independent"	
+		scope:target = {
+
+			if = {
+				limit = {
+					exists = c:ELD
+					c:ELD = scope:target
+				}
+				#debug_log = "ELD : released_as_independent"
+
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:nda_rel_cultist
+				}
+
+			}
+
+		}
+	}
+}
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_own_subject = {
+	effect = {
+		debug_log = "ELD : released_as_own_subject"
+
+		scope:target = {
+
+			if = {
+				limit = {
+					exists = c:ELD
+					c:ELD = scope:target
+				}
+
+				#debug_log = "ELD : released_as_own_subject"
+
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:nda_rel_cultist
+				}
+
+			}
+
+		}
+	}
+}
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_overlord_subject = {
+	effect = {
+
+		debug_log = "ELD : released_as_overlord_subject"
+
+		scope:target = {
+
+			if = {
+				limit = {
+					exists = c:ELD
+					c:ELD = scope:target
+				}
+				#debug_log = "ELD : released_as_overlord_subject"
+
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:nda_rel_cultist
+				}
+
+			}
+
+		}
+	}
+}

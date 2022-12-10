@@ -21,13 +21,14 @@ nda_cultist = {
 		interest_group_approval_add = 1
 	}				
 	
-	possible = {
+	possible = { # Random is possible
 		NOT = { 
 			OR = {
 				has_trait = nda_acolyte
 				has_trait = nda_master
 			} 
 		}
+		owner = { has_variable = nda_cultists_in_open }
 	}
 	
 	weight = 1
@@ -62,6 +63,7 @@ nda_acolyte = {
 	
 	possible = {
 		NOT = { has_trait = nda_master }
+		owner = { has_variable = nda_cultists_in_open }
 	}
 	
 	weight = 1
@@ -96,6 +98,7 @@ nda_master = {
 	}
 	
 	possible = {
+		owner = { has_variable = nda_cultists_in_open }
 	}
 	
 	weight = 1

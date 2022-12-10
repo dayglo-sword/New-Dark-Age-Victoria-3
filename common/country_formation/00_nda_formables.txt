@@ -6,7 +6,7 @@
 	unification_play = dp_unify_eldritch_cult
 	leadership_play = dp_leadership_eldritch_cult
 
-	required_states_fraction = 0.63
+	required_states_fraction = 0.3 # 0.63 is way too high when multi GPs get homelands.
 	
 	ai_will_do = { always = yes }
 

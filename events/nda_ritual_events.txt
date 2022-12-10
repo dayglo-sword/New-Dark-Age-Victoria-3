@@ -20,23 +20,12 @@ nda_ritual.1 = { # Cthulhu Returns
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	trigger = { # limit to eldritch cult ELD ?
+	trigger = { # limit to eldritch cult ELD ? Called Only?
 
 	}
 
 	immediate = {
-
-		# everywhere
-		every_country = {
-			every_scope_state = {
-				state_region = { # will this double up on shared regions?
-					# Cause devestation
-					add_devastation = 20
-					# and polution
-					add_pollution = 10				
-				}
-		 	}	
-		}
+		nda_effect_cthulhu_arrives = yes
 	}	
 	
 	option = { #So it begins

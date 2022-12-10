@@ -2,8 +2,11 @@
   
  nda_rel_cultist:0 "Eldritch Rite"
  nda_yigian:0 "Yigian"
+ nda_rel_yigian:0 "Yigian Sect"
+ nda_rel_dagonic:0 "Dagonic Sect"
 
  # Add cultures here as well
  nda_cul_cultist:0 "Eldritch Cult"
-
+ nda_cul_yigian:0 "Yigian Cult"
+ nda_cul_dagonic:0 "Dagonic Cult"
  

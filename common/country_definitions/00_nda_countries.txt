@@ -1,5 +1,5 @@
 ﻿ELD = {
-	color = { 21 21 227 }
+	color ={ 142 36 170 }
 	
 	country_type = recognized
 
@@ -17,18 +17,18 @@ YIG = {
 	tier = empire
 	
 	cultures = { nda_cul_cultist }
-	capital = STATE_BRANDENBURG # Central America?
+	capital = STATE_AMAZONAS # Central America?
 }
 
 DGN = {
-	color = { 11 84 179 }
+	color = { 38 198 218 } #{ 11 84 179 }
 	
 	country_type = recognized
 
 	tier = empire
 	
 	cultures = { nda_cul_cultist }
-	capital = STATE_BRANDENBURG # Japan?
+	capital = STATE_KANSAI # Japan?
 }
 
 IAM = {
@@ -39,6 +39,6 @@ IAM = {
 	tier = empire
 	
 	cultures = { nda_cul_cultist }
-	capital = STATE_BRANDENBURG # New York
+	capital = STATE_NEW_YORK # New York
 }
 

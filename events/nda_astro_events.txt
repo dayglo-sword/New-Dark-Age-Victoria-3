@@ -22,7 +22,13 @@ nda_astro.1 = { # 1842 conjunction
 	trigger = { 
 		NOT = { has_variable = nda_conjunction_1 }		
 		game_date >= 1842.1.25	#1836.2.15 #
-		# for everyone?		
+		game_date < 1843 # stop late forming countries getting event	
+		# for everyone?	
+		OR = {
+			#is player or open cultist
+			is_player = yes
+			has_variable = nda_cultists_in_open
+		}	
 	}
 
 	immediate = {
@@ -57,22 +63,13 @@ nda_astro.2 = { # 1861 conjunction
 	trigger = { 	
 		NOT = { has_variable = nda_conjunction_2 }		
 		game_date >= 1861.10.25		
+		game_date < 1862 # stop late forming countries getting event	
 	}
 
 	immediate = {
 		set_variable = nda_conjunction_2
 		debug_log = "Conjunction 2"
-
-		if = {
-			limit = {
-				has_variable = nda_cultists_in_open 
-			}
-			# give them a boost, both religion and pops
-		 	every_scope_state = {
-				convert_population = { target = rel:nda_cultist value = 0.05 }	
-		 	}
-			# try and get obligation from lower ranked cultist country. Must be cultist controlled all government leaders?			
-		}
+		nda_effect_rite_conversion = yes
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -102,21 +99,13 @@ nda_astro.3 = { # 1881 conjunction
 	trigger = { 		
 		NOT = { has_variable = nda_conjunction_3 }	
 		game_date >= 1881.4.22		
+		game_date < 1882 # stop late forming countries getting event	
 	}
 
 	immediate = {
 		set_variable = nda_conjunction_3
 		debug_log = "Conjunction 3"
-
-		if = {
-			limit = {
-				has_variable = nda_cultists_in_open 
-			}
-			# give them a boost, both religion and pops
-		 	every_scope_state = {
-				convert_population = { target = rel:nda_cultist value = 0.05 }	
-		 	}			
-		}
+		nda_effect_rite_conversion = yes
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -146,21 +135,13 @@ nda_astro.4 = { # 1901 conjunction
 	trigger = { 
 		NOT = { has_variable = nda_conjunction_4 }			
 		game_date >= 1901.11.28		
+		game_date < 1902 # stop late forming countries getting event
 	}
 
 	immediate = {
 		set_variable = nda_conjunction_4
 		debug_log = "Conjunction 4"
-
-		if = {
-			limit = {
-				has_variable = nda_cultists_in_open 
-			}
-			# give them a boost, both religion and pops
-		 	every_scope_state = {
-				convert_population = { target = rel:nda_cultist value = 0.05 }	
-		 	}			
-		}
+		nda_effect_rite_conversion = yes
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -190,20 +171,13 @@ nda_astro.5 = { # 1921 conjunction
 	trigger = { 	
 		NOT = { has_variable = nda_conjunction_5 }		
 		game_date >= 1921.9.14	
+		game_date < 1922 # stop late forming countries getting event	
 	}
 
 	immediate = {
 		set_variable = nda_conjunction_5
 		debug_log = "Conjunction 5"
-		if = {
-			limit = {
-				has_variable = nda_cultists_in_open 
-			}
-			# give them a boost, both religion and pops
-		 	every_scope_state = {
-				convert_population = { target = rel:nda_cultist value = 0.05 }	
-		 	}			
-		}
+		nda_effect_rite_conversion = yes
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do

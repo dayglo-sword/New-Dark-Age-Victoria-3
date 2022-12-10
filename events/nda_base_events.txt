@@ -147,7 +147,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 
 	immediate = {
 		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger simultaniously.
-		debug_log = "Imprint of Nameless Cults"
+		debug_log = "Imprint of Nameless Cults : " 
 	}	
 	
 	option = { #"What harm can a book do?"
@@ -217,18 +217,19 @@ nda_base.4 = { # The Death of Junzt
 	trigger = {
  		# 1841 - msg to all players
 		game_date >= 1841
-
+		game_date < 1842 # Can clear variables out after this date ?
 		has_global_variable = nda_nameless_cults_exists
+		NOT = { has_variable = nda_nameless_cults_junztdeath  }
 	}
 
 	immediate = {
-		#set_global_variable = nda_nameless_cults_junztdeath # don't need unless notifing abroad?
+		set_variable = nda_nameless_cults_junztdeath # don't need unless notifing abroad?
 	}	
 	
 	option = { #So it begins
 		name = nda_base.4.a
 		default_option = yes
-		}
+	}
 }
 
 # Cultist in government - mostly hidden?
@@ -374,7 +375,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 				add_homeland = nda_cul_cultist
 			}
 
-			convert_population = { target = rel:nda_rel_cultist value = 0.05 }	
+			convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
 		 }
 		# add new IG to country just for cultist religion ?
 

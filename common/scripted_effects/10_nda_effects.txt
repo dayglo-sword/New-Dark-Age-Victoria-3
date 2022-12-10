@@ -1,0 +1,53 @@
+﻿nda_effect_cthulhu_arrives = { # Used at end of Ritual
+	# everywhere
+	every_country = {
+		every_scope_state = {
+			state_region = { # will this double up on shared regions?
+				# Cause devestation
+				add_devastation = 30
+				# and polution
+				add_pollution = 10				
+			}
+		}	
+	}		
+}
+
+nda_effect_rite_conversion = { # Called from astro events - country scope
+	if = {
+		limit = {
+			has_variable = nda_cultists_in_open 
+		}
+
+		# give them a boost, both religion and pops
+		every_scope_state = {
+			convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
+
+			# everyone of Eldritch Culture should follow Rite 
+			every_scope_pop = {
+				limit ={
+					culture = cu:nda_cul_cultist
+				}
+				change_pop_religion = { target = rel:nda_rel_cultist value = 1 }			
+			}	
+			# everyone of Eldritch Culture should follow Rite 
+			every_scope_pop = {
+				limit ={
+					has_pop_religion = nda_rel_cultist
+					NOT = { culture = cu:nda_cul_cultist }
+				}
+				change_pop_culture = { target = cu:nda_cul_cultist value = 1 }			
+			}				
+		}
+
+		# Mass Delusion		
+		add_loyalists = { value = 1 religion = rel:nda_rel_cultist } #add_loyalists = { value = x pop_type = <key> strata = <key> culture = <scope/cu:key> religion = <scope/rel:key> }
+		# reduce radicals ??
+
+	}
+	if = {
+		limit = {
+			c:ELD = ROOT
+		}
+		# ELD only buffs
+	}	
+}
