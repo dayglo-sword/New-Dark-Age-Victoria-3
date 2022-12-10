@@ -1,6 +1,9 @@
 ﻿l_english:
   
  notification_nda_first_open_cult_tooltip:0 "#header $notification_nda_first_open_cult_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_first_open_cult_desc$"
- notification_nda_first_open_cult_name:1 "[SCOPE.sC('originator').GetName ] - The Cult in the open"
+ notification_nda_first_open_cult_name:1 "[SCOPE.sC('originator').GetName ] - The Cult in the Open"
  notification_nda_first_open_cult_desc:1 "The Elditch Cult in [SCOPE.sC('originator').GetName] no longer operates in secret. The Cultists openly practice their Rites."
+ notification_nda_first_yig_cult_tooltip:0 "#header $notification_nda_first_yig_cult_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_first_yig_cult_desc$"
+ notification_nda_first_yig_cult_name:1 "[SCOPE.sC('originator').GetName ] - The Rise of Yig"
+ notification_nda_first_yig_cult_desc:1 "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of the snake god, Yig."
 

@@ -42,15 +42,23 @@ on_five_year_pulse_country = {
 	}
 }
 
-# assign Eldritch Cultist to all leaders of that culture
+# assign Cultists to all leaders of that culture
 on_character_creation = {
 	effect = {
 		if = {
 			limit = {
-				has_culture = nda_cul_cultist
+				has_culture = cu:nda_cul_cultist
 			}
 			add_trait = nda_cultist
 			change_character_religion = rel:nda_rel_cultist
+		}
+		# same for the yigians
+		if = {
+			limit = {
+				has_culture = cu:nda_cul_yigian
+			}
+			add_trait = nda_yig_cultist
+			change_character_religion = rel:nda_rel_yigian
 		}
 	}
 }
@@ -59,7 +67,8 @@ on_character_creation = {
 # scope:target = Released Country
 on_country_released_as_independent = {
 	effect = {
-		debug_log = "ELD : released_as_independent"	
+		debug_log = "released_as_independent"	
+
 		scope:target = {
 
 			if = {
@@ -67,7 +76,7 @@ on_country_released_as_independent = {
 					exists = c:ELD
 					c:ELD = scope:target
 				}
-				#debug_log = "ELD : released_as_independent"
+				debug_log = "ELD : released_as_independent"
 
 			}
 			if = {
@@ -85,7 +94,7 @@ on_country_released_as_independent = {
 # scope:target = Released Country
 on_country_released_as_own_subject = {
 	effect = {
-		debug_log = "ELD : released_as_own_subject"
+		debug_log = "released_as_own_subject"
 
 		scope:target = {
 
@@ -95,7 +104,7 @@ on_country_released_as_own_subject = {
 					c:ELD = scope:target
 				}
 
-				#debug_log = "ELD : released_as_own_subject"
+				debug_log = "ELD : released_as_own_subject"
 
 			}
 			if = {
@@ -114,7 +123,7 @@ on_country_released_as_own_subject = {
 on_country_released_as_overlord_subject = {
 	effect = {
 
-		debug_log = "ELD : released_as_overlord_subject"
+		debug_log = "released_as_overlord_subject"
 
 		scope:target = {
 
@@ -123,7 +132,7 @@ on_country_released_as_overlord_subject = {
 					exists = c:ELD
 					c:ELD = scope:target
 				}
-				#debug_log = "ELD : released_as_overlord_subject"
+				debug_log = "ELD : released_as_overlord_subject"
 
 			}
 			if = {

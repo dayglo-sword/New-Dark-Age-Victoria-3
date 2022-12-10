@@ -28,7 +28,10 @@ nda_cultist = {
 				has_trait = nda_master
 			} 
 		}
-		owner = { has_variable = nda_cultists_in_open }
+		owner = { 
+			has_variable = nda_cultists_in_open
+			NOT = {has_variable = nda_yig_in_open}
+		}
 	}
 	
 	weight = 1
@@ -63,13 +66,16 @@ nda_acolyte = {
 	
 	possible = {
 		NOT = { has_trait = nda_master }
-		owner = { has_variable = nda_cultists_in_open }
+		owner = { 
+			has_variable = nda_cultists_in_open
+			NOT = { has_variable = nda_yig_in_open }
+		}
 	}
 	
 	weight = 1
 	
 	replace = {	
-		cultist															
+		nda_cultist															
 	}
 	
 	value = 3
@@ -98,14 +104,142 @@ nda_master = {
 	}
 	
 	possible = {
-		owner = { has_variable = nda_cultists_in_open }
+		owner = { 
+			has_variable = nda_cultists_in_open
+			NOT = {has_variable = nda_yig_in_open}
+		}
 	}
 	
 	weight = 1
 	
 	replace = {	
-		cultist		
-		acolyte													
+		nda_cultist		
+		nda_acolyte													
+	}
+	
+	value = 3
+}
+
+
+
+### Yigian
+
+nda_yig_cultist = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+	
+	character_modifier = {
+		character_health_add = 0.1
+	}
+
+	command_modifier = {
+	}
+	
+	country_modifier = {
+		country_clergymen_pol_str_mult = -0.1
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.05
+		interest_group_pop_attraction_mult = 0.1
+		interest_group_approval_add = 1
+	}				
+	
+	possible = { # Random is possible
+		NOT = { 
+			OR = {
+				has_trait = nda_acolyte
+				has_trait = nda_master
+			} 
+		}
+		owner = { 
+			has_variable = nda_yig_in_open
+		}
+	}
+	
+	weight = 1
+	
+	replace = {																
+	}
+	
+	value = 3
+}
+
+nda_yig_acolyte = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+
+	character_modifier = {
+		character_health_add = 0.2
+	}
+
+	command_modifier = {
+
+	}
+	
+	country_modifier = {
+		country_clergymen_pol_str_mult = -0.2
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.10
+		interest_group_pop_attraction_mult = 0.2
+		interest_group_approval_add = 1
+	}
+	
+	possible = {
+		NOT = { has_trait = nda_master }
+		owner = { 
+			has_variable = nda_yig_in_open
+		}
+	}
+	
+	weight = 1
+	
+	replace = {	
+		nda_cultist
+		nda_yig_cultist															
+	}
+	
+	value = 3
+}
+
+nda_yig_master = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+
+	character_modifier = {
+		character_health_add = 0.4
+	}
+
+	command_modifier = {
+
+	}
+	
+	country_modifier = {
+		country_clergymen_pol_str_mult = -0.4
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.4
+		interest_group_approval_add = 1
+	}
+	
+	possible = {
+		owner = { 
+			has_variable = nda_yig_in_open
+		}
+	}
+	
+	weight = 1
+	
+	replace = {	
+		nda_cultist		
+		nda_acolyte	
+		nda_master	
+		nda_yig_cultist		
+		nda_yig_acolyte												
 	}
 	
 	value = 3

@@ -6,4 +6,10 @@
  nda_acolyte_desc:0 "This person is an Acolyte, a trusted member of the Eldritch Cult."
  nda_master:0 "Eldritch Master"
  nda_master_desc:0 "This person has become a Master of the Eldritch Cult."
+ nda_yig_cultist:0 "Yigian Cultist"
+ nda_yig_cultist_desc:0 "This person is a Cultist, the most junior level of the Yigian Cult."
+ nda_yig_acolyte:0 "Yigian Acolyte"
+ nda_yig_acolyte_desc:0 "This person is an Acolyte, a trusted member of the Yigian Cult."
+ nda_yig_master:0 "Yigian Master"
+ nda_yig_master_desc:0 "This person has become a Master of the Yigian Cult."
  

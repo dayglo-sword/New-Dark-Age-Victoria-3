@@ -135,7 +135,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 
 		NOT = { has_variable = nda_nameless_cults}
 
-		OR = {
+		OR = { # will also fire for countries as they promote in rank
 			country_rank = rank_value:great_power
 			country_rank = rank_value:major_power
 			AND = { # Alway for New England
@@ -258,8 +258,11 @@ nda_base.5 = { # First Cultist in Country
 		}
 		
 		NOT = {
-			has_journal_entry = je_nda_cult_spreads
-			has_variable = nda_cultists_in_open
+			OR = {
+				has_journal_entry = je_nda_cult_spreads
+				has_variable = nda_cultists_in_open		
+			}
+
 		}
 	}
 
@@ -279,6 +282,7 @@ nda_base.5 = { # First Cultist in Country
 		if = {
 			limit = {
 				NOT = {has_journal_entry = je_nda_cult_spreads}
+				NOT = {has_variable = nda_cultists_in_open} # don't rerun
 			}
 			add_journal_entry = { type = je_nda_cult_spreads }		
 		}		
@@ -385,7 +389,8 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 		every_country = {
 			limit = {
 				is_player = yes
-				NOT = { has_global_variable = nda_cultists_in_open}
+				NOT = {has_journal_entry = je_nda_cult_spreads}
+				NOT = {has_variable = nda_cultists_in_open} # don't rerun
 			}
 
 			post_notification = nda_first_open_cult 
@@ -394,6 +399,17 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 		}
 		
 		set_global_variable = nda_cultists_in_open	
+
+		# Need to try and spread further so pass off to a non-cultist neighbour
+		random_country = {
+			limit ={
+				is_adjacent = ROOT
+				NOT = {has_journal_entry = je_nda_cult_spreads}
+				NOT = {has_variable = nda_cultists_in_open}
+			}
+			trigger_event = { id = nda_base.8 }	# spread the cult
+		}
+		
 	}	
 	
 	option = { #So it begins
@@ -402,38 +418,45 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 		}
 }
 
-#nda_base.8 = { # Notification that first country has recognized cult
-#	type = country_event
-#	placement = ROOT
-#	title = nda_base.8.t
-#	desc = nda_base.8.d
-#	flavor =  nda_base.8.f
-#
-#	duration = 3
-#
-#	event_image = {
-#		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-#		
-#	}
+nda_base.8 = { # Notification that first country has recognized cult
+	type = country_event
+	placement = ROOT
+	title = nda_base.8.t
+	desc = nda_base.8.d
+	flavor =  nda_base.8.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
 #	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
-#
-#	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-#	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-#
-#	icon = "gfx/interface/icons/event_icons/event_fire.dds"
-#
-#	trigger = {
-#		NOT = { has_gloabal_variable = nda_cultists_in_open}
-#	}
-#
-#	immediate = {
-#		set_gloabal_variable = nda_cultists_in_open # stop refiring
-#	}	
-#	
-#	option = { #So it begins
-#		name = nda_base.8.a
-#		default_option = yes
-#		}
-#}
-# Conjuction and Ritual events
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		# start journal for initial cult spread
+		if = {
+			limit = {
+				NOT = {has_journal_entry = je_nda_cult_spreads}
+				NOT = {has_variable = nda_cultists_in_open} # don't rerun
+			}
+			add_journal_entry = { type = je_nda_cult_spreads }		
+		}
+	}	
+	
+	option = { #Curse Them!
+		name = nda_base.8.a
+		default_option = yes
+		}
+}
+
 

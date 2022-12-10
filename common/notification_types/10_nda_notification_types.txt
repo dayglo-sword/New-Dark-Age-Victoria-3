@@ -16,3 +16,11 @@ nda_first_open_cult = {
 	notification_type = feed
 	days = 28
 }
+
+nda_first_yig_cult = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = feed
+	days = 28
+}

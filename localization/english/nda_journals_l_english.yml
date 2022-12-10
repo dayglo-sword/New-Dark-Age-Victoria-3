@@ -1,9 +1,14 @@
 ﻿l_english:
   
  je_nda_cult_spreads:0 "The Cult Spreads"
- je_nda_cult_spreads_reason:0 "In the dark corridors of power the Cult has started spreading its influence./n/nSlowly the politicians and bureaucrats fall under their malignant spell."
+ je_nda_cult_spreads_reason:0 "In the dark corridors of power the Cult has started spreading its influence.\n\nSlowly the politicians and bureaucrats fall under their malignant spell."
  je_nda_cult_spreads_goal:0 "Create Shadow Government"
  je_nda_cult_spread_complete_tt:0 "The Cult spreads throughout the political sphere."
  je_nda_cult_spread_complete:0 "The Cult spreads throughout the political sphere. Soon they will be able to operate openly in public."
  je_nda_cult_spread_hasleader_complete_tt:0 "A powerful leader of the government is a Cultist"
-
+ je_nda_cult_to_yigian:0 "Yig Worship Spreads"
+ je_nda_cult_to_yigian_reason:0 "In the dark corridors of power the Cult is increasingly worshiping the snake god Yig.\n\nSlowly the Cultists are switching and falling under Yigs spell."
+ je_nda_cult_to_yigian_goal:0 "Pledge the cults alliegence in this country to the snake god Yig"
+ je_nda_cult_to_yigian_complete_tt:0 "The Yigian Cult spreads throughout the political sphere."
+ je_nda_cult_to_yigian_complete:0 "The Yigian Cult spreads throughout the political sphere. Soon they will take control of the Cult in this country."
+ je_nda_cult_to_yigian_hasleader_complete_tt:0 "A powerful leader of the government is a Yigian"

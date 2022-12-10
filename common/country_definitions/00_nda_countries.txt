@@ -16,7 +16,7 @@ YIG = {
 
 	tier = empire
 	
-	cultures = { nda_cul_cultist }
+	cultures = { nda_cul_yigian }
 	capital = STATE_AMAZONAS # Central America?
 }
 
