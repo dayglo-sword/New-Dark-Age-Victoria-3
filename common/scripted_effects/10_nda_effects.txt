@@ -42,6 +42,7 @@ nda_effect_rite_conversion = { # Called from astro events - country scope
 
 		# Mass Delusion		
 		add_loyalists = { value = 1 religion = rel:nda_rel_cultist } #add_loyalists = { value = x pop_type = <key> strata = <key> culture = <scope/cu:key> religion = <scope/rel:key> }
+		add_loyalists = { value = 1 culture = cu:nda_cul_cultist }
 		# reduce radicals ??
 
 	}
@@ -53,7 +54,7 @@ nda_effect_rite_conversion = { # Called from astro events - country scope
 	}	
 	
 	# Yigian buffs
-		if = {
+	if = {
 		limit = {
 			has_variable = nda_yig_in_open 
 		}
@@ -62,7 +63,7 @@ nda_effect_rite_conversion = { # Called from astro events - country scope
 		every_scope_state = {
 			convert_population = { target = rel:nda_rel_yigian value = 0.10 }	
 
-			# everyone of Eldritch Culture should follow Rite 
+			# everyone of Yigian Culture should follow Rite 
 			every_scope_pop = {
 				limit ={
 					culture = cu:nda_cul_yigian
@@ -81,6 +82,7 @@ nda_effect_rite_conversion = { # Called from astro events - country scope
 
 		# Mass Delusion		
 		add_loyalists = { value = 1 religion = rel:nda_rel_yigian } #add_loyalists = { value = x pop_type = <key> strata = <key> culture = <scope/cu:key> religion = <scope/rel:key> }
+		add_loyalists = { value = 1 culture = cu:nda_cul_yigian }
 		# reduce radicals ??
 
 	}

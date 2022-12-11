@@ -5,3 +5,8 @@
  YIG_ADJ:0 "Yigian"
  DGN:0 "Dagonic Domain"
  DGN_ADJ:0 "Dagonic"
+
+ # Flavour text
+ ELD_FLAVOR_TEXT:0 "Finally, the age that worshippers of the #BOLD Great Old Ones #! have waited so long for is upon us.\n\n The #BOLD Eldritch Realm #! must ensure that when the Stars are right, #BOLD Great Cthulhu #! returns and that humans recognise their insignificance."
+ YIG_FLAVOR_TEXT:0 "Once, before the age of #BOLD Atlantis#!, the Snake-people, worshippers of #BOLD Yig#!, ruled the land and the primitive primates upon it.\n\n Forced into hiding at the end of the #BOLD Hyborean Age#!, now is the time of renewal.
+ DGN_FLAVOR_TEXT:1 "In the deep the worship of #BOLD Dagon#! and #BOLDHydra#! continues.\n\n Now is the time for it to reach the shores, in preparation of Father Cthulhu's return."

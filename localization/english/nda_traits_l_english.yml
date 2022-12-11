@@ -13,3 +13,6 @@
  nda_yig_master:0 "Yigian Master"
  nda_yig_master_desc:0 "This person has become a Master of the Yigian Cult."
  
+ # Idealogies
+ideology_nda_cabalistic:0 "Cabalistic"
+ideology_nda_cultist:0 "Cultist"

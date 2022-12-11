@@ -28,11 +28,7 @@ nda_yigian.1 = { # Convert a Cultist to Yigian equivalent - called from journal 
 		random_interest_group = {
 			limit = { 
 				leader = { 
-					OR = { 
-						has_trait = nda_cultist 
-						has_trait = nda_acolyte 
-						has_trait = nda_master    
-					}
+					has_eldritch_trait = yes
 				} 
 			}
 			leader = {

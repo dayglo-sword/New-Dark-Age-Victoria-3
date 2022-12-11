@@ -27,7 +27,7 @@
 		# populate with names here
 	}	
 	
-	ethnicities = {
+	ethnicities = { # have a bit of a mix
 		1 = caucasian
 		1 = arab
 		1 = central_asian
@@ -42,17 +42,17 @@ nda_cul_yigian={
 	traits = { }
 	
 	male_common_first_names={
-		child_of son_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
+		child_of son_of slave_of servant_of beloved_of follower_of minion_of squire_of bairn_of consort_of offspring_of hatchling_of neonate_of
 	}
 	female_common_first_names = {
-		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
+		child_of daughter_of slave_of servant_of beloved_of follower_of minion_of squire_of bairn_of consort_of offspring_of hatchling_of neonate_of 
 	}
 	common_last_names={
-		the_blood the_dark the_chaos hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
+		yig the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha ghatanothoa zoth-ommog
 	}
 
 	noble_last_names = {
-		ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog
+		yig set the_great_dragon the_father_serpent the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa 
 	}
 	
 	male_regal_first_names = {
@@ -63,6 +63,7 @@ nda_cul_yigian={
 	}
 	regal_last_names = {
 		# populate with names here
+		yig set the_great_dragon the_father_serpent 
 	}	
 	
 	ethnicities = {
@@ -70,8 +71,10 @@ nda_cul_yigian={
 		1 = arab
 		1 = central_asian
 		1 = african
+		1 = south_american
+		1 = native_american
 	}
-	graphics = european
+	graphics = generic
 }
 
 nda_cul_dagonic={
@@ -86,11 +89,11 @@ nda_cul_dagonic={
 		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
 	}
 	common_last_names={
-		the_blood the_dark the_chaos hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
+		the_deep the_abyss the_storm the_waves the_pelagic the_cetacen the_kraken nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
 	}
 
 	noble_last_names = {
-		ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog
+		cthugha cthulhu dagon hydra zoth-ommog
 	}
 	
 	male_regal_first_names = {

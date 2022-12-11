@@ -1,0 +1,64 @@
+﻿### Character triggers
+has_eldritch_trait =
+{
+	OR = { 
+		has_trait = nda_cultist 
+		has_trait = nda_acolyte 
+		has_trait = nda_master    
+	}
+}
+
+has_yigian_trait =
+{
+	OR = { 
+		has_trait = nda_cultist 
+		has_trait = nda_acolyte 
+		has_trait = nda_master    
+	}
+}
+
+has_any_cultist_trait = {
+	OR = { 
+		has_trait = nda_cultist 
+		has_trait = nda_acolyte 
+		has_trait = nda_master  
+		has_trait = nda_yig_cultist 
+		has_trait = nda_yig_acolyte 
+		has_trait = nda_yig_master   
+	}
+}
+
+### Geography triggers
+
+#is_full_cult_country = {
+#	OR ={
+#		AND = {
+#			exists = c:ELD
+#			owner = { c:ELD = THIS }				
+#		}
+#		AND = {
+#			exists = c:YIG
+#			owner = { c:YIG = THIS }				
+#		}
+#		AND = {
+#			exists = c:DGN
+#			owner = { c:DGN = THIS }				
+#		}	
+#	}
+#
+#}
+
+is_potentially_yigian = { 
+	# has capital in certain american lands
+	is_capital = yes
+	OR = {
+		# the Yigian realms
+		region = sr:region_brazil
+		region = sr:region_andes
+		region = sr:region_la_plata
+		region = sr:region_gran_colombia
+		region = sr:region_great_plains # original home in books
+		region = sr:region_mexico
+		region = sr:region_central_america
+	}
+}

@@ -68,7 +68,12 @@ nda_base.2 = { # Nameless Cults published
 	
 	option = { #"What harm can a book do?"
 		name = nda_base.2.a
-		default_option = yes
+		#default_option = yes
+		
+		ai_chance = { # will +ve effect conversion rate
+			base = 80		
+		}
+
 		# annoy the clergy
 		ig:ig_devout = {
 			add_modifier = {
@@ -89,6 +94,10 @@ nda_base.2 = { # Nameless Cults published
 
 	option = { #"Such writings must be supressed!"
 		name = nda_base.2.b
+
+		ai_chance = { # will -ve effect conversion rate
+			base = 20		
+		}
 
 		# annoy the intelectuals
 		ig:ig_intelligentsia = {
@@ -142,6 +151,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 				exists = c:NEN
 				c:NEN = ROOT
 			}
+			# random country in yigian lands to rival brazil for formation?
 		}
 	}
 
@@ -152,7 +162,12 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 	
 	option = { #"What harm can a book do?"
 		name = nda_base.3.a
-		default_option = yes
+		#default_option = yes
+		
+		ai_chance = { # will +ve effect conversion rate
+			base = 80		
+		}
+
 		# annoy the clergy
 		ig:ig_devout = {
 			add_modifier = {
@@ -174,6 +189,10 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 
 	option = { #"Such writings must be supressed!"
 		name = nda_base.3.b
+
+		ai_chance = { # will -ve effect conversion rate
+			base = 20		
+		}
 
 		# annoy the intelectuals
 		ig:ig_intelligentsia = {
@@ -322,14 +341,10 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 			limit = { 
 				NOT = { 
 					leader = { 
-						OR = { 
-							has_trait = nda_cultist 
-							has_trait = nda_acolyte 
-							has_trait = nda_master    
-							}
-						}
+						has_eldritch_trait = yes
 					} 
 				}
+			}
 			leader = { 
 				add_trait = nda_cultist 
 				save_scope_as = converted_ig_leader
@@ -393,8 +408,8 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 				NOT = {has_variable = nda_cultists_in_open} # don't rerun
 			}
 
-			post_notification = nda_first_open_cult 
-			#trigger_event = { id = nda_base.8 }	
+			post_notification = nda_first_open_cult # this is not noticable (like most notices) go back to event ?
+			#trigger_event = { id = nda_base.? }	
 
 		}
 		

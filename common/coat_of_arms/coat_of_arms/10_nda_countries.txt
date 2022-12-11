@@ -17,8 +17,8 @@ YIG = {
 	color2 = "green"
 
 	colored_emblem = {
-		texture = "ce_nda_cthulhu.dds"
-		color1 = "yellow"
+		texture = "ce_nda_yig_set.dds"
+		color1 = "light_green"
 		color2 = "yellow"
 		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }			
 	}
@@ -26,13 +26,20 @@ YIG = {
 
 DGN = {
 	pattern = "pattern_solid.tga"
-	color1 = "blue"
-	color2 = "blue"
+	color1 = "light_blue"
+	color2 = ""
+
+	colored_emblem = {
+		texture = "ce_waves.dds"
+		color1 = "blue"
+		color2 = "light_blue"
+		instance = { scale = { 1 2 } position = { 0.5 0.3 } }			
+	}
 
 	colored_emblem = {
 		texture = "ce_nda_cthulhu.dds"
-		color1 = "green"
-		color2 = "green"
+		color1 = "yellow"
+		color2 = "white"
 		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }			
 	}
 }

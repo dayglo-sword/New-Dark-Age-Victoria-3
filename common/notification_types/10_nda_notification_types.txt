@@ -14,7 +14,7 @@ nda_first_open_cult = {
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = feed
-	days = 28
+	days = 35
 }
 
 nda_first_yig_cult = {
@@ -22,5 +22,5 @@ nda_first_yig_cult = {
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = feed
-	days = 28
+	days = 35
 }
