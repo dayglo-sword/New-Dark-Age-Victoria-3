@@ -1,0 +1,11 @@
+﻿l_english:
+  
+nda_dagonic.1.t:0 "The Cult of Dagon Spreads"
+nda_dagonic.1.d:1 "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance #BOLD Dagon#!, the god of the Deep Ones."
+nda_dagonic.1.f:1 "The power of Dagon continues to grow."
+nda_dagonic.1.a:0 "What can we do?"
+nda_dagonic.2.t:0 "Revelations"
+nda_dagonic.2.d:1 "The Cult of Dagon has seized control of the Cult in this country."
+nda_dagonic.2.f:1 "It has taken open control of the government and now uses it's resources to further their goal...\nGlobal domination by the Deep Ones!"
+nda_dagonic.2.a:0 "Fish People!!!"
+

@@ -8,3 +8,23 @@ ELD = {	# Eldritch Realm
 		subject_canton = ELD #sub_USA_canton_star
 	}
 }
+
+YIG = {	# Yigian
+	flag_definition = {
+		coa = YIG 
+		coa_with_overlord_canton = YIG
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = YIG 
+	}
+}
+
+DGN = {	# Eldritch Realm
+	flag_definition = {
+		coa = DGN 
+		coa_with_overlord_canton = DGN
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = DGN 
+	}
+}

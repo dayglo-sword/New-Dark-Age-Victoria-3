@@ -1,0 +1,132 @@
+﻿namespace = nda_dagonic
+
+nda_dagonic.1 = { # Convert a Cultist to dagonic equivalent - called from journal 'je_nda_cult_to_dagonic' on completion
+
+	type = country_event
+	placement = ROOT
+	title = nda_dagonic.1.t
+	desc = nda_dagonic.1.d
+	flavor =  nda_dagonic.1.f
+
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:converted_ig.leader
+
+	trigger = {
+
+	}
+
+	immediate = {
+		# set ig leader Cultist to be dagonic
+		random_interest_group = {
+			limit = { 
+				leader = { 
+					has_eldritch_trait = yes
+				} 
+			}
+			leader = {
+				if = { limit = { has_trait = nda_cultist }
+					add_trait = nda_yig_cultist # should override existing
+					remove_trait = nda_cultist
+				}
+				if = { limit = { has_trait = nda_acolyte }
+					add_trait = nda_yig_acolyte # should override existing
+					remove_trait = nda_acolyte
+				}
+				if = { limit = { has_trait = nda_master }
+					add_trait = nda_yig_master # should override existing
+					remove_trait = nda_master
+				}
+				save_scope_as = converted_ig_leader
+			}
+			save_scope_as = converted_ig	
+		}			
+	}	
+	
+	option = { #"What can we do"
+		name = nda_dagonic.1.a
+		default_option = yes
+	}
+}
+
+nda_dagonic.2 = { # Cult in contry converts to dagonic - called from journal 'je_nda_cult_to_dagonic' on completion
+	type = country_event
+	placement = ROOT
+	title = nda_dagonic.2.t
+	desc = nda_dagonic.2.d
+	flavor =  nda_dagonic.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+
+	}
+
+	immediate = {
+		set_variable = nda_dagon_in_open
+
+		# set country to contain dagonic cultists - remove eldritch cultists
+		add_primary_culture = cu:nda_cul_dagonic # Adding Culture allows for Leaders of Culture despite no pop present!
+		remove_primary_culture = cu:nda_cul_cultist # remove normal cultists
+		
+		# set coastal states as homeland, convert % of pops to religion?
+		 every_scope_state = {
+			limit = { is_coastal = yes }
+			state_region = {
+				add_homeland = nda_cul_dagonic
+				remove_homeland = nda_cul_cultist
+			}
+			# full conversion of cult
+
+			# everyone of Eldritch Culture should follow Rite - Dagon is offshot of Eldrtitch - no sperate religion
+			#every_scope_pop = {
+			#	limit ={
+			#		has_pop_religion = nda_rel_cultist
+			#	}
+			#	change_pop_religion = { target = rel:nda_rel_dagonic value = 1 }					
+			#}
+		 }
+		# add new IG to country just for cultist religion ?
+
+		# set religion
+		set_state_religion = rel:nda_rel_dagonic
+
+		# notify players of change
+		save_scope_as = originator
+
+		every_country = {
+			limit = {
+				is_player = yes
+				NOT = { has_global_variable = nda_cultists_in_open}
+			}
+
+			post_notification = nda_first_dagon_cult 
+
+		}
+		
+		#set_global_variable = nda_dagon_in_open	
+	}	
+	
+	option = { #So it begins
+		name = nda_dagonic.2.a
+		default_option = yes
+	}
+}

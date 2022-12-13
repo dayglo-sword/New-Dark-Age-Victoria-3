@@ -13,7 +13,7 @@ nda_first_open_cult = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
-	notification_type = feed
+	notification_type = toast
 	days = 35
 }
 
@@ -21,6 +21,14 @@ nda_first_yig_cult = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
-	notification_type = feed
+	notification_type = toast
+	days = 35
+}
+
+nda_first_dagon_cult = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
 	days = 35
 }

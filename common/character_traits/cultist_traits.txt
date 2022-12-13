@@ -10,11 +10,7 @@ nda_cultist = {
 
 	command_modifier = {
 	}
-	
-	country_modifier = {
-		country_clergymen_pol_str_mult = -0.1
-	}
-	
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 		interest_group_pop_attraction_mult = 0.1
@@ -54,10 +50,6 @@ nda_acolyte = {
 
 	}
 	
-	country_modifier = {
-		country_clergymen_pol_str_mult = -0.2
-	}
-	
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.10
 		interest_group_pop_attraction_mult = 0.2
@@ -92,11 +84,7 @@ nda_master = {
 	command_modifier = {
 
 	}
-	
-	country_modifier = {
-		country_clergymen_pol_str_mult = -0.4
-	}
-	
+		
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
@@ -135,10 +123,6 @@ nda_yig_cultist = {
 	command_modifier = {
 	}
 	
-	country_modifier = {
-		country_clergymen_pol_str_mult = -0.1
-	}
-	
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 		interest_group_pop_attraction_mult = 0.1
@@ -150,6 +134,9 @@ nda_yig_cultist = {
 			OR = {
 				has_trait = nda_acolyte
 				has_trait = nda_master
+				has_trait = nda_dagon_cultist
+				has_trait = nda_dagon_acolyte
+				has_trait = nda_dagon_master
 			} 
 		}
 		owner = { 
@@ -159,7 +146,8 @@ nda_yig_cultist = {
 	
 	weight = 1
 	
-	replace = {																
+	replace = {	
+		nda_cultist														
 	}
 	
 	value = 3
@@ -177,10 +165,6 @@ nda_yig_acolyte = {
 
 	}
 	
-	country_modifier = {
-		country_clergymen_pol_str_mult = -0.2
-	}
-	
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.10
 		interest_group_pop_attraction_mult = 0.2
@@ -188,7 +172,12 @@ nda_yig_acolyte = {
 	}
 	
 	possible = {
-		NOT = { has_trait = nda_master }
+		NOT = { 
+			has_trait = nda_master
+			has_trait = nda_dagon_cultist
+			has_trait = nda_dagon_acolyte
+			has_trait = nda_dagon_master
+		}
 		owner = { 
 			has_variable = nda_yig_in_open
 		}
@@ -215,11 +204,7 @@ nda_yig_master = {
 	command_modifier = {
 
 	}
-	
-	country_modifier = {
-		country_clergymen_pol_str_mult = -0.4
-	}
-	
+		
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
@@ -227,6 +212,11 @@ nda_yig_master = {
 	}
 	
 	possible = {
+		NOT = { 
+			has_trait = nda_dagon_cultist
+			has_trait = nda_dagon_acolyte
+			has_trait = nda_dagon_master
+		}
 		owner = { 
 			has_variable = nda_yig_in_open
 		}
@@ -245,3 +235,126 @@ nda_yig_master = {
 	value = 3
 }
 
+### Dagonic
+
+nda_dagon_cultist = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+	
+	character_modifier = {
+		character_health_add = 0.1
+	}
+
+	command_modifier = {
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.05
+		interest_group_pop_attraction_mult = 0.1
+		interest_group_approval_add = 1
+	}				
+	
+	possible = { # Random is possible
+		NOT = { 
+			OR = {
+				has_trait = nda_acolyte
+				has_trait = nda_master
+				has_trait = nda_yig_cultist
+				has_trait = nda_yig_acolyte
+				has_trait = nda_yig_master
+			} 
+		}
+		owner = { 
+			has_variable = nda_dagon_in_open
+		}
+	}
+	
+	weight = 1
+	
+	replace = {																
+	}
+	
+	value = 3
+}
+
+nda_dagon_acolyte = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+
+	character_modifier = {
+		character_health_add = 0.2
+	}
+
+	command_modifier = {
+
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.10
+		interest_group_pop_attraction_mult = 0.2
+		interest_group_approval_add = 1
+	}
+	
+	possible = {
+		NOT = { 
+			has_trait = nda_master 
+			has_trait = nda_yig_cultist
+			has_trait = nda_yig_acolyte
+			has_trait = nda_yig_master
+		}
+		owner = { 
+			has_variable = nda_dagon_in_open
+		}
+	}
+	
+	weight = 1
+	
+	replace = {	
+		nda_cultist
+		nda_dagon_cultist															
+	}
+	
+	value = 3
+}
+
+nda_dagon_master = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
+
+	character_modifier = {
+		character_health_add = 0.4
+	}
+
+	command_modifier = {
+
+	}
+	
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.4
+		interest_group_approval_add = 1
+	}
+	
+	possible = {
+		NOT = { 
+			has_trait = nda_yig_cultist
+			has_trait = nda_yig_acolyte
+			has_trait = nda_yig_master
+		}
+		owner = { 
+			has_variable = nda_dagon_in_open
+		}
+	}
+	
+	weight = 1
+	
+	replace = {	
+		nda_cultist		
+		nda_acolyte	
+		nda_master	
+		nda_dagon_cultist		
+		nda_dagon_acolyte												
+	}
+	
+	value = 3
+}

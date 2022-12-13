@@ -20,4 +20,22 @@ cultist_traits_loc = {
 		}
 		localization_key = nda_master
 	}
+	text = {
+		trigger = {
+			has_trait = nda_dagon_cultist
+		}
+		localization_key = nda_dagon_cultist
+	}
+	text = {
+		trigger = {
+			has_trait = nda_dagon_acolyte
+		}
+		localization_key = nda_dagon_acolyte
+	}
+	text = {
+		trigger = {
+			has_trait = nda_dagon_master
+		}
+		localization_key = nda_dagon_master
+	}
 }

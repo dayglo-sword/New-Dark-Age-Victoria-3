@@ -156,20 +156,20 @@ je_nda_cult_to_yigian = {
 	#	# ? has any state as Eldritch homeland - will convert to Yigian on completion
 
 		country_has_primary_culture = cu:nda_cul_cultist # easy check
-		#c:BRZ = ROOT
 
 		any_scope_state = { # has capital in americas
-			is_capital = yes
-			OR = {
-				# the Yigian realms
-				region = sr:region_brazil
-				region = sr:region_andes
-				region = sr:region_la_plata
-				region = sr:region_gran_colombia
-				region = sr:region_great_plains # original home in books
-				region = sr:region_mexico
-				region = sr:region_central_america
-			}
+			is_potentially_yigian = yes
+			#is_capital = yes
+			#OR = {
+			#	# the Yigian realms
+			#	region = sr:region_brazil
+			#	region = sr:region_andes
+			#	region = sr:region_la_plata
+			#	region = sr:region_gran_colombia
+			#	region = sr:region_great_plains # original home in books
+			#	region = sr:region_mexico
+			#	region = sr:region_central_america
+			#}
 		}
 	}
 
@@ -253,6 +253,127 @@ je_nda_cult_to_yigian = {
 
 	current_value = {
 		value = root.var:nda_cult_to_yigian_tracker
+	}
+
+	goal_add_value = {
+		add = 300 # should be quicker than cultist as is just conversion?
+	}
+
+    fail = {
+		# if ritual failed or star alignment occured
+    }
+	
+	on_fail = {
+		# celebratory event?
+	}
+
+	progressbar = yes
+	weight = 200
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}
+
+# Eldritch conversion to Dagonic
+je_nda_cult_to_dagonic = {
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	is_shown_when_inactive = {
+		country_has_primary_culture = cu:nda_cul_cultist 
+	}
+
+	possible = {
+	#	# ? has any state as Eldritch homeland - will convert to dagonic on completion
+
+		country_has_primary_culture = cu:nda_cul_cultist # easy check
+		#c:BRZ = ROOT
+
+		any_scope_state = { # has capital in coastal asia/pacific
+			is_potentially_dagonic = yes
+		}
+	}
+
+	immediate = {
+		set_variable = {
+				name = nda_cult_to_dagonic_tracker
+				value = 1
+			}
+		clamp_variable = {
+				name = nda_cult_to_dagonic_tracker
+				min = 0
+				max = 500			
+		}	
+		save_scope_as = nda_je_cult_to_dagonic_scope
+		debug_log = "dagonic Spread Journal : Started : "
+	}
+
+    complete = {
+		custom_tooltip = {
+			text = je_nda_cult_to_dagonic_complete_tt
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+
+		# Should also be head of government ?? All member IG's ?
+		custom_tooltip = {
+			text = je_nda_cult_to_dagonic_hasleader_complete_tt
+
+			any_interest_group = {	
+				leader = { 
+					has_dagonic_trait =yes
+				}
+				is_in_government = yes	
+				is_powerful = yes			
+			}
+		}
+    }
+
+	on_complete = {
+		debug_log =  "dagonic Spread Journal : Completed :"
+		trigger_event = { id = nda_dagonic.2 }		
+	}
+
+	on_monthly_pulse = {
+	
+		# check count of dagonics in government. add to counter
+		effect = {
+				scope:nda_je_cult_to_dagonic_scope = {
+					change_variable = {
+						name = nda_cult_to_dagonic_tracker
+						add = 1
+					}					
+				}
+
+
+			# Every non marginal 
+			every_interest_group = {
+				limit = { 
+					is_marginal = no 
+					leader = { 
+						has_dagonic_trait = yes
+					}
+				}
+				scope:nda_je_cult_to_dagonic_scope = {
+					change_variable = {
+						name = nda_cult_to_dagonic_tracker
+						add = 1
+					}					
+				}				
+			}	
+				
+		}	
+
+		# Chance that another character will become cultist
+		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
+			8 = 0
+			1 = nda_dagonic.1 
+		}		
+	}
+
+	current_value = {
+		value = root.var:nda_cult_to_dagonic_tracker
 	}
 
 	goal_add_value = {

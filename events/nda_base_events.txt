@@ -64,11 +64,31 @@ nda_base.2 = { # Nameless Cults published
 
 	immediate = {
 		set_global_variable = nda_nameless_cults_exists
+
+		# set target countries for intial YIG and DGN expansions - needed to give competition to sole potential countries
+		random_country = {
+			limit = {
+				any_scope_state = { 
+					is_potentially_yigian = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
 	}	
 	
 	option = { #"What harm can a book do?"
 		name = nda_base.2.a
-		#default_option = yes
+		default_option = yes
 		
 		ai_chance = { # will +ve effect conversion rate
 			base = 80		
@@ -151,7 +171,15 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 				exists = c:NEN
 				c:NEN = ROOT
 			}
-			# random country in yigian lands to rival brazil for formation?
+			NOT = {
+				OR = {
+					c:ELD = ROOT
+					c:YIG = ROOT
+					c:DGN = ROOT
+				}				
+			}
+			# random countries previously selected in yigian lands to rival brazil and also in dagonic shores
+			has_variable = nda_nameless_cults_selected
 		}
 	}
 
@@ -162,7 +190,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 	
 	option = { #"What harm can a book do?"
 		name = nda_base.3.a
-		#default_option = yes
+		default_option = yes
 		
 		ai_chance = { # will +ve effect conversion rate
 			base = 80		
@@ -403,9 +431,9 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 
 		every_country = {
 			limit = {
-				is_player = yes
-				NOT = {has_journal_entry = je_nda_cult_spreads}
-				NOT = {has_variable = nda_cultists_in_open} # don't rerun
+				#is_player = yes
+				#NOT = {has_journal_entry = je_nda_cult_spreads}
+				#NOT = {has_variable = nda_cultists_in_open} # don't rerun
 			}
 
 			post_notification = nda_first_open_cult # this is not noticable (like most notices) go back to event ?
@@ -415,9 +443,21 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 		
 		set_global_variable = nda_cultists_in_open	
 
+		# if ELD exists offer an obligation if lesser ranked
+		random_country = {
+			limit = {
+				exists = c:ELD
+				c:ELD = { country_rank > root.country_rank }
+				NOT = { owes_obligation_to = c:ELD }		
+			}
+			debug_log = "Offer Obligation"
+			set_owes_obligation_to = { country = c:ELD setting = yes }
+			change_relations = { country = c:ELD value = 30 }
+		}
+
 		# Need to try and spread further so pass off to a non-cultist neighbour
 		random_country = {
-			limit ={
+			limit = {
 				is_adjacent = ROOT
 				NOT = {has_journal_entry = je_nda_cult_spreads}
 				NOT = {has_variable = nda_cultists_in_open}
@@ -464,7 +504,9 @@ nda_base.8 = { # Notification that first country has recognized cult
 				NOT = {has_journal_entry = je_nda_cult_spreads}
 				NOT = {has_variable = nda_cultists_in_open} # don't rerun
 			}
-			add_journal_entry = { type = je_nda_cult_spreads }		
+			debug_log = "Expand from Neighbour"
+			add_journal_entry = { type = je_nda_cult_spreads }	
+				
 		}
 	}	
 	

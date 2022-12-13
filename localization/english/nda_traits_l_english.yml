@@ -12,7 +12,15 @@
  nda_yig_acolyte_desc:0 "This person is an Acolyte, a trusted member of the Yigian Cult."
  nda_yig_master:0 "Yigian Master"
  nda_yig_master_desc:0 "This person has become a Master of the Yigian Cult."
+ nda_dagon_cultist:0 "Dagonic Cultist"
+ nda_dagon_cultist_desc:0 "This person is a Cultist, the most junior level of the Dagonic Cult."
+ nda_dagon_acolyte:0 "Dagonic Acolyte"
+ nda_dagon_acolyte_desc:0 "This person is an Acolyte, a trusted member of the Dagonic Cult."
+ nda_dagon_master:0 "Dagonic Master"
+ nda_dagon_master_desc:0 "This person has become a Master of the Dagonic Cult."
  
  # Idealogies
 ideology_nda_cabalistic:0 "Cabalistic"
-ideology_nda_cultist:0 "Cultist"
+ideology_nda_cabalistic_desc:0 "Cabalistic Ideology."
+ideology_nda_cultist:0 "Cult Supremacy"
+ideology_nda_cultist_desc:0 "This leader seeks to see the supremacy of their cult secured in totality regardess of others wishes."
