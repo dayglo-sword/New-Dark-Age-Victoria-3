@@ -1,0 +1,84 @@
+﻿nda_eld_recognise_dagonic_lands = {
+	is_shown = {
+		exists = c:ELD
+		this = c:ELD
+	}
+
+	possible = {
+		#this = c:ELD
+		
+		any_scope_state = { #is in coastal asia/pacific
+			#owner = ROOT
+			is_coastal = yes
+			state_region = {
+					is_homeland = cu:nda_cul_cultist
+					NOT = { is_homeland = cu:nda_cul_dagonic }
+			}	
+			OR = {
+				region = sr:region_indochina
+				region = sr:region_indonesia
+				region = sr:region_north_china
+				region = sr:region_manchuria
+				region = sr:region_south_china
+				region = sr:region_japan
+				region = sr:region_oceania
+				region = sr:region_south_india
+			}		
+
+		}
+
+	}
+	
+	when_taken = {
+
+		# set nda_cul_dagonic
+		every_scope_state = {
+			#IF = {
+				limit = { 
+					#owner = ROOT
+				 	#is_potentially_dagonic_lands = yes 
+					is_coastal = yes
+					state_region = {
+						is_homeland = cu:nda_cul_cultist
+						NOT = { is_homeland = cu:nda_cul_dagonic }
+					}	
+					OR = {
+						region = sr:region_indochina
+						region = sr:region_indonesia
+						region = sr:region_north_china
+						region = sr:region_manchuria
+						region = sr:region_south_china
+						region = sr:region_japan
+						region = sr:region_oceania
+						region = sr:region_south_india
+					}
+				}	
+
+				state_region = {
+					add_homeland = nda_cul_dagonic
+					remove_homeland = nda_cul_cultist						
+				}
+							
+			#}
+
+			# convert some cultists to dagonic
+		}
+		custom_tooltip = nda_eld_recognise_dagonic_lands_tooltip
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+
+}

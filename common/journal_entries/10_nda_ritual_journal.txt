@@ -1,0 +1,94 @@
+﻿je_nda_ritual_proceeds = {
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	is_shown_when_inactive = {
+		country_has_primary_culture = cu:nda_cul_cultist 
+	}
+
+	possible = {
+	#	# ? has any state as Eldritch homeland - will convert to Yigian on completion
+
+		country_has_primary_culture = cu:nda_cul_cultist # easy check
+
+ 		NOT = { has_global_variable = nda_ritual_completed  }
+
+		#any_scope_state = { # has capital in americas
+		#	is_potentially_yigian = yes
+		#}
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_global_variable = je_nda_ritual_proceeds_tracker  } }
+
+			set_global_variable = {
+					name = je_nda_ritual_proceeds_tracker
+					value = 1
+				}
+			clamp_global_variable = {
+					name = je_nda_ritual_proceeds_tracker
+					min = 0
+					max = 500			
+			}			
+		}
+		
+		save_scope_as = nda_je_ritual_proceeds_scope
+		
+		debug_log = "Ritual Proceeds Journal : Started : "
+	}
+
+    complete = {
+		custom_tooltip = {
+			text = je_nda_ritual_proceeds_complete_tt
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+    }
+
+	on_complete = {
+		debug_log =  "Ritual Proceeds Journal : Completed :"
+
+		#set_global_variable = nda_ritual_completed
+		trigger_event = { id = nda_ritual.3 }		
+	}
+
+	on_monthly_pulse = {
+	
+		# need better cont up
+		effect = {
+				scope:nda_je_ritual_proceeds_scope = {
+					change_global_variable = {
+						name = je_nda_ritual_proceeds_tracker
+						add = 1
+					}					
+				}				
+		}	
+	
+	}
+
+	current_value = {
+		#value = root.var:je_nda_ritual_proceeds_tracker
+		value = global_var:je_nda_ritual_proceeds_tracker
+	}
+
+	goal_add_value = {
+		add = 240 # 10 years at base rate
+	}
+
+    fail = {
+		# if ritual failed or star alignment occured
+    }
+	
+	on_fail = {
+		# celebratory event?
+	}
+
+	progressbar = yes
+	weight = 200
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

@@ -21,15 +21,97 @@ nda_ritual.1 = { # Cthulhu Returns
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger = { # limit to eldritch cult ELD ? Called Only?
+		has_global_variable = nda_ritual_completed	
+		game_date >= 1925.3.23	
+		NOT = {
+			has_global_variable = nda_cthulhu_arrives	# run once
+		 }
 
 	}
 
 	immediate = {
+		set_global_variable = nda_cthulhu_arrives	
 		nda_effect_cthulhu_arrives = yes
+		debug_log = "Stars are Right"
 	}	
 	
 	option = { #So it begins
 		name = nda_ritual.1.a
 		default_option = yes
-		}
+	}
+}
+
+nda_ritual.2 = { # Cthulhu Early Return
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.2.t
+	desc = nda_ritual.2.d
+	flavor =  nda_ritual.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { # limit to eldritch cult ELD ? Called Only?
+		has_global_variable = nda_ritual_completed	
+		game_date >= 1900.1.1 # 1890.8.20  # HPL's Birthday
+		NOT = {
+			has_global_variable = nda_cthulhu_arrives	# run once
+		 }
+
+	}
+
+	immediate = {
+		set_global_variable = nda_cthulhu_arrives	
+		nda_effect_cthulhu_arrives = yes
+		debug_log = "Stars are Right Early"
+	}	
+	
+	option = { #So it begins
+		name = nda_ritual.1.a
+		default_option = yes
+	}
+}
+
+nda_ritual.3 = { # The ritual completed
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.3.t
+	desc = nda_ritual.3.d
+	flavor =  nda_ritual.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { # Called Only?
+
+	}
+
+	immediate = {
+		set_global_variable = nda_ritual_completed		
+	}	
+	
+	option = { # Just a matter of time
+		name = nda_ritual.3.a
+		default_option = yes
+	}
 }

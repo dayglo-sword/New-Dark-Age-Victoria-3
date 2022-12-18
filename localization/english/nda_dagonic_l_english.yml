@@ -9,3 +9,6 @@ nda_dagonic.2.d:1 "The Cult of Dagon has seized control of the Cult in this coun
 nda_dagonic.2.f:1 "It has taken open control of the government and now uses it's resources to further their goal...\nGlobal domination by the Deep Ones!"
 nda_dagonic.2.a:0 "Fish People!!!"
 
+## triggers
+is_potentially_dagonic:0 "The ancestrial shores of the Deep Ones."
+is_potentially_dagonic_lands:0 "The ancestrial shores of the Deep Ones."

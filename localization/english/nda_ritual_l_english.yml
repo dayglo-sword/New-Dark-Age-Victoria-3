@@ -1,7 +1,22 @@
 ﻿l_english:
   
  nda_ritual.1.t:0 "He's Back"
- nda_ritual.1.d:1 "The world is changing.\nA New Age is beginning, and this will probably not end well for the lonely planet."
- nda_ritual.1.f:1 "Over the course of the next century, Eldritch entities will emerge out of the depths of space and time, as they begin their corruption of humanity.\nSlowly at first, working in the shadows, but then accelerating their plans towards a final confrontation for the soul of the world.\n\nWill the Hasturians defy Cthulhu and go it alone? Will the Mi-Go and their agents just sit by and passively watch? Will Herbert West pay his Miskatonic Library late fees?\n\nBased on vanilla Victoria 3 for an authentic dystopian experience."
+ nda_ritual.1.d:1 ""
+ nda_ritual.1.f:1 ""
  nda_ritual.1.a:0 "'So It Ends...'"
+ nda_ritual.2.t:0 "He's Back"
+ nda_ritual.2.d:1 ""
+ nda_ritual.2.f:1 ""
+ nda_ritual.2.a:0 "'So It Ends...'"
+ nda_ritual.3.t:0 "The Ritual Completed"
+ nda_ritual.3.d:1 "It is done!\n\nOur role complete. The return of the Cthulhu and the Old Ones is ineviatable."
+ nda_ritual.3.f:1 "That is not dead which can eternal lie,\nAnd with strange aeons even death may die."
+ nda_ritual.3.a:0 "'Just a matter of time...'"
  
+ # Journal Entries
+ je_nda_ritual_proceeds:0 "The Ritual Commences"
+ je_nda_ritual_proceeds_reason:0 "The Eldritch Cult, now secure in it's power, can commence the Ritual that will ensure the Great Ones reawakening.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ je_nda_ritual_proceeds_goal:0 "Compete Ritual to enable Cthulhu's return when the 'Stars are Right.'"
+ je_nda_ritual_proceeds_complete_tt:0 "The Cult has completed it's ritual. The return is now ineviatable."
+ je_nda_ritual_proceeds_complete:0 "The Cult has completed it's ritual. The return is now ineviatable."
+ #je_nda_ritual_proceeds_hasleader_complete_tt:0 "A powerful leader of the government is a Cultist"

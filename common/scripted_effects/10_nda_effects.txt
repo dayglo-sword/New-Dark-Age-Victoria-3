@@ -2,11 +2,11 @@
 	# everywhere
 	every_country = {
 		every_scope_state = {
-			state_region = { # will this double up on shared regions?
+			state_region = { # will this double up on shared regions? Was a bit lame at 30 dev 10 pol,
 				# Cause devestation
-				add_devastation = 30
+				add_devastation = 50
 				# and polution
-				add_pollution = 10				
+				add_pollution = 20				
 			}
 		}	
 	}		
@@ -45,14 +45,45 @@ nda_effect_rite_conversion = { # Called from astro events - country scope
 		add_loyalists = { value = 1 culture = cu:nda_cul_cultist }
 		# reduce radicals ??
 
+		# pledge to ELD if they exist
+		if = {
+			limit = {
+				exists = c:ELD
+				c:ELD = { country_rank > root.country_rank }				
+				not = { 			
+					OR = {
+						c:ELD = ROOT
+						c:YIG = ROOT
+						c:DGN = ROOT
+					} 
+				}
+			}
+
+			random_list = {
+				30 = {
+					limit = { 
+						NOT = { owes_obligation_to = c:ELD }
+					}
+					set_owes_obligation_to = { country = c:ELD setting = yes }	
+					debug_log = "Offer Obligation to ELD"	
+				}
+				70 = {}
+			}
+
+			# always change relationship
+			change_relations = { country = c:ELD value = 30 }
+		}
 	}
 	if = {
 		limit = {
 			c:ELD = ROOT
 		}
 		# ELD only buffs
+		# remove radicals from government while everyone is partying
+
 	}	
 	
+
 	# Yigian buffs
 	if = {
 		limit = {
@@ -85,5 +116,33 @@ nda_effect_rite_conversion = { # Called from astro events - country scope
 		add_loyalists = { value = 1 culture = cu:nda_cul_yigian }
 		# reduce radicals ??
 
+		#pledge to YIG if they exist
+		if = {
+			limit = {
+				exists = c:YIG
+				c:YIG = { country_rank > root.country_rank }				
+				not = { 			
+					OR = {
+						c:ELD = ROOT
+						c:YIG = ROOT
+						c:DGN = ROOT
+					} 
+				}
+			}
+
+			random_list = {
+				30 = {
+					limit = { 
+						NOT = { owes_obligation_to = c:YIG }
+					}
+					set_owes_obligation_to = { country = c:YIG setting = yes }	
+					debug_log = "Offer Obligation to YIG " 	
+				}
+				70 = {}
+			}
+
+			# always change relationship
+			change_relations = { country = c:YIG value = 30 }
+		}
 	}
 }

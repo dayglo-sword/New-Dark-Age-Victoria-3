@@ -1,0 +1,406 @@
+﻿namespace = nda_nen
+
+nda_nen.1 = { # New Brunswick Purchase
+	type = country_event
+	placement = ROOT
+
+	title = nda_nen.1.t
+	desc = nda_nen.1.d
+	flavor = nda_nen.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+
+		#s:STATE_ALASKA.region_state:RUS = {
+		#	save_scope_as = alaska_scope
+		#}
+	}
+
+	option = {
+		name = nda_nen.1.a
+		ai_chance = {
+			base = 1
+		}
+		custom_tooltip = nda_nen.1.tt # 1 million over a year
+
+		scope:nda_nen_purchase_seller_scope = {
+			trigger_event = {
+				id = nda_nen.2
+				days = 1
+				popup = yes
+			}
+		}
+	}
+	option = { # perhaps another time
+		name = nda_nen.1.b
+		default_option = yes
+		ai_chance = {
+			base = 0
+		}
+		remove_variable = nda_newbrunswick_purchase_var
+	}
+}
+
+# An Offer for New Brunswick
+nda_nen.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = nda_nen.2.t
+	desc = nda_nen.2.d
+	flavor = nda_nen.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		#c:USA = {
+		#	save_scope_as = usa_scope
+		#}
+		#s:STATE_NEW_BRUNSWICK.region_state:scope:nda_nen_purchase_seller_scope = {
+		#	save_scope_as = alaska_scope
+		#}
+	}
+
+	option = {
+		name = nda_nen.2.a
+		default_option = yes
+		#add_modifier = {
+		#	name = new_brunswick_big_money_in
+		#	months = 12
+		#	is_decaying = no
+		#}
+		c:NEN = {
+			trigger_event = { id = nda_nen.3 days = 0 popup = yes }
+		}
+		show_as_tooltip = {
+			s:STATE_NEW_BRUNSWICK.region_state:scope:nda_nen_purchase_seller_scope = {
+				set_state_owner = c:NEN
+			}
+			change_relations = {
+				country = c:NEN
+				value = 10
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = nda_nen.2.b
+		c:NEN = {
+			trigger_event = { id = nda_nen.3 days = 0 popup = yes }
+		}
+		show_as_tooltip = {
+			change_relations = {
+				country = c:NEN
+				value = -20
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# Failed New Brunswick Purchase
+nda_nen.3 = {
+	type = country_event
+	placement = ROOT
+
+	title = nda_nen.3.t
+	desc = nda_nen.3.d
+	flavor = nda_nen.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		#c:RUS = {
+		#	save_scope_as = russia_scope
+		#}
+		#s:STATE_ALASKA.region_state:RUS = {
+		#	save_scope_as = alaska_scope
+		#}
+	}
+
+	option = {
+		name = nda_nen.3.a
+		default_option = yes
+		s:STATE_NEW_BRUNSWICK = {
+			add_claim = ROOT
+		}
+		change_relations = {
+			country = scope:nda_nen_purchase_seller_scope 
+			value = -20
+		}
+        #add_journal_entry = {
+		#	type = je_alaska
+		#}
+	}
+}
+
+
+# The New Brunswick Purchase
+nda_nen.4 = {
+	type = country_event
+	placement = ROOT
+
+	title = nda_nen.4.t
+	desc = nda_nen.4.d
+	flavor = nda_nen.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		c:RUS = {
+			save_scope_as = russia_scope
+		}
+		s:STATE_NEW_BRUNSWICK.region_state:RUS = {
+			save_scope_as = new_brunswick_scope
+		}
+	}
+
+	option = {
+		name = nda_nen.2.a
+		default_option = yes
+		#add_modifier = {
+		#	name = new_brunswick_big_money_out
+		#	months = 12
+		#}
+		s:nda_nen.region_state:RUS = {
+			set_state_owner = c:USA
+		}
+		change_relations = {
+			country = c:RUS
+			value = 10
+		}
+	}
+}
+
+# Miskatonic Uni - Library and Herbert West - start events at #10
+
+nda_nen.10 = { # Founding of Library
+	type = country_event
+	placement = scope:university_state
+	title = nda_nen.10.t
+	desc = nda_nen.10.d
+	flavor =  nda_nen.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1842 and owner of Miskaton - should still be NEN but could be Neighbours
+		game_date >= 1842  
+		owns_entire_state_region = STATE_NEW_HAMPSHIRE
+		exists = c:NEN
+		c:NEN = ROOT
+		NOT = {has_global_variable = nda_miskatonic_library}
+
+		has_technology_researched = academia
+
+		any_scope_state = {
+			is_incorporated = yes
+			has_building = building_urban_center
+			NOT = {
+				has_building = building_university
+			}
+		}
+	}
+
+	immediate = {
+		set_global_variable = nda_miskatonic_library
+
+		random_scope_state = {
+			limit = {
+				state_region = STATE_NEW_HAMPSHIRE
+				is_incorporated = yes
+				has_building = building_urban_center
+				NOT = {
+					has_building = building_university
+				}
+			}
+			save_scope_as = university_state
+		}
+	}	
+	
+	option = { #"Accept donations and build Library"
+		name = nda_nen.10.a
+		default_option = yes
+		
+		ai_chance = { # should be most likely
+			base = 80		
+		}
+
+		scope:university_state = {
+			# build uni if not existing
+			if = {	
+				limit = {
+					NOT = {
+						has_building = building_university
+					}
+				}
+				create_building={
+					building="building_university"
+					level=1
+					reserves=1
+				}
+				
+			}
+			else = {
+				# add level to any university??	
+				start_building_construction = building_university
+			}
+		}
+		debug_log = "Build Orme Library"
+
+		#set_variable = nda_miskatonic_library_built
+	}
+
+	option = { #"Build Statue instead"
+		name = nda_nen.10.b
+
+		ai_chance = { # could always do something daft
+			base = 20		
+		}
+
+		debug_log = "Build Arnold Statue"
+		#set_variable = nda_miskatonic_library_unbuilt # use to change chrome text later on chain
+	}
+}
+
+#94140 - Appeal for reinstatement
+nda_nen.11 = { # Appeal for reinstatement
+	type = country_event
+	placement = scope:university_state
+	title = nda_nen.11.t
+	desc = nda_nen.11.d
+	flavor =  nda_nen.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1903 and owner of Miskatonic Uni - should still be NEN but could be Neighbours
+		game_date >= 1903  
+		owns_entire_state_region = STATE_NEW_HAMPSHIRE
+		exists = c:NEN
+		c:NEN = ROOT
+		has_global_variable = nda_miskatonic_library
+
+		has_technology_researched = academia
+
+		any_scope_state = {
+			state_region = STATE_NEW_HAMPSHIRE
+			is_incorporated = yes
+			has_building = building_university
+		}
+
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = STATE_NEW_HAMPSHIRE
+				is_incorporated = yes
+				has_building = building_urban_center
+				has_building = building_university
+			}
+			save_scope_as = university_state
+		}
+	}	
+	
+	option = { #" Of course"
+		name = nda_nen.11.a
+		default_option = yes
+
+		# main stream herbert
+		set_global_variable = herbert_west_approval	
+
+		trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham
+		debug_log = "Herbert West Reinstated"
+	}
+
+	option = { #"no we will not"
+		name = nda_nen.11.b
+		debug_log = "Herbert West Expelled" # End of Story? NO of cource not!
+
+		trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham
+	}
+
+}
+
+#94141 - Plague in Arkham
+#94142 - Research breakthrough
+#94143 - Disappearence of Dr West
+#94150 - Holy See Falls
+#94151 - Jerusalem Falls
+#94152 - Mecca Falls

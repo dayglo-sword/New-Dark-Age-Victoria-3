@@ -7,12 +7,18 @@ on_monthly_pulse_country = {
 		nda_base.3 # Imprint of Nameless Cults	
 		nda_base.5 # First Cultist
 
+
 		nda_astro.1 
 		nda_astro.2 
 		nda_astro.3 
 		nda_astro.4 
 		nda_astro.5  
 		
+		nda_ritual.1 
+		nda_ritual.2 
+
+		nda_nen.10
+		nda_nen.11 
 	}
 	random_events = {
 		
@@ -22,6 +28,7 @@ on_monthly_pulse_country = {
 on_half_yearly_pulse_country = {
 	events = {
 		nda_base.4 # Death of Junzt (Nameless Cults)
+		nda_base.9 # Cult Ideology Clean
 	}
 }
 

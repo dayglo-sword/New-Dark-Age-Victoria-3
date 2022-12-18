@@ -1,6 +1,6 @@
 ﻿namespace = nda_astro
 # Conjunctions and Stars are Right events - acts as forewarning or drivers for other effects
-
+# these are firing at multiple times - once for each contry - need them to fire at same time as fixed event.
 nda_astro.1 = { # 1842 conjunction
 	type = country_event
 	placement = ROOT
@@ -186,69 +186,3 @@ nda_astro.5 = { # 1921 conjunction
 	}
 }
 
-nda_astro.6 = { # 1925 - The Stars are Right!
-	type = country_event
-	placement = ROOT
-	title = nda_astro.6.t
-	desc = nda_astro.6.d
-	flavor =  nda_astro.6.f
-
-	duration = 3
-
-	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
-	trigger = { 		
-		game_date >= 1925.3.23	
-	}
-
-	immediate = {
-		# Call of Cthulhu - if ritual complete then trouble
-		debug_log = "Stars are Right"
-	}	
-			
-	option = { #"A bit worrying..." # Nothing you can do
-		name = nda_astro.6.a
-		default_option = yes		
-	}
-}
-
-nda_astro.7 = { # 1890 - The Stars are Early!
-	type = country_event
-	placement = ROOT
-	title = nda_astro.7.t
-	desc = nda_astro.7.d
-	flavor =  nda_astro.7.f
-
-	duration = 3
-
-	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
-	trigger = { 		
-		game_date = 1890.8.20  # HPL's Birthday	
-	}
-
-	immediate = {
-		# Call of Cthulhu - if ritual complete then trouble, otherwise ignore
-		#set_global_variable = nda_conjunction_4
-		debug_log = "Stars are Right"
-	}	
-			
-	option = { #"A bit worrying..." # Nothing you can do
-		name = nda_astro.7.a
-		default_option = yes		
-	}
-}

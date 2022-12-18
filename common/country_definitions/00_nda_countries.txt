@@ -27,7 +27,7 @@ DGN = {
 
 	tier = empire
 	
-	cultures = { nda_cul_cultist }
+	cultures = { nda_cul_dagonic }
 	capital = STATE_KANSAI # Japan?
 }
 

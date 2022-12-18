@@ -19,7 +19,7 @@
 			OR = {
 				country_has_primary_culture = cu:nda_cul_cultist
 			}			
-			has_technology_researched = nationalism
+			has_technology_researched = pan-nationalism
 		}
 	}
 }
@@ -45,7 +45,7 @@ YIG = {
 			OR = {
 				country_has_primary_culture = cu:nda_cul_yigian
 			}			
-			has_technology_researched = nationalism
+			has_technology_researched = pan-nationalism
 		}
 	}
 }
@@ -71,7 +71,7 @@ DGN = {
 			OR = {
 				country_has_primary_culture = cu:nda_cul_dagonic
 			}			
-			has_technology_researched = nationalism
+			has_technology_researched = pan-nationalism
 		}
 	}
 }

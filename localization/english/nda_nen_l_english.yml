@@ -1,0 +1,47 @@
+﻿l_english:
+
+ # Boring New Brunswick events 
+nda_nen.1.t:0 "An Offer for New Brunswick"
+nda_nen.1.d:1 "[SCOPE.sCountry('nda_nen_purchase_seller_scope').GetName] finds itself in dire financial straits, and would likely entertain an offer for the purchase of [SCOPE.sState('new_brunswick_scope').GetName]."
+nda_nen.1.f:1 ""The government agrees to pay at the treasury, to the diplomatic representative or other agent of [SCOPE.sCountry('nda_nen_purchase_seller_scope').GetRuler.GetName] , one million dollars in gold.""
+nda_nen.1.a:0 "Make the necessary arrangements."
+nda_nen.1.b:0 "We cannot afford such an expense right now."
+nda_nen.1.tt:0 "We will offer £1m over the course of 1 year."
+nda_nen.2.t:0 "An Offer for New Brunswick"
+nda_nen.2.d:1 "The [SCOPE.sCountry('usa_scope').GetName] has made us an offer for the purchase of [SCOPE.sState('new_brunswick_scope').GetName]."
+nda_nen.2.f:1 ""The United States agrees to pay at the treasury in Washington, to the diplomatic representative or other agent of [ROOT.GetCountry.GetRuler.GetHerHis] Majesty the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] of all the Russias, seven million two hundred thousand dollars in gold.""
+nda_nen.2.a:0 "The land is worthless, let the Americans have it."
+nda_nen.2.b:0 "[SCOPE.sState('new_brunswick_scope').GetName] may hide riches yet."
+
+nda_nen.3.t:0 "Failed [SCOPE.sState('new_brunswick_scope').GetName] Purchase"
+nda_nen.3.d:1 "Negotiations with [SCOPE.sCountry('russia_scope').GetName] over the purchase of [SCOPE.sState('new_brunswick_scope').GetName] have failed."
+nda_nen.3.f:1 ""We see, therefore, that War is not merely a political act, but also a real political instrument, a continuation of political commerce, a carrying out of the same by other means.""
+nda_nen.3.a:0 "We will continue diplomacy through other means."
+
+nda_nen.4.t:0 "The [SCOPE.sState('new_brunswick_scope').GetName] Purchase"
+nda_nen.4.d:1 "[SCOPE.sCountry('russia_scope').GetName] has agreed to our terms. A treaty for the purchase of [SCOPE.sState('new_brunswick_scope').GetName] has been drafted."
+nda_nen.4.f:1 ""Tomorrow, if you like, I will come to the department, and we can enter upon the treaty."\n"Why wait until tomorrow, Mr. Stoeckl? Let us make the treaty tonight!""
+nda_nen.4.a:0 "What riches do these vast territories hide?"
+
+  # new_brunswick Purchase
+ nen_purchase_new_brunswick:0 "Negotiate the new_brunswick Purchase"
+ nen_purchase_new_brunswick_desc:0 "Though some doubt the strategic and economic value of the vast expanses of new_brunswick, we should not pass up the opportunity to push the frontiers of liberty."
+ sale_of_new_brunswick_happened:0 "The Sale of New Brunswick has happened"
+ je_new_brunswick:0 "The Acquisition of New Brunswick"
+ je_new_brunswick_status:0 "Own the entire state of New  Brunswick."
+ je_new_brunswick_reason:0 "Negotiations over the sale of New Brunswick have broken down, and so we are forced to pursue diplomacy through other means."
+ new_brunswick_big_money_out:0 "Paying for New Brunswick - Payments"
+ new_brunswick_big_money_in:0 "Sale of New Brunswick - Payments"
+
+# Miskatonic Uni - Library and Herbert West
+nda_nen.10.t:0 "A New Library?"
+nda_nen.10.d:0 "Concerned about the condition of the existing library in Arkham, the citizens have offered to finance a new building to house the considerable collection that Joeseph Orne had aquired and donated to the local College on his death."
+nda_nen.10.f:0 "The building is to be known as #BOLD The Orne Library #!. and is to be an integral part of the growing college campus on the site, a centre for intellectual studies which is gaining quite a reputation.\n\nOther locals feel that this would be a waste of funds and that another statue to New England's greatest hero and founding father, President Arnold, is more fitting."
+nda_nen.10.a:0 "Only good can come of this!"
+nda_nen.10.b:0 "We don't need no education."
+
+nda_nen.11.t:0 "Appeal for Reinstatement"
+nda_nen.11.d:0 "A young doctor by the name of #BOLD Herbert West#! has made a direct appeal to us after his superior, Dr Allan Halsey, at the Miskatonic University Medical School has barred him from the institute after claims of grave robbery!"
+nda_nen.11.f:0 "West has explained that fresh cadavers are essential for the success of his research, which may eventually lead to immortality! There is also the more serious matter of a number of books not being returned to the world renowned Orne Library!"
+nda_nen.11.a:0 "This research must continue!"
+nda_nen.11.a:0 "The correct decision was made.""

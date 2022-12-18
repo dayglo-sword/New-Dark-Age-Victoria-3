@@ -43,7 +43,7 @@ nda_acolyte = {
 	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
 
 	character_modifier = {
-		character_health_add = 0.2
+		character_health_add = 0.3
 	}
 
 	command_modifier = {
@@ -78,7 +78,7 @@ nda_master = {
 	texture = "gfx/interface/icons/character_trait_icons/lunatic.dds"
 
 	character_modifier = {
-		character_health_add = 0.4
+		character_health_add = 0.8
 	}
 
 	command_modifier = {

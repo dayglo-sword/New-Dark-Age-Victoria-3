@@ -68,6 +68,8 @@ nda_base.2 = { # Nameless Cults published
 		# set target countries for intial YIG and DGN expansions - needed to give competition to sole potential countries
 		random_country = {
 			limit = {
+				country_rank = rank_value:minor_power
+				NOT = { has_variable = nda_nameless_cults_selected }
 				any_scope_state = { 
 					is_potentially_yigian = yes
 				}
@@ -77,6 +79,30 @@ nda_base.2 = { # Nameless Cults published
 		}
 		random_country = {
 			limit = {
+				country_rank = rank_value:minor_power
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_yigian = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				country_rank = rank_value:minor_power
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				country_rank = rank_value:minor_power
+				NOT = { has_variable = nda_nameless_cults_selected }
 				any_scope_state = { 
 					is_potentially_dagonic = yes
 				}
@@ -171,21 +197,24 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 				exists = c:NEN
 				c:NEN = ROOT
 			}
-			NOT = {
-				OR = {
-					c:ELD = ROOT
-					c:YIG = ROOT
-					c:DGN = ROOT
-				}				
-			}
+
 			# random countries previously selected in yigian lands to rival brazil and also in dagonic shores
 			has_variable = nda_nameless_cults_selected
+		}
+
+		# redundant to spread to cult country
+		NOT = {
+			OR = {
+				c:ELD = ROOT
+				c:YIG = ROOT
+				c:DGN = ROOT
+			}				
 		}
 	}
 
 	immediate = {
 		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger simultaniously.
-		debug_log = "Imprint of Nameless Cults : " 
+		debug_log = "Imprint of Nameless Cults" 
 	}	
 	
 	option = { #"What harm can a book do?"
@@ -414,16 +443,16 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 	immediate = {
 		set_variable = nda_cultists_in_open
 
-		# set country to contain cultists. need better way of differetating cultist culture and religion.
+		# set country to contain cultists. need better way of differtiating cultist culture and religion.
 		add_primary_culture = cu:nda_cul_cultist # Adding Culture allows for Leaders of Culture despite no pop present!
 		# set country states as homeland, convert % of pops to religion?
-		 every_scope_state = {
+		every_scope_state = {
 			state_region = {
 				add_homeland = nda_cul_cultist
 			}
 
 			convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
-		 }
+		}
 		# add new IG to country just for cultist religion ?
 
 		# notify players of change
@@ -450,9 +479,9 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 				c:ELD = { country_rank > root.country_rank }
 				NOT = { owes_obligation_to = c:ELD }		
 			}
-			debug_log = "Offer Obligation"
+			debug_log = "Offer Obligation to ELD on becoming Cultist" #[ROOT.GetName] : 
 			set_owes_obligation_to = { country = c:ELD setting = yes }
-			change_relations = { country = c:ELD value = 30 }
+			change_relations = { country = c:ELD value = 50 } # 30 was too low?
 		}
 
 		# Need to try and spread further so pass off to a non-cultist neighbour
@@ -470,7 +499,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 	option = { #So it begins
 		name = nda_base.7.a
 		default_option = yes
-		}
+	}
 }
 
 nda_base.8 = { # Notification that first country has recognized cult
@@ -504,7 +533,7 @@ nda_base.8 = { # Notification that first country has recognized cult
 				NOT = {has_journal_entry = je_nda_cult_spreads}
 				NOT = {has_variable = nda_cultists_in_open} # don't rerun
 			}
-			debug_log = "Expand from Neighbour"
+			debug_log = "Cult Expanded from Neighbour" #[ROOT.GetName] : 
 			add_journal_entry = { type = je_nda_cult_spreads }	
 				
 		}
@@ -513,7 +542,99 @@ nda_base.8 = { # Notification that first country has recognized cult
 	option = { #Curse Them!
 		name = nda_base.8.a
 		default_option = yes
-		}
+	}
 }
+
+
+nda_base.9 = { # Is there some non-conformists within the cult
+	type = country_event
+	placement = ROOT
+	title = nda_base.9.t
+	desc = nda_base.9.d
+	flavor =  nda_base.9.f
+
+	duration = 3
+
+	#event_image = {
+	#	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+	#	
+	#}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	#on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:targeted_ig_leader # converted_ig.leader
+
+	trigger = {
+		OR = {
+			AND = {
+				exists = c:ELD
+				c:ELD = ROOT
+			}
+			AND = {
+				exists = c:YIG
+				c:YIG = ROOT
+			}					
+		}
+
+		any_interest_group = {
+			leader = { 
+				has_eldritch_trait = yes
+				OR = {
+					has_ideology = ideology_radical
+					has_ideology = ideology_pacifist
+				}
+			} 
+		}	
+	}
+
+	immediate = {
+		# start journal for initial cult spread
+
+		random_interest_group = {
+			limit = { 
+				leader = { 
+					has_eldritch_trait = yes
+					OR = {
+						has_ideology = ideology_radical
+						has_ideology = ideology_pacifist
+					}
+				} 
+			}
+			leader = {
+				save_scope_as = targeted_ig_leader
+			}
+			save_scope_as = targetted_ig	
+		}
+
+		debug_log = "Check for Non-Conformists" 				
+
+	}	
+	
+	option = { #Persuade Them!
+		name = nda_base.9.a
+		default_option = yes
+		
+		ai_chance = { # should be most likely
+			base = 100		
+		}
+
+		scope:targeted_ig_leader = { set_ideology = ideology_moderate } # This ignores ideology possibility checks?
+		debug_log = "Check for Non-Conformists - Persuaded" 	
+		# rdeuce radicals in IG as well? Change Anger?
+	}	
+
+	option = { #Ignore Them! # For Players only ?
+		name = nda_base.9.b
+
+		ai_chance = { # should be never
+			base = 0		
+		}
+	}
+}
+
 
 
