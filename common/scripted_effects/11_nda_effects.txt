@@ -1,0 +1,171 @@
+﻿nda_effect_rite_conversion = { # Called from astro events - country scope
+	if = {
+		limit = {
+			has_variable = nda_cultists_in_open 
+			NOT = { has_variable = nda_yig_in_open }
+		}
+
+		# give them a boost, both religion and pops
+		every_scope_state = {
+			convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
+
+			# everyone of Eldritch Culture should follow Rite 
+			every_scope_pop = {
+				limit ={
+					culture = cu:nda_cul_cultist
+				}
+				change_pop_religion = { target = rel:nda_rel_cultist value = 1 }			
+			}	
+			# everyone of Eldritch Culture should follow Rite 
+			every_scope_pop = {
+				limit ={
+					has_pop_religion = nda_rel_cultist
+					NOT = { culture = cu:nda_cul_cultist }
+				}
+				change_pop_culture = { target = cu:nda_cul_cultist value = 1 }			
+			}				
+		}
+
+		# Mass Delusion		
+		add_loyalists = { value = 1 religion = rel:nda_rel_cultist } #add_loyalists = { value = x pop_type = <key> strata = <key> culture = <scope/cu:key> religion = <scope/rel:key> }
+		add_loyalists = { value = 1 culture = cu:nda_cul_cultist }
+		# reduce radicals ??
+
+		# pledge to ELD if they exist
+		if = {
+			limit = {
+				exists = ROOT
+				exists = c:ELD
+				c:ELD = { country_rank > root.country_rank }				
+				not = { 			
+					OR = {
+						c:ELD = ROOT
+						c:YIG = ROOT
+						AND = {
+							exists = c:DGN
+							c:DGN = ROOT							
+						}
+					} 
+				}
+			}
+
+			random_list = {
+				30 = {
+					#if = {
+					#	limit = { 
+					#		NOT = { ROOT.owes_obligation_to = c:ELD }
+					#	}
+					#	set_owes_obligation_to = { country = c:ELD setting = yes }	
+						debug_log = "Offer Obligation to ELD"							
+					#}
+				}
+				70 = {}
+			}
+
+			# always change relationship
+			change_relations = { country = c:ELD value = 30 }
+		}
+	}
+	if = {
+		limit = {
+			c:ELD = ROOT
+		}
+		# ELD only buffs
+		#ROOT = {
+
+			every_state_region = {
+				limit = { 
+					is_homeland=cu:nda_cul_cultist
+					any_neighbouring_state = { owner = ROOT }
+				
+				}
+				add_claim = ROOT						
+			}
+
+		#}
+		# remove radicals from government while everyone is partying
+
+	}	
+	
+
+	# Yigian buffs
+	if = {
+		limit = {
+			has_variable = nda_yig_in_open 
+		}
+
+		# give them a boost, both religion and pops
+		every_scope_state = {
+			convert_population = { target = rel:nda_rel_yigian value = 0.10 }	
+
+			# everyone of Yigian Culture should follow Rite 
+			every_scope_pop = {
+				limit ={
+					culture = cu:nda_cul_yigian
+				}
+				change_pop_religion = { target = rel:nda_rel_yigian value = 1 }			
+			}	
+			# everyone of Eldritch Culture should follow Rite 
+			every_scope_pop = {
+				limit ={
+					has_pop_religion = nda_rel_yigian
+					NOT = { culture = cu:nda_cul_yigian }
+				}
+				change_pop_culture = { target = cu:nda_cul_yigian value = 1 }			
+			}				
+		}
+
+		# Mass Delusion		
+		add_loyalists = { value = 1 religion = rel:nda_rel_yigian } #add_loyalists = { value = x pop_type = <key> strata = <key> culture = <scope/cu:key> religion = <scope/rel:key> }
+		add_loyalists = { value = 1 culture = cu:nda_cul_yigian }
+		# reduce radicals ??
+
+		#pledge to YIG if they exist
+		if = {
+			limit = {
+				exists = c:YIG
+				c:YIG = { country_rank > root.country_rank }				
+				not = { 			
+					OR = {
+						c:ELD = ROOT
+						c:YIG = ROOT
+						c:DGN = ROOT
+					} 
+				}
+			}
+
+			random_list = {
+				30 = {
+					if = {
+						limit = { 
+							NOT = { owes_obligation_to = c:YIG }
+						}
+						set_owes_obligation_to = { country = c:YIG setting = yes }	
+						debug_log = "Offer Obligation to YIG " 							
+					}
+				}
+				70 = {}
+			}
+
+			# always change relationship
+			change_relations = { country = c:YIG value = 30 }
+		}
+		
+		if = {
+			limit = {
+				c:YIG = ROOT
+			}
+			# YIG only buffs
+			every_state_region = {
+				limit = { 
+					is_homeland=cu:nda_cul_yigian
+					any_neighbouring_state = { owner = ROOT }
+				
+				}
+				add_claim = ROOT						
+			}
+			# remove radicals from government while everyone is partying
+
+		}	
+	}
+}

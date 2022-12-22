@@ -32,16 +32,16 @@ nda_dagonic.1 = { # Convert a Cultist to dagonic equivalent - called from journa
 				} 
 			}
 			leader = {
-				if = { limit = { has_trait = nda_cultist }
-					add_trait = nda_yig_cultist # should override existing
+				if = { limit = { OR = { has_trait = nda_cultist }
+					add_trait = nda_dag_cultist # should override existing
 					remove_trait = nda_cultist
 				}
 				if = { limit = { has_trait = nda_acolyte }
-					add_trait = nda_yig_acolyte # should override existing
+					add_trait = nda_dag_acolyte # should override existing
 					remove_trait = nda_acolyte
 				}
 				if = { limit = { has_trait = nda_master }
-					add_trait = nda_yig_master # should override existing
+					add_trait = nda_dag_master # should override existing
 					remove_trait = nda_master
 				}
 				save_scope_as = converted_ig_leader

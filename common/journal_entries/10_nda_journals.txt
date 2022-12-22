@@ -35,13 +35,20 @@
 		custom_tooltip = {
 			text = je_nda_cult_spread_hasleader_complete_tt
 
-			any_interest_group = {	
-				leader = { 
+			OR = {
+				any_interest_group = {	
+					leader = { 
+						has_eldritch_trait = yes
+					}
+					is_in_government = yes	
+					is_powerful = yes			
+				}	
+				any_scope_character = {
+					is_ruler = yes
 					has_eldritch_trait = yes
-				}
-				is_in_government = yes	
-				is_powerful = yes			
+				}			
 			}
+
 		}
     }
 
@@ -159,17 +166,6 @@ je_nda_cult_to_yigian = {
 
 		any_scope_state = { # has capital in americas
 			is_potentially_yigian = yes
-			#is_capital = yes
-			#OR = {
-			#	# the Yigian realms
-			#	region = sr:region_brazil
-			#	region = sr:region_andes
-			#	region = sr:region_la_plata
-			#	region = sr:region_gran_colombia
-			#	region = sr:region_great_plains # original home in books
-			#	region = sr:region_mexico
-			#	region = sr:region_central_america
-			#}
 		}
 	}
 
@@ -199,12 +195,18 @@ je_nda_cult_to_yigian = {
 		custom_tooltip = {
 			text = je_nda_cult_to_yigian_hasleader_complete_tt
 
-			any_interest_group = {	
-				leader = { 
-					has_yigian_trait =yes
+			OR = {
+				any_interest_group = {	
+					leader = { 
+						has_yigian_trait =yes
+					}
+					is_in_government = yes	
+					is_powerful = yes			
 				}
-				is_in_government = yes	
-				is_powerful = yes			
+				any_scope_character = {
+						is_ruler = yes
+						has_yigian_trait = yes
+				}					
 			}
 		}
     }
@@ -218,13 +220,12 @@ je_nda_cult_to_yigian = {
 	
 		# check count of yigians in government. add to counter
 		effect = {
-				scope:nda_je_cult_to_yigian_scope = {
-					change_variable = {
-						name = nda_cult_to_yigian_tracker
-						add = 1
-					}					
-				}
-
+			scope:nda_je_cult_to_yigian_scope = {
+				change_variable = {
+					name = nda_cult_to_yigian_tracker
+					add = 1
+				}					
+			}
 
 			# Every non marginal 
 			every_interest_group = {
@@ -241,13 +242,45 @@ je_nda_cult_to_yigian = {
 					}					
 				}				
 			}	
-				
+			
+			# Extra if in government
+			every_interest_group = {
+				limit = { 
+					is_in_government = yes
+					leader = { 
+						has_yigian_trait = yes
+					}
+				}
+				scope:nda_je_cult_to_yigian_scope = {
+					change_variable = {
+						name = nda_cult_to_yigian_tracker
+						add = 1
+					}					
+				}				
+			}	
+
+			# Extra if powerful
+			every_interest_group = {
+				limit = { 
+					is_powerful = yes
+					leader = { 
+						has_yigian_trait = yes
+					}
+				}
+				scope:nda_je_cult_to_yigian_scope = {
+					change_variable = {
+						name = nda_cult_to_yigian_tracker
+						add = 1
+					}					
+				}				
+			}		
 		}	
 
 		# Chance that another character will become cultist
 		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
 			8 = 0
 			1 = nda_yigian.1 
+			1 = nda_base.6 # nned to keep adding base cultists as a number can disappear before conversion
 		}		
 	}
 
@@ -320,13 +353,19 @@ je_nda_cult_to_dagonic = {
 		custom_tooltip = {
 			text = je_nda_cult_to_dagonic_hasleader_complete_tt
 
-			any_interest_group = {	
-				leader = { 
-					has_dagonic_trait =yes
+			OR = {
+				any_interest_group = {	
+					leader = { 
+						has_dagonic_trait =yes
+					}
+					is_in_government = yes	
+					is_powerful = yes			
 				}
-				is_in_government = yes	
-				is_powerful = yes			
-			}
+				any_scope_character = {
+						is_ruler = yes
+						has_dagonic_trait = yes
+				}
+			}	
 		}
     }
 
@@ -362,13 +401,45 @@ je_nda_cult_to_dagonic = {
 					}					
 				}				
 			}	
-				
+						
+			# Extra if in government
+			every_interest_group = {
+				limit = { 
+					is_in_government = yes
+					leader = { 
+						has_dagonic_trait = yes
+					}
+				}
+				scope:nda_je_cult_to_dagonic_scope = {
+					change_variable = {
+						name = nda_cult_to_dagonic_tracker
+						add = 1
+					}					
+				}				
+			}	
+
+			# Extra if powerful
+			every_interest_group = {
+				limit = { 
+					is_powerful = yes
+					leader = { 
+						has_dagonic_trait = yes
+					}
+				}
+				scope:nda_je_cult_to_dagonic_scope = {
+					change_variable = {
+						name = nda_cult_to_dagonic_tracker
+						add = 1
+					}					
+				}				
+			}		
 		}	
 
 		# Chance that another character will become cultist
 		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
 			8 = 0
 			1 = nda_dagonic.1 
+			1 = nda_base.6 # nned to keep adding base cultists as a number can disappear before conversion
 		}		
 	}
 

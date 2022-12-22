@@ -19,4 +19,5 @@
  je_nda_ritual_proceeds_goal:0 "Compete Ritual to enable Cthulhu's return when the 'Stars are Right.'"
  je_nda_ritual_proceeds_complete_tt:0 "The Cult has completed it's ritual. The return is now ineviatable."
  je_nda_ritual_proceeds_complete:0 "The Cult has completed it's ritual. The return is now ineviatable."
+ nda_ritual_completed:0 "The Ritual Has Completed."
  #je_nda_ritual_proceeds_hasleader_complete_tt:0 "A powerful leader of the government is a Cultist"

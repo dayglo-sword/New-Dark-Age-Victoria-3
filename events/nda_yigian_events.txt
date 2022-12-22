@@ -44,6 +44,7 @@ nda_yigian.1 = { # Convert a Cultist to Yigian equivalent - called from journal 
 					add_trait = nda_yig_master # should override existing
 					remove_trait = nda_master
 				}
+				
 				save_scope_as = converted_ig_leader
 			}
 			save_scope_as = converted_ig	

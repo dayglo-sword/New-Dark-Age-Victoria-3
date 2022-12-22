@@ -3,19 +3,31 @@
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	is_shown_when_inactive = {
-		country_has_primary_culture = cu:nda_cul_cultist 
+		country_has_primary_culture = cu:nda_cul_cultist  
+		exists = c:ELD
+		c:ELD = ROOT
 	}
 
 	possible = {
 	#	# ? has any state as Eldritch homeland - will convert to Yigian on completion
-
+		# just ELD as initiator, DGN after a certain date, Other after a later date - others can assist via second journal
 		country_has_primary_culture = cu:nda_cul_cultist # easy check
+
+	#	OR = {
+	#		AND = { # ELD should have first chance as initiator
+	#			exists = c:ELD
+	#			ELD = ROOT
+	#		}
+	#		AND = { # DGN should have a chance as initiator
+	#			exists = c:DGN
+	#			DGN = ROOT
+	#		}
+	#	}
+
 
  		NOT = { has_global_variable = nda_ritual_completed  }
 
-		#any_scope_state = { # has capital in americas
-		#	is_potentially_yigian = yes
-		#}
+
 	}
 
 	immediate = {

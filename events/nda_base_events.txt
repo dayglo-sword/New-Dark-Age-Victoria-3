@@ -18,7 +18,7 @@ nda_base.1 = { # An Introduction to NDA
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
 	trigger = {
 
@@ -44,15 +44,14 @@ nda_base.2 = { # Nameless Cults published
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
 		
 	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
 	trigger = {
  		# 1839 and owner of dusseldorf
@@ -173,15 +172,14 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
 		
 	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
 	trigger = {
  		# 1840 and not dusseldorf
@@ -280,7 +278,7 @@ nda_base.4 = { # The Death of Junzt
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
 		
 	}
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
@@ -398,7 +396,7 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 			limit = { 
 				NOT = { 
 					leader = { 
-						has_eldritch_trait = yes
+						has_any_cultist_trait = yes
 					} 
 				}
 			}
@@ -532,6 +530,7 @@ nda_base.8 = { # Notification that first country has recognized cult
 			limit = {
 				NOT = {has_journal_entry = je_nda_cult_spreads}
 				NOT = {has_variable = nda_cultists_in_open} # don't rerun
+				has_events = yes # can get events and journals
 			}
 			debug_log = "Cult Expanded from Neighbour" #[ROOT.GetName] : 
 			add_journal_entry = { type = je_nda_cult_spreads }	
