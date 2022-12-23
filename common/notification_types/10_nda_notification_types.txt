@@ -32,3 +32,27 @@ nda_first_dagon_cult = {
 	notification_type = toast
 	days = 35
 }
+
+nda_elditch_realm_proclaimed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 35
+}
+
+nda_yigian_lands_proclaimed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 35
+}
+
+nda_dagonic_shores_proclaimed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 35
+}

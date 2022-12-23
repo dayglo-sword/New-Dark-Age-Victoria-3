@@ -34,12 +34,14 @@
  nda_base.8.d:1 "The Elditch Cult in the country of [SCOPE.sC('originator').GetName] is spreading their dogma into our fair country."
  nda_base.8.f:1 "How long will it be before our politicians become corrupt and self-serving?"
  nda_base.8.a:0 "Curse Them!"
- #notification_nda_base_7_event_tooltip:0 "#header $notification_neighbor_events_1_name$#!\n$TOOLTIP_DELIMITER$\n$notification_neighbor_events_1_desc$"
- #notification_nda_base_7_event_name:1 "[SCOPE.sC('originator').GetName ] - The Cult in the open"
- #notification_nda_base_7_event_desc:1 "The Elditch Cult in [SCOPE.sC('originator').GetName] no longer operates in secret."
 
  nda_base.9.t:0 "Errant Leadership"
  nda_base.9.d:1 "Senior members of the Inner Circle are worried about [SCOPE.sCharacter('targeted_ig_leader').GetFullName] commitment to the cause. Their personal belief in ''seems to conflict with our nature."
  nda_base.9.f:1 "Fortunately we can be very persuasive when we need to be and they will see the error of their ways."
  nda_base.9.a:0 "Pursuade Them!"
  nda_base.9.b:0 "Ignore Them!"
+
+ nda_base.10.t:0 "Eldritch Realm Proclaimed"
+ nda_base.10.d:1 "For too long has the Cult been without a homeland! But that is no longer the case as #BOLD The Eldritch Realm on Earth#!. has been proclaimed!"
+ nda_base.10.f:1 "But why stop here when we can include the rest of the world in our ambitions!""
+ nda_base.10.a:0 "Hurrah!"

@@ -41,23 +41,22 @@ has_any_cultist_trait = {
 
 ### Geography triggers
 
-#is_full_cult_country = {
-#	OR ={
-#		AND = {
-#			exists = c:ELD
-#			owner = { c:ELD = THIS }				
-#		}
-#		AND = {
-#			exists = c:YIG
-#			owner = { c:YIG = THIS }				
-#		}
-#		AND = {
-#			exists = c:DGN
-#			owner = { c:DGN = THIS }				
-#		}	
-#	}
-#
-#}
+is_full_cult_country = {
+	OR ={
+		AND = {
+			exists = c:ELD
+			owner = { c:ELD = $COUNTRY$ }				
+		}
+		AND = {
+			exists = c:YIG
+			owner = { c:YIG = $COUNTRY$ }				
+		}
+		AND = {
+			exists = c:DGN
+			owner = { c:DGN = $COUNTRY$ }				
+		}	
+	}
+}
 
 is_potentially_yigian = { 
 	# has capital in certain american lands

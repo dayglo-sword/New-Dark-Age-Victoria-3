@@ -202,16 +202,12 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 
 		# redundant to spread to cult country
 		NOT = {
-			OR = {
-				c:ELD = ROOT
-				c:YIG = ROOT
-				c:DGN = ROOT
-			}				
+			is_full_cult_country = { COUNTRY="ROOT" }				
 		}
 	}
 
 	immediate = {
-		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger simultaniously.
+		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger simultaniously	
 		debug_log = "Imprint of Nameless Cults" 
 	}	
 	
@@ -525,12 +521,12 @@ nda_base.8 = { # Notification that first country has recognized cult
 	}
 
 	immediate = {
-		# start journal for initial cult spread
+		# start journal for additional cult spread
 		if = {
 			limit = {
 				NOT = {has_journal_entry = je_nda_cult_spreads}
 				NOT = {has_variable = nda_cultists_in_open} # don't rerun
-				has_events = yes # can get events and journals
+				#has_events = yes # can get events and journals
 			}
 			debug_log = "Cult Expanded from Neighbour" #[ROOT.GetName] : 
 			add_journal_entry = { type = je_nda_cult_spreads }	
@@ -538,7 +534,7 @@ nda_base.8 = { # Notification that first country has recognized cult
 		}
 	}	
 	
-	option = { #Curse Them!
+	option = { #Hurrah!
 		name = nda_base.8.a
 		default_option = yes
 	}
@@ -635,5 +631,94 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	}
 }
 
+nda_base.10 = { # Notifications that the Eldritch Realms hs formed
+	type = country_event
+	#hidden = yes # if there are no option, make it hidden
+	placement = ROOT
+	title = nda_base.10.t
+	desc = nda_base.10.d
+	flavor =  nda_base.10.f
 
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+		AND = {
+				exists = c:ELD
+				c:ELD = ROOT
+		}
+		NOT = { has_global_variable = nda_eldritch_realm_founded} 
+	}
+
+	immediate = {
+
+		set_global_variable = nda_eldritch_realm_founded
+
+		# send out notification		
+		every_country = {
+			limit = {
+				#is_player = yes
+				NOT = {	c:ELD = ROOT }
+			}
+
+			post_notification = nda_elditch_realm_proclaimed # toast
+
+		}
+
+		# Set Country Leader as Cultist if not already
+		every_scope_character = {
+			limit = { 
+				is_ruler = yes 
+				has_eldritch_trait = no 
+			}
+			add_trait = nda_master # need to add to heirs as well?
+		}
+
+		# set (not so) secret goals and Strategy
+		set_secret_goal = {
+			country = c:NEN
+			secret_goal = antagonize
+		}
+		set_secret_goal = {
+			country = c:YIG
+			secret_goal = protect
+		}
+		set_secret_goal = {
+			country = c:DGN
+			secret_goal = protect
+		}
+
+		set_strategy = ai_strategy_colonial_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+
+		# spread to non-cultist  Neighbour
+		random_country = {
+			limit = {
+				is_adjacent = ROOT
+				NOT = {has_journal_entry = je_nda_cult_spreads}
+				NOT = {has_variable = nda_cultists_in_open}
+			}
+			trigger_event = { id = nda_base.8 }	# spread the cult
+		}
+
+		# trigger events for other cult cuntries to bow down/offer tribute/ignore
+
+	}	
+	
+	option = { # #Hurrah!
+		name = nda_base.10.a
+		default_option = yes
+	}
+}
 

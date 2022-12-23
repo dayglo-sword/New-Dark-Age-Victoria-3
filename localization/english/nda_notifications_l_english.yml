@@ -10,3 +10,14 @@
  notification_nda_first_dagon_cult_name:1 "[SCOPE.sC('originator').GetName ] - The Rise of Dagon"
  notification_nda_first_dagon_cult_desc:1 "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of the sea god, Dagon."
 
+ notification_nda_elditch_realm_proclaimed_tooltip:0 "#header $notification_nda_elditch_realm_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_elditch_realm_proclaimed_desc$"
+ notification_nda_elditch_realm_proclaimed_name:1 "[SCOPE.sC('originator').GetName ] - Hail The Eldritch Realm"
+ notification_nda_elditch_realm_proclaimed_desc:1 "The Elditch Cult has found a homeland as the existence of the Eldritch Rea is proclaimed."
+
+ notification_nda_yigian_lands_proclaimed_tooltip:0 "#header $notification_nda_yigian_lands_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_yigian_lands_proclaimed_desc$"
+ notification_nda_yigian_lands_proclaimed_name:1 "[SCOPE.sC('originator').GetName ] - Hail The Yigian Lands"
+ notification_nda_yigian_lands_proclaimed_desc:1 "The Snake Cult has found a homeland as the existence of the Yigian Lands is proclaimed."
+
+ notification_nda_dagonic_shores_proclaimed_tooltip:0 "#header $notification_nda_dagonic_shores_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_dagonic_shores_proclaimed_desc$"
+ notification_nda_dagonic_shores_proclaimed_name:1 "[SCOPE.sC('originator').GetName ] - Hail The Dagonic Shores"
+ notification_nda_dagonic_shores_proclaimed_desc:1 "The Deep Ones have returned to the coasts as their followers proclaim the formation of the Dagonic Shores."

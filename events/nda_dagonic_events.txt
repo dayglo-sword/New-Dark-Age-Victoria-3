@@ -32,16 +32,16 @@ nda_dagonic.1 = { # Convert a Cultist to dagonic equivalent - called from journa
 				} 
 			}
 			leader = {
-				if = { limit = { OR = { has_trait = nda_cultist }
-					add_trait = nda_dag_cultist # should override existing
+				if = { limit = {  has_trait = nda_cultist } 
+					add_trait = nda_dagon_cultist # should override existing
 					remove_trait = nda_cultist
 				}
 				if = { limit = { has_trait = nda_acolyte }
-					add_trait = nda_dag_acolyte # should override existing
+					add_trait = nda_dagon_acolyte # should override existing
 					remove_trait = nda_acolyte
 				}
 				if = { limit = { has_trait = nda_master }
-					add_trait = nda_dag_master # should override existing
+					add_trait = nda_dagon_master # should override existing
 					remove_trait = nda_master
 				}
 				save_scope_as = converted_ig_leader
@@ -115,18 +115,94 @@ nda_dagonic.2 = { # Cult in contry converts to dagonic - called from journal 'je
 		every_country = {
 			limit = {
 				is_player = yes
-				NOT = { has_global_variable = nda_cultists_in_open}
+				NOT = { has_global_variable = nda_dagon_in_open}
 			}
 
 			post_notification = nda_first_dagon_cult 
 
 		}
 		
-		#set_global_variable = nda_dagon_in_open	
+		set_global_variable = nda_dagon_in_open	
 	}	
 	
 	option = { #So it begins
 		name = nda_dagonic.2.a
+		default_option = yes
+	}
+}
+
+nda_dagonic.3 = { # Notifications that the Dagonic Shores has formed
+	type = country_event
+	placement = ROOT
+	title = nda_dagonic.3.t
+	desc = nda_dagonic.3.d
+	flavor =  nda_dagonic.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+		AND = {
+				exists = c:DGN
+				c:DGN = ROOT
+		}
+		NOT = { has_global_variable = nda_dagonic_shores_founded} 
+	}
+
+	immediate = {
+
+		set_global_variable =  nda_dagonic_shores_founded
+
+		# send out notification		
+		every_country = {
+			limit = {
+				#is_player = yes
+				NOT = {	c:DGN = ROOT }
+			}
+
+			post_notification = nda_dagonic_shores_proclaimed # toast
+		}
+
+		# Set Country Leader as Cultist if not already
+		every_scope_character = {
+			limit = { 
+				is_ruler = yes 
+				has_dagonic_trait = no 
+			}
+			add_trait = nda_dagon_master # need to add to heirs as well?
+		}
+
+		# set (not so) secret goals and strategy
+		set_secret_goal = {
+			country = c:NEN
+			secret_goal = antagonize
+		}
+		set_secret_goal = {
+			country = c:ELD
+			secret_goal = befriend
+		}
+		set_secret_goal = {
+			country = c:YIG
+			secret_goal = befriend
+		}
+
+		set_strategy = ai_strategy_colonial_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+	}	
+	
+	option = { #Hurrah!
+		name = nda_dagonic.3.a
 		default_option = yes
 	}
 }

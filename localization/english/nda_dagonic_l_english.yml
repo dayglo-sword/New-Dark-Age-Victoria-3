@@ -8,7 +8,10 @@ nda_dagonic.2.t:0 "From The Sea"
 nda_dagonic.2.d:1 "The Cult of Dagon has seized control of the Cult in this country."
 nda_dagonic.2.f:1 "It has taken open control of the government and now uses it's resources to further their goal...\n\nGlobal domination by the #BOLD Deep Ones!#!"
 nda_dagonic.2.a:0 "Fish People!!!"
-
+nda_dagonic.3.t:0 "Dagonic Shores Proclaimed"
+nda_dagonic.3.d:1 "For too long has the Servants of Dagon have hidden beneath the waves! But our coastline is lost no more,  we have returned to #BOLD The Dagonic Shores#!."
+nda_dagonic.3.f:1 "But why stop here when we can reclaim all our coasts and bring about the return of our master!""
+nda_dagonic.3.a:0 "Hurrah!"
 ## triggers
 is_potentially_dagonic:0 "The ancestrial shores of the Deep Ones."
 is_potentially_dagonic_lands:0 "The ancestrial shores of the Deep Ones."

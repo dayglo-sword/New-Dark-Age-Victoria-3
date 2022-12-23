@@ -4,9 +4,9 @@
 		every_scope_state = {
 			state_region = { # will this double up on shared regions? Was a bit lame at 30 dev 10 pol,
 				# Cause devestation
-				add_devastation = 50
+				add_devastation = 70
 				# and polution
-				add_pollution = 20				
+				add_pollution = 30				
 			}
 		}	
 	}		
