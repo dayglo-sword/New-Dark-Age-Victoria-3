@@ -43,5 +43,11 @@
 
  nda_base.10.t:0 "Eldritch Realm Proclaimed"
  nda_base.10.d:1 "For too long has the Cult been without a homeland! But that is no longer the case as #BOLD The Eldritch Realm on Earth#!. has been proclaimed!"
- nda_base.10.f:1 "But why stop here when we can include the rest of the world in our ambitions!""
+ nda_base.10.f:1 "But why stop here when we can include the rest of the world in our ambitions!"
  nda_base.10.a:0 "Hurrah!"
+
+ nda_base.11.t:0 "War Matters"
+ nda_base.11.d:1 "We must push our troops more. War is serious business"
+ nda_base.11.f:1 "But is it worth the risk of ruining us?"
+ nda_base.11.a:0 "Try Harder!"
+ nda_base.11.b:0 "Let's not over do things." 

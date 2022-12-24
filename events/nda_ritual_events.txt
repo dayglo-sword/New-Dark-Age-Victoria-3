@@ -32,7 +32,7 @@ nda_ritual.1 = { # Cthulhu Returns
 	immediate = {
 		set_global_variable = nda_cthulhu_arrives	
 		nda_effect_cthulhu_arrives = yes
-		debug_log = "Stars are Right"
+		debug_log = "Ritual - Stars are Right"
 	}	
 	
 	option = { #So it begins
@@ -73,7 +73,7 @@ nda_ritual.2 = { # Cthulhu Early Return
 	immediate = {
 		set_global_variable = nda_cthulhu_arrives	
 		nda_effect_cthulhu_arrives = yes
-		debug_log = "Stars are Right Early"
+		debug_log = "Ritual - Stars are Right Early"
 	}	
 	
 	option = { #So it begins
@@ -107,7 +107,8 @@ nda_ritual.3 = { # The ritual completed
 	}
 
 	immediate = {
-		set_global_variable = nda_ritual_completed		
+		set_global_variable = nda_ritual_completed	
+		debug_log = "Ritual - Completed"	
 	}	
 	
 	option = { # Just a matter of time

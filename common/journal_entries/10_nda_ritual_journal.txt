@@ -62,7 +62,7 @@
 	on_complete = {
 		debug_log =  "Ritual Proceeds Journal : Completed :"
 
-		#set_global_variable = nda_ritual_completed
+		set_global_variable = nda_ritual_completed
 		trigger_event = { id = nda_ritual.3 }		
 	}
 

@@ -8,6 +8,7 @@ on_monthly_pulse_country = {
 		nda_base.5 # First Cultist
 
 		nda_base.10 # Eldritch Realms Proclaimed
+		nda_base.11 # Eldritch War Buff
 
 		nda_astro.1 
 		nda_astro.2 
@@ -155,3 +156,40 @@ on_country_released_as_overlord_subject = {
 		}
 	}
 }
+
+## Root = Diplomatic Play
+#on_diplo_play_war_start = {
+#	effect = {
+		# Always buff ELD if participating
+
+		#every_scope_play_involved = {
+
+		#	limit = { THIS = c:ELD  } 
+
+		#	ROOT = { 
+
+		#		debug_log = "ELD : on_diplo_play_war_start add_war_war_support 0 "
+
+		#		add_diplomatic_play_war_support = { # had diplmatic stage ended or too late to effect ??
+		#			target = c:ELD
+		#			value = 15	
+		#		}
+
+		#		#add_war_war_support = { # has war actually started??  Error: add_war_war_support effect [ Wrong scope for effect: diplomatic_play, expected war ]
+		#		#	target = c:ELD
+		#		#	value = 10
+		#		#}
+
+		#		#add_variable = nda_buff_ELD
+
+		#		debug_log = "ELD : on_diplo_play_war_start add_war_war_support 1 "
+		#	}
+
+		#	debug_log = "ELD : on_diplo_play_war_start add_war_war_support 2"
+		#}
+
+
+	#	post_notification = diplo_play_war_start_notification
+	#	post_notification = diplo_play_war_start_third_party_notification
+#	}
+#}

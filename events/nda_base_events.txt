@@ -722,3 +722,64 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 	}
 }
 
+nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variable against wars
+	type = country_event
+	placement = ROOT
+	title = nda_base.11.t
+	desc = nda_base.11.d
+	flavor =  nda_base.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
+
+	trigger = {
+		AND = {
+				exists = c:ELD
+				c:ELD = ROOT
+		}		
+		#is_at_war = yes
+	
+		any_scope_war = {
+			NOT = { has_variable = nda_eld_war_buff }
+		}
+	}
+
+	immediate = {
+		debug_log = "ELD : add buff"
+
+		random_scope_war = {
+			limit = {
+				NOT = { has_variable = nda_eld_war_buff } # This scope doesn't support variables. Scope: War
+			}
+			save_scope_as = eldritch_war
+		}
+	}	
+	
+	option = { #Try Harder
+		name = nda_base.11.a
+		default_option = yes
+
+		# buff the war score
+		scope:eldritch_war = {
+			add_war_exhaustion = { target = ROOT value = -5 }
+			add_war_war_support = { target = ROOT value = 10 }
+			set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
+			debug_log = "ELD : add buff"
+		}
+
+	}
+
+	#option = { #Don't over do it
+	#	name = nda_base.11.b	
+	#}
+}
