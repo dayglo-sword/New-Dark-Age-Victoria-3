@@ -33,6 +33,8 @@ nda_ritual.1 = { # Cthulhu Returns
 		set_global_variable = nda_cthulhu_arrives	
 		nda_effect_cthulhu_arrives = yes
 		debug_log = "Ritual - Stars are Right"
+
+		trigger_event = { id = nda_ritual.4 years = 10 } # leaves in 10 years
 	}	
 	
 	option = { #So it begins
@@ -113,6 +115,43 @@ nda_ritual.3 = { # The ritual completed
 	
 	option = { # Just a matter of time
 		name = nda_ritual.3.a
+		default_option = yes
+	}
+}
+
+nda_ritual.4 = { # Cthulhu Leaves
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.4.t
+	desc = nda_ritual.4.d
+	flavor =  nda_ritual.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { # Called Only?
+
+	}
+
+	immediate = {
+		set_global_variable = nda_ritual_cthulhu_leaves	
+		debug_log = "Ritual - Cthulhu Leaves"	
+
+		#nda_effect_cthulhu_leaves = yes
+	}	
+	
+	option = { # Just a matter of time
+		name = nda_ritual.4.a
 		default_option = yes
 	}
 }

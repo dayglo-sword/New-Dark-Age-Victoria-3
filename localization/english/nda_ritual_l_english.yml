@@ -1,10 +1,10 @@
 ﻿l_english:
   
- nda_ritual.1.t:0 "He's Back"
+ nda_ritual.1.t:0 "Cthulhu Has Returned"
  nda_ritual.1.d:1 ""
  nda_ritual.1.f:1 ""
  nda_ritual.1.a:0 "'So It Ends...'"
- nda_ritual.2.t:0 "He's Back"
+ nda_ritual.2.t:0 "Cthulhu Has Returned"
  nda_ritual.2.d:1 ""
  nda_ritual.2.f:1 ""
  nda_ritual.2.a:0 "'So It Ends...'"
@@ -12,7 +12,11 @@
  nda_ritual.3.d:1 "It is done!\n\nOur role complete. The return of the Cthulhu and the Old Ones is ineviatable."
  nda_ritual.3.f:1 "That is not dead which can eternal lie,\nAnd with strange aeons even death may die."
  nda_ritual.3.a:0 "'Just a matter of time...'"
- 
+ nda_ritual.4.t:0 "Cthulhu Has Departed"
+ nda_ritual.4.d:1 ""
+ nda_ritual.4.f:1 ""
+ nda_ritual.4.a:0 "'Is it over...'"
+
  # Journal Entries
  je_nda_ritual_proceeds:0 "The Ritual Commences"
  je_nda_ritual_proceeds_reason:0 "The Eldritch Cult, now secure in it's power, can commence the Ritual that will ensure the Great Ones reawakening.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
@@ -20,4 +24,12 @@
  je_nda_ritual_proceeds_complete_tt:0 "The Cult has completed it's ritual. The return is now ineviatable."
  je_nda_ritual_proceeds_complete:0 "The Cult has completed it's ritual. The return is now ineviatable."
  nda_ritual_completed:0 "The Ritual Has Completed."
- #je_nda_ritual_proceeds_hasleader_complete_tt:0 "A powerful leader of the government is a Cultist"
+
+# Notifications
+ notification_nda_ritual_cthulhu_returns_tooltip:0 "#header $notification_nda_ritual_cthulhu_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_returns_desc$"
+ notification_nda_ritual_cthulhu_returns_name:1 "Cthulhu Has Returned"
+ notification_nda_ritual_cthulhu_returns_desc:1 "."
+
+ notification_nda_ritual_cthulhu_leaves_tooltip:0 "#header $notification_nda_ritual_cthulhu_leaves_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_leaves_desc$"
+ notification_nda_ritual_cthulhu_leaves_name:1 "Cthulhu Has Departed"
+ notification_nda_ritual_cthulhu_leaves_desc:1 "."

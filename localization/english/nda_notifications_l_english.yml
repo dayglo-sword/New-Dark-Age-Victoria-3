@@ -21,3 +21,19 @@
  notification_nda_dagonic_shores_proclaimed_tooltip:0 "#header $notification_nda_dagonic_shores_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_dagonic_shores_proclaimed_desc$"
  notification_nda_dagonic_shores_proclaimed_name:1 "[SCOPE.sC('originator').GetName ] - Hail The Dagonic Shores"
  notification_nda_dagonic_shores_proclaimed_desc:1 "The Deep Ones have returned to the coasts as their followers proclaim the formation of the Dagonic Shores."
+
+ notification_nda_house_on_borderlands_tooltip:0 "#header $notification_nda_house_on_borderlands_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_house_on_borderlands_desc$"
+ notification_nda_house_on_borderlands_name:1 "A House on the Borderlands"
+ notification_nda_house_on_borderlands_desc:1 "Mysterious disappearences at house in Galway, Ireland. Tales of Pig-Faced people abducting the inhabitants. Only a diary remains to identify the victims."
+
+ notification_nda_carnacki_parties_tooltip:0 "#header $notification_nda_carnacki_parties_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_carnacki_parties_desc$"
+ notification_nda_carnacki_parties_name:1 "Carnacki the Ghost Finder"
+ notification_nda_carnacki_parties_desc:1 "Carnacki, the self proclaimed 'Ghost Finder' is entertaining guests in London with tales of his encounters with the Supernatural!"
+
+ notification_nda_carnacki_exile_tooltip:0 "#header $notification_nda_carnacki_exile_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_carnacki_exile_desc$"
+ notification_nda_carnacki_exile_name:1 "Carnacki Requests Asylum"
+ notification_nda_carnacki_exile_desc:1 "Carnacki, the Ghost Finder fears for his life in the cultist ridden streets of London. He is requesting the protection of other countries as he seeks asylum abroad."
+
+ notification_nda_carnacki_death_tooltip:0 "#header $notification_nda_carnacki_death_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_carnacki_death_desc$"
+ notification_nda_carnacki_death_name:1 "Death of Carnacki"
+ notification_nda_carnacki_death_desc:1 "Carnacki, the self proclaimed 'Ghost Finder' has been found dead from a single stab wound to the back. The incident at his private quarters is being investigated by police to determine how the assailant could get into a barred room."

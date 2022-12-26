@@ -1,5 +1,11 @@
 ﻿namespace = nda_nen
 
+	# Arkham = "x211ECF"
+    # Innsmouth = "x13444D"
+    # Beverly = "xB040C0"
+    # mine = "x8D8744"
+    # Dunwich = "xB040C0" 
+
 # Miskatonic Uni - Library and Herbert West - start events at #10
 
 nda_nen.10 = { # Founding of Library
@@ -24,8 +30,10 @@ nda_nen.10 = { # Founding of Library
 
 	trigger = {
  		# 1842 and owner of Miskaton - should still be NEN but could be Neighbours
-		game_date >= 1842  
-		owns_entire_state_region = STATE_NEW_HAMPSHIRE
+		game_date >= 1842 
+
+		p:x211ECF = { state = { owner = ROOT } }
+
 		exists = c:NEN
 		c:NEN = ROOT
 		OR = {
@@ -34,31 +42,15 @@ nda_nen.10 = { # Founding of Library
 		}
 
 		has_technology_researched = academia
-
-		any_scope_state = {
-			state_region = s:STATE_NEW_HAMPSHIRE
-			is_incorporated = yes
-			#has_building = building_urban_center
-			#NOT = {
-			#	has_building = building_university
-			#}
-		}
 	}
 
 	immediate = {
 		set_global_variable = nda_miskatonic_library
 
-		random_scope_state = {
-			limit = {
-				state_region = s:STATE_NEW_HAMPSHIRE
-				is_incorporated = yes
-				#has_building = building_urban_center
-				#NOT = {
-				#	has_building = building_university
-				#}
-			}
+		p:x211ECF = { # Arkham
 			save_scope_as = university_state
 		}
+
 	}	
 	
 	option = { #"Accept donations and build Library"
@@ -130,27 +122,19 @@ nda_nen.11 = { # Appeal for reinstatement
 	trigger = {
  		# 1903 and owner of Miskatonic Uni - should still be NEN but could be Neighbours
 		game_date >= 1903  
-		owns_entire_state_region = STATE_NEW_HAMPSHIRE
+
+		p:x211ECF = { state = { owner = ROOT has_building = building_university } }
+
 		exists = c:NEN
 		c:NEN = ROOT
 		has_global_variable = nda_miskatonic_library
 
 		has_technology_researched = academia
-
-		any_scope_state = {
-			state_region = s:STATE_NEW_HAMPSHIRE
-			is_incorporated = yes
-			has_building = building_university
-		}
-
 	}
 
+
 	immediate = {
-		random_scope_state = {
-			limit = {
-				state_region = s:STATE_NEW_HAMPSHIRE
-				owner = ROOT
-			}
+		p:x211ECF = { # Arkham
 			save_scope_as = university_state
 		}
 	}	
@@ -201,11 +185,7 @@ nda_nen.12 = { # Plague in Arkham
 	}
 
 	immediate = {
-		random_scope_state = {
-			limit = {
-				state_region = s:STATE_NEW_HAMPSHIRE
-				owner = ROOT
-			}
+		p:x211ECF = { # Arkham
 			save_scope_as = university_state
 		}
 	}	
@@ -244,20 +224,15 @@ nda_nen.13 = { #
 	trigger = {
 		has_global_variable = herbert_west_approval	
 		game_date >= 1918  # 
-		owns_entire_state_region = STATE_NEW_HAMPSHIRE
+
+		p:x211ECF = { state = { owner = ROOT has_building = building_university } }
+		
 		exists = c:NEN
 		c:NEN = ROOT
 	}
 
 	immediate = {
-		random_scope_state = {
-			limit = {
-				state_region = s:STATE_NEW_HAMPSHIRE
-				#is_incorporated = yes
-				#has_building = building_urban_center
-				#has_building = building_university
-				owner = ROOT
-			}
+		p:x211ECF = { # Arkham
 			save_scope_as = university_state
 		}
 	}	

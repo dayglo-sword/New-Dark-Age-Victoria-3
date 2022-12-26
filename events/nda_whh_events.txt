@@ -1,0 +1,304 @@
+﻿namespace = nda_whh # Willian Hope Hodgson - Carnacki the Ghost Finder
+
+# 
+
+nda_whh.10 = { # The House On the Borderlands - Flavour event
+	type = country_event
+	placement = scope:target_state
+	title = nda_whh.10.t
+	desc = nda_whh.10.d
+	flavor =  nda_whh.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1901 and owner of Galway 
+		game_date >= 1901  
+		p:xC7847D = { state = { owner = ROOT } }
+		
+		NOT = { has_global_variable = nda_house_on_borderlands }	
+
+	}
+
+	immediate = {
+		set_global_variable = nda_house_on_borderlands
+
+		p:x20E0C0 = { # Galway - could use x20E0C0 - wood - Loughrea
+			save_scope_as = target_state
+		}
+
+		debug_log = "House On the Borderlands"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"Tragic"
+		name = nda_whh.10.a
+		default_option = yes
+	}
+}
+
+# Start Carnacki Event Chain
+nda_whh.11 = { # Carnacki the Ghost Finder
+	type = country_event
+	placement = scope:target_state
+	title = nda_whh.11.t
+	desc = nda_whh.11.d
+	flavor =  nda_whh.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1904 and owner of London 
+		game_date >= 1904  
+		p:x7543C8 = { state = { owner = ROOT } }
+		
+		NOT = { has_global_variable = nda_carnacki_ghostfinder }	
+		NOT = { has_global_variable = nda_carnacki_dead }	
+	}
+
+	immediate = {
+		set_global_variable = nda_carnacki_ghostfinder
+
+		p:x7543C8 = { # London 
+			save_scope_as = target_state
+		}
+
+		debug_log = "Carnacki the Ghost Finder"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"A dinner party"
+		name = nda_whh.11.a
+		default_option = yes
+	}
+}
+
+# 
+nda_whh.12 = { # 
+	type = country_event
+	placement = ROOT
+	title = nda_whh.12.t
+	desc = nda_whh.12.d
+	flavor =  nda_whh.12.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1906 and non-cultist country 
+		game_date >= 1906  
+		is_player = true  # no hope if not
+		
+		# cultist on loose in London
+		p:x7543C8 = { state = { owner = { has_variable = nda_cultists_in_open } } }
+
+		has_global_variable = nda_carnacki_ghostfinder	
+		NOT = { has_global_variable = nda_carnacki_dead }	
+		NOT = { has_global_variable = nda_carnacki_in_exile }
+		NOT = { has_variable = nda_cultists_in_open	} # He's not going to run to a cultist country
+	}
+
+	immediate = {
+		#set_global_variable = nda_carnacki_ghostfinder
+
+		debug_log = "Carnacki request asylum"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"Accept"
+		name = nda_whh.12.a
+		set_variable = nda_carnacki_in_exile
+		set_global_variable = nda_carnacki_in_exile # Is this enough to stop multiple Carnacki ?
+	}
+
+	option = { #"Reject"
+		name = nda_whh.12.b
+		default_option = yes
+
+		# Carnacki is doomed
+		trigger_event = { id = nda_whh.15 days = 100 }
+	}
+}
+
+nda_whh.13 = { # 'Electric Pentagram' - should this really be a decision?
+	type = country_event
+	placement = ROOT
+	title = nda_whh.13.t
+	desc = nda_whh.13.d
+	flavor =  nda_whh.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+ 		# 1907 and non-cultist country 
+		game_date >= 1907  
+		is_player = true  # no hope if not
+		
+		# cultist on loose in London
+		#p:x7543C8 = { state = { owner = { has_variable = nda_cultists_in_open } } }
+
+		has_global_variable = nda_carnacki_ghostfinder	
+		OR = {
+			has_variable = nda_carnacki_in_exile # is in exile
+			AND = { 
+				NOT = { has_global_variable = nda_carnacki_in_exile }
+				p:x7543C8 = { state = { owner = { NOT = { has_variable = nda_cultists_in_open } } }	} # still in safe London		
+			}
+		}
+	}
+
+	immediate = {
+		#set_global_variable = nda_carnacki_ghostfinder
+
+		debug_log = "Carnacki researches pentagram"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"Accept"
+		name = nda_whh.13.a
+		
+		# warm up for other Carnacki events
+		set_variable = nda_carnacki_pentangle
+		treasury = -10000 
+		trigger_event = { id = nda_whh.13 days = 300 }	# research complete			
+	}
+
+	option = { #"Reject"
+		name = nda_whh.13.b
+		default_option = yes
+
+		# Carnacki is doomed
+		trigger_event = { id = nda_whh.15 days = 100 }
+	}
+}
+
+nda_whh.14 = { # Carnacki Succeeds
+	type = country_event
+	placement = ROOT
+	title = nda_whh.14.t
+	desc = nda_whh.14.d
+	flavor =  nda_whh.14.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		# is called from event nda_whh.13
+	}
+
+	immediate = {
+		#set_global_variable = nda_carnacki_ghostfinder
+
+		debug_log = "Carnacki succeeds"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"Accept"
+		name = nda_whh.14.a
+		
+		# warm up for other Carnacki events
+		set_variable = nda_carnacki_succesful
+
+		treasury = -10000 
+		trigger_event = { id = nda_whh.14 days = 300 }	# research complete			
+	}
+
+	option = { #"Reject"
+		name = nda_whh.14.b
+		default_option = yes
+
+		# Carnacki is doomed
+		trigger_event = { id = nda_whh.15 days = 100 }
+	}
+}
+
+nda_whh.15 = { # Death of Carnacki 
+	type = country_event
+	placement = ROOT
+	title = nda_whh.15.t
+	desc = nda_whh.15.d
+	flavor =  nda_whh.15.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		# is called from events above
+	}
+
+	immediate = {
+		set_global_variable = nda_carnacki_dead
+
+		debug_log = "Carnacki Death"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"A tragic event"
+		name = nda_whh.14.a
+		
+	}
+
+}

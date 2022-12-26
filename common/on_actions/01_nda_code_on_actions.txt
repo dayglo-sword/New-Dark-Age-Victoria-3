@@ -23,6 +23,12 @@ on_monthly_pulse_country = {
 		
 		nda_nen.10
 		nda_nen.11 
+
+		nda_whh.10 # House on the Borderlands
+		nda_whh.11 # Carnacki Start
+		nda_whh.12 # Carnacki Exile
+		nda_whh.13 # Electric Pentangle
+
 	}
 	random_events = {
 		

@@ -56,3 +56,53 @@ nda_dagonic_shores_proclaimed = {
 	notification_type = toast
 	days = 35
 }
+
+### notifications from ritual
+nda_ritual_cthulhu_returns = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 28
+}
+
+nda_ritual_cthulhu_leaves = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 28
+}
+
+### notifications from WHH events
+nda_house_on_borderlands = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 28
+}
+
+nda_carnacki_parties = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 28
+}
+
+nda_carnacki_exile = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 28
+}
+
+nda_carnacki_death = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 28
+}

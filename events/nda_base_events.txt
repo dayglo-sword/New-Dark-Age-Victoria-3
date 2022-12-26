@@ -743,24 +743,33 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
 	trigger = {
-		AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-		}		
-		#is_at_war = yes
-	
-		any_scope_war = {
-			NOT = { has_variable = nda_eld_war_buff }
+
+		OR = {
+			AND = {
+					exists = c:ELD
+					c:ELD = ROOT
+			}	
+			AND = {
+				exists = c:YIG
+				c:YIG = ROOT
+				#NOT = { has_war_with = c:ELD }
+			}				
 		}
+	
+		is_at_war = yes
+		is_player = no # only buff for AI because AI needs all the help it can get
+		#any_scope_war = { # war does not support variables
+		#	NOT = { has_variable = nda_eld_war_buff }
+		#}
 	}
 
 	immediate = {
 		debug_log = "ELD : add buff"
 
 		random_scope_war = {
-			limit = {
-				NOT = { has_variable = nda_eld_war_buff } # This scope doesn't support variables. Scope: War
-			}
+			#limit = {
+			#	NOT = { has_variable = nda_eld_war_buff } # This scope doesn't support variables. Scope: War
+			#}
 			save_scope_as = eldritch_war
 		}
 	}	
@@ -769,17 +778,43 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 		name = nda_base.11.a
 		default_option = yes
 
+		trigger = {
+			NOT = { has_war_with = c:ELD } # no bonus for hitting boss guy
+		}
+
 		# buff the war score
 		scope:eldritch_war = {
-			add_war_exhaustion = { target = ROOT value = -5 }
-			add_war_war_support = { target = ROOT value = 10 }
-			set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
-			debug_log = "ELD : add buff"
+			add_war_exhaustion = { target = ROOT value = -1 }
+			add_war_war_support = { target = ROOT value = 2 }
+			#set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
+			debug_log = "add buff"
 		}
 
 	}
 
-	#option = { #Don't over do it
-	#	name = nda_base.11.b	
-	#}
+	option = { #Not Good Idea
+		name = nda_base.11.b
+		
+		trigger = {
+			has_war_with = c:ELD # no bonus for hitting boss guy
+		}
+
+		# buff the war score
+		scope:eldritch_war = {
+			add_war_exhaustion = { target = ROOT value = 1 }
+			add_war_war_support = { target = ROOT value = -2 }
+			#set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
+			debug_log = "negative buff"
+		}
+
+	}
+
+#	option = { #Don't over do it
+#		name = nda_base.11.c	
+#
+#		trigger = {
+#			is_player = yes # option to avoid possible nation ruin ?
+#		}
+#	}
 }
+ }
