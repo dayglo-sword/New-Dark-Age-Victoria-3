@@ -8,6 +8,29 @@
 				# and polution
 				add_pollution = 30				
 			}
+			add_modifier = {
+				name = nda_dark_skies_modifier
+			}
+
+		}
+		add_modifier = {
+			name = nda_dark_skies_modifier # cloudly skies cause crop fail
 		}	
+	}		
+}
+
+nda_effect_cthulhu_leaves = { # Used at departure
+	# everywhere
+	every_country = {
+		every_scope_state = {
+			state_region = { # will this double up on shared regions? Was a bit lame at 30 dev 10 pol,
+				# Cause devestation
+				add_devastation = 70
+				# and polution
+				add_pollution = 30				
+			}
+			remove_modifier = nda_dark_skies_modifier		
+		}
+		remove_modifier = nda_dark_skies_modifier # skies clear			
 	}		
 }

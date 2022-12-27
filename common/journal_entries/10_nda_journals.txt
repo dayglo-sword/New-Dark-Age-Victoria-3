@@ -17,7 +17,7 @@
 		clamp_variable = {
 				name = nda_cult_spread_tracker
 				min = 0
-				max = 700			
+				max = 1000			
 		}	
 		save_scope_as = nda_je_scope
 		debug_log = "Cult Spread Journal : Started : "
@@ -132,7 +132,7 @@
 	}
 
 	goal_add_value = {
-		add = 600 # should be approx 10years -> 12 months x 8 IG + power and govern bonus?
+		add = 900 # should be approx 10years -> 12 months x 8 IG + power and govern bonus?
 	}
 
     fail = {

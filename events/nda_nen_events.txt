@@ -80,6 +80,11 @@ nda_nen.10 = { # Founding of Library
 				# add level to any university??	
 				#start_building_construction = building_university
 			}
+
+			add_modifier = { # should this be applied via special building for library
+				name = nda_miskatonic_uni_modifier
+			}
+
 		}
 		debug_log = "Build Orne Library"
 

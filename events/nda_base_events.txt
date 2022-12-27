@@ -55,7 +55,7 @@ nda_base.2 = { # Nameless Cults published
 
 	trigger = {
  		# 1839 and owner of dusseldorf
-		game_date >= 1839 #1837 
+		game_date >= 1839 
 		owns_entire_state_region = STATE_NORTH_RHINE
 
 		NOT = {has_global_variable = nda_nameless_cults_exists}
@@ -183,10 +183,10 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 
 	trigger = {
  		# 1840 and not dusseldorf
-		game_date >= 1838 #1840
+		game_date >= 1840
 		has_global_variable = nda_nameless_cults_exists
 
-		NOT = { has_variable = nda_nameless_cults}
+		NOT = { has_variable = nda_nameless_cults_decision} # don't rerun while decision in progress
 
 		OR = { # will also fire for countries as they promote in rank
 			country_rank = rank_value:great_power
@@ -207,7 +207,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 	}
 
 	immediate = {
-		# set_variable = nda_nameless_cults # don't set immediate as causes follow on event to trigger simultaniously	
+		set_variable = nda_nameless_cults_decision # don't set immediate as causes follow on event to trigger simultaniously	
 		debug_log = "Imprint of Nameless Cults" 
 	}	
 	
@@ -784,10 +784,14 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 
 		# buff the war score
 		scope:eldritch_war = {
-			add_war_exhaustion = { target = ROOT value = -1 }
-			add_war_war_support = { target = ROOT value = 2 }
-			#set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
-			debug_log = "add buff"
+			IF = {
+				limit = { has_war_support = { target = ROOT value < 50 } }
+				add_war_exhaustion = { target = ROOT value = -0.5 }
+				add_war_war_support = { target = ROOT value = 1 }
+				#set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
+				debug_log = "add buff"				
+			}
+
 		}
 
 	}
@@ -801,8 +805,8 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 
 		# buff the war score
 		scope:eldritch_war = {
-			add_war_exhaustion = { target = ROOT value = 1 }
-			add_war_war_support = { target = ROOT value = -2 }
+			add_war_exhaustion = { target = ROOT value = 0.5 }
+			add_war_war_support = { target = ROOT value = -1 }
 			#set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
 			debug_log = "negative buff"
 		}

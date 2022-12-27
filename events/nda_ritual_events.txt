@@ -65,7 +65,7 @@ nda_ritual.2 = { # Cthulhu Early Return
 
 	trigger = { # limit to eldritch cult ELD ? Called Only?
 		has_global_variable = nda_ritual_completed	
-		game_date >= 1900.1.1 # 1890.8.20  # HPL's Birthday
+		game_date >= 1890.8.20  # HPL's Birthday
 		NOT = {
 			has_global_variable = nda_cthulhu_arrives	# run once
 		 }
@@ -147,7 +147,7 @@ nda_ritual.4 = { # Cthulhu Leaves
 		set_global_variable = nda_ritual_cthulhu_leaves	
 		debug_log = "Ritual - Cthulhu Leaves"	
 
-		#nda_effect_cthulhu_leaves = yes
+		nda_effect_cthulhu_leaves = yes
 	}	
 	
 	option = { # Just a matter of time

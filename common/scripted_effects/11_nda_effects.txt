@@ -73,7 +73,7 @@
 		# ELD only buffs
 		#ROOT = {
 
-			every_state_region = {
+			every_state_region = { # get claim on neighbours
 				limit = { 
 					is_homeland=cu:nda_cul_cultist
 					any_neighbouring_state = { owner = ROOT }
@@ -82,6 +82,19 @@
 				add_claim = ROOT						
 			}
 
+			every_scope_state = { # need to set all non-homelands in ELD as homelands - should help DGN release
+				limit = {
+					state_region = {
+						NOT = { is_homeland = cu:nda_cul_cultist }
+						NOT = { is_homeland = cu:nda_cul_dagonic }
+						# include YIG as well ??
+					}	
+				}
+				state_region = {
+					add_homeland = nda_cul_cultist
+				}
+				
+			}
 		#}
 		# remove radicals from government while everyone is partying
 
@@ -163,6 +176,19 @@
 				
 				}
 				add_claim = ROOT						
+			}
+
+			every_scope_state = { # need to set all non-homelands in YIG as homelands
+				limit = {
+					state_region = {
+						NOT = { is_homeland = cu:nda_cul_yigian }
+						# include other Cults as well ??
+					}	
+				}
+				state_region = {
+					add_homeland = nda_cul_yigian
+				}
+				
 			}
 			# remove radicals from government while everyone is partying
 

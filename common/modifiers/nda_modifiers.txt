@@ -1,0 +1,16 @@
+﻿nda_miskatonic_uni_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_mult = 0.15
+	building_arts_academy_throughput_mult = 0.15
+}
+
+nda_dark_skies_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_group_bg_agriculture_throughput_mult = -0.3
+}
+
+nda_dagonic_state_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_whaling_station_throughput_mult = 0.33
+	building_fishing_wharf_throughput_mult = 0.33
+}
