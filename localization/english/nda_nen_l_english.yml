@@ -40,6 +40,9 @@ nda_nen.10.f:0 "The building is to be known as #BOLD The Orne Library #!. and is
 nda_nen.10.a:0 "Only good can come of this!"
 nda_nen.10.b:0 "We don't need no education."
 
+building_nda_orne_library:0 "The Orne Library"
+building_nda_miskatonic_university:0 "Miskatonic University"
+
 nda_nen.11.t:0 "Appeal for Reinstatement"
 nda_nen.11.d:0 "A young doctor by the name of #BOLD Herbert West#! has made a direct appeal to us after his superior, Dr Allan Halsey, at the Miskatonic University Medical School has barred him from the institute after claims of grave robbery!"
 nda_nen.11.f:0 "West has explained that fresh cadavers are essential for the success of his research, which may eventually lead to immortality! There is also the more serious matter of a number of books not being returned to the world renowned Orne Library!"

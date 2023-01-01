@@ -1,0 +1,310 @@
+﻿namespace = nda_hasturian
+
+nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.1.t
+	desc = nda_hasturian.1.d
+	flavor =  nda_hasturian.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	trigger = {
+ 		# 1890 and owner of Paris
+		game_date >= 1890 
+		owns_entire_state_region = STATE_NORTH_RHINE
+
+		NOT = {has_global_variable = nda_king_in_yellow_play_exists}
+	}
+
+	immediate = {
+		set_global_variable = nda_king_in_yellow_play_exists # stop double fire
+	}	
+	
+	option = { #"What harm can a play do?"
+		name = nda_hasturian.1.a
+		default_option = yes
+		
+		ai_chance = { # will +ve effect conversion rate
+			base = 80		
+		}
+
+		# annoy the clergy
+		ig:ig_devout = {
+			add_modifier = {
+	            name = permitted_obscene_publication
+	            months = 36
+	        }
+		}
+
+		# the intellectuals approve
+		ig:ig_intelligentsia = {
+			add_modifier = {
+	            name = championed_free_speech
+	            months = 36
+	        }
+		}
+		set_variable = nda_king_in_yellow
+	}
+
+	option = { #"Such writings must be supressed!"
+		name = nda_hasturian.2.b
+
+		ai_chance = { # will -ve effect conversion rate
+			base = 20		
+		}
+
+		# annoy the intellectuals
+		ig:ig_intelligentsia = {
+			add_modifier = {
+	            name = curtailed_free_speech
+	            months = 36
+	        }
+		}
+		# the church approves
+		ig:ig_devout = {
+			add_modifier = {
+	            name = stopped_obscene_publication
+	            months = 36
+	        }
+		}
+		set_variable = nda_king_in_yellow_supressed
+	}
+}
+
+nda_hasturian.2 = { # Imprint of Nameless Cults - as above but for other major countries 
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.2.t
+	desc = nda_hasturian.2.d
+	flavor =  nda_hasturian.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	trigger = {
+ 		# 1891 and not original country
+		game_date >= 1891
+		has_global_variable = nda_king_in_yellow_play_exists
+
+		NOT = { has_variable = nda_king_in_yellow_decision} # don't rerun while decision in progress
+
+		OR = { # will also fire for countries as they promote in rank
+			country_rank = rank_value:great_power
+			country_rank = rank_value:major_power
+			AND = { # Alway for New England
+				exists = c:NEN
+				c:NEN = ROOT
+			}
+		}
+
+		# redundant to spread to cult country
+		NOT = {
+			is_full_cult_country = { COUNTRY="ROOT" }				
+		}
+	}
+
+	immediate = {
+		set_variable = nda_king_in_yellow_decision # don't set immediate as causes follow on event to trigger simultaniously	
+		debug_log = "Spread of King in Yellow" 
+	}	
+	
+	option = { #"What harm can a play do?"
+		name = nda_hasturian.2.a
+		default_option = yes
+		
+		ai_chance = { # will +ve effect conversion rate
+			base = 80		
+		}
+
+		# annoy the clergy
+		ig:ig_devout = {
+			add_modifier = {
+	            name = permitted_obscene_publication
+	            months = 36
+	        }
+		}
+
+		# the intellectuals approve
+		ig:ig_intelligentsia = {
+			add_modifier = {
+	            name = championed_free_speech
+	            months = 36
+	        }
+		}
+		set_variable = nda_king_in_yellow
+	}
+
+	option = { #"Such writings must be supressed!"
+		name = nda_hasturian.2.b
+
+		ai_chance = { # will -ve effect conversion rate
+			base = 20		
+		}
+
+		# annoy the intelectuals
+		ig:ig_intelligentsia = {
+			add_modifier = {
+	            name = curtailed_free_speech
+	            months = 36
+	        }
+		}
+		# the church approves
+		ig:ig_devout = {
+			add_modifier = {
+	            name = stopped_obscene_publication
+	            months = 36
+	        }
+		}
+
+		set_variable = nda_king_in_yellow_supressed
+	}
+}
+
+
+nda_hasturian.3 = { # The Repairer of Reputations
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.3.t
+	desc = nda_hasturian.3.d
+	flavor =  nda_hasturian.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/leader_arguing"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	#icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = { # owns new york - is not full cultist country
+		has_global_variable = nda_king_in_yellow_play_exists
+		has_variable = nda_king_in_yellow # is not suppressed
+	}
+
+	immediate = {
+
+	}	
+	
+	option = { #Ignore and have reputation ruined and unrest
+		name = nda_hasturian.3.a
+		default_option = yes
+	}
+
+	option = { # Have meeting
+		name = nda_hasturian.3.b
+
+		#follow on event
+		trigger_event = { id = nda_hasturian.4 days = 200 }	# ask for meeting
+	}
+}
+
+nda_hasturian.4 = { # The Repairers Offer
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.4.t
+	desc = nda_hasturian.4.d
+	flavor =  nda_hasturian.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect ="event:/SFX/Events/africa/leader_arguing"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { # triggered from nda_hasturian.3
+
+	}
+
+	immediate = {
+
+	}	
+	
+	option = { #Ignore and have reputation ruined and unrest
+		name = nda_hasturian.4.a
+		default_option = yes	
+		 # need ruination event that gives negatives to head of state and powerful leaders ?	
+	}
+
+	option = { # Path to Imperial America
+		name = nda_hasturian.4.b
+
+
+		#follow on event
+		trigger_event = { id = nda_hasturian.4 days = 200 }	# ask for meeting	
+	}
+}
+
+nda_hasturian.5 = { # Create Imperial America
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.5.t
+	desc = nda_hasturian.5.d
+	flavor =  nda_hasturian.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+		
+	}
+#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { # triggered from nda_hasturian.4
+
+	}
+
+	immediate = {
+		set_global_variable = nda_king_in_yellow
+
+	}	
+	
+	option = { # Coronation
+		name = nda_hasturian.5.a
+		default_option = yes
+
+		ROOT = { change_tag = IAM }
+	}
+
+}
+
+# nda_hasturian.6 # Ruination event.
+# nda_hasturian.7 # Death of Mr Wilde.
+# nda_hasturian.8 # Force AI Imperial America back to Absolute Monarchy if it drifts too far.

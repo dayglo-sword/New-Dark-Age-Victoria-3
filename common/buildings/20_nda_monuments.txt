@@ -6,17 +6,18 @@
 	unique = yes
 	#locator = "big_ben_locator"
 	
-	entity_not_constructed = { }
-	entity_under_construction = { "building_construction_2x2_entity" }
-	entity_constructed = { "wonder_big_ben_01_entity"}
+	#entity_not_constructed = { }
+	#entity_under_construction = { "building_construction_2x2_entity" }
+	#entity_constructed = { "wonder_big_ben_01_entity"}
 	
-	city_gfx_interactions = {
-		clear_size_area = yes
-		size = 2
-	}
+	#city_gfx_interactions = {
+	#	clear_size_area = yes
+	#	size = 2
+	#}
 	
 	production_method_groups = {
-		pmg_base_building_big_ben
+		pmg_base_building_university
+		pmg_university_academia
 	}
 	
 	required_construction = construction_cost_monument
@@ -46,14 +47,14 @@ building_nda_miskatonic_university = {
 
 	levels_per_mesh = 5
 	
-	entity_not_constructed = { }
-	entity_under_construction = { "building_construction_3x3_entity" }
-	entity_constructed = { "wonder_forbidden_city_01_entity"}
+	#entity_not_constructed = { }
+	#entity_under_construction = { "building_construction_3x3_entity" }
+	#entity_constructed = { "wonder_forbidden_city_01_entity"}
 	
-	city_gfx_interactions = {
-		clear_size_area = yes
-		size = 4
-	}
+	#city_gfx_interactions = {
+	#	clear_size_area = yes
+	#	size = 4
+	#}
 
 	unlocking_technologies = {
 		academia

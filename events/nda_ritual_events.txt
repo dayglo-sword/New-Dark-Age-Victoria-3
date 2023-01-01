@@ -16,7 +16,7 @@ nda_ritual.1 = { # Cthulhu Returns
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -59,7 +59,7 @@ nda_ritual.2 = { # Cthulhu Early Return
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
