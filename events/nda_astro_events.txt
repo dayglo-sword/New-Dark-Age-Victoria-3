@@ -170,6 +170,7 @@ nda_astro.5 = { # 1921 conjunction
 	
 	trigger = { 	
 		NOT = { has_variable = nda_conjunction_5 }		
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	} # They've gone so no Cult rational	
 		game_date >= 1921.9.14	
 		game_date < 1922 # stop late forming countries getting event	
 	}

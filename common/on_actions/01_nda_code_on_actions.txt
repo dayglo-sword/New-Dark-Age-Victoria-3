@@ -18,6 +18,8 @@ on_monthly_pulse_country = {
 		
 		nda_ritual.1 
 		nda_ritual.2 
+		nda_ritual.5 # Eldritch add Cult countries
+		nda_ritual.6 # Eldritch lose non-Cult countries
 
 		nda_yigian.3 # Yigian Lands Proclaimed
 		

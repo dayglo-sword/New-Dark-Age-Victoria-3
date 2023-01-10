@@ -16,6 +16,58 @@
 		add_modifier = {
 			name = nda_dark_skies_modifier # cloudly skies cause crop fail
 		}	
+
+		if = { # cultists outside cult country
+			limit = {
+				NOT = {
+					is_full_cult_country = { COUNTRY="THIS" }				
+				}
+			}
+
+			every_scope_culture = {
+				if = {
+					limit = {
+						NOT = {
+							THIS = cu:nda_cul_cultist
+							THIS = cu:nda_cul_yigian
+							THIS = cu:nda_cul_dagonic
+						}
+					}
+					# Make cultists outside cult lands angry
+					ROOT = {
+						add_radicals = {
+							value = very_large_radicals
+							culture = THIS
+						}						
+					}				
+				}
+			}
+		}
+
+		if = { # cultists in cult country
+			limit = {
+					is_full_cult_country = { COUNTRY="THIS" }				
+			}
+
+			every_scope_culture = {
+				if = {
+					limit = {
+						OR = {
+							THIS = cu:nda_cul_cultist
+							THIS = cu:nda_cul_yigian
+							THIS = cu:nda_cul_dagonic
+						}
+					}
+					# Make cultists in cult lands happy!
+					ROOT = {
+						add_loyalists = {
+							value = very_large_radicals
+							culture = THIS
+						}
+					}				
+				}
+			}
+		}
 	}		
 }
 
@@ -31,6 +83,87 @@ nda_effect_cthulhu_leaves = { # Used at departure
 			}
 			remove_modifier = nda_dark_skies_modifier		
 		}
-		remove_modifier = nda_dark_skies_modifier # skies clear			
+		remove_modifier = nda_dark_skies_modifier # skies clear		
+
+		if = {
+			limit = {
+				is_full_cult_country = { COUNTRY="THIS" }					
+			}
+
+			every_scope_culture = {
+				if = {
+					limit = {
+						NOT = {
+							THIS = cu:nda_cul_cultist
+							THIS = cu:nda_cul_yigian
+							THIS = cu:nda_cul_dagonic
+						}
+					}
+					# Make non-cultist survivors angry
+					ROOT = {
+						add_radicals = {
+							value = very_large_radicals
+							culture = THIS
+						}					
+					}				
+				}
+				if = {
+					limit = {
+						OR = {
+							THIS = cu:nda_cul_cultist
+							THIS = cu:nda_cul_yigian
+							THIS = cu:nda_cul_dagonic
+						}
+					}
+					# Make cultists unhappy
+					ROOT = {
+						add_radicals = {
+							value =  medium_radicals
+							culture = THIS
+						}						
+					}				
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = nda_cultists_in_open					
+			}
+
+			every_scope_culture = {
+				if = {
+					limit = {
+						NOT = {
+							THIS = cu:nda_cul_cultist
+							THIS = cu:nda_cul_yigian
+							THIS = cu:nda_cul_dagonic
+						}
+					}
+					# Make non-cultist survivors angry
+					ROOT = {
+						add_radicals = {
+							value = very_large_radicals
+							culture = THIS
+						}					
+					}				
+				}
+				if = {
+					limit = {
+						OR = {
+							THIS = cu:nda_cul_cultist
+							THIS = cu:nda_cul_yigian
+							THIS = cu:nda_cul_dagonic
+						}
+					}
+					# Make cultists unhappy
+					ROOT = {
+						add_radicals = {
+							value =  medium_radicals
+							culture = THIS
+						}						
+					}				
+				}
+			}
+		}			
 	}		
 }

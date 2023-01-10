@@ -16,6 +16,14 @@
  nda_ritual.4.d:1 ""
  nda_ritual.4.f:1 ""
  nda_ritual.4.a:0 "'Is it over...'"
+ nda_ritual.5.t:0 "The World Surrenders"
+ nda_ritual.5.d:1 ""
+ nda_ritual.5.f:1 ""
+ nda_ritual.5.a:0 "'Good...Good...'"
+ nda_ritual.6.t:0 "Failing Empire"
+ nda_ritual.6.d:1 ""
+ nda_ritual.6.f:1 ""
+ nda_ritual.6.a:0 "'Is it over...'"
 
  # Journal Entries
  je_nda_ritual_proceeds:0 "The Ritual Commences"
@@ -33,3 +41,10 @@
  notification_nda_ritual_cthulhu_leaves_tooltip:0 "#header $notification_nda_ritual_cthulhu_leaves_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_leaves_desc$"
  notification_nda_ritual_cthulhu_leaves_name:1 "Cthulhu Has Departed"
  notification_nda_ritual_cthulhu_leaves_desc:1 "."
+
+ notification_nda_ritual_country_surrenders_tooltip:0 "#header $notification_nda_ritual_country_surrenders_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_country_surrenders_desc$"
+ notification_nda_ritual_country_surrenders_name:1 "[SCOPE.sC('nda_ritual_annex').GetName ] Surrenders to the Cult."
+ notification_nda_ritual_country_surrenders_desc:1 "[SCOPE.sC('nda_ritual_annex').GetName ] has surrendered itself to the mercies of the Eldritch Cult."
+
+# diplo
+ nda_cult_liberation:0 "War of Liberation from the Cult"

@@ -35,6 +35,8 @@ nda_ritual.1 = { # Cthulhu Returns
 		debug_log = "Ritual - Stars are Right"
 
 		trigger_event = { id = nda_ritual.4 years = 10 } # leaves in 10 years
+
+		post_notification = nda_ritual_cthulhu_returns # toast
 	}	
 	
 	option = { #So it begins
@@ -76,6 +78,10 @@ nda_ritual.2 = { # Cthulhu Early Return
 		set_global_variable = nda_cthulhu_arrives	
 		nda_effect_cthulhu_arrives = yes
 		debug_log = "Ritual - Stars are Right Early"
+
+		trigger_event = { id = nda_ritual.4 years = 20 } # leaves in 20 years - longer than normal as reward
+
+		post_notification = nda_ritual_cthulhu_returns # toast
 	}	
 	
 	option = { #So it begins
@@ -148,10 +154,156 @@ nda_ritual.4 = { # Cthulhu Leaves
 		debug_log = "Ritual - Cthulhu Leaves"	
 
 		nda_effect_cthulhu_leaves = yes
+
+		post_notification = nda_ritual_cthulhu_leaves # toast
 	}	
 	
 	option = { # Just a matter of time
 		name = nda_ritual.4.a
+		default_option = yes
+	}
+}
+
+nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countries on a regular basis
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.5.t
+	desc = nda_ritual.5.d
+	flavor =  nda_ritual.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { 
+		
+		# Cthulhu is still here
+		has_global_variable = nda_cthulhu_arrives
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+		AND = {
+			exists = c:ELD
+			c:ELD = ROOT
+		}	
+		is_player = no # only for AI
+		# Has country that can join ELD
+		any_country = { 
+			is_player = no
+			is_country_alive = yes
+			NOT = {
+				is_full_cult_country = { COUNTRY="THIS" }				
+			}
+			country_has_primary_culture = cu:nda_cul_cultist
+		}
+
+	}
+
+	immediate = {
+		# random select country to join ELD
+		random_country = {
+			limit = {
+				is_player = no
+				is_country_alive = yes
+				NOT = {
+					is_full_cult_country = { COUNTRY="THIS" }				
+				}
+				country_has_primary_culture = cu:nda_cul_cultist				
+			}
+
+			save_scope_as = nda_ritual_annex
+		}
+
+		# send notification - does country still exist after annex?
+		post_notification = nda_ritual_country_surrenders # toast
+
+		annex = scope:nda_ritual_annex
+
+
+		debug_log = "Ritual - The world surrenders."	
+
+	}	
+	
+	option = { # Good. Good.
+		name = nda_ritual.5.a
+		default_option = yes
+	}
+}
+
+nda_ritual.6 = { # Dismantle Empire
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.6.t
+	desc = nda_ritual.6.d
+	flavor =  nda_ritual.6.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { 
+		has_global_variable = nda_ritual_cthulhu_leaves	
+		AND = {
+			exists = c:ELD
+			c:ELD = ROOT
+		}	
+		is_player = no # only for AI
+
+		# has subject that is not a cultist stronghold
+		any_country = {
+			is_subject_of = c:ELD
+			NOT = { country_has_primary_culture = cu:nda_cul_cultist }
+		}
+	}
+
+	immediate = {
+		
+		random_country = {
+			limit = {
+				is_subject_of = c:ELD	
+				NOT = { country_has_primary_culture = cu:nda_cul_cultist }			
+			}
+
+			if = {
+				limit = { NOT = { is_country_type = decentralized } }
+				# try for independence
+				create_diplomatic_play = {
+					name = nda_cult_liberation
+					war = yes
+					type = dp_independence
+
+					#target_state = s:STATE_DELHI.region_state:MUG
+
+					add_war_goal = {
+						holder = c:ELD
+						type = annex_country
+						target_country = THIS
+					}
+				}
+			}
+		}
+		debug_log = "Ritual - Eldritch Cult Splits"	
+		
+	}	
+	
+	option = { # It's Over
+		name = nda_ritual.6.a
 		default_option = yes
 	}
 }

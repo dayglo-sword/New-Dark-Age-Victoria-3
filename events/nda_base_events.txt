@@ -743,7 +743,7 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
 	trigger = {
-
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves } # he's gone so no further bonuses
 		OR = {
 			AND = {
 					exists = c:ELD
