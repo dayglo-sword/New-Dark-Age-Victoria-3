@@ -818,7 +818,7 @@
 	s:STATE_RHODE_ISLAND = {
 		region_state:NEN = {
 			create_pop = {
-				culture = yankee
+				culture = nda_cul_trueyankee
 				size = 104820
 			}
 		}
@@ -826,7 +826,7 @@
 	s:STATE_CONNECTICUT = {
 		region_state:NEN = {
 			create_pop = {
-				culture = yankee
+				culture = nda_cul_trueyankee
 				size = 199228
 			}
 		}
@@ -834,7 +834,7 @@
 	s:STATE_MASSACHUSETTS = {
 		region_state:NEN = {
 			create_pop = {
-				culture = yankee
+				culture = nda_cul_trueyankee
 				size = 754484
 			}
 			create_pop = {
@@ -855,7 +855,7 @@
 	s:STATE_NEW_HAMPSHIRE = {
 		region_state:NEN = {
 			create_pop = {
-				culture = yankee
+				culture = nda_cul_trueyankee
 				size = 223300
 			}
 			create_pop = {
@@ -872,7 +872,7 @@
 	s:STATE_VERMONT = {
 		region_state:NEN = {
 			create_pop = {
-				culture = yankee
+				culture = nda_cul_trueyankee
 				size = 282848
 			}
 		}
@@ -884,7 +884,7 @@
 				size = 16000
 			}
 			create_pop = {
-				culture = yankee
+				culture = nda_cul_trueyankee
 				size = 381228
 			}
 		}

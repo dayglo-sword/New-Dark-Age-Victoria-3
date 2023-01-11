@@ -42,3 +42,13 @@ IAM = {
 	capital = STATE_NEW_YORK # New York
 }
 
+NEN = {
+	color = { 166  224  85 }
+	
+	country_type = colonial
+	
+	tier = grand_principality
+	
+	cultures = { nda_cul_trueyankee }
+	capital = STATE_MASSACHUSETTS
+}

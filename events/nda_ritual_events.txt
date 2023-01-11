@@ -288,6 +288,7 @@ nda_ritual.6 = { # Dismantle Empire
 					war = yes
 					type = dp_independence
 
+					target_country = c:ELD
 					#target_state = s:STATE_DELHI.region_state:MUG
 
 					add_war_goal = {

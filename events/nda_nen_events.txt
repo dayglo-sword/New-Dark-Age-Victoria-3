@@ -1,16 +1,16 @@
 ﻿namespace = nda_nen
 
-	# Arkham = "x211ECF"
-    # Innsmouth = "x13444D"
-    # Beverly = "xB040C0"
-    # mine = "x8D8744"
-    # Dunwich = "xB040C0" 
+	# Arkham = "x2B5499"
+    # Innsmouth = "x30C040"
+    # Beverly = "xD64964"
+    # mine = "xB16D83"
+    # Dunwich = "xDB930D" 
 
 # Miskatonic Uni - Library and Herbert West - start events at #10
 
 nda_nen.10 = { # Founding of Library
-	type = country_event
-	placement = scope:university_state
+	type = country_event #state_event
+	placement = p:x2B5499 #scope:university_state
 	title = nda_nen.10.t
 	desc = nda_nen.10.d
 	flavor =  nda_nen.10.f
@@ -21,7 +21,6 @@ nda_nen.10 = { # Founding of Library
 		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"
 		
 	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
@@ -32,7 +31,7 @@ nda_nen.10 = { # Founding of Library
  		# 1842 and owner of Miskaton - should still be NEN but could be Neighbours
 		game_date >= 1842 
 
-		p:x211ECF = { state = { owner = ROOT } }
+		p:x30C040 = { state = { owner = ROOT } }
 
 		exists = c:NEN
 		c:NEN = ROOT
@@ -47,8 +46,8 @@ nda_nen.10 = { # Founding of Library
 	immediate = {
 		set_global_variable = nda_miskatonic_library
 
-		p:x211ECF = { # Arkham
-			save_scope_as = university_state
+		p:x2B5499 = { # Arkham
+			state = { save_scope_as = university_state }
 		}
 
 	}	
@@ -70,7 +69,7 @@ nda_nen.10 = { # Founding of Library
 					#}
 				}
 				create_building={
-					building="building_university"
+					building="building_nda_miskatonic_university" #"building_university"
 					level=1
 					reserves=1
 				}
@@ -106,7 +105,7 @@ nda_nen.10 = { # Founding of Library
 #94140 - Appeal for reinstatement
 nda_nen.11 = { # Appeal for reinstatement
 	type = country_event
-	placement = scope:university_state
+	placement = p:x2B5499
 	title = nda_nen.11.t
 	desc = nda_nen.11.d
 	flavor =  nda_nen.11.f
@@ -128,7 +127,7 @@ nda_nen.11 = { # Appeal for reinstatement
  		# 1903 and owner of Miskatonic Uni - should still be NEN but could be Neighbours
 		game_date >= 1903  
 
-		p:x211ECF = { state = { owner = ROOT has_building = building_university } }
+		p:x2B5499 = { state = { owner = ROOT has_building = building_university } }
 
 		exists = c:NEN
 		c:NEN = ROOT
@@ -139,8 +138,8 @@ nda_nen.11 = { # Appeal for reinstatement
 
 
 	immediate = {
-		p:x211ECF = { # Arkham
-			save_scope_as = university_state
+		p:x2B5499 = { # Arkham
+			state = { save_scope_as = university_state }
 		}
 	}	
 	
@@ -167,7 +166,7 @@ nda_nen.11 = { # Appeal for reinstatement
 #94141 - Plague in Arkham
 nda_nen.12 = { # Plague in Arkham
 	type = country_event
-	placement = scope:university_state
+	placement = p:x2B5499
 	title = nda_nen.12.t
 	desc = nda_nen.12.d
 	flavor =  nda_nen.12.f
@@ -190,8 +189,8 @@ nda_nen.12 = { # Plague in Arkham
 	}
 
 	immediate = {
-		p:x211ECF = { # Arkham
-			save_scope_as = university_state
+		p:x2B5499 = { # Arkham
+			state = { save_scope_as = university_state }
 		}
 	}	
 	
@@ -208,7 +207,7 @@ nda_nen.12 = { # Plague in Arkham
 #94142 - Research breakthrough
 nda_nen.13 = { # 
 	type = country_event
-	placement = scope:university_state
+	placement = p:x2B5499
 	title = nda_nen.13.t
 	desc = nda_nen.13.d
 	flavor =  nda_nen.13.f
@@ -230,15 +229,15 @@ nda_nen.13 = { #
 		has_global_variable = herbert_west_approval	
 		game_date >= 1918  # 
 
-		p:x211ECF = { state = { owner = ROOT has_building = building_university } }
+		p:x2B5499 = { state = { owner = ROOT has_building = building_university } }
 		
 		exists = c:NEN
 		c:NEN = ROOT
 	}
 
 	immediate = {
-		p:x211ECF = { # Arkham
-			save_scope_as = university_state
+		p:x2B5499 = { # Arkham
+			state = { save_scope_as = university_state }
 		}
 	}	
 	

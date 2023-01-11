@@ -1,0 +1,368 @@
+﻿namespace = nda_historic # Series of Historic 'Colour' events around spiritlism and the Occult - show to source country and to NEN as colour
+
+	# Arkham = "x211ECF"
+    # Innsmouth = "x13444D"
+    # Beverly = "xB040C0"
+    # mine = "x8D8744"
+    # Dunwich = "xB040C0" 
+
+nda_historic.10 = { # Founding of Spiritualist Movement
+	type = country_event
+	placement = p:x01D042 #scope:spiritulist_state
+	title = nda_historic.10.t
+	desc = nda_historic.10.d
+	flavor =  nda_historic.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+
+	trigger = {
+ 		# 1848 spiritulist movement founded in Up State New York 
+		game_date >= 1848.4.1 
+		game_date < 1849 
+
+		# owner of Syracuse, NY. or NEN
+		OR = {
+			p:x01D042 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_spiritulism_founded }	
+	}
+
+	immediate = {
+		
+		set_variable = nda_historic_spiritulism_founded
+		p:x01D042 = { # Syracuse
+			state = { save_scope_as = spiritulist_state }
+		}
+
+	}	
+	
+	option = { #"Hope it does not spread"
+		name = nda_historic.10.a
+		default_option = yes
+
+		debug_log = "Build Orne Library"
+
+		
+	}
+}
+
+nda_historic.11 = { # An American Medium in London
+	type = country_event
+	placement = p:x7543C8 #scope:spiritulist_state
+	title = nda_historic.11.t
+	desc = nda_historic.11.d
+	flavor =  nda_historic.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+
+	trigger = {
+ 		# 1852 Mrs Hayden visits London 
+		game_date >= 1852 
+		game_date < 1853
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_spiritulism_in_london }	
+	}
+
+	immediate = {
+		set_variable = nda_historic_spiritulism_in_london
+
+		p:x7543C8 = { # London
+			state = { save_scope_as = spiritulist_state }
+		}
+
+	}	
+	
+	option = { 
+		name = nda_historic.11.a
+		default_option = yes
+
+	}
+}
+
+nda_historic.12 = { # The Ghost Club
+	type = country_event
+	placement = p:x7543C8 #scope:spiritulist_state
+	title = nda_historic.12.t
+	desc = nda_historic.12.d
+	flavor =  nda_historic.12.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+
+	trigger = {
+ 		# 1852 Mrs Hayden visits London 
+		game_date >= 1862 
+		game_date < 1863
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_ghost_club }	
+	}
+
+	immediate = {
+		set_variable = nda_historic_ghost_club
+
+		p:x7543C8 = { # London
+			state = { save_scope_as = spiritulist_state }
+		}
+
+	}	
+	
+	option = { 
+		name = nda_historic.12.a
+		default_option = yes
+
+	}
+}
+
+nda_historic.13 = { # The Society for Psychical Research
+	type = country_event
+	placement = p:x7543C8 #scope:spiritulist_state
+	title = nda_historic.13.t
+	desc = nda_historic.13.d
+	flavor =  nda_historic.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+
+	trigger = {
+ 		# 1882 Society for Psychical Research founded 
+		game_date >= 1882 
+		game_date < 1883
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_spr_founded }	
+	}
+
+	immediate = {
+		set_variable = nda_historic_spr_founded
+
+		p:x7543C8 = { # London
+			state = { save_scope_as = spiritulist_state }
+		}
+
+	}	
+	
+	option = { 
+		name = nda_historic.13.a
+		default_option = yes
+
+	}
+}
+
+
+nda_historic.14 = { # Fox's come clean - Spiritualist Movement
+	type = country_event
+	placement = p:x01D042 #scope:spiritulist_state
+	title = nda_historic.14.t
+	desc = nda_historic.14.d
+	flavor =  nda_historic.14.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+
+	trigger = {
+ 		# 1888 spiritulist movement founded in Up State New York 
+		game_date >= 1888.4.1 
+		game_date < 1889 
+
+		# owner of Syracuse, NY. or NEN
+		OR = {
+			p:x01D042 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_spiritulism_faked }	
+	}
+
+	immediate = {
+		
+		set_variable = nda_historic_spiritulism_faked
+		p:x01D042 = { # Syracuse
+			state = { save_scope_as = spiritulist_state }
+		}
+
+	}	
+	
+	option = { #"Hope it does not spread"
+		name = nda_historic.14.a
+		default_option = yes
+
+		debug_log = "Build Orne Library"
+
+		
+	}
+}
+
+nda_historic.15 = { # The Theosophical Society
+	type = country_event
+	placement = p:xE217B5 #scope:spiritulist_state
+	title = nda_historic.15.t
+	desc = nda_historic.15.d
+	flavor =  nda_historic.15.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+
+	trigger = {
+ 		# 1888 spiritulist movement founded in Up State New York 
+		game_date >= 1875.4.1 
+		game_date < 1876 
+
+		# owner of NY. or NEN
+		OR = {
+			p:xE217B5 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_theosophical_soc }	
+	}
+
+	immediate = {
+		
+		set_variable = nda_historic_theosophical_soc
+		p:xE217B5 = { # New York
+			state = { save_scope_as = spiritulist_state }
+		}
+	}	
+	
+	option = { #"Hope it does not spread"
+		name = nda_historic.15.a
+		default_option = yes
+	}
+}
+
+nda_historic.16 = { # "The Secret Doctrine"
+	type = country_event
+	placement = p:xE217B5
+	title = nda_historic.16.t
+	desc = nda_historic.16.d
+	flavor =  nda_historic.16.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+
+	trigger = {
+ 		# 1888 book published - presume new york
+		game_date >= 1888.8.1 
+		game_date < 1889 
+
+		# owner of NY. or NEN
+		OR = {
+			p:xE217B5 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_secret_doctrine }	
+	}
+
+	immediate = {
+		
+		set_variable =  nda_historic_secret_doctrine
+		p:xE217B5 = { # New York
+			state = { save_scope_as = spiritulist_state }
+		}
+
+	}	
+	
+	option = { #"Hope it does not spread"
+		name = nda_historic.16.a
+		default_option = yes
+	}
+}

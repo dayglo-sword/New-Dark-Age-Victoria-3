@@ -4,7 +4,7 @@
 
 nda_whh.10 = { # The House On the Borderlands - Flavour event
 	type = country_event
-	placement = scope:target_state
+	placement = p:xC7847D #scope:target_state
 	title = nda_whh.10.t
 	desc = nda_whh.10.d
 	flavor =  nda_whh.10.f
@@ -33,13 +33,13 @@ nda_whh.10 = { # The House On the Borderlands - Flavour event
 	immediate = {
 		set_global_variable = nda_house_on_borderlands
 
-		p:x20E0C0 = { # Galway - could use x20E0C0 - wood - Loughrea
-			save_scope_as = target_state
-		}
+		#p:x20E0C0 = { # Galway - could use x20E0C0 - wood - Loughrea
+		#	save_scope_as = target_state
+		#}
 
 		debug_log = "House On the Borderlands"
 
-		# send toast notification to players as chrome
+		# send toast notification to players as chrome - or just put NEN in as possible?
 	}	
 	
 	option = { #"Tragic"
@@ -51,7 +51,7 @@ nda_whh.10 = { # The House On the Borderlands - Flavour event
 # Start Carnacki Event Chain
 nda_whh.11 = { # Carnacki the Ghost Finder
 	type = country_event
-	placement = scope:target_state
+	placement = p:x7543C8 #scope:target_state
 	title = nda_whh.11.t
 	desc = nda_whh.11.d
 	flavor =  nda_whh.11.f
@@ -59,14 +59,13 @@ nda_whh.11 = { # Carnacki the Ghost Finder
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	trigger = {
  		# 1904 and owner of London 
@@ -79,10 +78,6 @@ nda_whh.11 = { # Carnacki the Ghost Finder
 
 	immediate = {
 		set_global_variable = nda_carnacki_ghostfinder
-
-		p:x7543C8 = { # London 
-			save_scope_as = target_state
-		}
 
 		debug_log = "Carnacki the Ghost Finder"
 
@@ -106,14 +101,13 @@ nda_whh.12 = { #
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
 	trigger = {
  		# 1906 and non-cultist country 
@@ -162,23 +156,19 @@ nda_whh.13 = { # 'Electric Pentagram' - should this really be a decision?
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
 	trigger = {
  		# 1907 and non-cultist country 
 		game_date >= 1907  
 		is_player = yes  # no hope if not
 		
-		# cultist on loose in London
-		#p:x7543C8 = { state = { owner = { has_variable = nda_cultists_in_open } } }
-
 		has_global_variable = nda_carnacki_ghostfinder	
 		OR = {
 			has_variable = nda_carnacki_in_exile # is in exile
@@ -225,14 +215,13 @@ nda_whh.14 = { # Carnacki Succeeds
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
 	trigger = {
 		# is called from event nda_whh.13
@@ -275,8 +264,7 @@ nda_whh.15 = { # Death of Carnacki
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
