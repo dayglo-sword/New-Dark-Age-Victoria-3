@@ -1,6 +1,42 @@
 ﻿namespace = nda_astro
 # Conjunctions and Stars are Right events - acts as forewarning or drivers for other effects
 # these are firing at multiple times - once for each contry - need them to fire at same time as fixed event.
+
+nda_astro.10 = { # 1842 conjunction
+	type = country_event
+	hidden = yes
+	
+	trigger = { 
+		NOT = { has_global_variable = nda_conjunction_1 }		
+		game_date >= 1842.1.25	#1836.2.15 #
+
+		# should fire once for first country to get it
+		#game_date < 1843 # stop late forming countries getting event	
+		# for everyone?	
+		#OR = {
+		#	#is player or open cultist
+		#	is_player = yes
+		#	has_variable = nda_cultists_in_open
+		#}	
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					#is player or open cultist
+					is_player = yes
+					has_variable = nda_cultists_in_open
+				}				
+			}
+
+			trigger_event = { id = nda_astro.1 }	# fire main events		
+		}		
+		set_global_variable = nda_conjunction_1
+		debug_log = "Conjunction 1 Lead Fire"
+	}	
+}
+
 nda_astro.1 = { # 1842 conjunction
 	type = country_event
 	placement = ROOT
@@ -18,18 +54,6 @@ nda_astro.1 = { # 1842 conjunction
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-
-	trigger = { 
-		NOT = { has_variable = nda_conjunction_1 }		
-		game_date >= 1842.1.25	#1836.2.15 #
-		game_date < 1843 # stop late forming countries getting event	
-		# for everyone?	
-		OR = {
-			#is player or open cultist
-			is_player = yes
-			has_variable = nda_cultists_in_open
-		}	
-	}
 
 	immediate = {
 		set_variable = nda_conjunction_1
@@ -74,7 +98,14 @@ nda_astro.2 = { # 1861 conjunction
 			
 	option = { #"A bit worrying..." # Nothing you can do
 		name = nda_astro.2.a
-		default_option = yes		
+		default_option = yes
+		trigger = { has_variable = nda_cultists_in_open }		
+	}
+
+	option = { #"Hurrah!!!" # Nothing you can do
+		name = nda_astro.2.b
+		#default_option = yes
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }
 	}
 }
 
@@ -110,7 +141,14 @@ nda_astro.3 = { # 1881 conjunction
 			
 	option = { #"A bit worrying..." # Nothing you can do
 		name = nda_astro.3.a
-		default_option = yes		
+		default_option = yes
+		trigger = { has_variable = nda_cultists_in_open }		
+	}
+
+	option = { #"Hurrah!!!" # Nothing you can do
+		name = nda_astro.3.b
+		#default_option = yes
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }
 	}
 }
 
@@ -146,7 +184,14 @@ nda_astro.4 = { # 1901 conjunction
 			
 	option = { #"A bit worrying..." # Nothing you can do
 		name = nda_astro.4.a
-		default_option = yes		
+		default_option = yes
+		trigger = { has_variable = nda_cultists_in_open }		
+	}
+
+	option = { #"Hurrah!!!" # Nothing you can do
+		name = nda_astro.4.b
+		#default_option = yes
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }
 	}
 }
 
@@ -183,7 +228,14 @@ nda_astro.5 = { # 1921 conjunction
 			
 	option = { #"A bit worrying..." # Nothing you can do
 		name = nda_astro.5.a
-		default_option = yes		
+		default_option = yes
+		trigger = { has_variable = nda_cultists_in_open }		
+	}
+
+	option = { #"Hurrah!!!" # Nothing you can do
+		name = nda_astro.5.b
+		#default_option = yes
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }
 	}
 }
 

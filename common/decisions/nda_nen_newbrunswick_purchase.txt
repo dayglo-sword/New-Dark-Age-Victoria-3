@@ -32,8 +32,8 @@
  		custom_tooltip = nda_nen_newbrunswick_union_tooltip       
         annex = c:NBS
 
-        # add anglo-candian as acceptable
-        add_primary_culture = cu:anglo_canadian
+        # add anglo-candian as acceptable - unbalances number of politicians
+        # add_primary_culture = cu:anglo_canadian
 	}
 
 	ai_chance = {
@@ -90,8 +90,8 @@ nda_nen_novascotia_union = {
 		custom_tooltip = nda_nen_novascotia_union_tooltip 
         annex = c:NVS
 
-        # add anglo-candian as acceptable
-         add_primary_culture = cu:anglo_canadian       
+        # add anglo-candian as acceptable - unbalances number of politicians
+        # add_primary_culture = cu:anglo_canadian    
 	}
 
 	ai_chance = {

@@ -58,6 +58,11 @@ is_full_cult_country = {
 	}
 }
 
+is_cultist_country = {
+	# has cult in the open
+	has_variable = nda_cultists_in_open
+}
+
 is_potentially_yigian = { 
 	# has capital in certain american lands
 	is_capital = yes

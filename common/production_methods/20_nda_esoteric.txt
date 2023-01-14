@@ -1,0 +1,25 @@
+﻿pm_nda_esoteric_academia = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+	
+	disallowing_laws = {
+		law_state_religion
+	}
+
+	country_modifiers = {
+		workforce_scaled = { 
+			country_weekly_innovation_add = 1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 1000
+			building_employment_academics_add = 1000
+		}
+
+		unscaled = {
+			building_clergymen_mortality_mult = 0.05
+			building_academics_mortality_mult = 0.05
+		}
+	}			
+}			

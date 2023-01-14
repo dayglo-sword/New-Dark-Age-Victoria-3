@@ -1,0 +1,152 @@
+﻿nda_effect_yigian_annex = {
+	# annex a single country that openly supports YIG
+	if = {
+		limit = {
+			exists = ROOT
+			ROOT = c:YIG 
+			any_country = { 			
+				NOT = {
+					is_full_cult_country = { COUNTRY="THIS" }				
+				}
+				has_variable = nda_yig_in_open
+			}
+		} 
+
+		random_country = {
+			limit = {
+				NOT = {
+					is_full_cult_country = { COUNTRY="THIS" }				
+				}
+				has_variable = nda_yig_in_open			
+			}
+			
+			save_scope_as = nda_yigian_annex
+		}
+
+		# send notification - does country still exist after annex?
+		post_notification = nda_yigian_lands_expand # toast
+
+		annex = scope:nda_yigian_annex
+
+		debug_log = "Yigian - Country surrenders."		
+	}	
+}
+
+nda_effect_yigian_influence = { # boost to yigian influence in area 
+
+	# Yigian States
+	if = {
+		limit = {
+			exists = ROOT
+			has_variable = nda_yig_in_open 
+		}
+
+		# give them a boost, both religion and pops
+		every_scope_state = {
+			limit = { exists = THIS }
+			convert_population = { target = rel:nda_rel_yigian value = 0.10 }	
+
+			# everyone of Yigian Culture should follow Rite 
+			every_scope_pop = {
+				limit ={
+					culture = cu:nda_cul_yigian
+				}
+				change_pop_religion = { target = rel:nda_rel_yigian value = 1 }			
+			}	
+			# everyone of Yig Religion should follow Rite 
+			every_scope_pop = {
+				limit ={
+					has_pop_religion = nda_rel_yigian
+					NOT = { culture = cu:nda_cul_yigian }
+				}
+				change_pop_culture = { target = cu:nda_cul_yigian value = 1 }			
+			}				
+		}
+
+		# Mass Delusion		
+		add_loyalists = { value = 1 religion = rel:nda_rel_yigian } #add_loyalists = { value = x pop_type = <key> strata = <key> culture = <scope/cu:key> religion = <scope/rel:key> }
+		add_loyalists = { value = 1 culture = cu:nda_cul_yigian }
+		add_loyalists = { value = 1 culture = cu:nda_cul_cultist }
+		# reduce radicals ??
+
+		#pledge to YIG if they exist
+		if = {
+			limit = {
+				exists = c:YIG
+				#c:YIG = { country_rank > root.country_rank }				
+				NOT = {
+					is_full_cult_country = { COUNTRY="ROOT" }				
+				}
+			}
+
+			random_list = {
+				30 = {
+					if = {
+						limit = { 
+							NOT = { owes_obligation_to = c:YIG }
+						}
+						set_owes_obligation_to = { country = c:YIG setting = yes }	
+						debug_log = "Offer Obligation to YIG " 							
+					}
+				}
+				70 = {}
+			}
+
+			# always change relationship
+			change_relations = { country = c:YIG value = 50 }
+			debug_log = "Improved Relations with YIG " 
+		}
+		
+		if = {
+			limit = {
+				exists = c:YIG
+				c:YIG = ROOT
+			}
+			# YIG only buffs
+			debug_log = "Buff YIG " 
+
+			every_state_region = {
+				limit = { 
+					exists = THIS
+					is_homeland=cu:nda_cul_yigian
+					any_neighbouring_state = { owner = ROOT }
+				
+				}
+				add_claim = ROOT						
+			}
+
+			every_scope_state = { # need to set all non-homelands in YIG as homelands
+				limit = {
+					exists = THIS 
+					state_region = {
+						NOT = { is_homeland = cu:nda_cul_yigian }
+						# include other Cults as well ??
+					}	
+				}
+				state_region = {
+					add_homeland = nda_cul_yigian
+				}
+				
+			}
+			# lay claims with neighbours?
+
+			# remove radicals from government while everyone is partying
+			add_radicals  = { value = -0.5 }
+		}	
+	}
+
+	# non-cultist in area should worry - decrease relationships
+	if = {
+		limit = {
+			exists = ROOT
+			any_scope_state = { 
+					is_potentially_yigian = yes
+			}
+			NOT = { has_variable = nda_yig_in_open }
+			NOT = { has_variable = nda_cultists_in_open }
+		}
+
+		change_relations = { country = c:YIG value = -50 }
+		debug_log = "Decrease Relations with YIG " 
+	}
+}

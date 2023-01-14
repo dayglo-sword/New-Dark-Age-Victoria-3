@@ -211,6 +211,9 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 		set_strategy = ai_strategy_colonial_expansion
 		set_strategy = ai_strategy_territorial_expansion
 		set_strategy = ai_strategy_conservative_agenda
+
+		# get other countries onside by increasing approval
+		nda_effect_yigian_influence = yes
 	}	
 	
 	option = { #Hurrah!

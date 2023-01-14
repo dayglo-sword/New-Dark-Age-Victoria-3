@@ -49,6 +49,14 @@ nda_yigian_lands_proclaimed = {
 	days = 35
 }
 
+nda_yigian_lands_expand = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 35
+}
+
 nda_dagonic_shores_proclaimed = {
 	type = country
 	texture = "gfx/interface/icons/notification_icons/influence.dds"

@@ -1,0 +1,13 @@
+﻿
+pmg_nda_esoteric_academia = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_religious_academia
+		pm_secular_academia
+		pm_nda_esoteric_academia
+
+	}
+}
+
