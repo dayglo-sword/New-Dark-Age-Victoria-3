@@ -1,5 +1,11 @@
-﻿pm_nda_esoteric_academia = {
+﻿pm_nda_conventional_academia = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+
+	# Absolutely nothing special			
+}
+
+pm_nda_esoteric_academia = {
+	texture = "gfx/interface/icons/production_method_icons/unused/social_science.dds"
 	
 	disallowing_laws = {
 		law_state_religion
@@ -7,19 +13,17 @@
 
 	country_modifiers = {
 		workforce_scaled = { 
-			country_weekly_innovation_add = 1
+			country_weekly_innovation_add = 2
 		}
 	}
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 1000
-			building_employment_academics_add = 1000
+			building_employment_academics_add = 10
 		}
 
 		unscaled = {
-			building_clergymen_mortality_mult = 0.05
-			building_academics_mortality_mult = 0.05
+			building_academics_mortality_mult = 0.05 # it's a dangeous job being an academic
 		}
 	}			
 }			

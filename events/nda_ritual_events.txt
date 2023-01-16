@@ -68,6 +68,7 @@ nda_ritual.2 = { # Cthulhu Early Return
 	trigger = { # limit to eldritch cult ELD ? Called Only?
 		has_global_variable = nda_ritual_completed	
 		game_date >= 1890.8.20  # HPL's Birthday
+		game_date < 1891 
 		NOT = {
 			has_global_variable = nda_cthulhu_arrives	# run once
 		 }
@@ -208,24 +209,7 @@ nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countri
 
 	immediate = {
 		# random select country to join ELD
-		random_country = {
-			limit = {
-				is_player = no
-				is_country_alive = yes
-				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }				
-				}
-				country_has_primary_culture = cu:nda_cul_cultist				
-			}
-
-			save_scope_as = nda_ritual_annex
-		}
-
-		# send notification - does country still exist after annex?
-		post_notification = nda_ritual_country_surrenders # toast
-
-		annex = scope:nda_ritual_annex
-
+		nda_effect_eldritch_annex = yes
 
 		debug_log = "Ritual - The world surrenders."	
 
@@ -237,7 +221,7 @@ nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countri
 	}
 }
 
-nda_ritual.6 = { # Dismantle Empire
+nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - need to dimantle core ELD not just hangers on.
 	type = country_event
 	placement = ROOT
 	title = nda_ritual.6.t
@@ -277,27 +261,35 @@ nda_ritual.6 = { # Dismantle Empire
 		random_country = {
 			limit = {
 				is_subject_of = c:ELD	
-				NOT = { country_has_primary_culture = cu:nda_cul_cultist }			
+				#NOT = { country_has_primary_culture = cu:nda_cul_cultist }			
 			}
+
+			make_independent = yes
 
 			if = {
-				limit = { NOT = { is_country_type = decentralized } }
-				# try for independence
-				create_diplomatic_play = {
-					name = nda_cult_liberation
-					war = yes
-					type = dp_independence
+				limit = { country_has_primary_culture = cu:nda_cul_cultist }
 
-					target_country = c:ELD
-					#target_state = s:STATE_DELHI.region_state:MUG
-
-					add_war_goal = {
-						holder = c:ELD
-						type = annex_country
-						target_country = THIS
-					}
-				}
+				remove_primary_culture = cu:nda_cul_cultist
 			}
+			
+			#if = {
+			#	limit = { NOT = { is_country_type = decentralized } }
+			#	# try for independence
+			#	create_diplomatic_play = {
+			#		name = nda_cult_liberation
+			#		war = yes
+			#		type = dp_independence
+#
+#					target_country = c:ELD
+#					#target_state = s:STATE_DELHI.region_state:MUG
+#
+#					add_war_goal = {
+#						holder = c:ELD
+#						type = annex_country
+#						target_country = THIS
+#					}
+#				}
+#			}
 		}
 		debug_log = "Ritual - Eldritch Cult Splits"	
 		

@@ -61,7 +61,14 @@
 							
 			#}
 
-			# convert some cultists to dagonic
+			# convert some cultists to dagonic					
+			every_scope_pop = {
+				limit = {
+					culture = cu:nda_cul_cultist
+				}
+				change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
+			}
+
 		}
 		custom_tooltip = nda_eld_recognise_dagonic_lands_tooltip
 	}

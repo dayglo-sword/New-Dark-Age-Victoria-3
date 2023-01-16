@@ -317,6 +317,8 @@ nda_base.5 = { # First Cultist in Country
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
+	event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
+
 	gui_window = event_window_1char_tabloid
 
 	left_icon = scope:converted_ig.leader
@@ -326,7 +328,9 @@ nda_base.5 = { # First Cultist in Country
 			has_variable = nda_nameless_cults
 			has_variable = nda_nameless_cults_supressed
 		}
-		
+
+
+
 		NOT = {
 			OR = {
 				has_journal_entry = je_nda_cult_spreads
@@ -352,7 +356,9 @@ nda_base.5 = { # First Cultist in Country
 		if = {
 			limit = {
 				NOT = {has_journal_entry = je_nda_cult_spreads}
-				NOT = {has_variable = nda_cultists_in_open} # don't rerun
+				NOT = {has_variable = nda_cultists_in_open} # don't rerun	
+				NOT = {is_full_cult_country = { COUNTRY="ROOT"}} # don't do for existing bad guys
+				NOT = {has_global_variable = nda_ritual_cthulhu_leaves} # Cthulhu is gone
 			}
 			add_journal_entry = { type = je_nda_cult_spreads }		
 		}		
@@ -378,6 +384,8 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
+	event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
+
 	gui_window = event_window_1char_tabloid
 
 	left_icon = scope:converted_ig.leader
@@ -527,6 +535,7 @@ nda_base.8 = { # Notification that first country has recognized cult
 				NOT = {has_journal_entry = je_nda_cult_spreads}
 				NOT = {has_variable = nda_cultists_in_open} # don't rerun
 				#has_events = yes # can get events and journals
+				NOT = {has_global_variable = nda_ritual_cthulhu_leaves} # Cthulhu is gone
 			}
 			debug_log = "Cult Expanded from Neighbour" #[ROOT.GetName] : 
 			add_journal_entry = { type = je_nda_cult_spreads }	
@@ -642,10 +651,8 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
 	}
-#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"

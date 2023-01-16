@@ -7,7 +7,7 @@
 		child_of son_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
 	}
 	female_common_first_names = {
-		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
+		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of consort_of offspring_of 
 	}
 	common_last_names={
 		the_blood the_dark the_chaos hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
@@ -45,7 +45,7 @@ nda_cul_yigian={
 		child_of son_of slave_of servant_of beloved_of follower_of minion_of squire_of bairn_of consort_of offspring_of hatchling_of neonate_of
 	}
 	female_common_first_names = {
-		child_of daughter_of slave_of servant_of beloved_of follower_of minion_of squire_of bairn_of consort_of offspring_of hatchling_of neonate_of 
+		child_of daughter_of slave_of servant_of beloved_of follower_of minion_of consort_of offspring_of hatchling_of neonate_of 
 	}
 	common_last_names={
 		yig the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha ghatanothoa zoth-ommog
@@ -86,7 +86,7 @@ nda_cul_dagonic={
 		child_of son_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
 	}
 	female_common_first_names = {
-		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
+		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of consort_of offspring_of 
 	}
 	common_last_names={
 		the_deep the_abyss the_storm the_waves the_pelagic the_cetacen the_kraken nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth

@@ -137,10 +137,21 @@
 
     fail = {
 		# if ritual failed or star alignment occured
+		has_global_variable = nda_ritual_cthulhu_leaves
     }
 	
 	on_fail = {
 		# celebratory event?
+	}
+
+	invalid = {
+		has_global_variable = nda_ritual_cthulhu_leaves
+	}
+
+	timeout = 7500 # Hold off cult for 20 years
+
+	on_timeout = {
+		# set variable so it does not rerun for country
 	}
 
 	progressbar = yes

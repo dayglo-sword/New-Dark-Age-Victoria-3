@@ -62,6 +62,7 @@ building_nda_miskatonic_university = {
 
 	production_method_groups = {
 		pmg_base_building_university
+		pmg_university_academia
 		pmg_nda_esoteric_academia
 		# special occult one?
 	}

@@ -82,7 +82,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 	}
 }
 
-nda_hasturian.2 = { # Imprint of Nameless Cults - as above but for other major countries 
+nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major countries 
 	type = country_event
 	placement = ROOT
 	title = nda_hasturian.2.t
@@ -183,7 +183,7 @@ nda_hasturian.2 = { # Imprint of Nameless Cults - as above but for other major c
 
 nda_hasturian.3 = { # The Repairer of Reputations
 	type = country_event
-	placement = ROOT
+	placement = p:xE217B5
 	title = nda_hasturian.3.t
 	desc = nda_hasturian.3.d
 	flavor =  nda_hasturian.3.f
@@ -203,6 +203,8 @@ nda_hasturian.3 = { # The Repairer of Reputations
 	#icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	trigger = { # owns new york - is not full cultist country
+		game_date >= 1892
+		p:xE217B5 = { state = { owner = ROOT } } # New York
 		has_global_variable = nda_king_in_yellow_play_exists
 		has_variable = nda_king_in_yellow # is not suppressed
 	}
@@ -211,14 +213,14 @@ nda_hasturian.3 = { # The Repairer of Reputations
 
 	}	
 	
-	option = { #Ignore and have reputation ruined and unrest
+	option = { #Ignore and Mr Wilde meets his 'historic' fate
 		name = nda_hasturian.3.a
-		default_option = yes
+		trigger_event = { id = nda_hasturian.7 days = 200 }	# Death of Mr Wilde
 	}
 
 	option = { # Have meeting
 		name = nda_hasturian.3.b
-
+		default_option = yes
 		#follow on event
 		trigger_event = { id = nda_hasturian.4 days = 200 }	# ask for meeting
 	}
@@ -256,6 +258,7 @@ nda_hasturian.4 = { # The Repairers Offer
 		name = nda_hasturian.4.a
 		default_option = yes	
 		 # need ruination event that gives negatives to head of state and powerful leaders ?	
+		 trigger_event = { id = nda_hasturian.6 days = 100 }
 	}
 
 	option = { # Path to Imperial America
@@ -306,5 +309,99 @@ nda_hasturian.5 = { # Create Imperial America
 }
 
 # nda_hasturian.6 # Ruination event.
-# nda_hasturian.7 # Death of Mr Wilde.
+nda_hasturian.6 = { # Ruination
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.6.t
+	desc = nda_hasturian.6.d
+	flavor =  nda_hasturian.6.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { # triggered from nda_hasturian.4
+
+	}
+
+	immediate = {
+		# government scandal - hit interest groups in power
+		every_interest_group = { # As per event prostitution.3
+			limit = {
+				is_in_government = yes
+
+				leader = {
+					NOT = {
+						has_modifier = embroiled_in_scandal
+					}
+				}
+			}
+			leader = {
+				save_scope_as = scandal_character
+			}
+
+			scope:scandal_character = {
+				add_modifier = {
+					name = embroiled_in_scandal
+					months = 120
+				}
+			}
+		}
+
+		# unrest in populace
+		add_radicals = {
+			value = medium_radicals
+			culture = THIS
+		}	
+	}	
+	
+	option = { # Scandalous
+		name = nda_hasturian.6.a
+		default_option = yes
+	}
+
+}
+
+nda_hasturian.7 = { #  Death of Mr Wilde.
+	type = country_event
+	placement = p:xE217B5
+	title = nda_hasturian.7.t
+	desc = nda_hasturian.7.d
+	flavor =  nda_hasturian.7.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { # triggered from nda_hasturian.4
+
+	}
+
+	immediate = {
+
+	}	
+	
+	option = { # How Bizarre!
+		name = nda_hasturian.7.a
+		default_option = yes
+	}
+
+}
+
 # nda_hasturian.8 # Force AI Imperial America back to Absolute Monarchy if it drifts too far.

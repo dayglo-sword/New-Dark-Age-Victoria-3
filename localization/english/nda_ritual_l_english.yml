@@ -33,6 +33,12 @@
  je_nda_ritual_proceeds_complete:0 "The Cult has completed it's ritual. The return is now ineviatable."
  nda_ritual_completed:0 "The Ritual Has Completed."
 
+ je_nda_ritual_assist:0 "Assit The Ritual"
+ je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in it's power, has commenced the Ritual that will ensure the Great Ones reawakening.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ je_nda_ritual_assist_goal:0 "Assit in competion of the Ritual to enable Cthulhu's return when the 'Stars are Right.'"
+ je_nda_ritual_assist_complete_tt:0 "The Cult has completed it's ritual. The return is now ineviatable."
+ je_nda_ritual_assist_complete:0 "The Cult has completed it's ritual. The return is now ineviatable."
+
 # Notifications
  notification_nda_ritual_cthulhu_returns_tooltip:0 "#header $notification_nda_ritual_cthulhu_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_returns_desc$"
  notification_nda_ritual_cthulhu_returns_name:1 "Cthulhu Has Returned"
@@ -43,8 +49,8 @@
  notification_nda_ritual_cthulhu_leaves_desc:1 "."
 
  notification_nda_ritual_country_surrenders_tooltip:0 "#header $notification_nda_ritual_country_surrenders_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_country_surrenders_desc$"
- notification_nda_ritual_country_surrenders_name:1 "[SCOPE.sC('nda_ritual_annex').GetName ] Surrenders to the Cult."
- notification_nda_ritual_country_surrenders_desc:1 "[SCOPE.sC('nda_ritual_annex').GetName ] has surrendered itself to the mercies of the Eldritch Cult."
+ notification_nda_ritual_country_surrenders_name:1 "[SCOPE.sC('nda_eldritch_annex').GetName ] Surrenders to the Cult."
+ notification_nda_ritual_country_surrenders_desc:1 "[SCOPE.sC('nda_eldritch_annex').GetName ] has surrendered itself to the mercies of the Eldritch Cult."
 
 # diplo
  nda_cult_liberation:0 "War of Liberation from the Cult"

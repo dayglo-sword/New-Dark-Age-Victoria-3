@@ -153,10 +153,8 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
 	}
-#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"

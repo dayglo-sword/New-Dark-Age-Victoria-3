@@ -92,6 +92,7 @@
 			
 		}
 
+		nda_effect_eldritch_annex = yes
 		# remove radicals from government while everyone is partying
 
 	}	

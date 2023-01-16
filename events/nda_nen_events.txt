@@ -141,6 +141,8 @@ nda_nen.11 = { # Appeal for reinstatement
 		p:x2B5499 = { # Arkham
 			state = { save_scope_as = university_state }
 		}
+
+		trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham		
 	}	
 	
 	option = { #" Of course"
@@ -150,7 +152,7 @@ nda_nen.11 = { # Appeal for reinstatement
 		# main stream herbert
 		set_global_variable = herbert_west_approval	
 
-		trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham
+
 		debug_log = "Herbert West Reinstated"
 	}
 
@@ -158,7 +160,7 @@ nda_nen.11 = { # Appeal for reinstatement
 		name = nda_nen.11.b
 		debug_log = "Herbert West Expelled" # End of Story? NO of cource not!
 
-		trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham
+		#trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham
 	}
 
 }
@@ -310,3 +312,60 @@ nda_nen.14 = { # Disappearence of Dr West
 	}
 
 }
+
+
+#Shadow over Innsmouth events
+nda_nen.20 = { # Devil Worship in Innsmouth
+	type = country_event
+	placement = scope:university_state
+	title = nda_nen.20.t
+	desc = nda_nen.20.d
+	flavor =  nda_nen.20.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1920  # 
+		owns_entire_state_region = STATE_MASSACHUSETTS
+		exists = c:NEN
+		c:NEN = ROOT
+		NOT = { has_global_variable = herbert_west_end }
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_MASSACHUSETTS
+				owner = ROOT
+			}
+			save_scope_as = university_state
+		}
+		set_global_variable = herbert_west_end	
+	}	
+	
+	option = { #" A tragic event"
+		name = nda_nen.14.a
+		default_option = yes
+
+	}
+
+}
+
+# nda_nen.21 = { # Plague in Innsmouth
+
+# if DAG around offer to make Treaty Port of Innsmouth - Y'ha-nthlei - this should be decision??
+
+# nda_nen.22 = { # Choose to raid Innsmouth
+
+# nda_nen.23 = { # The Raid on Innsmouth

@@ -233,7 +233,7 @@ nda_historic.14 = { # Fox's come clean - Spiritualist Movement
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
 
 	trigger = {
- 		# 1888 spiritulist movement founded in Up State New York 
+ 		# 1888 spiritulist movement discredited 
 		game_date >= 1888.4.1 
 		game_date < 1889 
 
@@ -287,7 +287,7 @@ nda_historic.15 = { # The Theosophical Society
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
 
 	trigger = {
- 		# 1888 spiritulist movement founded in Up State New York 
+ 		# 1875 Theosophical Society founded in New York 
 		game_date >= 1875.4.1 
 		game_date < 1876 
 
@@ -363,6 +363,55 @@ nda_historic.16 = { # "The Secret Doctrine"
 	
 	option = { #"Hope it does not spread"
 		name = nda_historic.16.a
+		default_option = yes
+	}
+}
+
+nda_historic.17 = { # Hermetic Order of the Golden Dawn
+	type = country_event
+	placement = p:x7543C8
+	title = nda_historic.17.t
+	desc = nda_historic.17.d
+	flavor =  nda_historic.17.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+
+	trigger = {
+ 		# 1888 Isis-Urania Temple - London
+		game_date >= 1888.10.1 
+		game_date < 1889 
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_theosophical_soc }	
+	}
+
+	immediate = {
+		
+		set_variable = nda_historic_theosophical_soc
+		p:x7543C8 = { # London
+			state = { save_scope_as = spiritulist_state }
+		}
+	}	
+	
+	option = { #"Hope it does not spread"
+		name = nda_historic.17.a
 		default_option = yes
 	}
 }

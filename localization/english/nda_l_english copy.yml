@@ -1,5 +1,6 @@
 ﻿l_english:
   
- pmg_nda_esoteric_academia:0 "Esoteric Academia"
- pm_nda_esoteric_academia;0 "Esoteric Academia"
+ pmg_nda_esoteric_academia:0 "Academia"
+ pm_nda_esoteric_academia:0 "Esoteric"
+ pm_nda_conventional_academia:0 "Conventional"
  
