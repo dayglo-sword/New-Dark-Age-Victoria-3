@@ -22,7 +22,7 @@ nda_historic.10 = { # Founding of Spiritualist Movement
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
  		# 1848 spiritulist movement founded in Up State New York 
@@ -70,13 +70,13 @@ nda_historic.11 = { # An American Medium in London
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
  		# 1852 Mrs Hayden visits London 
@@ -121,13 +121,13 @@ nda_historic.12 = { # The Ghost Club
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
  		# 1852 Mrs Hayden visits London 
@@ -172,13 +172,13 @@ nda_historic.13 = { # The Society for Psychical Research
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
  		# 1882 Society for Psychical Research founded 
@@ -230,7 +230,7 @@ nda_historic.14 = { # Fox's come clean - Spiritualist Movement
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
  		# 1888 spiritulist movement discredited 
@@ -282,9 +282,9 @@ nda_historic.15 = { # The Theosophical Society
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
  		# 1875 Theosophical Society founded in New York 
@@ -333,7 +333,7 @@ nda_historic.16 = { # "The Secret Doctrine"
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
  		# 1888 book published - presume new york
@@ -383,7 +383,7 @@ nda_historic.17 = { # Hermetic Order of the Golden Dawn
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
  		# 1888 Isis-Urania Temple - London

@@ -38,7 +38,7 @@ building_nda_miskatonic_university = {
 	building_group = bg_technology
 	texture = "gfx/interface/icons/building_icons/building_university.dds"
 	#expandable = no
-	#buildable = no
+	buildable = no
 	downsizeable = no
 	unique = yes
 	#locator = "forbidden_city_locator"
@@ -68,12 +68,23 @@ building_nda_miskatonic_university = {
 	}
 
 
+	#can_build = {
+	#	error_check = {
+	#		severity = fail
+	#		this = {
+	#			state_region = s:STATE_NEW_HAMPSHIRE
+	#		}
+	#	}
+	#}
 
 	possible = {
 		error_check = {
 			severity = invalid
 			this = {
 				state_region = s:STATE_NEW_HAMPSHIRE
+				#owner = {
+				#	has_global_variable = nda_miskatonic_library				
+				#}				
 			}
 		}
 	}

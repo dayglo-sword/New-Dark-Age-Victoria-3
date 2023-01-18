@@ -23,7 +23,7 @@ nda_nen.10 = { # Founding of Library
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds" # book
 
@@ -35,10 +35,8 @@ nda_nen.10 = { # Founding of Library
 
 		exists = c:NEN
 		c:NEN = ROOT
-		OR = {
-			NOT = { has_variable = nda_miskatonic_library_built }	
-			NOT = { has_variable = nda_miskatonic_library_unbuilt }		
-		}
+
+		NOT = { has_global_variable = nda_miskatonic_library }	
 
 		has_technology_researched = academia
 	}

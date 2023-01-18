@@ -58,7 +58,7 @@ nda_nen_novascotia_union = {
 	is_shown = {
 		exists = c:NEN
 		this = c:NEN
-        exists = c:USA # c:NVS
+        exists = c:NVS
 	}
 
 	possible = {

@@ -36,7 +36,7 @@ nda_base.1 = { # An Introduction to NDA
 
 nda_base.2 = { # Nameless Cults published
 	type = country_event
-	placement = ROOT
+	placement = p:x2101E0 #ROOT
 	title = nda_base.2.t
 	desc = nda_base.2.d
 	flavor =  nda_base.2.f
@@ -56,7 +56,7 @@ nda_base.2 = { # Nameless Cults published
 	trigger = {
  		# 1839 and owner of dusseldorf
 		game_date >= 1839 
-		owns_entire_state_region = STATE_NORTH_RHINE
+		p:x7543C8 = { state = { owner = ROOT } }
 
 		NOT = {has_global_variable = nda_nameless_cults_exists}
 	}
@@ -266,7 +266,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 
 nda_base.4 = { # The Death of Junzt
 	type = country_event
-	placement = ROOT
+	placement = p:x2101E0 #ROOT
 	title = nda_base.4.t
 	desc = nda_base.4.d
 	flavor =  nda_base.4.f

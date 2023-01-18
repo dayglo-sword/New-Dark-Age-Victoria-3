@@ -137,17 +137,24 @@
 
     fail = {
 		# if ritual failed or star alignment occured
-		has_global_variable = nda_ritual_cthulhu_leaves
+		custom_tooltip = {
+				text = je_nda_cult_spread_fail_tt
+				has_global_variable = nda_ritual_cthulhu_leaves			
+			}
     }
 	
 	on_fail = {
 		# celebratory event?
 	}
 
-	invalid = {
-		has_global_variable = nda_ritual_cthulhu_leaves
-	}
+	#invalid = {
+	#	has_global_variable = nda_ritual_cthulhu_leaves
+	#}
 
+	#on_invalid = {
+	#	# msg to say that the plot of the cultist have been foiled due to cthulhu leaving
+	#}
+	
 	timeout = 7500 # Hold off cult for 20 years
 
 	on_timeout = {
