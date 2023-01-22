@@ -67,7 +67,8 @@ nda_base.2 = { # Nameless Cults published
 		# set target countries for intial YIG and DGN expansions - needed to give competition to sole potential countries
 		random_country = {
 			limit = {
-				country_rank = rank_value:minor_power
+				country_rank >= rank_value:unrecognized_regional_power	
+				
 				NOT = { has_variable = nda_nameless_cults_selected }
 				any_scope_state = { 
 					is_potentially_yigian = yes
@@ -78,7 +79,8 @@ nda_base.2 = { # Nameless Cults published
 		}
 		random_country = {
 			limit = {
-				country_rank = rank_value:minor_power
+				country_rank >= rank_value:unrecognized_regional_power	
+
 				NOT = { has_variable = nda_nameless_cults_selected }
 				any_scope_state = { 
 					is_potentially_yigian = yes
@@ -89,7 +91,8 @@ nda_base.2 = { # Nameless Cults published
 		}
 		random_country = {
 			limit = {
-				country_rank = rank_value:minor_power
+				country_rank >= rank_value:unrecognized_regional_power	
+
 				NOT = { has_variable = nda_nameless_cults_selected }
 				any_scope_state = { 
 					is_potentially_dagonic = yes
@@ -100,7 +103,8 @@ nda_base.2 = { # Nameless Cults published
 		}
 		random_country = {
 			limit = {
-				country_rank = rank_value:minor_power
+				country_rank >= rank_value:unrecognized_regional_power					
+
 				NOT = { has_variable = nda_nameless_cults_selected }
 				any_scope_state = { 
 					is_potentially_dagonic = yes
@@ -329,15 +333,7 @@ nda_base.5 = { # First Cultist in Country
 			has_variable = nda_nameless_cults_supressed
 		}
 
-
-
-		NOT = {
-			OR = {
-				has_journal_entry = je_nda_cult_spreads
-				has_variable = nda_cultists_in_open		
-			}
-
-		}
+		can_cult_infiltrate = yes
 	}
 
 	immediate = {
@@ -355,10 +351,9 @@ nda_base.5 = { # First Cultist in Country
 		# start journal for initial cult spread
 		if = {
 			limit = {
-				NOT = {has_journal_entry = je_nda_cult_spreads}
-				NOT = {has_variable = nda_cultists_in_open} # don't rerun	
+				can_cult_infiltrate = yes
+
 				NOT = {is_full_cult_country = { COUNTRY="ROOT"}} # don't do for existing bad guys
-				NOT = {has_global_variable = nda_ritual_cthulhu_leaves} # Cthulhu is gone
 			}
 			add_journal_entry = { type = je_nda_cult_spreads }		
 		}		
@@ -370,25 +365,26 @@ nda_base.5 = { # First Cultist in Country
 	}
 }
 
-nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_cult_spreads 
+nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_cult_spreads - since there may be no target this should be hidden and only call visible event if valid
 	type = country_event
-	placement = ROOT
-	title = nda_base.6.t
-	desc = nda_base.6.d
-	flavor =  nda_base.6.f
+	hidden = yes 
+	#placement = ROOT
+	#title = nda_base.6.t
+	#desc = nda_base.6.d
+	#flavor =  nda_base.6.f
 
-	duration = 3
+	#duration = 3
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+	#on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	#icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
-	event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
 
-	gui_window = event_window_1char_tabloid
+	#gui_window = event_window_1char_tabloid
 
-	left_icon = scope:converted_ig.leader
+	#left_icon = scope:converted_ig.leader
 
 	trigger = {
 		#should prevent assignment if all ig already has cultist+ ?
@@ -410,12 +406,17 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 			}
 			save_scope_as = converted_ig	
 		}	
+		# if scope converted_ig_leader does not exist don't call
+		if = { 
+			limit = { exists = scope:converted_ig_leader }
+			trigger_event = { id = nda_base.12 }	
+		}
 	}	
 	
-	option = { #"What can we do"
-		name = nda_base.6.a
-		default_option = yes
-	}
+	#option = { #"What can we do"
+	#	name = nda_base.6.a
+	#	default_option = yes
+	#}
 }
 
 nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' on completion
@@ -443,59 +444,56 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 	}
 
 	immediate = {
-		set_variable = nda_cultists_in_open
-
-		# set country to contain cultists. need better way of differtiating cultist culture and religion.
-		add_primary_culture = cu:nda_cul_cultist # Adding Culture allows for Leaders of Culture despite no pop present!
-		# set country states as homeland, convert % of pops to religion?
-		every_scope_state = {
-			state_region = {
-				add_homeland = nda_cul_cultist
-			}
-
-			convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
-		}
-		# add new IG to country just for cultist religion ?
-
-		# notify players of change
-		save_scope_as = originator
-
-		every_country = {
+		if = {
 			limit = {
-				#is_player = yes
-				#NOT = {has_journal_entry = je_nda_cult_spreads}
-				#NOT = {has_variable = nda_cultists_in_open} # don't rerun
+				NOT = { has_variable = nda_cultists_in_open }
 			}
 
-			post_notification = nda_first_open_cult # this is not noticable (like most notices) go back to event ?
-			#trigger_event = { id = nda_base.? }	
+			set_variable = nda_cultists_in_open
 
-		}
-		
-		set_global_variable = nda_cultists_in_open	
+			# set country to contain cultists.
+			add_primary_culture = cu:nda_cul_cultist # Adding Culture allows for Leaders of Culture despite no pop present!
+			# set country states as homeland, convert % of pops to religion?
+			every_scope_state = {
+				state_region = {
+					add_homeland = nda_cul_cultist
+				}
 
-		# if ELD exists offer an obligation if lesser ranked
-		random_country = {
-			limit = {
-				exists = c:ELD
-				c:ELD = { country_rank > root.country_rank }
-				NOT = { owes_obligation_to = c:ELD }		
+				convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
 			}
-			debug_log = "Offer Obligation to ELD on becoming Cultist" #[ROOT.GetName] : 
-			set_owes_obligation_to = { country = c:ELD setting = yes }
-			change_relations = { country = c:ELD value = 50 } # 30 was too low?
-		}
+			# add new IG to country just for cultist religion ?
 
-		# Need to try and spread further so pass off to a non-cultist neighbour
-		random_country = {
-			limit = {
-				is_adjacent = ROOT
-				NOT = {has_journal_entry = je_nda_cult_spreads}
-				NOT = {has_variable = nda_cultists_in_open}
+			# notify players of change
+			save_scope_as = originator
+
+			every_country = {
+
+				post_notification = nda_first_open_cult # this is not noticable (like most notices) go back to event ?
 			}
-			trigger_event = { id = nda_base.8 }	# spread the cult
-		}
-		
+			
+			set_global_variable = nda_cultists_in_open	
+
+			# if ELD exists offer an obligation if lesser ranked
+			random_country = {
+				limit = {
+					exists = c:ELD
+					c:ELD = { country_rank > root.country_rank }
+					NOT = { owes_obligation_to = c:ELD }		
+				}
+				debug_log = "Offer Obligation to ELD on becoming Cultist" #[ROOT.GetName] : 
+				set_owes_obligation_to = { country = c:ELD setting = yes }
+				change_relations = { country = c:ELD value = 50 } # 30 was too low?
+			}
+
+			# Need to try and spread further so pass off to a non-cultist neighbour
+			random_country = {
+				limit = {
+					is_adjacent = ROOT
+					can_cult_infiltrate = yes
+				}
+				trigger_event = { id = nda_base.8 }	# spread the cult
+			}
+		}		
 	}	
 	
 	option = { #So it begins
@@ -532,10 +530,7 @@ nda_base.8 = { # Notification that first country has recognized cult
 		# start journal for additional cult spread
 		if = {
 			limit = {
-				NOT = {has_journal_entry = je_nda_cult_spreads}
-				NOT = {has_variable = nda_cultists_in_open} # don't rerun
-				#has_events = yes # can get events and journals
-				NOT = {has_global_variable = nda_ritual_cthulhu_leaves} # Cthulhu is gone
+				can_cult_infiltrate = yes
 			}
 			debug_log = "Cult Expanded from Neighbour" #[ROOT.GetName] : 
 			add_journal_entry = { type = je_nda_cult_spreads }	
@@ -713,13 +708,12 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 		random_country = {
 			limit = {
 				is_adjacent = ROOT
-				NOT = {has_journal_entry = je_nda_cult_spreads}
-				NOT = {has_variable = nda_cultists_in_open}
+				can_cult_infiltrate = yes
 			}
 			trigger_event = { id = nda_base.8 }	# spread the cult
 		}
 
-		# trigger events for other cult cuntries to bow down/offer tribute/ignore
+		# trigger events for other cult countries to bow down/offer tribute/ignore
 
 	}	
 	
@@ -828,4 +822,112 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 #		}
 #	}
 }
- }
+
+nda_base.12 = { # Secret Cultists in Country - fired from event nda_base.6 called by journals: je_nda_cult_spreads
+	type = country_event
+	placement = ROOT
+	title = nda_base.12.t
+	desc = nda_base.12.d
+	flavor =  nda_base.12.f
+
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:converted_ig_leader
+
+	trigger = {
+
+	}
+
+	immediate = {
+		# set ig leader character to be Cultist - already done by calling event - scoped leader should still be available for text
+	}	
+	
+	option = { #"What can we do"
+		name = nda_base.12.a
+		default_option = yes
+	}
+}
+
+nda_base.13 = { # The Cult fails to spread
+	type = country_event
+	placement = ROOT
+	title = nda_base.13.t
+	desc = nda_base.13.d
+	flavor =  nda_base.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/world_fair"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
+
+	trigger = {
+		# direct from journal: je_nda_cult_spreads on fail
+	}
+
+	immediate = {
+		set_variable = nda_cult_spread_failed
+	}	
+	
+	option = { #We will be waiting
+		name = nda_base.13.a
+		default_option = yes
+
+		nda_effect_eldritch_anger = yes
+	}
+	option = { #May be your right
+		name = nda_base.13.b
+		
+		# remove fail variable - should allow retrigger of journal
+		remove_variable = nda_cult_spread_failed	
+	}
+}
+
+nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them
+	type = country_event
+	hidden = yes 
+
+	trigger = {
+		is_full_cult_country = { COUNTRY="THIS" } # any full cult country
+		NOT = { has_variable = nda_cultists_in_open }
+	}
+
+	immediate = {
+		set_variable = nda_cultists_in_open
+		set_variable = {
+			name = nda_cult_spread_tracker
+			value = 901
+		}
+
+		if = { # Yigian only
+			limit = { 				
+				exists = c:YIG
+				c:YIG = ROOT 
+			}
+
+			set_variable = nda_yig_in_open
+			set_variable = {
+				name = nda_cult_to_yigian_tracker
+				value = 301
+			}
+		}
+	}	
+	
+
+}

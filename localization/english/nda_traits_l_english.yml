@@ -24,3 +24,7 @@ ideology_nda_cabalistic:0 "Cabalistic"
 ideology_nda_cabalistic_desc:0 "Cabalistic Ideology."
 ideology_nda_cultist:0 "Cult Supremacy"
 ideology_nda_cultist_desc:0 "This leader seeks to see the supremacy of their cult secured in totality regardess of others wishes."
+
+# Modifiers
+nda_dark_skies_modifier:0 "Darkened Skies"
+nda_dark_skies_modifier_desc:0 "The Skies are darkened with billowing purple clouds."

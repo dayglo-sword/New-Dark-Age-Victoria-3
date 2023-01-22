@@ -2,7 +2,7 @@
 
 nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 	type = country_event
-	placement = ROOT
+	placement = p:x906000 
 	title = nda_hasturian.1.t
 	desc = nda_hasturian.1.d
 	flavor =  nda_hasturian.1.f
@@ -22,7 +22,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 	trigger = {
  		# 1890 and owner of Paris
 		game_date >= 1890 
-		owns_entire_state_region = STATE_NORTH_RHINE
+		p:x906000 = { state = { owner = ROOT } }
 
 		NOT = {has_global_variable = nda_king_in_yellow_play_exists}
 	}

@@ -4,11 +4,12 @@ Timeline of events in mod
 1840        nda_base.3          Imprint of Nameless Cults
 1840        nda_base.4          The Death of Junzt
 1841~       nda_base.5          First Cultist in Country
-1842        nda_nen.10          Founding of Miskatonic Uni
-1842.1      nda_astro.10        Conjunction 1
 
-1845                            Devil Worship in Innsmouth, Captain Marsh
-1846                            Epidemic in Innsmouth
+1842.1      nda_astro.10        Conjunction 1
+1842.6      nda_nen.10          Founding of Miskatonic Uni
+
+1845.9        nda_nen.20          Devil Worship in Innsmouth, Captain Marsh
+1846.3      nda_nen.21          Plague in Innsmouth
 
 1848.4      nda_historic.10     Founding of Spiritualist Movement
 

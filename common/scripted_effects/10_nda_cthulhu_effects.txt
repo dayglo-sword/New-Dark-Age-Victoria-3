@@ -13,9 +13,10 @@
 			}
 
 		}
-		add_modifier = {
-			name = nda_dark_skies_modifier # cloudly skies cause crop fail
-		}	
+		# don't need to add for country
+		#add_modifier = {
+		#	name = nda_dark_skies_modifier # cloudly skies cause crop fail
+		#}	
 
 		if = { # cultists outside cult country
 			limit = {
@@ -81,9 +82,11 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				# and polution
 				add_pollution = 30				
 			}
-			remove_modifier = nda_dark_skies_modifier		
+			remove_modifier = nda_dark_skies_modifier # skies clear	
 		}
-		remove_modifier = nda_dark_skies_modifier # skies clear		
+		remove_modifier = nda_dark_skies_modifier		
+
+		save_scope_as =  target_scope
 
 		if = {
 			limit = {
@@ -100,7 +103,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 						}
 					}
 					# Make non-cultist survivors angry
-					ROOT = {
+					scope:target_scope = {
 						add_radicals = {
 							value = very_large_radicals
 							culture = THIS
@@ -116,7 +119,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 						}
 					}
 					# Make cultists unhappy
-					ROOT = {
+					scope:target_scope = {
 						add_radicals = {
 							value =  medium_radicals
 							culture = THIS
@@ -140,7 +143,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 						}
 					}
 					# Make non-cultist survivors angry
-					ROOT = {
+					scope:target_scope = {
 						add_radicals = {
 							value = very_large_radicals
 							culture = THIS
@@ -156,13 +159,37 @@ nda_effect_cthulhu_leaves = { # Used at departure
 						}
 					}
 					# Make cultists unhappy
-					ROOT = {
+					scope:target_scope = {
 						add_radicals = {
 							value =  medium_radicals
 							culture = THIS
 						}						
 					}				
 				}
+			}
+		}
+		else = { # not cultists  - make happier
+			every_scope_culture = {
+				if = {
+					limit = {
+						NOT = {
+							THIS = cu:nda_cul_cultist
+							THIS = cu:nda_cul_yigian
+							THIS = cu:nda_cul_dagonic
+						}
+					}
+					# Make non-cultist survivors happy
+					scope:target_scope = {
+						add_radicals = {
+							value = -0.5
+							culture = THIS
+						}	
+						add_loyalists = {
+							value = 0.5
+							culture = THIS
+						}				
+					}				
+				}					
 			}
 		}			
 	}		

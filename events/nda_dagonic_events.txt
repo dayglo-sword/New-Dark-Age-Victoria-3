@@ -81,44 +81,43 @@ nda_dagonic.2 = { # Cult in contry converts to dagonic - called from journal 'je
 	}
 
 	immediate = {
-		set_variable = nda_dagon_in_open
-
-		# set country to contain dagonic cultists - remove eldritch cultists
-		add_primary_culture = cu:nda_cul_dagonic # Adding Culture allows for Leaders of Culture despite no pop present!
-		remove_primary_culture = cu:nda_cul_cultist # remove normal cultists
-		
-		# set coastal states as homeland, convert % of pops to religion?
-		 every_scope_state = {
-			limit = { is_coastal = yes }
-			state_region = {
-				add_homeland = nda_cul_dagonic
-				remove_homeland = nda_cul_cultist
-			}
-			# full conversion of cult
-
-			# everyone of Eldritch Culture should follow Rite - Dagon is offshot of Eldrtitch - no sperate religion
-			#every_scope_pop = {
-			#	limit ={
-			#		has_pop_religion = nda_rel_cultist
-			#	}
-			#	change_pop_religion = { target = rel:nda_rel_cultist value = 1 }					
-			#}
-		 }
-		# add new IG to country just for cultist religion ?
-
-		# set religion
-		set_state_religion = rel:nda_rel_cultist #nda_rel_dagonic
-
-		# notify players of change
-		save_scope_as = originator
-
-		every_country = {
+		if = {
 			limit = {
-				is_player = yes
-				NOT = { has_global_variable = nda_dagon_in_open}
+				NOT = { has_variable = nda_dagon_in_open }
 			}
+			
+			set_variable = nda_dagon_in_open
 
-			post_notification = nda_first_dagon_cult 
+			# set country to contain dagonic cultists - remove eldritch cultists
+			add_primary_culture = cu:nda_cul_dagonic # Adding Culture allows for Leaders of Culture despite no pop present!
+			remove_primary_culture = cu:nda_cul_cultist # remove normal cultists
+			
+			# set coastal states as homeland, convert % of pops to religion?
+			every_scope_state = {
+				limit = { is_coastal = yes }
+				state_region = {
+					add_homeland = nda_cul_dagonic
+					remove_homeland = nda_cul_cultist
+				}
+
+			}
+			# add new IG to country just for cultist religion ?
+
+			# set religion
+			set_state_religion = rel:nda_rel_cultist 
+
+			# notify players of change
+			save_scope_as = originator
+
+			every_country = {
+				limit = {
+					is_player = yes
+					NOT = { has_global_variable = nda_dagon_in_open}
+				}
+
+				post_notification = nda_first_dagon_cult 
+
+			}
 
 		}
 		

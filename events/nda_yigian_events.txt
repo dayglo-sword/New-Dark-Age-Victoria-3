@@ -82,56 +82,62 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 	}
 
 	immediate = {
-		set_variable = nda_yig_in_open
-
-		# set country to contain yigian cultists - remove eldritch cultists
-		add_primary_culture = cu:nda_cul_yigian # Adding Culture allows for Leaders of Culture despite no pop present!
-		remove_primary_culture = cu:nda_cul_cultist # remove normal cultists
-		
-		# set country states as homeland, convert % of pops to religion?
-		 every_scope_state = {
-			state_region = {
-				add_homeland = nda_cul_yigian
-				remove_homeland = nda_cul_cultist
-			}
-			# full conversion of cult
-
-			# everyone of Eldritch Culture should follow Rite 
-			every_scope_pop = {
-				limit ={
-					has_pop_religion = nda_rel_cultist
-				}
-				change_pop_religion = { target = rel:nda_rel_yigian value = 1 }					
-			}
-		 }
-		# add new IG to country just for cultist religion ?
-
-		# set religion
-		set_state_religion = rel:nda_rel_yigian
-
-		# notify players of change
-		save_scope_as = originator
-
-		every_country = {
+		if = {
 			limit = {
-				is_player = yes
-				NOT = { has_global_variable = nda_yig_in_open}
+				NOT = { has_variable = nda_dagon_in_open }
 			}
 
-			post_notification = nda_first_yig_cult 
+			set_variable = nda_yig_in_open
 
-		}
-		
-		# push conversion a bit as currently too slow
-		random_country = {
-			limit = {				
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_yigian = yes
+			# set country to contain yigian cultists - remove eldritch cultists
+			add_primary_culture = cu:nda_cul_yigian # Adding Culture allows for Leaders of Culture despite no pop present!
+			remove_primary_culture = cu:nda_cul_cultist # remove normal cultists
+			
+			# set country states as homeland, convert % of pops to religion?
+			every_scope_state = {
+				state_region = {
+					add_homeland = nda_cul_yigian
+					remove_homeland = nda_cul_cultist
+				}
+				# full conversion of cult
+
+				# everyone of Eldritch Culture should follow Rite 
+				every_scope_pop = {
+					limit ={
+						has_pop_religion = nda_rel_cultist
+					}
+					change_pop_religion = { target = rel:nda_rel_yigian value = 1 }					
 				}
 			}
+			# add new IG to country just for cultist religion ?
 
-			set_variable = nda_nameless_cults_selected
+			# set religion
+			set_state_religion = rel:nda_rel_yigian
+
+			# notify players of change
+			save_scope_as = originator
+
+			every_country = {
+				limit = {
+					is_player = yes
+					NOT = { has_global_variable = nda_yig_in_open}
+				}
+
+				post_notification = nda_first_yig_cult 
+
+			}
+			
+			# push conversion a bit as currently too slow
+			random_country = {
+				limit = {				
+					NOT = { has_variable = nda_nameless_cults_selected }
+					any_scope_state = { 
+						is_potentially_yigian = yes
+					}
+				}
+
+				set_variable = nda_nameless_cults_selected
+			}				
 		}
 
 		set_global_variable = nda_yig_in_open	

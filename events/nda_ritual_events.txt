@@ -34,7 +34,7 @@ nda_ritual.1 = { # Cthulhu Returns
 		nda_effect_cthulhu_arrives = yes
 		debug_log = "Ritual - Stars are Right"
 
-		trigger_event = { id = nda_ritual.4 years = 10 } # leaves in 10 years
+		trigger_event = { id = nda_ritual.4 years = 10 } # leaves in 10 years # this is flakey - sometimes does not trigger
 
 		post_notification = nda_ritual_cthulhu_returns # toast
 	}	
@@ -80,7 +80,7 @@ nda_ritual.2 = { # Cthulhu Early Return
 		nda_effect_cthulhu_arrives = yes
 		debug_log = "Ritual - Stars are Right Early"
 
-		trigger_event = { id = nda_ritual.4 years = 20 } # leaves in 20 years - longer than normal as reward
+		trigger_event = { id = nda_ritual.4 years = 20 } # leaves in 20 years - longer than normal as reward  # this is flakey - sometimes does not trigger
 
 		post_notification = nda_ritual_cthulhu_returns # toast
 	}	
@@ -300,3 +300,5 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 		default_option = yes
 	}
 }
+
+# nda_ritual.7 = { # Monitor for Cthulhu departs

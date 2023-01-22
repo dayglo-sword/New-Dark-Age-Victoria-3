@@ -122,3 +122,17 @@ is_potentially_dagonic_lands = {
 		region = sr:region_south_india
 	}
 }
+
+## Event conditions
+
+can_cult_infiltrate = {
+	# can the cult start to infiltrate - yes if not ongoing or previously failed
+	NOT = {
+		OR = {
+			has_journal_entry = je_nda_cult_spreads
+			has_variable = nda_cultists_in_open	
+			has_variable = nda_cult_spread_failed
+			has_global_variable = nda_ritual_cthulhu_leaves	
+		}
+	}
+}

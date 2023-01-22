@@ -1,0 +1,76 @@
+﻿nda_effect_eldritch_annex = {
+	# annex a single country that openly supports ELD
+	if = {
+		limit = {
+			exists = ROOT
+			ROOT = c:ELD 
+			any_country = { 			
+				NOT = {
+					is_full_cult_country = { COUNTRY="THIS" }				
+				}
+				has_variable = nda_cultists_in_open
+			}
+		} 
+
+		random_country = {
+			limit = {
+				NOT = {
+					is_full_cult_country = { COUNTRY="THIS" }				
+				}
+				has_variable = nda_cultists_in_open			
+			}
+			
+			save_scope_as = nda_eldritch_annex
+
+			# Reduce radicals before annex else high revolt risk
+			add_radicals  = { value = -0.5 }
+
+		}
+
+		# send notification - does country still exist after annex?
+		post_notification = nda_ritual_country_surrenders # toast
+
+		annex = scope:nda_eldritch_annex
+
+		debug_log = "ELD - Country surrenders."		
+	}	
+}
+
+nda_effect_eldritch_anger
+{
+	# The Cult is angry with the target country not following the rite.
+	
+	every_country = {
+		limit = {
+			is_full_cult_country = { COUNTRY="THIS" } # any full cult country 			
+		}
+
+		change_relations = { country = ROOT value = -100 }
+
+		debug_log = "Angry Cult Country" 
+	}
+	
+	every_country = {
+		limit = { # leading cult follower counties
+			has_variable = nda_cultists_in_open
+			NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+		}
+
+		change_relations = { country = ROOT value = -50 }
+
+		debug_log = "Angry Cult Follower Country" 
+	}
+
+	#ordered_country = {
+	#	limit = { # leading cult follower counties
+	#		has_variable = nda_cultists_in_open
+	#		NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+	#	}
+	#	order_by = ??
+	#	min = 1
+	#	max = 5
+	#	check_range_bounds = no
+	#
+	#	change_relations = { country = ROOT value = -50 }
+	#}
+}

@@ -29,7 +29,7 @@ nda_nen.10 = { # Founding of Library
 
 	trigger = {
  		# 1842 and owner of Miskaton - should still be NEN but could be Neighbours
-		game_date >= 1842 
+		game_date >= 1842.6 
 
 		p:x30C040 = { state = { owner = ROOT } }
 
@@ -315,7 +315,7 @@ nda_nen.14 = { # Disappearence of Dr West
 #Shadow over Innsmouth events
 nda_nen.20 = { # Devil Worship in Innsmouth
 	type = country_event
-	placement = scope:university_state
+	placement = p:x30C040 
 	title = nda_nen.20.t
 	desc = nda_nen.20.d
 	flavor =  nda_nen.20.f
@@ -334,33 +334,77 @@ nda_nen.20 = { # Devil Worship in Innsmouth
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	trigger = {
-		game_date >= 1920  # 
-		owns_entire_state_region = STATE_MASSACHUSETTS
-		exists = c:NEN
-		c:NEN = ROOT
-		NOT = { has_global_variable = herbert_west_end }
+		game_date >= 1845.9 
+
+		p:x30C040 = { state = { owner = ROOT } }
+
+		NOT = { has_global_variable = innsmouth_cult }
 	}
 
 	immediate = {
-		random_scope_state = {
-			limit = {
-				state_region = s:STATE_MASSACHUSETTS
-				owner = ROOT
-			}
-			save_scope_as = university_state
-		}
-		set_global_variable = herbert_west_end	
+		set_global_variable = innsmouth_cult	
 	}	
 	
-	option = { #" A tragic event"
-		name = nda_nen.14.a
+	option = { #"This will not do"
+		name = nda_nen.20.a
 		default_option = yes
 
 	}
 
 }
 
-# nda_nen.21 = { # Plague in Innsmouth
+nda_nen.21 = { # Plague in Innsmouth
+
+	type = country_event
+	placement = p:x30C040 
+	title = nda_nen.21.t
+	desc = nda_nen.21.d
+	flavor =  nda_nen.21.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1846.3 
+
+		p:x30C040 = { state = { owner = ROOT } }
+
+		NOT = { has_global_variable = innsmouth_plague }
+	}
+
+	immediate = {
+		set_global_variable = innsmouth_plague	
+		# It's not really a Plague - it's the Dagon cult at work on the unbelievers and first gen hybrids leaving to sea.
+		p:x30C040 = { 
+			state = {
+				add_radicals = {
+					value =  medium_radicals
+				}
+				add_modifier = {
+	            	name = plague_modifier
+	            	months = 6 # don't over do it
+	        	}
+			}
+		}
+	}	
+	
+	option = { #"Too late to help the poor souls."
+		name = nda_nen.21.a
+		default_option = yes
+
+	}
+
+}
 
 # if DAG around offer to make Treaty Port of Innsmouth - Y'ha-nthlei - this should be decision??
 

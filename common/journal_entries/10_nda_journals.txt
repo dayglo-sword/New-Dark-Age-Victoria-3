@@ -54,7 +54,14 @@
 
 	on_complete = {
 		debug_log =  "Cult Spread Journal : Completed :"
-		trigger_event = { id = nda_base.7 }		
+		#effect = {
+		#	IF = { 
+		#		limit = { 
+		#			NOT =  { has_variable = nda_cultists_in_open } 
+		#		}  // recovering from stupid revolution can make event redundant
+				trigger_event = { id = nda_base.7 }				
+		#	} 			
+		#}
 	}
 
 	on_monthly_pulse = {
@@ -145,20 +152,14 @@
 	
 	on_fail = {
 		# celebratory event?
+		trigger_event = { id = nda_base.13 }	
 	}
 
-	#invalid = {
-	#	has_global_variable = nda_ritual_cthulhu_leaves
-	#}
-
-	#on_invalid = {
-	#	# msg to say that the plot of the cultist have been foiled due to cthulhu leaving
-	#}
-	
 	timeout = 7500 # Hold off cult for 20 years
 
 	on_timeout = {
 		# set variable so it does not rerun for country
+		trigger_event = { id = nda_base.13 }	
 	}
 
 	progressbar = yes
@@ -175,6 +176,12 @@ je_nda_cult_to_yigian = {
 
 	is_shown_when_inactive = {
 		country_has_primary_culture = cu:nda_cul_cultist 
+
+		NOT = {  # Never convert ELD
+			exists = c:ELD
+			c:ELD = ROOT
+		}				
+				
 	}
 
 	possible = {
@@ -231,7 +238,11 @@ je_nda_cult_to_yigian = {
 
 	on_complete = {
 		debug_log =  "Yigian Spread Journal : Completed :"
-		trigger_event = { id = nda_yigian.2 }		
+		#effect = {
+		#	IF = { limit = { NOT =  { has_variable = nda_yig_in_open } }  // recovering from stupid revolution can make event redundant
+				trigger_event = { id = nda_yigian.2  }				
+		#	} 			
+		#}
 	}
 
 	on_monthly_pulse = {
@@ -332,14 +343,18 @@ je_nda_cult_to_dagonic = {
 
 	is_shown_when_inactive = {
 		country_has_primary_culture = cu:nda_cul_cultist 
+
+		NOT = { # Never convert ELD
+			exists = c:ELD
+			c:ELD = ROOT
+		}
 	}
 
 	possible = {
 	#	# ? has any state as Eldritch homeland - will convert to dagonic on completion
 
 		country_has_primary_culture = cu:nda_cul_cultist # easy check
-		#c:BRZ = ROOT
-
+	
 		any_scope_state = { # has capital in coastal asia/pacific
 			is_potentially_dagonic = yes
 		}
@@ -389,7 +404,11 @@ je_nda_cult_to_dagonic = {
 
 	on_complete = {
 		debug_log =  "dagonic Spread Journal : Completed :"
-		trigger_event = { id = nda_dagonic.2 }		
+		#effect = {
+			#IF = { limit = { NOT =  { has_variable = nda_dagon_in_open } }  // recovering from stupid revolution can make event redundant
+				trigger_event = { id = nda_dagonic.2  }				
+			#}
+		#}	
 	}
 
 	on_monthly_pulse = {

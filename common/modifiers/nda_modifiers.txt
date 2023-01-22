@@ -5,7 +5,7 @@
 }
 
 nda_dark_skies_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	building_group_bg_agriculture_throughput_mult = -0.3
 }
 

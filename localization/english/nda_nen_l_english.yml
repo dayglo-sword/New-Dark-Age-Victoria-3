@@ -70,3 +70,8 @@ nda_nen.20.t:0 "Devil Worship in Innsmouth"
 nda_nen.20.d:0 "Senior figures in the town are rumoured to be participating in devil worship."
 nda_nen.20.f:0 "The sailors homed in the port have apparently brought the customs back from the South Seas.\n\nIt has also taken hold amoungst the fisherfolk of the town."
 nda_nen.20.a:0 "This will not do"
+
+nda_nen.21.t:0 "Plague in Innsmouth"
+nda_nen.21.d:0 "A mysterious plague has hit the coastal town of Innsmouth.\n\nIt looks like this will cause much decay to the towns principle industries."
+nda_nen.21.f:0 "#ITALIC '...it was probably some foreign kind of disease brought from China or somewhere by the shipping...\n\nIt surely was bad enough - there were riots over it, and all sorts of ghastly doings that I don't believe ever got outside town...#!'"
+nda_nen.21.a:0 "Too late to help the poor souls."

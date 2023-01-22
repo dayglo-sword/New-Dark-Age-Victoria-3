@@ -6,6 +6,7 @@
 		country_has_primary_culture = cu:nda_cul_cultist  
 		exists = c:ELD
 		c:ELD = ROOT
+		NOT = { has_global_variable = nda_ritual_completed  }
 	}
 
 	possible = {
@@ -13,17 +14,16 @@
 		# just ELD as initiator, DGN after a certain date, Other after a later date - others can assist via second journal
 		country_has_primary_culture = cu:nda_cul_cultist # easy check
 
-	#	OR = {
-	#		AND = { # ELD should have first chance as initiator
-	#			exists = c:ELD
-	#			ELD = ROOT
-	#		}
-	#		AND = { # DGN should have a chance as initiator
-	#			exists = c:DGN
-	#			DGN = ROOT
-	#		}
-	#	}
-
+		OR = {
+			AND = { # ELD should have first chance as initiator
+				exists = c:ELD
+				c:ELD = ROOT
+			}
+			AND = { # DGN should have a chance as initiator
+				exists = c:DGN
+				c:DGN = ROOT
+			}
+		}
 
  		NOT = { has_global_variable = nda_ritual_completed  }
 
