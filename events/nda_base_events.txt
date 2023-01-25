@@ -321,7 +321,7 @@ nda_base.5 = { # First Cultist in Country
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
 
 	gui_window = event_window_1char_tabloid
 
@@ -368,23 +368,6 @@ nda_base.5 = { # First Cultist in Country
 nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_cult_spreads - since there may be no target this should be hidden and only call visible event if valid
 	type = country_event
 	hidden = yes 
-	#placement = ROOT
-	#title = nda_base.6.t
-	#desc = nda_base.6.d
-	#flavor =  nda_base.6.f
-
-	#duration = 3
-
-	#on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
-
-	#icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
-
-	#gui_window = event_window_1char_tabloid
-
-	#left_icon = scope:converted_ig.leader
 
 	trigger = {
 		#should prevent assignment if all ig already has cultist+ ?
@@ -412,11 +395,7 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 			trigger_event = { id = nda_base.12 }	
 		}
 	}	
-	
-	#option = { #"What can we do"
-	#	name = nda_base.6.a
-	#	default_option = yes
-	#}
+
 }
 
 nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' on completion
@@ -553,15 +532,6 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	flavor =  nda_base.9.f
 
 	duration = 3
-
-	#event_image = {
-	#	video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-	#	
-	#}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
-
-	#on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	gui_window = event_window_1char_tabloid
 
@@ -837,7 +807,7 @@ nda_base.12 = { # Secret Cultists in Country - fired from event nda_base.6 calle
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
-	event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
 
 	gui_window = event_window_1char_tabloid
 
@@ -930,4 +900,233 @@ nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them
 	}	
 	
 
+}
+
+
+nda_base.20 = { # Request from the devout
+	type = country_event
+	placement = ROOT
+	title = nda_base.20.t
+	desc = nda_base.20.d
+	flavor =  nda_base.20.f
+
+	duration = 3
+
+	# should be character block
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds" #icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
+
+	#event_image = {  texture = "gfx/state_pictures/arctic.dds"  } # dummy image
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:devout_ig_leader
+
+	trigger = {
+
+		is_player = yes
+		has_journal_entry = je_nda_cult_spreads
+		NOT = { has_variable = nda_devout_offer }
+
+		any_interest_group = { # from devout only
+			is_interest_group_type = ig_devout 
+			leader = { NOT = { has_any_cultist_trait = yes } } # must be 'clean'
+		}
+
+		# redundant to spread to cult country
+		NOT = {
+			is_full_cult_country = { COUNTRY="ROOT" }				
+		}
+	}
+
+	immediate = {
+		set_variable = nda_devout_offer
+
+		random_interest_group = { # from devout only
+			limit = { 
+				is_interest_group_type = ig_devout 
+				leader = { NOT = { has_any_cultist_trait = yes } }
+			}
+			leader = { 
+				save_scope_as = devout_ig_leader
+			}
+		}
+
+		debug_log = "Devout Offer" 
+	}	
+	
+	option = { #"Inquistion?"
+		name = nda_base.20.a
+
+		#set_variable = nda_devout_offer_accepted
+
+		add_journal_entry = { type = je_nda_devout_inquisition }		
+	}
+
+	option = { #"Silly"
+		name = nda_base.20.b
+		default_option = yes
+
+		#set_variable = nda_devout_offer_refused
+	}
+}
+
+nda_base.21 = { # A cultist targeted 
+	type = country_event
+	hidden = yes 
+
+	immediate = {
+		# set ig leader character to be Cultist - exclude devout initially?
+		random_interest_group = {
+			limit = { 				
+				leader = { 
+					has_any_cultist_trait = yes
+				} 			
+			}
+			leader = { 
+				add_trait = nda_cultist 
+				save_scope_as = targeted_ig_leader
+			}
+			save_scope_as = targeted_ig
+		}	
+		# if scope converted_ig_leader does not exist don't call
+		if = { 
+			limit = { exists = scope:targeted_ig_leader }
+			
+			if = {
+				limit = { scope:targeted_ig_leader = { has_trait = nda_master } }
+				# not going to work
+				trigger_event = { id = nda_base.23 }	
+			}	
+			else = {
+				trigger_event = { id = nda_base.22 }	
+			}		
+		}
+	}
+}
+
+nda_base.22 = { # A Cultist converted 
+	type = country_event
+	placement = ROOT
+	title = nda_base.22.t
+	desc = nda_base.22.d
+	flavor =  nda_base.22.f
+
+	duration = 3
+
+	# should be character block
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds" #icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
+
+	#event_image = {  texture = "gfx/state_pictures/arctic.dds"  } # dummy image
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:targeted_ig_leader
+
+	trigger = {
+		# from nda_base.21 only
+	}
+
+	immediate = {
+		scope:targeted_ig_leader = {
+			# remove traits
+			remove_trait = nda_cultist
+			remove_trait = nda_acolyte
+		}
+
+		debug_log = "Cult Traits Removed" 
+	}	
+	
+	option = { #"Saw Sense"
+		name = nda_base.22.a
+		default_option = yes
+	}
+
+	option = { #"No forgivness"
+		name = nda_base.22.b
+		scope:targeted_ig_leader = {
+				kill_character = yes
+		}
+	}
+}
+
+nda_base.23 = { # A Cultist refuses 
+	type = country_event
+	placement = ROOT
+	title = nda_base.23.t
+	desc = nda_base.23.d
+	flavor =  nda_base.23.f
+
+	duration = 3
+
+	# should be character block
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	#event_image = {  texture = "gfx/state_pictures/arctic.dds"  } # dummy image
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:targeted_ig_leader
+
+	trigger = {
+		# from nda_base.21 only
+	}
+
+	immediate = {
+
+	}	
+	
+	option = { #"Oh dear."
+		name = nda_base.23.a
+	}
+}
+
+nda_base.24 = { # The Inquisition ends 
+	type = country_event
+	placement = ROOT
+	title = nda_base.24.t
+	desc = nda_base.24.d
+	flavor =  nda_base.24.f
+
+	duration = 3
+
+	# should be character block
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds" #icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
+
+	#event_image = {  texture = "gfx/state_pictures/arctic.dds"  } # dummy image
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:devout_ig_leader
+
+	trigger = {
+		# from je_nda_devout_inquisition only
+	}
+
+	immediate = {
+		random_interest_group = { # from devout only
+			limit = { 
+				is_interest_group_type = ig_devout 
+			}
+			leader = { 
+				save_scope_as = devout_ig_leader
+			}
+		}
+
+	}	
+	
+	option = { #"Oh dear."
+		name = nda_base.24.a
+	}
 }

@@ -1,13 +1,5 @@
 ﻿je_nda_cult_spreads = {
-	icon = "gfx/interface/icons/event_icons/event_industry.dds"
-
-#	is_shown_when_inactive = {
-#		
-#	}
-
-#	possible = {
-#		
-#	}
+	icon = "gfx/interface/icons/event_icons/nda_cthulhu.dds #event_industry.dds"
 
 	immediate = {
 		set_variable = {
@@ -500,6 +492,56 @@ je_nda_cult_to_dagonic = {
 	weight = 200
 
 	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}
+
+je_nda_devout_inquisition = {
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	immediate = {
+
+		debug_log = "Inquisition : Started : "
+	}
+
+    complete = {
+		# when journal cult_spread is gone via fail
+		custom_tooltip = {
+			text = je_nda_devout_inquisition_complete_tt
+			has_variable = nda_cult_spread_failed # Should carry on past this point to remove all politicians with cult traits.
+		}
+    }
+
+	on_complete = {
+		debug_log =  "Inquisition : Completed :"
+	}
+
+	on_monthly_pulse = {
+	
+		# Chance that another cultist will become converted (should fail against a Master?)
+		random_events = { 
+			10 = 0
+			1 = nda_base.21 
+		}		
+	}
+
+    fail = {
+		# if devout leader has been converted or journal cult_spread has completed
+
+		custom_tooltip = {
+				text = je_nda_devout_inquisition_fail_tt
+				has_variable = nda_cultists_in_open			
+			}
+    }
+	
+	on_fail = {
+		# It ends
+		trigger_event = { id = nda_base.24 }	
+	}
+
+	weight = 90
+
+	inheritable = yes
 
 	should_be_pinned_by_default = yes
 }

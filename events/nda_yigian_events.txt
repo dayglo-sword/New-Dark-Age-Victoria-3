@@ -17,6 +17,8 @@ nda_yigian.1 = { # Convert a Cultist to Yigian equivalent - called from journal 
 
 	gui_window = event_window_1char_tabloid
 
+	#event_image = {  texture = "gfx/state_pictures/arctic.dds"  } # dummy image
+
 	left_icon = scope:converted_ig.leader
 
 	trigger = {
