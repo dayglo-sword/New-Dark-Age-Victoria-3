@@ -89,3 +89,133 @@
 	}
 
 }
+
+nda_eld_recognise_yigian_lands = {
+	is_shown = {
+		exists = c:ELD
+		this = c:ELD
+	}
+
+	possible = {
+		#this = c:ELD
+		
+		any_scope_state = { #is in coastal asia/pacific
+			
+			is_potentially_yigian_lands = yes
+			state_region = {
+					is_homeland = cu:nda_cul_cultist
+					NOT = { is_homeland = cu:nda_cul_yigian }
+			}	
+		}
+	}
+	
+	when_taken = {
+
+		custom_tooltip = nda_eld_recognise_yigian_lands_tooltip
+
+		# set nda_cul_yigian
+		every_scope_state = {
+			#IF = {
+				limit = { 
+					is_potentially_yigian_lands = yes
+					state_region = {
+						is_homeland = cu:nda_cul_cultist
+						NOT = { is_homeland = cu:nda_cul_yigian }
+					}	
+				}	
+
+				state_region = {
+					add_homeland = nda_cul_yigian
+					remove_homeland = nda_cul_cultist						
+				}
+							
+			#}
+
+			# convert some cultists to yigian	
+			hidden_effect = {
+				every_scope_pop = {
+					limit = {
+						culture = cu:nda_cul_cultist
+					}
+					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
+				}
+			}				
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+
+}
+
+nda_eld_release_yigian_lands = {
+	is_shown = {
+		exists = c:ELD
+		this = c:ELD
+		exists = c:YIG
+	}
+
+	possible = {
+		
+		any_scope_state = { 
+			state_region = {
+					is_homeland = cu:nda_cul_yigian
+			}	
+		}
+
+	}
+	
+	when_taken = {
+
+	custom_tooltip = nda_eld_release_yigian_lands_tooltip
+
+		# set to Yigian
+		every_scope_state = {
+			limit = { 
+				state_region = {
+					is_homeland = cu:nda_cul_yigian
+				}	
+			}	
+
+			set_state_owner = c:YIG
+			hidden_effect = {
+				# convert some cultists to yigian					
+				every_scope_pop = {
+					limit = {
+						culture = cu:nda_cul_cultist
+					}
+					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
+				}
+			}
+		}
+		
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+
+}

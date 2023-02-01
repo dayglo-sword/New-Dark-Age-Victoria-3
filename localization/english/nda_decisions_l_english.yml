@@ -1,8 +1,15 @@
 ﻿l_english:
   
  nda_eld_recognise_dagonic_lands:0 "Recognise the Dagonic Shores"
- nda_eld_recognise_dagonic_lands_desc:0 "Along certain sections of our coasts the worship of Dagon grows strong. May be it is time we recognised then as our potential allies."
+ nda_eld_recognise_dagonic_lands_desc:0 "Along certain sections of our coasts the worship of Dagon grows strong. May be it is time we recognised them as our potential allies."
  nda_eld_recognise_dagonic_lands_tooltip:0 "Recognise the Dagonic Shores"
+ nda_eld_recognise_yigian_lands:0 "Recognise the Yigian Lands"
+ nda_eld_recognise_yigian_lands_desc:0 "Certain sections of our land have an historical afinity to the worship of Yig. May be it is time we recognised them as our potential allies."
+ nda_eld_recognise_yigian_lands_tooltip:0 "Recognise the Yigian Homelands"
+ nda_eld_release_yigian_lands:0 "Release the Yigian Lands"
+ nda_eld_release_yigian_lands_desc:0 "It is in our power to release to the Yigians their homelands which we currently occupy."
+ nda_eld_release_yigian_lands_tooltip:0 "Release the Homelands to the Yigians"
+
  nda_nen_newbrunswick_union:0 "Union with New Brunswick"
  nda_nen_newbrunswick_union_desc:0 "Why fight for land when we can just merge with friends! New Brunswick has long been our neighbours, it's time we took them under our benevolent wings."
  nda_nen_newbrunswick_union_tooltip:0 "Enter in union with New Brunswick"

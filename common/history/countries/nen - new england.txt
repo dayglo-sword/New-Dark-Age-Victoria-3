@@ -8,7 +8,7 @@
 		
 		effect_starting_politics_liberal = yes
 		activate_law = law_type:law_public_schools
-		activate_law = law_type:law_legacy_slavery
+		#activate_law = law_type:law_legacy_slavery
 		activate_law = law_type:law_racial_segregation
 		activate_law = law_type:law_protectionism
 		activate_law = law_type:law_interventionism

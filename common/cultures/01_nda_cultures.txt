@@ -32,6 +32,7 @@
 		1 = arab
 		1 = central_asian
 		1 = african
+		1 = dagonic_hybrid
 	}
 	graphics = european
 }
@@ -73,6 +74,7 @@ nda_cul_yigian={
 		1 = african
 		1 = south_american
 		1 = native_american
+		1 = yigian_hybrid
 	}
 	graphics = generic
 }
@@ -111,6 +113,7 @@ nda_cul_dagonic={
 		1 = arab
 		1 = central_asian
 		1 = african
+		1 = dagonic_hybrid
 	}
 	graphics = european
 }
@@ -181,7 +184,7 @@ nda_cul_trueyankee={
 	}
 	common_last_names = {
 		Akeley Angell Armitage Atwood Ashton_Smith Carter Corey Curwen Danforth Dexter_Ward Gilman Halsey Lovecraft Mason Morgan Olney Orne Pabodie Pickman Poe Sawyer Warren Whateley Willett Wilmarth
-		Phillips Fowler Marsh Rice West Wilcox
+		Phillips Fowler Marsh Rice West Wilcox Wayland_Thurston
 	
 	}
 	male_regal_first_names = {
@@ -193,7 +196,9 @@ nda_cul_trueyankee={
 
 	graphics = european
 	ethnicities = {
-		1 = caucasian
+		10 = caucasian
+		1 = dagonic_hybrid
+		#1 = yigian_hybrid
 	}
 }
 

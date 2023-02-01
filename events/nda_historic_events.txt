@@ -1,17 +1,11 @@
 ﻿namespace = nda_historic # Series of Historic 'Colour' events around spiritlism and the Occult - show to source country and to NEN as colour
 
-	# Arkham = "x211ECF"
-    # Innsmouth = "x13444D"
-    # Beverly = "xB040C0"
-    # mine = "x8D8744"
-    # Dunwich = "xB040C0" 
-
-nda_historic.10 = { # Founding of Spiritualist Movement
+nda_historic.1848 = { # Founding of Spiritualist Movement
 	type = country_event
 	placement = p:x01D042 #scope:spiritulist_state
-	title = nda_historic.10.t
-	desc = nda_historic.10.d
-	flavor =  nda_historic.10.f
+	title =nda_historic.1848.t
+	desc =nda_historic.1848.d
+	flavor = nda_historic.1848.f
 
 	duration = 3
 
@@ -51,7 +45,7 @@ nda_historic.10 = { # Founding of Spiritualist Movement
 	}	
 	
 	option = { #"Hope it does not spread"
-		name = nda_historic.10.a
+		name =nda_historic.1848.a
 		default_option = yes
 
 		debug_log = "Build Orne Library"
@@ -60,12 +54,58 @@ nda_historic.10 = { # Founding of Spiritualist Movement
 	}
 }
 
-nda_historic.11 = { # An American Medium in London
+nda_historic.1849 = { # Death of Poe in Baltimore
+	type = country_event
+	placement = p:x0E3435
+	title = nda_historic.1849.t
+	desc = nda_historic.1849.d
+	flavor =  nda_historic.1849.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds" 
+
+	trigger = {
+ 		# 1849 I
+		game_date >= 1849.10.1 
+		game_date < 1850 
+
+		# owner of Baltimore. or NEN
+		OR = {
+			p:x0E3435 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_poe_death }	
+	}
+
+	immediate = {
+		
+		set_variable = nda_historic_poe_death
+	}	
+	
+	option = { #"Nevermore"
+		name = nda_historic.1849.a
+		default_option = yes
+	}
+}
+
+nda_historic.1852 = { # An American Medium in London
 	type = country_event
 	placement = p:x7543C8 #scope:spiritulist_state
-	title = nda_historic.11.t
-	desc = nda_historic.11.d
-	flavor =  nda_historic.11.f
+	title = nda_historic.1852.t
+	desc = nda_historic.1852.d
+	flavor =  nda_historic.1852.f
 
 	duration = 3
 
@@ -105,24 +145,28 @@ nda_historic.11 = { # An American Medium in London
 	}	
 	
 	option = { 
-		name = nda_historic.11.a
+		name = nda_historic.1852.a
 		default_option = yes
 
 	}
 }
 
-nda_historic.12 = { # The Ghost Club
+nda_historic.1862 = { # The Ghost Club
 	type = country_event
 	placement = p:x7543C8 #scope:spiritulist_state
-	title = nda_historic.12.t
-	desc = nda_historic.12.d
-	flavor =  nda_historic.12.f
+	title = nda_historic.1862.t
+	desc = nda_historic.1862.d
+	flavor =  nda_historic.1862.f
 
 	duration = 3
 
-	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
-	}
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:character_to_display
+
+	#event_image = {
+	#	video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	#}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
@@ -150,24 +194,109 @@ nda_historic.12 = { # The Ghost Club
 		set_variable = nda_historic_ghost_club
 
 		p:x7543C8 = { # London
-			state = { save_scope_as = spiritulist_state }
-		}
+			state = { save_scope_as = spiritulist_state 
+				# add Dickens to country
+				owner = {
+					create_character = { # based on ecchi_gbr_dickens_character_template
+						first_name = Charles
+						last_name = ecchi_Dickens
+						culture = cu:british
+						female = no
+						religion = protestant
+						ideology = ideology_reformer
+						interest_group = ig_intelligentsia
+						dna = ecchi_dna_charles_dickens
+						birth_date = 1812.2.7
+						traits = { inspirational_orator }
+						#interest_group_leader_usage = {
+						#	country_trigger = {
+						#		exists = c:GBR
+						#		this = c:GBR
+						#	}
+						#	interest_group_trigger = {
+						#		is_interest_group_type = ig_intelligentsia
+						#	}
+						#	earliest_usage_date = 1836.1.1
+						#	latest_usage_date = 1870.6.9
+						#	chance = 90
+						#}
+						on_created = {
+							set_variable = is_dickens
+							
+						}
+					}
 
+					random_scope_character = {
+							limit = { has_variable = is_dickens } #use the variable to scope to that specific character
+							save_scope_as = character_to_display #save the scope here
+					}
+				}
+			}
+		}
 	}	
 	
 	option = { 
-		name = nda_historic.12.a
+		name = nda_historic.1862.a
 		default_option = yes
 
 	}
 }
 
-nda_historic.13 = { # The Society for Psychical Research
+nda_historic.1875 = { # The Theosophical Society
+	type = country_event
+	placement = p:xE217B5 #scope:spiritulist_state
+	title = nda_historic.1875.t
+	desc = nda_historic.1875.d
+	flavor =  nda_historic.1875.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+ 		# 1875 Theosophical Society founded in New York 
+		game_date >= 1875.4.1 
+		game_date < 1876 
+
+		# owner of NY. or NEN
+		OR = {
+			p:xE217B5 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_theosophical_soc }	
+	}
+
+	immediate = {
+		
+		set_variable = nda_historic_theosophical_soc
+		p:xE217B5 = { # New York
+			state = { save_scope_as = spiritulist_state }
+		}
+	}	
+	
+	option = { #"Hope it does not spread"
+		name = nda_historic.1875.a
+		default_option = yes
+	}
+}
+
+nda_historic.1882 = { # The Society for Psychical Research
 	type = country_event
 	placement = p:x7543C8 #scope:spiritulist_state
-	title = nda_historic.13.t
-	desc = nda_historic.13.d
-	flavor =  nda_historic.13.f
+	title = nda_historic.1882.t
+	desc = nda_historic.1882.d
+	flavor =  nda_historic.1882.f
 
 	duration = 3
 
@@ -207,122 +336,18 @@ nda_historic.13 = { # The Society for Psychical Research
 	}	
 	
 	option = { 
-		name = nda_historic.13.a
+		name = nda_historic.1882.a
 		default_option = yes
 
 	}
 }
 
-
-nda_historic.14 = { # Fox's come clean - Spiritualist Movement
-	type = country_event
-	placement = p:x01D042 #scope:spiritulist_state
-	title = nda_historic.14.t
-	desc = nda_historic.14.d
-	flavor =  nda_historic.14.f
-
-	duration = 3
-
-	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
-
-	trigger = {
- 		# 1888 spiritulist movement discredited 
-		game_date >= 1888.4.1 
-		game_date < 1889 
-
-		# owner of Syracuse, NY. or NEN
-		OR = {
-			p:x01D042 = { state = { owner = ROOT } }
-			AND = {
-				exists = c:NEN
-				c:NEN = ROOT
-			}			
-		}
-			
-		NOT = { has_variable = nda_historic_spiritulism_faked }	
-	}
-
-	immediate = {
-		
-		set_variable = nda_historic_spiritulism_faked
-		p:x01D042 = { # Syracuse
-			state = { save_scope_as = spiritulist_state }
-		}
-
-	}	
-	
-	option = { #"Hope it does not spread"
-		name = nda_historic.14.a
-		default_option = yes
-
-		debug_log = "Build Orne Library"
-
-		
-	}
-}
-
-nda_historic.15 = { # The Theosophical Society
-	type = country_event
-	placement = p:xE217B5 #scope:spiritulist_state
-	title = nda_historic.15.t
-	desc = nda_historic.15.d
-	flavor =  nda_historic.15.f
-
-	duration = 3
-
-	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
-
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
-
-	trigger = {
- 		# 1875 Theosophical Society founded in New York 
-		game_date >= 1875.4.1 
-		game_date < 1876 
-
-		# owner of NY. or NEN
-		OR = {
-			p:xE217B5 = { state = { owner = ROOT } }
-			AND = {
-				exists = c:NEN
-				c:NEN = ROOT
-			}			
-		}
-			
-		NOT = { has_variable = nda_historic_theosophical_soc }	
-	}
-
-	immediate = {
-		
-		set_variable = nda_historic_theosophical_soc
-		p:xE217B5 = { # New York
-			state = { save_scope_as = spiritulist_state }
-		}
-	}	
-	
-	option = { #"Hope it does not spread"
-		name = nda_historic.15.a
-		default_option = yes
-	}
-}
-
-nda_historic.16 = { # "The Secret Doctrine"
+nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 	type = country_event
 	placement = p:xE217B5
-	title = nda_historic.16.t
-	desc = nda_historic.16.d
-	flavor =  nda_historic.16.f
+	title = nda_historic.1887.t
+	desc = nda_historic.1887.d
+	flavor =  nda_historic.1887.f
 
 	duration = 3
 
@@ -362,17 +387,71 @@ nda_historic.16 = { # "The Secret Doctrine"
 	}	
 	
 	option = { #"Hope it does not spread"
-		name = nda_historic.16.a
+		name = nda_historic.1887.a
 		default_option = yes
 	}
 }
 
-nda_historic.17 = { # Hermetic Order of the Golden Dawn
+nda_historic.1888 = { # Fox's come clean - Spiritualist Movement
+	type = country_event
+	placement = p:x01D042 #scope:spiritulist_state
+	title = nda_historic.1888.t
+	desc = nda_historic.1888.d
+	flavor =  nda_historic.1888.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+ 		# 1888 spiritulist movement discredited 
+		game_date >= 1888.4.1 
+		game_date < 1889 
+
+		# owner of Syracuse, NY. or NEN
+		OR = {
+			p:x01D042 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_spiritulism_faked }	
+	}
+
+	immediate = {
+		
+		set_variable = nda_historic_spiritulism_faked
+		p:x01D042 = { # Syracuse
+			state = { save_scope_as = spiritulist_state }
+		}
+
+	}	
+	
+	option = { #"Hope it does not spread"
+		name = nda_historic.1888.a
+		default_option = yes
+
+		debug_log = "Build Orne Library"
+
+		
+	}
+}
+
+nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 	type = country_event
 	placement = p:x7543C8
-	title = nda_historic.17.t
-	desc = nda_historic.17.d
-	flavor =  nda_historic.17.f
+	title = nda_historic.1889.t
+	desc = nda_historic.1889.d
+	flavor =  nda_historic.1889.f
 
 	duration = 3
 
@@ -411,7 +490,7 @@ nda_historic.17 = { # Hermetic Order of the Golden Dawn
 	}	
 	
 	option = { #"Hope it does not spread"
-		name = nda_historic.17.a
+		name = nda_historic.1889.a
 		default_option = yes
 	}
 }

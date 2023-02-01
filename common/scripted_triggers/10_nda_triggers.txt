@@ -72,7 +72,7 @@ is_potentially_yigian = {
 		region = sr:region_andes
 		region = sr:region_la_plata
 		region = sr:region_gran_colombia
-		region = sr:region_great_plains # original home in books
+		#region = sr:region_great_plains # original home in books - should be oklahoma which is dixie!
 		region = sr:region_mexico
 		region = sr:region_central_america
 	}
@@ -85,9 +85,12 @@ is_potentially_yigian_lands = {
 		region = sr:region_andes
 		region = sr:region_la_plata
 		region = sr:region_gran_colombia
-		region = sr:region_great_plains # original home in books
+		#region = sr:region_great_plains # original home in books
 		region = sr:region_mexico
 		region = sr:region_central_america
+		state_region = s:STATE_TEXAS #  = 16777265 # texas 
+		state_region = s:STATE_NEW_MEXICO #   # new mexico
+		state_region = s:STATE_OKLAHOMA # oklahoma
 	}
 }
 

@@ -1,0 +1,159 @@
+﻿nda_effect_dagonic_annex = {
+	# annex a single country that openly supports DGN
+	if = {
+		limit = {
+			exists = ROOT
+			AND = {
+				exists = c:DGN
+				ROOT = c:DGN
+			} 
+			any_country = { 			
+				NOT = {
+					is_full_cult_country = { COUNTRY="THIS" }	
+					is_player = yes			
+				}
+				has_variable = nda_dagon_in_open
+			}
+		} 
+
+		ordered_country = {
+			limit = {
+				NOT = {
+					is_full_cult_country = { COUNTRY="THIS" }	
+					is_player = yes				
+				}
+				has_variable = nda_dagon_in_open			
+			}
+			order_by = { subtract = global_country_ranking }
+			position = 1
+
+			save_scope_as = nda_dagonic_annex			
+		}
+		#random_country = {
+		#	limit = {
+		#		NOT = {
+		#			is_full_cult_country = { COUNTRY="THIS" }
+		#			is_player = yes					
+		#		}
+		#		has_variable = nda_dagon_in_open			
+		#	}
+		#	
+		#	save_scope_as = nda_dagonic_annex
+		#}
+
+		# send notification - does country still exist after annex?
+		post_notification = nda_dagonic_shores_expand # toast
+
+		annex = scope:nda_dagonic_annex
+
+		debug_log = "Dagonic - Country surrenders."		
+	}	
+}
+
+nda_effect_dagonic_influence = { # boost to dagonic influence in area 
+
+	# Dagonic States
+	if = {
+		limit = {
+			exists = ROOT
+			has_variable = nda_dagon_in_open 
+		}
+
+		# give them a boost, both religion and pops
+		every_scope_state = {
+			limit = { exists = THIS }
+			convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
+
+			# everyone of Dagonic Culture should follow Rite 
+			every_scope_pop = {
+				limit ={
+					culture = cu:nda_cul_dagonic
+				}
+				change_pop_religion = { target = rel:nda_rel_cultist value = 1 }			
+			}	
+			# everyone of DGN Religion should follow Rite 
+			every_scope_pop = {
+				limit ={
+					has_pop_religion = nda_rel_cultist
+					NOT = { culture = cu:nda_cul_dagonic }
+				}
+				change_pop_culture = { target = cu:nda_cul_dagonic value = 1 }			
+			}				
+		}
+
+		# Mass Delusion		
+		add_loyalists = { value = 1 religion = rel:nda_rel_cultist } 
+		add_loyalists = { value = 1 culture = cu:nda_cul_dagonic }
+		add_loyalists = { value = 1 culture = cu:nda_cul_cultist }
+		# reduce radicals ??
+
+		#pledge to DGN if they exist
+		if = {
+			limit = {
+				AND = {
+					exists = c:DGN
+					#c:DGN = { country_rank > root.country_rank }				
+					NOT = {
+						is_full_cult_country = { COUNTRY="ROOT" }				
+					}					
+				}
+			}
+
+			# always change relationship
+			change_relations = { country = c:DGN value = 50 }
+			debug_log = "Improved Relations with DGN " 
+		}
+		
+		if = {
+			limit = {
+				exists = c:DGN
+				c:DGN = ROOT
+			}
+			# DGN only buffs
+			debug_log = "Buff DGN " 
+
+			every_state_region = {
+				limit = { 
+					exists = THIS
+					is_homeland=cu:nda_cul_dagonic
+					any_neighbouring_state = { owner = ROOT }
+				
+				}
+				add_claim = ROOT						
+			}
+
+			every_scope_state = { # need to set all non-homelands in DGN as homelands
+				limit = {
+					exists = THIS 
+					state_region = {
+						NOT = { is_homeland = cu:nda_cul_dagonic }
+						# include other Cults as well ??
+					}	
+				}
+				state_region = {
+					add_homeland = nda_cul_dagonic
+				}
+				
+			}
+			# lay claims with neighbours?
+
+			# remove radicals from government while everyone is partying
+			add_radicals  = { value = -0.5 }
+		}	
+	}
+
+	# non-cultist in area should worry - decrease relationships
+	if = {
+		limit = {
+			exists = ROOT
+			any_scope_state = { 
+					is_potentially_dagonic = yes
+			}
+			NOT = { has_variable = nda_dagon_in_open }
+			NOT = { has_variable = nda_cultists_in_open }
+		}
+
+		change_relations = { country = c:DGN value = -50 }
+		debug_log = "Decrease Relations with DGN " 
+	}
+}

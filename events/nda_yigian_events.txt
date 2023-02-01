@@ -198,6 +198,23 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 				has_yigian_trait = no 
 			}
 			add_trait = nda_yig_master # need to add to heirs as well?
+			change_character_religion = rel:nda_rel_yigian
+		}
+
+		# set state religion
+		set_state_religion = rel:nda_rel_yigian
+		# make recognized if not already
+		set_country_type = recognized
+		
+		# set devout to be cultists and to be power brokers
+		ig:ig_devout = {
+			set_interest_group_name = ig_nda_yigian_church
+			remove_ideology = ideology_moralist
+			add_ideology = ideology_nda_cabalistic
+
+			add_modifier = {
+				name = ig_powerbrokers
+			}
 		}
 
 		# set (not so) secret goals

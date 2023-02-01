@@ -65,6 +65,14 @@ nda_dagonic_shores_proclaimed = {
 	days = 35
 }
 
+nda_dagonic_shores_expand = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	days = 35
+}
+
 ### notifications from ritual
 nda_ritual_cthulhu_returns = {
 	type = country

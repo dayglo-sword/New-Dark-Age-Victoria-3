@@ -3,7 +3,10 @@
 	if = {
 		limit = {
 			exists = ROOT
-			ROOT = c:YIG 
+			AND = {
+				exists = c:YIG
+				ROOT = c:YIG
+			} 
 			any_country = { 			
 				NOT = {
 					is_full_cult_country = { COUNTRY="THIS" }				
@@ -72,25 +75,27 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 		#pledge to YIG if they exist
 		if = {
 			limit = {
-				exists = c:YIG
-				#c:YIG = { country_rank > root.country_rank }				
-				NOT = {
-					is_full_cult_country = { COUNTRY="ROOT" }				
+				AND = {
+					exists = c:YIG
+					#c:YIG = { country_rank > root.country_rank }				
+					NOT = {
+						is_full_cult_country = { COUNTRY="ROOT" }				
+					}					
 				}
 			}
 
-			random_list = {
-				30 = {
-					if = {
-						limit = { 
-							NOT = { owes_obligation_to = c:YIG }
-						}
-						set_owes_obligation_to = { country = c:YIG setting = yes }	
-						debug_log = "Offer Obligation to YIG " 							
-					}
-				}
-				70 = {}
-			}
+			#random_list = {
+			#	30 = {
+			#		if = {
+			#			limit = { 
+			#				NOT = { owes_obligation_to = c:YIG }
+			#			}
+			#			set_owes_obligation_to = { country = c:YIG setting = yes }	
+			#			debug_log = "Offer Obligation to YIG " 							
+			#		}
+			#	}
+			#	70 = {}
+			#}
 
 			# always change relationship
 			change_relations = { country = c:YIG value = 50 }

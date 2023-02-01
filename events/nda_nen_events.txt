@@ -233,6 +233,8 @@ nda_nen.13 = { #
 		
 		exists = c:NEN
 		c:NEN = ROOT
+
+		has_technology_researched = chemical_warfare # or other chemical tech??
 	}
 
 	immediate = {
@@ -307,6 +309,48 @@ nda_nen.14 = { # Disappearence of Dr West
 		default_option = yes
 
 		debug_log = "Herbert West End"
+	}
+
+}
+
+
+nda_nen.15 = { # End Herbert West with warning from the future - Actually a homage to Clark Ashton Smith
+	type = country_event
+	placement = ROOT 
+	title = nda_nen.15.t
+	desc = nda_nen.15.d
+	flavor =  nda_nen.15.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1935  # 
+		exists = c:NEN
+		c:NEN = ROOT
+		has_global_variable = herbert_west_successful
+		NOT = { has_variable = herbert_west_future }
+	}
+
+	immediate = {
+		set_variable = herbert_west_future	
+	}	
+	
+	option = { #" Our Future"
+		name = nda_nen.15.a
+		default_option = yes
+
+		debug_log = "Herbert West Future"
 	}
 
 }

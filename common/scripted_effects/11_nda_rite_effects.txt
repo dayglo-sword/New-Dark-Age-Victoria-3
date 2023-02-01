@@ -93,11 +93,15 @@
 		}
 
 		nda_effect_eldritch_annex = yes
+		
 		# remove radicals from government while everyone is partying
+		add_radicals  = { value = -0.5 }
 
 	}	
 	
 	nda_effect_yigian_annex = yes
 	nda_effect_yigian_influence = yes
 
+	nda_effect_dagonic_annex = yes
+	nda_effect_dagonic_influence = yes
 }

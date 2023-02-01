@@ -8,27 +8,28 @@ Timeline of events in mod
 1842.1      nda_astro.10        Conjunction 1
 1842.6      nda_nen.10          Founding of Miskatonic Uni
 
-1845.9        nda_nen.20          Devil Worship in Innsmouth, Captain Marsh
+1845.9      nda_nen.20          Devil Worship in Innsmouth, Captain Marsh
 1846.3      nda_nen.21          Plague in Innsmouth
 
-1848.4      nda_historic.10     Founding of Spiritualist Movement
-
-1852.1      nda_historic.11     An American Medium in London
+1848.4      nda_historic.1848     Founding of Spiritualist Movement
+1849.10     nda_historic.1849   Death of Poe
+1852.1      nda_historic.1852     An American Medium in London
 
 1861.10     nda_astro.2         Conjunction 2
 
-1862.1      nda_historic.12     London -The Ghost Club
+1862.1      nda_historic.1862     London -The Ghost Club
 
-1875.4      nda_historic.15     NY - The Theosophical Society
+1875.4      nda_historic.1875     NY - The Theosophical Society
 
 1881.4      nda_astro.3         Conjunction 3
 
-1882.1      nda_historic.13     London - The Society for Psychical Research
+1882.1      nda_historic.1882     London - The Society for Psychical Research
 
 1882.6                          The Colour Out Of Space
 
-1888.4      nda_historic.14     Fox's come clean - Spiritualist Movement
-1888.8      nda_historic.16     Theosophical Society - The Secret Doctrine
+1888.4      nda_historic.1888     Fox's come clean - Spiritualist Movement
+1888.8      nda_historic.1887     Theosophical Society - The Secret Doctrine
+1888.10     nda_historic.1887     The Golden Dawn
 1890.1      nda_hasturian.1     Paris - The King in Yellow
 1890.8      nda_ritual.2        Cthulhu Early Return
 1891.1      nda_hasturian.2     The King in Yellow Spreads

@@ -22,6 +22,10 @@
  notification_nda_yigian_lands_expand_name:1 "The Yigian Lands Expands"
  notification_nda_yigian_lands_expand_desc:1 "The Snake Cult has taken over the country of [SCOPE.sC('nda_yigian_annex').GetName ] and annexed it to its domain."
 
+ notification_nda_dagonic_shores_expand_tooltip:0 "#header $notification_nda_dagonic_shores_expand_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_dagonic_shores_expand_desc$"
+ notification_nda_dagonic_shores_expand_name:1 "The Dagonic Shores Expands"
+ notification_nda_dagonic_shores_expand_desc:1 "The Deep Ones has taken over the country of [SCOPE.sC('nda_dagonic_annex').GetName ] and annexed it to its watery domain."
+
  notification_nda_dagonic_shores_proclaimed_tooltip:0 "#header $notification_nda_dagonic_shores_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_dagonic_shores_proclaimed_desc$"
  notification_nda_dagonic_shores_proclaimed_name:1 "[SCOPE.sC('originator').GetName ] - Hail The Dagonic Shores"
  notification_nda_dagonic_shores_proclaimed_desc:1 "The Deep Ones have returned to the coasts as their followers proclaim the formation of the Dagonic Shores."

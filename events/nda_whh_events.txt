@@ -177,6 +177,8 @@ nda_whh.13 = { # 'Electric Pentagram' - should this really be a decision?
 				p:x7543C8 = { state = { owner = { NOT = { has_variable = nda_cultists_in_open } } }	} # still in safe London		
 			}
 		}
+		# requires electrical_generation or electrical_capacitors ? ? 
+		has_technology_researched = electrical_capacitors
 	}
 
 	immediate = {

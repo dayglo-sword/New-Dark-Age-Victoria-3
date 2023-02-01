@@ -78,7 +78,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 	            months = 36
 	        }
 		}
-		set_variable = nda_king_in_yellow_supressed
+		#set_variable = nda_king_in_yellow_supressed # no current use
 	}
 }
 
@@ -106,7 +106,7 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 		game_date >= 1891
 		has_global_variable = nda_king_in_yellow_play_exists
 
-		NOT = { has_variable = nda_king_in_yellow_decision} # don't rerun while decision in progress
+		NOT = { has_variable = nda_king_in_yellow_decision } # don't rerun while decision in progress
 
 		OR = { # will also fire for countries as they promote in rank
 			country_rank = rank_value:great_power
@@ -404,4 +404,44 @@ nda_hasturian.7 = { #  Death of Mr Wilde.
 
 }
 
+nda_hasturian.8 = { #  King in Yellow fades.
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.8.t
+	desc = nda_hasturian.8.d
+	flavor =  nda_hasturian.8.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	trigger = { 
+		is_player = yes
+		game_date >= 1899.6
+		game_date < 1900
+		has_global_variable = nda_king_in_yellow_play_exists
+		NOT = { 
+			has_global_variable = nda_king_in_yellow 
+			has_variable = nda_king_in_yellow_fades
+		}
+	}
+
+	immediate = {
+		set_variable = nda_king_in_yellow_fades
+	}	
+	
+	option = { # A passing fad!
+		name = nda_hasturian.8.a
+		default_option = yes
+	}
+
+}
 # nda_hasturian.8 # Force AI Imperial America back to Absolute Monarchy if it drifts too far.

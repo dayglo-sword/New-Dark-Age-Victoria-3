@@ -41,7 +41,7 @@
 			clamp_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
 					min = 0
-					max = 500			
+					max = 5000			
 			}			
 		}
 		
@@ -68,12 +68,12 @@
 
 	on_monthly_pulse = {
 	
-		# need better cont up
+		# need better count up
 		effect = {
 				scope:nda_je_ritual_proceeds_scope = {
 					change_global_variable = {
 						name = je_nda_ritual_proceeds_tracker
-						add = 1
+						add = 10
 					}					
 				}				
 		}	
@@ -86,7 +86,7 @@
 	}
 
 	goal_add_value = {
-		add = 240 # 10 years at base rate
+		add = 2400 # 10 years at base rate
 	}
 
     fail = {
@@ -118,7 +118,8 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 	possible = {
 	#	# ? has any state as Eldritch homeland - will convert to Yigian on completion
 		# just ELD as initiator, DGN after a certain date, Other after a later date - others can assist via second journal
-		country_has_primary_culture = cu:nda_cul_cultist # easy check
+
+		country_has_primary_culture = cu:nda_cul_cultist # easy check, but 20+ countries can qualify!
 
 		has_global_variable = je_nda_ritual_proceeds_tracker
  		NOT = { has_global_variable = nda_ritual_completed  }
@@ -137,7 +138,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 			clamp_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
 					min = 0
-					max = 500			
+					max = 5000			
 			}			
 		}
 		
@@ -164,7 +165,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 
 	on_monthly_pulse = {
 	
-		# need better cont up
+		# need better count up
 		effect = {
 				scope:nda_je_ritual_proceeds_scope = {
 					change_global_variable = {
@@ -177,12 +178,11 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 	}
 
 	current_value = {
-		#value = root.var:je_nda_ritual_proceeds_tracker
 		value = global_var:je_nda_ritual_proceeds_tracker
 	}
 
 	goal_add_value = {
-		add = 240 # 10 years at base rate
+		add = 2400 # 10 years at base rate
 	}
 
     fail = {

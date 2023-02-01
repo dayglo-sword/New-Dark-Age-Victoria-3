@@ -24,8 +24,8 @@
  nda_base.5.a:0 "What can we do?"
 
  nda_base.7.t:0 "Revelations"
- nda_base.7.d:0 "The Elditch Cult in this country no longer operates in secret."
- nda_base.7.f:0 "It is enroute to taking open control of the government and to use it resources to further its goal...\nThe return of the Great Cthulhu!\n\n#ITALIC 'In his house at R'lyeh dead Cthulhu waits dreaming.' #!"
+ nda_base.7.d:0 "The Elditch Cult in this country no longer operates in secret.\n\nIt is enroute to taking open control of the government and to use it resources to further its goal...\nThe return of the Great Cthulhu!"
+ nda_base.7.f:0 "\n\n#ITALIC 'In his house at R'lyeh dead Cthulhu waits dreaming.' #!"
  nda_base.7.a:0 "This is getting out of hand!"
  nda_base.8.t:0 "The Cult next door"
  nda_base.8.d:0 "The Elditch Cult in the country of [SCOPE.sC('originator').GetName] is spreading their dogma into our fair country."

@@ -25,3 +25,4 @@
  je_nda_devout_inquisition_complete_tt:0 "Control of the country is beyond the reach of the Cultists."
  je_nda_devout_inquisition_complete:0 "We can only relax once control of the country is beyond the reach of the Cultists."
  je_nda_devout_inquisition_fail_tt:0 "If the Cultists gain control of the government."
+ je_nda_devout_inquisition_cancel_tt:0 "The Church cancels the Inquisition"

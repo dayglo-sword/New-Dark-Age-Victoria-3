@@ -10,4 +10,8 @@
  nda_cul_yigian:0 "Yigian Cult"
  nda_cul_dagonic:0 "Dagonic Cult"
  nda_cul_trueyankee:0 "True Yankee"
+
+ ig_nda_cultist_church:0 "High Priests of Cthulhu"
+ ig_nda_dagonic_church:0 "High Priests of Dagon"
+ ig_nda_yigian_church:0 "High Priests of Yig"
  

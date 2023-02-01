@@ -1,5 +1,6 @@
 ﻿je_nda_cult_spreads = {
-	icon = "gfx/interface/icons/event_icons/nda_cthulhu.dds #event_industry.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_industry.dds"
+	#icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	immediate = {
 		set_variable = {
@@ -46,14 +47,7 @@
 
 	on_complete = {
 		debug_log =  "Cult Spread Journal : Completed :"
-		#effect = {
-		#	IF = { 
-		#		limit = { 
-		#			NOT =  { has_variable = nda_cultists_in_open } 
-		#		}  // recovering from stupid revolution can make event redundant
-				trigger_event = { id = nda_base.7 }				
-		#	} 			
-		#}
+		trigger_event = { id = nda_base.7 }				
 	}
 
 	on_monthly_pulse = {
@@ -170,8 +164,11 @@ je_nda_cult_to_yigian = {
 		country_has_primary_culture = cu:nda_cul_cultist 
 
 		NOT = {  # Never convert ELD
-			exists = c:ELD
-			c:ELD = ROOT
+			AND = {
+				exists = c:ELD
+				c:ELD = ROOT				
+			}
+
 		}				
 				
 	}
@@ -337,8 +334,10 @@ je_nda_cult_to_dagonic = {
 		country_has_primary_culture = cu:nda_cul_cultist 
 
 		NOT = { # Never convert ELD
-			exists = c:ELD
-			c:ELD = ROOT
+			AND = {
+				exists = c:ELD
+				c:ELD = ROOT				
+			}
 		}
 	}
 
@@ -518,20 +517,30 @@ je_nda_devout_inquisition = {
 
 	on_monthly_pulse = {
 	
-		# Chance that another cultist will become converted (should fail against a Master?)
+		# Chance that another cultist will become converted (should fail against a Master), chance of getting innocent leader
 		random_events = { 
-			10 = 0
-			1 = nda_base.21 
+			30 = 0
+			3 = nda_base.21 
+			1 = nda_base.25
 		}		
 	}
 
     fail = {
 		# if devout leader has been converted or journal cult_spread has completed
-
-		custom_tooltip = {
+		OR = {
+			custom_tooltip = {
 				text = je_nda_devout_inquisition_fail_tt
 				has_variable = nda_cultists_in_open			
 			}
+			custom_tooltip = {
+				text = je_nda_devout_inquisition_cancel_tt
+				any_interest_group = {
+					leader = { 
+						has_eldritch_trait =yes
+					}
+				}		
+			}
+		}
     }
 	
 	on_fail = {

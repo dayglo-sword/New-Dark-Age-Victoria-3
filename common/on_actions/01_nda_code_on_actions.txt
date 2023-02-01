@@ -33,19 +33,22 @@ on_monthly_pulse_country = {
 		nda_hasturian.1 # Play in Paris 
 		nda_hasturian.2 # Play Spreads 
 		nda_hasturian.3 # Repairer of Reputations
+		nda_hasturian.8 # The Play Fades
 
 		nda_whh.10 # House on the Borderlands
 		nda_whh.11 # Carnacki Start
 		nda_whh.12 # Carnacki Exile
 		nda_whh.13 # Electric Pentangle
 
-		nda_historic.10
-		nda_historic.11
-		nda_historic.12
-		nda_historic.13
-		nda_historic.14
-		nda_historic.15
-		nda_historic.16
+		nda_historic.1848
+		nda_historic.1849
+		nda_historic.1852
+		nda_historic.1862
+		nda_historic.1875		
+		nda_historic.1882
+		nda_historic.1888
+		nda_historic.1887
+		nda_historic.1889
 	}
 	random_events = {
 		

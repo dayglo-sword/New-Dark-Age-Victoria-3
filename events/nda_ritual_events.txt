@@ -302,3 +302,19 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 }
 
 # nda_ritual.7 = { # Monitor for Cthulhu departs
+
+# Call of Cthulhu story events
+# The Tale of Inspector Legrasse - November 1907 New Orleans
+# the American Archeological Society held its annual meeting in St. Louis.
+#nda_ritual.1907 = { }
+# Animal fury and orgiastic license here whipped themselves to demoniac heights by
+# howls and squawking ecstasies that tore and reverberated through those
+# nighted woods like pestilential tempests from the gulfs of hell. Now
+# and then the less organized ululations would cease, and from what
+# seemed a well-drilled chorus of hoarse voices would rise in singsong
+#chant that hideous phrase or ritual:
+#        "_Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn._"
+
+#nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol
+
+#nda_ritual.1925 = { #April - The Vigilant - only if Ritual fails
