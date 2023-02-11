@@ -1,0 +1,193 @@
+﻿ig_nda_cult_worshippers = {
+	color = hsv{ 0.30 0.10 0.47 }
+	texture = "gfx/interface/icons/ig_icons/nda_cult.dds"
+	
+	ideologies = {
+		ideology_nda_cabalistic
+		ideology_populist
+		ideology_patriarchal
+	}
+	
+	enable = {
+		#always = yes
+		#has_variable = nda_cultists_in_open
+		any_scope_pop = {
+			OR = {
+				religion = rel:nda_rel_cultist
+				religion = rel:nda_rel_yigian
+			}		
+		}
+	}
+	
+	traits = {
+		ig_trait_be_fruitful_and_multiply
+		ig_trait_divine_right
+		ig_trait_pious_fiction
+	}	
+	
+	on_enable = {
+		# add as powerbrokers ? this just makes them happy - nothing to do with adding power
+		add_modifier = {
+			name = nda_ig_secret_masters
+		}
+	}
+	on_disable = {}
+	on_character_ig_membership = {
+		#change_character_religion = scope:interest_group.owner.religion
+		add_trait = nda_cultist
+
+		IF = {
+			limit = {
+				OR = {
+					has_ideology = ideology_radical
+					has_ideology = ideology_pacifist
+					has_ideology = ideology_reformer
+					has_ideology = ideology_abolitionist					
+				}
+			}
+
+			set_ideology = ideology_moderate
+		}
+	}
+			
+	pop_potential = {
+		#has_state_religion = yes
+		custom_tooltip = {
+			text = ig_nda_cult_worshippers_potential_tt
+			OR = {
+				religion = rel:nda_rel_cultist
+				religion = rel:nda_rel_yigian
+			}	
+		}
+	
+	}
+	
+	pop_weight = {
+		value = 250 # big weight - want as many cultist to join as possible	
+
+		add = {
+			desc = "POP_ARISTOCRATS"
+			if = {
+				limit = { 
+					is_pop_type = aristocrats
+				}
+				value = 250
+			}
+		}
+
+		add = {
+			desc = "POP_OFFICERS"
+			if = {
+				limit = { 
+					is_pop_type = officers
+				}
+				value = 50
+			}
+		}
+		add = {
+			desc = "POP_CLERGYMEN"
+			if = {
+				limit = { 
+					is_pop_type = clergymen
+				}
+				value = 200
+			}
+		}	
+
+		add = {
+			desc = "POP_PEASANTS"
+			if = {
+				limit = { 
+					is_pop_type = peasants
+				}
+				value = 100
+			}
+		}								
+		
+		multiply = {
+			desc = "LEADER_POPULARITY"
+			scope:interest_group = {
+				leader = {
+					value = popularity
+					multiply = 0.0025
+					add = 1
+					max = 1.25
+					min = 0.75
+				}
+			}
+		}					
+	}
+	
+	monarch_weight = {
+		value = 1.0
+	}	
+	
+	commander_weight = {
+		value = 1.0
+	}	
+	
+	noble_chance = {
+		value = 0.5
+	}
+	
+	female_commander_chance = {	
+		value = 0.5
+	}
+	
+	female_politician_chance = {
+		value = 0.5
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_own_property
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_in_the_workplace
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+	}
+	
+	# The chance that a commander belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular commander in the IG
+	commander_leader_chance = {
+		value = 0.25
+		if = {
+			limit = {
+				exists = scope:character
+			}
+			multiply = {
+				value = 1
+				add = scope:character.popularity
+				min = 0
+			}
+			# also mod by cult traits? or is their effect on popularity enough? - do commanders ever get these traits
+		}
+	}
+}

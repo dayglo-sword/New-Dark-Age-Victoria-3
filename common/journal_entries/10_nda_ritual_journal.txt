@@ -1,6 +1,6 @@
 ﻿je_nda_ritual_proceeds = {
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds.dds"
 
 	is_shown_when_inactive = {
 		country_has_primary_culture = cu:nda_cul_cultist  
@@ -14,18 +14,23 @@
 		# just ELD as initiator, DGN after a certain date, Other after a later date - others can assist via second journal
 		country_has_primary_culture = cu:nda_cul_cultist # easy check
 
-		OR = {
-			AND = { # ELD should have first chance as initiator
-				exists = c:ELD
-				c:ELD = ROOT
-			}
-			AND = { # DGN should have a chance as initiator
-				exists = c:DGN
-				c:DGN = ROOT
-			}
+		custom_tooltip = {
+				text = je_nda_ritual_proceeds_possible_tt
+
+				OR = {
+					AND = { # ELD should have first chance as initiator
+						exists = c:ELD
+						c:ELD = ROOT
+					}
+					AND = { # DGN should have a chance as initiator
+						exists = c:DGN
+						c:DGN = ROOT
+					}
+				}
+
+				NOT = { has_global_variable = nda_ritual_completed  }
 		}
 
- 		NOT = { has_global_variable = nda_ritual_completed  }
 
 
 	}
@@ -107,7 +112,7 @@
 
 je_nda_ritual_assist = { # other countries should be able to help - this should be launched via decision??
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds.dds"
 
 	is_shown_when_inactive = {
 		country_has_primary_culture = cu:nda_cul_cultist  
@@ -120,11 +125,12 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 		# just ELD as initiator, DGN after a certain date, Other after a later date - others can assist via second journal
 
 		country_has_primary_culture = cu:nda_cul_cultist # easy check, but 20+ countries can qualify!
+		custom_tooltip = {
+			text = je_nda_ritual_assist_possible_tt
 
-		has_global_variable = je_nda_ritual_proceeds_tracker
- 		NOT = { has_global_variable = nda_ritual_completed  }
-
-
+			has_global_variable = je_nda_ritual_proceeds_tracker
+ 			NOT = { has_global_variable = nda_ritual_completed  }	
+		}
 	}
 
 	immediate = {

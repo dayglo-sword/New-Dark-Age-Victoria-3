@@ -4,9 +4,9 @@
 		every_scope_state = {
 			state_region = { # will this double up on shared regions? Was a bit lame at 30 dev 10 pol,
 				# Cause devestation
-				add_devastation = 70
+				add_devastation = 80
 				# and polution
-				add_pollution = 30				
+				add_pollution = 40				
 			}
 			add_modifier = {
 				name = nda_dark_skies_modifier
@@ -167,6 +167,20 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					}				
 				}
 			}
+
+			# decrease relations with cult countries
+			if = {
+				limit = { exists = c:ELD}
+				change_relations = { country = c:ELD value = -100 }
+			}
+			if = {
+				limit = { exists = c:YIG}
+				change_relations = { country = c:YIG value = -100 }
+			}
+			if = {
+				limit = { exists = c:DAG}
+				change_relations = { country = c:DAG value = -100 }
+			}
 		}
 		else = { # not cultists  - make happier
 			every_scope_culture = {
@@ -190,6 +204,20 @@ nda_effect_cthulhu_leaves = { # Used at departure
 						}				
 					}				
 				}					
+			}
+
+			# decrease relations with cult countries
+			if = {
+				limit = { exists = c:ELD}
+				change_relations = { country = c:ELD value = -100 }
+			}
+			if = {
+				limit = { exists = c:YIG}
+				change_relations = { country = c:YIG value = -100 }
+			}
+			if = {
+				limit = { exists = c:DAG}
+				change_relations = { country = c:DAG value = -100 }
 			}
 		}			
 	}		

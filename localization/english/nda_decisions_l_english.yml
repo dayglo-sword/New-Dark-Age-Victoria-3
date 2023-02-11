@@ -3,6 +3,10 @@
  nda_eld_recognise_dagonic_lands:0 "Recognise the Dagonic Shores"
  nda_eld_recognise_dagonic_lands_desc:0 "Along certain sections of our coasts the worship of Dagon grows strong. May be it is time we recognised them as our potential allies."
  nda_eld_recognise_dagonic_lands_tooltip:0 "Recognise the Dagonic Shores"
+ nda_eld_release_dagonic_lands:0 "Release the Dagonic Lands"
+ nda_eld_release_dagonic_lands_desc:0 "It is in our power to release to the Deep Ones their homelands which we currently occupy."
+ nda_eld_release_dagonic_lands_tooltip:0 "Release the shores to the Deep Ones"
+
  nda_eld_recognise_yigian_lands:0 "Recognise the Yigian Lands"
  nda_eld_recognise_yigian_lands_desc:0 "Certain sections of our land have an historical afinity to the worship of Yig. May be it is time we recognised them as our potential allies."
  nda_eld_recognise_yigian_lands_tooltip:0 "Recognise the Yigian Homelands"

@@ -1,4 +1,48 @@
-﻿nda_effect_eldritch_annex = {
+﻿nda_effect_eldritch_setup = {
+		# Set Country Leader as Cultist if not already
+		every_scope_character = {
+			limit = { 
+				is_ruler = yes 
+				has_eldritch_trait = no 
+			}
+			add_trait = nda_master # need to add to heirs as well?
+			change_character_religion = rel:nda_rel_cultist
+		}
+
+		# set state religion
+		set_state_religion = rel:nda_rel_cultist
+		
+		# set devout to be cultists and to be power brokers
+		ig:ig_nda_cult_worshippers = {
+			set_interest_group_name = ig_nda_cultist_church
+			#remove_ideology = ideology_moralist
+			#add_ideology = ideology_nda_cabalistic
+
+			add_modifier = {
+				name = nda_ig_secret_masters
+			}
+		}
+		
+		# set (not so) secret goals and Strategy
+		set_secret_goal = {
+			country = c:NEN
+			secret_goal = antagonize
+		}
+		set_secret_goal = {
+			country = c:YIG
+			secret_goal = protect
+		}
+		set_secret_goal = {
+			country = c:DGN
+			secret_goal = protect
+		}
+
+		set_strategy = ai_strategy_colonial_expansion
+		set_strategy = ai_strategy_territorial_expansion
+		set_strategy = ai_strategy_conservative_agenda
+}
+
+nda_effect_eldritch_annex = {
 	# annex a single country that openly supports ELD
 	if = {
 		limit = {

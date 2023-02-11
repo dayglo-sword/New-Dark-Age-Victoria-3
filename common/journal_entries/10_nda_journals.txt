@@ -362,7 +362,7 @@ je_nda_cult_to_dagonic = {
 				max = 500			
 		}	
 		save_scope_as = nda_je_cult_to_dagonic_scope
-		debug_log = "dagonic Spread Journal : Started : "
+		debug_log = "Dagonic Spread Journal : Started : "
 	}
 
     complete = {
@@ -394,7 +394,7 @@ je_nda_cult_to_dagonic = {
     }
 
 	on_complete = {
-		debug_log =  "dagonic Spread Journal : Completed :"
+		debug_log =  "Dagonic Spread Journal : Completed :"
 		#effect = {
 			#IF = { limit = { NOT =  { has_variable = nda_dagon_in_open } }  // recovering from stupid revolution can make event redundant
 				trigger_event = { id = nda_dagonic.2  }				
@@ -406,12 +406,12 @@ je_nda_cult_to_dagonic = {
 	
 		# check count of dagonics in government. add to counter
 		effect = {
-				scope:nda_je_cult_to_dagonic_scope = {
-					change_variable = {
-						name = nda_cult_to_dagonic_tracker
-						add = 1
-					}					
-				}
+			scope:nda_je_cult_to_dagonic_scope = {
+				change_variable = {
+					name = nda_cult_to_dagonic_tracker
+					add = 1
+				}					
+			}
 
 
 			# Every non marginal 

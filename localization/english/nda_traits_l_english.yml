@@ -30,3 +30,6 @@ nda_dark_skies_modifier:0 "Putrid Skies"
 nda_dark_skies_modifier_desc:0 "The Skies are darkened with billowing clouds."
 nda_dagonic_state_modifier:0 "The Bounty of Dagon"
 nda_dagonic_state_modifier_desc:0 "The fruit of the seas belongs to Dagon's followers."
+
+nda_ig_secret_masters:0 "Secret Masters"
+nda_ig_secret_masters_desc:0 "The Secret Masters work to promote the Cult."

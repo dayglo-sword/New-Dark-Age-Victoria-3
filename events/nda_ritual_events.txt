@@ -13,12 +13,11 @@ nda_ritual.1 = { # Cthulhu Returns
 		video = "gfx/event_pictures/unspecific_devastation.bk2"
 		
 	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
 	trigger = { # limit to eldritch cult ELD ? Called Only?
 		has_global_variable = nda_ritual_completed	
@@ -58,12 +57,11 @@ nda_ritual.2 = { # Cthulhu Early Return
 		video = "gfx/event_pictures/unspecific_devastation.bk2"
 		
 	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
 	trigger = { # limit to eldritch cult ELD ? Called Only?
 		has_global_variable = nda_ritual_completed	
@@ -109,7 +107,7 @@ nda_ritual.3 = { # The ritual completed
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
 	trigger = { # Called Only?
 
@@ -183,7 +181,7 @@ nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countri
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
 	trigger = { 
 		
@@ -306,14 +304,63 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 # Call of Cthulhu story events
 # The Tale of Inspector Legrasse - November 1907 New Orleans
 # the American Archeological Society held its annual meeting in St. Louis.
-#nda_ritual.1907 = { }
-# Animal fury and orgiastic license here whipped themselves to demoniac heights by
-# howls and squawking ecstasies that tore and reverberated through those
-# nighted woods like pestilential tempests from the gulfs of hell. Now
-# and then the less organized ululations would cease, and from what
-# seemed a well-drilled chorus of hoarse voices would rise in singsong
-#chant that hideous phrase or ritual:
-#        "_Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn._"
+
+nda_ritual.1907 = { 
+	type = country_event
+	placement = p:x9A7554 
+	title = nda_ritual.1907.t
+	desc = nda_ritual.1907.d # have different description if location is ELD??
+	flavor =  nda_ritual.1907.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+		
+ 		# 1907 
+		game_date >= 1907.11.1 
+		game_date < 1908.2 
+
+		# owner of New Orleans (or St Louis)
+		OR = {
+			p:x9A7554 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_ritual_legrasse }	
+
+	}
+
+	immediate = {
+		set_variable = nda_ritual_legrasse	
+		debug_log = "Ritual - The Tale of Inspector Legrasse "	
+
+		if = { # Help ritual along
+			limit = { has_global_variable = je_nda_ritual_proceeds_tracker  }
+
+			change_global_variable = {
+				name = je_nda_ritual_proceeds_tracker
+				add = 100
+			}		
+		}
+	}	
+	
+	option = { # A Strange Tale
+		name = nda_ritual.1907.a
+		default_option = yes
+	}
+}
 
 #nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol
 

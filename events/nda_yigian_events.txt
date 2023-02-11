@@ -38,11 +38,11 @@ nda_yigian.1 = { # Convert a Cultist to Yigian equivalent - called from journal 
 					add_trait = nda_yig_cultist # should override existing
 					remove_trait = nda_cultist
 				}
-				if = { limit = { has_trait = nda_acolyte }
+				else_if = { limit = { has_trait = nda_acolyte }
 					add_trait = nda_yig_acolyte # should override existing
 					remove_trait = nda_acolyte
 				}
-				if = { limit = { has_trait = nda_master }
+				else_if = { limit = { has_trait = nda_master }
 					add_trait = nda_yig_master # should override existing
 					remove_trait = nda_master
 				}
@@ -191,49 +191,8 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 			post_notification = nda_yigian_lands_proclaimed # toast
 		}
 
-		# Set Country Leader as Cultist if not already
-		every_scope_character = {
-			limit = { 
-				is_ruler = yes 
-				has_yigian_trait = no 
-			}
-			add_trait = nda_yig_master # need to add to heirs as well?
-			change_character_religion = rel:nda_rel_yigian
-		}
-
-		# set state religion
-		set_state_religion = rel:nda_rel_yigian
-		# make recognized if not already
-		set_country_type = recognized
-		
-		# set devout to be cultists and to be power brokers
-		ig:ig_devout = {
-			set_interest_group_name = ig_nda_yigian_church
-			remove_ideology = ideology_moralist
-			add_ideology = ideology_nda_cabalistic
-
-			add_modifier = {
-				name = ig_powerbrokers
-			}
-		}
-
-		# set (not so) secret goals
-		set_secret_goal = {
-			country = c:NEN
-			secret_goal = antagonize
-		}
-		set_secret_goal = {
-			country = c:ELD
-			secret_goal = befriend
-		}
-		set_secret_goal = {
-			country = c:DGN
-			secret_goal = befriend
-		}
-
-		set_strategy = ai_strategy_colonial_expansion
-		set_strategy = ai_strategy_territorial_expansion
-		set_strategy = ai_strategy_conservative_agenda
+		# Set up Yigian leadership and IGs
+		nda_effect_yigian_setup = yes
 
 		# get other countries onside by increasing approval
 		nda_effect_yigian_influence = yes

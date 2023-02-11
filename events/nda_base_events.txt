@@ -593,6 +593,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 			base = 100		
 		}
 
+		# have chance of traditionalist as well?
 		scope:targeted_ig_leader = { set_ideology = ideology_moderate } # This ignores ideology possibility checks?
 		debug_log = "Check for Non-Conformists - Persuaded" 	
 		# rdeuce radicals in IG as well? Change Anger?
@@ -649,47 +650,8 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 
 		}
 
-		# Set Country Leader as Cultist if not already
-		every_scope_character = {
-			limit = { 
-				is_ruler = yes 
-				has_eldritch_trait = no 
-			}
-			add_trait = nda_master # need to add to heirs as well?
-			change_character_religion = rel:nda_rel_cultist
-		}
-
-		# set state religion
-		set_state_religion = rel:nda_rel_cultist
-		
-		# set devout to be cultists and to be power brokers
-		ig:ig_devout = {
-			set_interest_group_name = ig_nda_cultist_church
-			remove_ideology = ideology_moralist
-			add_ideology = ideology_nda_cabalistic
-
-			add_modifier = {
-				name = ig_powerbrokers
-			}
-		}
-		
-		# set (not so) secret goals and Strategy
-		set_secret_goal = {
-			country = c:NEN
-			secret_goal = antagonize
-		}
-		set_secret_goal = {
-			country = c:YIG
-			secret_goal = protect
-		}
-		set_secret_goal = {
-			country = c:DGN
-			secret_goal = protect
-		}
-
-		set_strategy = ai_strategy_colonial_expansion
-		set_strategy = ai_strategy_territorial_expansion
-		set_strategy = ai_strategy_conservative_agenda
+		# set up Leaders and IG's
+		nda_effect_eldritch_setup = yes
 
 		# spread to non-cultist  Neighbour
 		random_country = {
@@ -740,8 +702,11 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 			AND = {
 				exists = c:YIG
 				c:YIG = ROOT
-				#NOT = { has_war_with = c:ELD }
-			}				
+			}	
+			AND = {
+				exists = c:DGN
+				c:DGN = ROOT
+			}			
 		}
 	
 		is_at_war = yes
@@ -752,7 +717,7 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 	}
 
 	immediate = {
-		debug_log = "ELD : add buff"
+		debug_log = "Cult : add buff"
 
 		random_scope_war = {
 			#limit = {
@@ -774,8 +739,8 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 		scope:eldritch_war = {
 			IF = {
 				limit = { has_war_support = { target = ROOT value < 50 } }
-				add_war_exhaustion = { target = ROOT value = -0.5 }
-				add_war_war_support = { target = ROOT value = 1 }
+				add_war_exhaustion = { target = ROOT value = -0.3 }
+				add_war_war_support = { target = ROOT value = 0.5 }
 				#set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
 				debug_log = "add buff"				
 			}
@@ -791,7 +756,7 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 			has_war_with = c:ELD # no bonus for hitting boss guy
 		}
 
-		# buff the war score
+		# buff the war score to back out of war
 		scope:eldritch_war = {
 			add_war_exhaustion = { target = ROOT value = 0.5 }
 			add_war_war_support = { target = ROOT value = -1 }
@@ -902,7 +867,16 @@ nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them
 			value = 901
 		}
 
-		if = { # Yigian only
+		if = { # Eldritch only
+			limit = { 				
+				exists = c:ELD
+				c:ELD = ROOT 
+			}
+
+			# Set up Eldritch leadership and IGs
+			nda_effect_eldritch_setup = yes
+		}
+		else_if = { # Yigian only
 			limit = { 				
 				exists = c:YIG
 				c:YIG = ROOT 
@@ -913,6 +887,25 @@ nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them
 				name = nda_cult_to_yigian_tracker
 				value = 301
 			}
+
+			# Set up Yigian leadership and IGs
+			nda_effect_yigian_setup = yes
+		}
+		else_if = { # Dagonic only
+		
+			limit = { 				
+				exists = c:DGN
+				c:DGN = ROOT 
+			}
+
+			set_variable = nda_dagon_in_open
+			set_variable = {
+				name = nda_cult_to_dagonic_tracker
+				value = 301
+			}
+
+			# Set up Dagonic leadership and IGs
+			nda_effect_dagonic_setup = yes
 		}
 	}	
 	
