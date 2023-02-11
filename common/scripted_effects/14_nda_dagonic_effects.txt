@@ -15,6 +15,9 @@
 		# make recognized if not already
 		set_country_type = recognized
 
+		add_modifier = {
+			name = nda_dagonic_country_modifier
+		}
 		# set cult to be cultists and to be power brokers
 		ig:ig_nda_cult_worshippers = {
 			set_interest_group_name = ig_nda_dagonic_church

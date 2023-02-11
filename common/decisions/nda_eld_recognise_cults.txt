@@ -6,7 +6,8 @@
 
 	possible = {
 		#this = c:ELD
-		
+		c:DGN = { relations:root >= relations_threshold:amicable }
+
 		any_scope_state = { #is in coastal asia/pacific
 			#owner = ROOT
 			is_coastal = yes
@@ -80,12 +81,14 @@
 			trigger = { bureaucracy > 0 }
 			add = 5
 		}
+		# modifier based on relationship
+
 		modifier = {
 			OR = {
 				is_diplomatic_play_committed_participant = yes
 				is_at_war = yes
 			}
-			add = -1000
+			add = -10
 		}		
 	}
 
@@ -95,11 +98,11 @@ nda_eld_release_dagonic_lands = {
 	is_shown = {
 		exists = c:ELD
 		this = c:ELD
-		exists = c:DAG
+		exists = c:DGN
 	}
 
 	possible = {
-		
+		c:DGN = { relations:root >= relations_threshold:amicable }
 		any_scope_state = { 
 			state_region = {
 					is_homeland = cu:nda_cul_dagonic
@@ -145,7 +148,7 @@ nda_eld_release_dagonic_lands = {
 				is_diplomatic_play_committed_participant = yes
 				is_at_war = yes
 			}
-			add = -1000
+			add = -10
 		}		
 	}
 
@@ -159,7 +162,8 @@ nda_eld_recognise_yigian_lands = {
 
 	possible = {
 		#this = c:ELD
-		
+		c:YIG = { relations:root >= relations_threshold:amicable }
+
 		any_scope_state = { #is in coastal asia/pacific
 			
 			is_potentially_yigian_lands = yes
@@ -229,7 +233,8 @@ nda_eld_release_yigian_lands = {
 	}
 
 	possible = {
-		
+		c:YIG = { relations:root >= relations_threshold:amicable }
+
 		any_scope_state = { 
 			state_region = {
 					is_homeland = cu:nda_cul_yigian
@@ -275,7 +280,7 @@ nda_eld_release_yigian_lands = {
 				is_diplomatic_play_committed_participant = yes
 				is_at_war = yes
 			}
-			add = -1000
+			add = -10
 		}		
 	}
 }

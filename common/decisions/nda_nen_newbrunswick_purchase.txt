@@ -12,7 +12,7 @@
         # on border
         has_strategic_land_adjacency = c:NBS
 
-		c:NBS = { relations:root >= relations_threshold:neutral }
+		c:NBS = { relations:root >= relations_threshold:amicable }
 		#relations:c:NBS >= relations_threshold:neutral
 		NOT = { has_war_with = c:NBS }
 		NOT = { owes_obligation_to =  c:NBS }
@@ -37,7 +37,7 @@
 	}
 
 	ai_chance = {
-		base = 20
+		base = 5
 
 		modifier = {
 			trigger = { bureaucracy > 0 }
@@ -68,7 +68,7 @@ nda_nen_novascotia_union = {
         # on border
         has_strategic_land_adjacency = c:NVS
 
-		c:NVS = { relations:root >= relations_threshold:neutral }
+		c:NVS = { relations:root >= relations_threshold:amicable }
 		
 		#relations:c:NVS >= relations_threshold:neutral 
 		NOT = { has_war_with = c:NVS }
@@ -95,7 +95,7 @@ nda_nen_novascotia_union = {
 	}
 
 	ai_chance = {
-		base = 20
+		base = 5
 
 		modifier = {
 			trigger = { bureaucracy > 0 }

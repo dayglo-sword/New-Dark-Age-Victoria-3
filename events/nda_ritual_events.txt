@@ -364,4 +364,43 @@ nda_ritual.1907 = {
 
 #nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol
 
-#nda_ritual.1925 = { #April - The Vigilant - only if Ritual fails
+nda_ritual.1925 = { #April - The Vigilant - only if Ritual fails
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.1925.t
+	desc = nda_ritual.1925.d
+	flavor =  nda_ritual.1925.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+		is_player = yes
+		NOT = { has_global_variable = nda_ritual_completed }
+		game_date >= 1925.4.2 # the date the dreams stop	
+		NOT = {
+			has_global_variable = nda_cthulhu_visits	# run once
+		 }
+
+	}
+
+	immediate = {
+		set_global_variable = nda_cthulhu_visits	
+
+		debug_log = "Ritual - Stars are not quite right"
+	}	
+	
+	option = { #A Weird Tale
+		name = nda_ritual.1925.a
+		default_option = yes
+	}
+}

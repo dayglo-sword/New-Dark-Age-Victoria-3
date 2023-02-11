@@ -1,20 +1,20 @@
 ﻿l_english:
   
  nda_ritual.1.t:0 "Cthulhu Has Returned"
- nda_ritual.1.d:0 ""
- nda_ritual.1.f:0 ""
+ nda_ritual.1.d:0 "So it has come to pass. The worlds worst nightmare.\n\nArtists and Poets go insane, as a mania grips the countries of the World."
+ nda_ritual.1.f:0 "'The Thing of the idols, the green, sticky spawn of the stars, has awaked to claim his own...\n\n The stars are right again...\n\n After vigintillions of years great Cthulhu is loose again, and ravening for delight.'"
  nda_ritual.1.a:0 "'So It Ends...'"
  nda_ritual.2.t:0 "Cthulhu Has Returned"
- nda_ritual.2.d:0 ""
- nda_ritual.2.f:0 ""
+ nda_ritual.2.d:0 "So it has come to pass. The worlds worst nightmare.\n\nArtists and Poets go insane, as a mania grips the countries of the World."
+ nda_ritual.2.f:0 "'The Thing of the idols, the green, sticky spawn of the stars, has awaked to claim his own...\n\n The stars are right again...\n\n After vigintillions of years great Cthulhu is loose again, and ravening for delight.'"
  nda_ritual.2.a:0 "'So It Ends...'"
  nda_ritual.3.t:0 "The Ritual Completed"
  nda_ritual.3.d:0 "It is done!\n\nOur role complete. The return of the Cthulhu and the Old Ones is ineviatable."
  nda_ritual.3.f:0 "That is not dead which can eternal lie,\nAnd with strange aeons even death may die."
  nda_ritual.3.a:0 "'Just a matter of time...'"
  nda_ritual.4.t:0 "Cthulhu Has Departed"
- nda_ritual.4.d:0 "Once more the screams of the sensitive echo through the land and the people unleaash their rage.\n\nCthulhu has woken from his slumber! To everyones suprise the God has not rampaged across the world but instead has flown into the realm beyond the Earths atmosphere, seeking a way to the Stars."
- nda_ritual.4.f:0 "Devestation is everywhere, but there is now the glimmer of hope that this age has past, and the world can rebuild."
+ nda_ritual.4.d:0 "Once more the screams of the sensitive echo through the land and the people unleash their rage.\n\nCthulhu has woken from his slumber! To everyones suprise the God has not rampaged across the world but instead has flown into the realm beyond the Earths atmosphere, seeking a way to the Stars."
+ nda_ritual.4.f:0 "'...visibly darkening the sun as it slunk away into the shrunken and gibbous sky on flapping membranous wings'\n\nDevestation is everywhere, but there is now the glimmer of hope that this age has past, and the world can rebuild."
  nda_ritual.4.a:0 "'Is it over?...'"
  nda_ritual.5.t:0 "The World Surrenders"
  nda_ritual.5.d:0 ""
@@ -29,6 +29,11 @@
  nda_ritual.1907.d:0 "There are strange goings on in the wooded swamps south of New Orleans.\n\nInspector Legrasse has lead a raid of twenty police against an ongoing daemonic orgy that had frightened the local inhabitants.\n\nA number of worshippers were killed in the altercation.\n\nStrange idols of greenish-black stone were recovered from the site, each carved into the likeness of a strange creature with an octopus like head."
  nda_ritual.1907.f:0 "'Animal fury and orgiastic licence here whipped themselves to demoniac heights by howls and squawking ecstasies...\n\n...and from what seemed a well-drilled chorus of hoarse voices would rise in singsong chant that hideous phrase or ritual:\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  nda_ritual.1907.a:0 "'A Strange Tale'"
+
+ nda_ritual.1925.t:0 "Mystery Derelict Found At Sea"
+ nda_ritual.1925.d:0 "The freighter Vigilant arrived this morning at it's wharf, having in tow the battled and disabled but heavily armed steam lauch Alert.\n\n The sole survivor found onboard was the former second mate of the schooner Emma.\n\nHe was found clutching a foot high stone idol and telling a tale of how the original crew of the Alert had attacked the Emma after ordering the vessel to turn back, but were succesfully overpowered.\n\nThe survivors of the Emma had then continued onwards to an island that their opponents had obviously been trying to deny them access to."
+ nda_ritual.1925.f:0 "'...the hideous monolith-crowned citadel whereon great Cthulhu was buried, actually emerged from the waters... Johansen and his men were awed by the cosmic majesty of this dripping Babylon of elder demons, and must have guessed without guidance that it was nothing of this or of any sane planet...\n\n...The Thing of the idols, the green, sticky spawn of the stars, had awaked to claim his own. The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident...\n\nHis accursed city is sunken once more... He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy...\n\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ nda_ritual.1925.a:0 "'A Weird Tale'"
 
  # Journal Entries
  je_nda_ritual_proceeds:0 "The Ritual Commences"

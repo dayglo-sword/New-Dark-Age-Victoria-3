@@ -251,7 +251,7 @@ nda_hasturian.4 = { # The Repairers Offer
 	}
 
 	immediate = {
-
+		debug_log = "King in Yellow - The Repairers Offer" 
 	}	
 	
 	option = { #Ignore and have reputation ruined and unrest
@@ -264,9 +264,8 @@ nda_hasturian.4 = { # The Repairers Offer
 	option = { # Path to Imperial America
 		name = nda_hasturian.4.b
 
-
 		#follow on event
-		trigger_event = { id = nda_hasturian.4 days = 200 }	# ask for meeting	
+		trigger_event = { id = nda_hasturian.5 days = 200 }	# Imperial America	
 	}
 }
 
@@ -296,7 +295,7 @@ nda_hasturian.5 = { # Create Imperial America
 
 	immediate = {
 		set_global_variable = nda_king_in_yellow
-
+		debug_log = "King in Yellow - Create Imperial America" 
 	}	
 	
 	option = { # Coronation
@@ -334,6 +333,8 @@ nda_hasturian.6 = { # Ruination
 
 	immediate = {
 		# government scandal - hit interest groups in power
+		debug_log = "King in Yellow - Ruination" 
+
 		every_interest_group = { # As per event prostitution.3
 			limit = {
 				is_in_government = yes
@@ -394,7 +395,7 @@ nda_hasturian.7 = { #  Death of Mr Wilde.
 	}
 
 	immediate = {
-
+		debug_log = "King in Yellow -  Death of Mr Wilde" 
 	}	
 	
 	option = { # How Bizarre!

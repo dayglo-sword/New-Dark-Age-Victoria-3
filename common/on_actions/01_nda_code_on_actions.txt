@@ -23,8 +23,12 @@ on_monthly_pulse_country = {
 		nda_ritual.5 # Eldritch add Cult countries
 		nda_ritual.6 # Eldritch lose non-Cult countries
 
+		nda_ritual.1907 # The Tale of Inspector Legrasse
+		nda_ritual.1925 # Mystery Derelict Found At Sea
+
 		nda_yigian.3 # Yigian Lands Proclaimed
-		
+		nda_dagonic.3 # Dagonic Shores Proclaimed
+
 		nda_nen.10
 		nda_nen.11 
 		nda_nen.20 # Cult in Innsmouth
@@ -58,7 +62,8 @@ on_monthly_pulse_country = {
 on_half_yearly_pulse_country = {
 	events = {
 		nda_base.4 # Death of Junzt (Nameless Cults)
-		nda_base.9 # Cult Ideology Clean
+		nda_base.9 # Cult Ideology Clean	
+		nda_dagonic.4 # Bounty of the Seas
 	}
 }
 
