@@ -27,3 +27,30 @@ pm_nda_esoteric_academia = {
 		}
 	}			
 }			
+
+# Carnacki Experment outcome?
+pm_nda_esoteric_streetlights = {
+	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
+	
+	unlocking_technologies = {
+		electrical_generation # need electric_pentacle tech??
+	}
+	
+	country_modifiers = {
+		workforce_scaled = { 
+			country_weekly_innovation_add = 2
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_electricity_add = 12 # normal is 10
+			building_output_services_add = 50
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 350
+			building_employment_engineers_add = 150
+		}
+	}
+}

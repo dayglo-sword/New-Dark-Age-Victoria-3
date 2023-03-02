@@ -176,7 +176,7 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 	        }
 		}
 
-		set_variable = nda_king_in_yellow_supressed
+		#set_variable = nda_king_in_yellow_supressed # no current use
 	}
 }
 
@@ -279,10 +279,8 @@ nda_hasturian.5 = { # Create Imperial America
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
-		
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"		
 	}
-#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
@@ -295,16 +293,46 @@ nda_hasturian.5 = { # Create Imperial America
 
 	immediate = {
 		set_global_variable = nda_king_in_yellow
-		debug_log = "King in Yellow - Create Imperial America" 
+		debug_log = "King in Yellow - Create Imperial America" 	
+		
+		change_tag = IAM 
+
+		# change to absolute Monarchy
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
 	}	
 	
 	option = { # Coronation
 		name = nda_hasturian.5.a
 		default_option = yes
 
-		ROOT = { change_tag = IAM }
-	}
+		ROOT = { 
+			# put Castaigne in charge
+			create_character = {
+				first_name = "Hildred"
+				last_name = "Castaigne"
+				ruler = yes
+				female = no
+				birth_date = 1865.9.18
+				interest_group = ig_intelligentsia
+				dna = ecchi_dna_charles_dickens
+				ideology = ideology_theocrat
+				traits = {
+					romantic
+					imperious
+				}
+				on_created = {
+					set_variable = is_castaigne							
+				}
+			}
 
+			# make everyone happy
+			add_radicals = { value = -1 }
+			add_loyalists = { value = 1 }
+
+			# change cultists IG to Hasturian
+		}
+	}
 }
 
 # nda_hasturian.6 # Ruination event.
@@ -345,6 +373,12 @@ nda_hasturian.6 = { # Ruination
 					}
 				}
 			}
+
+			add_modifier = {
+				name = ig_power_challenged
+				months = 36
+			}
+
 			leader = {
 				save_scope_as = scandal_character
 			}
@@ -445,4 +479,77 @@ nda_hasturian.8 = { #  King in Yellow fades.
 	}
 
 }
-# nda_hasturian.8 # Force AI Imperial America back to Absolute Monarchy if it drifts too far.
+
+# nda_hasturian.9 # Force AI Imperial America back to Absolute Monarchy if it drifts too far.
+
+nda_hasturian.10 = { # If he dies bring him back.
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.10.t
+	desc = nda_hasturian.10.d
+	flavor =  nda_hasturian.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { 
+		exists = c:IAM
+		c:IAM = ROOT
+		has_global_variable = nda_king_in_yellow
+		# Castaigne is not around - presume if removed from ruler then character dies?
+		NOT = {
+			any_scope_character = {
+				has_variable = is_castaigne
+			}
+		}
+	}
+
+	immediate = {
+		debug_log = "King in Yellow - Return of Castaigne" 	
+		
+		#change_tag = IAM 
+
+		# re-assert absolute Monarchy
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+
+		ROOT = { 
+			# put Castaigne in charge (again)
+			create_character = {
+				first_name = "Hildred"
+				last_name = "Castaigne"
+				ruler = yes
+				female = no
+				birth_date = 1865.9.18
+				interest_group = ig_intelligentsia
+				dna = ecchi_dna_charles_dickens
+				ideology = ideology_theocrat
+				traits = {
+					romantic
+					imperious
+				}
+				on_created = {
+					set_variable = is_castaigne							
+				}
+			}
+
+			# make a lot of people happy
+			add_radicals = { value = -0.5 }
+			add_loyalists = { value = 0.5 }
+
+		}		
+	}	
+	
+	option = { # Coronation
+		name = nda_hasturian.10.a
+		default_option = yes
+	}
+}

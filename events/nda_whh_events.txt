@@ -241,10 +241,24 @@ nda_whh.14 = { # Carnacki Succeeds
 		name = nda_whh.14.a
 		
 		# warm up for other Carnacki events
-		set_variable = nda_carnacki_succesful
+		set_variable = nda_carnacki_successful
 
+		# this should be done by decision or journal as need check for electrical_generation ?? as per je_belle_epoque ??
 		#treasury = -10000 
-		trigger_event = { id = nda_whh.14 days = 300 }	# research complete			
+		#trigger_event = { id = nda_whh.14 days = 300 }	# research complete		
+
+		ig:ig_nda_cult_worshippers = {
+			# remove any secret masters modifier
+			remove_modifier = nda_ig_secret_masters
+			
+			# add modifier to Cult IG to suppress it further - can't force out cultists so just make difficult.
+			add_modifier = {
+				name = nda_ig_cult_supression
+			}
+		}
+
+		# have removal of cult traits from non-Cult IG leaders/character ?
+
 	}
 
 	option = { #"Reject"
@@ -279,7 +293,7 @@ nda_whh.15 = { # Death of Carnacki
 	}
 
 	immediate = {
-		set_global_variable = nda_carnacki_dead
+		set_global_variable = nda_carnacki_dead 
 
 		debug_log = "Carnacki Death"
 
@@ -287,8 +301,7 @@ nda_whh.15 = { # Death of Carnacki
 	}	
 	
 	option = { #"A tragic event"
-		name = nda_whh.14.a
-		
+		name = nda_whh.15.a
+		default_option = yes		
 	}
-
 }

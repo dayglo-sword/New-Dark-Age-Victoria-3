@@ -71,6 +71,16 @@ nda_nen.15.d:0 "The formula for the 'Combat Serum', as devised by the late Dr We
 nda_nen.15.f:0 "'There was a strange light, and a fellow appearing out of the middle of it. Gaunt and cloaked in strange garments, he spoke in our heads while we remained transfixed in place by some unknown force.'\n\n #ITALIC 'The waters of Lethe shall be mine alone, and in the far future, beneath a dim sun and sad heavens, I shall have my empire of the dead on the last continent, Zothique!'#!"
 nda_nen.15.a:0 "This is not possible!"
 
+nda_nen.16.t:0 "Plague in Arkham?"
+nda_nen.16.d:0 "Plague in Arkham!\n\nStrange behaviour amongst the war veterans causing concern.\n\nTales of the strange folk wandering the streets at night and graves being desecrated."
+nda_nen.16.f:0 "It would appear that Dr. Wests 'Combat Serum' might have some unfortunate after effects after all.\n\nWith luck these dreadful things might die down soon."
+nda_nen.16.a:0 "I'm sure we can keep a lid on it."
+
+nda_nen.18.t:0 "A Plague Spreads"
+nda_nen.18.d:0 "The 'Plague' is no longer contained to Arkham!\n\nIt has spread to other states.\n\nSimilar tales of strange folk wandering the streets at night and tombs being desecrated."
+nda_nen.18.f:0 ""
+nda_nen.18.a:0 "We had no choice!"
+
 nda_nen.20.t:0 "Devil Worship in Innsmouth"
 nda_nen.20.d:0 "Senior figures in the town are rumoured to be participating in devil worship."
 nda_nen.20.f:0 "The sailors homed in the port have apparently brought the customs back from the South Seas.\n\nIt has also taken hold amoungst the fisherfolk of the town."

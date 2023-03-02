@@ -85,7 +85,7 @@ nda_nen.10 = { # Founding of Library
 		}
 		debug_log = "Build Orne Library"
 
-		set_variable = nda_miskatonic_library_built
+		#set_variable = nda_miskatonic_library_built # not used yet
 	}
 
 	option = { #"Build Statue instead"
@@ -96,7 +96,7 @@ nda_nen.10 = { # Founding of Library
 		}
 
 		debug_log = "Build Arnold Statue"
-		set_variable = nda_miskatonic_library_unbuilt # use to change chrome text later on chain
+		#set_variable = nda_miskatonic_library_unbuilt # use to change chrome text later on chain ?
 	}
 }
 
@@ -355,6 +355,124 @@ nda_nen.15 = { # End Herbert West with warning from the future - Actually a homa
 
 }
 
+nda_nen.16 = { # A plague of reanimated - End result of 'tonic for the troops' - starts in Miskaton but can spread to neighbours
+	type = country_event
+	placement = p:x2B5499
+	title = nda_nen.16.t
+	desc = nda_nen.16.d
+	flavor =  nda_nen.16.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1920 
+		exists = c:NEN
+		c:NEN = ROOT
+		has_global_variable = herbert_west_successful
+		has_global_variable = herbert_west_end 
+	}
+
+	immediate = {
+		p:x2B5499 = { # Arkham
+			state = { 
+				save_scope_as = university_state 
+				# add modifier for plague of reanimated	
+				add_modifier = { 
+					name = nda_reanimated_state_modifier
+				}
+			}
+		}
+
+		set_global_variable = herbert_west_plague
+
+	}	
+	
+	option = { #" A tragic event"
+		name = nda_nen.14.a
+		default_option = yes
+
+		debug_log = "Herbert West End"
+	}
+}
+
+nda_nen.17 = { # The plague spreads - non visible watcher but fire off event if qualified.
+	type = country_event
+	hidden = yes
+	
+	trigger = { 
+		has_global_variable = herbert_west_plague
+		exists = c:NEN
+		c:NEN = ROOT
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				exists = c:NEN
+				c:NEN = ROOT								
+			}
+
+			random_scope_state = {
+				limit = {
+					has_modifier = nda_reanimated_state_modifier 
+				}
+
+				random_neighbouring_state = {
+					limit = {
+						exists = c:NEN
+						c:NEN = ROOT	
+						NOT = { has_modifier = nda_reanimated_state_modifier }							
+					}
+
+					debug_log = "Plague of Reanimated spreads"
+					trigger_event = { id = nda_nen.18 }	# fire main event						
+
+				}			
+			}
+		}		
+	}
+}
+
+nda_nen.18 = { # The plague of reanimated spreads
+	type = state_event
+	placement = ROOT
+	title = nda_nen.18.t
+	desc = nda_nen.18.d
+	flavor =  nda_nen.18.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		add_modifier = { 
+			name = nda_reanimated_state_modifier
+		}
+	}	
+	
+	option = { #" A tragic event"
+		name = nda_nen.18.a
+		default_option = yes
+	}
+}
 
 #Shadow over Innsmouth events
 nda_nen.20 = { # Devil Worship in Innsmouth

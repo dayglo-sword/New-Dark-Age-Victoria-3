@@ -6,7 +6,8 @@
 
 	possible = {
 		#this = c:ELD
-		c:DGN = { relations:root >= relations_threshold:amicable }
+		#exists = c:DGN
+		#c:DGN = { relations:root >= relations_threshold:amicable }
 
 		any_scope_state = { #is in coastal asia/pacific
 			#owner = ROOT
@@ -162,7 +163,7 @@ nda_eld_recognise_yigian_lands = {
 
 	possible = {
 		#this = c:ELD
-		c:YIG = { relations:root >= relations_threshold:amicable }
+		#c:YIG = { relations:root >= relations_threshold:amicable }
 
 		any_scope_state = { #is in coastal asia/pacific
 			

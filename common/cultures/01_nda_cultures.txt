@@ -10,7 +10,8 @@
 		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of consort_of offspring_of 
 	}
 	common_last_names={
-		the_blood the_dark the_chaos hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
+		the_blood the_dark the_chaos hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn 
+		bokrug juk-shabb shaurash-ho ghoth
 	}
 
 	noble_last_names = {
@@ -50,6 +51,8 @@ nda_cul_yigian={
 	}
 	common_last_names={
 		yig the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha ghatanothoa zoth-ommog
+		# Hyperborian version of names from CAS - Yigians are ancient race
+		yok-zothoth kthulhut zhothaqquah ubbo-satha
 	}
 
 	noble_last_names = {
@@ -91,7 +94,8 @@ nda_cul_dagonic={
 		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of consort_of offspring_of 
 	}
 	common_last_names={
-		the_deep the_abyss the_storm the_waves the_pelagic the_cetacen the_kraken nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
+		the_deep the_abyss the_storm the_waves the_pelagic the_cetacen the_kraken nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka 
+		gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
 	}
 
 	noble_last_names = {
@@ -119,7 +123,7 @@ nda_cul_dagonic={
 }
 
 nda_cul_trueyankee={
-	color= rgb{ 125 196 225 }
+	color= rgb{ 25 196 245 } #125 196 245
 	religion = protestant
 	traits = { anglophone european_heritage }
 	male_common_first_names = {
@@ -130,8 +134,8 @@ nda_cul_trueyankee={
 		Howard_Phillips
 		Herbert
 		Richard_Upton
-		Clark
-		Albert Alexander Aeneas Andrew Aaron Alton Atlee Asa Ambrose Abner Alvin August Abraham Abel Abijah Alonzo Ansel Amos Absalom
+		Clark		
+		Alexander Aeneas Andrew Aaron Alton Atlee Asa Ambrose Abner Alvin August Abraham Abel Abijah Ansel Amos Absalom
 		Benjamin Bartholomew Byron Benedict Barnabas Bildad
 		Charles Cyrus Chester Cassius Calvin Cornelius Conrad Caleb Cephas Clarence Colcord
 		Daniel David Dwight
@@ -158,6 +162,7 @@ nda_cul_trueyankee={
 		
 	}
 	female_common_first_names = {
+		Asenath
 		Amanda Anna Alice Adaline Adelaide Augusta Antoinette Alida Addie Ariel Ada Agnes Agatha Almira Arlevia Azubah
 		Catharine Charlotte Clara Cynthia Charity Cordelia Cornelia
 		Delia Deborah Delima
@@ -183,7 +188,7 @@ nda_cul_trueyankee={
 
 	}
 	common_last_names = {
-		Akeley Angell Armitage Atwood Ashton_Smith Carter Corey Curwen Danforth Dexter_Ward Gilman Halsey Lovecraft Mason Morgan Olney Orne Pabodie Pickman Poe Sawyer Warren Whateley Willett Wilmarth
+		Akeley Allan Angell Armitage Atwood Ashton_Smith Carter Corey Curwen Danforth Derby Dexter_Ward Gilman Halsey Lovecraft Mason Morgan Olney Orne Pabodie Pickman Pickman_Derby Poe Sawyer Warren Whateley Willett Wilmarth
 		Phillips Fowler Marsh Rice West Wilcox Wayland_Thurston
 	
 	}

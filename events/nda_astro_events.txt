@@ -94,6 +94,40 @@ nda_astro.2 = { # 1861 conjunction
 		set_variable = nda_conjunction_2
 		debug_log = "Conjunction 2"
 		nda_effect_rite_conversion = yes
+
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_yigian = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -137,6 +171,40 @@ nda_astro.3 = { # 1881 conjunction
 		set_variable = nda_conjunction_3
 		debug_log = "Conjunction 3"
 		nda_effect_rite_conversion = yes
+
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_yigian = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -180,6 +248,40 @@ nda_astro.4 = { # 1901 conjunction
 		set_variable = nda_conjunction_4
 		debug_log = "Conjunction 4"
 		nda_effect_rite_conversion = yes
+
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_yigian = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do

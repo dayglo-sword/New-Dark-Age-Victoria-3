@@ -46,7 +46,7 @@
 
  je_nda_ritual_assist:0 "Assist The Ritual"
  je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in it's power, has commenced the Ritual that will ensure the Great Ones reawakening.\n\nWe must assist them in all ways possible.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
- je_nda_ritual_assist_goal:0 "Assist in the competion of the Ritual to enable Cthulhu's return when the 'Stars are Right.'"
+ #je_nda_ritual_assist_goal:0 "Assist in the competion of the Ritual to enable Cthulhu's return when the 'Stars are Right.'"
  je_nda_ritual_assist_possible_tt:0 "The Cult has commenced the Ritual"
  je_nda_ritual_assist_complete_tt:0 "The Cult has completed the Ritual. The return is now inevitable."
  je_nda_ritual_assist_complete:0 "The Cult has completed the Ritual. The return is now inevitable."

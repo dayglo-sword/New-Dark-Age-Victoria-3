@@ -37,7 +37,8 @@ on_monthly_pulse_country = {
 		nda_hasturian.1 # Play in Paris 
 		nda_hasturian.2 # Play Spreads 
 		nda_hasturian.3 # Repairer of Reputations
-		nda_hasturian.8 # The Play Fades
+
+		nda_hasturian.10 # The Return
 
 		nda_whh.10 # House on the Borderlands
 		nda_whh.11 # Carnacki Start
@@ -64,6 +65,11 @@ on_half_yearly_pulse_country = {
 		nda_base.4 # Death of Junzt (Nameless Cults)
 		nda_base.9 # Cult Ideology Clean	
 		nda_dagonic.4 # Bounty of the Seas
+		
+		nda_hasturian.8 # The Play Fades
+		nda_nen.15 # From the Future
+		nda_nen.17 # Reanimated Spreads
+		nda_nen.16 # Reanimated Plague Starts
 	}
 }
 
@@ -101,89 +107,6 @@ on_character_creation = {
 			}
 			add_trait = nda_yig_cultist
 			change_character_religion = rel:nda_rel_yigian
-		}
-	}
-}
-
-# Root = Releasing Country
-# scope:target = Released Country
-on_country_released_as_independent = {
-	effect = {
-		debug_log = "released_as_independent"	
-
-		scope:target = {
-
-			if = {
-				limit = {
-					exists = c:ELD
-					c:ELD = scope:target
-				}
-				debug_log = "ELD : released_as_independent"
-
-			}
-			if = {
-				limit = {
-					country_has_state_religion = rel:nda_rel_cultist
-				}
-
-			}
-
-		}
-	}
-}
-
-# Root = Releasing Country
-# scope:target = Released Country
-on_country_released_as_own_subject = {
-	effect = {
-		debug_log = "released_as_own_subject"
-
-		scope:target = {
-
-			if = {
-				limit = {
-					exists = c:ELD
-					c:ELD = scope:target
-				}
-
-				debug_log = "ELD : released_as_own_subject"
-
-			}
-			if = {
-				limit = {
-					country_has_state_religion = rel:nda_rel_cultist
-				}
-
-			}
-
-		}
-	}
-}
-
-# Root = Releasing Country
-# scope:target = Released Country
-on_country_released_as_overlord_subject = {
-	effect = {
-
-		debug_log = "released_as_overlord_subject"
-
-		scope:target = {
-
-			if = {
-				limit = {
-					exists = c:ELD
-					c:ELD = scope:target
-				}
-				debug_log = "ELD : released_as_overlord_subject"
-
-			}
-			if = {
-				limit = {
-					country_has_state_religion = rel:nda_rel_cultist
-				}
-
-			}
-
 		}
 	}
 }

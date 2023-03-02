@@ -191,6 +191,18 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 			post_notification = nda_yigian_lands_proclaimed # toast
 		}
 
+		# push conversion a bit as currently too slow
+		random_country = {
+			limit = {				
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_yigian = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}	
+
 		# Set up Yigian leadership and IGs
 		nda_effect_yigian_setup = yes
 

@@ -3,6 +3,7 @@
 		limit = {
 			has_variable = nda_cultists_in_open 
 			NOT = { has_variable = nda_yig_in_open }
+			exists = ROOT
 		}
 
 		# give them a boost, both religion and pops
@@ -42,19 +43,6 @@
 					is_full_cult_country = { COUNTRY="ROOT" }				
 				}
 			}
-
-			#random_list = {
-			#	30 = {
-			#		#if = {
-			#		#	limit = { 
-			#		#		NOT = { ROOT.owes_obligation_to = c:ELD }
-			#		#	}
-			#		#	set_owes_obligation_to = { country = c:ELD setting = yes }	
-			#			debug_log = "Offer Obligation to ELD"							
-			#		#}
-			#	}
-			#	70 = {}
-			#}
 
 			# always change relationship
 			change_relations = { country = c:ELD value = 50 }
@@ -98,7 +86,7 @@
 		add_radicals  = { value = -0.5 }
 
 	}	
-	
+	debug_log = "YIG DGN effects" 
 	nda_effect_yigian_annex = yes
 	nda_effect_yigian_influence = yes
 

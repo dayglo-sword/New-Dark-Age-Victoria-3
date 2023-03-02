@@ -56,6 +56,10 @@ the_ophidia:0 "the Ophidia"
 yidhra:0 "Yidhra" 
 ayi'ig:0 "Ayi'ig" 
 k'baa:0 "K'baa"
+yok-zothoth:0 "Yok-Zothoth"
+kthulhut:0 "Kthulhut"
+zhothaqquah:0 "Zhothaqquah"
+ubbo-satha:0 "Ubbo-Satha"
 
 #Dagonic Specific
 dagon:0 "Dagon"
@@ -74,10 +78,12 @@ Angell:0 "Angell"
 Armitage:0 "Armitage" 
 Atwood:0 "Atwood"
 Ashton_Smith:0 "Ashton Smith" # not strictly new englander!
+Asenath:0 "Asenath"
 #Carter:0 "Carter" 
 Corey:0 "Corey" 
 Curwen:0 "Curwen"
 Danforth:0 "Danforth"
+Derby:0 "Derby"
 Dexter_Ward:0 "Dexter Ward"
 Halsey:0 "Halsey" 
 Gilman:0 "Gilman" 
@@ -88,6 +94,7 @@ Olney:0 "Olney"
 Orne:0 "Orne" 
 Pabodie:0 "Pabodie" 
 Pickman:0 "Pickman" 
+Pickman_Derby:0 "Pickman Derby"
 Poe:0 "Poe" 
 Sawyer:0 "Sawyer" 
 #Warren:0 "Warren" 
@@ -104,5 +111,9 @@ Edgar_Allen:0 "Edgar Allen"
 Howard_Phillips:0 "Howard Phillips" 
 Richard_Upton:0 "Richard Upton"
 
-#ECCHI Names 
+
+#Character Names 
 ecchi_Dickens:0 "Dickens"
+
+Hildred:0 "Hildred"
+Castaigne:0 "Castaigne"
