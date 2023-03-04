@@ -26,7 +26,7 @@ Timeline of events in mod
 1882.1      nda_historic.1882     London - The Society for Psychical Research
 
 1882.6                          The Colour Out Of Space
-
+1884.5                          Lot No. 249 - Mummy in Oxford
 1888.4      nda_historic.1888     Fox's come clean - Spiritualist Movement
 1888.8      nda_historic.1887     Theosophical Society - The Secret Doctrine
 1888.10     nda_historic.1887     The Golden Dawn
@@ -39,11 +39,13 @@ Timeline of events in mod
 1903.1      nda_nen.11          Herbert West - Appeal for reinstatement
 1903.6      nda_nen.12          Plague in Arkham
 
+1910.1                          Under the Pyramids
 1910.8      nda_ritual.4        Cthulhu Leaves Early
+1913.9      nda_nen.1913        Green Meadow - Maine Meteor
 1918.1      nda_nen.13          Herbert West - Research breakthrough  
 1920.1      nda_nen.14          Herbert West - Disappearence 
 1921.9      nda_astro.5         Conjunction 5
-
+1922.8      nda_nen.1922        Horror at Martin's Beach
 
 1925.3      nda_ritual.1        Cthulhu Returns
 1927                            Innsmouth Raid

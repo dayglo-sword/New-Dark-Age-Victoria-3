@@ -64,7 +64,7 @@
 		}
 		if = {
 			limit = { has_any_cultist_trait = yes }
-			add = 150
+			add = 200
 		}
 		# Boost for big cultists
 		if = {
@@ -72,21 +72,21 @@
 				exists = c:ELD
 				owner = { c:ELD = THIS }
 			}
-			add = 250
+			add = 300
 		}	
 		if = {
 			limit = {
 				exists = c:YIG
 				owner = { c:YIG = THIS }
 			}
-			add = 250
+			add = 300
 		}	
 		if = {
 			limit = {
 				exists = c:DGN
 				owner = { c:DGN = THIS }
 			}
-			add = 250
+			add = 300
 		}	
 	}
 }

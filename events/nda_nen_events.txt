@@ -31,7 +31,7 @@ nda_nen.10 = { # Founding of Library
  		# 1842 and owner of Miskaton - should still be NEN but could be Neighbours
 		game_date >= 1842.6 
 
-		p:x30C040 = { state = { owner = ROOT } }
+		p:x2B5499 = { state = { owner = ROOT } }
 
 		exists = c:NEN
 		c:NEN = ROOT
@@ -573,3 +573,80 @@ nda_nen.21 = { # Plague in Innsmouth
 # nda_nen.22 = { # Choose to raid Innsmouth
 
 # nda_nen.23 = { # The Raid on Innsmouth
+
+nda_nen.1913 = { # Maine Meteor - The Green Meadow
+	type = country_event
+	placement = p:xD64964 
+	title = nda_nen.1913.t
+	desc = nda_nen.1913.d
+	flavor =  nda_nen.1913.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_whaling.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1913.9 
+
+		p:xD64964 = { state = { owner = ROOT } }
+
+		NOT = { has_global_variable = nda_green_meadow }
+	}
+
+	immediate = {
+		set_global_variable = nda_green_meadow	
+		# Based on story The Green Meadow - Ancient Doc found in remains of meteor
+	}	
+	
+	option = { #"A Bizarre Tale.."
+		name = nda_nen.1913.a
+		default_option = yes
+
+	}
+}
+
+nda_nen.1922 = { # Horror at Martin's Beach
+	type = country_event
+	placement = p:xB04040 
+	title = nda_nen.1922.t
+	desc = nda_nen.1922.d
+	flavor =  nda_nen.1922.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_whaling.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1922.9 
+
+		p:xB04040 = { state = { owner = ROOT } }
+
+		NOT = { has_global_variable = nda_martins_beach }
+	}
+
+	immediate = {
+		set_global_variable = nda_martins_beach	
+	}	
+	
+	option = { #"A Bizarre Tale..."
+		name = nda_nen.1922.a
+		default_option = yes
+
+	}
+}

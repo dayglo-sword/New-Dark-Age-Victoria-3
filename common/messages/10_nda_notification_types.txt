@@ -11,122 +11,146 @@
 
 nda_first_open_cult = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 35
+	#days = 35
 }
 
 nda_first_yig_cult = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
-	notification_type = toast
-	days = 35
+	notification_type = feed #toast
+	#days = 35
 }
 
 nda_first_dagon_cult = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 35
+	#days = 35
 }
 
 nda_elditch_realm_proclaimed = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 35
+	#days = 35
 }
 
 nda_yigian_lands_proclaimed = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 35
+	#days = 35
 }
 
 nda_yigian_lands_expand = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 35
+	#days = 35
 }
 
 nda_dagonic_shores_proclaimed = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 35
+	#days = 35
 }
 
 nda_dagonic_shores_expand = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 35
+	#days = 35
+}
+
+nda_dagon_attacks = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	#days = 35
 }
 
 ### notifications from ritual
 nda_ritual_cthulhu_returns = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 28
+	#days = 28
 }
 
 nda_ritual_cthulhu_leaves = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 28
+	#days = 28
 }
 
 nda_ritual_country_surrenders = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 28
+	#days = 28
 }
 
 ### notifications from WHH events
 nda_house_on_borderlands = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 28
+	#days = 28
 }
 
 nda_carnacki_parties = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 28
+	#days = 28
 }
 
 nda_carnacki_exile = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 28
+	#days = 28
 }
 
 nda_carnacki_death = {
 	type = country
+
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
-	days = 28
+	#days = 28
 }

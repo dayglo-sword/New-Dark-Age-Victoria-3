@@ -188,7 +188,7 @@ nda_cul_trueyankee={
 
 	}
 	common_last_names = {
-		Akeley Allan Angell Armitage Atwood Ashton_Smith Carter Corey Curwen Danforth Derby Dexter_Ward Gilman Halsey Lovecraft Mason Morgan Olney Orne Pabodie Pickman Pickman_Derby Poe Sawyer Warren Whateley Willett Wilmarth
+		Akeley Allan Angell Armitage Atwood Ashton_Smith Carter Corey Curwen Danforth Derby Dexter_Ward Gilman Halsey Lovecraft Manton Mason Morgan Olney Orne Pabodie Pickman Pickman_Derby Poe Sawyer Warren Whateley Willett Wilmarth
 		Phillips Fowler Marsh Rice West Wilcox Wayland_Thurston
 	
 	}

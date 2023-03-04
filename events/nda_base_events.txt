@@ -446,8 +446,10 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 			save_scope_as = originator
 
 			every_country = {
-
-				post_notification = nda_first_open_cult # this is not noticable (like most notices) go back to event ?
+				limit = { is_player = yes }
+				this = {
+					post_notification = nda_first_open_cult # this is not noticable (like most notices) go back to event ?					
+				}
 			}
 			
 			set_global_variable = nda_cultists_in_open	
@@ -546,7 +548,11 @@ nda_base.9 = { # Is there some non-conformists within the cult
 			AND = {
 				exists = c:YIG
 				c:YIG = ROOT
-			}					
+			}
+			AND = {
+				exists = c:DGN
+				c:DGN = ROOT
+			}						
 		}
 
 		any_interest_group = {

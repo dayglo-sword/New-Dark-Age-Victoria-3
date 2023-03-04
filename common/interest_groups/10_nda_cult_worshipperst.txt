@@ -48,12 +48,13 @@
 					has_ideology = ideology_pacifist
 					has_ideology = ideology_reformer
 					has_ideology = ideology_abolitionist	
-					has_ideology = ideology_atheist				
+					has_ideology = ideology_atheist	
+					has_ideology = ideology_moderate			
 				}
 			}
 
 			random_list = {	
-				25 = { set_ideology = ideology_moderate }
+				25 = { set_ideology = ideology_nda_cultist }
 				25 = { set_ideology = ideology_jingoist_leader }
 				25 = { set_ideology = ideology_fascist }
 				25 = { set_ideology = ideology_slaver }
@@ -91,7 +92,7 @@
 				limit = { 
 					is_pop_type = officers
 				}
-				value = 50
+				value = 100
 			}
 		}
 		add = {
@@ -145,7 +146,7 @@
 	}
 	
 	female_politician_chance = {
-		value = 0.5
+		value = 0.35
 
 		if = {
 			limit = {

@@ -13,10 +13,10 @@ on_monthly_pulse_country = {
 		nda_base.20 # Request from the Devout
 
 		nda_astro.10 
-		nda_astro.2 
-		nda_astro.3 
-		nda_astro.4 
-		nda_astro.5  
+		nda_astro.20 
+		nda_astro.30 
+		nda_astro.40 
+		nda_astro.50 
 		
 		nda_ritual.1 
 		nda_ritual.2 
@@ -38,7 +38,7 @@ on_monthly_pulse_country = {
 		nda_hasturian.2 # Play Spreads 
 		nda_hasturian.3 # Repairer of Reputations
 
-		nda_hasturian.10 # The Return
+		nda_hasturian.10 # The Return of the King
 
 		nda_whh.10 # House on the Borderlands
 		nda_whh.11 # Carnacki Start
@@ -65,7 +65,7 @@ on_half_yearly_pulse_country = {
 		nda_base.4 # Death of Junzt (Nameless Cults)
 		nda_base.9 # Cult Ideology Clean	
 		nda_dagonic.4 # Bounty of the Seas
-		
+		nda_dagonic.6 # Fury of Dagon
 		nda_hasturian.8 # The Play Fades
 		nda_nen.15 # From the Future
 		nda_nen.17 # Reanimated Spreads

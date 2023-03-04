@@ -66,34 +66,29 @@ nda_astro.1 = { # 1842 conjunction
 	}
 }
 
-nda_astro.2 = { # 1861 conjunction
+nda_astro.20 = { # 1842 conjunction
 	type = country_event
-	placement = ROOT
-	title = nda_astro.2.t
-	desc = nda_astro.2.d
-	flavor =  nda_astro.2.f
-
-	duration = 3
-
-	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	hidden = yes
 	
-	trigger = { 	
-		NOT = { has_variable = nda_conjunction_2 }		
+	trigger = { 
+		NOT = { has_global_variable = nda_conjunction_2 }		
+
 		game_date >= 1861.10.25		
-		game_date < 1862 # stop late forming countries getting event	
+		game_date < 1862 # stop late forming countries getting event
 	}
 
 	immediate = {
-		set_variable = nda_conjunction_2
-		debug_log = "Conjunction 2"
-		nda_effect_rite_conversion = yes
+		every_country = {
+			limit = {
+				OR = {
+					#is player or open cultist
+					is_player = yes
+					has_variable = nda_cultists_in_open
+				}				
+			}
+
+			trigger_event = { id = nda_astro.2 }	# fire main events		
+		}	
 
 		random_country = {
 			limit = {
@@ -128,6 +123,34 @@ nda_astro.2 = { # 1861 conjunction
 
 			set_variable = nda_nameless_cults_selected
 		}
+
+		set_global_variable = nda_conjunction_2
+		debug_log = "Conjunction 2 Lead Fire"
+	}	
+}
+
+nda_astro.2 = { # 1861 conjunction
+	type = country_event
+	placement = ROOT
+	title = nda_astro.2.t
+	desc = nda_astro.2.d
+	flavor =  nda_astro.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	immediate = {
+		set_variable = nda_conjunction_2
+		debug_log = "Conjunction 2"
+		nda_effect_rite_conversion = yes
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -141,6 +164,69 @@ nda_astro.2 = { # 1861 conjunction
 		#default_option = yes
 		trigger = { NOT = { has_variable = nda_cultists_in_open } }
 	}
+}
+
+nda_astro.30 = { # 1881 conjunction
+	type = country_event
+	hidden = yes
+	
+	trigger = { 
+		NOT = { has_global_variable = nda_conjunction_3 }		
+
+		game_date >= 1881.4.22		
+		game_date < 1882 # stop late forming countries getting event
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					#is player or open cultist
+					is_player = yes
+					has_variable = nda_cultists_in_open
+				}				
+			}
+
+			trigger_event = { id = nda_astro.3 }	# fire main events		
+		}	
+
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_yigian = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+
+		set_global_variable = nda_conjunction_3
+		debug_log = "Conjunction 3 Lead Fire"
+	}	
 }
 
 nda_astro.3 = { # 1881 conjunction
@@ -160,17 +246,49 @@ nda_astro.3 = { # 1881 conjunction
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
-	trigger = { 		
-		NOT = { has_variable = nda_conjunction_3 }	
-		game_date >= 1881.4.22		
-		game_date < 1882 # stop late forming countries getting event	
-	}
 
 	immediate = {
 		set_variable = nda_conjunction_3
 		debug_log = "Conjunction 3"
 		nda_effect_rite_conversion = yes
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.3.a
+		default_option = yes
+		trigger = { has_variable = nda_cultists_in_open }		
+	}
+
+	option = { #"Hurrah!!!" # Nothing you can do
+		name = nda_astro.3.b
+		#default_option = yes
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }
+	}
+}
+
+nda_astro.40 = {  # 1901 conjunction
+	type = country_event
+	hidden = yes
+	
+	trigger = { 
+		NOT = { has_global_variable = nda_conjunction_4 }		
+
+		game_date >= 1901.11.28		
+		game_date < 1902 # stop late forming countries getting event
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					#is player or open cultist
+					is_player = yes
+					has_variable = nda_cultists_in_open
+				}				
+			}
+
+			trigger_event = { id = nda_astro.4 }	# fire main events		
+		}	
 
 		random_country = {
 			limit = {
@@ -205,19 +323,10 @@ nda_astro.3 = { # 1881 conjunction
 
 			set_variable = nda_nameless_cults_selected
 		}
-	}	
-			
-	option = { #"A bit worrying..." # Nothing you can do
-		name = nda_astro.3.a
-		default_option = yes
-		trigger = { has_variable = nda_cultists_in_open }		
-	}
 
-	option = { #"Hurrah!!!" # Nothing you can do
-		name = nda_astro.3.b
-		#default_option = yes
-		trigger = { NOT = { has_variable = nda_cultists_in_open } }
-	}
+		set_global_variable = nda_conjunction_4
+		debug_log = "Conjunction 4 Lead Fire"
+	}	
 }
 
 nda_astro.4 = { # 1901 conjunction
@@ -237,12 +346,6 @@ nda_astro.4 = { # 1901 conjunction
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-	
-	trigger = { 
-		NOT = { has_variable = nda_conjunction_4 }			
-		game_date >= 1901.11.28		
-		game_date < 1902 # stop late forming countries getting event
-	}
 
 	immediate = {
 		set_variable = nda_conjunction_4
@@ -295,6 +398,69 @@ nda_astro.4 = { # 1901 conjunction
 		#default_option = yes
 		trigger = { NOT = { has_variable = nda_cultists_in_open } }
 	}
+}
+
+nda_astro.50 = { # 1921 conjunction
+	type = country_event
+	hidden = yes
+	
+	trigger = { 
+		NOT = { has_global_variable = nda_conjunction_5 }		
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	} # They've gone so no Cult rational	
+		game_date >= 1921.9.14	
+		game_date < 1922 # stop late forming countries getting event	
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					#is player or open cultist
+					is_player = yes
+					has_variable = nda_cultists_in_open
+				}				
+			}
+
+			trigger_event = { id = nda_astro.5 }	# fire main events		
+		}	
+
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_yigian = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				#country_rank >= rank_value:unrecognized_regional_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+
+		set_global_variable = nda_conjunction_5
+		debug_log = "Conjunction 5 Lead Fire"
+	}	
 }
 
 nda_astro.5 = { # 1921 conjunction

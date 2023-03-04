@@ -14,9 +14,16 @@
  ig_nda_cult_worshippers:0 "Cult Worshippers"
  ig_nda_cult_worshippers_potential_tt:0 "Worships an Eldritch Cult"
  ig_nda_cult_worshippers_only_icon:0 "@nda_cult!"
- ig_nda_cult_worshippers_desc:0 "Cultist who intent is to take over the world and summon the Great Old Ones from their slumber."
+ ig_nda_cult_worshippers_desc:0 "Cultists who intent is to take over the world and summon the Great Old Ones from their slumber."
 
- ig_nda_cultist_church:0 "High Church of Cthulhu"
+ ig_nda_cultist_church:0 "High Coven of Cthulhu"
+ ig_nda_dgonic_church_desc:0 "The High Coven of Cthulhu is the ultimate arbiter of the Cthulhu's will on Earth."
  ig_nda_dagonic_church:0 "High Church of Dagon"
+ ig_nda_dagonic_church_desc:0 "The High Church of Dagon is the ultimate arbiter of the Dagon's will on land."
  ig_nda_yigian_church:0 "High Church of Yig"
+ ig_nda_yigian_church_desc:0 "The High Church of Yig is the ultimate arbiter of the Yig's will on Earth."
+ ig_nda_dagonic_cult:0 "Dagon Worshippers"
+ ig_nda_dagonic_cult_desc:0 "Cultists who intent is to take over the world and in the name of the fish-god Dagon."
+ ig_nda_yigian_cult:0 "Serpent Worshippers"
+ ig_nda_yigian_cult_desc:0 "Cultists who intent is to take over the world and in the name of the serpent-god Yig."
  
