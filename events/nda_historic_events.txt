@@ -1,5 +1,54 @@
 ﻿namespace = nda_historic # Series of Historic 'Colour' events around spiritlism and the Occult - show to source country and to NEN as colour
 
+nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
+	type = country_event
+	placement = p:x01D042 #scope:spiritulist_state
+	title =nda_historic.1848.t
+	desc =nda_historic.1848.d
+	flavor = nda_historic.1848.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { 		
+		game_date >= 1838.4.1 
+		game_date < 1839 
+
+		# owner of Syracuse, NY. or NEN
+		OR = {
+			p:x01D042 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_second_awakening }	
+	}
+
+	immediate = {
+		
+		set_variable = nda_historic_second_awakening
+		p:x01D042 = { # Syracuse
+			state = { save_scope_as = spiritulist_state }
+		}
+
+	}	
+	
+	option = { #"Any more pending?"
+		name = nda_historic.1838.a
+		default_option = yes	
+	}
+}
+
 nda_historic.1848 = { # Founding of Spiritualist Movement
 	type = country_event
 	placement = p:x01D042 #scope:spiritulist_state

@@ -1010,13 +1010,13 @@ nda_base.21 = { # A cultist targeted
 	immediate = {
 		# set ig leader character to be Cultist - exclude devout initially?
 		random_interest_group = {
-			limit = { 				
+			limit = {
+				NOT = { is_interest_group_type = ig_devout } # Don't include devout as contradicts journal fail condition
 				leader = { 
 					has_any_cultist_trait = yes
 				} 			
 			}
 			leader = { 
-				add_trait = nda_cultist 
 				save_scope_as = targeted_ig_leader
 			}
 			save_scope_as = targeted_ig
@@ -1035,7 +1035,8 @@ nda_base.21 = { # A cultist targeted
 			}		
 		}
 		else = {
-			# no cultists - get innocent leader (or trigger pit and pendulum)
+			# no cultists - get innocent leader (or trigger pit and pendulum)? Very low chance of this
+			trigger_event = { id = nda_base.25 }
 		}
 	}
 }
@@ -1194,10 +1195,10 @@ nda_base.25 = { # An Innocent condemned
 			limit = { 				
 				leader = { 
 					has_any_cultist_trait = no
-				} 			
+				} 	
+				NOT = { is_interest_group_type = ig_devout } # Don't include devout	
 			}
-			leader = { 
-				add_trait = nda_cultist 
+			leader = { 				
 				save_scope_as = targeted_ig_leader
 			}
 			save_scope_as = targeted_ig

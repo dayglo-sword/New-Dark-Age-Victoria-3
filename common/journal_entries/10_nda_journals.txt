@@ -5,7 +5,7 @@
 	immediate = {
 		set_variable = {
 				name = nda_cult_spread_tracker
-				value = 1
+				value = 0
 			}
 		clamp_variable = {
 				name = nda_cult_spread_tracker
@@ -60,7 +60,7 @@
 				scope:nda_je_scope = {
 					change_variable = {
 						name = nda_cult_spread_tracker
-						add = -1
+						subtract = 1 # can send negative despite clamp?
 					}					
 				}					
 			}
@@ -115,7 +115,7 @@
 
 		# Chance that another character will become cultist
 		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
-			9 = 0
+			10 = 0
 			1 = nda_base.6 
 		}		
 	}
@@ -125,7 +125,7 @@
 	}
 
 	goal_add_value = {
-		add = 900 # should be approx 10years -> 12 months x 8 IG + power and govern bonus?
+		add = 999 # 900 # should be approx 10years -> 12 months x 8 IG + power and govern bonus?
 	}
 
     fail = {
@@ -141,7 +141,7 @@
 		trigger_event = { id = nda_base.13 }	
 	}
 
-	timeout = 7500 # Hold off cult for 20 years
+	timeout = 7500 # Hold off cult for 20 years - too difficult?
 
 	on_timeout = {
 		# set variable so it does not rerun for country
@@ -517,7 +517,7 @@ je_nda_devout_inquisition = {
 
 	on_monthly_pulse = {
 	
-		# Chance that another cultist will become converted (should fail against a Master), chance of getting innocent leader
+		# Chance that another cultist will become converted (should fail against a Master), chance of getting innocent leader!
 		random_events = { 
 			30 = 0
 			3 = nda_base.21 
@@ -535,8 +535,9 @@ je_nda_devout_inquisition = {
 			custom_tooltip = {
 				text = je_nda_devout_inquisition_cancel_tt
 				any_interest_group = {
+					is_interest_group_type = ig_devout
 					leader = { 
-						has_eldritch_trait =yes
+						has_eldritch_trait = yes # church is corrupted
 					}
 				}		
 			}

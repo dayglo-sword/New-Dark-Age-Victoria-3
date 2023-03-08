@@ -82,14 +82,19 @@ nda_nen.18.f:0 ""
 nda_nen.18.a:0 "We had no choice!"
 
 nda_nen.20.t:0 "Devil Worship in Innsmouth"
-nda_nen.20.d:0 "Senior figures in the town are rumoured to be participating in devil worship."
-nda_nen.20.f:0 "The sailors homed in the port have apparently brought the customs back from the South Seas.\n\nIt has also taken hold amoungst the fisherfolk of the town."
-nda_nen.20.a:0 "This will not do"
+nda_nen.20.d:0 "Senior figures in the town are rumoured to be participating in a form of devil worshippery.\n\nThe sailors homed in the port are suspected to have brought the customs back from the South Seas.\n\nIt has apparently also taken hold amongst the fisherfolk of the town."
+nda_nen.20.f:0 "#ITALIC 'Some of the old timers tell about the black reef off the coast - Devil Reef they call it.../n/nThe story is that there's an whole legion of devils on that reef'#!"
+nda_nen.20.a:0 "This will not do."
 
 nda_nen.21.t:0 "Plague in Innsmouth"
-nda_nen.21.d:0 "A mysterious plague has hit the coastal town of Innsmouth.\n\nIt looks like this will cause much decay to the towns principle industries."
+nda_nen.21.d:0 "A mysterious plague has hit the coastal town of Innsmouth killing many of the inhabitants.\n\nIt looks like this will cause much decay to the towns principle industries."
 nda_nen.21.f:0 "#ITALIC '...it was probably some foreign kind of disease brought from China or somewhere by the shipping...\n\nIt surely was bad enough - there were riots over it, and all sorts of ghastly doings that I don't believe ever got outside town...#!'"
 nda_nen.21.a:0 "Too late to help the poor souls."
+
+nda_nen.1882.t:0 "Meteor in Maine"
+nda_nen.1882.d:0 "Three professors from Miskatonic University have hastened out to the west of Arkham to investigate tales of a 'great rock' falling from the sky\n\nAfter finding the remains in a crater, the professors found the meteorite to consist of an 'oddly soft' material.\n\nThe sample that they took faded away during experiments, which appears to also be the fate of the main body of the stellar object."
+nda_nen.1882.f:0 ""
+nda_nen.1882.a:0 "Disappeared?"
 
 nda_nen.1913.t:0 "Meteor in Maine"
 nda_nen.1913.d:0 "A Meteor has been seen over the coast of Maine!\n\nA mammoth ball fire darted from the heavens into the water.\n\nThe following Sunday a fishing party caught in their trawl a mass of metallic rock.\n\nIt was discovered within this mass a strange book made of an unknown substance.\n\nThe writing within has been identified as ancient Greek from the Second Century BC!"

@@ -1,5 +1,6 @@
 Timeline of events in mod
 
+1838        nda_historic.1838   2nd Great Awakening
 1839        nda_base.2          Nameless Cults published
 1840        nda_base.3          Imprint of Nameless Cults
 1840        nda_base.4          The Death of Junzt
@@ -7,46 +8,46 @@ Timeline of events in mod
 
 1842.1      nda_astro.10        Conjunction 1
 1842.6      nda_nen.10          Founding of Miskatonic Uni
-
 1845.9      nda_nen.20          Devil Worship in Innsmouth, Captain Marsh
 1846.3      nda_nen.21          Plague in Innsmouth
-
-1848.4      nda_historic.1848     Founding of Spiritualist Movement
+1848.4      nda_historic.1848   Founding of Spiritualist Movement
 1849.10     nda_historic.1849   Death of Poe
-1852.1      nda_historic.1852     An American Medium in London
+
+1852.1      nda_historic.1852   An American Medium in London
 
 1861.10     nda_astro.2         Conjunction 2
+1862.1      nda_historic.1862   London - The Ghost Club
 
-1862.1      nda_historic.1862     London -The Ghost Club
-
-1875.4      nda_historic.1875     NY - The Theosophical Society
+1875.4      nda_historic.1875   NY - The Theosophical Society
 
 1881.4      nda_astro.3         Conjunction 3
-
-1882.1      nda_historic.1882     London - The Society for Psychical Research
-
-1882.6                          The Colour Out Of Space
-1884.5                          Lot No. 249 - Mummy in Oxford
-1888.4      nda_historic.1888     Fox's come clean - Spiritualist Movement
-1888.8      nda_historic.1887     Theosophical Society - The Secret Doctrine
-1888.10     nda_historic.1887     The Golden Dawn
+1882.1      nda_historic.1882   London - The Society for Psychical Research
+1882.6      TODO                The Colour Out Of Space
+1884.5      TODO                Lot No. 249 - Mummy in Oxford
+1888.4      nda_historic.1888   Fox's come clean - Spiritualist Movement
+1888.8      nda_historic.1887   Theosophical Society - The Secret Doctrine
+1888.10     nda_historic.1887   The Golden Dawn
 1890.1      nda_hasturian.1     Paris - The King in Yellow
 1890.8      nda_ritual.2        Cthulhu Early Return
 1891.1      nda_hasturian.2     The King in Yellow Spreads
 1892.1      nda_hasturian.3     The King in Yellow - The Repairer of Reputations
 1892.7~     nda_hasturian.5     The King in Yellow - Imperial America
+
+1901        nda_whh.1           House on the Borderlands
 1901.10     nda_astro.4         Conjunction 4
 1903.1      nda_nen.11          Herbert West - Appeal for reinstatement
 1903.6      nda_nen.12          Plague in Arkham
-
-1910.1                          Under the Pyramids
+1904        nda_whh.11          Carnacki the Ghost Finder
+1906        nda_whh.12          Carnacki Asylum Request
+1907        nda_ritual.1907     The Tale of Inspector Legrasse
+1910.1      TODO                Under the Pyramids
 1910.8      nda_ritual.4        Cthulhu Leaves Early
 1913.9      nda_nen.1913        Green Meadow - Maine Meteor
 1918.1      nda_nen.13          Herbert West - Research breakthrough  
 1920.1      nda_nen.14          Herbert West - Disappearence 
 1921.9      nda_astro.5         Conjunction 5
 1922.8      nda_nen.1922        Horror at Martin's Beach
-
 1925.3      nda_ritual.1        Cthulhu Returns
+1925.4      nda_ritual.1925     The Vigilant - only if Ritual fails
 1927                            Innsmouth Raid
 1935.3~     nda_ritual.4        Cthulhu Leaves

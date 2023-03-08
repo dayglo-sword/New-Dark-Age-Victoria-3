@@ -251,6 +251,8 @@ nda_astro.3 = { # 1881 conjunction
 		set_variable = nda_conjunction_3
 		debug_log = "Conjunction 3"
 		nda_effect_rite_conversion = yes
+
+		nda_effect_boost_unification = yes # need event for selected candidate to inform them (if player) ??
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -352,39 +354,8 @@ nda_astro.4 = { # 1901 conjunction
 		debug_log = "Conjunction 4"
 		nda_effect_rite_conversion = yes
 
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
+		nda_effect_boost_unification = yes
 
-				NOT = { has_variable = nda_nameless_cults_selected }
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_yigian = yes
-				}
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_dagonic = yes
-				}
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -491,7 +462,9 @@ nda_astro.5 = { # 1921 conjunction
 	immediate = {
 		set_variable = nda_conjunction_5
 		debug_log = "Conjunction 5"
+
 		nda_effect_rite_conversion = yes
+		nda_effect_boost_unification = yes
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do

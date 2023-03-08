@@ -63,15 +63,18 @@ nda_effect_yigian_annex = {
 			}
 		} 
 
-		random_country = {
+		ordered_country = {
 			limit = {
 				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }				
+					is_full_cult_country = { COUNTRY="THIS" }	
+					is_player = yes				
 				}
 				has_variable = nda_yig_in_open			
 			}
-			
-			save_scope_as = nda_yigian_annex
+			order_by = { subtract = global_country_ranking }
+			position = 1
+
+			save_scope_as = nda_yigian_annex			
 		}
 
 		# send notification - does country still exist after annex?

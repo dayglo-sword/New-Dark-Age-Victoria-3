@@ -52,3 +52,14 @@ NEN = {
 	cultures = { nda_cul_trueyankee }
 	capital = STATE_MASSACHUSETTS
 }
+
+LEN = { # Leng 
+	color = { 65  127  186 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { nda_cul_cultist }
+	capital = STATE_LHASA
+}

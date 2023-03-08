@@ -118,3 +118,67 @@ nda_effect_eldritch_anger
 	#	change_relations = { country = ROOT value = -50 }
 	#}
 }
+
+nda_effect_boost_unification
+{
+	# try and force ELD creation if not existing
+	IF = {
+		limit = { 
+			NOT = { exists = c:ELD } 
+			has_variable = nda_cultists_in_open
+		}
+
+		ordered_country = {
+			limit = { 
+				is_unification_candidate = ELD 
+				NOT = { 
+						this = ROOT 
+				}				
+			}
+			order_by = { subtract = global_country_ranking } #order_by = gdp
+			max = 1
+			change_relations = { country = ROOT value = 100 } # Make friends to assist unification?
+			debug_log = "Boost ELD"
+		}			
+	}
+
+	# try and force DAG creation if not existing
+	ELSE_IF = {
+		limit = { 
+			NOT = { exists = c:DGN } 
+			has_variable = nda_dagon_in_open
+		}
+
+		ordered_country = {
+			limit = { 
+				is_unification_candidate = DGN 
+				NOT = { 
+						this = ROOT 
+				}				
+			}
+			order_by = { subtract = global_country_ranking }
+			max = 1
+			change_relations = { country = ROOT value = 100 } # Make friends to assist unification?
+		}			
+	}
+
+	# try and force YIG creation if not existing
+	ELSE_IF = {
+		limit = { 
+			NOT = { exists = c:YIG } 
+			has_variable = nda_yig_in_open
+		}
+
+		ordered_country = {
+			limit = { 
+				is_unification_candidate = YIG 
+				NOT = { 
+						this = ROOT 
+				}				
+			}
+			order_by = { subtract = global_country_ranking }
+			max = 1
+			change_relations = { country = ROOT value = 100 } # Make friends to assist unification?
+		}			
+	}
+}

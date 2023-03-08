@@ -1,0 +1,95 @@
+﻿nda_dgn_release_leng = { # Strange instance where Qing becomes DGN giving vast inland non Dagonic homelands and in part blocking ELD creation.
+	is_shown = {
+		exists = c:DGN
+		this = c:DGN
+		# has tibet as puppet
+		c:TIB = { is_subject_of = ROOT }
+	}
+
+	possible = {
+
+	}
+	
+	when_taken = {
+
+		# release tibet - needs to be Leng?
+		c:TIB = {
+			make_independent = yes
+
+			# make cultists
+			IF = {
+				limit = {
+					is_cultist_country = no
+				}
+				debug_log = "Make TIB Cultist"
+				trigger_event = { id = nda_base.7 }		
+			}
+		}
+
+		# set tibet support for leading unification candidate - make current leader favorate
+		IF = {
+			limit = { NOT = { exists = c:ELD } }
+
+			ordered_country = {
+				limit = { 
+					is_unification_candidate = ELD 
+					NOT = { 
+						OR = { 
+							this = c:DGN 
+							this = c:TIB
+						}
+					}					
+				}
+				order_by = gdp
+				max = 1
+				change_relations = { country = c:TIB value = 200 } # Make friends to assist unification?
+			}			
+		}
+
+		# transfer inland to tibet
+		every_scope_state = {
+			IF = {
+				limit = { 
+					owner = ROOT
+				 	#is_potentially_dagonic_lands = yes 
+					is_coastal = no
+					NOT = { state_region = S:STATE_SOUTHERN_MANCHURIA } # keep else disconnect in dagonic land
+					state_region = {
+						is_homeland = cu:nda_cul_cultist
+						#NOT = { is_homeland = cu:nda_cul_dagonic }
+						
+					}	
+				}	
+
+				set_state_owner = c:TIB		
+				# remove dagonic culture
+				state_region = {
+					remove_homeland	= nda_cul_dagonic	
+				}		
+			}
+
+		}
+
+		c:TIB = {					
+			# rename tibet as Leng and set cultists (or have Leng country?)	- do cultists IG exist at this stage? Or need to wait till nda_base.7 completes?
+			ig:ig_nda_cult_worshippers = {
+				set_interest_group_name = ig_nda_chaugnar_faugn_cult
+
+				IF = {
+					limit = { NOT = { has_modifier = nda_ig_secret_masters } }
+					add_modifier = {
+						name = nda_ig_secret_masters
+					}
+				}
+			}
+
+			change_tag = LEN # now change to Leng
+		}
+		custom_tooltip = nda_dgn_release_leng_tooltip
+	}
+
+	ai_chance = {
+		base = 10	
+	}
+
+}

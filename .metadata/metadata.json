@@ -2,7 +2,7 @@
   "name" : "New Dark Age",
   "id" : "NDA",
   "version" : "0.9.0",
-  "supported_game_version" : "1.2.0",
+  "supported_game_version" : "1.2.2",
   "short_description" : "A New Dark Age - An Eldritch Tales Mod",
   "tags" : ["Eldritch","Cthulhu","Role-Play"],
   "relationships" : [],

@@ -331,6 +331,16 @@ nda_hasturian.5 = { # Create Imperial America
 			add_loyalists = { value = 1 }
 
 			# change cultists IG to Hasturian
+			ig:ig_nda_cult_worshippers = {
+				set_interest_group_name = ig_nda_hasturian_cult
+			}
+
+			# remove eldritch homeland - replace with 'The Dreamlands'?
+			#every_scope_state = {
+			#	state_region = {
+			#		remove_homeland	= nda_cul_cultist	
+			#	}		
+			#}
 		}
 	}
 }
@@ -545,10 +555,14 @@ nda_hasturian.10 = { # If he dies bring him back.
 			add_radicals = { value = -0.5 }
 			add_loyalists = { value = 0.5 }
 
+			# change cultists IG to Hasturian if not already
+			ig:ig_nda_cult_worshippers = {
+				set_interest_group_name = ig_nda_hasturian_cult
+			}
 		}		
 	}	
 	
-	option = { # Coronation
+	option = { # Bravo!
 		name = nda_hasturian.10.a
 		default_option = yes
 	}

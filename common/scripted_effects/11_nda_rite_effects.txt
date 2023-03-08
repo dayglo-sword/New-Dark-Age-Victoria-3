@@ -45,7 +45,7 @@
 			}
 
 			# always change relationship
-			change_relations = { country = c:ELD value = 50 }
+			change_relations = { country = c:ELD value = 100 } # is this too much ?
 			debug_log = "Improved Relations with ELD" 
 		}
 	}

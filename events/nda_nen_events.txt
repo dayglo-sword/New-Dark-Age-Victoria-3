@@ -526,10 +526,8 @@ nda_nen.21 = { # Plague in Innsmouth
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
-		
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"	
 	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
@@ -574,6 +572,44 @@ nda_nen.21 = { # Plague in Innsmouth
 
 # nda_nen.23 = { # The Raid on Innsmouth
 
+nda_nen.1882 = { # The Colour Out Of Space
+	type = country_event
+	placement = p:xBB7965 
+	title = nda_nen.1882.t
+	desc = nda_nen.1882.d
+	flavor =  nda_nen.1882.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1882.6 
+
+		p:xBB7965 = { state = { owner = ROOT } }
+
+		NOT = { has_global_variable = nda_colour_out_of_space }
+		# should be Professors from MU?
+	}
+
+	immediate = {
+		set_global_variable = nda_colour_out_of_space	
+	}	
+	
+	option = { #"A Bizarre Tale.."
+		name = nda_nen.1882.a
+		default_option = yes
+
+	}
+}
+
 nda_nen.1913 = { # Maine Meteor - The Green Meadow
 	type = country_event
 	placement = p:xD64964 
@@ -584,8 +620,7 @@ nda_nen.1913 = { # Maine Meteor - The Green Meadow
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_whaling.bk2"
-		
+		video = "gfx/event_pictures/unspecific_whaling.bk2"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -623,8 +658,7 @@ nda_nen.1922 = { # Horror at Martin's Beach
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_whaling.bk2"
-		
+		video = "gfx/event_pictures/unspecific_whaling.bk2"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
