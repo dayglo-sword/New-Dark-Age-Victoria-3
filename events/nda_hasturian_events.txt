@@ -205,22 +205,39 @@ nda_hasturian.3 = { # The Repairer of Reputations
 	trigger = { # owns new york - is not full cultist country
 		game_date >= 1892
 		p:xE217B5 = { state = { owner = ROOT } } # New York
-		has_global_variable = nda_king_in_yellow_play_exists
+		#has_global_variable = nda_king_in_yellow_play_exists
 		has_variable = nda_king_in_yellow # is not suppressed
+
+		NOT = { 
+			exists = c:IAM 
+			has_variable = nda_king_in_yellow_meeting
+			is_full_cult_country = { COUNTRY="ROOT" }
+		}
+		# capital should be in americas?
 	}
 
 	immediate = {
-
+		set_variable = nda_king_in_yellow_meeting
 	}	
 	
 	option = { #Ignore and Mr Wilde meets his 'historic' fate
 		name = nda_hasturian.3.a
+
+		ai_chance = { 
+			base = 20		
+		}
+
 		trigger_event = { id = nda_hasturian.7 days = 200 }	# Death of Mr Wilde
 	}
 
 	option = { # Have meeting
 		name = nda_hasturian.3.b
 		default_option = yes
+
+		ai_chance = { 
+			base = 80		
+		}
+
 		#follow on event
 		trigger_event = { id = nda_hasturian.4 days = 200 }	# ask for meeting
 	}
@@ -257,12 +274,21 @@ nda_hasturian.4 = { # The Repairers Offer
 	option = { #Ignore and have reputation ruined and unrest
 		name = nda_hasturian.4.a
 		default_option = yes	
+
+		ai_chance = { 
+			base = 20		
+		}
+
 		 # need ruination event that gives negatives to head of state and powerful leaders ?	
 		 trigger_event = { id = nda_hasturian.6 days = 100 }
 	}
 
 	option = { # Path to Imperial America
 		name = nda_hasturian.4.b
+
+		ai_chance = {
+			base = 80		
+		}
 
 		#follow on event
 		trigger_event = { id = nda_hasturian.5 days = 200 }	# Imperial America	

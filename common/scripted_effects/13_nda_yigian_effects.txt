@@ -27,19 +27,35 @@ nda_effect_yigian_setup = {
 			}
 		}
 
-		# set (not so) secret goals
-		set_secret_goal = {
-			country = c:NEN
-			secret_goal = antagonize
+		# set (not so) secret goals - need to check they exist!
+		IF = {
+			limit = {
+				exists = c:NEN
+			}
+			set_secret_goal = {
+				country = c:NEN
+				secret_goal = antagonize
+			}			
 		}
-		set_secret_goal = {
-			country = c:ELD
-			secret_goal = befriend
+		IF = {
+			limit = {
+				exists = c:ELD
+			}
+			set_secret_goal = {
+				country = c:ELD
+				secret_goal = befriend
+			}			
 		}
-		set_secret_goal = {
-			country = c:DGN
-			secret_goal = befriend
+		IF = {
+			limit = {
+				exists = c:DGN
+			}
+			set_secret_goal = {
+				country = c:DGN
+				secret_goal = befriend
+			}			
 		}
+
 
 		set_strategy = ai_strategy_colonial_expansion
 		set_strategy = ai_strategy_territorial_expansion

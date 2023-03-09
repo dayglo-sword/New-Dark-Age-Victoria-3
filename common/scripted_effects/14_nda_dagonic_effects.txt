@@ -31,17 +31,32 @@
 		}
 
 		# set (not so) secret goals and strategy
-		set_secret_goal = {
-			country = c:NEN
-			secret_goal = antagonize
+		IF = {
+			limit = {
+				exists = c:NEN
+			}
+			set_secret_goal = {
+				country = c:NEN
+				secret_goal = antagonize
+			}			
 		}
-		set_secret_goal = {
-			country = c:ELD
-			secret_goal = befriend
+		IF = {
+			limit = {
+				exists = c:ELD
+			}
+			set_secret_goal = {
+				country = c:ELD
+				secret_goal = befriend
+			}			
 		}
-		set_secret_goal = {
-			country = c:YIG
-			secret_goal = befriend
+		IF = {
+			limit = {
+				exists = c:YIG
+			}
+			set_secret_goal = {
+				country = c:YIG
+				secret_goal = befriend
+			}			
 		}
 
 		set_strategy = ai_strategy_colonial_expansion

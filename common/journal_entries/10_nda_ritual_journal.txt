@@ -38,7 +38,7 @@
 
 			set_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
-					value = 1
+					value = 0
 				}
 			clamp_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
@@ -92,6 +92,10 @@
 
     fail = {
 		# if ritual failed or star alignment occured
+		custom_tooltip = {
+			text = je_nda_ritual_time_has_passed_tt
+			has_global_variable = nda_cthulhu_visits # Ritual is too late
+		}
     }
 	
 	on_fail = {
@@ -117,9 +121,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 	}
 
 	possible = {
-	#	# ? has any state as Eldritch homeland - will convert to Yigian on completion
-		# just ELD as initiator, DGN after a certain date, Other after a later date - others can assist via second journal
-
+	#	# ? has any state as Eldritch homeland 
 		country_has_primary_culture = cu:nda_cul_cultist # easy check, but 20+ countries can qualify!
 		custom_tooltip = {
 			text = je_nda_ritual_assist_possible_tt
@@ -135,7 +137,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 
 			set_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
-					value = 1
+					value = 0
 				}
 			clamp_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
@@ -189,6 +191,18 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 
     fail = {
 		# if ritual failed or star alignment occured
+				# if devout leader has been converted or journal cult_spread has completed
+		OR = {
+			custom_tooltip = {
+				# If becomes ELD due to original ELD destruction stop assist
+				text = je_nda_ritual_assist_fail_is_eld_tt
+				ROOT = c:ELD		
+			}
+			custom_tooltip = {
+				text = je_nda_ritual_time_has_passed_tt
+				has_global_variable = nda_cthulhu_visits # Ritual is too late
+			}
+		}
     }
 	
 	on_fail = {
