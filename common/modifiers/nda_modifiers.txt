@@ -6,11 +6,11 @@
 
 nda_dark_skies_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	building_group_bg_agriculture_throughput_mult = -0.3
-	building_group_bg_ranching_throughput_mult = -0.3
-	building_group_bg_plantations_throughput_mult = -0.3
+	building_group_bg_agriculture_throughput_mult = -0.4
+	building_group_bg_ranching_throughput_mult = -0.4
+	building_group_bg_plantations_throughput_mult = -0.4
 	state_mortality_mult = 0.05
-	state_standard_of_living_add = -1
+	state_standard_of_living_add = -2
 }
 
 nda_dagonic_state_modifier = {
@@ -28,9 +28,9 @@ nda_dagonic_country_modifier = {
 	unit_convoy_raiding_mult = 0.2
 }
 
-nda_ig_secret_masters = {
+nda_ig_secret_masters_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	interest_group_approval_add = 3
+	#interest_group_approval_add = 3
 	interest_group_pol_str_mult = 0.25
 }
 
@@ -40,8 +40,13 @@ nda_reanimated_state_modifier = {
 	state_standard_of_living_add = -2
 }
 
-nda_ig_cult_supression = {
+nda_ig_cult_supression_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	interest_group_approval_add = -5
 	interest_group_pol_str_mult = -0.2
+}
+
+nda_tonic_for_troops_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_recovery_rate_add = 0.2
 }

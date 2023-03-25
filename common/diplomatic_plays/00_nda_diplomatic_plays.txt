@@ -12,6 +12,7 @@ dp_unify_eldritch_cult = {
 	}
 	
 	possible = {
+		NOT = { exists = c:ELD }
 		NOT = { is_country_type = decentralized }
 		has_technology_researched = nationalism
 	}
@@ -36,6 +37,7 @@ dp_leadership_eldritch_cult = {
 	}	
 	
 	possible = {
+		NOT = { exists = c:ELD }
 		has_technology_researched = nationalism			
 	}
 	
@@ -61,6 +63,7 @@ dp_unify_yigian_cult = {
 	}
 	
 	possible = {
+		NOT = { exists = c:YIG }
 		NOT = { is_country_type = decentralized }
 		has_technology_researched = nationalism
 	}
@@ -85,6 +88,7 @@ dp_leadership_yigian_cult = {
 	}	
 	
 	possible = {
+		NOT = { exists = c:YIG }
 		has_technology_researched = nationalism			
 	}
 	
@@ -110,6 +114,7 @@ dp_unify_dagonic_cult = {
 	}
 	
 	possible = {
+		NOT = { exists = c:DGN }
 		NOT = { is_country_type = decentralized }
 		has_technology_researched = nationalism
 	}
@@ -134,6 +139,7 @@ dp_leadership_dagonic_cult = {
 	}	
 	
 	possible = {
+		NOT = { exists = c:DGN }
 		has_technology_researched = nationalism			
 	}
 	

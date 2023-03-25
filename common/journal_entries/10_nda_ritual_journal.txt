@@ -115,20 +115,31 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
 	is_shown_when_inactive = {
-		country_has_primary_culture = cu:nda_cul_cultist  
+		OR = {
+			country_has_primary_culture = cu:nda_cul_cultist  
+			country_has_primary_culture = cu:nda_cul_dagonic
+			country_has_primary_culture = cu:nda_cul_yigian
+		}
+
 		exists = c:ELD
 		NOT = { c:ELD = ROOT }
 	}
 
 	possible = {
 	#	# ? has any state as Eldritch homeland 
-		country_has_primary_culture = cu:nda_cul_cultist # easy check, but 20+ countries can qualify!
+		OR = { # easy check, but 20+ countries can qualify!
+			country_has_primary_culture = cu:nda_cul_cultist  
+			country_has_primary_culture = cu:nda_cul_dagonic
+			country_has_primary_culture = cu:nda_cul_yigian
+		}
+
 		custom_tooltip = {
 			text = je_nda_ritual_assist_possible_tt
 
 			has_global_variable = je_nda_ritual_proceeds_tracker
  			NOT = { has_global_variable = nda_ritual_completed  }	
 		}
+		c:ELD = { relations:root >= relations_threshold:amicable }
 	}
 
 	immediate = {
@@ -191,7 +202,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 
     fail = {
 		# if ritual failed or star alignment occured
-				# if devout leader has been converted or journal cult_spread has completed
+		# if relations have deteriorated
 		OR = {
 			custom_tooltip = {
 				# If becomes ELD due to original ELD destruction stop assist
@@ -202,6 +213,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 				text = je_nda_ritual_time_has_passed_tt
 				has_global_variable = nda_cthulhu_visits # Ritual is too late
 			}
+			c:ELD = { relations:root <= relations_threshold:cold }
 		}
     }
 	

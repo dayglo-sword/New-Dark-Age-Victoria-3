@@ -14,7 +14,7 @@ nda_cultist = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 		interest_group_pop_attraction_mult = 0.1
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}				
 	
 	possible = { # Random is possible
@@ -53,7 +53,7 @@ nda_acolyte = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.10
 		interest_group_pop_attraction_mult = 0.2
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}
 	
 	possible = {
@@ -88,7 +88,7 @@ nda_master = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}
 	
 	possible = {
@@ -126,7 +126,7 @@ nda_yig_cultist = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 		interest_group_pop_attraction_mult = 0.1
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}				
 	
 	possible = { # Random is possible
@@ -168,7 +168,7 @@ nda_yig_acolyte = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.10
 		interest_group_pop_attraction_mult = 0.2
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}
 	
 	possible = {
@@ -208,7 +208,7 @@ nda_yig_master = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}
 	
 	possible = {
@@ -251,7 +251,7 @@ nda_dagon_cultist = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 		interest_group_pop_attraction_mult = 0.1
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}				
 	
 	possible = { # Random is possible
@@ -292,7 +292,7 @@ nda_dagon_acolyte = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.10
 		interest_group_pop_attraction_mult = 0.2
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}
 	
 	possible = {
@@ -332,7 +332,7 @@ nda_dagon_master = {
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
-		interest_group_approval_add = 1
+		#interest_group_approval_add = 1
 	}
 	
 	possible = {

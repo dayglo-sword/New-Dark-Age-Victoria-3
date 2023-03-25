@@ -3,6 +3,7 @@
 		exists = c:DGN
 		this = c:DGN
 		# has tibet as puppet
+		exists = c:TIB
 		c:TIB = { is_subject_of = ROOT }
 	}
 
@@ -71,20 +72,13 @@
 		}
 
 		c:TIB = {					
-			# rename tibet as Leng and set cultists (or have Leng country?)	- do cultists IG exist at this stage? Or need to wait till nda_base.7 completes?
-			ig:ig_nda_cult_worshippers = {
-				set_interest_group_name = ig_nda_chaugnar_faugn_cult
-
-				IF = {
-					limit = { NOT = { has_modifier = nda_ig_secret_masters } }
-					add_modifier = {
-						name = nda_ig_secret_masters
-					}
-				}
-			}
-
 			change_tag = LEN # now change to Leng
 		}
+
+		c:LEN = {
+			nda_effect_leng_setup = yes
+		}
+
 		custom_tooltip = nda_dgn_release_leng_tooltip
 	}
 

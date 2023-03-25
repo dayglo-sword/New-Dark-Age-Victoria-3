@@ -1,0 +1,94 @@
+﻿nda_nen_purge_cult = {
+	is_shown = {
+		exists = c:NEN
+		this = c:NEN
+        # has cultists
+		OR = {
+			any_interest_group = {	
+				leader = { 
+					has_eldritch_trait = yes
+				}
+			}			
+		}		
+		# but not openly
+		NOT = { has_variable = nda_cultists_in_open }
+	}
+
+	possible = {
+		exists = c:NEN
+
+		custom_tooltip = {
+			text = nda_nen_purge_cult_not_open_cultists_tooltip 
+			NOT = { has_variable = nda_cultists_in_open }			
+		}
+
+
+		OR = {
+			any_interest_group = {	
+				custom_tooltip = {
+					text = nda_nen_purge_cult_lead_by_cultist_tooltip
+					leader = { 
+						has_eldritch_trait = yes
+					}							
+				}
+
+				is_in_government = yes	
+				is_powerful = yes			
+			}	
+			any_scope_character = {
+				is_ruler = yes
+				custom_tooltip = {
+					text = nda_nen_purge_cult_is_cultist_tooltip
+					has_eldritch_trait = yes					
+				}
+			}			
+		}
+	}
+
+    	
+	when_taken = {
+
+ 		custom_tooltip = nda_nen_purge_cult_tooltip       
+		# remove cultist from IG leadership
+		every_interest_group = {
+			limit = {			
+				custom_tooltip = {
+					text = nda_nen_purge_cult_is_cultist_tooltip
+
+					leader = { 
+						has_eldritch_trait = yes
+					}				
+				}				
+			}
+
+			leader = {
+				kill_character = yes
+			}
+			# make IG unhappy	
+			add_modifier = {
+				name = ig_mass_arrests
+				months = normal_modifier_time
+			}		
+		}
+
+		every_scope_character = {
+			limit = { 
+				is_ruler = yes 
+				has_eldritch_trait = yes
+			}
+			kill_character = yes	
+		}
+		add_modifier = {
+			name = government_conflict
+			months = normal_modifier_time
+		}	
+
+		# infamy, infamy!
+		change_infamy = 20
+	}
+
+	ai_chance = { # should be player only
+		base = 0	
+	}
+
+}

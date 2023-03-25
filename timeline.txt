@@ -15,18 +15,18 @@ Timeline of events in mod
 
 1852.1      nda_historic.1852   An American Medium in London
 
-1861.10     nda_astro.2         Conjunction 2
+1861.10     nda_astro.20        Conjunction 2
 1862.1      nda_historic.1862   London - The Ghost Club
 
 1875.4      nda_historic.1875   NY - The Theosophical Society
 
-1881.4      nda_astro.3         Conjunction 3
+1881.4      nda_astro.30        Conjunction 3
 1882.1      nda_historic.1882   London - The Society for Psychical Research
 1882.6      TODO                The Colour Out Of Space
 1884.5      TODO                Lot No. 249 - Mummy in Oxford
 1888.4      nda_historic.1888   Fox's come clean - Spiritualist Movement
 1888.8      nda_historic.1887   Theosophical Society - The Secret Doctrine
-1888.10     nda_historic.1887   The Golden Dawn
+1888.10     nda_historic.1889   The Golden Dawn
 1890.1      nda_hasturian.1     Paris - The King in Yellow
 1890.8      nda_ritual.2        Cthulhu Early Return
 1891.1      nda_hasturian.2     The King in Yellow Spreads
@@ -34,7 +34,7 @@ Timeline of events in mod
 1892.7~     nda_hasturian.5     The King in Yellow - Imperial America
 
 1901        nda_whh.1           House on the Borderlands
-1901.10     nda_astro.4         Conjunction 4
+1901.10     nda_astro.40        Conjunction 4
 1903.1      nda_nen.11          Herbert West - Appeal for reinstatement
 1903.6      nda_nen.12          Plague in Arkham
 1904        nda_whh.11          Carnacki the Ghost Finder
@@ -45,7 +45,7 @@ Timeline of events in mod
 1913.9      nda_nen.1913        Green Meadow - Maine Meteor
 1918.1      nda_nen.13          Herbert West - Research breakthrough  
 1920.1      nda_nen.14          Herbert West - Disappearence 
-1921.9      nda_astro.5         Conjunction 5
+1921.9      nda_astro.50        Conjunction 5
 1922.8      nda_nen.1922        Horror at Martin's Beach
 1925.3      nda_ritual.1        Cthulhu Returns
 1925.4      nda_ritual.1925     The Vigilant - only if Ritual fails

@@ -1,32 +1,15 @@
 ﻿namespace = nda_yigian
 
-nda_yigian.1 = { # Convert a Cultist to Yigian equivalent - called from journal 'je_nda_cult_to_yigian' on completion
-
+nda_yigian.10 = { # need to check if a leader is available to convert
 	type = country_event
-	placement = ROOT
-	title = nda_yigian.1.t
-	desc = nda_yigian.1.d
-	flavor =  nda_yigian.1.f
+	hidden = yes
 
-	duration = 3
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
-
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-
-	gui_window = event_window_1char_tabloid
-
-	#event_image = {  texture = "gfx/state_pictures/arctic.dds"  } # dummy image
-
-	left_icon = scope:converted_ig.leader
-
-	trigger = {
+	trigger = { # valled from journal
 
 	}
 
 	immediate = {
-		# set ig leader Cultist to be Yigian
+		debug_log = "Convert Leader for YIG"
 		random_interest_group = {
 			limit = { 
 				leader = { 
@@ -49,8 +32,38 @@ nda_yigian.1 = { # Convert a Cultist to Yigian equivalent - called from journal 
 				
 				save_scope_as = converted_ig_leader
 			}
-			save_scope_as = converted_ig	
-		}			
+			# now call display
+			trigger_event = { id = nda_yigian.1 }							
+		}
+	}
+
+}
+
+nda_yigian.1 = { # Convert a Cultist to Yigian equivalent - called from event above, down from journal 'je_nda_cult_to_yigian' 
+
+	type = country_event
+	placement = ROOT
+	title = nda_yigian.1.t
+	desc = nda_yigian.1.d
+	flavor =  nda_yigian.1.f
+
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:converted_ig.leader
+
+	trigger = {
+
+	}
+
+	immediate = {
+			
 	}	
 	
 	option = { #"What can we do"
@@ -112,9 +125,16 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 				}
 			}
 			# Change IG name - IG Should already exist
-			ig:ig_nda_cult_worshippers = {
+			every_interest_group = {
+				limit = { has_ideology = ideology_nda_cabalistic }
+
 				set_interest_group_name = ig_nda_yigian_cult
+				
+				#ig:ig_nda_cult_worshippers = {
+				#	set_interest_group_name = ig_nda_yigian_cult
+				#}				
 			}
+
 
 			# set religion
 			set_state_religion = rel:nda_rel_yigian
@@ -177,7 +197,7 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 				exists = c:YIG
 				c:YIG = ROOT
 		}
-		NOT = { has_global_variable = nda_yigian_lands_founded} 
+		NOT = { has_global_variable = nda_yigian_lands_founded } 
 	}
 
 	immediate = {
@@ -187,7 +207,7 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 		# send out notification		
 		every_country = {
 			limit = {
-				#is_player = yes
+				is_player = yes
 				NOT = {	c:YIG = ROOT }
 			}
 
@@ -210,7 +230,7 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 		nda_effect_yigian_setup = yes
 
 		# get other countries onside by increasing approval
-		nda_effect_yigian_influence = yes
+		#nda_effect_yigian_influence = yes
 	}	
 	
 	option = { #Hurrah!

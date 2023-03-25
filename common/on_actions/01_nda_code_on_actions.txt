@@ -1,7 +1,14 @@
 ﻿# For custom on_actions launched by the code itself.
+# have used seperate on_actions in case we ever need to use 'effects'
 
 # Root = Country
 on_monthly_pulse_country = {
+	on_actions = {
+		nda_monthly_on_action	
+	}
+}
+
+nda_monthly_on_action = {
 	events = {
 		nda_base.2 # Nameless Cults
 		nda_base.3 # Imprint of Nameless Cults	
@@ -61,6 +68,12 @@ on_monthly_pulse_country = {
 }
 
 on_half_yearly_pulse_country = {
+	on_actions = {
+		nda_half_yearly_on_action	
+	}
+}
+
+nda_half_yearly_on_action = {
 	events = {
 		nda_base.4 # Death of Junzt (Nameless Cults)
 		nda_base.9 # Cult Ideology Clean	
@@ -70,23 +83,6 @@ on_half_yearly_pulse_country = {
 		nda_nen.15 # From the Future
 		nda_nen.17 # Reanimated Spreads
 		nda_nen.16 # Reanimated Plague Starts
-	}
-}
-
-on_election_campaign_start = {
-	events = {
-
-	}
-}
-on_election_campaign_end = { 
-	events = {
-
-	}
-}
-
-on_five_year_pulse_country = {
-	events = {
-
 	}
 }
 
@@ -110,40 +106,3 @@ on_character_creation = {
 		}
 	}
 }
-
-## Root = Diplomatic Play
-#on_diplo_play_war_start = {
-#	effect = {
-		# Always buff ELD if participating
-
-		#every_scope_play_involved = {
-
-		#	limit = { THIS = c:ELD  } 
-
-		#	ROOT = { 
-
-		#		debug_log = "ELD : on_diplo_play_war_start add_war_war_support 0 "
-
-		#		add_diplomatic_play_war_support = { # had diplmatic stage ended or too late to effect ??
-		#			target = c:ELD
-		#			value = 15	
-		#		}
-
-		#		#add_war_war_support = { # has war actually started??  Error: add_war_war_support effect [ Wrong scope for effect: diplomatic_play, expected war ]
-		#		#	target = c:ELD
-		#		#	value = 10
-		#		#}
-
-		#		#add_variable = nda_buff_ELD
-
-		#		debug_log = "ELD : on_diplo_play_war_start add_war_war_support 1 "
-		#	}
-
-		#	debug_log = "ELD : on_diplo_play_war_start add_war_war_support 2"
-		#}
-
-
-	#	post_notification = diplo_play_war_start_notification
-	#	post_notification = diplo_play_war_start_third_party_notification
-#	}
-#}

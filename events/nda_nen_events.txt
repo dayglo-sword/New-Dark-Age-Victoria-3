@@ -125,7 +125,7 @@ nda_nen.11 = { # Appeal for reinstatement
  		# 1903 and owner of Miskatonic Uni - should still be NEN but could be Neighbours
 		game_date >= 1903  
 
-		p:x2B5499 = { state = { owner = ROOT has_building = building_university } }
+		p:x2B5499 = { state = { owner = ROOT has_building = building_nda_miskatonic_university } }
 
 		exists = c:NEN
 		c:NEN = ROOT
@@ -229,12 +229,14 @@ nda_nen.13 = { #
 		has_global_variable = herbert_west_approval	
 		game_date >= 1918  # 
 
-		p:x2B5499 = { state = { owner = ROOT has_building = building_university } }
+		p:x2B5499 = { state = { owner = ROOT has_building = building_nda_miskatonic_university } }
 		
 		exists = c:NEN
 		c:NEN = ROOT
 
 		has_technology_researched = chemical_warfare # or other chemical tech??
+
+		NOT = { has_global_variable = herbert_west_end } # Can't succeed if dragged to hell by undead!
 	}
 
 	immediate = {

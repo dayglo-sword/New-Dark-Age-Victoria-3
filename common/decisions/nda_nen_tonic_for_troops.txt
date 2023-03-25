@@ -1,0 +1,28 @@
+﻿nda_nen_tonic_for_troops = { # The pay-off of Herbert West's research!
+	is_shown = {
+		exists = c:NEN
+		this = c:NEN
+
+		p:x2B5499 = { state = { owner = ROOT has_building = building_nda_miskatonic_university } }
+
+		has_technology_researched = chemical_warfare # or other chemical tech??
+ 		has_global_variable = herbert_west_successful 
+
+		NOT = { has_modifier = nda_tonic_for_troops_modifier }
+	}
+
+	possible = {
+		exists = c:NEN
+	}
+
+    	
+	when_taken = {
+		# Add combat recovery modifier to country
+		add_modifier = { name = nda_tonic_for_troops_modifier } 
+	}
+
+	ai_chance = { # should be player only
+		base = 0	
+	}
+
+}

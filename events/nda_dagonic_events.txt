@@ -1,5 +1,43 @@
 ﻿namespace = nda_dagonic
 
+nda_dagonic.10 = { # need to check if a leader is available to convert
+	type = country_event
+	hidden = yes
+
+	trigger = { # valled from journal
+
+	}
+
+	immediate = {
+		debug_log = "Convert Leader for DGN"
+				# set ig leader Cultist to be dagonic
+		random_interest_group = {
+			limit = { 
+				leader = { 
+					has_eldritch_trait = yes
+				} 
+			}
+			leader = {
+				if = { limit = {  has_trait = nda_cultist } 
+					add_trait = nda_dagon_cultist # should override existing
+					remove_trait = nda_cultist
+				}
+				else_if = { limit = { has_trait = nda_acolyte }
+					add_trait = nda_dagon_acolyte # should override existing
+					remove_trait = nda_acolyte
+				}
+				else_if = { limit = { has_trait = nda_master }
+					add_trait = nda_dagon_master # should override existing
+					remove_trait = nda_master
+				}
+				save_scope_as = converted_ig_leader
+			}
+			trigger_event = { id = nda_dagonic.1 }			
+		}
+	}
+
+}
+
 nda_dagonic.1 = { # Convert a Cultist to dagonic equivalent - called from journal 'je_nda_cult_to_dagonic' on completion
 
 	type = country_event
@@ -26,30 +64,7 @@ nda_dagonic.1 = { # Convert a Cultist to dagonic equivalent - called from journa
 	}
 
 	immediate = {
-		# set ig leader Cultist to be dagonic
-		random_interest_group = {
-			limit = { 
-				leader = { 
-					has_eldritch_trait = yes
-				} 
-			}
-			leader = {
-				if = { limit = {  has_trait = nda_cultist } 
-					add_trait = nda_dagon_cultist # should override existing
-					remove_trait = nda_cultist
-				}
-				else_if = { limit = { has_trait = nda_acolyte }
-					add_trait = nda_dagon_acolyte # should override existing
-					remove_trait = nda_acolyte
-				}
-				else_if = { limit = { has_trait = nda_master }
-					add_trait = nda_dagon_master # should override existing
-					remove_trait = nda_master
-				}
-				save_scope_as = converted_ig_leader
-			}
-			save_scope_as = converted_ig	
-		}			
+			
 	}	
 	
 	option = { #"What can we do"
@@ -227,8 +242,8 @@ nda_dagonic.4 = {
 		}
 		# has at least one qualifying state
 		any_scope_state = {
-				is_coastal = yes				
-				NOT = { has_modifier = nda_dagonic_state_modifier }
+			is_coastal = yes				
+			NOT = { has_modifier = nda_dagonic_state_modifier }
 		}
 	}
 

@@ -19,7 +19,7 @@
 			#add_ideology = ideology_nda_cabalistic
 
 			add_modifier = {
-				name = nda_ig_secret_masters
+				name = nda_ig_secret_masters_modifier
 			}
 		}
 		
@@ -65,7 +65,11 @@ nda_effect_eldritch_annex = {
 			ROOT = c:ELD 
 			any_country = { 			
 				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }				
+					is_full_cult_country = { COUNTRY="THIS" }	
+					any_scope_state = { 
+						is_potentially_dagonic = no
+						is_potentially_yigian = no							
+					}			
 				}
 				has_variable = nda_cultists_in_open
 			}
@@ -74,7 +78,11 @@ nda_effect_eldritch_annex = {
 		random_country = {
 			limit = {
 				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }				
+					is_full_cult_country = { COUNTRY="THIS" }	
+					any_scope_state = { 
+						is_potentially_dagonic = no
+						is_potentially_yigian = no	
+					}								
 				}
 				has_variable = nda_cultists_in_open			
 			}
@@ -86,12 +94,20 @@ nda_effect_eldritch_annex = {
 
 		}
 
-		# send notification - does country still exist after annex?
-		post_notification = nda_ritual_country_surrenders # toast
+		if = {
+			limit = {
+				exists = scope:nda_eldritch_annex	
+			}	
+			# send notification - does country still exist after annex?
+			post_notification = nda_ritual_country_surrenders # toast
 
-		annex = scope:nda_eldritch_annex
+			annex = scope:nda_eldritch_annex	
 
-		debug_log = "ELD - Country surrenders."		
+			debug_log = "ELD - Country surrenders."						
+		}
+		else = {
+			debug_log = "ELD - No Country surrenders."	
+		}	
 	}	
 }
 

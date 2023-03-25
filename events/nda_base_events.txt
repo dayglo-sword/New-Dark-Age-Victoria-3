@@ -543,30 +543,12 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	left_icon = scope:targeted_ig_leader # converted_ig.leader
 
 	trigger = {
-		OR = {
-			AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-			}
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}						
-		}
+		is_full_cult_country = { COUNTRY="ROOT" }
 
 		any_interest_group = {
 			leader = { 
 				has_eldritch_trait = yes
-				OR = {
-					has_ideology = ideology_radical
-					has_ideology = ideology_pacifist
-					has_ideology = ideology_reformer
-					has_ideology = ideology_abolitionist
-				}
+				has_non_cultist_ideology = yes
 			} 
 		}	
 	}
@@ -576,12 +558,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 			limit = { 
 				leader = { 
 					has_eldritch_trait = yes
-					OR = {
-						has_ideology = ideology_radical
-						has_ideology = ideology_pacifist
-						has_ideology = ideology_reformer
-						has_ideology = ideology_abolitionist
-					}
+					has_non_cultist_ideology = yes
 				} 
 			}
 			leader = {
@@ -603,7 +580,14 @@ nda_base.9 = { # Is there some non-conformists within the cult
 		}
 
 		# have chance of traditionalist as well?
-		scope:targeted_ig_leader = { set_ideology = ideology_moderate } # This ignores ideology possibility checks?
+		scope:targeted_ig_leader = { 
+			random_list = {	# This ignores ideology possibility checks?
+				25 = { set_ideology = ideology_nda_cultist }
+				25 = { set_ideology = ideology_jingoist_leader }
+				25 = { set_ideology = ideology_fascist }
+				25 = { set_ideology = ideology_slaver }
+			}
+		} 
 		debug_log = "Check for Non-Conformists - Persuaded" 	
 		# rdeuce radicals in IG as well? Change Anger?
 	}	
@@ -703,20 +687,7 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 
 	trigger = {
 		NOT = { has_global_variable = nda_ritual_cthulhu_leaves } # he's gone so no further bonuses
-		OR = {
-			AND = {
-					exists = c:ELD
-					c:ELD = ROOT
-			}	
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}	
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}			
-		}
+		is_full_cult_country = { COUNTRY="THIS" }
 	
 		is_at_war = yes
 		is_player = no # only buff for AI because AI needs all the help it can get
@@ -741,16 +712,21 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 		default_option = yes
 
 		trigger = {
-			NOT = { has_war_with = c:ELD } # no bonus for hitting boss guy
+			NOT = { 
+				AND = {
+					exists = c:ELD
+					has_war_with = c:ELD # no bonus for hitting boss guy
+				}
+			} 
 		}
 
 		# buff the war score
 		scope:eldritch_war = {
 			IF = {
-				limit = { has_war_support = { target = ROOT value < 50 } }
-				add_war_exhaustion = { target = ROOT value = -0.3 }
-				add_war_war_support = { target = ROOT value = 0.5 }
-				#set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
+				limit = { has_war_support = { target = ROOT value < 30 } }
+				add_war_exhaustion = { target = ROOT value = -0.2 }
+				add_war_war_support = { target = ROOT value = 0.4 }
+
 				debug_log = "add buff"				
 			}
 
@@ -762,26 +738,27 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 		name = nda_base.11.b
 		
 		trigger = {
+			exists = c:ELD
 			has_war_with = c:ELD # no bonus for hitting boss guy
 		}
 
-		# buff the war score to back out of war
+		# nerf the war score to back out of war
 		scope:eldritch_war = {
 			add_war_exhaustion = { target = ROOT value = 0.5 }
 			add_war_war_support = { target = ROOT value = -1 }
-			#set_variable = nda_eld_war_buff # This scope doesn't support variables. Scope: War
+
 			debug_log = "negative buff"
 		}
 
 	}
 
-#	option = { #Don't over do it
-#		name = nda_base.11.c	
+	option = { #Don't over do it
+		name = nda_base.11.c	
 #
 #		trigger = {
 #			is_player = yes # option to avoid possible nation ruin ?
 #		}
-#	}
+	}
 }
 
 nda_base.12 = { # Secret Cultists in Country - fired from event nda_base.6 called by journals: je_nda_cult_spreads
@@ -856,6 +833,7 @@ nda_base.13 = { # The Cult fails to spread
 		name = nda_base.13.b
 		
 		# remove fail variable - should allow retrigger of journal
+		remove_variable = nda_cult_spread_tracker		
 		remove_variable = nda_cult_spread_failed	
 	}
 }
@@ -966,7 +944,7 @@ nda_base.20 = { # Request from the devout
 
 		any_interest_group = { # from devout only
 			is_interest_group_type = ig_devout 
-			leader = { NOT = { has_any_cultist_trait = yes } } # must be 'clean'
+			leader = { has_any_cultist_trait = no } # must be 'clean'
 		}
 	}
 
@@ -976,7 +954,7 @@ nda_base.20 = { # Request from the devout
 		random_interest_group = { # from devout only
 			limit = { 
 				is_interest_group_type = ig_devout 
-				leader = { NOT = { has_any_cultist_trait = yes } }
+				leader = { has_any_cultist_trait = no }
 			}
 			leader = { 
 				save_scope_as = devout_ig_leader
@@ -1037,10 +1015,10 @@ nda_base.21 = { # A cultist targeted
 				trigger_event = { id = nda_base.22 }	
 			}		
 		}
-		else = {
-			# no cultists - get innocent leader (or trigger pit and pendulum)? Very low chance of this
-			trigger_event = { id = nda_base.25 }
-		}
+		#else = { # can't trigger
+		#	# no cultists - get innocent leader (or trigger pit and pendulum)? Very low chance of this
+		#	trigger_event = { id = nda_base.25 }
+		#}
 	}
 }
 

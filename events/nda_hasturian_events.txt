@@ -323,6 +323,8 @@ nda_hasturian.5 = { # Create Imperial America
 		
 		change_tag = IAM 
 
+		set_state_religion = rel:nda_rel_cultist
+
 		# change to absolute Monarchy
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy
@@ -343,6 +345,7 @@ nda_hasturian.5 = { # Create Imperial America
 				interest_group = ig_intelligentsia
 				dna = ecchi_dna_charles_dickens
 				ideology = ideology_theocrat
+				religion = rel:nda_rel_cultist
 				traits = {
 					romantic
 					imperious
@@ -553,9 +556,12 @@ nda_hasturian.10 = { # If he dies bring him back.
 		
 		#change_tag = IAM 
 
+		set_state_religion = rel:nda_rel_cultist
+		
 		# re-assert absolute Monarchy
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy
+
 
 		ROOT = { 
 			# put Castaigne in charge (again)
@@ -568,6 +574,7 @@ nda_hasturian.10 = { # If he dies bring him back.
 				interest_group = ig_intelligentsia
 				dna = ecchi_dna_charles_dickens
 				ideology = ideology_theocrat
+				religion = rel:nda_rel_cultist
 				traits = {
 					romantic
 					imperious

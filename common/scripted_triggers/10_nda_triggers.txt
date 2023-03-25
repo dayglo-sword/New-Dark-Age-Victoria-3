@@ -39,6 +39,16 @@ has_any_cultist_trait = {
 	}
 }
 
+has_non_cultist_ideology = {
+	OR = {
+		has_ideology = ideology_radical
+		has_ideology = ideology_pacifist
+		has_ideology = ideology_reformer
+		has_ideology = ideology_abolitionist	
+		has_ideology = ideology_atheist	
+		has_ideology = ideology_moderate			
+	}
+}
 ### Geography triggers
 
 is_full_cult_country = {
@@ -55,6 +65,10 @@ is_full_cult_country = {
 			exists = c:DGN
 			owner = { c:DGN = $COUNTRY$ }				
 		}	
+		AND = {
+			exists = c:LEN
+			owner = { c:LEN = $COUNTRY$ }				
+		}
 	}
 }
 

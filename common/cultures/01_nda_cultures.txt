@@ -29,11 +29,12 @@
 	}	
 	
 	ethnicities = { # have a bit of a mix
-		1 = caucasian
-		1 = arab
-		1 = central_asian
-		1 = african
+		2 = caucasian
+		2 = arab
+		2 = central_asian
+		2 = african
 		1 = dagonic_hybrid
+		1 = yigian_hybrid
 	}
 	graphics = european
 }

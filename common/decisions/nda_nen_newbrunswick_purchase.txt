@@ -12,8 +12,20 @@
         # on border
         has_strategic_land_adjacency = c:NBS
 
-		c:NBS = { relations:root >= relations_threshold:amicable }
-		#relations:c:NBS >= relations_threshold:neutral
+		c:NBS = { 
+			relations:root >= relations_threshold:amicable 
+		
+			OR = {
+				is_subject = no
+				AND = {
+					is_subject = yes		
+					any_overlord_or_above = {
+						relations:root >= relations_threshold:amicable 
+					}			
+				}
+			}
+		}
+
 		NOT = { has_war_with = c:NBS }
 		NOT = { owes_obligation_to =  c:NBS }
 
@@ -32,6 +44,7 @@
  		custom_tooltip = nda_nen_newbrunswick_union_tooltip       
         annex = c:NBS
 
+		# have expenses as per Alaska purchase
         # add anglo-candian as acceptable - unbalances number of politicians
         # add_primary_culture = cu:anglo_canadian
 	}
@@ -41,7 +54,7 @@
 
 		modifier = {
 			trigger = { bureaucracy > 0 }
-			add = 10
+			add = 5
 		}
 		modifier = {
 			OR = {
@@ -70,7 +83,6 @@ nda_nen_novascotia_union = {
 
 		c:NVS = { relations:root >= relations_threshold:amicable }
 		
-		#relations:c:NVS >= relations_threshold:neutral 
 		NOT = { has_war_with = c:NVS }
 		NOT = { owes_obligation_to =  c:NVS }
 
@@ -99,7 +111,7 @@ nda_nen_novascotia_union = {
 
 		modifier = {
 			trigger = { bureaucracy > 0 }
-			add = 10
+			add = 5
 		}
 		modifier = {
 			OR = {
