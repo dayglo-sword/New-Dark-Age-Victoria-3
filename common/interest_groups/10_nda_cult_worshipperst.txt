@@ -10,7 +10,7 @@
 	
 	enable = {
 		#always = yes
-		has_variable = nda_cultists_in_open
+		#has_variable = nda_cultists_in_open # what happens if revolt country but IG is part of revolt / split
 		any_scope_pop = {
 			OR = {
 				religion = rel:nda_rel_cultist
@@ -27,6 +27,8 @@
 	
 	on_enable = {
 		# add as powerbrokers ? this just makes them happy? - nothing to do with adding power - current scope is country??
+		debug_log = "enable ig Cultists"
+		debug_log_scopes = yes
 		ig:ig_nda_cult_worshippers = {
 			IF = {
 				limit = { 
@@ -97,15 +99,28 @@
 	}
 	
 	pop_weight = {
-		value = 250 # big weight - want as many cultist to join as possible	
 
+		# cultists in open
+
+		value = 0 
+
+		add = {
+			if = {
+				limit = { 
+					owner = {
+						has_variable = nda_cultists_in_open
+					}
+				}
+				value = 300 # big weight - want as many cultist to join as possible	
+			}
+		}
 		add = {
 			desc = "POP_ARISTOCRATS"
 			if = {
 				limit = { 
 					is_pop_type = aristocrats
 				}
-				value = 150
+				value = 100
 			}
 		}
 
@@ -115,7 +130,7 @@
 				limit = { 
 					is_pop_type = officers
 				}
-				value = 100
+				value = 50
 			}
 		}
 		add = {
@@ -124,7 +139,7 @@
 				limit = { 
 					is_pop_type = clergymen
 				}
-				value = 100
+				value = 50
 			}
 		}	
 
@@ -134,7 +149,7 @@
 				limit = { 
 					is_pop_type = peasants
 				}
-				value = 100
+				value = 50
 			}
 		}								
 		

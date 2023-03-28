@@ -93,6 +93,8 @@
 
 nda_effect_dagonic_annex = {
 	# annex a single country that openly supports DGN
+	debug_log = "Dagonic - Annex Check."	
+
 	if = {
 		limit = {
 			exists = ROOT

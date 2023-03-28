@@ -64,6 +64,8 @@ nda_effect_yigian_setup = {
 
 nda_effect_yigian_annex = {
 	# annex a single country that openly supports YIG
+	debug_log = "Yigian - Annex Check."	
+
 	if = {
 		limit = {
 			exists = ROOT
@@ -73,7 +75,8 @@ nda_effect_yigian_annex = {
 			} 
 			any_country = { 			
 				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }				
+					is_full_cult_country = { COUNTRY="THIS" }	
+					is_player = yes					
 				}
 				has_variable = nda_yig_in_open
 			}

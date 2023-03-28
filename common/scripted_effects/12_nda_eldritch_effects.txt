@@ -66,6 +66,7 @@ nda_effect_eldritch_annex = {
 			any_country = { 			
 				NOT = {
 					is_full_cult_country = { COUNTRY="THIS" }	
+					is_player = yes	
 					any_scope_state = { 
 						is_potentially_dagonic = no
 						is_potentially_yigian = no							
@@ -75,23 +76,25 @@ nda_effect_eldritch_annex = {
 			}
 		} 
 
-		random_country = {
+		ordered_country = {
 			limit = {
 				NOT = {
 					is_full_cult_country = { COUNTRY="THIS" }	
+					is_player = yes	
 					any_scope_state = { 
 						is_potentially_dagonic = no
 						is_potentially_yigian = no	
-					}								
+					}				
 				}
 				has_variable = nda_cultists_in_open			
 			}
-			
+			order_by = { subtract = global_country_ranking }
+			position = 3 # don't want largest countries just yet
+
 			save_scope_as = nda_eldritch_annex
 
 			# Reduce radicals before annex else high revolt risk
-			add_radicals  = { value = -0.5 }
-
+			add_radicals  = { value = -0.5 }			
 		}
 
 		if = {
