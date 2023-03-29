@@ -169,7 +169,9 @@ je_nda_cult_to_yigian = {
 			}
 
 		}				
-				
+		any_scope_state = { # has capital in americas
+			is_potentially_yigian = yes
+		}				
 	}
 
 	possible = {
@@ -337,6 +339,10 @@ je_nda_cult_to_dagonic = {
 				exists = c:ELD
 				c:ELD = ROOT				
 			}
+		}
+
+		any_scope_state = { # has capital in coastal asia/pacific
+			is_potentially_dagonic = yes
 		}
 	}
 

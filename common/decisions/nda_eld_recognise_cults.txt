@@ -32,7 +32,7 @@
 	}
 	
 	when_taken = {
-
+		debug_log = "nda_eld_recognise_dagonic_lands" 
 		# set nda_cul_dagonic
 		every_scope_state = {
 			#IF = {
@@ -113,7 +113,7 @@ nda_eld_release_dagonic_lands = {
 	}
 	
 	when_taken = {
-
+		debug_log = "nda_eld_release_dagonic_lands" 
 		custom_tooltip = nda_eld_release_dagonic_lands_tooltip
 
 		# set to Dagonic
@@ -176,7 +176,7 @@ nda_eld_recognise_yigian_lands = {
 	}
 	
 	when_taken = {
-
+		debug_log = "nda_eld_recognise_yigian_lands" 
 		custom_tooltip = nda_eld_recognise_yigian_lands_tooltip
 
 		# set nda_cul_yigian
@@ -245,7 +245,7 @@ nda_eld_release_yigian_lands = {
 	}
 	
 	when_taken = {
-
+		debug_log = "nda_eld_release_yigian_lands" 
 		custom_tooltip = nda_eld_release_yigian_lands_tooltip
 
 		# set to Yigian

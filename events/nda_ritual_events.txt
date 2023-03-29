@@ -206,11 +206,10 @@ nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countri
 	}
 
 	immediate = {
-		# random select country to join ELD
-		nda_effect_eldritch_annex = yes
-
 		debug_log = "Ritual - The world surrenders."	
 
+		# random select country to join ELD
+		nda_effect_eldritch_annex = yes
 	}	
 	
 	option = { # Good. Good.

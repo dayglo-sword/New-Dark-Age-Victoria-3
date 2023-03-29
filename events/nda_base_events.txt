@@ -465,6 +465,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 					NOT = { owes_obligation_to = c:ELD }		
 				}
 				debug_log = "Offer Obligation to ELD on becoming Cultist" #[ROOT.GetName] : 
+				debug_log_scopes = yes
 				set_owes_obligation_to = { country = c:ELD setting = yes }
 				change_relations = { country = c:ELD value = 50 } # 30 was too low?
 			}
@@ -517,6 +518,7 @@ nda_base.8 = { # Notification that first country has recognized cult
 				can_cult_infiltrate = yes
 			}
 			debug_log = "Cult Expanded from Neighbour" #[ROOT.GetName] : 
+			debug_log_scopes = yes
 			add_journal_entry = { type = je_nda_cult_spreads }	
 				
 		}

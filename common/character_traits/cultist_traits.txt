@@ -84,13 +84,18 @@ nda_master = {
 	command_modifier = {
 
 	}
-		
+	
+	country_modifier = {
+		country_influence_add = 50
+		country_authority_add = 50
+	}	
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
 		#interest_group_approval_add = 1
 	}
-	
+
 	possible = {
 		owner = { 
 			has_variable = nda_cultists_in_open
@@ -204,13 +209,18 @@ nda_yig_master = {
 	command_modifier = {
 
 	}
-		
+	
+	country_modifier = {
+		country_influence_add = 50
+		country_authority_add = 50
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
 		#interest_group_approval_add = 1
 	}
-	
+
 	possible = {
 		NOT = { 
 			has_trait = nda_dagon_cultist
@@ -328,6 +338,11 @@ nda_dagon_master = {
 	command_modifier = {
 
 	}
+
+	country_modifier = {
+		country_influence_add = 50
+		country_authority_add = 50
+	}
 	
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
@@ -335,6 +350,7 @@ nda_dagon_master = {
 		#interest_group_approval_add = 1
 	}
 	
+
 	possible = {
 		NOT = { 
 			has_trait = nda_yig_cultist

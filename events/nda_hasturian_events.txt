@@ -218,6 +218,7 @@ nda_hasturian.3 = { # The Repairer of Reputations
 
 	immediate = {
 		set_variable = nda_king_in_yellow_meeting
+		debug_log = "King in Yellow - Meeting" 
 	}	
 	
 	option = { #Ignore and Mr Wilde meets his 'historic' fate
