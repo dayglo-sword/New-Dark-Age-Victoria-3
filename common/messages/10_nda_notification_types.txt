@@ -118,6 +118,15 @@ nda_ritual_country_surrenders = {
 	#days = 28
 }
 
+nda_ritual_post_cthulhu_split = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/influence.dds"
+
+	notification_type = toast
+	#days = 28
+}
+
 ### notifications from WHH events
 nda_house_on_borderlands = {
 	type = country

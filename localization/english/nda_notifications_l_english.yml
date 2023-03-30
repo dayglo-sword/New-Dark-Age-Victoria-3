@@ -32,7 +32,7 @@
 
  notification_nda_dagon_attacks_tooltip:0 "#header $notification_nda_dagon_attacks_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_dagon_attacks_desc$"
  notification_nda_dagon_attacks_name:1 "Dagon has Risen"
- notification_nda_dagon_attacks_desc:1 "The Lord of the Deep Ones, Dagon, has attacked the coast of [SCOPE.sC('nda_dagon_target').GetName ], devastating it."
+ notification_nda_dagon_attacks_desc:1 "The Lord of the Deep Ones, Dagon, has attacked the coast of [SCOPE.GetRootScope.GetState.GetName], devastating it."
 
  notification_nda_house_on_borderlands_tooltip:0 "#header $notification_nda_house_on_borderlands_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_house_on_borderlands_desc$"
  notification_nda_house_on_borderlands_name:1 "A House on the Borderlands"

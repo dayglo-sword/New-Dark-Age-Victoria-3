@@ -35,7 +35,9 @@ nda_ritual.1 = { # Cthulhu Returns
 
 		trigger_event = { id = nda_ritual.4 years = 10 } # leaves in 10 years # this is flakey - sometimes does not trigger
 
-		post_notification = nda_ritual_cthulhu_returns # toast
+		every_country = {
+			post_notification = nda_ritual_cthulhu_returns
+		}
 	}	
 	
 	option = { #So it begins
@@ -80,7 +82,9 @@ nda_ritual.2 = { # Cthulhu Early Return
 
 		trigger_event = { id = nda_ritual.4 years = 20 } # leaves in 20 years - longer than normal as reward  # this is flakey - sometimes does not trigger
 
-		post_notification = nda_ritual_cthulhu_returns # toast
+		every_country = {
+			post_notification = nda_ritual_cthulhu_returns
+		}
 	}	
 	
 	option = { #So it begins
@@ -154,7 +158,9 @@ nda_ritual.4 = { # Cthulhu Leaves
 
 		nda_effect_cthulhu_leaves = yes
 
-		post_notification = nda_ritual_cthulhu_leaves # toast
+		every_country = {
+			post_notification = nda_ritual_cthulhu_leaves
+		}
 	}	
 	
 	option = { # Just a matter of time
@@ -268,6 +274,10 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 
 				remove_primary_culture = cu:nda_cul_cultist
 			}	
+			save_scope_as = nda_eldritch_freedom
+			every_country = {
+				post_notification = nda_ritual_post_cthulhu_split
+			}
 			debug_log = "Ritual - Eldritch Cult Splits"					
 		}	
 	}	

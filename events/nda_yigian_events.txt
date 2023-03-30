@@ -144,7 +144,7 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 
 			every_country = {
 				limit = {
-					is_player = yes
+					#is_player = yes
 					NOT = { has_global_variable = nda_yig_in_open }
 				}
 
@@ -207,7 +207,7 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 		# send out notification		
 		every_country = {
 			limit = {
-				is_player = yes
+				#is_player = yes
 				NOT = {	c:YIG = ROOT }
 			}
 

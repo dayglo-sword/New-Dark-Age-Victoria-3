@@ -727,7 +727,7 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 			IF = {
 				limit = { has_war_support = { target = ROOT value < 30 } }
 				add_war_exhaustion = { target = ROOT value = -0.2 }
-				add_war_war_support = { target = ROOT value = 0.4 }
+				add_war_war_support = { target = ROOT value = 0.5 }
 
 				debug_log = "add buff"				
 			}

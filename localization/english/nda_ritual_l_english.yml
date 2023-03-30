@@ -67,5 +67,8 @@
  notification_nda_ritual_country_surrenders_name:0 "[SCOPE.sC('nda_eldritch_annex').GetName ] Surrenders to the Cult."
  notification_nda_ritual_country_surrenders_desc:0 "[SCOPE.sC('nda_eldritch_annex').GetName ] has surrendered itself to the mercies of the Eldritch Cult."
 
+ notification_nda_ritual_post_cthulhu_split_tooltip:0 "#header $notification_nda_ritual_post_cthulhu_split_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_post_cthulhu_split_desc$"
+ notification_nda_ritual_post_cthulhu_split_name:0 "Freedom for [SCOPE.sC('nda_eldritch_freedom').GetName ]"
+ notification_nda_ritual_post_cthulhu_split_desc:0 "They have broken free from the Eldritch Cult!"
 # diplo
  nda_cult_liberation:0 "War of Liberation from the Cult"

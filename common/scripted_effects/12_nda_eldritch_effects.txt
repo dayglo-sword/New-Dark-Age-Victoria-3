@@ -114,7 +114,10 @@ nda_effect_eldritch_annex = {
 			debug_log = "ELD - Country surrenders."	
 
 			# send notification - does country still exist after annex?
-			post_notification = nda_ritual_country_surrenders # toast
+			every_country = {
+				post_notification = nda_ritual_country_surrenders
+			}
+
 			scope:nda_eldritch_annex = { debug_log_scopes = yes }
 			annex = scope:nda_eldritch_annex	
 				
