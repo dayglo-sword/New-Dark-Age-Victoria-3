@@ -37,7 +37,7 @@
 					# Make cultists outside cult lands angry
 					ROOT = {
 						add_radicals = {
-							value = very_large_radicals
+							value = 0.5
 							culture = THIS
 						}						
 					}				
@@ -62,7 +62,7 @@
 					# Make cultists in cult lands happy!
 					ROOT = {
 						add_loyalists = {
-							value = very_large_radicals
+							value = 0.5
 							culture = THIS
 						}
 					}				
@@ -104,8 +104,12 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					}
 					# Make non-cultist survivors angry
 					scope:target_scope = {
+						add_loyalists = {
+							value = -0.5
+							culture = THIS
+						}
 						add_radicals = {
-							value = very_large_radicals
+							value = 0.5
 							culture = THIS
 						}					
 					}				
@@ -121,7 +125,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# Make cultists unhappy
 					scope:target_scope = {
 						add_radicals = {
-							value =  medium_radicals
+							value =  very_large_radicals
 							culture = THIS
 						}						
 					}				
@@ -145,7 +149,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# Make non-cultist survivors angry
 					scope:target_scope = {
 						add_radicals = {
-							value = very_large_radicals
+							value = 0.5
 							culture = THIS
 						}					
 					}				
@@ -161,11 +165,19 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# Make cultists unhappy
 					scope:target_scope = {
 						add_radicals = {
-							value =  medium_radicals
+							value =  very_large_radicals
 							culture = THIS
 						}						
 					}				
 				}
+			}
+
+			# remove any cultist homelands and claims
+			every_state_region = { # get claim on neighbours
+				limit = { 
+					is_homeland = cu:nda_cul_cultist			
+				}
+				remove_homeland = nda_cul_cultist						
 			}
 
 			# decrease relations with cult countries
@@ -208,17 +220,31 @@ nda_effect_cthulhu_leaves = { # Used at departure
 
 			# decrease relations with cult countries
 			if = {
-				limit = { exists = c:ELD}
+				limit = { exists = c:ELD }
 				change_relations = { country = c:ELD value = -100 }
 			}
 			if = {
-				limit = { exists = c:YIG}
+				limit = { exists = c:YIG }
 				change_relations = { country = c:YIG value = -100 }
 			}
 			if = {
-				limit = { exists = c:DAG}
+				limit = { exists = c:DAG }
 				change_relations = { country = c:DAG value = -100 }
 			}
-		}			
+
+			# remove any cultist homelands and claims
+			every_state_region = { # get claim on neighbours
+				limit = { 
+					is_homeland = cu:nda_cul_cultist			
+				}
+				remove_homeland = nda_cul_cultist						
+			}
+		}	
+
+		# remove 'sercret masters' as not apprpriate
+		ig:ig_nda_cult_worshippers = {
+			# remove any secret masters modifier
+			remove_modifier = nda_ig_secret_masters_modifier
+		}		
 	}		
 }

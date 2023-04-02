@@ -361,21 +361,20 @@ nda_dagonic.7 = {
 			add_pollution = 40				
 		}
 
-
 		every_scope_building = {
 			# reduce in size or remove?
-
 		}
 
-		#add_modifier = {
-		#	name = nda_dagonic_state_modifier
-		#}
+		add_modifier = {
+			name = nda_dagonic_state_ruin_modifier
+			months = normal_modifier_time
+		}
 
 		every_country = {
-			limit = {
-				is_player = yes
-				NOT = { has_global_variable = nda_dagon_in_open}
-			}
+			#limit = {
+			#	is_player = yes
+			#	NOT = { has_variable = nda_dagon_in_open}
+			#}
 
 			post_notification = nda_dagon_attacks 
 

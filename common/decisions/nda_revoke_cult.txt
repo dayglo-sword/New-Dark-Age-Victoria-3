@@ -1,0 +1,53 @@
+﻿nda_revoke_cult = { # post 'Cthulhu leave' to start dismantling global cult influence
+	is_shown = {
+		# but not openly
+		has_global_variable = nda_ritual_cthulhu_leaves	
+		has_variable = nda_cultists_in_open
+		country_has_primary_culture = cu:nda_cul_cultist
+		NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = nda_revoke_cult_failure_tooltip
+			has_global_variable = nda_ritual_cthulhu_leaves	
+			has_variable = nda_cultists_in_open
+		}
+
+		country_has_primary_culture = cu:nda_cul_cultist
+		any_interest_group = {	
+			has_ideology = ideology_nda_cabalistic
+			NOT = {
+				is_in_government = yes	
+				is_powerful = yes						
+			}		
+		}	
+	}
+    	
+	when_taken = {
+
+		debug_log = "Revoke Cult"
+		debug_log_scopes = yes
+
+		remove_primary_culture = cu:nda_cul_cultist
+
+		# convert cultists back to main culture?		
+
+		## angry cultists!
+		add_loyalists = { value = -0.7 culture = cu:nda_cul_cultist }
+		add_loyalists = { value = -0.7 culture = cu:nda_cul_yigian }
+		add_loyalists = { value = -0.7 culture = cu:nda_cul_dagonic }
+
+		add_radicals =  { value = 0.7 culture = cu:nda_cul_cultist }
+		add_radicals =  { value = 0.7 culture = cu:nda_cul_yigian }
+		add_radicals =  { value = 0.7 culture = cu:nda_cul_dagonic }
+
+		# infamy, infamy!
+		change_infamy = 20
+	}
+
+	ai_chance = { 
+		base = 5	
+	}
+
+}

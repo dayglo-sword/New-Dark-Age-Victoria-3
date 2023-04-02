@@ -40,11 +40,11 @@
 					name = je_nda_ritual_proceeds_tracker
 					value = 0
 				}
-			clamp_global_variable = {
-					name = je_nda_ritual_proceeds_tracker
-					min = 0
-					max = 5000			
-			}			
+			#clamp_global_variable = {
+			#		name = je_nda_ritual_proceeds_tracker
+			#		min = 0
+			#		max = 5000			
+			#}			
 		}
 		
 		save_scope_as = nda_je_ritual_proceeds_scope
@@ -87,7 +87,7 @@
 	}
 
 	goal_add_value = {
-		add = 3000 # 10 years at base rate
+		add = 4000 # 20 years? depending on helpers
 	}
 
     fail = {
@@ -151,11 +151,11 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 					name = je_nda_ritual_proceeds_tracker
 					value = 0
 				}
-			clamp_global_variable = {
-					name = je_nda_ritual_proceeds_tracker
-					min = 0
-					max = 5000			
-			}			
+			#clamp_global_variable = {
+			#		name = je_nda_ritual_proceeds_tracker
+			#		min = 0
+			#		max = 5000			
+			#}			
 		}
 		
 		save_scope_as = nda_je_ritual_proceeds_scope
@@ -198,7 +198,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 	}
 
 	goal_add_value = {
-		add = 3000 # 10 years at base rate
+		add = 4000 # 20 years? depending on helpers
 	}
 
     fail = {

@@ -13,7 +13,8 @@ nda_monthly_on_action = {
 		nda_base.2 # Nameless Cults
 		nda_base.3 # Imprint of Nameless Cults	
 		nda_base.5 # First Cultist
-
+		
+		nda_base.9 # Cult Ideology Clean
 		nda_base.10 # Eldritch Realms Proclaimed
 		nda_base.11 # Eldritch War Buff
 		nda_base.14	# Revolt Reset
@@ -28,13 +29,14 @@ nda_monthly_on_action = {
 		nda_ritual.1 
 		nda_ritual.2 
 		nda_ritual.5 # Eldritch add Cult countries
-		nda_ritual.6 # Eldritch lose non-Cult countries
-
+		
+		nda_ritual.1860 # The Tale of Professor Webb
 		nda_ritual.1907 # The Tale of Inspector Legrasse
 		nda_ritual.1925 # Mystery Derelict Found At Sea
 
 		nda_yigian.3 # Yigian Lands Proclaimed
 		nda_dagonic.3 # Dagonic Shores Proclaimed
+
 
 		nda_nen.10
 		nda_nen.11 
@@ -63,7 +65,9 @@ nda_monthly_on_action = {
 		nda_historic.1889
 	}
 	random_events = {
-		
+		1 = 0
+		1 = nda_ritual.6 # Eldritch lose non-Cult countries
+		1 = nda_ritual.7 # Eldritch gains cultural radicals
 	}
 }
 
@@ -75,8 +79,7 @@ on_half_yearly_pulse_country = {
 
 nda_half_yearly_on_action = {
 	events = {
-		nda_base.4 # Death of Junzt (Nameless Cults)
-		nda_base.9 # Cult Ideology Clean	
+		nda_base.4 # Death of Junzt (Nameless Cults)			
 		nda_dagonic.4 # Bounty of the Seas
 		nda_dagonic.6 # Fury of Dagon
 		nda_hasturian.8 # The Play Fades

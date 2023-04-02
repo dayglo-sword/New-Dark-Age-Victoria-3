@@ -34,3 +34,7 @@ nda_nen_purge_cult_not_open_cultists_tooltip:0 "The Cultists have not openly rev
 nda_nen_purge_cult_lead_by_cultist_tooltip:0 "Is lead by a Cultist."
 nda_nen_purge_cult_is_cultist_tooltip:0 "Is a Cultist."
 
+nda_revoke_cult:0 "Reduce the Cultist Influence"
+nda_revoke_cult_desc:0 "Since their failure to take over the world it is time to put the Cultists in their place, and return to something approaching normality."
+nda_revoke_cult_tooltip:0 "Remove the Cult as a Primary Culture."
+nda_revoke_cult_failure_tooltip:0 "Great Cthulhu and their Cult is no longer relevant."

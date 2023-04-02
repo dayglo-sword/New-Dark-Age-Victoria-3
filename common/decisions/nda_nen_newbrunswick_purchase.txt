@@ -81,8 +81,20 @@ nda_nen_novascotia_union = {
         # on border
         has_strategic_land_adjacency = c:NVS
 
-		c:NVS = { relations:root >= relations_threshold:amicable }
-		
+		c:NVS = { 
+			relations:root >= relations_threshold:amicable 
+			
+			OR = {
+				is_subject = no
+				AND = {
+					is_subject = yes		
+					any_overlord_or_above = {
+						relations:root >= relations_threshold:amicable 
+					}			
+				}
+			}			
+		}
+
 		NOT = { has_war_with = c:NVS }
 		NOT = { owes_obligation_to =  c:NVS }
 

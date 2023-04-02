@@ -272,7 +272,7 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 			if = {
 				limit = { country_has_primary_culture = cu:nda_cul_cultist }
 
-				remove_primary_culture = cu:nda_cul_cultist
+				remove_primary_culture = cu:nda_cul_cultist				
 			}	
 			save_scope_as = nda_eldritch_freedom
 			every_country = {
@@ -288,7 +288,50 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 	}
 }
 
-# nda_ritual.7 = { # Monitor for Cthulhu departs
+nda_ritual.7 = { # Unrest in Eldritch lands
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.7.t
+	desc = nda_ritual.7.d
+	flavor =  nda_ritual.7.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { 
+		has_global_variable = nda_ritual_cthulhu_leaves	
+		AND = {
+			exists = c:ELD
+			c:ELD = ROOT
+		}	
+		#is_player = no # only for AI
+
+		# has subject that is not a cultist stronghold
+		any_scope_culture = {
+			NOT = { is_primary_culture_of = ROOT }
+		}
+	}
+
+	immediate = {
+		debug_log = "Ritual - Eldritch Cult Rebels Select"	
+		nda_effect_eldritch_strife = yes
+	}	
+	
+	option = { # It's Over
+		name = nda_ritual.7.a
+		default_option = yes
+	}
+}
 
 # Call of Cthulhu story events
 # The Tale of Inspector Legrasse - November 1907 New Orleans
@@ -351,7 +394,50 @@ nda_ritual.1907 = {
 	}
 }
 
-#nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol - best as part of expedition journal?
+nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol - best as part of expedition journal?
+	type = country_event
+	placement = p:x8391B2 
+	title = nda_ritual.1860.t
+	desc = nda_ritual.1860.d 
+	flavor =  nda_ritual.1860.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_antarctica.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+		
+ 		# 1860 
+		game_date >= 1860.5.1 
+		game_date < 1861 
+
+		AND = {
+			exists = c:NEN
+			c:NEN = ROOT
+		}			
+			
+		NOT = { has_variable = nda_ritual_webb }	
+
+	}
+
+	immediate = {
+		set_variable = nda_ritual_webb	
+		debug_log = "Ritual - The Tale of Professor Webb "	
+
+	}	
+	
+	option = { # A Strange Tale
+		name = nda_ritual.1860.a
+		default_option = yes
+	}
+}
 
 nda_ritual.1925 = { #April - The Vigilant - only if Ritual fails
 	type = country_event

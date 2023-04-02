@@ -549,7 +549,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 
 		any_interest_group = {
 			leader = { 
-				has_eldritch_trait = yes
+				has_any_cultist_trait = yes
 				has_non_cultist_ideology = yes
 			} 
 		}	
@@ -559,7 +559,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 		random_interest_group = {
 			limit = { 
 				leader = { 
-					has_eldritch_trait = yes
+					has_any_cultist_trait = yes
 					has_non_cultist_ideology = yes
 				} 
 			}
@@ -591,6 +591,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 			}
 		} 
 		debug_log = "Check for Non-Conformists - Persuaded" 	
+		debug_log_scopes = yes
 		# rdeuce radicals in IG as well? Change Anger?
 	}	
 
@@ -727,11 +728,17 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 			IF = {
 				limit = { has_war_support = { target = ROOT value < 30 } }
 				add_war_exhaustion = { target = ROOT value = -0.2 }
-				add_war_war_support = { target = ROOT value = 0.5 }
+				add_war_war_support = { target = ROOT value = 1 }
 
 				debug_log = "add buff"				
 			}
+			# boost if Cthulhu in town
+			IF = {
+				limit = { has_global_variable = nda_cthulhu_arrives }
+				add_war_war_support = { target = ROOT value = 1 }
 
+				debug_log = "add Cthulhu buff"				
+			}
 		}
 
 	}
