@@ -22,7 +22,7 @@ Timeline of events in mod
 
 1881.4      nda_astro.30        Conjunction 3
 1882.1      nda_historic.1882   London - The Society for Psychical Research
-1882.6      TODO                The Colour Out Of Space
+1882.6      nda_nen.1882        The Colour Out Of Space
 1884.5      TODO                Lot No. 249 - Mummy in Oxford
 1888.4      nda_historic.1888   Fox's come clean - Spiritualist Movement
 1888.8      nda_historic.1887   Theosophical Society - The Secret Doctrine
@@ -49,5 +49,5 @@ Timeline of events in mod
 1922.8      nda_nen.1922        Horror at Martin's Beach
 1925.3      nda_ritual.1        Cthulhu Returns
 1925.4      nda_ritual.1925     The Vigilant - only if Ritual fails
-1927                            Innsmouth Raid
+1927        TODO                Innsmouth Raid
 1935.3~     nda_ritual.4        Cthulhu Leaves

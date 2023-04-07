@@ -30,10 +30,24 @@ nda_ritual.1 = { # Cthulhu Returns
 
 	immediate = {
 		set_global_variable = nda_cthulhu_arrives	
+		every_country = {
+			limit = {
+				OR = { 
+					is_full_cult_country = { COUNTRY="THIS" }	
+					is_player = yes
+				}
+			}
+			set_variable = nda_cthulhu_timer_active
+			set_variable = {
+				name = nda_cthulhu_timer
+				days = 3650
+				value = yes
+			}			
+		}
 		nda_effect_cthulhu_arrives = yes
 		debug_log = "Ritual - Stars are Right"
 
-		trigger_event = { id = nda_ritual.4 years = 10 } # leaves in 10 years # this is flakey - sometimes does not trigger
+		#trigger_event = { id = nda_ritual.4 years = 10 } # leaves in 10 years # this is flakey - sometimes does not trigger
 
 		every_country = {
 			post_notification = nda_ritual_cthulhu_returns
@@ -77,10 +91,25 @@ nda_ritual.2 = { # Cthulhu Early Return
 
 	immediate = {
 		set_global_variable = nda_cthulhu_arrives	
+		every_country = {
+			limit = {
+				OR = { 
+					is_full_cult_country = { COUNTRY="THIS" }	
+					is_player = yes
+				}
+			}
+			set_variable = nda_cthulhu_timer_active
+			set_variable = {
+				name = nda_cthulhu_timer
+				days = 7300
+				value = yes
+			}			
+		}
+		
 		nda_effect_cthulhu_arrives = yes
 		debug_log = "Ritual - Stars are Right Early"
 
-		trigger_event = { id = nda_ritual.4 years = 20 } # leaves in 20 years - longer than normal as reward  # this is flakey - sometimes does not trigger
+		#trigger_event = { id = nda_ritual.4 years = 20 } # leaves in 20 years - longer than normal as reward  # this is flakey - sometimes does not trigger
 
 		every_country = {
 			post_notification = nda_ritual_cthulhu_returns
@@ -148,8 +177,11 @@ nda_ritual.4 = { # Cthulhu Leaves
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	trigger = { # Called Only?
-
+	trigger = { 
+		has_global_variable = nda_cthulhu_arrives
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves }
+		has_variable = nda_cthulhu_timer_active
+		NOT = { has_variable = nda_cthulhu_timer } # time has run out
 	}
 
 	immediate = {

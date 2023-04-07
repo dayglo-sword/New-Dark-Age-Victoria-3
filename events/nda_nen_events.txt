@@ -130,7 +130,7 @@ nda_nen.11 = { # Appeal for reinstatement
 		exists = c:NEN
 		c:NEN = ROOT
 		has_global_variable = nda_miskatonic_library
-
+		NOT = { has_global_variable = nda_herbert_west_appeal }
 		has_technology_researched = academia
 	}
 
@@ -139,7 +139,7 @@ nda_nen.11 = { # Appeal for reinstatement
 		p:x2B5499 = { # Arkham
 			state = { save_scope_as = university_state }
 		}
-
+		set_global_variable = nda_herbert_west_appeal
 		trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham		
 	}	
 	

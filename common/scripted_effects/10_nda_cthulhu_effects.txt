@@ -105,11 +105,11 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# Make non-cultist survivors angry
 					scope:target_scope = {
 						add_loyalists = {
-							value = -0.5
+							value = -0.6
 							culture = THIS
 						}
 						add_radicals = {
-							value = 0.5
+							value = 0.6
 							culture = THIS
 						}					
 					}				
@@ -149,7 +149,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# Make non-cultist survivors angry
 					scope:target_scope = {
 						add_radicals = {
-							value = 0.5
+							value = 0.6
 							culture = THIS
 						}					
 					}				
@@ -241,10 +241,14 @@ nda_effect_cthulhu_leaves = { # Used at departure
 			}
 		}	
 
-		# remove 'sercret masters' as not apprpriate
-		ig:ig_nda_cult_worshippers = {
+		# remove 'secret masters' as not appropriate
+		every_interest_group = {
+			limit = { 
+				has_ideology = ideology_nda_cabalistic
+				has_modifier = nda_ig_secret_masters_modifier
+			}
 			# remove any secret masters modifier
-			remove_modifier = nda_ig_secret_masters_modifier
-		}		
+			remove_modifier = nda_ig_secret_masters_modifier	
+		}	
 	}		
 }

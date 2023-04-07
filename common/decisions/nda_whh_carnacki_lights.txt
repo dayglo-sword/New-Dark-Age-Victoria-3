@@ -1,4 +1,4 @@
-﻿nda_whh_carnacki_lights = { # The pay-off of Herbert West's research!
+﻿nda_whh_carnacki_lights = { # The pay-off of Carnacki's research!
 	is_shown = {
  		has_global_variable = nda_carnacki_successful
 		NOT = { has_variable = nda_carnacki_lights }
@@ -12,15 +12,21 @@
 	when_taken = {
 		set_variable = nda_carnacki_lights
 		
-		ig:ig_nda_cult_worshippers = {
+		every_interest_group = {
+			limit = { 
+				has_ideology = ideology_nda_cabalistic
+			}
 			# remove any secret masters modifier
-			remove_modifier = nda_ig_secret_masters_modifier
-			
+			IF = {
+				limit = { has_modifier = nda_ig_secret_masters_modifier }
+				remove_modifier = nda_ig_secret_masters_modifier				
+			}
+
 			# add modifier to Cult IG to suppress it further - can't force out cultists so just make difficult.
 			add_modifier = {
 				name = nda_ig_cult_supression_modifier
 			}
-		}
+		}	
 
 		# remove cult traits from other leaders? Or have event like the inquisition?
 	}

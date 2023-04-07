@@ -553,6 +553,10 @@ nda_base.9 = { # Is there some non-conformists within the cult
 				has_non_cultist_ideology = yes
 			} 
 		}	
+		#any_scope_character = {
+		#	has_any_cultist_trait = yes
+		#	has_non_cultist_ideology = yes
+		#}	
 	}
 
 	immediate = {

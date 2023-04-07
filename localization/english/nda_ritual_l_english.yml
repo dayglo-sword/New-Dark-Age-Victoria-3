@@ -30,7 +30,7 @@
  nda_ritual.7.a:0 "'Is it over...'"
 
  nda_ritual.1860.t:0 "The Tale of Professor Webb"
- nda_ritual.1860.d:0 "An expedition to Greenland in search of some Runic inscriptions, part sponsored by the Miskatonic University, has returned. It's leader, Professor Webb, had a rather strange tale to tell.\n\nWhilst high up on the West Greenland coast they had encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness.\n\nIt was a faith of which other Eskimos knew little, and which they mentioned only with shudders, saying that it had come down from horribly ancient eons before ever the world was made..."
+ nda_ritual.1860.d:0 "An expedition to Greenland in search of some Runic inscriptions, part sponsored by the Miskatonic University, has returned. Its leader, Professor Webb, had a rather strange tale to tell.\n\nWhilst high up on the West Greenland coast they had encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness.\n\nIt was a faith of which other Eskimos knew little, and which they mentioned only with shudders, saying that it had come down from horribly ancient eons before ever the world was made..."
  nda_ritual.1860.f:0 "There were certain queer hereditary rituals addressed to a supreme elder devil or tornasuk; and of this Professor Webb had taken a careful phonetic copy from an aged angekok or wizard-priest, expressing the sounds in Roman letters as best he knew how.\n\nOf prime significance was the fetish which this cult had cherished, and around which they danced when the aurora leaped high over the ice cliffs.\n\nIt was, the professor stated, a very crude bas-relief of stone, comprising a hideous picture and some cryptic writing.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  nda_ritual.1860.a:0 "'A Strange Tale'"
 
@@ -40,13 +40,13 @@
  nda_ritual.1907.a:0 "'A Strange Tale'"
 
  nda_ritual.1925.t:0 "Mystery Derelict Found At Sea"
- nda_ritual.1925.d:0 "The freighter Vigilant arrived this morning at it's wharf, having in tow the battled and disabled but heavily armed steam lauch Alert.\n\n The sole survivor found onboard was the former second mate of the schooner Emma.\n\nHe was found clutching a foot high stone idol and telling a tale of how the original crew of the Alert had attacked the Emma after ordering the vessel to turn back, but were succesfully overpowered.\n\nThe survivors of the Emma had then continued onwards to an island that their opponents had obviously been trying to deny them access to."
+ nda_ritual.1925.d:0 "The freighter Vigilant arrived this morning at its wharf, having in tow the battled and disabled but heavily armed steam lauch Alert.\n\n The sole survivor found onboard was the former second mate of the schooner Emma.\n\nHe was found clutching a foot high stone idol and telling a tale of how the original crew of the Alert had attacked the Emma after ordering the vessel to turn back, but were succesfully overpowered.\n\nThe survivors of the Emma had then continued onwards to an island that their opponents had obviously been trying to deny them access to."
  nda_ritual.1925.f:0 "'...the hideous monolith-crowned citadel whereon great Cthulhu was buried, actually emerged from the waters... Johansen and his men were awed by the cosmic majesty of this dripping Babylon of elder demons, and must have guessed without guidance that it was nothing of this or of any sane planet...\n\n...The Thing of the idols, the green, sticky spawn of the stars, had awaked to claim his own. The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident...\n\nHis accursed city is sunken once more... He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy...\n\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  nda_ritual.1925.a:0 "'A Weird Tale'"
 
  # Journal Entries
  je_nda_ritual_proceeds:0 "The Ritual Commences"
- je_nda_ritual_proceeds_reason:0 "The Eldritch Cult, now secure in it's power, can commence the Ritual that will ensure the Great Ones reawakening.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ je_nda_ritual_proceeds_reason:0 "The Eldritch Cult, now secure in its power, can commence the Ritual that will ensure the Great Ones reawakening.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  je_nda_ritual_proceeds_goal:0 "Compete Ritual to enable Cthulhu's return when the 'Stars are Right.'"
  je_nda_ritual_proceeds_possible_tt:0 "Is a leading Cult Country."
  je_nda_ritual_proceeds_complete_tt:0 "The Cult has completed the Ritual. The return is now inevitable."
@@ -56,7 +56,7 @@
  je_nda_ritual_time_has_passed_tt:0 "The Ritual has not completed in time!"
 
  je_nda_ritual_assist:0 "Assist The Ritual"
- je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in it's power, has commenced the Ritual that will ensure the Great Ones reawakening.\n\nWe must assist them in all ways possible.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in its power, has commenced the Ritual that will ensure the Great Ones reawakening.\n\nWe must assist them in all ways possible.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  je_nda_ritual_assist_fail_is_eld_tt:0 "The country becomes the Eldritch Cult"
  #je_nda_ritual_assist_goal:0 "Assist in the competion of the Ritual to enable Cthulhu's return when the 'Stars are Right.'"
  je_nda_ritual_assist_possible_tt:0 "The Cult has commenced the Ritual"
