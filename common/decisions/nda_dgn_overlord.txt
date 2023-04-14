@@ -1,0 +1,45 @@
+﻿nda_dgn_overlordship = { # Union of the Seas
+	is_shown = {
+		#is_player = no
+		exists = c:DGN
+		NOT = { 
+			is_full_cult_country = { COUNTRY="THIS" } 
+			has_global_variable = nda_ritual_cthulhu_leaves
+		}
+
+		country_has_primary_culture = cu:nda_cul_dagonic # easy check
+	
+		any_scope_state = { # has capital in coastal asia/pacific
+			is_potentially_dagonic = yes
+		}
+	}
+
+	possible = {
+		# when cult is in strong political postion and friends with YIG
+		is_subject = no
+		is_player = no
+		country_rank < c:DGN.country_rank
+		any_interest_group = {	
+			has_ideology = ideology_nda_cabalistic
+			is_in_government = yes	
+			is_powerful = yes		# should use clout 50%+	instead? how to?
+		}	
+	}
+	
+	when_taken = {
+		# Accepts DGN as overlord - becomes puppet
+		c:DGN = {
+			create_diplomatic_pact = {
+				country = ROOT
+				type = puppet
+			}			
+		}
+		debug_log = "Become DGN puppet"
+		debug_log_scopes = yes
+	}
+
+	ai_chance = {
+		base = 10	
+	}
+
+}

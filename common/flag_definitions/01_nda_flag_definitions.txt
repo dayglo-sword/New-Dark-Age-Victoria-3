@@ -5,7 +5,19 @@ ELD = {	# Eldritch Realm
 		coa_with_overlord_canton = ELD
 		overlord_canton_offset = { 0.067 0.1 }
 		overlord_canton_scale = { 0.4 0.4 }	
-		subject_canton = ELD #sub_USA_canton_star
+		subject_canton = ELD 
+	}
+
+	flag_definition = { # Cthulhu In the House Flag
+		coa = ELD_CTH 
+		coa_with_overlord_canton = ELD
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = ELD 
+		priority = 50
+        trigger = { 
+            nda_coa_def_cthulhu_trigger = yes
+        }
 	}
 }
 
@@ -17,6 +29,19 @@ YIG = {	# Yigian
 		overlord_canton_scale = { 0.4 0.4 }	
 		subject_canton = YIG 
 	}
+
+	flag_definition = { # War Flag
+		coa = YIG_WAR 
+		coa_with_overlord_canton = YIG
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = YIG 
+		priority = 50
+        trigger = { 
+            coa_def_war_trigger = yes
+        }
+	}
+
 }
 
 DGN = {	# Eldritch Realm
@@ -26,6 +51,17 @@ DGN = {	# Eldritch Realm
 		overlord_canton_offset = { 0.067 0.1 }
 		overlord_canton_scale = { 0.4 0.4 }	
 		subject_canton = DGN 
+	}
+		flag_definition = { # Cthulhu In the House Flag
+		coa = DGN_CTH 
+		coa_with_overlord_canton = DGN
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = DGN 
+		priority = 50
+        trigger = { 
+            nda_coa_def_cthulhu_trigger = yes
+        }
 	}
 }
 
@@ -46,5 +82,17 @@ LEN = {	# Leng
 		overlord_canton_offset = { 0.067 0.1 }
 		overlord_canton_scale = { 0.4 0.4 }	
 		subject_canton = LEN
+	}
+
+	flag_definition = { # Cthulhu In the House Flag
+		coa = LEN_CTH 
+		coa_with_overlord_canton = ELD
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = LEN 
+		priority = 50
+        trigger = { 
+            nda_coa_def_cthulhu_trigger = yes
+        }
 	}
 }

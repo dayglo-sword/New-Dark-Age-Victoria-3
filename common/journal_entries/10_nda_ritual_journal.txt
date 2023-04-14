@@ -39,14 +39,27 @@
 			set_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
 					value = 0
-				}
-			#clamp_global_variable = {
-			#		name = je_nda_ritual_proceeds_tracker
-			#		min = 0
-			#		max = 5000			
-			#}			
+				}		
 		}
 		
+		# the rename disappeared or was never set so re-assert
+		hidden_effect = {
+			c:ELD = {
+				ig:ig_nda_cult_worshippers = {
+					set_interest_group_name = ig_nda_cultist_church
+
+					IF = {
+						limit = { 
+							NOT = { has_modifier = nda_ig_secret_masters_modifier } 
+						}
+						add_modifier = {
+							name = nda_ig_secret_masters_modifier
+						}
+					}
+				}			
+			}			
+		}
+
 		save_scope_as = nda_je_ritual_proceeds_scope
 		
 		debug_log = "Ritual Proceeds Journal : Started : "
@@ -87,14 +100,14 @@
 	}
 
 	goal_add_value = {
-		add = 4000 # 20 years? depending on helpers
+		add = 5000 # 20 years? depending on helpers and how soon ELD appears
 	}
 
     fail = {
 		# if ritual failed or star alignment occured
 		custom_tooltip = {
 			text = je_nda_ritual_time_has_passed_tt
-			has_global_variable = nda_cthulhu_visits # Ritual is too late
+			has_global_variable = nda_ritual_cthulhu_visits # Ritual is too late
 		}
     }
 	
@@ -198,7 +211,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 	}
 
 	goal_add_value = {
-		add = 4000 # 20 years? depending on helpers
+		add = 5000 # 20 years? depending on helpers
 	}
 
     fail = {
@@ -212,7 +225,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
 			}
 			custom_tooltip = {
 				text = je_nda_ritual_time_has_passed_tt
-				has_global_variable = nda_cthulhu_visits # Ritual is too late
+				has_global_variable = nda_ritual_cthulhu_visits # Ritual is too late
 			}
 			c:ELD = { relations:root <= relations_threshold:cold }
 		}

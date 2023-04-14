@@ -95,11 +95,7 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 	
 	option = { #"Hope it does not spread"
 		name =nda_historic.1848.a
-		default_option = yes
-
-		debug_log = "Build Orne Library"
-
-		
+		default_option = yes	
 	}
 }
 

@@ -38,3 +38,11 @@ nda_revoke_cult:0 "Reduce the Cultist Influence"
 nda_revoke_cult_desc:0 "Since their failure to take over the world it is time to put the Cultists in their place, and return to something approaching normality."
 nda_revoke_cult_tooltip:0 "Remove the Cult as a Primary Culture."
 nda_revoke_cult_failure_tooltip:0 "Great Cthulhu and their Cult is no longer relevant."
+
+nda_yig_overlordship:0 "Union of the Snake"
+nda_yig_overlordship_desc:0 "The Yigian Influence on us is so great that we should accept them as our overlords."
+nda_yig_overlordship_tooltip:0 "Become a puppet of the Yigians."
+
+nda_dgn_overlordship:0 "Union of the Seas"
+nda_dgn_overlordship_desc:0 "The Dagonic Influence on us is so great that we should accept them as our overlords."
+nda_dgn_overlordship_tooltip:0 "Become a puppet of the Deeps Ones."

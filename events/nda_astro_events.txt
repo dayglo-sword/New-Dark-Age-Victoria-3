@@ -47,13 +47,13 @@ nda_astro.1 = { # 1842 conjunction
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
 	immediate = {
 		set_variable = nda_conjunction_1
@@ -66,7 +66,7 @@ nda_astro.1 = { # 1842 conjunction
 	}
 }
 
-nda_astro.20 = { # 1842 conjunction
+nda_astro.20 = { # 1861 conjunction
 	type = country_event
 	hidden = yes
 	
@@ -139,7 +139,7 @@ nda_astro.2 = { # 1861 conjunction
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -239,7 +239,7 @@ nda_astro.3 = { # 1881 conjunction
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -341,7 +341,7 @@ nda_astro.4 = { # 1901 conjunction
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -444,7 +444,7 @@ nda_astro.5 = { # 1921 conjunction
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

@@ -15,8 +15,6 @@
 		# set devout to be cultists and to be power brokers
 		ig:ig_nda_cult_worshippers = {
 			set_interest_group_name = ig_nda_cultist_church
-			#remove_ideology = ideology_moralist
-			#add_ideology = ideology_nda_cabalistic
 
 			IF = {
 				limit = { 
@@ -123,7 +121,18 @@ nda_effect_eldritch_annex = {
 				post_notification = nda_ritual_country_surrenders
 			}
 
-			scope:nda_eldritch_annex = { debug_log_scopes = yes }
+			scope:nda_eldritch_annex = { 
+				debug_log_scopes = yes 
+				# release puppets and dominions - needs constraint to check if themselves not cultists
+				every_country = {
+					limit = {
+						is_subject_of = scope:nda_eldritch_annex
+						NOT = { country_has_primary_culture = cu:nda_cul_cultist }	# don't release - they want to be part of ELD		
+					}
+
+					make_independent = yes				
+				}				
+			}
 			annex = scope:nda_eldritch_annex	
 				
 		}
@@ -245,18 +254,25 @@ nda_effect_eldritch_strife
 			is_full_cult_country = { COUNTRY="THIS" }  			
 		}
 
-		random_scope_culture = {
+		random_scope_state = { # select an homeland state to get culture
 			limit = {
-				NOT = { is_primary_culture_of = ROOT }
+				any_scope_culture = {
+					NOT = { is_primary_culture_of = ROOT }
+				}
 			}
+			save_scope_as = culture_state
+			random_scope_culture = {
+				limit = { NOT = { is_primary_culture_of = ROOT } }
+				save_scope_as = nda_eldritch_rebels
+				debug_log_scopes = yes
+			}
+		}
 
-			save_scope_as = nda_eldritch_rebels
-			debug_log_scopes = yes
-			ROOT = {
+		THIS = {
 				# convert cultists back to culture in  homeland
 				every_scope_state = {
 					limit = {
-						state_region = {is_homeland = scope:nda_eldritch_rebels	}
+						state_region = { is_homeland = scope:nda_eldritch_rebels }
 					}
 					every_scope_pop = {
 						limit ={
@@ -282,13 +298,8 @@ nda_effect_eldritch_strife
 					value = 0.7
 					culture = scope:nda_eldritch_rebels
 				}	
-			}
-			
-			debug_log = "Ritual - Eldritch Cult Rebels"	
-
-			#every_country = { # no need as should lead to secession attempt ?
-			#	post_notification = nda_ritual_post_cthulhu_strife
-			#}							
+				#debug_log_scopes = yes
+				debug_log = "Ritual - Eldritch Cult Rebels"							
 		}
 	}
 }

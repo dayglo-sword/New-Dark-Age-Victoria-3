@@ -13,10 +13,7 @@
 			}
 
 		}
-		# don't need to add for country
-		#add_modifier = {
-		#	name = nda_dark_skies_modifier # cloudly skies cause crop fail
-		#}	
+
 
 		if = { # cultists outside cult country
 			limit = {
@@ -50,6 +47,11 @@
 					is_full_cult_country = { COUNTRY="THIS" }				
 			}
 
+			# Add Country Modifiers - Buff
+			add_modifier = {
+				name = nda_cult_renaissance_country_modifier 
+			}	
+
 			every_scope_culture = {
 				if = {
 					limit = {
@@ -75,17 +77,24 @@
 nda_effect_cthulhu_leaves = { # Used at departure
 	# everywhere
 	every_country = {
-		every_scope_state = {
-			state_region = { # will this double up on shared regions? Was a bit lame at 30 dev 10 pol,
-				# Cause devestation
-				add_devastation = 70
-				# and polution
-				add_pollution = 30				
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = nda_ritual_cthulhu_visits	# don't trash the place if just a visit
+				}
 			}
-			remove_modifier = nda_dark_skies_modifier # skies clear	
+			every_scope_state = {
+				state_region = { # will this double up on shared regions? Was a bit lame at 30 dev 10 pol,
+					# Cause devastation
+					add_devastation = 70
+					# and polution
+					add_pollution = 30				
+				}
+				remove_modifier = nda_dark_skies_modifier # skies clear	
+			}
+			remove_modifier = nda_dark_skies_modifier			
 		}
-		remove_modifier = nda_dark_skies_modifier		
-
+		
 		save_scope_as =  target_scope
 
 		if = {
@@ -131,6 +140,15 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					}				
 				}
 			}
+			# remove Buff
+			if = {
+				limit = { has_modifier = nda_cult_renaissance_country_modifier }
+				remove_modifier = nda_cult_renaissance_country_modifier
+			}
+			# Add Country Modifiers - Buff
+			add_modifier = {
+				name = nda_cult_decline_country_modifier 
+			}	
 		}
 		else_if = {
 			limit = {
@@ -249,6 +267,21 @@ nda_effect_cthulhu_leaves = { # Used at departure
 			}
 			# remove any secret masters modifier
 			remove_modifier = nda_ig_secret_masters_modifier	
+		}
+
+		# remove 'cult justified' as not appropriate
+		every_interest_group = {
+			limit = { 
+				has_ideology = ideology_nda_cabalistic
+				has_modifier = nda_ig_cult_justified_modifier
+			}
+			# remove any 'cult justified' modifier
+			remove_modifier = nda_ig_cult_justified_modifier
+			# replace with 'cult crisis'
+			add_modifier = {
+				name = nda_ig_cult_crisis_modifier
+			}
 		}	
 	}		
 }
+

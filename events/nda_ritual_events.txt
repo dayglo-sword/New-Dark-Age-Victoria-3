@@ -42,6 +42,13 @@ nda_ritual.1 = { # Cthulhu Returns
 				name = nda_cthulhu_timer
 				days = 3650
 				value = yes
+			}
+			# Timer for final war - should still have plenty of time to complete
+			set_variable = nda_ritual_last_war_timer_active
+			set_variable = {
+				name = nda_ritual_last_war_timer
+				days = 1000
+				value = yes
 			}			
 		}
 		nda_effect_cthulhu_arrives = yes
@@ -103,7 +110,14 @@ nda_ritual.2 = { # Cthulhu Early Return
 				name = nda_cthulhu_timer
 				days = 7300
 				value = yes
-			}			
+			}	
+			# Timer for final war - should still have plenty of time to complete
+			set_variable = nda_ritual_last_war_timer_active
+			set_variable = {
+				name = nda_ritual_last_war_timer
+				days = 2000
+				value = yes
+			}		
 		}
 		
 		nda_effect_cthulhu_arrives = yes
@@ -287,7 +301,7 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 		# has subject that is not a cultist stronghold
 		any_country = {
 			is_subject_of = c:ELD
-			NOT = { country_has_primary_culture = cu:nda_cul_cultist }
+			#NOT = { country_has_primary_culture = cu:nda_cul_cultist }
 		}
 	}
 
@@ -364,6 +378,92 @@ nda_ritual.7 = { # Unrest in Eldritch lands
 		default_option = yes
 	}
 }
+
+nda_ritual.8 = { # The Last war
+	type = country_event
+	hidden = yes
+	
+	trigger = { 
+		has_global_variable = nda_cthulhu_arrives
+		NOT = { has_variable = nda_ritual_last_war_timer } # don't start war too soon - give couple of years for ELD to sort itself out.
+		has_variable = nda_ritual_last_war_timer_active
+		NOT = { has_global_variable = nda_ritual_last_war }		
+
+		exists = c:ELD
+		c:ELD = ROOT
+		exists = c:NEN	
+		NOT = { has_war_with = c:NEN }			
+
+	}
+
+	immediate = {		
+		set_global_variable = nda_ritual_last_war
+		debug_log = "Ritual - Last War"
+
+		# launch diplo-play to conquor NEN and/or player
+		create_diplomatic_play = {
+            name = nda_dp_final_war
+        
+            target_country = c:NEN
+            
+            #war = yes # not straight off
+            
+            type = dp_final_war
+
+        }   
+
+		random_diplomatic_play = {
+				limit = {
+					initiator_is = c:ELD
+					target_is = c:NEN
+				}
+
+				if = {
+					limit = { exists = c:YIG}	
+					add_initiator_backers = { c:YIG }
+					add_diplomatic_play_war_support = { target = c:YIG value = 100 }	
+					#add_target_backers = { c:YIG }				
+				}
+				if = {
+					limit = { exists = c:DGN}						
+					add_initiator_backers = { c:DGN }	
+					add_diplomatic_play_war_support = { target = c:DGN value = 100 }			
+				}
+				if = {
+					limit = { exists = c:LEN}	
+					add_initiator_backers = { c:LEN }
+					add_diplomatic_play_war_support = { target = c:LEN value = 100 }				
+				}
+
+				save_scope_as = nda_dp_final_war_scope
+				
+				# Add Non-Cultist Allies to help out
+				ordered_country = {
+					limit = {
+						NOT = { is_subject_of = c:ELD }	
+						NOT = { country_has_primary_culture = cu:nda_cul_cultist }			
+					}
+					
+					order_by = { subtract = global_country_ranking }
+					min = 1	
+					max = 10	
+
+					# improve relations to give chance they will stay interested in war
+					change_relations = { country = c:ELD value = -100 }
+					change_relations = { country = c:NEN value = 100 }
+
+					scope:nda_dp_final_war_scope = {
+						add_target_backers = { PREV }	
+						add_diplomatic_play_war_support = { target = PREV value = 100 }
+					}
+				}
+		
+		}  
+
+	       
+	}	
+}
+
 
 # Call of Cthulhu story events
 # The Tale of Inspector Legrasse - November 1907 New Orleans
@@ -495,13 +595,16 @@ nda_ritual.1925 = { #April - The Vigilant - only if Ritual fails
 		NOT = { has_global_variable = nda_ritual_completed }
 		game_date >= 1925.4.2 # the date the dreams stop	
 		NOT = {
-			has_global_variable = nda_cthulhu_visits	# run once
-		 }
-
+			has_global_variable = nda_ritual_cthulhu_visits	# run once
+		}
 	}
 
 	immediate = {
-		set_global_variable = nda_cthulhu_visits	
+		set_global_variable = nda_ritual_cthulhu_visits
+		set_global_variable = nda_ritual_cthulhu_leaves	
+			
+		# Cults should be in crisis at no show.
+		nda_effect_cthulhu_leaves = yes
 
 		debug_log = "Ritual - Stars are not quite right"
 	}	

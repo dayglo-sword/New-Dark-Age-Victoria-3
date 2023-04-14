@@ -30,6 +30,7 @@ nda_monthly_on_action = {
 		nda_ritual.2 
 		nda_ritual.4 
 		nda_ritual.5 # Eldritch add Cult countries
+		nda_ritual.8 # Final War
 		
 		nda_ritual.1860 # The Tale of Professor Webb
 		nda_ritual.1907 # The Tale of Inspector Legrasse

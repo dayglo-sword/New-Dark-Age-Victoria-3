@@ -1,0 +1,41 @@
+﻿nda_yig_overlordship = { # Union of the Snake
+	is_shown = {
+		#is_player = no
+		exists = c:YIG
+		NOT = { 
+			is_full_cult_country = { COUNTRY="THIS" } 
+			has_global_variable = nda_ritual_cthulhu_leaves
+		}
+		country_has_primary_culture = cu:nda_cul_yigian 
+	}
+
+	possible = {
+		# when cult is in strong political postion and friends with YIG
+		is_subject = no
+		is_player = no
+		country_rank < c:YIG.country_rank
+		any_interest_group = {	
+			has_ideology = ideology_nda_cabalistic
+			is_in_government = yes	
+			is_powerful = yes		# should use clout 50%+	instead? how to?
+		}	
+	}
+	
+	when_taken = {
+		# Accepts YIG as overlord - becomes puppet
+		c:YIG = {
+			create_diplomatic_pact = {
+				country = ROOT
+				type = puppet
+			}			
+		}
+		debug_log = "Become YIG puppet"
+		debug_log_scopes = yes
+		#custom_tooltip = nda_yig_overlordship_tooltip
+	}
+
+	ai_chance = {
+		base = 10	
+	}
+
+}

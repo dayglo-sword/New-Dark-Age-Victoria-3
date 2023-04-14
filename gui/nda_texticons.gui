@@ -1,0 +1,12 @@
+@sol_icon_fontsize = 45
+
+### InterestGroup
+
+texticon = {
+  icon = nda_cult
+  iconsize = {
+    offset = { 0 7 }
+    texture = "gfx/interface/icons/ig_icons/nda_cult_30.dds"
+    fontsize = 22
+  }
+}
