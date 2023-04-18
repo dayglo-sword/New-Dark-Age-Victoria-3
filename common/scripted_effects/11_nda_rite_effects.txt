@@ -80,16 +80,38 @@
 			
 		}
 
-		nda_effect_eldritch_annex = yes
+		#nda_effect_eldritch_annex = yes
 		
 		# remove radicals from government while everyone is partying
 		add_radicals  = { value = -0.5 }
 
 	}	
-	debug_log = "YIG DGN effects" 
-	nda_effect_yigian_annex = yes
+	#debug_log = "Extra YIG DGN effects" 
+
 	nda_effect_yigian_influence = yes
 
-	nda_effect_dagonic_annex = yes
 	nda_effect_dagonic_influence = yes
 }
+
+nda_effect_rite_annexations = { # Called from astro events - day after main effects 'nda_effect_rite_conversion' as annex can cause conflict crash 
+		if = {
+			limit = { exists = c:ELD } 
+			c:ELD = {
+				nda_effect_eldritch_annex = yes				
+			}
+		} 		
+		if = {
+			limit = { exists = c:DGN } 
+			c:DGN = {
+				nda_effect_dagonic_annex = yes
+				nda_effect_dagonic_buff = yes				
+			}
+		} 
+		if = {
+			limit = { exists = c:YIG } 
+			c:YIG = {
+				nda_effect_yigian_annex = yes
+				nda_effect_yigian_buff = yes				
+			}
+		} 
+}		

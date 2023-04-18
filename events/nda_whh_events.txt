@@ -169,7 +169,8 @@ nda_whh.13 = { # 'Electric Pentagram' - should this really be a decision?
 		game_date >= 1907  
 		is_player = yes  # no hope if not
 		
-		has_global_variable = nda_carnacki_ghostfinder	
+		has_global_variable = nda_carnacki_ghostfinder
+		NOT = { has_global_variable = nda_carnacki_research_request }	
 		OR = {
 			has_variable = nda_carnacki_in_exile # is in exile
 			AND = { 
@@ -182,7 +183,7 @@ nda_whh.13 = { # 'Electric Pentagram' - should this really be a decision?
 	}
 
 	immediate = {
-		#set_global_variable = nda_carnacki_ghostfinder
+		set_global_variable = nda_carnacki_research_request
 
 		debug_log = "Carnacki researches pentagram"
 

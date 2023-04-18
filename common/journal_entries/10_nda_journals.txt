@@ -6,11 +6,7 @@
 				name = nda_cult_spread_tracker
 				value = 0
 			}
-		clamp_variable = {
-				name = nda_cult_spread_tracker
-				min = 0
-				max = 1000			
-		}	
+
 		save_scope_as = nda_je_scope
 		debug_log = "Cult Spread Journal : Started : "
 	}
@@ -109,7 +105,27 @@
 						add = 1
 					}					
 				}				
-			}				
+			}
+
+			# Old Ones are here
+			if = {
+				limit = { 
+					has_global_variable = nda_cthulhu_arrives 
+					NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+				}
+				scope:nda_je_scope = {
+					change_variable = {
+						name = nda_cult_spread_tracker
+						add = 4
+					}					
+				}					
+			}
+
+			clamp_variable = {
+				name = nda_cult_spread_tracker
+				min = 0
+				max = 1000			
+			}					
 		}	
 
 		# Chance that another character will become cultist
@@ -189,11 +205,7 @@ je_nda_cult_to_yigian = {
 				name = nda_cult_to_yigian_tracker
 				value = 1
 			}
-		clamp_variable = {
-				name = nda_cult_to_yigian_tracker
-				min = 0
-				max = 500			
-		}	
+	
 		save_scope_as = nda_je_cult_to_yigian_scope
 		debug_log = "Yigian Spread Journal : Started : "
 	}
@@ -228,11 +240,7 @@ je_nda_cult_to_yigian = {
 
 	on_complete = {
 		debug_log =  "Yigian Spread Journal : Completed :"
-		#effect = {
-		#	IF = { limit = { NOT =  { has_variable = nda_yig_in_open } }  // recovering from stupid revolution can make event redundant
-				trigger_event = { id = nda_yigian.2  }				
-		#	} 			
-		#}
+		trigger_event = { id = nda_yigian.2 }				
 	}
 
 	on_monthly_pulse = {
@@ -292,7 +300,32 @@ je_nda_cult_to_yigian = {
 						add = 1
 					}					
 				}				
-			}		
+			}	
+
+			# Yigians are already here so speed up
+			if = {
+				limit = { exists = c:YIG }
+				scope:nda_je_cult_to_yigian_scope = {
+					change_variable = {
+						name = nda_cult_to_yigian_tracker
+						add = 2
+					}					
+				}				
+			}
+
+			# Old Ones are here
+			if = {
+				limit = { 
+					has_global_variable = nda_cthulhu_arrives 
+					NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+				}
+				scope:nda_je_cult_to_yigian_scope = {
+					change_variable = {
+						name = nda_cult_to_yigian_tracker
+						add = 2
+					}					
+				}					
+			}
 		}	
 
 		# Chance that another character will become cultist
@@ -400,11 +433,7 @@ je_nda_cult_to_dagonic = {
 
 	on_complete = {
 		debug_log =  "Dagonic Spread Journal : Completed :"
-		#effect = {
-			#IF = { limit = { NOT =  { has_variable = nda_dagon_in_open } }  // recovering from stupid revolution can make event redundant
-				trigger_event = { id = nda_dagonic.2  }				
-			#}
-		#}	
+		trigger_event = { id = nda_dagonic.2  }				
 	}
 
 	on_monthly_pulse = {
@@ -417,7 +446,6 @@ je_nda_cult_to_dagonic = {
 					add = 1
 				}					
 			}
-
 
 			# Every non marginal 
 			every_interest_group = {
@@ -465,14 +493,39 @@ je_nda_cult_to_dagonic = {
 						add = 1
 					}					
 				}				
-			}		
+			}	
+
+			# Dagonites are already here so speed up
+			if = {
+				limit = { exists = c:DGN }
+				scope:nda_je_cult_to_dagonic_scope = {
+					change_variable = {
+						name = nda_cult_to_dagonic_tracker
+						add = 2
+					}					
+				}				
+			}
+
+			# Old Ones are here
+			if = {
+				limit = { 
+					has_global_variable = nda_cthulhu_arrives 
+					NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+				}
+				scope:nda_je_cult_to_dagonic_scope = {
+					change_variable = {
+						name = nda_cult_to_dagonic_tracker
+						add = 2
+					}					
+				}					
+			}	
 		}	
 
 		# Chance that another character will become cultist
 		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
 			8 = 0
 			1 = nda_dagonic.10 
-			1 = nda_base.6 # nned to keep adding base cultists as a number can disappear before conversion
+			1 = nda_base.6 # need to keep adding base cultists as a number can disappear before conversion
 		}		
 	}
 

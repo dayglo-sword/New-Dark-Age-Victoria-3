@@ -2,7 +2,7 @@
 
 nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	type = country_event
-	placement = p:x01D042 #scope:spiritulist_state
+	placement = p:x01D042
 	title =nda_historic.1848.t
 	desc =nda_historic.1848.d
 	flavor = nda_historic.1848.f
@@ -34,13 +34,8 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 		NOT = { has_variable = nda_historic_second_awakening }	
 	}
 
-	immediate = {
-		
+	immediate = {		
 		set_variable = nda_historic_second_awakening
-		p:x01D042 = { # Syracuse
-			state = { save_scope_as = spiritulist_state }
-		}
-
 	}	
 	
 	option = { #"Any more pending?"
@@ -51,7 +46,7 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 
 nda_historic.1848 = { # Founding of Spiritualist Movement
 	type = country_event
-	placement = p:x01D042 #scope:spiritulist_state
+	placement = p:x01D042
 	title =nda_historic.1848.t
 	desc =nda_historic.1848.d
 	flavor = nda_historic.1848.f
@@ -84,13 +79,8 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 		NOT = { has_variable = nda_historic_spiritulism_founded }	
 	}
 
-	immediate = {
-		
+	immediate = {		
 		set_variable = nda_historic_spiritulism_founded
-		p:x01D042 = { # Syracuse
-			state = { save_scope_as = spiritulist_state }
-		}
-
 	}	
 	
 	option = { #"Hope it does not spread"
@@ -147,7 +137,7 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 
 nda_historic.1852 = { # An American Medium in London
 	type = country_event
-	placement = p:x7543C8 #scope:spiritulist_state
+	placement = p:x7543C8 
 	title = nda_historic.1852.t
 	desc = nda_historic.1852.d
 	flavor =  nda_historic.1852.f
@@ -182,11 +172,6 @@ nda_historic.1852 = { # An American Medium in London
 
 	immediate = {
 		set_variable = nda_historic_spiritulism_in_london
-
-		p:x7543C8 = { # London
-			state = { save_scope_as = spiritulist_state }
-		}
-
 	}	
 	
 	option = { 
@@ -287,9 +272,61 @@ nda_historic.1862 = { # The Ghost Club
 	}
 }
 
+nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe! TODO
+	type = country_event
+	placement = p:x7543C8 
+	title = nda_historic.1865.t
+	desc = nda_historic.1865.d
+	flavor =  nda_historic.1865.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+		game_date >= 1865.6 
+		game_date < 1866
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_zetetic_rowbotham }	
+	}
+
+	immediate = {
+		set_variable = nda_historic_zetetic_rowbotham
+	}	
+	
+	option = { 
+		name = nda_historic.1865.a
+		default_option = yes
+	}
+
+	option = { 
+		name = nda_historic.1865.b
+	}
+
+	option = { 
+		name = nda_historic.1865.c
+	}
+}
+
 nda_historic.1875 = { # The Theosophical Society
 	type = country_event
-	placement = p:xE217B5 #scope:spiritulist_state
+	placement = p:xE217B5 
 	title = nda_historic.1875.t
 	desc = nda_historic.1875.d
 	flavor =  nda_historic.1875.f
@@ -322,12 +359,8 @@ nda_historic.1875 = { # The Theosophical Society
 		NOT = { has_variable = nda_historic_theosophical_soc }	
 	}
 
-	immediate = {
-		
+	immediate = {		
 		set_variable = nda_historic_theosophical_soc
-		p:xE217B5 = { # New York
-			state = { save_scope_as = spiritulist_state }
-		}
 	}	
 	
 	option = { #"Hope it does not spread"
@@ -373,17 +406,11 @@ nda_historic.1882 = { # The Society for Psychical Research
 
 	immediate = {
 		set_variable = nda_historic_spr_founded
-
-		p:x7543C8 = { # London
-			state = { save_scope_as = spiritulist_state }
-		}
-
 	}	
 	
 	option = { 
 		name = nda_historic.1882.a
 		default_option = yes
-
 	}
 }
 
@@ -425,10 +452,6 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 	immediate = {
 		
 		set_variable =  nda_historic_secret_doctrine
-		p:xE217B5 = { # New York
-			state = { save_scope_as = spiritulist_state }
-		}
-
 	}	
 	
 	option = { #"Hope it does not spread"
@@ -439,7 +462,7 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 
 nda_historic.1888 = { # Fox's come clean - Spiritualist Movement
 	type = country_event
-	placement = p:x01D042 #scope:spiritulist_state
+	placement = p:x01D042
 	title = nda_historic.1888.t
 	desc = nda_historic.1888.d
 	flavor =  nda_historic.1888.f
@@ -472,13 +495,8 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement
 		NOT = { has_variable = nda_historic_spiritulism_faked }	
 	}
 
-	immediate = {
-		
+	immediate = {		
 		set_variable = nda_historic_spiritulism_faked
-		p:x01D042 = { # Syracuse
-			state = { save_scope_as = spiritulist_state }
-		}
-
 	}	
 	
 	option = { #"Hope it does not spread"
@@ -526,16 +544,60 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 		NOT = { has_variable = nda_historic_theosophical_soc }	
 	}
 
-	immediate = {
-		
+	immediate = {		
 		set_variable = nda_historic_theosophical_soc
-		p:x7543C8 = { # London
-			state = { save_scope_as = spiritulist_state }
-		}
 	}	
 	
 	option = { #"Hope it does not spread"
 		name = nda_historic.1889.a
 		default_option = yes
+	}
+}
+
+nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic
+	type = country_event
+	placement = p:x7543C8
+	title = nda_historic.1892.t
+	desc = nda_historic.1892.d
+	flavor =  nda_historic.1892.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+		game_date >= 1893.6 
+		game_date < 1894
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+			
+		NOT = { has_variable = nda_historic_zetetic_blount }	
+	}
+
+	immediate = {
+		set_variable = nda_historic_zetetic_blount
+	}	
+	
+	option = { 
+		name = nda_historic.1892.a
+		default_option = yes
+	}
+
+	option = { 
+		name = nda_historic.1892.b
 	}
 }

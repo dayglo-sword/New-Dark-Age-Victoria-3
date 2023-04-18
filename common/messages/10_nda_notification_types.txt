@@ -172,3 +172,13 @@ nda_carnacki_death = {
 	notification_type = toast
  
 }
+
+### Hasturian
+nda_hastur_coronation = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/character.dds"
+
+	notification_type = toast
+ 
+}

@@ -33,6 +33,7 @@ nda_monthly_on_action = {
 		nda_ritual.8 # Final War
 		
 		nda_ritual.1860 # The Tale of Professor Webb
+
 		nda_ritual.1907 # The Tale of Inspector Legrasse
 		nda_ritual.1925 # Mystery Derelict Found At Sea
 
@@ -44,6 +45,11 @@ nda_monthly_on_action = {
 		nda_nen.11 
 		nda_nen.20 # Cult in Innsmouth
 		nda_nen.21 # Plague in Innsmouth
+		nda_nen.1882 # Colour - Strange Meteor
+		nda_nen.1883 # Colour - Strange Fruit
+		nda_nen.1913 # Maine Meteor - The Green Meadow
+		nda_nen.1922 # Horror at Martins Beach
+		nda_nen.1935 # Outro
 
 		nda_hasturian.1 # Play in Paris 
 		nda_hasturian.2 # Play Spreads 
@@ -56,15 +62,18 @@ nda_monthly_on_action = {
 		nda_whh.12 # Carnacki Exile
 		nda_whh.13 # Electric Pentangle
 
+		nda_historic.1838
 		nda_historic.1848
 		nda_historic.1849
 		nda_historic.1852
 		nda_historic.1862
+		nda_historic.1865
 		nda_historic.1875		
 		nda_historic.1882
 		nda_historic.1888
 		nda_historic.1887
 		nda_historic.1889
+		nda_historic.1892
 	}
 	random_events = {
 		1 = 0
@@ -96,18 +105,30 @@ on_character_creation = {
 	effect = {
 		if = {
 			limit = {
-				has_culture = cu:nda_cul_cultist
+				has_culture = cu:nda_cul_cultist				
 			}
 			add_trait = nda_cultist
 			change_character_religion = rel:nda_rel_cultist
+			# give cultist ideology
+			nda_effect_ensure_cult_ideology = yes	
 		}
-		# same for the yigians
-		if = {
+		else_if = { # same for the dagonites
+			limit = {
+				has_culture = cu:nda_cul_dagonic				
+			}
+			add_trait = nda_dagon_cultist
+			change_character_religion = rel:nda_rel_cultist
+			# give cultist ideology
+			nda_effect_ensure_cult_ideology = yes	
+		}		
+		else_if = { # same for the yigians
 			limit = {
 				has_culture = cu:nda_cul_yigian
 			}
 			add_trait = nda_yig_cultist
 			change_character_religion = rel:nda_rel_yigian
+			# give cultist ideology
+			nda_effect_ensure_cult_ideology = yes	
 		}
 	}
 }

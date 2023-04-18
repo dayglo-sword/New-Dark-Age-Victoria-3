@@ -413,57 +413,187 @@ nda_ritual.8 = { # The Last war
         }   
 
 		random_diplomatic_play = {
+			limit = {
+				initiator_is = c:ELD
+				target_is = c:NEN
+			}
+
+			if = {
+				limit = { exists = c:YIG }	
+				c:YIG = { 
+					change_relations = { country = c:ELD value = 100 } 
+					change_relations = { country = c:NEN value = -100 }
+				}
+				add_initiator_backers = { c:YIG }
+				add_diplomatic_play_war_support = { target = c:YIG value = 100 }	
+				#add_target_backers = { c:YIG }				
+			}
+			if = {
+				limit = { exists = c:DGN }	
+				c:DGN = { 
+					change_relations = { country = c:ELD value = 100 }
+					change_relations = { country = c:NEN value = -100 }
+				}				
+				add_initiator_backers = { c:DGN }	
+				add_diplomatic_play_war_support = { target = c:DGN value = 100 }			
+			}
+			if = {
+				limit = { exists = c:LEN }	
+				c:LEN = { 
+					change_relations = { country = c:ELD value = 100 } 
+					change_relations = { country = c:NEN value = -100 }
+				}
+				add_initiator_backers = { c:LEN }
+				add_diplomatic_play_war_support = { target = c:LEN value = 100 }				
+			}
+
+			save_scope_as = nda_dp_final_war_scope
+			
+			# Add Non-Cultist Allies to help out
+			ordered_country = {
+				limit = {
+					NOT = { is_subject_of = c:ELD }	
+					NOT = { country_has_primary_culture = cu:nda_cul_cultist }	
+					NOT = { country_has_primary_culture = cu:nda_cul_yigian }
+					NOT = { country_has_primary_culture = cu:nda_cul_dagonic }					
+				}
+				
+				order_by = { subtract = global_country_ranking }
+				min = 1	
+				max = 10	
+
+				# improve relations to give chance they will stay interested in war
+				change_relations = { country = c:ELD value = -100 }
+				change_relations = { country = c:NEN value = 100 }
+
+				scope:nda_dp_final_war_scope = {
+					add_target_backers = { PREV }	
+					add_diplomatic_play_war_support = { target = PREV value = 100 }
+				}
+			}	
+		}  	       
+	}	
+}
+
+nda_ritual.9 = { # Reaction to last war
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.9.t
+	desc = nda_ritual.9.d
+	flavor =  nda_ritual.9.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {  # called only
+	}
+
+	immediate = {
+			debug_log_scopes = yes	
+	}	
+
+	option = { # To The Death!
+		name = nda_ritual.9.a
+		default_option = yes
+		ai_chance = { # always
+			base = 80		
+		}
+
+		# add buffs to country
+		add_radicals  = { value = -0.5 }	
+		add_loyalists = { value = 0.5 }
+
+	}
+	option = { # To The Pain!
+		name = nda_ritual.9.b
+
+		# add heavy buffs to war - scope from calling war event accesible? as event call is from dp itself
+		hidden_effect = { # To stop the no location for 
+			random_diplomatic_play = {
 				limit = {
 					initiator_is = c:ELD
 					target_is = c:NEN
 				}
+				war = {
+					add_war_exhaustion = { target = ROOT value = -0.5 }
+					#add_war_war_support = { target = ROOT value = 10 }	# no point till it has dropped				
+				}		
+			}
+		}
+	}
+	option = { # To Another Country!
+		name = nda_ritual.9.c
 
-				if = {
-					limit = { exists = c:YIG}	
-					add_initiator_backers = { c:YIG }
-					add_diplomatic_play_war_support = { target = c:YIG value = 100 }	
-					#add_target_backers = { c:YIG }				
-				}
-				if = {
-					limit = { exists = c:DGN}						
-					add_initiator_backers = { c:DGN }	
-					add_diplomatic_play_war_support = { target = c:DGN value = 100 }			
-				}
-				if = {
-					limit = { exists = c:LEN}	
-					add_initiator_backers = { c:LEN }
-					add_diplomatic_play_war_support = { target = c:LEN value = 100 }				
-				}
+		# cop out of war!
+		random_country = {
+			limit = {
+				NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+				NOT = { THIS = c:NEN }
+				country_rank >= rank_value:unrecognized_regional_power					
+			}
 
-				save_scope_as = nda_dp_final_war_scope
-				
-				# Add Non-Cultist Allies to help out
-				ordered_country = {
-					limit = {
-						NOT = { is_subject_of = c:ELD }	
-						NOT = { country_has_primary_culture = cu:nda_cul_cultist }			
-					}
-					
-					order_by = { subtract = global_country_ranking }
-					min = 1	
-					max = 10	
+			save_scope_as = nda_ritual_new_country		
+		}
 
-					# improve relations to give chance they will stay interested in war
-					change_relations = { country = c:ELD value = -100 }
-					change_relations = { country = c:NEN value = 100 }
-
-					scope:nda_dp_final_war_scope = {
-						add_target_backers = { PREV }	
-						add_diplomatic_play_war_support = { target = PREV value = 100 }
-					}
-				}
-		
-		}  
-
-	       
-	}	
+		play_as = scope:nda_ritual_new_country	
+	}
+	option = { # To Another Dimension!
+		name = nda_ritual.9.e
+		trigger = {
+			NOT = { has_variable = nda_ritual_experiment }
+		}
+		# cop out of war! but get sent back!
+		hidden_effect = {
+			set_variable = nda_ritual_experiment
+			trigger_event = { id = nda_ritual.10 } # loop back - really need external descriptor event
+		}
+	}
 }
 
+nda_ritual.10 = { # Foreshadowing of future story paths
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.10.t
+	desc = nda_ritual.10.d
+	flavor =  nda_ritual.10.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { 
+
+	}
+
+	immediate = {
+
+	}	
+	
+	option = { # What is happening?
+		name = nda_ritual.10.a
+		default_option = yes
+		hidden_effect = {
+			trigger_event = { id = nda_ritual.9 } # loop back - really need external descriptor event
+		}
+	}
+}
 
 # Call of Cthulhu story events
 # The Tale of Inspector Legrasse - November 1907 New Orleans
@@ -515,7 +645,7 @@ nda_ritual.1907 = {
 
 			change_global_variable = {
 				name = je_nda_ritual_proceeds_tracker
-				add = 100
+				add = 500
 			}		
 		}
 	}	

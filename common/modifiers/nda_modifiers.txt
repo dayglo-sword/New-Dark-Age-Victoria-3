@@ -9,7 +9,7 @@ nda_dark_skies_modifier = {
 	building_group_bg_agriculture_throughput_mult = -0.4
 	building_group_bg_ranching_throughput_mult = -0.4
 	building_group_bg_plantations_throughput_mult = -0.4
-	state_mortality_mult = 0.05
+	state_mortality_mult = 0.10
 	state_standard_of_living_add = -2
 }
 
@@ -30,14 +30,14 @@ nda_dagonic_country_modifier = {
 
 nda_cult_renaissance_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_authority_mult = 0.1
-	country_bureaucracy_mult = 0.1
+	country_authority_mult = 0.2
+	country_bureaucracy_mult = 0.2
 }
 
 nda_cult_decline_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	country_authority_mult = -0.2
-	country_bureaucracy_mult = -0.2
+	country_authority_mult = -0.3
+	country_bureaucracy_mult = -0.3
 }
 
 nda_reanimated_state_modifier = {
@@ -73,8 +73,9 @@ nda_tonic_for_troops_modifier = {
 
 nda_dagonic_state_ruin_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	building_whaling_station_throughput_mult = -0.33
-	building_fishing_wharf_throughput_mult = -0.33
+	building_whaling_station_throughput_mult = -0.50
+	building_fishing_wharf_throughput_mult = -0.50
 	state_standard_of_living_add = -2
+	state_mortality_mult = 0.10
 }
 

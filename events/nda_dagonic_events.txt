@@ -73,7 +73,7 @@ nda_dagonic.1 = { # Convert a Cultist to dagonic equivalent - called from journa
 	}
 }
 
-nda_dagonic.2 = { # Cult in contry converts to dagonic - called from journal 'je_nda_cult_to_dagonic' on completion
+nda_dagonic.2 = { # Cult in country converts to dagonic - called from journal 'je_nda_cult_to_dagonic' on completion
 	type = country_event
 	placement = ROOT
 	title = nda_dagonic.2.t
@@ -116,7 +116,17 @@ nda_dagonic.2 = { # Cult in contry converts to dagonic - called from journal 'je
 					add_homeland = nda_cul_dagonic
 					remove_homeland = nda_cul_cultist
 				}
-
+				# convert cultists to dagonic				
+				every_scope_pop = {
+					limit = {
+						culture = cu:nda_cul_cultist
+					}
+					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
+				}
+				# convert general pop
+				every_scope_pop = {
+					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.05 }
+				}
 			}
 			# Change IG name - IG Should already exist
 			ig:ig_nda_cult_worshippers = {
@@ -358,7 +368,7 @@ nda_dagonic.7 = {
 			# Cause devestation
 			add_devastation = 80
 			# and polution
-			add_pollution = 40				
+			add_pollution = 80				
 		}
 
 		every_scope_building = {
@@ -368,6 +378,7 @@ nda_dagonic.7 = {
 		add_modifier = {
 			name = nda_dagonic_state_ruin_modifier
 			months = normal_modifier_time
+			is_decaying = yes
 		}
 
 		every_country = {

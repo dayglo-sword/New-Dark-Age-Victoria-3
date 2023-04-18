@@ -8,6 +8,7 @@ nda_effect_yigian_setup = {
 			}
 			add_trait = nda_yig_master # need to add to heirs as well?
 			change_character_religion = rel:nda_rel_yigian
+			nda_effect_ensure_cult_ideology = yes
 		}
 
 		# set state religion
@@ -68,25 +69,20 @@ nda_effect_yigian_annex = {
 
 	if = {
 		limit = {
-			exists = ROOT
-			AND = {
-				exists = c:YIG
-				ROOT = c:YIG
-			} 
 			any_country = { 			
-				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }	
-					is_player = yes					
+				is_player = no		
+				NOT = { 
+					is_full_cult_country = { COUNTRY="THIS" }				
 				}
-				has_variable = nda_yig_in_open
+				has_variable = nda_yig_in_open		
 			}
 		} 
 
 		ordered_country = {
 			limit = {
-				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }	
-					is_player = yes				
+				is_player = no		
+				NOT = { 
+					is_full_cult_country = { COUNTRY="THIS" }				
 				}
 				has_variable = nda_yig_in_open			
 			}
@@ -96,12 +92,15 @@ nda_effect_yigian_annex = {
 			save_scope_as = nda_yigian_annex			
 		}
 
+		debug_log = "Yigian - Country surrenders."	
+		debug_log_scopes = yes	
+
 		# send notification - does country still exist after annex?
-		post_notification = nda_yigian_lands_expand # toast
+		every_country = {
+				post_notification = nda_yigian_lands_expand
+		}
 
 		annex = scope:nda_yigian_annex
-
-		debug_log = "Yigian - Country surrenders."		
 	}	
 }
 
@@ -145,7 +144,7 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 		add_loyalists = { value = 1 culture = cu:nda_cul_cultist }
 		# reduce radicals ??
 
-		debug_log = "Improve Relations with YIG " 
+		#debug_log = "Improve Relations with YIG " 
 		#pledge to YIG if they exist
 		if = {
 			limit = {
@@ -162,44 +161,6 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 			# always change relationship
 			change_relations = { country = c:YIG value = 50 }
 			debug_log = "Improved Relations with YIG " 
-		}
-		
-		if = {
-			limit = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-			# YIG only buffs
-			debug_log = "Buff YIG " 
-
-			every_state_region = {
-				limit = { 
-					exists = THIS
-					is_homeland=cu:nda_cul_yigian
-					any_neighbouring_state = { owner = ROOT }
-				
-				}
-				add_claim = ROOT						
-			}
-
-			debug_log = "YIG Homelands" 
-			every_scope_state = { # need to set all non-homelands in YIG as homelands
-				limit = {
-					exists = THIS 
-					state_region = {
-						NOT = { is_homeland = cu:nda_cul_yigian }
-						# include other Cults as well ??
-					}	
-				}
-				state_region = {
-					add_homeland = nda_cul_yigian
-				}
-				
-			}
-			# lay claims with neighbours?
-
-			# remove radicals from government while everyone is partying
-			add_radicals  = { value = -0.5 }
 		}	
 	}
 
@@ -218,4 +179,44 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 		change_relations = { country = c:YIG value = -50 }
 		debug_log = "Decrease Relations with YIG " 
 	}
+}
+
+nda_effect_yigian_buff = { # boost to yig		
+	if = {
+		limit = {
+			exists = c:YIG
+			c:YIG = ROOT
+		}
+		# YIG only buffs
+		debug_log = "Buff YIG " 
+
+		every_state_region = {
+			limit = { 
+				exists = THIS
+				is_homeland=cu:nda_cul_yigian
+				any_neighbouring_state = { owner = ROOT }
+			
+			}
+			add_claim = ROOT						
+		}
+
+		debug_log = "YIG Homelands" 
+		every_scope_state = { # need to set all non-homelands in YIG as homelands
+			limit = {
+				exists = THIS 
+				state_region = {
+					NOT = { is_homeland = cu:nda_cul_yigian }
+					# include other Cults as well ??
+				}	
+			}
+			state_region = {
+				add_homeland = nda_cul_yigian
+			}
+			
+		}
+		# lay claims with neighbours?
+
+		# remove radicals from government while everyone is partying
+		add_radicals  = { value = -0.5 }
+	}	
 }

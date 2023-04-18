@@ -1,8 +1,8 @@
 ﻿l_english:
 
 nda_historic.1838.t:0 "A Second Great Awakening"
-nda_historic.1838.d:1 "By the mid-1830s a wave of religious zeal was sweeping across the USA./n/nDriven by charismatic preachers who called for the faithful to return to the original teachings of the Bible and lead upstanding moral lives, the movement would spawn several new Protestant sects, lead to debates and schisms within established sects over points of theology and ritual, and reinforce the power and influence of Christian teachings among the lower and middle classes of the American people."
-nda_historic.1838.f:1 "" #"'I refuse to join any cult that would have me as a member.' - Marx"
+nda_historic.1838.d:1 "By the mid-1830s a wave of religious zeal was sweeping across the USA.\n\nDriven by charismatic preachers who called for the faithful to return to the original teachings of the Bible and lead upstanding moral lives, the movement would spawn several new Protestant sects, lead to debates and schisms within established sects over points of theology and ritual, and reinforce the power and influence of Christian teachings among the lower and middle classes of the American people."
+nda_historic.1838.f:1 "'I refuse to join any cult that would have me as a member.' - Marx"
 nda_historic.1838.a:0 "Any More Awakenings Pending?"
 
 nda_historic.1848.t:0 "A New Movement"
@@ -11,7 +11,7 @@ nda_historic.1848.f:1 "'Spiritualists are in the habit of taking March 31, 1848,
 nda_historic.1848.a:0 "We hope this does not spread further."
 
 nda_historic.1849.t:0 "Death of an Author"
-nda_historic.1849.d:1 "The well known poet and author, #ITALIC Edgar Allan Poe#! has past away in Baltimore.\n\nHe was found  'in great distress, and... in need of immediate assistance', after disappearing en-route to New York City.\n\nHe was never able to explain how he came to be in this condition."
+nda_historic.1849.d:1 "The well known poet and author, #ITALIC Edgar Allan Poe#! has past away in Baltimore.\n\nHe was found 'in great distress, and... in need of immediate assistance', after disappearing en-route to New York City.\n\nHe was never able to explain how he came to be in this condition."
 nda_historic.1849.f:1 "His final words were, 'Lord, help my poor soul.'"
 nda_historic.1849.a:0 "Nevermore!"
 
@@ -25,6 +25,13 @@ nda_historic.1862.d:1 "A Club has been launched in London to investigate ghosts 
 nda_historic.1862.f:1 "'I have not yet met with any Ghost Story that was proved to me, or that had not the noticeable peculiarity in it—that the alteration of some slight circumstance would bring it within the range of common natural probabilities.' - Charles Dickens"
 nda_historic.1862.a:0 "Sane heads at last"
 
+nda_historic.1865.t:0 "Zetetic Astronomy - 'Earth Not a Globe'"
+nda_historic.1865.d:1 "A book has been released claiming that the Earth is not if fact a sphere.\n\nIt appears to be the work of Samuel Rowbottom, writing under the alias of 'Parallax'\n\nZetetic Astronomy, models the Earth as a flat disc centered at the North Pole and bounded along its perimeter by a wall of ice, with the Sun, Moon, planets, and stars moving only several thousand miles above the surface of Earth."
+nda_historic.1865.f:1 "'If then we adopt the zetetic process to ascertain the true figure and condition of the Earth, we shall find that instead of its being a globe, and moving in space, it is the directly contrary — A Plane; without motion, and unaccompanied by anything in the Firmament analogous to itself.'"
+nda_historic.1865.a:0 "How insane"
+nda_historic.1865.b:0 "No Elephants or Turtles involved?"
+nda_historic.1865.c:0 "(Looks at Map) It's not a cylinder?"
+
 nda_historic.1875.t:0 "Divine Wisdom"
 nda_historic.1875.d:1 "A new society, The Theosophical Society, has been launched in New York by Helena Blavatsky and others, with the intent to 'investigate the unexplained laws of nature and the powers latent in man'!\n\nThe word Theosophical can be roughly translated as 'Divine Wisdom'"
 nda_historic.1875.f:1 "'an unsectarian body of seekers after Truth, who endeavor to promote Brotherhood and strive to serve humanity.'"
@@ -37,7 +44,7 @@ nda_historic.1882.a:0 "Sane heads at last"
 
 nda_historic.1887.t:0 "The Secret Doctrine"
 nda_historic.1887.d:1 "Madame Blavatsky and the Theosphical Society has published a book called 'The Secret Doctrine, the Synthesis of Science, Religion and Philosophy'\n\nIt describes itself as the 'accumulated Wisdom of the Ages' as revealed to her by the 'Secret Masters'"
-nda_historic.1887.f:1 "The first volume mentions 'The Universe is the periodical manifestation of this unknown Absolute Essence.'\n\nThe second volume talks about 'root races' dating back millions of years and living in Hyperboria, Lemuria and Atlantis. It seems to infer that a new, superior, human race is due to appear sometime next century"
+nda_historic.1887.f:1 "The first volume mentions 'The Universe is the periodical manifestation of this unknown Absolute Essence.'\n\nThe second volume talks about 'root races' dating back millions of years and living in Hyperboria, Lemuria and Atlantis. It seems to infer that a new, superior, human race is due to appear sometime next century."
 nda_historic.1887.a:0 "Who would believe such tosh!"
 
 nda_historic.1888.t:0 "Spirit Voices Faked!"
@@ -46,7 +53,13 @@ nda_historic.1888.f:1 "Many spiritulists refuse to believe this retelling of eve
 nda_historic.1888.a:0 "I knew it! Fake just like the Cultist teachings!"
 
 nda_historic.1889.t:0 "Hermetic Order of the Golden Dawn"
-nda_historic.1889.d:1 "Apparently the 'Rosicrucians' have given permision by a German Countess, Anna Sprengal, to form a new esoteric organisation and have founded their first chapter, the 'Isis-Urania Temple', in London."
+nda_historic.1889.d:1 "Apparently the 'Rosicrucians' have been given permision by a German Countess, Anna Sprengal, to form a new esoteric organisation and have founded their first chapter, the 'Isis-Urania Temple', in London."
 nda_historic.1889.f:1 "'Ordo Hermeticus Aurorae Aureae'"
 nda_historic.1889.a:0 "More Masons!"
+
+nda_historic.1892.t:0 "Universal Zetetic Society"
+nda_historic.1892.d:1 "A new society has been founded in London. The 'Universal Zetetic Society'\n\nThe flat-earth movement appears stronger in numbers than ever before, and is looking to spread around the globe."
+nda_historic.1892.f:1 "'OUR MOTTO\n\nFor God and His truth, as found in Nature and taught in His Word.\n\nOUR OBJECT\n\nThe propagation of knowledge relating to Natural Cosmogony in confirmation of the Holy Scriptures, based upon practical investigation.' - from the rules of the UZS "
+nda_historic.1892.a:0 "'Flat Earthers' again?"
+nda_historic.1892.b:0 "But where do the 'Hollow Earthers' live?"
 

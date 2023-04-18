@@ -49,3 +49,7 @@
  notification_nda_carnacki_death_tooltip:0 "#header $notification_nda_carnacki_death_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_carnacki_death_desc$"
  notification_nda_carnacki_death_name:1 "Death of Carnacki"
  notification_nda_carnacki_death_desc:1 "Carnacki, the self proclaimed 'Ghost Finder' has been found dead from a single stab wound to the back. The incident at his private quarters is being investigated by police to determine how the assailant could get into a barred room."
+
+ notification_nda_hastur_coronation_tooltip:0 "#header $notification_nda_carnacki_exile_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_carnacki_exile_desc$"
+ notification_nda_hastur_coronation_name:1 "A Grand Coronation"
+ notification_nda_hastur_coronation_desc:1 "Hail King Castaigne! Wearer of the Yellow Crown of Hastur. America can dream again!"

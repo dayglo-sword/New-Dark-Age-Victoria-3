@@ -1,0 +1,11 @@
+﻿nda_effect_ensure_cult_ideology = { # character should have an appropriate ideology
+	if = {
+		limit = { has_non_cultist_ideology = yes }
+		random_list = {	
+			25 = { set_ideology = ideology_nda_cultist }
+			25 = { set_ideology = ideology_jingoist_leader }
+			25 = { set_ideology = ideology_fascist }
+			25 = { set_ideology = ideology_slaver }
+		}
+	}
+}

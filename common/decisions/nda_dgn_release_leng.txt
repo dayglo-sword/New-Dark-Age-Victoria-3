@@ -8,82 +8,93 @@
 	}
 
 	possible = {
-
+		is_at_war = no
 	}
 	
 	when_taken = {
 
-		# release tibet - needs to be Leng?
-		c:TIB = {
-			make_independent = yes
+		custom_tooltip = {
+			text = nda_dgn_release_leng_tooltip	
 
-			# make cultists
-			IF = {
-				limit = {
-					is_cultist_country = no
+			# release tibet - needs to be Leng?
+			c:TIB = {
+				make_independent = yes
+
+				# make cultists
+				IF = {
+					limit = {
+						is_cultist_country = no
+					}
+					debug_log = "Make TIB Cultist"
+					trigger_event = { id = nda_base.7 }		
 				}
-				debug_log = "Make TIB Cultist"
-				trigger_event = { id = nda_base.7 }		
 			}
-		}
 
-		# set tibet support for leading unification candidate - make current leader favorate
-		IF = {
-			limit = { NOT = { exists = c:ELD } }
+			change_relations = { country = c:TIB value = 200 } # Make friends
 
-			ordered_country = {
-				limit = { 
-					is_unification_candidate = ELD 
-					NOT = { 
-						OR = { 
-							this = c:DGN 
-							this = c:TIB
-						}
-					}					
-				}
-				order_by = gdp
-				max = 1
-				change_relations = { country = c:TIB value = 200 } # Make friends to assist unification?
-			}			
-		}
-
-		# transfer inland to tibet
-		every_scope_state = {
+			# set tibet support for leading unification candidate - make current leader favorate
 			IF = {
-				limit = { 
-					owner = ROOT
-				 	#is_potentially_dagonic_lands = yes 
-					is_coastal = no
-					NOT = { state_region = S:STATE_SOUTHERN_MANCHURIA } # keep else disconnect in dagonic land
-					state_region = {
-						is_homeland = cu:nda_cul_cultist
-						#NOT = { is_homeland = cu:nda_cul_dagonic }
-						
+				limit = { NOT = { exists = c:ELD } }
+
+				ordered_country = {
+					limit = { 
+						is_unification_candidate = ELD 
+						NOT = { 
+							OR = { 
+								this = c:DGN 
+								this = c:TIB
+							}
+						}					
+					}
+					order_by = gdp
+					max = 1
+					change_relations = { country = c:TIB value = 200 } # Make friends to assist unification?
+				}			
+			}
+			# transfer inland to tibet
+			every_scope_state = {
+				IF = {
+					limit = { 
+						owner = ROOT
+						#is_potentially_dagonic_lands = yes 
+						is_coastal = no
+						NOT = { state_region = S:STATE_SOUTHERN_MANCHURIA } # keep else disconnect in dagonic land
+						state_region = {
+							is_homeland = cu:nda_cul_cultist
+							#NOT = { is_homeland = cu:nda_cul_dagonic }
+							
+						}	
 					}	
-				}	
 
-				set_state_owner = c:TIB		
-				# remove dagonic culture
-				state_region = {
-					remove_homeland	= nda_cul_dagonic	
-				}		
+					set_state_owner = c:TIB		
+					# remove dagonic culture
+					state_region = {
+						remove_homeland	= nda_cul_dagonic	
+					}	
+
+					# add cultists - should force IG to be enabled before leng setup below
+					every_scope_pop = {
+						limit = {
+							NOT = { culture = cu:nda_cul_cultist }
+						}
+						change_pop_culture = { target = cu:nda_cul_cultist value = 0.05 }			
+					}		
+				}
+
 			}
 
-		}
+			c:TIB = {					
+				change_tag = LEN # now change to Leng
+			}
 
-		c:TIB = {					
-			change_tag = LEN # now change to Leng
+			c:LEN = {
+				nda_effect_leng_setup = yes
+			}						
 		}
-
-		c:LEN = {
-			nda_effect_leng_setup = yes
-		}
-
-		custom_tooltip = nda_dgn_release_leng_tooltip
 	}
 
 	ai_chance = {
-		base = 10	
+		base = 20 # should be quite high to get rid of inland.	
 	}
 
 }

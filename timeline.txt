@@ -17,7 +17,7 @@ Timeline of events in mod
 
 1861.10     nda_astro.20        Conjunction 2
 1862.1      nda_historic.1862   London - The Ghost Club
-
+1865.6      nda_historic.1865   Zetetic Astronomy - Earth is not a globe! TODO
 1875.4      nda_historic.1875   NY - The Theosophical Society
 
 1881.4      nda_astro.30        Conjunction 3
@@ -32,6 +32,7 @@ Timeline of events in mod
 1891.1      nda_hasturian.2     The King in Yellow Spreads
 1892.1      nda_hasturian.3     The King in Yellow - The Repairer of Reputations
 1892.7~     nda_hasturian.5     The King in Yellow - Imperial America
+1892.9      nda_historic.1892   Zetetic Astronomy - Universal Zetetic Society TODO
 
 1901        nda_whh.1           House on the Borderlands
 1901.10     nda_astro.40        Conjunction 4

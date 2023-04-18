@@ -60,6 +60,7 @@
  nda_base.13.f:0 "A strange man, clad all in black but of indistinct appearance, has appeared to you and has issued a warning\n\n#ITALIC 'You have not stopped the Cult, you have just held off the ineviatable.'#!"
  nda_base.13.a:0 "We will be waiting."
  nda_base.13.b:0 "Maybe your right."
+ nda_base.13.c:0 "Yours is a failed philosophy."
 
  # The Inquisition
  nda_base.20.t:0 "An Unusual Offer"

@@ -29,6 +29,7 @@
 				}
 
 				NOT = { has_global_variable = nda_ritual_completed  }
+				has_global_variable = nda_conjunction_2 # limit to after 1861 if early ELD
 		}
 	}
 

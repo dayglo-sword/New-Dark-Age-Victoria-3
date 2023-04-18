@@ -574,7 +574,7 @@ nda_nen.21 = { # Plague in Innsmouth
 
 # nda_nen.23 = { # The Raid on Innsmouth
 
-nda_nen.1882 = { # The Colour Out Of Space
+nda_nen.1882 = { # The Colour Out Of Space - The Meteor
 	type = country_event
 	placement = p:xBB7965 
 	title = nda_nen.1882.t
@@ -607,6 +607,44 @@ nda_nen.1882 = { # The Colour Out Of Space
 	
 	option = { #"A Bizarre Tale.."
 		name = nda_nen.1882.a
+		default_option = yes
+
+	}
+}
+
+nda_nen.1883 = { # The Colour Out Of Space
+	type = country_event
+	placement = p:xBB7965 
+	title = nda_nen.1883.t
+	desc = nda_nen.1883.d
+	flavor =  nda_nen.1883.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1883.3 
+
+		p:xBB7965 = { state = { owner = ROOT } }
+
+		NOT = { has_global_variable = nda_colour_out_of_space_fruit }
+		# should be Professors from MU?
+	}
+
+	immediate = {
+		set_global_variable = nda_colour_out_of_space_fruit	
+	}	
+	
+	option = { #"Pollution?"
+		name = nda_nen.1883.a
 		default_option = yes
 
 	}
@@ -682,6 +720,50 @@ nda_nen.1922 = { # Horror at Martin's Beach
 	
 	option = { #"A Bizarre Tale..."
 		name = nda_nen.1922.a
+		default_option = yes
+
+	}
+	option = { #"Hail Dagon..."
+		trigger = {
+			has_variable = nda_dagon_in_open
+		}
+		name = nda_nen.1922.b
+	}
+}
+
+nda_nen.1935 = { # The Outro / denouncement
+	type = country_event
+	placement = p:x2B5499 
+	title = nda_nen.1935.t
+	desc = nda_nen.1935.d
+	flavor =  nda_nen.1935.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+		game_date >= 1935.10 
+		is_player = yes
+		p:x2B5499 = { state = { owner = ROOT } }
+
+		NOT = { has_global_variable = nda_outro }
+		has_global_variable = nda_ritual_cthulhu_leaves
+	}
+
+	immediate = {
+		set_global_variable = nda_outro	
+	}	
+	
+	option = { #"Well..."
+		name = nda_nen.1935.a
 		default_option = yes
 
 	}

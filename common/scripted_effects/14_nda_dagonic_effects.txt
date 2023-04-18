@@ -8,6 +8,7 @@
 			}
 			add_trait = nda_dagon_master # need to add to heirs as well?
 			change_character_religion = rel:nda_rel_cultist # no nda_rel_dagonic as yet
+			nda_effect_ensure_cult_ideology = yes	
 		}
 
 		# set state religion
@@ -41,18 +42,7 @@
 					add_trait = nda_cultist		
 				}
 
-				IF = {
-					limit = {
-						has_non_cultist_ideology = yes
-					}
-
-					random_list = {	
-						25 = { set_ideology = ideology_nda_cultist }
-						25 = { set_ideology = ideology_jingoist_leader }
-						25 = { set_ideology = ideology_fascist }
-						25 = { set_ideology = ideology_slaver }
-					}
-				}			
+				nda_effect_ensure_cult_ideology = yes			
 			}
 		}
 
@@ -93,19 +83,14 @@
 
 nda_effect_dagonic_annex = {
 	# annex a single country that openly supports DGN
-	debug_log = "Dagonic - Annex Check."	
+	#debug_log = "Dagonic - Annex Check."	
 
 	if = {
 		limit = {
-			exists = ROOT
-			AND = {
-				exists = c:DGN
-				ROOT = c:DGN
-			} 
-			any_country = { 			
-				NOT = {
+			any_country = { 	
+				is_player = no			
+				NOT = {		
 					is_full_cult_country = { COUNTRY="THIS" }	
-					is_player = yes			
 				}
 				has_variable = nda_dagon_in_open
 			}
@@ -113,11 +98,11 @@ nda_effect_dagonic_annex = {
 
 		ordered_country = {
 			limit = {
-				NOT = {
+				is_player = no			
+				NOT = {		
 					is_full_cult_country = { COUNTRY="THIS" }	
-					is_player = yes				
 				}
-				has_variable = nda_dagon_in_open			
+				has_variable = nda_dagon_in_open		
 			}
 			order_by = { subtract = global_country_ranking }
 			position = 1
@@ -126,7 +111,9 @@ nda_effect_dagonic_annex = {
 		}
 
 		# send notification - does country still exist after annex?
-		post_notification = nda_dagonic_shores_expand # toast
+		every_country = {
+				post_notification = nda_dagonic_shores_expand
+		}
 
 		annex = scope:nda_dagonic_annex
 
@@ -186,44 +173,7 @@ nda_effect_dagonic_influence = { # boost to dagonic influence in area
 			# always change relationship
 			change_relations = { country = c:DGN value = 50 }
 			debug_log = "Improved Relations with DGN " 
-		}
-		
-		if = {
-			limit = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}
-			# DGN only buffs
-			debug_log = "Buff DGN " 
-
-			every_state_region = {
-				limit = { 
-					exists = THIS
-					is_homeland=cu:nda_cul_dagonic
-					any_neighbouring_state = { owner = ROOT }
-				
-				}
-				add_claim = ROOT						
-			}
-
-			every_scope_state = { # need to set all non-homelands in DGN as homelands
-				limit = {
-					exists = THIS 
-					state_region = {
-						NOT = { is_homeland = cu:nda_cul_dagonic }
-						# include other Cults as well ??
-					}	
-				}
-				state_region = {
-					add_homeland = nda_cul_dagonic
-				}
-				
-			}
-			# lay claims with neighbours?
-
-			# remove radicals from government while everyone is partying
-			add_radicals  = { value = -0.5 }
-		}	
+		}		
 	}
 
 	# non-cultist in area should worry - decrease relationships
@@ -243,6 +193,47 @@ nda_effect_dagonic_influence = { # boost to dagonic influence in area
 	}
 }
 
+nda_effect_dagonic_buff = { # boost to dagon
+
+	# Dagonic States
+	if = {
+		limit = {
+			exists = c:DGN
+			c:DGN = ROOT
+		}
+		# DGN only buffs
+		debug_log = "Buff DGN " 
+
+		every_state_region = {
+			limit = { 
+				exists = THIS
+				is_homeland=cu:nda_cul_dagonic
+				any_neighbouring_state = { owner = ROOT }
+			
+			}
+			add_claim = ROOT						
+		}
+
+		every_scope_state = { # need to set all non-homelands in DGN as homelands
+			limit = {
+				exists = THIS 
+				state_region = {
+					NOT = { is_homeland = cu:nda_cul_dagonic }
+					# include other Cults as well ??
+				}	
+			}
+			state_region = {
+				add_homeland = nda_cul_dagonic
+			}
+			
+		}
+		# lay claims with neighbours?
+
+		# remove radicals from government while everyone is partying
+		add_radicals  = { value = -0.5 }
+	}	
+}
+
 nda_effect_leng_setup = { # Dagon releases Leng lands
 		# Set Country Leader as Cultist if not already
 		every_scope_character = {
@@ -252,6 +243,7 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 			}
 			add_trait = nda_master # need to add to heirs as well?
 			change_character_religion = rel:nda_rel_cultist
+			nda_effect_ensure_cult_ideology = yes
 		}
 
 		# set state religion

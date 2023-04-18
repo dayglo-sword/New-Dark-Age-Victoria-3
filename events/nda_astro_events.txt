@@ -8,19 +8,12 @@ nda_astro.10 = { # 1842 conjunction
 	
 	trigger = { 
 		NOT = { has_global_variable = nda_conjunction_1 }		
-		game_date >= 1842.1.25	#1836.2.15 #
-
-		# should fire once for first country to get it
-		#game_date < 1843 # stop late forming countries getting event	
-		# for everyone?	
-		#OR = {
-		#	#is player or open cultist
-		#	is_player = yes
-		#	has_variable = nda_cultists_in_open
-		#}	
+		game_date >= 1842.1.25	#1836.2.15 #		
 	}
 
 	immediate = {
+		debug_log = "Conjunction 1 Lead Fire"
+		
 		every_country = {
 			limit = {
 				OR = {
@@ -33,7 +26,6 @@ nda_astro.10 = { # 1842 conjunction
 			trigger_event = { id = nda_astro.1 }	# fire main events		
 		}		
 		set_global_variable = nda_conjunction_1
-		debug_log = "Conjunction 1 Lead Fire"
 	}	
 }
 
@@ -78,6 +70,7 @@ nda_astro.20 = { # 1861 conjunction
 	}
 
 	immediate = {
+		debug_log = "Conjunction 2 Lead Fire"
 		every_country = {
 			limit = {
 				OR = {
@@ -90,9 +83,28 @@ nda_astro.20 = { # 1861 conjunction
 			trigger_event = { id = nda_astro.2 }	# fire main events		
 		}	
 
+		trigger_event = { id = nda_astro.21 days = 7 }	# fire follow up event
+		set_global_variable = nda_conjunction_2
+
+	}	
+}
+
+nda_astro.21 = { # Conjunction follow up
+	type = country_event
+	hidden = yes
+	
+	trigger = { 
+
+	}
+
+	immediate = {
+		debug_log = "Conjunction Follow up Starts"
+		# annex countries first
+		nda_effect_rite_annexations = yes
+
 		random_country = {
 			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
+				country_rank >= rank_value:unrecognized_power	
 
 				NOT = { has_variable = nda_nameless_cults_selected }
 			}
@@ -101,7 +113,7 @@ nda_astro.20 = { # 1861 conjunction
 		}
 		random_country = {
 			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
+				country_rank >= rank_value:unrecognized_power		
 
 				NOT = { has_variable = nda_nameless_cults_selected }
 				any_scope_state = { 
@@ -113,7 +125,7 @@ nda_astro.20 = { # 1861 conjunction
 		}
 		random_country = {
 			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
+				country_rank >= rank_value:unrecognized_power
 
 				NOT = { has_variable = nda_nameless_cults_selected }
 				any_scope_state = { 
@@ -123,9 +135,7 @@ nda_astro.20 = { # 1861 conjunction
 
 			set_variable = nda_nameless_cults_selected
 		}
-
-		set_global_variable = nda_conjunction_2
-		debug_log = "Conjunction 2 Lead Fire"
+		debug_log = "Conjunction Follow up Ends"
 	}	
 }
 
@@ -178,6 +188,7 @@ nda_astro.30 = { # 1881 conjunction
 	}
 
 	immediate = {
+		debug_log = "Conjunction 3 Lead Fire"
 		every_country = {
 			limit = {
 				OR = {
@@ -190,42 +201,9 @@ nda_astro.30 = { # 1881 conjunction
 			trigger_event = { id = nda_astro.3 }	# fire main events		
 		}	
 
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_yigian = yes
-				}
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_dagonic = yes
-				}
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
+		trigger_event = { id = nda_astro.21 days = 7 }	# fire follow up event
 
 		set_global_variable = nda_conjunction_3
-		debug_log = "Conjunction 3 Lead Fire"
 	}	
 }
 
@@ -280,8 +258,13 @@ nda_astro.40 = {  # 1901 conjunction
 	}
 
 	immediate = {
+		
+		set_global_variable = nda_conjunction_4
+		debug_log = "Conjunction 4 Lead Fire Start"
+
 		every_country = {
 			limit = {
+				is_country_alive = yes
 				OR = {
 					#is player or open cultist
 					is_player = yes
@@ -291,43 +274,10 @@ nda_astro.40 = {  # 1901 conjunction
 
 			trigger_event = { id = nda_astro.4 }	# fire main events		
 		}	
+ 
+ 		trigger_event = { id = nda_astro.21 days = 21 }	# fire follow up event on delay as above can take sometime.
 
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_yigian = yes
-				}
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_dagonic = yes
-				}
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-
-		set_global_variable = nda_conjunction_4
-		debug_log = "Conjunction 4 Lead Fire"
+		debug_log = "Conjunction 4 Lead Fire End"
 	}	
 }
 
@@ -351,11 +301,13 @@ nda_astro.4 = { # 1901 conjunction
 
 	immediate = {
 		set_variable = nda_conjunction_4
-		debug_log = "Conjunction 4"
-		nda_effect_rite_conversion = yes
+		if = {
+			limit = { exists = ROOT }
+			#debug_log = "Conjunction 4"
+			nda_effect_rite_conversion = yes
 
-		nda_effect_boost_unification = yes
-
+			nda_effect_boost_unification = yes			
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -383,6 +335,7 @@ nda_astro.50 = { # 1921 conjunction
 	}
 
 	immediate = {
+
 		every_country = {
 			limit = {
 				OR = {
@@ -395,39 +348,7 @@ nda_astro.50 = { # 1921 conjunction
 			trigger_event = { id = nda_astro.5 }	# fire main events		
 		}	
 
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_yigian = yes
-				}
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				#country_rank >= rank_value:unrecognized_regional_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_dagonic = yes
-				}
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
+ 		trigger_event = { id = nda_astro.21 days = 21 }	# fire follow up event
 
 		set_global_variable = nda_conjunction_5
 		debug_log = "Conjunction 5 Lead Fire"
@@ -479,39 +400,3 @@ nda_astro.5 = { # 1921 conjunction
 		trigger = { NOT = { has_variable = nda_cultists_in_open } }
 	}
 }
-
-#nda_astro.6 = { # TEST EVENT 
-#	type = country_event
-#	placement = ROOT
-#	title = nda_astro.5.t
-#	desc = nda_astro.5.d
-#	flavor =  nda_astro.5.f
-#
-#	duration = 3
-#
-#	event_image = {
-#		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"	
-#	}
-#
-#	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-#	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-#
-#	icon = "gfx/interface/icons/event_icons/event_skull.dds"
-#	
-#	trigger = { 	
-#		#NOT = { has_variable = nda_conjunction_5 }		
-#		#game_date >= 1921.9.14	
-#		#game_date < 1922 # stop late forming countries getting event	
-#	}
-#
-#	immediate = {
-#		set_variable = nda_conjunction_5
-#		debug_log = "Test Event Log 1"
-#		debug_log = "Test Event Log 2 : [Scope.c:GetName]"
-#	}	
-#			
-#	option = { #"A bit worrying..." # Nothing you can do
-#		name = nda_astro.5.a
-#		default_option = yes		
-#	}
-#}

@@ -150,9 +150,11 @@ can_cult_infiltrate = {
 			has_variable = nda_cultists_in_open	
 			has_variable = nda_cult_spread_failed
 			has_global_variable = nda_ritual_cthulhu_leaves	
-			#has_events = no
+			has_variable = nda_king_in_yellow_rules
 		}
-	}
+	}	
+	# not for decentralised powers
+	country_rank >= rank_value:unrecognized_power	
 }
 
 ## Flag triggers

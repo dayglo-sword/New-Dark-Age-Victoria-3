@@ -7,6 +7,7 @@
 			}
 			add_trait = nda_master # need to add to heirs as well?
 			change_character_religion = rel:nda_rel_cultist
+			nda_effect_ensure_cult_ideology = yes
 		}
 
 		# set state religion
@@ -61,42 +62,50 @@
 }
 
 nda_effect_eldritch_annex = {
+	debug_log = "nda_effect_eldritch_annex start"	
 	# annex a single country that openly supports ELD
 	if = {
 		limit = {
-			exists = ROOT
-			ROOT = c:ELD 
-			any_country = { 			
+			any_country = { 
+				is_player = no				
 				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }	
-					is_player = yes	
-					any_scope_state = { 
-						OR = {
-							is_potentially_dagonic = yes
-							is_potentially_yigian = yes								
+					OR = {
+						is_full_cult_country = { COUNTRY="THIS" }						
+						any_scope_state = { 
+							OR = {
+								is_potentially_dagonic = yes
+								is_potentially_yigian = yes								
+							}						
 						}						
 					}	
-					
+				}
+				NOT = { # Hastur does not surrender to a giant cat with squid on its head
+					has_variable = nda_king_in_yellow_rules				
 				}
 				has_variable = nda_cultists_in_open
-				is_diplomatic_play_committed_participant = no		
+				#is_diplomatic_play_committed_participant = no		
 			}
 		} 
-
+		debug_log = "nda_effect_eldritch_annex find country"	
 		ordered_country = {
 			limit = {
+				is_player = no	
 				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }	
-					is_player = yes	
-					any_scope_state = { 
-						OR = {
-							is_potentially_dagonic = yes
-							is_potentially_yigian = yes								
+					OR = {
+						is_full_cult_country = { COUNTRY="THIS" }						
+						any_scope_state = { 
+							OR = {
+								is_potentially_dagonic = yes
+								is_potentially_yigian = yes								
+							}						
 						}						
-					}				
+					}									
+				}
+				NOT = { # Hastur does not surrender to a giant cat with squid on its head
+					has_variable = nda_king_in_yellow_rules						
 				}
 				has_variable = nda_cultists_in_open		
-				is_diplomatic_play_committed_participant = no			
+				#is_diplomatic_play_committed_participant = no			
 			}
 			order_by = { subtract = global_country_ranking }
 			min = 1	

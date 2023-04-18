@@ -68,7 +68,7 @@ nda_nen.14.a:0 "Gone to a better place?"
 
 nda_nen.15.t:0 "Assault on Laboratory"
 nda_nen.15.d:0 "The formula for the 'Combat Serum', as devised by the late Dr West, has been stolen from the production facility, and all papers on the process lost!\n\nThe guards have spun a tale that few will believe!"
-nda_nen.15.f:0 "'There was a strange light, and a fellow appearing out of the middle of it. Gaunt and cloaked in strange garments, he spoke in our heads while we remained transfixed in place by some unknown force.'\n\n #ITALIC 'The waters of Lethe shall be mine alone, and in the far future, beneath a dim sun and sad heavens, I shall have my empire of the dead on the last continent, Zothique!'#!"
+nda_nen.15.f:0 "'There was a strange light, and a fellow appearing out of the middle of it. Gaunt and cloaked in strange garments, he spoke in our heads while we remained transfixed in place by some unknown force.'\n\n #ITALIC 'The waters of Lethe shall be mine alone, and in the far future, beneath a dim sun and sad heavens, I shall have my empire of the dead upon the last continent, Zothique!'#!"
 nda_nen.15.a:0 "This is not possible!"
 
 nda_nen.16.t:0 "Plague in Arkham?"
@@ -78,7 +78,7 @@ nda_nen.16.a:0 "I'm sure we can keep a lid on it."
 
 nda_nen.18.t:0 "A Plague Spreads"
 nda_nen.18.d:0 "The 'Plague' is no longer contained to Arkham!\n\nIt has spread to other states.\n\nSimilar tales of strange folk wandering the streets at night and tombs being desecrated."
-nda_nen.18.f:0 ""
+nda_nen.18.f:0 "'I saw outlined against some phosphorescence of the nether world a horde of silent toiling things which only insanity—or worse—could create.\n\nTheir outlines were human, semi-human, fractionally human, and not human at all — the horde was grotesquely heterogeneous.'"
 nda_nen.18.a:0 "We had no choice!"
 
 nda_nen.20.t:0 "Devil Worship in Innsmouth"
@@ -91,10 +91,15 @@ nda_nen.21.d:0 "A mysterious plague has hit the coastal town of Innsmouth killin
 nda_nen.21.f:0 "#ITALIC '...it was probably some foreign kind of disease brought from China or somewhere by the shipping...\n\nIt surely was bad enough - there were riots over it, and all sorts of ghastly doings that I don't believe ever got outside town...#!'"
 nda_nen.21.a:0 "Too late to help the poor souls."
 
-nda_nen.1882.t:0 "Meteor in Maine"
+nda_nen.1882.t:0 "Meteor near Arkham"
 nda_nen.1882.d:0 "Three professors from Miskatonic University have hastened out to the west of Arkham to investigate tales of a 'great rock' falling from the sky\n\nAfter finding the remains in a crater, the professors found the meteorite to consist of an 'oddly soft' material.\n\nThe sample that they took faded away during experiments, which appears to also be the fate of the main body of the stellar object."
-nda_nen.1882.f:0 ""
+nda_nen.1882.f:0 "#ITALIC 'The stone, magnetic as it had been, must have had some peculiar electrical property; for it had “drawn the lightning”...\n\nSix times within an hour the farmer saw the lightning strike the furrow in the front yard, and when the storm was over nothing remained but a ragged pit...\n\nAs was natural, the Arkham papers made much of the incident!#!'"
 nda_nen.1882.a:0 "Disappeared?"
+
+nda_nen.1883.t:0 "Strange Fruit"
+nda_nen.1883.d:0 "There are reports of possible pollution of the soil west of Arkham, near where last years meteor landed."
+nda_nen.1883.f:0 "#ITALIC 'Never were things of such size seen before, and they held strange colours that could not be put into any words. Their shapes were monstrous, and the horse had snorted at an odour which struck as wholly unprecedented.\n\nThat afternoon several persons drove past to see the abnormal growth, and all agreed that plants of that kind ought never to sprout in a healthy world.#!'"
+nda_nen.1883.a:0 "Polluted?"
 
 nda_nen.1913.t:0 "Meteor in Maine"
 nda_nen.1913.d:0 "A Meteor has been seen over the coast of Maine!\n\nA mammoth ball fire darted from the heavens into the water.\n\nThe following Sunday a fishing party caught in their trawl a mass of metallic rock.\n\nIt was discovered within this mass a strange book made of an unknown substance.\n\nThe writing within has been identified as ancient Greek from the Second Century BC!"
@@ -106,3 +111,8 @@ nda_nen.1922.d:0 "A number of visitors to Martin's Beach have lost their lives a
 nda_nen.1922.f:0 "Witnesses describe how they remained routed to the spot, as the tragic victims seemed to be unable to detached themselves from the ropes attached to the body of the creature.\n\nAs the tide rose the indivduals were slowly dragged out to sea.\n\nIn response to this incident, a Professor Alton has already released an article with the title #ITALIC 'Are Hypnotic Powers Confined to Recognised Humanity?' #!"
 nda_nen.1922.a:0 "How Horrific..."
 nda_nen.1922.b:0 "Hail the Servants of Dagon!"
+
+nda_nen.1935.t:0 "A Journey to Arkham"
+nda_nen.1935.d:0 "It is one of those unfortunate affairs where you have to share transportation on your journey.\n\nUnfortunate, in that you are sitting opposite that one person who can not keep themselves to themselves.\n\nThey were head deep in a book, but you could still tell that their face was gradually reddening, and then they burst forth and address you directly..."
+nda_nen.1935.f:0 "'Can you believe this nonsense!\n\nThat everything is being run in secret by a select band of long-lived people!\n\nThe idea that we humans have no general agency, that everything, from the economy, to the form of government itself, is governed by entities beyond our control!\n\nIt's preposterous! What sort of a person could ever have such power and not reveal themselves?'"
+nda_nen.1935.a:0 "Well..."

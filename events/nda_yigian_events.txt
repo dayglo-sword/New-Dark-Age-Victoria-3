@@ -115,6 +115,17 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 					remove_homeland = nda_cul_cultist
 				}
 				# full conversion of cult
+				# convert cultists to yigian				
+				every_scope_pop = {
+					limit = {
+						culture = cu:nda_cul_cultist
+					}
+					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
+				}
+				# convert general pop
+				every_scope_pop = {
+					change_pop_culture = { target = cu:nda_cul_yigian value = 0.05 }
+				}
 
 				# everyone of Eldritch Culture should follow Rite 
 				every_scope_pop = {
@@ -128,11 +139,7 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 			every_interest_group = {
 				limit = { has_ideology = ideology_nda_cabalistic }
 
-				set_interest_group_name = ig_nda_yigian_cult
-				
-				#ig:ig_nda_cult_worshippers = {
-				#	set_interest_group_name = ig_nda_yigian_cult
-				#}				
+				set_interest_group_name = ig_nda_yigian_cult				
 			}
 
 

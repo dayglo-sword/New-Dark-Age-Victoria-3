@@ -28,6 +28,17 @@
  nda_ritual.7.d:0 "Unrest is forming among our subjects."
  nda_ritual.7.f:0 ""
  nda_ritual.7.a:0 "'Is it over...'"
+ nda_ritual.9.t:0 "The Final War"
+ nda_ritual.9.d:0 "It is now us or them!\n\nBut our people are showing a stoic resolve to the crisis at hand.\n\nWe must decide how we will react towards this existential crisis."
+ nda_ritual.9.f:0 ""
+ nda_ritual.9.a:0 "To The Death!"
+ nda_ritual.9.b:0 "To The Pain!"
+ nda_ritual.9.c:0 "To Another Country!"
+ nda_ritual.9.e:0 "To Another Dimension!"
+ nda_ritual.10.t:0 "A Strange Darkness"
+ nda_ritual.10.d:0 "You cannot move, you appear to have no body, but your mind is still fully active.\n\nThere are strange mechanical sounds in your head, and a layer of noise on top that sounds like some form of speech."
+ nda_ritual.10.f:0 "'Interesting that it has tried to escape its boundaries.\n\nA futile effort to transend the current ineviatable path.\n\nBut such deviant behaviour makes it is a possible candidate for when we launch our experiment in future iterations!?'"
+ nda_ritual.10.a:0 "What is happening?"
 
  nda_ritual.1860.t:0 "The Tale of Professor Webb"
  nda_ritual.1860.d:0 "An expedition to Greenland in search of some Runic inscriptions, part sponsored by the Miskatonic University, has returned. Its leader, Professor Webb, had a rather strange tale to tell.\n\nWhilst high up on the West Greenland coast they had encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness.\n\nIt was a faith of which other Eskimos knew little, and which they mentioned only with shudders, saying that it had come down from horribly ancient eons before ever the world was made..."
@@ -66,14 +77,14 @@
 # Notifications
  notification_nda_ritual_cthulhu_returns_tooltip:0 "#header $notification_nda_ritual_cthulhu_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_returns_desc$"
  notification_nda_ritual_cthulhu_returns_name:0 "Cthulhu Has Returned"
- notification_nda_ritual_cthulhu_returns_desc:0 "."
+ notification_nda_ritual_cthulhu_returns_desc:0 "The stars are right again... After vigintillions of years #BOLD Great Cthulhu#! is loose again."
 
  notification_nda_ritual_cthulhu_leaves_tooltip:0 "#header $notification_nda_ritual_cthulhu_leaves_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_leaves_desc$"
  notification_nda_ritual_cthulhu_leaves_name:0 "Cthulhu Has Departed"
- notification_nda_ritual_cthulhu_leaves_desc:0 "."
+ notification_nda_ritual_cthulhu_leaves_desc:0 "To everyones suprise the God has not rampaged across the world but instead has flown into the realm beyond the Earths atmosphere."
 
  notification_nda_ritual_country_surrenders_tooltip:0 "#header $notification_nda_ritual_country_surrenders_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_country_surrenders_desc$"
- notification_nda_ritual_country_surrenders_name:0 "[SCOPE.sC('nda_eldritch_annex').GetName ] Surrenders to the Cult."
+ notification_nda_ritual_country_surrenders_name:0 "[SCOPE.sC('nda_eldritch_annex').GetName ] Surrenders to the Cultists."
  notification_nda_ritual_country_surrenders_desc:0 "[SCOPE.sC('nda_eldritch_annex').GetName ] has surrendered itself to the mercies of the Eldritch Cult."
 
  notification_nda_ritual_post_cthulhu_split_tooltip:0 "#header $notification_nda_ritual_post_cthulhu_split_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_post_cthulhu_split_desc$"
@@ -88,3 +99,4 @@
  nda_cult_liberation:0 "War of Liberation from the Cult"
 
  dp_final_war:0 "Apocalypse War"
+ dp_final_war_tooltip:0 "The Final War with the Cultists"
