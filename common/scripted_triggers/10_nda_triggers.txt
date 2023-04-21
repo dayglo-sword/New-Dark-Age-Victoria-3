@@ -141,6 +141,13 @@ is_potentially_dagonic_lands = {
 }
 
 ## Event conditions
+has_cult_culture = {
+	OR = {
+		country_has_primary_culture = cu:nda_cul_cultist  
+		country_has_primary_culture = cu:nda_cul_dagonic
+		country_has_primary_culture = cu:nda_cul_yigian
+	}
+}
 
 can_cult_infiltrate = {
 	# can the cult start to infiltrate - yes if not ongoing or previously failed

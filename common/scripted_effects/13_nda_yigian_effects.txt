@@ -102,6 +102,9 @@ nda_effect_yigian_annex = {
 
 		annex = scope:nda_yigian_annex
 	}	
+	else = {
+		debug_log = "YIG - No Country surrenders."	
+	}
 }
 
 nda_effect_yigian_influence = { # boost to yigian influence in area 

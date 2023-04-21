@@ -1,6 +1,11 @@
 ﻿# This is executed last among all history - evan after main 00_global?
 GLOBAL = {
 	
+	set_global_variable = { # mod compatibility flag
+	    	name = nda_is_loaded
+	    	value = yes
+	}
+
 	# NDA start up event / screen
 	every_country = {
 		#limit = {

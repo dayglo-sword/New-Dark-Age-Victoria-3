@@ -1,31 +1,15 @@
 ﻿namespace = nda_ritual
 
-nda_ritual.1 = { # Cthulhu Returns
+nda_ritual.1924 = { # Cthulhu Return - 1925 already used below
 	type = country_event
-	placement = ROOT
-	title = nda_ritual.1.t
-	desc = nda_ritual.1.d
-	flavor =  nda_ritual.1.f
+	hidden = yes
 
-	duration = 3
-
-	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
-		
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
-
-	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-
-	trigger = { # limit to eldritch cult ELD ? Called Only?
+	trigger = { 
 		has_global_variable = nda_ritual_completed	
 		game_date >= 1925.3.23	
 		NOT = {
 			has_global_variable = nda_cthulhu_arrives	# run once
-		 }
-
+		}
 	}
 
 	immediate = {
@@ -49,30 +33,25 @@ nda_ritual.1 = { # Cthulhu Returns
 				name = nda_ritual_last_war_timer
 				days = 1000
 				value = yes
-			}			
+			}	
+			trigger_event = { id = nda_ritual.1 }		
 		}
+
 		nda_effect_cthulhu_arrives = yes
 		debug_log = "Ritual - Stars are Right"
-
-		#trigger_event = { id = nda_ritual.4 years = 10 } # leaves in 10 years # this is flakey - sometimes does not trigger
 
 		every_country = {
 			post_notification = nda_ritual_cthulhu_returns
 		}
 	}	
-	
-	option = { #So it begins
-		name = nda_ritual.1.a
-		default_option = yes
-	}
 }
 
-nda_ritual.2 = { # Cthulhu Early Return
+nda_ritual.1 = { # Cthulhu Returns
 	type = country_event
 	placement = ROOT
-	title = nda_ritual.2.t
-	desc = nda_ritual.2.d
-	flavor =  nda_ritual.2.f
+	title = nda_ritual.1.t
+	desc = nda_ritual.1.d
+	flavor =  nda_ritual.1.f
 
 	duration = 3
 
@@ -87,13 +66,26 @@ nda_ritual.2 = { # Cthulhu Early Return
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
 	trigger = { # limit to eldritch cult ELD ? Called Only?
+
+	}
+
+	option = { #So it begins
+		name = nda_ritual.1.a
+		default_option = yes
+	}
+}
+
+nda_ritual.1890 = { # Cthulhu Early Return
+	type = country_event
+	hidden = yes
+
+	trigger = { # limit to eldritch cult ELD ? Called Only?
 		has_global_variable = nda_ritual_completed	
 		game_date >= 1890.8.20  # HPL's Birthday
 		game_date < 1891 
 		NOT = {
 			has_global_variable = nda_cthulhu_arrives	# run once
 		 }
-
 	}
 
 	immediate = {
@@ -117,18 +109,40 @@ nda_ritual.2 = { # Cthulhu Early Return
 				name = nda_ritual_last_war_timer
 				days = 2000
 				value = yes
-			}		
+			}	
+
+			trigger_event = { id = nda_ritual.2 }				
 		}
 		
 		nda_effect_cthulhu_arrives = yes
 		debug_log = "Ritual - Stars are Right Early"
 
-		#trigger_event = { id = nda_ritual.4 years = 20 } # leaves in 20 years - longer than normal as reward  # this is flakey - sometimes does not trigger
-
 		every_country = {
 			post_notification = nda_ritual_cthulhu_returns
 		}
 	}	
+}
+
+nda_ritual.2 = { # Cthulhu Early Return
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.2.t
+	desc = nda_ritual.2.d
+	flavor =  nda_ritual.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+	}
 	
 	option = { #So it begins
 		name = nda_ritual.1.a

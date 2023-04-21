@@ -119,6 +119,9 @@ nda_effect_dagonic_annex = {
 
 		debug_log = "Dagonic - Country surrenders."		
 	}	
+	else = {
+		debug_log = "DGN - No Country surrenders."	
+	}
 }
 
 nda_effect_dagonic_influence = { # boost to dagonic influence in area 

@@ -26,8 +26,8 @@ nda_monthly_on_action = {
 		nda_astro.40 
 		nda_astro.50 
 		
-		nda_ritual.1 
-		nda_ritual.2 
+		nda_ritual.1924 # The Return
+		nda_ritual.1890 # Early Return
 		nda_ritual.4 
 		nda_ritual.5 # Eldritch add Cult countries
 		nda_ritual.8 # Final War
