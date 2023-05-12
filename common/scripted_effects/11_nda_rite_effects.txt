@@ -46,7 +46,7 @@
 
 			# always change relationship
 			change_relations = { country = c:ELD value = 100 } # is this too much ?
-			debug_log = "Improved Relations with ELD" 
+			debug_log = "Improved Relations with ELD : [THIS.GetCountry.GetNameNoFormatting]" 
 		}
 	}
 
@@ -85,6 +85,9 @@
 		# remove radicals from government while everyone is partying
 		add_radicals  = { value = -0.5 }
 
+		# reduce infamy
+		change_infamy = -10
+
 	}	
 	#debug_log = "Extra YIG DGN effects" 
 
@@ -114,4 +117,37 @@ nda_effect_rite_annexations = { # Called from astro events - day after main effe
 				nda_effect_yigian_buff = yes				
 			}
 		} 
-}		
+}	
+
+nda_effect_conclave_counts = {
+
+	set_variable = { name = nda_conclave_count value = 0 }
+	set_variable = { name = nda_conclave_assist_count value = 0 }
+	
+	every_country = {
+		limit = {
+				has_variable = nda_cultists_in_open			
+		}
+		scope:nda_conclave = {
+			change_variable = {
+				name = nda_conclave_count
+				add = 1
+			}					
+		}
+
+		if = {
+			limit = { 
+				OR = { 
+					has_journal_entry = je_nda_ritual_proceeds
+					has_journal_entry = je_nda_ritual_assist
+				}
+			}
+			scope:nda_conclave = {
+				change_variable = {
+					name = nda_conclave_assist_count
+					add = 1
+				}									
+			}
+		}	
+	}
+}

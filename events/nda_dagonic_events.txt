@@ -359,7 +359,7 @@ nda_dagonic.7 = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
 	immediate = {
-		debug_log_scopes = yes
+		debug_log_scopes = no
 
 		save_scope_as = nda_dagon_target
 

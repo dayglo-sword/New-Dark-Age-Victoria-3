@@ -1,0 +1,91 @@
+﻿je_nda_migo_status = {
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_nda_migo_status_1
+				trigger = {
+					has_variable = nda_cultists_in_open						
+				}
+			}
+			triggered_desc = {
+				desc = je_nda_migo_status_2
+				trigger = {
+					has_journal_entry = je_nda_cult_spreads
+				}
+			}
+			triggered_desc = {
+				desc = je_nda_migo_status_3
+				trigger = {
+					has_variable = nda_cult_spread_failed
+				}
+			}
+			desc = je_nda_migo_status_4
+		}
+	}
+
+	immediate = {
+		save_scope_as = nda_je_migo_scope
+		debug_log = "Migo Status Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+
+		set_variable = {
+			name = nda_migo_countdown
+			value = 0
+		}
+	}
+
+    complete = {
+		# time to move on
+		custom_tooltip = {
+			text = je_nda_migo_status_complete_tt
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		NOT  = { has_variable = nda_migo_timer } # timer has run out
+    }
+
+	on_complete = {
+		debug_log = "Migo Status Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
+		# go to new Country - or is already handled by event?
+
+	}
+
+	on_weekly_pulse = {		
+		effect = {
+			scope:nda_je_migo_scope = {
+				change_variable = {
+					name = nda_migo_countdown
+					add = 7
+				}			
+			}
+		}
+	}
+
+	on_monthly_pulse = {		
+	}
+
+	current_value = {
+		value = root.var:nda_migo_countdown
+	}
+
+	goal_add_value = {
+		add = 3000 # will this countdown?
+	}
+
+    fail = {
+    }
+	
+	on_fail = {	
+	}
+
+	#timeout = 3000
+
+	progressbar = yes
+	weight = 100
+
+	inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

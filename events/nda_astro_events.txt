@@ -2,7 +2,7 @@
 # Conjunctions and Stars are Right events - acts as forewarning or drivers for other effects
 # these are firing at multiple times - once for each contry - need them to fire at same time as fixed event.
 
-nda_astro.10 = { # 1842 conjunction
+nda_astro.1842 = { # 1842 conjunction
 	type = country_event
 	hidden = yes
 	
@@ -58,7 +58,7 @@ nda_astro.1 = { # 1842 conjunction
 	}
 }
 
-nda_astro.20 = { # 1861 conjunction
+nda_astro.1861 = { # 1861 conjunction
 	type = country_event
 	hidden = yes
 	
@@ -144,7 +144,49 @@ nda_astro.2 = { # 1861 conjunction
 	placement = ROOT
 	title = nda_astro.2.t
 	desc = nda_astro.2.d
-	flavor =  nda_astro.2.f
+
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_completed
+				}
+				desc = nda_conclave_ritual_complete.f
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_global_variable = je_nda_ritual_proceeds_tracker }
+				}
+				desc = nda_conclave_no_ritual.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_cthulhu_visits
+				}
+				desc = nda_conclave_ritual_fail.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 4000
+				}
+				desc = nda_conclave_ritual_high.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 2000
+				}
+				desc = nda_conclave_ritual_medium.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+				}				
+				desc = nda_conclave_ritual_low.f
+			}
+		}
+	}
 
 	duration = 3
 
@@ -160,23 +202,31 @@ nda_astro.2 = { # 1861 conjunction
 	immediate = {
 		set_variable = nda_conjunction_2
 		debug_log = "Conjunction 2"
+
+		save_scope_as = nda_conclave
+		if = { # if player do counts for flavour text
+			limit = { is_player = yes }
+			#do counts - sets variables
+			nda_effect_conclave_counts = yes
+		}
+
 		nda_effect_rite_conversion = yes
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
 		name = nda_astro.2.a
 		default_option = yes
-		trigger = { has_variable = nda_cultists_in_open }		
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }		
 	}
 
 	option = { #"Hurrah!!!" # Nothing you can do
 		name = nda_astro.2.b
 		#default_option = yes
-		trigger = { NOT = { has_variable = nda_cultists_in_open } }
+		trigger = { has_variable = nda_cultists_in_open }
 	}
 }
 
-nda_astro.30 = { # 1881 conjunction
+nda_astro.1881 = { # 1881 conjunction
 	type = country_event
 	hidden = yes
 	
@@ -210,9 +260,50 @@ nda_astro.30 = { # 1881 conjunction
 nda_astro.3 = { # 1881 conjunction
 	type = country_event
 	placement = ROOT
-	title = nda_astro.3.t
-	desc = nda_astro.3.d
-	flavor =  nda_astro.3.f
+	title = nda_astro.2.t
+	desc = nda_astro.2.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_completed
+				}
+				desc = nda_conclave_ritual_complete.f
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_global_variable = je_nda_ritual_proceeds_tracker }
+				}
+				desc = nda_conclave_no_ritual.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_cthulhu_visits
+				}
+				desc = nda_conclave_ritual_fail.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 4000
+				}
+				desc = nda_conclave_ritual_high.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 2000
+				}
+				desc = nda_conclave_ritual_medium.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+				}				
+				desc = nda_conclave_ritual_low.f
+			}
+		}
+	}
 
 	duration = 3
 
@@ -228,25 +319,33 @@ nda_astro.3 = { # 1881 conjunction
 	immediate = {
 		set_variable = nda_conjunction_3
 		debug_log = "Conjunction 3"
+		
+		save_scope_as = nda_conclave
+		if = { # if player do counts for flavour text
+			limit = { is_player = yes }
+			#do counts - sets variables
+			nda_effect_conclave_counts = yes
+		}
+
 		nda_effect_rite_conversion = yes
 
 		nda_effect_boost_unification = yes # need event for selected candidate to inform them (if player) ??
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
-		name = nda_astro.3.a
+		name = nda_astro.2.a
 		default_option = yes
-		trigger = { has_variable = nda_cultists_in_open }		
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }		
 	}
 
 	option = { #"Hurrah!!!" # Nothing you can do
-		name = nda_astro.3.b
+		name = nda_astro.2.b
 		#default_option = yes
-		trigger = { NOT = { has_variable = nda_cultists_in_open } }
+		trigger = { has_variable = nda_cultists_in_open }
 	}
 }
 
-nda_astro.40 = {  # 1901 conjunction
+nda_astro.1901 = {  # 1901 conjunction
 	type = country_event
 	hidden = yes
 	
@@ -284,9 +383,50 @@ nda_astro.40 = {  # 1901 conjunction
 nda_astro.4 = { # 1901 conjunction
 	type = country_event
 	placement = ROOT
-	title = nda_astro.4.t
-	desc = nda_astro.4.d
-	flavor =  nda_astro.4.f
+	title = nda_astro.2.t
+	desc = nda_astro.2.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_completed
+				}
+				desc = nda_conclave_ritual_complete.f
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_global_variable = je_nda_ritual_proceeds_tracker }
+				}
+				desc = nda_conclave_no_ritual.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_cthulhu_visits
+				}
+				desc = nda_conclave_ritual_fail.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 4000
+				}
+				desc = nda_conclave_ritual_high.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 2000
+				}
+				desc = nda_conclave_ritual_medium.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+				}				
+				desc = nda_conclave_ritual_low.f
+			}
+		}
+	}
 
 	duration = 3
 
@@ -301,29 +441,37 @@ nda_astro.4 = { # 1901 conjunction
 
 	immediate = {
 		set_variable = nda_conjunction_4
+
+		save_scope_as = nda_conclave
+		if = { # if player do counts for flavour text
+			limit = { is_player = yes }
+			#do counts - sets variables
+			nda_effect_conclave_counts = yes
+		}
+
 		if = {
 			limit = { exists = ROOT }
 			#debug_log = "Conjunction 4"
 			nda_effect_rite_conversion = yes
 
-			nda_effect_boost_unification = yes			
+			nda_effect_boost_unification = yes						
 		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
-		name = nda_astro.4.a
+		name = nda_astro.2.a
 		default_option = yes
-		trigger = { has_variable = nda_cultists_in_open }		
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }		
 	}
 
 	option = { #"Hurrah!!!" # Nothing you can do
-		name = nda_astro.4.b
+		name = nda_astro.2.b
 		#default_option = yes
-		trigger = { NOT = { has_variable = nda_cultists_in_open } }
+		trigger = { has_variable = nda_cultists_in_open }
 	}
 }
 
-nda_astro.50 = { # 1921 conjunction
+nda_astro.1921 = { # 1921 conjunction
 	type = country_event
 	hidden = yes
 	
@@ -358,9 +506,50 @@ nda_astro.50 = { # 1921 conjunction
 nda_astro.5 = { # 1921 conjunction
 	type = country_event
 	placement = ROOT
-	title = nda_astro.5.t
-	desc = nda_astro.5.d
-	flavor =  nda_astro.5.f
+	title = nda_astro.2.t
+	desc = nda_astro.2.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_completed
+				}
+				desc = nda_conclave_ritual_complete.f
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_global_variable = je_nda_ritual_proceeds_tracker }
+				}
+				desc = nda_conclave_no_ritual.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_cthulhu_visits
+				}
+				desc = nda_conclave_ritual_fail.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 4000
+				}
+				desc = nda_conclave_ritual_high.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 2000
+				}
+				desc = nda_conclave_ritual_medium.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+				}				
+				desc = nda_conclave_ritual_low.f
+			}
+		}
+	}
 
 	duration = 3
 
@@ -384,19 +573,214 @@ nda_astro.5 = { # 1921 conjunction
 		set_variable = nda_conjunction_5
 		debug_log = "Conjunction 5"
 
+
+		save_scope_as = nda_conclave
+		if = { # if player do counts for flavour text
+			limit = { is_player = yes }
+			#do counts - sets variables
+			nda_effect_conclave_counts = yes
+		}
+
 		nda_effect_rite_conversion = yes
 		nda_effect_boost_unification = yes
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
-		name = nda_astro.5.a
+		name = nda_astro.2.a
 		default_option = yes
-		trigger = { has_variable = nda_cultists_in_open }		
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }		
 	}
 
 	option = { #"Hurrah!!!" # Nothing you can do
-		name = nda_astro.5.b
+		name = nda_astro.2.b
 		#default_option = yes
-		trigger = { NOT = { has_variable = nda_cultists_in_open } }
+		trigger = { has_variable = nda_cultists_in_open }
 	}
 }
+
+
+nda_astro.1858 = { # 1858 great comet 'Donati's comet'
+	type = country_event
+	placement = ROOT
+	title = nda_astro.1858.t
+	desc = nda_astro.1858.d
+	flavor =  nda_astro.1858.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	trigger = { 
+		game_date >= 1858.7	
+		game_date < 1859
+	}
+
+	cooldown = { months = 6 }
+
+	immediate = {
+		debug_log = "1858 Great Comet"
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.1858.a
+		default_option = yes
+	}
+
+	option = { #"Hurrah!!!" # Nothing you can do
+		name = nda_astro.1858.b
+		#default_option = yes
+	}	
+}
+
+nda_astro.1910 = { #  Great January Comet of 1910
+	type = country_event
+	placement = ROOT
+	title = nda_astro.1910.t
+	desc = nda_astro.1910.d
+	flavor =  nda_astro.1910.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+	trigger = { 
+		game_date >= 1910.1	
+		game_date < 1911
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		debug_log = "1910 Great Comet"
+	}	
+			
+	option = { #"A bit worrying..." # Nothing you can do
+		name = nda_astro.1858.a
+		default_option = yes
+	}
+
+	option = { #"Hurrah!!!" # Nothing you can do
+		name = nda_astro.1858.b
+		#default_option = yes
+	}	
+}
+
+nda_astro.99 = { # Test
+	type = country_event
+	
+	placement = ROOT
+	title = nda_astro.99.t
+	desc = nda_astro.99.d
+
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_completed
+				}
+				desc = nda_conclave_ritual_complete.f
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_global_variable = je_nda_ritual_proceeds_tracker }
+				}
+				desc = nda_conclave_no_ritual.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = nda_ritual_cthulhu_visits
+				}
+				desc = nda_conclave_ritual_fail.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 4000
+				}
+				desc = nda_conclave_ritual_high.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+					global_var:je_nda_ritual_proceeds_tracker > 2000
+				}
+				desc = nda_conclave_ritual_medium.f
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = je_nda_ritual_proceeds_tracker
+				}				
+				desc = nda_conclave_ritual_low.f
+			}
+		}
+	}
+
+	#flavor =  nda_astro.99.f	
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	
+
+	immediate = {
+		debug_log = "Test Counts for conclave"
+		save_scope_as = nda_conclave
+		set_variable = { name = nda_conclave_count value = 0 }
+		set_variable = { name = nda_conclave_assist_count value = 0 }
+		
+		every_country = {
+			limit = {
+					has_variable = nda_cultists_in_open			
+			}
+			scope:nda_conclave = {
+				change_variable = {
+					name = nda_conclave_count
+					add = 1
+				}					
+			}
+
+			if = {
+				limit = { 
+					OR = { 
+						has_journal_entry = je_nda_ritual_proceeds
+						has_journal_entry = je_nda_ritual_assist
+					}
+				}
+				scope:nda_conclave = {
+					change_variable = {
+						name = nda_conclave_assist_count
+						add = 1
+					}									
+				}
+
+			}	
+		}	
+
+	}	
+}
+
+# 1940 had a triple conjuction!!!
+# 6 August 1940	45.2	71.4	−89.8	3	Yes	Yes
+# 21 October 1940	41.1	74.1	−165.7	3	Yes
+# 14 February 1941	39.9	77.4	+73.3	3	Ye

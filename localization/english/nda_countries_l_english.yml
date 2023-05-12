@@ -10,9 +10,9 @@
  LEN:0 "Leng"
  LEN_ADJ:0 "Lengian"
  # Flavour text
- ELD_FLAVOR_TEXT:0 "Finally, the age that worshippers of the #BOLD Great Old Ones #! have waited so long for is upon us.\n\n The #BOLD Eldritch Realm #! must ensure that when the Stars are right, #BOLD Great Cthulhu #! returns and that humans recognise their insignificance."
- YIG_FLAVOR_TEXT:0 "Once, before the age of #BOLD Atlantis#!, the Snake-people, worshippers of #BOLD Yig#!, ruled the land and the primitive primates upon it.\n\n Forced into hiding at the end of the #BOLD Hyborean Age#!, now is the time of renewal.
- DGN_FLAVOR_TEXT:0 "In the depths of the oceans the worship of #BOLD Dagon#! and #BOLD Hydra#! continues.\n\n Now is the time for it to reach the shores, in preparation for the return Father Cthulhu!"
+ ELD_FLAVOR_TEXT:0 "Finally, the age that worshippers of the [concept_nda_old_ones] have waited so long for is upon us.\n\n The #BOLD Eldritch Realm #! must ensure that when the Stars are right, [concept_nda_cthulhu] returns and that humans recognise their insignificance."
+ YIG_FLAVOR_TEXT:0 "Once, before the age of #BOLD Atlantis#!, the Snake-people, worshippers of [concept_nda_yig], ruled the land and the primitive primates upon it.\n\n Forced into hiding at the end of the #BOLD Hyborean Age#!, now is the time of renewal.
+ DGN_FLAVOR_TEXT:0 "In the depths of the oceans the worship of [concept_nda_dagon] and #BOLD Hydra#! continues.\n\n Now is the time for it to reach the shores, in preparation for the return of [concept_nda_cthulhu]!"
  NEN_FLAVOR_TEXT:0 "After the compromise of 1816, New England stradles both the Old World and the New.\n\n As such it can be superior to both, leading the world forward into a second time of enlightenment.\n\nKnowledge is Power!"
  IAM_FLAVOR_TEXT:0 "By the grace of the #BOLD King in Yellow#!, #BOLD Lord Hastur#!, these are our lands on this pitiful planet while we dream our dreams, and await the end of all and our deliverance to #BOLDCarcosa!#!"
  LEN_FLAVOR_TEXT:0 "Once existing only in the dreams of cultists, the #BOLD Masters of the Plateau of Leng#! now exist in this reality!"

@@ -1,0 +1,214 @@
+﻿namespace = nda_migo
+# it's the Mi-Go mind swapping
+#94170 - Migo Intro - In The Night
+#94171 - All A Dream - Migo rejected
+#94172 - We Will Return
+#94173 - Time To Move On
+#94174 - A New Place
+#94175 - Moving On
+#94176 - The End Is Nigh
+#94177 - The End Of Time
+#94178 - A Bad Place - Hostile IAM
+#94179 - A Strange Place - Cultist Controlled
+#94180 - A Dangerous Place - Cultist Presence
+#94181 - The Brotherhood Visits
+#94182 - The Brotherhood Investigates
+
+nda_migo.1 = { #  Migo Intro - In The Night
+
+	type = country_event
+	placement = ROOT
+	title = nda_migo.1.t
+	desc = nda_migo.1.d
+	flavor =  nda_migo.1.f
+
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1838.4.1 
+		game_date < 1839 
+		is_player = yes
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		debug_log = "Mi-Go Visit : [THIS.GetCountry.GetNameNoFormatting]" 
+	}	
+	
+	option = { #
+		name = nda_migo.1.a
+		# follow on event
+		trigger_event = { id = nda_migo.3 }	
+	}
+	option = { #
+		name = nda_migo.1.b 
+		default_option = yes
+		# wake up
+		trigger_event = { id = nda_migo.2 }	
+	}
+}
+
+nda_migo.2 = { # All A Dream - Migo rejected
+	type = country_event
+	placement = ROOT
+	title = nda_migo.2.t
+	desc = nda_migo.2.d
+	flavor =  nda_migo.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+
+	}
+
+	immediate = {
+		debug_log = "Mi-Go Dream : [THIS.GetCountry.GetNameNoFormatting]" 
+	}	
+	
+	option = { 
+		name = nda_migo.2.a
+		default_option = yes
+	}
+}
+
+nda_migo.3 = { #  We Will Return
+	type = country_event
+	placement = ROOT
+	title = nda_migo.3.t
+	desc = nda_migo.3.d
+	flavor =  nda_migo.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
+		set_variable =  nda_migo_visited
+		set_variable = {
+			name = nda_migo_timer
+			days = 3000
+			value = yes
+		}
+		set_global_variable =  nda_migo_experiment
+		debug_log = "Mi-Go Experiment : [THIS.GetCountry.GetNameNoFormatting]" 
+	}	
+	
+	option = { #Hurrah!
+		name = nda_migo.3.a
+		default_option = yes
+	}
+}
+
+nda_migo.4 = { #  We Have Returned
+	type = country_event
+	placement = ROOT
+	title = nda_migo.4.t
+	desc = nda_migo.4.d
+	flavor =  nda_migo.4.f
+
+	duration = 1 # don't give player too long to resolve things in old country
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+		is_player = yes # player only obviously
+		has_variable = nda_migo_visited
+		NOT = { has_variable = nda_migo_timer } # time is out
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		#set_variable = nda_migo_visited
+	}	
+	
+	option = {
+		name = nda_migo.4.a
+		default_option = yes
+
+		# select a new country
+		random_country = {
+			limit = {
+				NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+				NOT = { has_variable = nda_migo_visited }
+				country_rank >= rank_value:unrecognized_regional_power					
+			}
+
+			save_scope_as = nda_migo_new_country		
+		}
+
+		play_as = scope:nda_migo_new_country	
+
+		scope:nda_migo_new_country = {
+			trigger_event = { id = nda_migo.5 }	# welcome to your new home
+		}
+	}
+}
+
+nda_migo.5 = { #  New Home
+	type = country_event
+	placement = ROOT
+	title = nda_migo.5.t
+	desc = nda_migo.5.d
+	flavor =  nda_migo.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
+		set_variable = nda_migo_visited
+		set_variable = {
+			name = nda_migo_timer
+			days = 3000
+			value = yes
+		}
+		add_journal_entry = { type = je_nda_migo_status } # je to tell current status
+	}	
+	
+	option = {
+		name = nda_migo.5.a
+		default_option = yes
+	}
+}

@@ -1,0 +1,71 @@
+﻿nda_eld_spread_to_puppet = {
+	is_shown = {
+		exists = c:ELD
+		this = c:ELD
+		c:ELD = { 
+			NOT = { has_variable = nda_eld_spread_to_puppet_cooldown  }					
+			any_subject_or_below = { 
+				can_cult_infiltrate = yes
+				#NOT = { 
+				#	has_variable = nda_cultists_in_open 
+				#	has_journal_entry = je_nda_cult_spreads
+				#	has_variable = nda_cult_spread_failed
+				#} 
+			} 
+		}
+	}
+
+	possible = {
+		c:ELD = { 			 	
+			any_subject_or_below = { 		
+				custom_tooltip = {
+					text = nda_eld_spread_to_puppet_possible_tt
+
+					can_cult_infiltrate = yes 
+				}
+			} 
+		}
+	}
+	
+	when_taken = {
+		#debug_log = "nda_eld_spread_to_puppet" # should this actually be diplo action?
+
+		ordered_subject_or_below = {
+			limit = {
+				can_cult_infiltrate = yes  			
+			}
+			order_by = { subtract = global_country_ranking }
+			position = 1
+
+			add_journal_entry = { type = je_nda_cult_spreads }  # or do original infiltration, or neighbour spread event
+			debug_log = "Spread Cult to Subjects"
+			#debug_log_scopes = no
+		}
+
+		hidden_effect = {
+			set_variable = {
+				name = nda_eld_spread_to_puppet_cooldown # slow down spread
+				days = 90
+			}			
+		}
+		#custom_tooltip = nda_eld_recognise_dagonic_lands_tooltip
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		# modifier based on relationship
+
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -10
+		}		
+	}
+
+}

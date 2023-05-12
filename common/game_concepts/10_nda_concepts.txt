@@ -1,0 +1,63 @@
+﻿# To enable new concepts and not fill error logs, need to exit game and reload.
+
+concept_nda_cthulhu = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_dagon = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_hastur = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_yig = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_migo = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_old_ones = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_ritual = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_conclave = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_conjunction = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_migo_status_1 = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+concept_nda_migo_status_2 = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+concept_nda_migo_status_3 = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+concept_nda_migo_status_4 = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}

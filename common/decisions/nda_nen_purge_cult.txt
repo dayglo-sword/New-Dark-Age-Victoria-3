@@ -1,27 +1,31 @@
 ﻿nda_nen_purge_cult = {
 	is_shown = {
-		exists = c:NEN
-		this = c:NEN
-        # has cultists
 		OR = {
-			any_interest_group = {	
-				leader = { 
-					has_eldritch_trait = yes
-				}
-			}			
-		}		
+			is_player = yes
+			AND = {			
+				exists = c:NEN
+				this = c:NEN			
+			}							
+		}
+
+        # has cultists
+		any_interest_group = {	
+			leader = { 
+				has_eldritch_trait = yes
+			}
+		}			
+	
 		# but not openly
 		NOT = { has_variable = nda_cultists_in_open }
 	}
 
 	possible = {
-		exists = c:NEN
+		#exists = c:NEN
 
 		custom_tooltip = {
 			text = nda_nen_purge_cult_not_open_cultists_tooltip 
 			NOT = { has_variable = nda_cultists_in_open }			
 		}
-
 
 		OR = {
 			any_interest_group = {	
@@ -44,9 +48,49 @@
 			}			
 		}
 	}
-
-    	
+  	
 	when_taken = {
+		save_scope_as = nda_purge_scope
+		
+		if = {
+			limit = { has_law = law_type:law_protected_speech } # should not really be doing this!
+			custom_tooltip = {
+				text = nda_nen_purge_cult_protected_speech_tooltip
+				change_infamy = 10
+
+				# every country that has protected speech hates you
+				every_country = {
+					limit = { has_law = law_type:law_protected_speech }
+					change_relations = { country = ROOT value = -50 } 
+				}
+			}	
+		}
+
+		# select which one to exile!
+		ordered_scope_character = {
+			limit = { 
+				has_eldritch_trait = yes			
+			}
+			order_by = { 
+				add = 1
+				if = {
+					limit = { is_ruler = yes }
+					add = 2
+				}
+				if = {
+					limit = { has_trait = nda_master }
+					add = 3
+				}
+				if = {
+					limit = { has_trait = nda_acolyte }
+					add = 1
+				}
+			}
+			max = 1
+			save_scope_as = nda_purge_exile_char
+
+			set_variable = nda_purge_exile				
+		}
 
  		custom_tooltip = nda_nen_purge_cult_tooltip       
 		# remove cultist from IG leadership
@@ -62,33 +106,49 @@
 			}
 
 			leader = {
-				kill_character = yes
+				set_variable = nda_purge_victim
+				#kill_character = yes
 			}
+
 			# make IG unhappy	
 			add_modifier = {
 				name = ig_mass_arrests
 				months = normal_modifier_time
-			}		
+			}	
 		}
 
-		every_scope_character = {
+		every_scope_character = { # and ruler as well!
 			limit = { 
-				is_ruler = yes 
+				OR = {
+					has_role = politician
+					is_ruler = yes 					
+				}
+				has_variable = nda_purge_victim
 				has_eldritch_trait = yes
 			}
-			kill_character = yes	
+
+			# should exile? - best candidate already selected above
+			IF = {
+				limit = { has_variable = nda_purge_exile }
+				# exile
+				kill_character = yes				
+			}
+			ELSE = {
+				kill_character = yes				
+			}
+	
 		}
+
 		add_modifier = {
 			name = government_conflict
 			months = normal_modifier_time
 		}	
 
 		# infamy, infamy!
-		change_infamy = 20
+		change_infamy = 10 	
 	}
 
 	ai_chance = { # should be player only
 		base = 0	
 	}
-
 }

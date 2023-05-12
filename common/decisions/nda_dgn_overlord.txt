@@ -5,6 +5,7 @@
 		NOT = { 
 			is_full_cult_country = { COUNTRY="THIS" } 
 			has_global_variable = nda_ritual_cthulhu_leaves
+			has_variable = nda_dgn_overlordship_cooldown
 		}
 
 		country_has_primary_culture = cu:nda_cul_dagonic # easy check
@@ -15,7 +16,7 @@
 	}
 
 	possible = {
-		# when cult is in strong political postion and friends with YIG
+		# when cult is in strong political position and friends with YIG
 		is_subject = no
 		is_player = no
 		country_rank < c:DGN.country_rank
@@ -34,12 +35,27 @@
 				type = puppet
 			}			
 		}
-		debug_log = "Become DGN puppet"
-		debug_log_scopes = yes
+
+		hidden_effect = {
+			set_variable = {
+				name = nda_dgn_overlordship_cooldown
+				days = 182
+			}			
+		}
+
+		debug_log = "Become DGN puppet : [THIS.GetCountry.GetNameNoFormatting]"
+		debug_log_scopes = no
 	}
 
 	ai_chance = {
 		base = 10	
+		# boost if cthuhlu in town
+		modifier = {
+			trigger = { 
+				has_global_variable = nda_cthulhu_arrives
+			}
+			add = 20
+		}	
 	}
 
 }

@@ -59,7 +59,7 @@ nda_whh.11 = { # Carnacki the Ghost Finder
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -265,7 +265,7 @@ nda_whh.15 = { # Death of Carnacki
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"		
+		video = "gfx/event_pictures/middleeast_police_breaking_door.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

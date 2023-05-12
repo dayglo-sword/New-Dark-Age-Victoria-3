@@ -10,8 +10,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
-		
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -24,7 +23,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 		game_date >= 1890 
 		p:x906000 = { state = { owner = ROOT } }
 
-		NOT = {has_global_variable = nda_king_in_yellow_play_exists}
+		NOT = { has_global_variable = nda_king_in_yellow_play_exists }
 	}
 
 	immediate = {
@@ -92,8 +91,7 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
-		
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -125,7 +123,7 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 
 	immediate = {
 		set_variable = nda_king_in_yellow_decision # don't set immediate as causes follow on event to trigger simultaniously	
-		debug_log = "Spread of King in Yellow" 
+		debug_log = "Spread of King in Yellow : [THIS.GetCountry.GetNameNoFormatting]" 
 	}	
 	
 	option = { #"What harm can a play do?"
@@ -158,10 +156,19 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 		name = nda_hasturian.2.b
 
 		ai_chance = { # will -ve effect conversion rate
-			base = 20		
+			base = 20
+			# If Mi-Go in play need to guarantee Hastur will also be, so don't supress in NY
+			modifier = {
+				trigger = {
+					has_global_variable =  nda_migo_experiment
+					p:xE217B5 = { state = { owner = ROOT } } # Owns New York - what if it changes hands?					
+				}
+
+				factor = 0
+			}			
 		}
 
-		# annoy the intelectuals
+		# annoy the intellectuals
 		ig:ig_intelligentsia = {
 			add_modifier = {
 	            name = curtailed_free_speech
@@ -225,7 +232,15 @@ nda_hasturian.3 = { # The Repairer of Reputations
 		name = nda_hasturian.3.a
 
 		ai_chance = { 
-			base = 20		
+			base = 20	
+			# If Mi-Go in play need to guarantee Hastur
+			modifier = {
+				trigger = {
+					has_global_variable =  nda_migo_experiment				
+				}
+
+				factor = 0
+			}		
 		}
 
 		trigger_event = { id = nda_hasturian.7 days = 200 }	# Death of Mr Wilde
@@ -277,7 +292,15 @@ nda_hasturian.4 = { # The Repairers Offer
 		default_option = yes	
 
 		ai_chance = { 
-			base = 20		
+			base = 20	
+			# If Mi-Go in play need to guarantee Hastur
+			modifier = {
+				trigger = {
+					has_global_variable =  nda_migo_experiment				
+				}
+
+				factor = 0
+			}	
 		}
 
 		 # need ruination event that gives negatives to head of state and powerful leaders ?	

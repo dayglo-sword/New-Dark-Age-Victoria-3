@@ -1,0 +1,12 @@
+﻿l_english:
+
+ ai_strategy_nda_eldritch_political_agenda:0 "Cultist Agenda"
+ ai_strategy_nda_eldritch_political_agenda_desc:0 "[COUNTRY.GetName] has a cautious political agenda, promoting a slow reform pace."
+ ai_strategy_nda_eldritch_administrative_agenda:0 "Expand Cult Resources"
+ ai_strategy_nda_eldritch_administrative_agenda_desc:0 "[COUNTRY.GetName] wants to invest into the extraction of natural resources."
+ ai_strategy_nda_eldritch_diplomatic_agenda:0 "Expand Cult Territory"
+ ai_strategy_nda_eldritch_diplomatic_agenda_desc:0 "[COUNTRY.GetName] wants to expand its core territories at the expense of its neighbours."
+ 
+
+  
+ 

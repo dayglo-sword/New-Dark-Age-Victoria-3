@@ -46,6 +46,12 @@
 			}
 		}
 
+		# remove anti-slavery from intel and trade unions 
+		every_interest_group = {
+			limit = { has_ideology = ideology_anti_slavery }
+			remove_ideology = ideology_anti_slavery
+		}
+
 		# set (not so) secret goals and strategy
 		IF = {
 			limit = {
@@ -75,9 +81,9 @@
 			}			
 		}
 
-		set_strategy = ai_strategy_colonial_expansion
-		set_strategy = ai_strategy_territorial_expansion
-		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_nda_eldritch_administrative_agenda
+		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
+		set_strategy = ai_strategy_nda_eldritch_political_agenda
 		
 }
 
@@ -234,6 +240,9 @@ nda_effect_dagonic_buff = { # boost to dagon
 
 		# remove radicals from government while everyone is partying
 		add_radicals  = { value = -0.5 }
+
+		# reduce infamy
+		change_infamy = -10
 	}	
 }
 
@@ -251,10 +260,33 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 
 		# set state religion
 		set_state_religion = rel:nda_rel_cultist
+		# convert to cultists
+		every_scope_state = {
+			convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
+
+			# everyone of Eldritch Culture should follow Rite 
+			every_scope_pop = {
+				limit = {
+					culture = cu:nda_cul_cultist
+				}
+				change_pop_religion = { target = rel:nda_rel_cultist value = 1 }			
+			}	
+
+			# everyone of Eldritch Rite should follow Culture
+			every_scope_pop = {
+				limit = {
+					has_pop_religion = nda_rel_cultist
+					NOT = { culture = cu:nda_cul_cultist }
+				}
+				change_pop_culture = { target = cu:nda_cul_cultist value = 1 }			
+			}				
+		}
+
 		# obviously cultists
 		set_variable = nda_cultists_in_open
 
-		# set devout to be cultists and to be power brokers
+
+		# set to be cultists and to be power brokers - can fail if cult not already activated
 		ig:ig_nda_cult_worshippers = {
 			set_interest_group_name = ig_nda_chaugnar_faugn_cult
 
@@ -262,6 +294,14 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 				name = nda_ig_secret_masters_modifier
 			}
 		}
+		
+		# remove anti-slavery from intel and trade unions 
+		every_interest_group = {
+			limit = { has_ideology = ideology_anti_slavery }
+			remove_ideology = ideology_anti_slavery
+		}
+
+		# set law for 'no industry' if not already
 		
 		# set (not so) secret goals and Strategy - need to check for existence
 		IF = {
@@ -274,7 +314,7 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 			}			
 		}
 
-		set_strategy = ai_strategy_colonial_expansion
-		set_strategy = ai_strategy_territorial_expansion
-		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_nda_eldritch_administrative_agenda
+		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
+		set_strategy = ai_strategy_nda_eldritch_political_agenda
 }

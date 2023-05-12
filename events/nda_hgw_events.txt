@@ -1,0 +1,135 @@
+﻿namespace = nda_hgw # Herbert George Wells
+
+# 'The Star' - alternate disaster for those who avoided Cthulhu
+# https://www.gutenberg.org/cache/epub/67071/pg67071-images.html
+
+nda_hgw.10 = { # The Star - Intro
+	type = country_event
+	placement = ROOT
+	title = nda_hgw.10.t
+	desc = nda_hgw.10.d
+	flavor =  nda_hgw.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+ 		# 1928, no Cthulhu
+		is_player = yes	# need alternate dodge for observers?	
+		game_date >= 1928  
+		game_date < 1929  
+		has_global_variable = nda_ritual_cthulhu_visits
+		NOT = { has_global_variable = nda_the_star_intro }	
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		set_global_variable = nda_the_star_intro
+
+		debug_log = "Rhe Star - Intro"
+
+		trigger_event = { id = nda_hgw.11 days = 3 }
+	}	
+	
+	option = { #"Interesting"
+		name = nda_hgw.10.a
+		default_option = yes
+	}
+}
+
+nda_hgw.11 = { # Getting closer
+	type = country_event
+	placement = ROOT
+	title = nda_hgw.11.t
+	desc = nda_hgw.11.d
+	flavor =  nda_hgw.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	immediate = {
+		debug_log = "Rhe Star - Approach"
+
+		trigger_event = { id = nda_hgw.12 days = 5 }
+	}	
+	
+	option = { #"Interesting"
+		name = nda_hgw.11.a
+		default_option = yes
+	}
+}	
+
+nda_hgw.12 = { #  Closest Approach - Devestation
+	type = country_event
+	placement = ROOT
+	title = nda_hgw.12.t
+	desc = nda_hgw.12.d
+	flavor =  nda_hgw.12.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
+		debug_log = "Rhe Star - Approach"
+
+		trigger_event = { id = nda_hgw.13 days = 7 }
+	}	
+	
+	option = { #"Interesting"
+		name = nda_hgw.12.a
+		default_option = yes
+	}
+}	
+
+nda_hgw.13 = { # Aftermath
+	type = country_event
+	placement = ROOT
+	title = nda_hgw.13.t
+	desc = nda_hgw.13.d
+	flavor =  nda_hgw.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
+		debug_log = "The Star - Aftermath"
+	}	
+	
+	option = { 
+		name = nda_hgw.13.a
+		default_option = yes
+	}
+}

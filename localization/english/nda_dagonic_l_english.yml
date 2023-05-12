@@ -2,7 +2,7 @@
   
 nda_dagonic.1.t:0 "The Cult of Dagon Spreads"
 nda_dagonic.1.d:1 "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance to #BOLD Dagon#!, the god of the Deep Ones."
-nda_dagonic.1.f:1 "The power of Dagon continues to grow."
+nda_dagonic.1.f:1 "The power of [concept_nda_dagon] continues to grow."
 nda_dagonic.1.a:0 "What can we do?"
 nda_dagonic.2.t:0 "From The Sea"
 nda_dagonic.2.d:1 "The Cult of Dagon has seized control of the Cult in this country."
@@ -17,7 +17,7 @@ nda_dagonic.5.d:1 "The Deep Ones provides for our needs."
 nda_dagonic.5.f:1 "The Bounty of the Seas our ours by right!"
 nda_dagonic.5.a:0 "Hurrah!"
 nda_dagonic.7.t:0 "The Fury of Dagon"
-nda_dagonic.7.d:1 "The Lord of the Deep Ones, Dagon, has launched an assault upon our coast!\n\nThe devastation along the shore is termendous!"
+nda_dagonic.7.d:1 "The master of the Deep Ones, [concept_nda_dagon], has launched an assault upon our coast!\n\nThe devastation along the shore is tremendous!"
 nda_dagonic.7.f:1 ""
 nda_dagonic.7.a:0 "A Terrible Occurance!"
 ## triggers

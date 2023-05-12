@@ -27,8 +27,9 @@
 	
 	on_enable = {
 		# add as powerbrokers ? this just makes them happy? - nothing to do with adding power - current scope is country??
-		debug_log = "enable ig Cultists"
-		debug_log_scopes = yes
+		debug_log = "Enable IG Cultists : [THIS.GetCountry.GetNameNoFormatting]" 
+
+
 		ig:ig_nda_cult_worshippers = {
 			IF = {
 				limit = { 
@@ -48,6 +49,14 @@
 				}
 
 				nda_effect_ensure_cult_ideology = yes			
+			}
+			# do name changes for countries
+			if = {
+				limit = {
+					exists = c:LEN
+					owner = c:LEN				
+				}
+				set_interest_group_name = ig_nda_chaugnar_faugn_cult
 			}
 		}
 	}

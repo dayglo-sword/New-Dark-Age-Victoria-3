@@ -60,6 +60,8 @@ yok-zothoth:0 "Yok-Zothoth"
 kthulhut:0 "Kthulhut"
 zhothaqquah:0 "Zhothaqquah"
 ubbo-satha:0 "Ubbo-Satha"
+lotan:0 "Lotan"
+typhaon:0 "Typhaon"
 
 #Dagonic Specific
 dagon:0 "Dagon"
@@ -71,6 +73,11 @@ the_waves:0 "the Waves"
 the_pelagic:0 "the Pelagic" 
 the_cetacen:0 "the Cetacean"
 the_kraken:0 "the Kraken"
+ceto:0 "Ceto" 
+the_leviathan:0 "the Leviathan"
+charybdis:0 "Charybdis"
+scylla:0 "Scylla"
+adaro:0 "Adaro" 
 
 #True Yankee Surnames
 Akeley:0 "Akeley" 
@@ -120,3 +127,4 @@ ecchi_Dickens:0 "Dickens"
 
 Hildred:0 "Hildred"
 Castaigne:0 "Castaigne"
+Azedarac:0 "Azédarac"

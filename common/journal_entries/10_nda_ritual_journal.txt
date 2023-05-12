@@ -115,35 +115,20 @@
 	should_be_pinned_by_default = yes
 }
 
-je_nda_ritual_assist = { # other countries should be able to help - this should be launched via decision??
+je_nda_ritual_assist = { # other countries should be able to help - launched via decision
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-
-	is_shown_when_inactive = {
-		has_cult_culture = yes
-
-		exists = c:ELD
-		NOT = { c:ELD = ROOT }
-		NOT = { has_global_variable = nda_ritual_completed  }
-	}
-
-	possible = {
-		has_cult_culture = yes
-
-		custom_tooltip = {
-			text = je_nda_ritual_assist_possible_tt
-
-			has_global_variable = je_nda_ritual_proceeds_tracker
- 			NOT = { has_global_variable = nda_ritual_completed  }	
-		}
-		c:ELD = { relations:root >= relations_threshold:amicable }
-	}
 
 	immediate = {
 
 		save_scope_as = nda_je_ritual_proceeds_scope
 		
-		debug_log = "Ritual Assist Journal : Started : "
+		debug_log = "Ritual Assist Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+
+		# notification to players
+		every_country = {
+			post_notification = nda_ritual_assist_notice
+		}
 	}
 
     complete = {
@@ -154,7 +139,7 @@ je_nda_ritual_assist = { # other countries should be able to help - this should 
     }
 
 	on_complete = {
-		debug_log =  "Ritual Assist Journal : Completed :"	
+		debug_log =  "Ritual Assist Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"	
 	}
 
 	on_monthly_pulse = {

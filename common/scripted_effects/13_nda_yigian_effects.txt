@@ -28,6 +28,12 @@ nda_effect_yigian_setup = {
 			}
 		}
 
+		# remove anti-slavery from intel and trade unions 
+		every_interest_group = {
+			limit = { has_ideology = ideology_anti_slavery }
+			remove_ideology = ideology_anti_slavery
+		}
+
 		# set (not so) secret goals - need to check they exist!
 		IF = {
 			limit = {
@@ -58,9 +64,9 @@ nda_effect_yigian_setup = {
 		}
 
 
-		set_strategy = ai_strategy_colonial_expansion
-		set_strategy = ai_strategy_territorial_expansion
-		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_nda_eldritch_administrative_agenda
+		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
+		set_strategy = ai_strategy_nda_eldritch_political_agenda
 }
 
 nda_effect_yigian_annex = {
@@ -116,8 +122,8 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 			has_variable = nda_yig_in_open 
 		}
 
-		debug_log = "Has YIG in open" 
-		debug_log_scopes = yes
+		debug_log = "Has YIG in open : [THIS.GetCountry.GetNameNoFormatting]" 
+		debug_log_scopes = no
 
 		# give them a boost, both religion and pops
 		every_scope_state = {
@@ -221,5 +227,8 @@ nda_effect_yigian_buff = { # boost to yig
 
 		# remove radicals from government while everyone is partying
 		add_radicals  = { value = -0.5 }
+
+		# reduce infamy
+		change_infamy = -10
 	}	
 }

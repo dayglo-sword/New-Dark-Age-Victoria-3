@@ -1,11 +1,11 @@
 {
   "name" : "New Dark Age",
   "id" : "NDA",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "supported_game_version" : "1.2.*",
   "picture": "thumbnail.png",
   "short_description" : "A New Dark Age - An Eldritch Tales Mod",
-  "tags" : ["Events","Alternative History","New Nations","Eldritch","Cthulhu","Role-Play","New England"],
+  "tags" : ["Events","Alternative History","New Nations"],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true,

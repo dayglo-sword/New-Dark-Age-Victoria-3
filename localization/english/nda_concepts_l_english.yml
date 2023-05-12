@@ -1,0 +1,48 @@
+﻿l_english: 
+ # Concepts
+concept_nda_cthulhu:0 "Great Cthulhu"
+concept_nda_cthulhu_short:0 "Cthulhu"
+concept_nda_cthulhu_desc:0 "The prime Great Old One on the planet.\n\nThey await the day when the Stars are Right so they can arise from their deathless slumber.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+
+concept_nda_yig:0 "Yig, the Serpent God"
+concept_nda_yig_short:0 "Yig"
+concept_nda_yig_desc:0 "Known by many names through the ages of the Earth, worshipped as Set in the lost realm of Stygia. Yig is the form of the god as it appears in the Americas."
+
+concept_nda_dagon:0 "Dagon, the Lord of the Seas"
+concept_nda_dagon_short:0 "Dagon"
+concept_nda_dagon_desc:0 "Son of the [concept_nda_cthulhu] itself. Sibling of Hydra.\n\nDagon resides in his realm beneath the waves, awaiting the day when he and his Deep One followers can once more rule the Shores as well as the Seas."
+
+concept_nda_hastur:0 "Hastur, the King in Yellow"
+concept_nda_hastur_short:0 "Hastur"
+concept_nda_hastur_desc:0 "Living in the realm of dreams but with the capability to distort reality, Lord Hastur of Carcosa can alter the very perception of reality for his followers/victims."
+
+concept_nda_migo:0 "Mi-Go, the Fungi from Yuggoth"
+concept_nda_migo_short:0 "Mi-Go"
+concept_nda_migo_desc:0 "From the planet Yuggoth in the depths of space. These creatures take over the minds of their victims so they can better observe events."
+
+concept_nda_old_ones:0 "Great Old Ones"
+concept_nda_old_ones_short:0 "Old Ones"
+concept_nda_old_ones_desc:0 "Creatures from beyond this planet that many worship as Gods due to their vast power, including the ability to change reality itself."
+
+concept_nda_ritual:0 "The Ritual"
+concept_nda_ritual_short:0 "The Ritual"
+concept_nda_ritual_desc:0 "There are many spells, incantations, and rites for the worship of the [concept_nda_old_ones], but only one worthy of the title #BOLD The Ritual#!.\n\nIt is the rite to release [concept_nda_cthulhu] himself from his deathless slumber.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+
+concept_nda_conclave:0 "Grand Conclave"
+concept_nda_conclave_short:0 "Conclave"
+concept_nda_conclave_desc:0 "A great meeting of Cultists of all persuasions. Matters of importance and the future course of the worship of the [concept_nda_old_ones] are decided behind closed doors."
+
+concept_nda_conjunction:0 "Great Conjunction"
+concept_nda_conjunction_short:0 "Conjunction"
+concept_nda_conjunction_desc:0 "The Great Conjunction is a conjunction of the planets Jupiter and Saturn and is visible to the naked eye.\n\nIn more primitive times it was widely supposed to herald apocalyptic changes.\n\nOccuring to schedule approximately every 20 years, it can cluster, such as what will occur in the early 1940's where three conjunctions will happen in quick succession.\n\nThe Cultists are known to hold their [concept_nda_conclave] to coincide with the conjunction."
+
+
+# migo experiment help
+concept_nda_migo_status_1:0 "Cultist Country"
+concept_nda_migo_status_1_desc:0 "The Cult has taken control of this country.\n\nThe members of the government do their bidding and furthers the ultimate goal of the cultists... completion of [concept_nda_ritual]"
+concept_nda_migo_status_2:0 "Cultists Active"
+concept_nda_migo_status_2_desc:0 "The Cult is attempting to take control of this country.\n\nThe members of the government are being influenced to do the cults bidding."
+concept_nda_migo_status_3:0 "Cultists Replused"
+concept_nda_migo_status_3_desc:0 "The Cults attempt to take control of this country has failed.\n\nThey may attempt to 'convert' the country by more physical means."
+concept_nda_migo_status_4:0 "No Active Cultists"
+concept_nda_migo_status_4_desc:0 "The Cult has not yet attempted to take control of this country.\n\nThe concepts of the Cultists may still be spreading among the population but not to the extent it threatens control of the political sphere."

@@ -1,7 +1,7 @@
 ﻿l_english:
   
 nda_yigian.1.t:0 "The Cult of Yig Spreads"
-nda_yigian.1.d:1 "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance Yig, the snake god."
+nda_yigian.1.d:1 "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance to [concept_nda_yig]."
 nda_yigian.1.f:1 "The power of Yig continues to grow."
 nda_yigian.1.a:0 "What can we do?"
 nda_yigian.2.t:0 "The Snake Uncoils"
@@ -14,5 +14,5 @@ nda_yigian.3.f:1 "But why stop here when we can reclaim all our lands and the wo
 nda_yigian.3.a:0 "Hurrah!"
 
 ## triggers
-is_potentially_yigian:0 "The ancestrial lands of the Serpent worshipers."
+is_potentially_yigian:0 "The ancestrial lands of the worshipers of [concept_nda_yig]."
 is_potentially_yigian_lands:0 "The ancestrial lands of the Serpent worshipers."

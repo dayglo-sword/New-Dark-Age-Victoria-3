@@ -5,14 +5,14 @@
  notification_nda_first_open_cult_desc:1 "The Elditch Cult in [SCOPE.sC('originator').GetName] no longer operates in secret. The Cultists openly practice their Rites."
  notification_nda_first_yig_cult_tooltip:0 "#header $notification_nda_first_yig_cult_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_first_yig_cult_desc$"
  notification_nda_first_yig_cult_name:1 "[SCOPE.sC('originator').GetName ] - The Rise of Yig"
- notification_nda_first_yig_cult_desc:1 "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of the serpent god, Yig."
+ notification_nda_first_yig_cult_desc:1 "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of [concept_nda_yig]."
  notification_nda_first_dagon_cult_tooltip:0 "#header $notification_nda_first_dagon_cult_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_first_dagon_cult_desc$"
  notification_nda_first_dagon_cult_name:1 "[SCOPE.sC('originator').GetName ] - The Rise of Dagon"
- notification_nda_first_dagon_cult_desc:1 "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of the sea god, Dagon."
+ notification_nda_first_dagon_cult_desc:1 "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of the sea god, [concept_nda_dagon]."
 
  notification_nda_elditch_realm_proclaimed_tooltip:0 "#header $notification_nda_elditch_realm_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_elditch_realm_proclaimed_desc$"
  notification_nda_elditch_realm_proclaimed_name:1 "[SCOPE.sC('originator').GetName ] - Hail The Eldritch Realm"
- notification_nda_elditch_realm_proclaimed_desc:1 "The Elditch Cult has found a homeland as the existence of the Eldritch Rea is proclaimed."
+ notification_nda_elditch_realm_proclaimed_desc:1 "The Elditch Cult has found a homeland as the existence of the Eldritch Realm is proclaimed."
 
  notification_nda_yigian_lands_proclaimed_tooltip:0 "#header $notification_nda_yigian_lands_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_yigian_lands_proclaimed_desc$"
  notification_nda_yigian_lands_proclaimed_name:1 "[SCOPE.sC('originator').GetName ] - Hail The Yigian Lands"
@@ -32,7 +32,7 @@
 
  notification_nda_dagon_attacks_tooltip:0 "#header $notification_nda_dagon_attacks_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_dagon_attacks_desc$"
  notification_nda_dagon_attacks_name:1 "Dagon has Risen"
- notification_nda_dagon_attacks_desc:1 "The Lord of the Deep Ones, #BOLD Dagon#!, has attacked the coast of [SCOPE.sState('nda_dagon_target').GetName], devastating it."
+ notification_nda_dagon_attacks_desc:1 "The Master of the Deep Ones, [concept_nda_dagon], has attacked the coast of [SCOPE.sState('nda_dagon_target').GetName], devastating it."
 
  notification_nda_house_on_borderlands_tooltip:0 "#header $notification_nda_house_on_borderlands_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_house_on_borderlands_desc$"
  notification_nda_house_on_borderlands_name:1 "A House on the Borderlands"

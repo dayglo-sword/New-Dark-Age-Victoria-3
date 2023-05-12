@@ -9,7 +9,7 @@ nda_yigian.10 = { # need to check if a leader is available to convert
 	}
 
 	immediate = {
-		debug_log = "Convert Leader for YIG"
+		debug_log = "Convert Leader for YIG : [THIS.GetCountry.GetNameNoFormatting]"
 		random_interest_group = {
 			limit = { 
 				leader = { 

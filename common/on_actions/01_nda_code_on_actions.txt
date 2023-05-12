@@ -14,17 +14,20 @@ nda_monthly_on_action = {
 		nda_base.3 # Imprint of Nameless Cults	
 		nda_base.5 # First Cultist
 		
-		nda_base.9 # Cult Ideology Clean
+		nda_base.9 # Full Cult Ideology Clean
 		nda_base.10 # Eldritch Realms Proclaimed
-		nda_base.11 # Eldritch War Buff
+		#nda_base.11 # Eldritch War Buff - replaced with war_start below
 		nda_base.14	# Revolt Reset
+		nda_base.15 # Local Cult Ideology Clean
 		nda_base.20 # Request from the Devout
 
-		nda_astro.10 
-		nda_astro.20 
-		nda_astro.30 
-		nda_astro.40 
-		nda_astro.50 
+		nda_astro.1842 
+		nda_astro.1858
+		nda_astro.1861 
+		nda_astro.1881 
+		nda_astro.1901 
+		nda_astro.1910
+		nda_astro.1921 
 		
 		nda_ritual.1924 # The Return
 		nda_ritual.1890 # Early Return
@@ -74,6 +77,15 @@ nda_monthly_on_action = {
 		nda_historic.1887
 		nda_historic.1889
 		nda_historic.1892
+
+		nda_migo.1
+		nda_migo.4
+		
+		nda_hgw.10 # The Star
+
+		nda_cas.10 # Holiness of Azedarac
+
+		nda_mrj.10 # Casting the Runes
 	}
 	random_events = {
 		1 = 0
@@ -132,3 +144,157 @@ on_character_creation = {
 		}
 	}
 }
+
+# Root = Country
+# scope:target = Uprising country
+on_revolution_start = { # need to copy over appropriate variables so at not to trigger journals
+	on_actions = {
+		nda_on_revolution_start_on_action	
+	}
+}
+
+nda_on_revolution_start_on_action = {
+	effect = {
+		if = {
+			limit = {
+				is_full_cult_country = { COUNTRY="THIS" }
+			}
+
+			scope:target = {
+				# if it has a primary culture of cultist then treat as potential continuation (not nationlist rebellion)
+				if = {
+					limit = { has_cult_culture = yes }
+				}
+				set_variable = nda_cultists_in_open # need to check if				
+			}
+
+		}
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_war_start = {
+	on_actions = {
+		nda_diplo_play_war_start_on_action	
+		#nda_diplo_play_do_stuff_on_action
+	}
+}
+
+nda_diplo_play_war_start_on_action= {
+	effect = {
+		war = {
+			IF = { 
+				limit = { 
+					exists = c:ELD
+					is_war_participant = c:ELD 
+				} 
+
+				IF = { 
+					limit = { has_global_variable = nda_ritual_cthulhu_leaves}
+						add_war_exhaustion = { target = c:ELD value = 0.10 } # disheartened cultists						
+				}
+				ELSE_IF = {
+					limit = { has_global_variable = nda_cthulhu_arrives}
+						add_war_exhaustion = { target = c:ELD value = -0.50 } # manic cultists										
+				}
+				ELSE = {
+					add_war_exhaustion = { target = c:ELD value = -0.25 } # determined cultists
+				}
+			}	
+			IF = { # same for DGN
+				limit = { 
+					exists = c:DGN
+					is_war_participant = c:DGN 
+					c:DGN = { NOT = { has_war_with = c:ELD }} # No boosts anywhere if at war with boss
+				} 
+
+				IF = { 
+					limit = { has_global_variable = nda_ritual_cthulhu_leaves}
+						add_war_exhaustion = { target = c:DGN value = 0.10 } # disheartened cultists						
+				}
+				ELSE_IF = {
+					limit = { has_global_variable = nda_cthulhu_arrives}
+						add_war_exhaustion = { target = c:DGN value = -0.50 } # manic cultists										
+				}
+				ELSE = {
+					add_war_exhaustion = { target = c:DGN value = -0.25 } # determined cultists
+				}
+			}
+			IF = { # same for YIG
+				limit = { 
+					exists = c:YIG
+					is_war_participant = c:YIG 
+					c:YIG = { NOT = { has_war_with = c:ELD }} # No boosts anywhere if at war with boss
+				} 
+
+				IF = { 
+					limit = { has_global_variable = nda_ritual_cthulhu_leaves}
+						add_war_exhaustion = { target = c:YIG value = 0.10 } # disheartened cultists - appropriate for YIG who are semi independent?						
+				}
+				ELSE_IF = {
+					limit = { has_global_variable = nda_cthulhu_arrives}
+						add_war_exhaustion = { target = c:YIG value = -0.50 } # manic cultists										
+				}
+				ELSE = {
+					add_war_exhaustion = { target = c:YIG value = -0.25 } # determined cultists
+				}
+			}	
+			IF = { # same for LENG
+				limit = { 
+					exists = c:LEN
+					is_war_participant = c:LEN 
+					c:LEN = { 
+						NOT = { 
+							has_war_with = c:ELD 
+							has_war_with = c:DGN
+						}
+					} # No boosts anywhere if at war with boss
+				} 
+
+				IF = { 
+					limit = { has_global_variable = nda_ritual_cthulhu_leaves}
+						add_war_exhaustion = { target = c:LEN value = 0.10 } # disheartened cultists - appropriate for YIG who are semi independent?						
+				}
+				ELSE_IF = {
+					limit = { has_global_variable = nda_cthulhu_arrives}
+						add_war_exhaustion = { target = c:LEN value = -0.50 } # manic cultists										
+				}
+				ELSE = {
+					add_war_exhaustion = { target = c:LEN value = -0.25 } # determined cultists
+				}
+			}	
+			# Can put boost for nationalist endgame breakaways as well?	
+			#IF = { # 
+			#	limit = { 
+			#		has_global_variable = nda_ritual_cthulhu_leaves
+			#		is_secessionist = yes
+			#		has_war_with = c:ELD # Presume that it's a seccesion against ELD
+			#	} 
+#
+#				add_war_exhaustion = { target = c:YIG value = -0.25 } # FREEDOM!!
+#			}	
+		}
+	}	
+}
+
+nda_create_leng_on_action = {
+	effect = {
+		nda_effect_leng_setup = yes		
+	}
+}
+
+
+#nda_diplo_play_do_stuff_on_action = { # it does do stuff! so no clash of effects from seperate on_actions
+#	effect = {
+#		war = {
+#			IF = { 
+#				limit = { 
+#					is_war_participant = c:ELD
+#					exists = c:CHI	
+#				} 
+#				debug_log = "test 2nd effect on_diplo war_Start"
+#				c:TIB = { change_tag = LEN }				
+#			}
+#		}		
+#	}	
+#}

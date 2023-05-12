@@ -8,7 +8,7 @@
 			}
 
 		save_scope_as = nda_je_scope
-		debug_log = "Cult Spread Journal : Started : "
+		debug_log = "Cult Spread Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
     complete = {
@@ -41,7 +41,7 @@
     }
 
 	on_complete = {
-		debug_log =  "Cult Spread Journal : Completed :"
+		debug_log =  "Cult Spread Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
 		trigger_event = { id = nda_base.7 }				
 	}
 
@@ -207,7 +207,7 @@ je_nda_cult_to_yigian = {
 			}
 	
 		save_scope_as = nda_je_cult_to_yigian_scope
-		debug_log = "Yigian Spread Journal : Started : "
+		debug_log = "Yigian Spread Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
     complete = {
@@ -239,7 +239,7 @@ je_nda_cult_to_yigian = {
     }
 
 	on_complete = {
-		debug_log =  "Yigian Spread Journal : Completed :"
+		debug_log =  "Yigian Spread Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
 		trigger_event = { id = nda_yigian.2 }				
 	}
 
@@ -400,7 +400,7 @@ je_nda_cult_to_dagonic = {
 				max = 500			
 		}	
 		save_scope_as = nda_je_cult_to_dagonic_scope
-		debug_log = "Dagonic Spread Journal : Started : "
+		debug_log = "Dagonic Spread Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
     complete = {
@@ -432,7 +432,7 @@ je_nda_cult_to_dagonic = {
     }
 
 	on_complete = {
-		debug_log =  "Dagonic Spread Journal : Completed :"
+		debug_log =  "Dagonic Spread Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
 		trigger_event = { id = nda_dagonic.2  }				
 	}
 
@@ -580,6 +580,7 @@ je_nda_devout_inquisition = {
 			30 = 0
 			3 = nda_base.21 
 			1 = nda_base.25
+			1 = nda_base.26 # weighted so only after 25
 		}		
 	}
 
@@ -591,7 +592,7 @@ je_nda_devout_inquisition = {
 				has_variable = nda_cultists_in_open			
 			}
 			custom_tooltip = {
-				text = je_nda_devout_inquisition_cancel_tt
+				text = je_nda_devout_inquisition_closed_tt
 				any_interest_group = {
 					is_interest_group_type = ig_devout
 					leader = { 
@@ -599,12 +600,22 @@ je_nda_devout_inquisition = {
 					}
 				}		
 			}
+			custom_tooltip = {
+				text = je_nda_devout_inquisition_cancel_tt
+				has_variable = nda_inqusition_closed			
+			}
 		}
     }
 	
 	on_fail = {
 		# It ends
-		trigger_event = { id = nda_base.24 }	
+		if = { 
+			limit = { 
+				NOT = { has_variable = nda_inqusition_closed } # not externally cancelled
+			}
+			trigger_event = { id = nda_base.24 }			
+		}
+	
 	}
 
 	weight = 90

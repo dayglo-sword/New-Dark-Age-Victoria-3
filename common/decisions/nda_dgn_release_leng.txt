@@ -78,7 +78,14 @@
 							NOT = { culture = cu:nda_cul_cultist }
 						}
 						change_pop_culture = { target = cu:nda_cul_cultist value = 0.05 }			
-					}		
+					}
+					# convert dagonites	(far from sea!)
+					every_scope_pop = {
+						limit = {
+							culture = cu:nda_cul_dagonic
+						}
+						change_pop_culture = { target = cu:nda_cul_cultist value = 0.5 }			
+					}
 				}
 
 			}
@@ -88,7 +95,12 @@
 			}
 
 			c:LEN = {
-				nda_effect_leng_setup = yes
+				# time delay to let cult ig form
+				trigger_event = {
+					on_action = nda_create_leng_on_action
+					days = 7 # days/months/years = X
+				}
+				#nda_effect_leng_setup = yes
 			}						
 		}
 	}

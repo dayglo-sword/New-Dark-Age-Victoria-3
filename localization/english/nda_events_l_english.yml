@@ -1,25 +1,25 @@
 ﻿l_english:
   
  nda_base.1.t:0 "A New Dark Age Dawns"
- nda_base.1.d:0 "The world is changing.\n\nA New Age is beginning, and this will probably not end well for the inhabitants of the not so lonely planet."
+ nda_base.1.d:0 "The world is changing.\n\nA New Age is beginning, and this will probably not end well for the inhabitants on the not so lonely planet."
  nda_base.1.f:0 "Over the course of the next century, Eldritch entities will emerge out of the depths of space and time, as they begin their corruption of humanity.\n\nSlowly at first, working in the shadows, but then accelerating their plans towards a final confrontation for the soul of the world.\n\nWill the Hasturians defy Cthulhu and go it alone? Will the Mi-Go and their agents just sit by and passively watch? Will Herbert West pay his Miskatonic Library late fees?\n\nBased on vanilla Victoria 3 for an authentic dystopian experience."
  nda_base.1.a:0 "'So It Begins...'"
  nda_base.2.t:0 "Unaussprechlichen Kulten"
  nda_base.2.d:0 "A book by the name of 'Nameless Cults' is being published in Dusseldorf.\n\nThis work of fiction appears to be affecting the minds of all those who read it."
- nda_base.2.f:0 "Containing depraved stories of 'lost gods', the product of the obviously deranged mind of its author, #ITALICFriedrich von Junzt#!, it is starting to be distributed across the land.\n\nIt is causing much distress amongst religious circles who are calling for it to be banned."
+ nda_base.2.f:0 "Containing depraved stories of 'lost gods', the product of the obviously deranged mind of its author, #ITALIC Friedrich von Junzt#!, it is starting to be distributed across the land.\n\nIt is causing much distress amongst religious circles who are calling for it to be banned."
  nda_base.2.a:0 "What harm can a book do?"
  nda_base.2.b:0 "Such writings must be supressed!"
  nda_base.3.t:0 "Imprint of Nameless Cults"
  nda_base.3.d:0 "A publisher in our country is printing a local edition of the book 'Nameless Cults', that was originally published in Dusseldorf, in the attempt to earn money from the latest occult fad."
- nda_base.3.f:0 "Containing depraved stories of 'lost gods', the product of the obviously deranged mind of its author, #ITALICFriedrich von Junzt#!, it is starting to be distributed across the land.\n\n It is causing much distress amongst religious circles who are calling for it to be banned."
+ nda_base.3.f:0 "Containing depraved stories of 'lost gods', the product of the obviously deranged mind of its author, #ITALIC Friedrich von Junzt#!, it is starting to be distributed across the land.\n\n It is causing much distress amongst religious circles who are calling for it to be banned."
  nda_base.3.a:0 "What harm can a book do?"
  nda_base.3.b:0 "Such writings must be supressed!"
  nda_base.4.t:0 "Death of Junzt"
- nda_base.4.d:0 "#ITALICFriedrich von Junzt#! the author of the book 'Nameless Cults' has been found dead in Dusseldorf."
+ nda_base.4.d:0 "#ITALIC Friedrich von Junzt#! the author of the notorious book 'Nameless Cults' has been found dead in Dusseldorf."
  nda_base.4.f:0 "His corpse was found in a locked and bolted room with the marks of taloned fingers on his throat. Authorities have decided not to investigate further."
  nda_base.4.a:0 "At least the nonsense should stop now."
  nda_base.5.t:0 "The Cult Infiltrates"
- nda_base.5.d:0 "A senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has covertly pledged their alligance to a secretive cult who appear to worship some sort of occult entity."
+ nda_base.5.d:0 "A senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has covertly pledged their alligance to a secretive cult who appear to worship some sort of occult entity."
  nda_base.5.f:0 "With this person in their sway the cult now has an in road to the reigns of power.\n\nThey are currently operating in secret, never revealing themselves to the wider world, with their members stated public position being just a front.\n\nBut what do they actually desire? What do the hope to achieve?"
  nda_base.5.a:0 "What can we do?"
 
@@ -33,7 +33,7 @@
  nda_base.8.a:0 "Curse Them!"
 
  nda_base.9.t:0 "Errant Leadership"
- nda_base.9.d:0 "Senior members of the Inner Circle are worried about [SCOPE.sCharacter('targeted_ig_leader').GetFullName] commitment to the cause. Their personal belief in ''seems to conflict with our nature."
+ nda_base.9.d:0 "Senior members of the Inner Circle are worried about [SCOPE.sCharacter('targeted_ig_leader').GetFullName] commitment to the cause. Their personal belief in '' seems to conflict with our nature."
  nda_base.9.f:0 "Fortunately we can be very persuasive when we need to be and they will see the error of their ways."
  nda_base.9.a:0 "Pursuade Them!"
  nda_base.9.b:0 "Ignore Them!"
@@ -51,7 +51,8 @@
  nda_base.11.c:0 "Do not over do it!"   
  
  nda_base.12.t:0 "The Cult Spreads Further"
- nda_base.12.d:0 "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance to the growing cult.\n\nIt is even spreading amongst the bureaucrats and other servants of the government."
+ nda_base.12.d:0 "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has secretly pledged their alligance to the growing cult.\n\nIt is even spreading amongst the bureaucrats and other servants of the government."
+ nda_base.12.u:0 "The traitorous political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has gone back on his work to the #BOLD Inquisition#! and has re-pledged their alligance to the growing cult.\n\nIt is even spreading amongst the bureaucrats and other servants of the government."
  nda_base.12.f:0 "The power of the cult continues to grow.\n\n#ITALIC 'the cult... had always existed and always would exist...' #!"
  nda_base.12.a:0 "What can we do?"
 
@@ -62,6 +63,11 @@
  nda_base.13.b:0 "Maybe your right."
  nda_base.13.c:0 "Yours is a failed philosophy."
 
+ nda_base.15.t:0 "A Change Of Mind"
+ nda_base.15.d:0 "After a meeting with senior members of the Cult, [SCOPE.sCharacter('targeted_ig_leader').GetFullName], the leader of this country's chapter of [SCOPE.sCharacter('targeted_ig_leader').GetInterestGroup.GetNameNoIcon], appears to have had a change in their philosophy.\n\nThey have hardened their hearts to become a [SCOPE.sCharacter('targeted_ig_leader').GetIdeology.GetName] instead."
+ nda_base.15.f:0 "Looks like the Cult can be very persuasive when they need to be."
+ nda_base.15.a:0 "Not Really A Suprise."
+
  # The Inquisition
  nda_base.20.t:0 "An Unusual Offer"
  nda_base.20.d:0 "One of the countries senior religious figures, [SCOPE.sCharacter('devout_ig_leader').GetFullName], has insisted on an urgent meeting with you to discuss how to deal with the increasing rumours of cultist infiltrating the country."
@@ -70,13 +76,13 @@
  nda_base.20.b:0 "Stop that! It's silly."  
 
  nda_base.22.t:0 "A Cultist Converted"
- nda_base.22.d:0 "The Inquisition had done its work, [SCOPE.sCharacter('targeted_ig_leader').GetFullName] meekly stands before you."
+ nda_base.22.d:0 "The Inquisition had done its work, [SCOPE.sCharacter('targeted_ig_leader').GetFullName], of the [SCOPE.sCharacter('targeted_ig_leader').GetInterestGroup.GetNameNoIcon], meekly stands before you."
  nda_base.22.f:0 "'I wish to apologise for my daliance with certain secretive organisations. I did not realise the harm that it could do to our country. Please forgive me and allow me to continue my works.'"
  nda_base.22.a:0 "Glad you saw sense!"
  nda_base.22.b:0 "No forgiveness!"
 
  nda_base.23.t:0 "A Cultist Refuses"
- nda_base.23.d:0 "[SCOPE.sCharacter('targeted_ig_leader').GetFullName] defiantly stands before you."
+ nda_base.23.d:0 "[SCOPE.sCharacter('targeted_ig_leader').GetFullName], of the [SCOPE.sCharacter('targeted_ig_leader').GetInterestGroup.GetNameNoIcon], defiantly stands before you."
  nda_base.23.f:0 "'Did you seriously believe that that group of sanctimonious idiots could sway me from the one true path?\n\nSoon we will have control of powers that you can not comprehend.'"
  nda_base.23.a:0 "At least we know of their disloyalty."
 
@@ -85,3 +91,9 @@
  nda_base.24.f:0 "'I do not believe it can be of any further use. We can not ascertain any threat it could deal with any more.'"
  nda_base.24.a:0 "All Good Things..."
  
+ nda_base.26.t:0 "Innocents Tortured!"
+ nda_base.26.d:0 "[SCOPE.sCharacter('targeted_ig_leader').GetFullName], the latest person to be accused by the Inquisition, stands before you and tells a shocking tale of their captivity and escape from the hands of the Inqusition!\n\nIt has been confirmed to you that [SCOPE.sCharacter('devout_ig_leader').GetFullName] is running a dungeon and torturing people using cruel and unusual methods."
+ nda_base.26.f:0 "'I had fallen at the very brink of a circular #BOLD pit#! ...the death just avoided was of that very character which I had regarded as fabulous and frivolous in the tales respecting the Inquisition.\n\n...The sweep of the #BOLD pendulum#! had increased in extent... a crescent of glittering steel, about a foot in length from horn to horn; the horns upward, and the under edge evidently as keen as that of a razor. ...down and still down it came!'"
+ nda_base.26.a:0 "We must end this atrocity"!"
+ nda_base.26.b:0 "Mistakes happen."
+ nda_base_inqusition_closed_tooltip:0 "Close down the Inqusition"

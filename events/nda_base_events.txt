@@ -10,10 +10,8 @@ nda_base.1 = { # An Introduction to NDA
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
-		
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
 	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
@@ -21,17 +19,13 @@ nda_base.1 = { # An Introduction to NDA
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
 	trigger = {
-
+		has_global_variable = nda_is_loaded # use this here to stop error log entry - event is direct call, not on_action, so no harm done
 	}
 
-	immediate = {
-
-	}	
-	
 	option = { #So it begins
 		name = nda_base.1.a
 		default_option = yes
-		}
+	}
 }
 
 nda_base.2 = { # Nameless Cults published
@@ -44,8 +38,7 @@ nda_base.2 = { # Nameless Cults published
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
-		
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -190,7 +183,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 		game_date >= 1840
 		has_global_variable = nda_nameless_cults_exists
 
-		NOT = { has_variable = nda_nameless_cults_decision} # don't rerun while decision in progress
+		NOT = { has_variable = nda_nameless_cults_decision } # don't rerun while decision in progress
 
 		OR = { # will also fire for countries as they promote in rank
 			country_rank = rank_value:great_power
@@ -212,7 +205,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 
 	immediate = {
 		set_variable = nda_nameless_cults_decision # don't set immediate as causes follow on event to trigger simultaniously	
-		debug_log = "Imprint of Nameless Cults" 
+		debug_log = "Imprint of Nameless Cults : [THIS.GetCountry.GetNameNoFormatting]" 
 	}	
 	
 	option = { #"What harm can a book do?"
@@ -347,8 +340,7 @@ nda_base.5 = { # First Cultist in Country
 				add_trait = nda_cultist 
 				save_scope_as = converted_ig_leader
 				}
-				save_scope_as = converted_ig
-	
+				save_scope_as = converted_ig					
 		}
 
 		# start journal for initial cult spread
@@ -361,7 +353,7 @@ nda_base.5 = { # First Cultist in Country
 			add_journal_entry = { type = je_nda_cult_spreads }		
 		}
 
-		debug_log_scopes = yes				
+		debug_log_scopes = no				
 	}	
 	
 	option = { #"What can we do"
@@ -466,8 +458,8 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 					c:ELD = { country_rank > root.country_rank }
 					NOT = { owes_obligation_to = c:ELD }		
 				}
-				debug_log = "Offer Obligation to ELD on becoming Cultist" #[ROOT.GetName] : 
-				debug_log_scopes = yes
+				debug_log = "Offer Obligation to ELD on becoming Cultist : [THIS.GetCountry.GetNameNoFormatting]" #[ROOT.GetName] : 
+
 				set_owes_obligation_to = { country = c:ELD setting = yes }
 				change_relations = { country = c:ELD value = 50 } # 30 was too low?
 			}
@@ -519,8 +511,8 @@ nda_base.8 = { # Notification that first country has recognized cult
 			limit = {
 				can_cult_infiltrate = yes
 			}
-			debug_log = "Cult Expanded from Neighbour" #[ROOT.GetName] : 
-			debug_log_scopes = yes
+			debug_log = "Cult Expanded from Neighbour : [THIS.GetCountry.GetNameNoFormatting]" #[ROOT.GetName] : 
+			#debug_log_scopes = no
 			add_journal_entry = { type = je_nda_cult_spreads }	
 				
 		}
@@ -669,6 +661,7 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 	}
 }
 
+# Redundant - now uses on_action
 nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variable against wars
 	type = country_event
 	placement = ROOT
@@ -767,10 +760,6 @@ nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variabl
 
 	option = { #Don't over do it
 		name = nda_base.11.c	
-#
-#		trigger = {
-#			is_player = yes # option to avoid possible nation ruin ?
-#		}
 	}
 }
 
@@ -778,7 +767,33 @@ nda_base.12 = { # Secret Cultists in Country - fired from event nda_base.6 calle
 	type = country_event
 	placement = ROOT
 	title = nda_base.12.t
-	desc = nda_base.12.d
+	# if already repented then they have gone back on their word
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:converted_ig_leader = {
+						has_variable = nda_repented
+					}
+				}
+				desc = nda_base.12.u
+			}
+			# standard 
+			triggered_desc = {
+				trigger = {
+					NOT = { 
+						scope:converted_ig_leader = {
+							has_variable = nda_repented
+						}
+					}
+				}
+
+				desc = nda_base.12.d
+			}
+		}
+	}
+
 	flavor =  nda_base.12.f
 
 	duration = 3
@@ -788,8 +803,6 @@ nda_base.12 = { # Secret Cultists in Country - fired from event nda_base.6 calle
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  } # dummy image
-
 	gui_window = event_window_1char_tabloid
 
 	left_icon = scope:converted_ig_leader
@@ -916,10 +929,55 @@ nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them
 			nda_effect_dagonic_setup = yes
 		}
 	}	
-	
-
 }
 
+nda_base.15 = { # Is there non-conformists leader within the cult
+	type = country_event
+	placement = ROOT
+	title = nda_base.15.t
+	desc = nda_base.15.d
+	flavor =  nda_base.15.f
+
+	duration = 3
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:targeted_ig_leader # converted_ig.leader
+
+	trigger = {
+		exists = ig:ig_nda_cult_worshippers
+		ig:ig_nda_cult_worshippers = {
+			leader = { 
+				has_any_cultist_trait = yes
+				has_non_cultist_ideology = yes
+			} 
+		}		
+	}
+
+	immediate = {
+		ig:ig_nda_cult_worshippers = {
+			leader = { 
+				save_scope_as = targeted_ig_leader
+				nda_effect_ensure_cult_ideology = yes					
+			} 
+		}
+
+		debug_log = "Check for Non-Conformist Cult Leader" 				
+
+	}	
+	
+	option = { # To be expected
+		name = nda_base.15.a
+		default_option = yes
+		
+		ai_chance = { # should be most likely
+			base = 100		
+		}
+
+		debug_log = "Non-Conformist Cult Leader - Persuaded" 	
+
+	}	
+}
 
 nda_base.20 = { # Request from the devout
 	type = country_event
@@ -1036,10 +1094,6 @@ nda_base.21 = { # A cultist targeted
 				trigger_event = { id = nda_base.22 }	
 			}		
 		}
-		#else = { # can't trigger
-		#	# no cultists - get innocent leader (or trigger pit and pendulum)? Very low chance of this
-		#	trigger_event = { id = nda_base.25 }
-		#}
 	}
 }
 
@@ -1073,6 +1127,8 @@ nda_base.22 = { # A Cultist converted
 			# remove traits
 			remove_trait = nda_cultist
 			remove_trait = nda_acolyte
+
+			set_variable = { name = nda_repented }
 		}
 
 		debug_log = "Cult Traits Removed" 
@@ -1140,8 +1196,6 @@ nda_base.24 = { # The Inquisition ends
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds" #icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
 
-	#event_image = {  texture = "gfx/state_pictures/arctic.dds"  } # dummy image
-
 	gui_window = event_window_1char_tabloid
 
 	left_icon = scope:devout_ig_leader
@@ -1159,7 +1213,6 @@ nda_base.24 = { # The Inquisition ends
 				save_scope_as = devout_ig_leader
 			}
 		}
-
 	}	
 	
 	option = { #"Oh dear."
@@ -1167,12 +1220,12 @@ nda_base.24 = { # The Inquisition ends
 	}
 }
 
-nda_base.25 = { # An Innocent condemned 
+nda_base.26 = { # The Pit and the Pendulum!
 	type = country_event
 	placement = ROOT
-	title = nda_base.22.t #same descriptions as gulity!
-	desc = nda_base.22.d
-	flavor =  nda_base.22.f
+	title = nda_base.26.t 
+	desc = nda_base.26.d
+	flavor =  nda_base.26.f
 
 	duration = 3
 
@@ -1182,7 +1235,75 @@ nda_base.25 = { # An Innocent condemned
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds" #icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
 
-	#event_image = {  texture = "gfx/state_pictures/arctic.dds"  } # dummy image
+	gui_window = event_window_2char
+
+	left_icon = scope:targeted_ig_leader
+	right_icon = scope:devout_ig_leader
+	trigger = {
+		
+	}
+
+	weight_multiplier = {
+		base = 0
+		modifier = {
+			has_variable =  "nda_innocent_condemmed"
+			add = 10
+		}
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = { 				
+				leader = { 
+					has_any_cultist_trait = no
+				} 	
+				NOT = { is_interest_group_type = ig_devout } # Don't include devout	
+			}
+			leader = { 				
+				save_scope_as = targeted_ig_leader
+			}
+			save_scope_as = targeted_ig
+		}	
+		random_interest_group = { # devout leader
+			limit = { 
+				is_interest_group_type = ig_devout 
+			}
+			leader = { 
+				save_scope_as = devout_ig_leader
+			}
+		}
+	}	
+	
+	option = { #"We must end this atrocity"
+		name = nda_base.26.a
+		default_option = yes
+		# stop the Inquisition
+		custom_tooltip = nda_base_inqusition_closed_tooltip
+		hidden_effect = { set_variable = nda_inqusition_closed }
+
+		# bad debuff for devout, inqusition ends
+	}
+
+	option = { #"Mistakes happen"
+		name = nda_base.26.b
+		# bad debuff for devout and government
+	}
+}
+
+nda_base.25 = { # An Innocent condemned 
+	type = country_event
+	placement = ROOT
+	title = nda_base.22.t #same descriptions as gulity!
+	desc = nda_base.22.d
+	flavor = nda_base.22.f
+
+	duration = 3
+
+	# should be character block
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds" #icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
 
 	gui_window = event_window_1char_tabloid
 
@@ -1206,7 +1327,16 @@ nda_base.25 = { # An Innocent condemned
 			save_scope_as = targeted_ig
 		}	
 
+		# possibility of negative trait due to torture
+		random_list = {	
+			25 = { } 
+			25 = { scope:targeted_ig_leader = { add_trait = alcoholic } }
+			25 = { scope:targeted_ig_leader = { add_trait = psychological_affliction } }
+			25 = { scope:targeted_ig_leader = { add_trait = opium_addiction } }
+		}		
+	
 		debug_log = "Innocent persecuted" 
+		set_variable = "nda_innocent_condemmed"
 	}	
 	
 	option = { #"Saw Sense"

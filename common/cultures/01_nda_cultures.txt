@@ -52,12 +52,13 @@ nda_cul_yigian={
 	}
 	common_last_names={
 		yig the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha ghatanothoa zoth-ommog
+		lotan typhaon
 		# Hyperborian version of names from CAS - Yigians are ancient race
 		yok-zothoth kthulhut zhothaqquah ubbo-satha
 	}
 
 	noble_last_names = {
-		yig set the_great_dragon the_father_serpent the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa 
+		yig set the_great_dragon the_father_serpent the_snake the_serpent the_blackadder the_ophidia yidhra ayi'ig k'baa lotan typhaon
 	}
 	
 	male_regal_first_names = {
@@ -95,12 +96,13 @@ nda_cul_dagonic={
 		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of consort_of offspring_of 
 	}
 	common_last_names={
-		the_deep the_abyss the_storm the_waves the_pelagic the_cetacen the_kraken nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka 
+		the_deep the_abyss the_storm the_waves the_pelagic the_cetacen the_kraken nyarlathotep zhar lloigor cyäegha nyogtha tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog 
 		gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
+		scylla charybdis adaro 
 	}
 
 	noble_last_names = {
-		cthugha cthulhu dagon hydra zoth-ommog
+		cthugha cthulhu dagon hydra zoth-ommog ceto the_leviathan
 	}
 	
 	male_regal_first_names = {
@@ -136,21 +138,21 @@ nda_cul_trueyankee={
 		Herbert
 		Richard_Upton
 		Clark		
-		Alexander Aeneas Andrew Aaron Alton Atlee Asa Ambrose Abner Alvin August Abraham Abel Abijah Ansel Amos Absalom
-		Benjamin Bartholomew Byron Benedict Barnabas Bildad
+		Alexander Andrew Aaron Alton Atlee Asa Ambrose Abner Alvin August Abraham Abel Ansel Amos Absalom
+		Benjamin Bartholomew Byron Benedict Barnabas
 		Charles Cyrus Chester Cassius Calvin Cornelius Conrad Caleb Cephas Clarence Colcord
 		Daniel David Dwight
-		Ezekiel Enoch Elihu Edward Eugene_2 Eustace Edwin Elam Ezra Ebenezer Elijah Emory Ephraim Erasmus Elton Erastus
+		Ezekiel Enoch Edward Eugene_2 Eustace Edwin Elam Ezra Ebenezer Elijah Ephraim Erasmus Elton
 		Franklin Francis Frederick
 		Grenville George Gregory Grover Gabriel Gorham Gordon
 		Henry Hannibal Hugh Horatio Horace Hiram Harold Hazen Hector
 		Isaac Isaiah Irving Ichabod
 		Joshua Joseph John James Jacob Jesse Joel Jeremiah Jeffrey Judah Jonas Jedediah Jonathan Josiah
 		Kermit Kenner
-		Lemuel Lysander Lawrence Lewis Lorenzo Leland Levi Leonard_2 Lucius
+		Lysander Lawrence Lewis Lorenzo Leland Levi Leonard_2 Lucius
 		Micah Marcellus Mark Michael Millard Matthew Matthias Montgomery Maxwell Milton 
 		Nicholas Noah Nathaniel Newton Nelson
-		Obadiah Othniel Oswald Orson Orville Oscar Otis Oliver Orrin Owen Ormsby
+		Obadiah Oswald Orson Orville Oscar Otis Oliver Orrin Owen Ormsby
 		Peter Paul Patrick Philip Phineas Philemon Purley Palmetus Philetus
 		Quentin Quincy
 		Rutherford Richard Robert Rufus Roger
@@ -159,7 +161,7 @@ nda_cul_trueyankee={
 		Ulysses Upton
 		Victor Valentine_2
 		William Walter Winfield Wesley Wilbur Wendell
-		Zebulon Zachary Zalmon Zadok
+		Zebulon Zachary Zadok
 		
 	}
 	female_common_first_names = {
@@ -204,7 +206,6 @@ nda_cul_trueyankee={
 	ethnicities = {
 		10 = caucasian
 		1 = dagonic_hybrid
-		#1 = yigian_hybrid
 	}
 }
 

@@ -1,11 +1,12 @@
 ﻿namespace = nda_historic # Series of Historic 'Colour' events around spiritlism and the Occult - show to source country and to NEN as colour
+# use cooldown to stop refires to reduce variable bloat
 
 nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	type = country_event
 	placement = p:x01D042
-	title =nda_historic.1848.t
-	desc =nda_historic.1848.d
-	flavor = nda_historic.1848.f
+	title = nda_historic.1838.t
+	desc = nda_historic.1838.d
+	flavor = nda_historic.1838.f
 
 	duration = 3
 
@@ -30,14 +31,15 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_second_awakening }	
 	}
 
-	immediate = {		
-		set_variable = nda_historic_second_awakening
-	}	
+	cooldown = { months = 12 }
 	
+	immediate = {
+		debug_log = "Great Awakening"
+		debug_log_scopes = yes		
+	}
+
 	option = { #"Any more pending?"
 		name = nda_historic.1838.a
 		default_option = yes	
@@ -74,14 +76,10 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 				exists = c:NEN
 				c:NEN = ROOT
 			}			
-		}
-			
-		NOT = { has_variable = nda_historic_spiritulism_founded }	
+		}	
 	}
 
-	immediate = {		
-		set_variable = nda_historic_spiritulism_founded
-	}	
+	cooldown = { months = 12 }
 	
 	option = { #"Hope it does not spread"
 		name =nda_historic.1848.a
@@ -120,14 +118,9 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_poe_death }	
 	}
 
-	immediate = {
-		
-		set_variable = nda_historic_poe_death
-	}	
+	cooldown = { months = 12 }	
 	
 	option = { #"Nevermore"
 		name = nda_historic.1849.a
@@ -165,14 +158,10 @@ nda_historic.1852 = { # An American Medium in London
 				exists = c:NEN
 				c:NEN = ROOT
 			}			
-		}
-			
-		NOT = { has_variable = nda_historic_spiritulism_in_london }	
+		}	
 	}
 
-	immediate = {
-		set_variable = nda_historic_spiritulism_in_london
-	}	
+	cooldown = { months = 12 }
 	
 	option = { 
 		name = nda_historic.1852.a
@@ -216,13 +205,11 @@ nda_historic.1862 = { # The Ghost Club
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_ghost_club }	
 	}
 
-	immediate = {
-		set_variable = nda_historic_ghost_club
+	cooldown = { months = 12 }
 
+	immediate = {
 		p:x7543C8 = { # London
 			state = { save_scope_as = spiritulist_state 
 				# add Dickens to country
@@ -302,13 +289,9 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe! TODO
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_zetetic_rowbotham }	
 	}
 
-	immediate = {
-		set_variable = nda_historic_zetetic_rowbotham
-	}	
+	cooldown = { months = 12 }
 	
 	option = { 
 		name = nda_historic.1865.a
@@ -355,14 +338,10 @@ nda_historic.1875 = { # The Theosophical Society
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_theosophical_soc }	
 	}
 
-	immediate = {		
-		set_variable = nda_historic_theosophical_soc
-	}	
-	
+	cooldown = { months = 12 }
+
 	option = { #"Hope it does not spread"
 		name = nda_historic.1875.a
 		default_option = yes
@@ -400,13 +379,9 @@ nda_historic.1882 = { # The Society for Psychical Research
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_spr_founded }	
 	}
 
-	immediate = {
-		set_variable = nda_historic_spr_founded
-	}	
+	cooldown = { months = 12 }	
 	
 	option = { 
 		name = nda_historic.1882.a
@@ -445,14 +420,9 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_secret_doctrine }	
 	}
 
-	immediate = {
-		
-		set_variable =  nda_historic_secret_doctrine
-	}	
+	cooldown = { months = 12 }	
 	
 	option = { #"Hope it does not spread"
 		name = nda_historic.1887.a
@@ -490,22 +460,14 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement
 				exists = c:NEN
 				c:NEN = ROOT
 			}			
-		}
-			
-		NOT = { has_variable = nda_historic_spiritulism_faked }	
+		} 
 	}
 
-	immediate = {		
-		set_variable = nda_historic_spiritulism_faked
-	}	
+	cooldown = { months = 12 }	
 	
-	option = { #"Hope it does not spread"
+	option = { 
 		name = nda_historic.1888.a
-		default_option = yes
-
-		debug_log = "Build Orne Library"
-
-		
+		default_option = yes		
 	}
 }
 
@@ -540,15 +502,11 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_theosophical_soc }	
 	}
 
-	immediate = {		
-		set_variable = nda_historic_theosophical_soc
-	}	
+	cooldown = { months = 12 }
 	
-	option = { #"Hope it does not spread"
+	option = { 
 		name = nda_historic.1889.a
 		default_option = yes
 	}
@@ -584,13 +542,9 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic
 				c:NEN = ROOT
 			}			
 		}
-			
-		NOT = { has_variable = nda_historic_zetetic_blount }	
 	}
 
-	immediate = {
-		set_variable = nda_historic_zetetic_blount
-	}	
+	cooldown = { months = 12 }	
 	
 	option = { 
 		name = nda_historic.1892.a

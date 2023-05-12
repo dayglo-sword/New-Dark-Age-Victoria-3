@@ -5,6 +5,7 @@
 		NOT = { 
 			is_full_cult_country = { COUNTRY="THIS" } 
 			has_global_variable = nda_ritual_cthulhu_leaves
+			has_variable = nda_yig_overlordship_cooldown
 		}
 		country_has_primary_culture = cu:nda_cul_yigian 
 	}
@@ -29,13 +30,27 @@
 				type = puppet
 			}			
 		}
-		debug_log = "Become YIG puppet"
-		debug_log_scopes = yes
+
+		hidden_effect = {
+			set_variable = {
+				name = nda_yig_overlordship_cooldown
+				days = 182
+			}			
+		}
+
+		debug_log = "Become YIG puppet : [THIS.GetCountry.GetNameNoFormatting]"
+		debug_log_scopes = no
 		#custom_tooltip = nda_yig_overlordship_tooltip
 	}
 
 	ai_chance = {
 		base = 10	
+		# boost if cthuhlu in town
+		modifier = {
+			trigger = { 
+				has_global_variable = nda_cthulhu_arrives
+			}
+			add = 20
+		}	
 	}
-
 }

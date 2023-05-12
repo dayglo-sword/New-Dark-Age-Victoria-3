@@ -27,6 +27,12 @@
 			}
 		}
 		
+		# remove anti-slavery from intel and trade unions 
+		every_interest_group = {
+			limit = { has_ideology = ideology_anti_slavery }
+			remove_ideology = ideology_anti_slavery
+		}
+
 		# set (not so) secret goals and Strategy - need to check for existence
 		IF = {
 			limit = {
@@ -56,9 +62,9 @@
 			}			
 		}
 
-		set_strategy = ai_strategy_colonial_expansion
-		set_strategy = ai_strategy_territorial_expansion
-		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_nda_eldritch_administrative_agenda
+		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
+		set_strategy = ai_strategy_nda_eldritch_political_agenda
 }
 
 nda_effect_eldritch_annex = {
@@ -115,15 +121,37 @@ nda_effect_eldritch_annex = {
 			save_scope_as = nda_eldritch_annex
 			
 			# Reduce radicals before annex else high revolt risk
-			add_radicals  = { value = -0.5 }			
+			add_radicals  = { value = -0.5 }	
+
+			# make cultists happy
+			every_scope_culture = {
+				if = {
+					limit = {
+						OR = {
+							THIS = cu:nda_cul_cultist
+							THIS = cu:nda_cul_yigian
+							THIS = cu:nda_cul_dagonic
+						}
+					}
+					# Make cultists happy for annex
+					scope:target_scope = {
+						add_radicals = {
+							value = -1
+							culture = THIS
+						}	
+						add_loyalists = {
+							value = 1
+							culture = THIS
+						}				
+					}				
+				}					
+			}		
 		}
 
 		if = {
 			limit = {
 				exists = scope:nda_eldritch_annex	
-			}	
-			
-			debug_log = "ELD - Country surrenders."	
+			}							
 
 			# send notification - does country still exist after annex?
 			every_country = {
@@ -131,7 +159,7 @@ nda_effect_eldritch_annex = {
 			}
 
 			scope:nda_eldritch_annex = { 
-				debug_log_scopes = yes 
+				debug_log = "ELD - Country surrenders : [THIS.GetCountry.GetNameNoFormatting]"
 				# release puppets and dominions - needs constraint to check if themselves not cultists
 				every_country = {
 					limit = {
@@ -308,7 +336,7 @@ nda_effect_eldritch_strife
 					culture = scope:nda_eldritch_rebels
 				}	
 				#debug_log_scopes = yes
-				debug_log = "Ritual - Eldritch Cult Rebels"							
+				debug_log = "Ritual - Eldritch Cult Rebels : [THIS.GetCountry.GetNameNoFormatting]"							
 		}
 	}
 }
