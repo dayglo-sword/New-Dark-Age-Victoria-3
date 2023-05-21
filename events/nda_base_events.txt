@@ -481,7 +481,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 	}
 }
 
-nda_base.8 = { # Notification that first country has recognized cult
+nda_base.8 = { # Neigbouring country has spread cult to us
 	type = country_event
 	placement = ROOT
 	title = nda_base.8.t

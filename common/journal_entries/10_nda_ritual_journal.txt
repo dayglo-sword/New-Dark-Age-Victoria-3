@@ -182,6 +182,10 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 	
 	on_fail = {
 		# celebratory event?
+		# notification to players
+		every_country = {
+			post_notification = nda_ritual_halt_notice
+		}
 	}
 
 	#progressbar = yes

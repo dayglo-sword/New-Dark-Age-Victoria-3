@@ -57,6 +57,9 @@
 
  # decisions
  nda_ritual_assist_possible_tt:0 "The Cult has commenced the Ritual"
+ nda_ritual_assist:0 "Assist The Ritual"
+ nda_ritual_assist_desc:0 "The Eldritch Cult has commenced [concept_nda_ritual]\nWe should assist them in all ways possible.\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+
  # Journal Entries
  je_nda_ritual_proceeds:0 "The Ritual Commences"
  je_nda_ritual_proceeds_reason:0 "The Eldritch Cult, now secure in its power, can commence [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
@@ -94,13 +97,16 @@
  notification_nda_ritual_post_cthulhu_split_desc:0 "They have broken free from the Eldritch Cult!"
 
  notification_nda_ritual_post_cthulhu_strife_tooltip:0 "#header $notification_nda_ritual_post_cthulhu_strife_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_post_cthulhu_strife_desc$"
- notification_nda_ritual_post_cthulhu_strife_name:0 "[SCOPE.sC('nda_eldritch_rebels').GetName ] are desiring to become free. "
- notification_nda_ritual_post_cthulhu_strife_desc:0 "They are openly protesting against the Eldritch Cult!"
+ notification_nda_ritual_post_cthulhu_strife_name:0 "[SCOPE.sCulture('nda_eldritch_rebels').GetName ] are desiring to become free. "
+ notification_nda_ritual_post_cthulhu_strife_desc:0 "They are openly protesting against the Cultist rule!"
 
  notification_nda_ritual_assist_notice_tooltip:0 "#header $notification_nda_ritual_assist_notice_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_assist_notice_desc$"
- notification_nda_ritual_assist_notice_name:0 "[SCOPE.sC('nda_eldritch_annex').GetName ] is assisting [concept_nda_ritual]."
- notification_nda_ritual_assist_notice_desc:0 "[SCOPE.sC('nda_eldritch_annex').GetName ] will do all it can to ensure [concept_nda_ritual] completes."
+ notification_nda_ritual_assist_notice_name:0 "[SCOPE.sC('nda_je_ritual_proceeds_scope').GetName ] is assisting [concept_nda_ritual]."
+ notification_nda_ritual_assist_notice_desc:0 "[SCOPE.sC('nda_je_ritual_proceeds_scope').GetName ] will do all it can to ensure [concept_nda_ritual] completes."
 
+ notification_nda_ritual_halt_notice_tooltip:0 "#header $notification_nda_ritual_halt_notice_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_halt_notice_desc$"
+ notification_nda_ritual_halt_notice_name:0 "[SCOPE.sC('nda_je_ritual_proceeds_scope').GetName ] has halted in assisting [concept_nda_ritual]."
+ notification_nda_ritual_halt_notice_desc:0 "[SCOPE.sC('nda_je_ritual_proceeds_scope').GetName ] has stopped in assisting [concept_nda_ritual]."
 # diplo
  nda_cult_liberation:0 "War of Liberation from the Cult"
 

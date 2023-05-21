@@ -8,6 +8,7 @@ Timeline of events in mod
 
 1842.1      nda_astro.1842      Conjunction 1
 1842.6      nda_nen.10          Founding of Miskatonic Uni
+1844.7      nda_nen.1844        Church of Starry Wisdom.
 1845.9      nda_nen.20          Devil Worship in Innsmouth, Captain Marsh
 1846.3      nda_nen.21          Plague in Innsmouth
 1848.4      nda_historic.1848   Founding of Spiritualist Movement

@@ -4,7 +4,7 @@
 	
 	ideologies = {
 		ideology_nda_cabalistic
-		ideology_populist
+		ideology_reactionary
 		ideology_patriarchal
 	}
 	
@@ -57,6 +57,20 @@
 					owner = c:LEN				
 				}
 				set_interest_group_name = ig_nda_chaugnar_faugn_cult
+			}
+			if = {
+				limit = {
+					exists = c:NEN
+					owner = c:NEN				
+				}
+				set_interest_group_name = ig_nda_starry_wisdom_cult
+			}
+			if = {
+				limit = {
+					exists = c:BAV
+					owner = c:BAV				
+				}
+				set_interest_group_name = ig_nda_illuminati_cult
 			}
 		}
 	}

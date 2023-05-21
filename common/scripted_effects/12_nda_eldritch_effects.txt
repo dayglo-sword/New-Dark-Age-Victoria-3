@@ -306,37 +306,43 @@ nda_effect_eldritch_strife
 		}
 
 		THIS = {
-				# convert cultists back to culture in  homeland
-				every_scope_state = {
-					limit = {
-						state_region = { is_homeland = scope:nda_eldritch_rebels }
-					}
-					every_scope_pop = {
-						limit ={
-							OR = {
-								has_pop_culture = nda_cul_cultist	
-								has_pop_culture = nda_cul_dagonic	
-								has_pop_culture = nda_cul_yigian				
-							}
-						}
-						change_pop_culture = { target = scope:nda_eldritch_rebels value = 0.33 }				
-					}	
-					#every_scope_pop = {
-					#	limit ={
-					#		has_pop_culture = scope:nda_eldritch_rebels # << Error: has_pop_culture trigger [ Invalid database object 'scope:nda_eldritch_rebels' ]
-					#	}
-					#	change_pop_religion = { target = rel:nda_rel_cultist value = -0.8 }			
-					#}				
+			# convert cultists back to culture in  homeland
+			every_scope_state = {
+				limit = {
+					state_region = { is_homeland = scope:nda_eldritch_rebels }
 				}
-
-				add_loyalists = { value = -0.7 culture = scope:nda_eldritch_rebels }	
-
-				add_radicals = {
-					value = 0.7
-					culture = scope:nda_eldritch_rebels
+				every_scope_pop = {
+					limit ={
+						OR = {
+							has_pop_culture = nda_cul_cultist	
+							has_pop_culture = nda_cul_dagonic	
+							has_pop_culture = nda_cul_yigian				
+						}
+					}
+					change_pop_culture = { target = scope:nda_eldritch_rebels value = 0.33 }
+					change_pop_religion = { target = rel:nda_rel_cultist value = -0.33 }					
 				}	
-				#debug_log_scopes = yes
-				debug_log = "Ritual - Eldritch Cult Rebels : [THIS.GetCountry.GetNameNoFormatting]"							
+				#every_scope_pop = {
+				#	limit ={
+				#		has_pop_culture = scope:nda_eldritch_rebels # << Error: has_pop_culture trigger [ Invalid database object 'scope:nda_eldritch_rebels' ]
+				#	}
+				#	change_pop_religion = { target = rel:nda_rel_cultist value = -0.8 }			
+				#}				
+			}
+
+			add_loyalists = { value = -0.8 culture = scope:nda_eldritch_rebels }	
+
+			add_radicals = {
+				value = 0.8
+				culture = scope:nda_eldritch_rebels
+			}	
+			#debug_log_scopes = yes
+			debug_log = "Ritual - Eldritch Cult Rebels : [THIS.GetCountry.GetNameNoFormatting]"		
+
+			# notification to world of unrest
+			every_country = {
+				post_notification = nda_ritual_post_cthulhu_strife
+			}					
 		}
 	}
 }

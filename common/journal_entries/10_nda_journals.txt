@@ -124,7 +124,7 @@
 			clamp_variable = {
 				name = nda_cult_spread_tracker
 				min = 0
-				max = 1000			
+				max = 1200			
 			}					
 		}	
 
@@ -140,7 +140,7 @@
 	}
 
 	goal_add_value = {
-		add = 999 # 900 # should be approx 10years -> 12 months x 8 IG + power and govern bonus?
+		add = 1100 #999 # 900 # should be approx 10years -> 12 months x 8 IG + power and govern bonus?
 	}
 
     fail = {

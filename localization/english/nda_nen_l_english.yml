@@ -91,6 +91,11 @@ nda_nen.21.d:0 "A mysterious plague has hit the coastal town of Innsmouth killin
 nda_nen.21.f:0 "#ITALIC '...it was probably some foreign kind of disease brought from China or somewhere by the shipping...\n\nIt surely was bad enough - there were riots over it, and all sorts of ghastly doings that I don't believe ever got outside town...#!'"
 nda_nen.21.a:0 "Too late to help the poor souls."
 
+nda_nen.1844.t:0 "New Church Founded"
+nda_nen.1844.d:0 "As is the current fad, a new Church has been founded in Providence, Rhode Island.\n\nIt appears that it may have a more non-christian alignment to all the other ones coming into existence.\n\nAt least this one is physically taking the place of an older deserted building from a previously failed Church."
+nda_nen.1844.f:0 "A certain Professor Enoch Bowen, of Providence, has traveled widely in Egypt, and in 1843, in the course of archaeological investigations of the crypt of Nephren-Ka.\n\nUpon unearthing his find in Egypt, Professor Bowen abandoned his research and returned to Providence, where he purchased the Free-Will Church, and has made it the headquarters of the 'Church of Starry Wisdom'."
+nda_nen.1844.a:0 "New Churches are everywhere!"
+
 nda_nen.1882.t:0 "Meteor near Arkham"
 nda_nen.1882.d:0 "Three professors from Miskatonic University have hastened out to the west of Arkham to investigate tales of a 'great rock' falling from the sky\n\nAfter finding the remains in a crater, the professors found the meteorite to consist of an 'oddly soft' material.\n\nThe sample that they took faded away during experiments, which appears to also be the fate of the main body of the stellar object."
 nda_nen.1882.f:0 "#ITALIC 'The stone, magnetic as it had been, must have had some peculiar electrical property; for it had “drawn the lightning”...\n\nSix times within an hour the farmer saw the lightning strike the furrow in the front yard, and when the storm was over nothing remained but a ragged pit...\n\nAs was natural, the Arkham papers made much of the incident!#!'"

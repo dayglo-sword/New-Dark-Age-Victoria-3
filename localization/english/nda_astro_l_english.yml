@@ -7,26 +7,26 @@
 
  nda_astro.2.t:0 "The Planets Align"
  nda_astro.2.d:1 "As Cultists in cities around the world celebrate, Astronomers and Astrologers both study the [concept_nda_conjunction] of the planets Jupiter and Saturn.\n\nA phenomenon visible to all and which occurs only approximately every twenty years."
- nda_astro.2.f:1 "."
+ nda_astro.2.f:1 "." # uses conclave text instead.
  nda_astro.2.a:0 "A bit worrying..."
  nda_astro.2.b:0 "Hurrah!!!"
 
  nda_astro.1858.t:0 "Comet Sighted!"
- nda_astro.1858.d:1 "Great Comet of 1858."
- nda_astro.1858.f:1 "."
+ nda_astro.1858.d:1 "#BOLD The Great Comet of 1858.#!\n\nA sight visible around the world, as a Comet lights up the night skies."
+ nda_astro.1858.f:1 "A scientific correspondent at Edinburgh thus describes its appearance on Monday night:\n\n'Just after it had become visible to the naked eye (at ten minutes past six), the comet presented a very marked appearance when seen with a telescope magnifying sixty times. The nebulous matter, which reached to a distance of about 40 sec. below the nucleus, had the form of a crescent, the darker part between the cusps giving the idea that the opaque part cast a shadow into the nebula.\n\nAs the darkness of the evening came on, this seeming shadow grew narrower, but the ccntral part remained very decidedly fainter than the edges, as if the luminosity of the comet was confined principally to the outer layers of matter.'"
  nda_astro.1858.a:0 "A bit worrying..."
- nda_astro.1858.b:0 "Hurrah!!!"
+ nda_astro.1858.b:0 "Thank God we live in such enlightened times!"
 
  nda_astro.1910.t:0 "Comet Sighted!"
- nda_astro.1910.d:1 "Great Comet of 1910."
- nda_astro.1910.f:1 "."
+ nda_astro.1910.d:1 "#BOLD The Great Comet of 1910.#!\n\nA sight visible around the world, as a Comet lights up the night skies, preceding, and eclipsing, the return of the fabled Halley's"
+ nda_astro.1910.f:1 "'It is quite likely that the new Comet may eclipse Halley's in popular interest.\n\nFor one thing, Halley's is as yet only telescopic, whereas the comet discovered on January 17 by Mr. Drake at Johannesburg is visible to the naked eye, and has indeed been so seen by several observers in this district.'\n\n'If we find among us singular freaks of any sort, wonderful visionaries, wild-eyed speculators, tyrannical governors, or vicious law-making bodies, then it may be attributed to cometary effect, for such things occur on every return of Halley's Comet.'"
  nda_astro.1910.a:0 "A bit worrying..."
- nda_astro.1910.b:0 "Hurrah!!!"
+ nda_astro.1910.b:0 "Thank God we live in such enlightened times!"
 
  nda_astro.99.t:0 "Conclave test"
  nda_astro.99.d:1 "The Cultists held a Great Conclave, where, along with more bacchanalian activites, they charted the future course of the Cult."
  nda_astro.99.f:1 "[ROOT.Var('nda_conclave_flavour').GetValue]" 
- #"[ROOT.Var('nda_conclave_count').GetValue] attended the Conclave, of which [ROOT.Var('nda_conclave_assist_count').GetValue] were assisting the Ritual."
+
  nda_astro.99.a:0 "A bit worrying..."
  nda_astro.99.b:0 "Hurrah!!!"
 

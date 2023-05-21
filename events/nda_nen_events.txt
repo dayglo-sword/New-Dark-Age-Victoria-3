@@ -574,6 +574,42 @@ nda_nen.21 = { # Plague in Innsmouth
 
 # nda_nen.23 = { # The Raid on Innsmouth
 
+nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
+	type = country_event
+	placement = p:x1A77EA 
+	title = nda_nen.1844.t
+	desc = nda_nen.1844.d
+	flavor =  nda_nen.1844.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1844.7 # founded july 
+		game_date < 1845.4 
+		p:x1A77EA = { state = { owner = ROOT } }
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+	
+	}	
+
+	option = { #"A Bizarre Tale.."
+		name = nda_nen.1844.a
+		default_option = yes
+	}
+}
+
 nda_nen.1882 = { # The Colour Out Of Space - The Meteor
 	type = country_event
 	placement = p:xBB7965 

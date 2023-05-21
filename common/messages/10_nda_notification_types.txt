@@ -145,6 +145,15 @@ nda_ritual_assist_notice = {
  
 }
 
+nda_ritual_halt_notice = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+
+	notification_type = feed # potentially too many for toast
+ 
+}
+
 ### notifications from WHH events
 nda_house_on_borderlands = {
 	type = country

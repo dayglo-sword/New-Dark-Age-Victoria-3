@@ -50,7 +50,15 @@
 		if = {
 			limit = { ig:ig_nda_cult_worshippers = { is_powerful = yes } }
 			multiply = 1.5
-		}				
+		}	
+		if = {
+			limit = { has_global_variable = nda_cthulhu_arrives }
+			multiply = 1.5
+		}	
+		if = {
+			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
+			multiply = 0.5
+		}		
 	}
 }
 
@@ -99,6 +107,15 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	aggression = {
 		value = 1
 		
+		# not aggressive towards main cultists
+		if = {
+			limit = {
+				is_full_cult_country = { COUNTRY=scope:target_country }				
+			}
+			multiply = 0
+		}	
+
+
 		# Less aggressive towards fellow cultists
 		if = {
 			limit = {
@@ -280,13 +297,13 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		conquer = {
 			if = {
 				limit = {
-					scope:target_country = { is_full_cult_country = { COUNTRY="THIS" } } # try and dominate the minions
+					scope:target_country = { is_full_cult_country = { COUNTRY="THIS" } } 
 				}
-				multiply = 0.00 # never conquer ful cultists
+				multiply = 0.00 # never conquer full cultists
 			}
 			if = {
 				limit = {
-					scope:target_country = { is_cultist_country = yes  }
+					scope:target_country = { is_cultist_country = yes  } # try and dominate the minions
 				}
 				multiply = 0.25
 			}	
@@ -294,7 +311,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 				limit = {
 					scope:target_country = { is_cultist_country = no  }
 				}
-				multiply = 0.25
+				multiply = 2
 			}		
 			if = {
 				limit = {
@@ -321,12 +338,17 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		value = 200
 			
 		if = {
-			limit = { 
-				exists = ig:ig_nda_cult_worshippers 
-				ig:ig_nda_cult_worshippers = { is_powerful = yes } 
-			}
+			limit = { ig:ig_nda_cult_worshippers = { is_powerful = yes } }
 			multiply = 1.5
-		}				
+		}	
+		if = {
+			limit = { has_global_variable = nda_cthulhu_arrives }
+			multiply = 1.5
+		}	
+		if = {
+			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
+			multiply = 0.5
+		}		
 	}
 }
 
@@ -411,6 +433,14 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 		if = {
 			limit = { ig:ig_nda_cult_worshippers = { is_powerful = yes } }
 			multiply = 1.5
-		}				
+		}	
+		if = {
+			limit = { has_global_variable = nda_cthulhu_arrives }
+			multiply = 1.5
+		}	
+		if = {
+			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
+			multiply = 0.5
+		}		
 	}
 }

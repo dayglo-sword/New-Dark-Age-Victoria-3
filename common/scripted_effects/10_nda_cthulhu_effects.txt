@@ -132,11 +132,11 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# Make non-cultist survivors angry
 					scope:target_scope = {
 						add_loyalists = {
-							value = -0.6
+							value = -0.7
 							culture = THIS
 						}
 						add_radicals = {
-							value = 0.6
+							value = 0.7
 							culture = THIS
 						}					
 					}				
