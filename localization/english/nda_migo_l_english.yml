@@ -1,8 +1,8 @@
 ﻿l_english:
   
 nda_migo.1.t:0 "A Restless Sleep"
-nda_migo.1.d:1 "A noise wakes you from your slumber.\nIn front of you is an hideous pink bat-winged monstrosty with antennae where its head should logically be.\nWith a strange buzzing they proceed to speak to you..."
-nda_migo.1.f:1 "'We are the Mi-Go from Yuggoth, we have travelled far from your future to study these times...'\n'You appear to be a likely candidate for our experiment. We will make you an offer...'\n'In return for immortality you will agree to be our agent in this aeon...'\n'recording the history of these dark times from the view point of the worlds leaders.'\n\n'This will of course require a certain amount of surgery to get your brain where we need it.'"
+nda_migo.1.d:1 "A noise wakes you from your peaceful slumber...\n\nIn front of you is an hideous pink bat-winged monstrosty with antennae where its head should logically be.\n\nWith a strange buzzing they proceed to speak to you..."
+nda_migo.1.f:1 "'We are the Mi-Go from Yuggoth, we have travelled far from your future to study these times...'\n\n'You appear to be a likely candidate for our experiment. We will make you an offer...'\n'In return for immortality you will agree to be our agent in this aeon...'\n'...recording the history of these dark times from the view point of the worlds leaders.'\n\n'This will of course require a certain amount of surgery to get your brain where we desire it.'"
 nda_migo.1.a:0 "Immortality Sounds Good..."
 nda_migo.1.b:0 "If I Hide Under the Bedsheets...""
 nda_migo.2.t:0 "All A Dream."
@@ -10,7 +10,7 @@ nda_migo.2.d:1 "You wake up in the morning to the smell of ozone and soiled beds
 nda_migo.2.f:1 ""
 nda_migo.2.a:0 "I Need Breakfast."
 nda_migo.3.t:0 "We Will Return"
-nda_migo.3.d:1 "The Alien waves their appendages in approval and tells you that they will return within the decade to conduct the next stage of the experiment. At this point you will obtain your new body.\n\n'Be careful not to die in the meantime.'"
+nda_migo.3.d:1 "The Alien waves their appendages in approval and tells you that they will return within the decade to conduct the next stage of the experiment.\n\n Apparently at this point you will obtain your new body.\n\n'Be careful not to die in the meantime.'"
 nda_migo.3.f:1 ""
 nda_migo.3.a:0 "See You Soon..."
 nda_migo.4.t:0 "Time To Move On"

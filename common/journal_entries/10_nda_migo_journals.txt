@@ -48,7 +48,7 @@
 
 	on_complete = {
 		debug_log = "Migo Status Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
-		# go to new Country - or is already handled by event?
+		# go to new Country - or is already handled by event? - slight delay then base event kicks in.
 
 	}
 
