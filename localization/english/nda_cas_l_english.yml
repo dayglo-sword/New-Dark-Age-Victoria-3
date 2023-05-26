@@ -1,7 +1,7 @@
 ﻿l_english:
 
 nda_cas.10.t:0 "The Holiness of Azédarac"
-nda_cas.10.d:0 "News has reach us of a holy man in Averoigne doing great works among the faithful.\n\nSCOPE.sCharacter('azedarac').GetFullName, the recently appointed Bishop of Ximes appears to be destined for great things!\n\nSome say he is the reincarnation of St. Azédarac the renowned 12th Century saint, not that we believe in that sort of heresy."
+nda_cas.10.d:0 "News has reach us of a holy man in Averoigne doing great works among the faithful.\n\n[SCOPE.sCharacter('azedarac').GetFullName], the recently appointed Bishop of Ximes appears to be destined for great things!\n\nSome say he is the reincarnation of St. Azédarac the renowned 12th Century saint, not that we believe in that sort of heresy."
 nda_cas.10.f:0 "'St. Azédarac died and was duly canonized in 1198. Some say that he did not die, but was transported to heaven alive, and that his body was never buried in the great mausoleum reared for him at Ximes. But that is probably a mere legend.'"
 nda_cas.10.a:0 "He must come to the Capital!"
 nda_cas.10.b:0 "They should go to the Holy See!"

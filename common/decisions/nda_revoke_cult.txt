@@ -16,7 +16,7 @@
 
 		country_has_primary_culture = cu:nda_cul_cultist
 		any_interest_group = {	
-			has_ideology = ideology_nda_cabalistic
+			has_ideology = ideology:ideology_nda_cabalistic
 			NOT = {
 				is_in_government = yes	
 				is_powerful = yes						

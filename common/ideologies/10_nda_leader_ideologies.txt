@@ -109,18 +109,41 @@ ideology_atheist = {
 		law_state_religion = strongly_disapprove
 		law_freedom_of_conscience = disapprove
 		law_total_separation = approve
+		law_state_atheism = strongly_approve
 	}
 	
 	possible = {
+		# Agitators should have an ideology at odds with current laws
+		NAND = {
+			has_role = agitator
+			owner = {
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_council_republic
+				}
+				has_law = law_type:law_state_atheism
+			}
+		}
+		# Monarchs cannot be republicans
+		NAND = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			OR = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
 		owner = {
-			has_technology_researched = egalitarianism
+			has_technology_researched = realism
 		}
 		scope:interest_group = {
 			OR = {
 				is_interest_group_type = ig_trade_unions
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_petty_bourgeoisie
-				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_intelligentsia
 			}
 		}
 		scope:interest_group = {
@@ -153,8 +176,8 @@ ideology_atheist = {
 		if = {
 			limit = {
 				owner = {
-					any_interest_group = {
-						is_interest_group_type = ig_devout
+					exists = ig:ig_devout
+					ig:ig_devout = {
 						is_powerful = yes
 					}
 				}
@@ -167,7 +190,7 @@ ideology_atheist = {
 					has_variable = nihilism_var 
 				}
 			}
-			add = 150
+			add = 75
 		}
 		if = {
 			limit = { 
@@ -175,7 +198,7 @@ ideology_atheist = {
 					has_variable = big_nihilism_var
 				}
 			}
-			add = 200
+			add = 150
 		}
 	}
 }

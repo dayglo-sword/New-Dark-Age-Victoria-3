@@ -14,7 +14,7 @@
 		
 		every_interest_group = {
 			limit = { 
-				has_ideology = ideology_nda_cabalistic
+				has_ideology = ideology:ideology_nda_cabalistic
 			}
 			# remove any secret masters modifier
 			IF = {

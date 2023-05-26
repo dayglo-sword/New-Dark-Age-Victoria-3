@@ -151,3 +151,12 @@ nda_effect_conclave_counts = {
 		}	
 	}
 }
+
+nda_effect_conclave_refused = {
+	# Mass Anger in Cultists		
+	add_radicals = { value = 0.8 religion = rel:nda_rel_cultist } 
+	add_radicals = { value = 0.8 culture = cu:nda_cul_cultist }
+
+	# Cult countries decrease relations
+	
+}

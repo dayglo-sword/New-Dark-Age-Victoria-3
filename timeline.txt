@@ -7,6 +7,7 @@ Timeline of events in mod
 1841~       nda_base.5          First Cultist in Country
 
 1842.1      nda_astro.1842      Conjunction 1
+1842.3		nda_cas.10			Holiness of Azedarac
 1842.6      nda_nen.10          Founding of Miskatonic Uni
 1844.7      nda_nen.1844        Church of Starry Wisdom.
 1845.9      nda_nen.20          Devil Worship in Innsmouth, Captain Marsh

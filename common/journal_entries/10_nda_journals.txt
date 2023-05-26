@@ -166,7 +166,7 @@
 	progressbar = yes
 	weight = 100
 
-	inheritable = yes
+	#inheritable = yes
 
 	should_be_pinned_by_default = yes
 }
@@ -620,7 +620,7 @@ je_nda_devout_inquisition = {
 
 	weight = 90
 
-	inheritable = yes
+	#inheritable = yes
 
 	should_be_pinned_by_default = yes
 }

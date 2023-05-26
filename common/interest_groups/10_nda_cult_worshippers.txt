@@ -1,7 +1,9 @@
 ﻿ig_nda_cult_worshippers = {
 	color = hsv{ 0.30 0.10 0.47 }
 	texture = "gfx/interface/icons/ig_icons/nda_cult.dds"
-	
+	layer = "revolution_dynamic_armed_forces" # need custom but sound complicated
+	index = 8
+
 	ideologies = {
 		ideology_nda_cabalistic
 		ideology_reactionary
@@ -172,6 +174,22 @@
 		value = 1.0
 	}	
 	
+	agitator_weight = {
+		# Agitators more likely to come from populist IG's rather than elitist
+		value = 1.0
+		# Agitators will never be part of a marginalized IG - but these ones will!!!
+		# if = {
+		# 	limit = {
+		# 		owner.ig:ig_nda_cult_worshippers = {
+		# 			is_marginal = yes
+		# 		}
+		# 	}
+		# 	multiply = {
+		# 		value = 0
+		# 	}
+		# }
+	}
+
 	commander_weight = {
 		value = 1.0
 	}	
@@ -223,7 +241,47 @@
 			}
 		}
 	}
-	
+
+	female_agitator_chance = {
+		value = 0.35
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_own_property
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_in_the_workplace
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+	}
+
 	# The chance that a commander belonging to this IG takes over leadership when it changes
 	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {

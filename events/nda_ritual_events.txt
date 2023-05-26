@@ -264,7 +264,18 @@ nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countri
 			is_player = no
 			is_country_alive = yes
 			NOT = {
-				is_full_cult_country = { COUNTRY="THIS" }				
+				OR = {
+					is_full_cult_country = { COUNTRY="THIS" }						
+					any_scope_state = { 
+						OR = {
+							is_potentially_dagonic = yes
+							is_potentially_yigian = yes								
+						}						
+					}						
+				}									
+			}
+			NOT = { # Hastur does not surrender to a giant cat with squid on its head
+				has_variable = nda_king_in_yellow_rules						
 			}
 			country_has_primary_culture = cu:nda_cul_cultist
 		}

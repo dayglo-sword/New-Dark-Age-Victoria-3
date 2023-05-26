@@ -25,6 +25,12 @@ ideology_nda_cabalistic_desc:0 "Cabalistic Ideology."
 ideology_nda_cultist:0 "Cult Supremacy"
 ideology_nda_cultist_desc:0 "This leader seeks to see the supremacy of their cult secured in totality regardess of others wishes."
 
+# Discrimination Traits
+eldritch_culture_group:0 "Eldritch"
+abomination:0 "Abomination"
+occult:0 "Occult"
+esoteric:0 "Esoteric"
+
 # Modifiers
 nda_dark_skies_modifier:0 "Putrid Skies"
 nda_dark_skies_modifier_desc:0 "The Skies are darkened with billowing clouds."
@@ -50,6 +56,21 @@ nda_reanimated_state_modifier:0 "The Wandering Reanimated"
 nda_reanimated_state_modifier_desc:0 "The War Dead have risen and roam the land."
 nda_tonic_for_troops_modifier:0 "A Tonic for the Troop!"
 nda_tonic_for_troops_modifier_desc:0 "Dr West's Tonic works wonders on the troops!"
+
+nda_star_scorched_earth_state_modifier:0 "Scorched Earth"
+nda_star_scorched_earth_state_modifier_desc:0 "Wastelands caused by the closest approach of the Star."
+nda_star_tsunami_state_modifier:0 "Coastal Devestation"
+nda_star_tsunami_state_modifier_desc:0 "Mass flooding caused by the tidal effects of the Star."
+nda_star_crop_ruination_state_modifier:0 "Parched Earth"
+nda_star_crop_ruination_state_modifier_desc:0 "The terrible heat of the Star has left the land dry."
+nda_star_ruination_country_modifier:0 "Great Disruption"
+nda_star_ruination_country_modifier_desc:0 "The passing of the Star and destruction it caused makes governing difficult."
+
+
+nda_inquisition_rightous_modifier:0 "A Rightous Inquisition"
+nda_inquisition_unjust_modifier:0 "An Unjust Inquisition"
+nda_inquisition_disliked_modifier:0 "A Hated Inquisition"
+nda_inquisition_opposed_modifier:0 "Oppose the Inquisition"
 
 # Custom Triggers
 can_cult_infiltrate:0 "Cultists can infiltrate the country"

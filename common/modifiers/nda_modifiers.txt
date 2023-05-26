@@ -17,7 +17,7 @@ nda_dagonic_state_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	building_whaling_station_throughput_mult = 0.33
 	building_fishing_wharf_throughput_mult = 0.33
-	state_standard_of_living_add = 1
+	state_poor_standard_of_living_add = 2
 }
 
 nda_dagonic_country_modifier = {
@@ -44,6 +44,7 @@ nda_reanimated_state_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	state_mortality_mult = 0.1
 	state_standard_of_living_add = -2
+	state_migration_pull_mult = -0.2
 }
 nda_ig_secret_masters_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
@@ -77,5 +78,64 @@ nda_dagonic_state_ruin_modifier = {
 	building_fishing_wharf_throughput_mult = -0.50
 	state_standard_of_living_add = -2
 	state_mortality_mult = 0.10
+	state_migration_pull_mult = -0.2
+	state_construction_mult = -0.2
 }
 
+nda_star_scorched_earth_state_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_group_bg_agriculture_throughput_mult = -0.8
+	building_group_bg_ranching_throughput_mult = -0.8
+	building_group_bg_plantations_throughput_mult = -0.8
+	state_mortality_mult = 0.60
+	state_standard_of_living_add = -6
+	state_migration_pull_mult = -0.6
+	state_construction_mult = -0.6
+}
+
+nda_star_tsunami_state_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_whaling_station_throughput_mult = -0.50
+	building_fishing_wharf_throughput_mult = -0.50
+	state_standard_of_living_add = -2
+	state_mortality_mult = 0.20
+	state_migration_pull_mult = -0.2
+	state_construction_mult = -0.2
+}
+
+nda_star_crop_ruination_state_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_group_bg_agriculture_throughput_mult = -0.6
+	building_group_bg_ranching_throughput_mult = -0.6
+	building_group_bg_plantations_throughput_mult = -0.6
+	state_mortality_mult = 0.20
+	state_standard_of_living_add = -2
+}
+
+nda_star_ruination_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_authority_mult = -0.2
+	country_bureaucracy_mult = -0.2
+}
+
+nda_inquisition_rightous_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 3
+	interest_group_pol_str_mult = 0.1
+}
+
+nda_inquisition_unjust_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_pol_str_mult = -0.2
+}
+
+nda_inquisition_disliked_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_pol_str_mult = -0.1
+}
+
+nda_inquisition_opposed_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = -2
+	interest_group_pol_str_mult = 0.1
+}

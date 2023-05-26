@@ -21,6 +21,7 @@ nda_monthly_on_action = {
 		nda_base.15 # Local Cult Ideology Clean
 		nda_base.20 # Request from the Devout
 
+		nda_astro.10 # Party invite
 		nda_astro.1842 
 		nda_astro.1858
 		nda_astro.1861 
@@ -44,10 +45,14 @@ nda_monthly_on_action = {
 		nda_dagonic.3 # Dagonic Shores Proclaimed
 
 
-		nda_nen.10
-		nda_nen.11 
+		nda_nen.10 # Founding of Miskatonic Uni
+		nda_nen.11 # Plague in Arkham
+		nda_nen.13 # Dr West - Breakthrough
+		nda_nen.14 # Dr West - End
+		nda_nen.15 # Dr West - Denouncement
 		nda_nen.20 # Cult in Innsmouth
 		nda_nen.21 # Plague in Innsmouth
+		nda_nen.1844 # Church of Starry Wisdom
 		nda_nen.1882 # Colour - Strange Meteor
 		nda_nen.1883 # Colour - Strange Fruit
 		nda_nen.1913 # Maine Meteor - The Green Meadow
@@ -145,6 +150,20 @@ on_character_creation = {
 	}
 }
 
+# check that characters such as those in exile have appropriate ideology - does it work on agitators and generals?? renders conversion events obsolete?
+on_half_yearly_pulse_character = {
+	effect = {
+		if = {
+			limit = {
+				has_any_cultist_trait = yes
+				has_non_cultist_ideology = yes			
+			}
+			# give cultist ideology
+			nda_effect_ensure_cult_ideology = yes	
+		}
+	}
+}
+
 # Root = Country
 # scope:target = Uprising country
 on_revolution_start = { # need to copy over appropriate variables so at not to trigger journals
@@ -164,10 +183,9 @@ nda_on_revolution_start_on_action = {
 				# if it has a primary culture of cultist then treat as potential continuation (not nationlist rebellion)
 				if = {
 					limit = { has_cult_culture = yes }
-				}
-				set_variable = nda_cultists_in_open # need to check if				
+					set_variable = nda_cultists_in_open # need to check if						
+				}		
 			}
-
 		}
 	}
 }

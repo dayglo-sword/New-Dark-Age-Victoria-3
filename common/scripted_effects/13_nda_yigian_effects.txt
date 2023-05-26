@@ -30,7 +30,7 @@ nda_effect_yigian_setup = {
 
 		# remove anti-slavery from intel and trade unions 
 		every_interest_group = {
-			limit = { has_ideology = ideology_anti_slavery }
+			limit = { has_ideology = ideology:ideology_anti_slavery }
 			remove_ideology = ideology_anti_slavery
 		}
 

@@ -66,32 +66,6 @@
 			}	
 		}
 
-		# select which one to exile!
-		ordered_scope_character = {
-			limit = { 
-				has_eldritch_trait = yes			
-			}
-			order_by = { 
-				add = 1
-				if = {
-					limit = { is_ruler = yes }
-					add = 2
-				}
-				if = {
-					limit = { has_trait = nda_master }
-					add = 3
-				}
-				if = {
-					limit = { has_trait = nda_acolyte }
-					add = 1
-				}
-			}
-			max = 1
-			save_scope_as = nda_purge_exile_char
-
-			set_variable = nda_purge_exile				
-		}
-
  		custom_tooltip = nda_nen_purge_cult_tooltip       
 		# remove cultist from IG leadership
 		every_interest_group = {
@@ -117,6 +91,33 @@
 			}	
 		}
 
+		# select which one to exile!
+		ordered_scope_character = {
+			limit = { 
+				#has_eldritch_trait = yes	
+				has_variable = 	nda_purge_victim	
+			}
+			order_by = { 
+				add = 1
+				if = {
+					limit = { is_ruler = yes }
+					add = 1
+				}
+				if = {
+					limit = { has_trait = nda_master }
+					add = 3
+				}
+				if = {
+					limit = { has_trait = nda_acolyte }
+					add = 1
+				}
+			}
+			max = 1
+			save_scope_as = nda_purge_exile_char
+
+			set_variable = nda_purge_exile				
+		}
+
 		every_scope_character = { # and ruler as well!
 			limit = { 
 				OR = {
@@ -130,8 +131,15 @@
 			# should exile? - best candidate already selected above
 			IF = {
 				limit = { has_variable = nda_purge_exile }
+				IF = {
+					limit = {
+						NOT = { has_role = agitator }
+					}
+					add_character_role = agitator # make an agitator before kicking out
+				}
 				# exile
-				kill_character = yes				
+				exile_character_with_martyrdom = yes
+				#kill_character = yes				
 			}
 			ELSE = {
 				kill_character = yes				

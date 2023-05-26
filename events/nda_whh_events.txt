@@ -196,7 +196,7 @@ nda_whh.13 = { # 'Electric Pentagram' - should this really be a decision?
 		# warm up for other Carnacki events
 		#set_variable = nda_carnacki_pentangle # reinstate when needed
 		#treasury = -10000 
-		trigger_event = { id = nda_whh.13 days = 300 }	# research complete			
+		trigger_event = { id = nda_whh.14 days = 300 }	# research complete			
 	}
 
 	option = { #"Reject"

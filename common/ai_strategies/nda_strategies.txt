@@ -68,14 +68,6 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	
 	type = diplomatic
 	
-	wanted_army_ratio = {
-		value = 150000
-	}
-	
-	wanted_navy_ratio = {
-		value = 400000
-	}
-	
 	undesirable_infamy_level = {
 		value = 50
 	}
@@ -347,7 +339,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		}	
 		if = {
 			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
-			multiply = 0.5
+			multiply = 0.25
 		}		
 	}
 }

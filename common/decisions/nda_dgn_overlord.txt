@@ -21,7 +21,7 @@
 		is_player = no
 		country_rank < c:DGN.country_rank
 		any_interest_group = {	
-			has_ideology = ideology_nda_cabalistic
+			has_ideology = ideology:ideology_nda_cabalistic
 			is_in_government = yes	
 			is_powerful = yes		# should use clout 50%+	instead? how to?
 		}	

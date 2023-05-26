@@ -661,107 +661,107 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 	}
 }
 
-# Redundant - now uses on_action
-nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variable against wars
-	type = country_event
-	placement = ROOT
-	title = nda_base.11.t
-	desc = nda_base.11.d
-	flavor =  nda_base.11.f
+# # Redundant - now uses on_action
+# nda_base.11 = { # Boost War Score Values - can't limit buff as can't set variable against wars
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_base.11.t
+# 	desc = nda_base.11.d
+# 	flavor =  nda_base.11.f
 
-	duration = 3
+# 	duration = 3
 
-	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+# 	event_image = {
+# 		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
 		
-	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+# 	}
+# 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
-	trigger = {
-		NOT = { has_global_variable = nda_ritual_cthulhu_leaves } # he's gone so no further bonuses
-		is_full_cult_country = { COUNTRY="THIS" }
+# 	trigger = {
+# 		NOT = { has_global_variable = nda_ritual_cthulhu_leaves } # he's gone so no further bonuses
+# 		is_full_cult_country = { COUNTRY="THIS" }
 	
-		is_at_war = yes
-		is_player = no # only buff for AI because AI needs all the help it can get
-		#any_scope_war = { # war does not support variables
-		#	NOT = { has_variable = nda_eld_war_buff }
-		#}
-	}
+# 		is_at_war = yes
+# 		is_player = no # only buff for AI because AI needs all the help it can get
+# 		#any_scope_war = { # war does not support variables
+# 		#	NOT = { has_variable = nda_eld_war_buff }
+# 		#}
+# 	}
 
-	immediate = {
-		debug_log = "Cult : add buff"
+# 	immediate = {
+# 		debug_log = "Cult : add buff"
 
-		random_scope_war = {
-			#limit = {
-			#	NOT = { has_variable = nda_eld_war_buff } # This scope doesn't support variables. Scope: War
-			#}
-			save_scope_as = eldritch_war
-		}
-	}	
+# 		random_scope_war = {
+# 			#limit = {
+# 			#	NOT = { has_variable = nda_eld_war_buff } # This scope doesn't support variables. Scope: War
+# 			#}
+# 			save_scope_as = eldritch_war
+# 		}
+# 	}	
 	
-	option = { #Try Harder
-		name = nda_base.11.a
-		default_option = yes
+# 	option = { #Try Harder
+# 		name = nda_base.11.a
+# 		default_option = yes
 
-		trigger = {
-			NOT = { 
-				AND = {
-					exists = c:ELD
-					has_war_with = c:ELD # no bonus for hitting boss guy
-				}
-			} 
-		}
+# 		trigger = {
+# 			NOT = { 
+# 				AND = {
+# 					exists = c:ELD
+# 					has_war_with = c:ELD # no bonus for hitting boss guy
+# 				}
+# 			} 
+# 		}
 
-		# buff the war score
-		scope:eldritch_war = {
-			IF = {
-				limit = { 
-					has_war_support = { target = ROOT value < 40 } 
-					has_war_exhaustion = { target = ROOT value < 100 } # need some sort of throttle to stop death war
-				}
-				add_war_exhaustion = { target = ROOT value = -0.2 }
-				add_war_war_support = { target = ROOT value = 1 }
+# 		# buff the war score
+# 		scope:eldritch_war = {
+# 			IF = {
+# 				limit = { 
+# 					has_war_support = { target = ROOT value < 40 } 
+# 					has_war_exhaustion = { target = ROOT value < 100 } # need some sort of throttle to stop death war
+# 				}
+# 				add_war_exhaustion = { target = ROOT value = -0.2 }
+# 				add_war_war_support = { target = ROOT value = 1 }
 
-				debug_log = "add buff"				
-			}
-			# boost if Cthulhu in town
-			IF = {
-				limit = { has_global_variable = nda_cthulhu_arrives }
-				add_war_war_support = { target = ROOT value = 1 }
+# 				debug_log = "add buff"				
+# 			}
+# 			# boost if Cthulhu in town
+# 			IF = {
+# 				limit = { has_global_variable = nda_cthulhu_arrives }
+# 				add_war_war_support = { target = ROOT value = 1 }
 
-				debug_log = "add Cthulhu buff"				
-			}
-		}
+# 				debug_log = "add Cthulhu buff"				
+# 			}
+# 		}
 
-	}
+# 	}
 
-	option = { #Not Good Idea
-		name = nda_base.11.b
+# 	option = { #Not Good Idea
+# 		name = nda_base.11.b
 		
-		trigger = {
-			exists = c:ELD
-			has_war_with = c:ELD # no bonus for hitting boss guy
-		}
+# 		trigger = {
+# 			exists = c:ELD
+# 			has_war_with = c:ELD # no bonus for hitting boss guy
+# 		}
 
-		# nerf the war score to back out of war
-		scope:eldritch_war = {
-			add_war_exhaustion = { target = ROOT value = 0.5 }
-			add_war_war_support = { target = ROOT value = -1 }
+# 		# nerf the war score to back out of war
+# 		scope:eldritch_war = {
+# 			add_war_exhaustion = { target = ROOT value = 0.5 }
+# 			add_war_war_support = { target = ROOT value = -1 }
 
-			debug_log = "negative buff"
-		}
+# 			debug_log = "negative buff"
+# 		}
 
-	}
+# 	}
 
-	option = { #Don't over do it
-		name = nda_base.11.c	
-	}
-}
+# 	option = { #Don't over do it
+# 		name = nda_base.11.c	
+# 	}
+# }
 
 nda_base.12 = { # Secret Cultists in Country - fired from event nda_base.6 called by journals: je_nda_cult_spreads
 	type = country_event
@@ -1050,7 +1050,18 @@ nda_base.20 = { # Request from the devout
 			base = 80		
 		}
 
-		add_journal_entry = { type = je_nda_devout_inquisition }		
+		add_journal_entry = { type = je_nda_devout_inquisition }
+		
+		ig:ig_devout = {
+			add_modifier = {
+				name = nda_inquisition_rightous_modifier # lasts till inqu ends or is rejected
+			}			
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = nda_inquisition_opposed_modifier # lasts till inqu ends or is rejected
+			}
+		}
 	}
 
 	option = { #"Silly"
@@ -1059,6 +1070,13 @@ nda_base.20 = { # Request from the devout
 
 		ai_chance = { # will +ve effect conversion rate
 			base = 20		
+		}
+
+		ig:ig_devout = {
+			add_modifier = {
+				name = rejected_mission
+				months = 36
+			}			
 		}
 	}
 }
@@ -1212,11 +1230,84 @@ nda_base.24 = { # The Inquisition ends
 			leader = { 
 				save_scope_as = devout_ig_leader
 			}
+			if = { limit = { has_modifier = nda_inquisition_rightous_modifier }
+				remove_modifier = nda_inquisition_rightous_modifier
+			}
+		}
+
+		every_interest_group = {
+			limit = { 					
+				has_modifier = nda_inquisition_opposed_modifier
+			}
+			remove_modifier = nda_inquisition_opposed_modifier
 		}
 	}	
 	
 	option = { #"Oh dear."
 		name = nda_base.24.a
+	}
+}
+
+
+nda_base.25 = { # An Innocent condemned 
+	type = country_event
+	placement = ROOT
+	title = nda_base.22.t #same descriptions as gulity!
+	desc = nda_base.22.d
+	flavor = nda_base.22.f
+
+	duration = 3
+
+	# should be character block
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds" #icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:targeted_ig_leader
+
+	trigger = {
+		# from nda_base.21 only
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = { 				
+				leader = { 
+					has_any_cultist_trait = no
+				} 	
+				NOT = { is_interest_group_type = ig_devout } # Don't include devout	
+			}
+			leader = { 				
+				save_scope_as = targeted_ig_leader
+			}
+			save_scope_as = targeted_ig
+		}	
+
+		# possibility of negative trait due to torture
+		random_list = {	
+			25 = { } 
+			25 = { scope:targeted_ig_leader = { add_trait = alcoholic } }
+			25 = { scope:targeted_ig_leader = { add_trait = psychological_affliction } }
+			25 = { scope:targeted_ig_leader = { add_trait = opium_addiction } }
+		}		
+	
+		debug_log = "Innocent persecuted" 
+		set_variable = "nda_innocent_condemmed"
+	}	
+	
+	option = { #"Saw Sense"
+		name = nda_base.22.a
+		default_option = yes
+	}
+
+	option = { #"No forgivness"
+		name = nda_base.22.b
+		scope:targeted_ig_leader = {
+				kill_character = yes
+		}
 	}
 }
 
@@ -1282,72 +1373,55 @@ nda_base.26 = { # The Pit and the Pendulum!
 		hidden_effect = { set_variable = nda_inqusition_closed }
 
 		# bad debuff for devout, inqusition ends
+		ig:ig_devout = {
+			if = { limit = {has_modifier = nda_inquisition_rightous_modifier }
+				remove_modifier = nda_inquisition_rightous_modifier
+			}
+			add_modifier = {
+				name = nda_inquisition_unjust_modifier
+			}			
+		}
+
+		# exile devout leader - set traits as cultists - a bad apple all along
+		scope:devout_ig_leader = {
+			add_trait = nda_master
+			exile_character = yes
+		}
+
+		ig:ig_intelligentsia = {
+			if = { limit = {has_modifier = nda_inquisition_opposed_modifier }
+				remove_modifier = nda_inquisition_opposed_modifier
+			}
+			#add_modifier = {
+			#	name = nda_inquisition_unjust_modifier
+			#}			
+		}
 	}
 
 	option = { #"Mistakes happen"
 		name = nda_base.26.b
-		# bad debuff for devout and government
-	}
-}
+		# debuff for devout and government
+		ig:ig_devout = {
+			if = { limit = {has_modifier = nda_inquisition_rightous_modifier }
+				remove_modifier = nda_inquisition_rightous_modifier
+			}			
+		}
 
-nda_base.25 = { # An Innocent condemned 
-	type = country_event
-	placement = ROOT
-	title = nda_base.22.t #same descriptions as gulity!
-	desc = nda_base.22.d
-	flavor = nda_base.22.f
-
-	duration = 3
-
-	# should be character block
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
-
-	icon = "gfx/interface/icons/event_icons/event_scales.dds" #icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
-
-	gui_window = event_window_1char_tabloid
-
-	left_icon = scope:targeted_ig_leader
-
-	trigger = {
-		# from nda_base.21 only
-	}
-
-	immediate = {
-		random_interest_group = {
-			limit = { 				
-				leader = { 
-					has_any_cultist_trait = no
-				} 	
-				NOT = { is_interest_group_type = ig_devout } # Don't include devout	
+		# any opposition gets opposed modifier
+		every_interest_group = {
+			limit = { 					
+				NOT = { 
+					is_interest_group_type = ig_devout  # Don't include devout	
+					is_in_government = no
+				}
 			}
-			leader = { 				
-				save_scope_as = targeted_ig_leader
+			if = { limit = { not = { has_modifier = nda_inquisition_opposed_modifier } }
+	
+				add_modifier = {
+					name = nda_inquisition_opposed_modifier
+				}
 			}
-			save_scope_as = targeted_ig
-		}	
-
-		# possibility of negative trait due to torture
-		random_list = {	
-			25 = { } 
-			25 = { scope:targeted_ig_leader = { add_trait = alcoholic } }
-			25 = { scope:targeted_ig_leader = { add_trait = psychological_affliction } }
-			25 = { scope:targeted_ig_leader = { add_trait = opium_addiction } }
-		}		
 	
-		debug_log = "Innocent persecuted" 
-		set_variable = "nda_innocent_condemmed"
-	}	
-	
-	option = { #"Saw Sense"
-		name = nda_base.22.a
-		default_option = yes
-	}
-
-	option = { #"No forgivness"
-		name = nda_base.22.b
-		scope:targeted_ig_leader = {
-				kill_character = yes
 		}
 	}
 }

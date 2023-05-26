@@ -29,7 +29,7 @@
 		
 		# remove anti-slavery from intel and trade unions 
 		every_interest_group = {
-			limit = { has_ideology = ideology_anti_slavery }
+			limit = { has_ideology = ideology:ideology_anti_slavery }
 			remove_ideology = ideology_anti_slavery
 		}
 
@@ -134,7 +134,7 @@ nda_effect_eldritch_annex = {
 						}
 					}
 					# Make cultists happy for annex
-					scope:target_scope = {
+					scope:nda_eldritch_annex = {
 						add_radicals = {
 							value = -1
 							culture = THIS
@@ -203,19 +203,6 @@ nda_effect_eldritch_anger
 
 		debug_log = "Angry Cult Follower Country" 
 	}
-
-	#ordered_country = {
-	#	limit = { # leading cult follower counties
-	#		has_variable = nda_cultists_in_open
-	#		NOT = { is_full_cult_country = { COUNTRY="THIS" } }
-	#	}
-	#	order_by = ??
-	#	min = 1
-	#	max = 5
-	#	check_range_bounds = no
-	#
-	#	change_relations = { country = ROOT value = -50 }
-	#}
 }
 
 nda_effect_boost_unification

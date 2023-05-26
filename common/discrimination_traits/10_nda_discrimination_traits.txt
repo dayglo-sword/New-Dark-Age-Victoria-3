@@ -1,0 +1,14 @@
+﻿eldritch_culture_group={
+}
+# religion
+occult = {
+	heritage = yes
+}
+# culture
+abomination = {
+	heritage = yes
+}
+#
+esoteric = {
+	heritage = yes
+}

@@ -1,0 +1,57 @@
+﻿nda_effect_star_devastation = { # called only from hgw.12 - Effects of the Stars near miss - This is actually worse than the Cthulhu returns effects
+	# get non-coastal state to act as epicentre
+	random_state = {
+		limit ={ is_coastal = no }
+		save_scope_as = nda_star_epicentre
+		add_modifier = {
+			name = nda_star_scorched_earth_state_modifier
+			months = 120
+			is_decaying = yes
+		}
+		# Fatalities from close passage
+		kill_population_percent_in_state = { percent = 5 }
+	}
+
+	scope:nda_star_epicentre = {
+		every_neighbouring_state = {
+			add_modifier = {
+				name = nda_star_scorched_earth_state_modifier
+				months = 60
+				is_decaying = yes
+			}	
+			# Fatalities from close passage
+			kill_population_percent_in_state = { percent = 2 }  		
+		}		
+	}
+
+	# devastate all coastal regions
+	every_state = {
+		limit ={ is_coastal = yes }
+		add_modifier = {
+			name = nda_star_tsunami_state_modifier
+			months = 12
+			is_decaying = yes
+		}
+		# Tsunami fatalities
+		kill_population_percent_in_state = { percent = 1 } 
+	}
+
+	# scorch all states not already hit
+	every_state = {
+		limit ={ is_coastal = no }
+		add_modifier = {
+			name = nda_star_crop_ruination_state_modifier
+			months = 12
+			is_decaying = yes
+		}	
+	}
+
+	# destablise countries.
+	every_country = {
+		add_modifier = {
+			name = nda_star_ruination_country_modifier
+			months = 12
+			is_decaying = yes
+		}	
+	}	
+}

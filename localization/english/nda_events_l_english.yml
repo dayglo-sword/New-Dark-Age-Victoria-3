@@ -43,12 +43,12 @@
  nda_base.10.f:0 "But why stop here when we can include the rest of the world in our ambitions!"
  nda_base.10.a:0 "Hurrah!"
 
- nda_base.11.t:0 "War Without End"
- nda_base.11.d:0 "We must push our troops more. War is serious business and we will make our followers support it!"
- nda_base.11.f:0 "But will it be worth the risk of ruining us as the war drags out?"
- nda_base.11.a:0 "Try Harder!"
- nda_base.11.b:0 "Not a good idea." 
- nda_base.11.c:0 "Do not over do it!"   
+#  nda_base.11.t:0 "War Without End"
+#  nda_base.11.d:0 "We must push our troops more. War is serious business and we will make our followers support it!"
+#  nda_base.11.f:0 "But will it be worth the risk of ruining us as the war drags out?"
+#  nda_base.11.a:0 "Try Harder!"
+#  nda_base.11.b:0 "Not a good idea." 
+#  nda_base.11.c:0 "Do not over do it!"   
  
  nda_base.12.t:0 "The Cult Spreads Further"
  nda_base.12.d:0 "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has secretly pledged their alligance to the growing cult.\n\nIt is even spreading amongst the bureaucrats and other servants of the government."

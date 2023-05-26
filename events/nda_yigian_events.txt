@@ -137,7 +137,7 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 			}
 			# Change IG name - IG Should already exist
 			every_interest_group = {
-				limit = { has_ideology = ideology_nda_cabalistic }
+				limit = { has_ideology = ideology:ideology_nda_cabalistic }
 
 				set_interest_group_name = ig_nda_yigian_cult				
 			}

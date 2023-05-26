@@ -208,9 +208,26 @@ nda_astro.2 = { # 1861 conjunction
 			limit = { is_player = yes }
 			#do counts - sets variables
 			nda_effect_conclave_counts = yes
+			if = {
+				limit = { has_variable = nda_conclave_attend }
+				# attended so get all effects
+				nda_effect_rite_conversion = yes
+				#nda_effect_boost_unification = yes	# not this early
+				trigger_event = { id = nda_astro.11 days = 3 }	# accepted event					
+			}
+			else_if = {
+				limit = { has_variable = nda_conclave_refuse }
+				# bad stuff for refusing
+				trigger_event = { id = nda_astro.12 days = 3 }	# refusal event	
+			}
 		}
-
-		nda_effect_rite_conversion = yes
+		else = { # by default for AI cult countries
+			if = {
+				limit = { exists = ROOT }
+				nda_effect_rite_conversion = yes
+				#nda_effect_boost_unification = yes	# not this early					
+			}			
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -325,11 +342,26 @@ nda_astro.3 = { # 1881 conjunction
 			limit = { is_player = yes }
 			#do counts - sets variables
 			nda_effect_conclave_counts = yes
+			if = {
+				limit = { has_variable = nda_conclave_attend }
+				# attended so get all effects
+				nda_effect_rite_conversion = yes
+				nda_effect_boost_unification = yes	
+				trigger_event = { id = nda_astro.11 days = 3 }	# accepted event					
+			}
+			else_if = {
+				limit = { has_variable = nda_conclave_refuse }
+				# bad stuff for refusing
+				trigger_event = { id = nda_astro.12 days = 3 }	# refusal event	
+			}
 		}
-
-		nda_effect_rite_conversion = yes
-
-		nda_effect_boost_unification = yes # need event for selected candidate to inform them (if player) ??
+		else = { # by default for AI cult countries
+			if = {
+				limit = { exists = ROOT }
+				nda_effect_rite_conversion = yes
+				nda_effect_boost_unification = yes						
+			}			
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -447,14 +479,25 @@ nda_astro.4 = { # 1901 conjunction
 			limit = { is_player = yes }
 			#do counts - sets variables
 			nda_effect_conclave_counts = yes
+			if = {
+				limit = { has_variable = nda_conclave_attend }
+				# attended so get all effects
+				nda_effect_rite_conversion = yes
+				nda_effect_boost_unification = yes	
+				trigger_event = { id = nda_astro.11 days = 3 }	# accepted event					
+			}
+			else_if = {
+				limit = { has_variable = nda_conclave_refuse }
+				# bad stuff for refusing
+				trigger_event = { id = nda_astro.12 days = 3 }	# refusal event	
+			}
 		}
-
-		if = {
-			limit = { exists = ROOT }
-			#debug_log = "Conjunction 4"
-			nda_effect_rite_conversion = yes
-
-			nda_effect_boost_unification = yes						
+		else = { # by default for AI cult countries
+			if = {
+				limit = { exists = ROOT }
+				nda_effect_rite_conversion = yes
+				nda_effect_boost_unification = yes						
+			}			
 		}
 	}	
 			
@@ -573,16 +616,31 @@ nda_astro.5 = { # 1921 conjunction
 		set_variable = nda_conjunction_5
 		debug_log = "Conjunction 5"
 
-
 		save_scope_as = nda_conclave
 		if = { # if player do counts for flavour text
 			limit = { is_player = yes }
 			#do counts - sets variables
 			nda_effect_conclave_counts = yes
+			if = {
+				limit = { has_variable = nda_conclave_attend }
+				# attended so get all effects
+				nda_effect_rite_conversion = yes
+				nda_effect_boost_unification = yes	
+				trigger_event = { id = nda_astro.11 days = 3 }	# accepted event					
+			}
+			else_if = {
+				limit = { has_variable = nda_conclave_refuse }
+				# bad stuff for refusing
+				trigger_event = { id = nda_astro.12 days = 3 }	# refusal event	
+			}
 		}
-
-		nda_effect_rite_conversion = yes
-		nda_effect_boost_unification = yes
+		else = { # by default for AI cult countries
+			if = {
+				limit = { exists = ROOT }
+				nda_effect_rite_conversion = yes
+				nda_effect_boost_unification = yes						
+			}			
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -679,57 +737,13 @@ nda_astro.1910 = { #  Great January Comet of 1910
 	}	
 }
 
-nda_astro.99 = { # Test
+# invites to conclave for cultist players!
+nda_astro.10 = { 
 	type = country_event
-	
 	placement = ROOT
-	title = nda_astro.99.t
-	desc = nda_astro.99.d
-
-	flavor = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					has_global_variable = nda_ritual_completed
-				}
-				desc = nda_conclave_ritual_complete.f
-			}
-			triggered_desc = {
-				trigger = {
-					NOT = { has_global_variable = je_nda_ritual_proceeds_tracker }
-				}
-				desc = nda_conclave_no_ritual.f
-			}
-			triggered_desc = {
-				trigger = {
-					has_global_variable = nda_ritual_cthulhu_visits
-				}
-				desc = nda_conclave_ritual_fail.f
-			}
-			triggered_desc = {
-				trigger = {
-					has_global_variable = je_nda_ritual_proceeds_tracker
-					global_var:je_nda_ritual_proceeds_tracker > 4000
-				}
-				desc = nda_conclave_ritual_high.f
-			}
-			triggered_desc = {
-				trigger = {
-					has_global_variable = je_nda_ritual_proceeds_tracker
-					global_var:je_nda_ritual_proceeds_tracker > 2000
-				}
-				desc = nda_conclave_ritual_medium.f
-			}
-			triggered_desc = {
-				trigger = {
-					has_global_variable = je_nda_ritual_proceeds_tracker
-				}				
-				desc = nda_conclave_ritual_low.f
-			}
-		}
-	}
-
-	#flavor =  nda_astro.99.f	
+	title = nda_astro.10.t
+	desc = nda_astro.10.d
+	flavor = nda_astro.10.f
 
 	duration = 3
 
@@ -740,47 +754,122 @@ nda_astro.99 = { # Test
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
 	
+	trigger = { 	
+		is_player = yes # is player choice only
+		has_variable = nda_cultists_in_open # Cult in country
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	} # They've gone so no Cult rational	
+
+		# 6 months before Conclaves
+		or = {
+			and = {
+				game_date >= 1861.4.25		
+				game_date < 1862 # stop late forming countries getting event			
+			}
+			and = {
+				game_date >= 1880.10.22		
+				game_date < 1882 # stop late forming countries getting event		
+			}
+			and = {
+				game_date >= 1901.5.28		
+				game_date < 1902 # stop late forming countries getting event
+			}
+			and = {
+				game_date >= 1921.3.14	
+				game_date < 1922 # stop late forming countries getting event	
+			}			
+		}	
+	}
+
+	cooldown = { months = 18 }
 
 	immediate = {
-		debug_log = "Test Counts for conclave"
+		debug_log = "Conclave Invite"
+
 		save_scope_as = nda_conclave
-		set_variable = { name = nda_conclave_count value = 0 }
-		set_variable = { name = nda_conclave_assist_count value = 0 }
-		
-		every_country = {
-			limit = {
-					has_variable = nda_cultists_in_open			
-			}
-			scope:nda_conclave = {
-				change_variable = {
-					name = nda_conclave_count
-					add = 1
-				}					
-			}
-
-			if = {
-				limit = { 
-					OR = { 
-						has_journal_entry = je_nda_ritual_proceeds
-						has_journal_entry = je_nda_ritual_assist
-					}
-				}
-				scope:nda_conclave = {
-					change_variable = {
-						name = nda_conclave_assist_count
-						add = 1
-					}									
-				}
-
-			}	
-		}	
-
 	}	
+			
+	option = { #"We Accept"
+		name = nda_astro.10.a
+		default_option = yes
+		set_variable = nda_conclave_attend
+	}
+
+	option = { #"We are too busy" 
+		name = nda_astro.10.b
+		set_variable = nda_conclave_refuse
+	}
 }
 
+# Attending the conclave for cultist players!
+nda_astro.11 = { 
+	type = country_event
+	placement = ROOT
+	title = nda_astro.11.t
+	desc = nda_astro.11.d
+	flavor = nda_astro.11.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+	
+	trigger = { 	
+	}
+
+	immediate = {
+		debug_log = "Conclave Attend"
+		remove_variable = nda_conclave_attend
+		save_scope_as = nda_conclave
+	}	
+			
+	option = { #"We Accept"
+		name = nda_astro.11.a
+		default_option = yes
+	}
+}
+
+# Consequence of not attanding conclave players!
+nda_astro.12 = { 
+	type = country_event
+	placement = ROOT
+	title = nda_astro.12.t
+	desc = nda_astro.12.d
+	flavor = nda_astro.12.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	
+	trigger = { 	
+	}
+
+	immediate = {
+		debug_log = "Conclave Refused"
+		remove_variable = nda_conclave_refuse
+		nda_effect_eldritch_anger = yes
+	}	
+			
+	option = { #"We Accept"
+		name = nda_astro.11.a
+		default_option = yes
+	}
+}
 # 1940 had a triple conjuction!!!
 # 6 August 1940	45.2	71.4	−89.8	3	Yes	Yes
 # 21 October 1940	41.1	74.1	−165.7	3	Yes
-# 14 February 1941	39.9	77.4	+73.3	3	Ye
+# 14 February 1941	39.9	77.4	+73.3	3	Yes

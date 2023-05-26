@@ -20,8 +20,8 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
 	trigger = {
- 		# 1839 and owner of Averoigne 
-		game_date >= 1842 
+ 		# 1842 and owner of Averoigne 
+		game_date >= 1842.3 
 		game_date < 1843
 		p:xA27EFD = { state = { owner = ROOT } }
 
@@ -36,13 +36,13 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 				first_name = "Hildred"
 				last_name = "Azedarac"
 				female = no
-				birth_date = 1807.7.4 # creating character here does not set proper birth date
+				birth_date = 1807.7.4 # creating character here does not set proper birth date?
 				interest_group = ig_devout
 				dna = ecchi_dna_charles_dickens
 				ideology = ideology_traditionalist
 				religion = rel:catholic # should be state religion?
 				traits = {
-					romantic
+					romantic # not really !!
 					inspirational_orator 				
 				}
 				on_created = {
@@ -82,15 +82,16 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 			interest_group = ig_devout
 			ig_leader = yes
 			dna = ecchi_dna_charles_dickens
-			ideology = ideology_traditionalist
+			ideology = ideology_nda_cultist
 			religion = rel:catholic
-			traits = {
-				romantic
+			traits = {	
+				charismatic			
 				inspirational_orator
 				nda_master # just for now 				
 			}
 			on_created = {
-				set_variable = is_azedarac				
+				set_variable = is_azedarac	
+				set_as_interest_group_leader = yes			
 			}
 		}
 
@@ -99,7 +100,7 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 		}
 	}
 
-	option = { #"Must gp to the Holy See" - send/exile to Vatican
+	option = { #"Must go to the Holy See" - send/exile to Vatican
 		name = nda_cas.10.b
 		hidden_effect = {
 			scope:azedarac = { 
@@ -119,15 +120,17 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 						interest_group = ig_devout
 						ig_leader = yes
 						dna = ecchi_dna_charles_dickens
-						ideology = ideology_traditionalist
+						ideology = ideology_nda_cultist
 						religion = rel:catholic
 						traits = {
-							romantic
+							charismatic
 							inspirational_orator
 							nda_master # just for now 				
 						}
+						is_agitator = yes
 						on_created = {
-							set_variable = is_azedarac				
+							set_variable = is_azedarac	
+							#add_character_role = agitator			
 						}
 					}
 				}
@@ -137,16 +140,33 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 		ai_chance = { 
 			base = 10		
 		}
-
-		#scope:azedarac = { 
-		#	transfer_character = c:ITA # #B040A0 c:PAP # should be owner of vatican?
-		#}
 	}
 	option = { #"Should continue their work in Averoigne" - set as cult agitator?
 		name = nda_cas.10.c
 
 		ai_chance = { 
 			base = 10		
+		}
+
+		create_character = {
+			first_name = "Hildred"
+			last_name = "Azedarac"
+			female = no
+			birth_date = 1807.7.4
+			interest_group = ig_devout
+			ig_leader = yes
+			dna = ecchi_dna_charles_dickens
+			ideology = ideology_nda_cultist
+			religion = rel:catholic
+			traits = {
+				charismatic
+				inspirational_orator
+				nda_master # just for now 				
+			}
+			on_created = {
+				set_variable = is_azedarac
+				add_character_role = agitator				
+			}
 		}
 	}
 }

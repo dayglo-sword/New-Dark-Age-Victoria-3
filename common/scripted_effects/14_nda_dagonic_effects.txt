@@ -48,7 +48,7 @@
 
 		# remove anti-slavery from intel and trade unions 
 		every_interest_group = {
-			limit = { has_ideology = ideology_anti_slavery }
+			limit = { has_ideology = ideology:ideology_anti_slavery }
 			remove_ideology = ideology_anti_slavery
 		}
 
@@ -297,7 +297,7 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 		
 		# remove anti-slavery from intel and trade unions 
 		every_interest_group = {
-			limit = { has_ideology = ideology_anti_slavery }
+			limit = { has_ideology = ideology:ideology_anti_slavery }
 			remove_ideology = ideology_anti_slavery
 		}
 

@@ -35,9 +35,9 @@ nda_hgw.10 = { # The Star - Intro
 	immediate = {
 		set_global_variable = nda_the_star_intro
 
-		debug_log = "Rhe Star - Intro"
+		debug_log = "The Star - Intro"
 
-		trigger_event = { id = nda_hgw.11 days = 3 }
+		trigger_event = { id = nda_hgw.11 days = 10 } # slow it down from story schedule
 	}	
 	
 	option = { #"Interesting"
@@ -65,9 +65,9 @@ nda_hgw.11 = { # Getting closer
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	immediate = {
-		debug_log = "Rhe Star - Approach"
+		debug_log = "The Star - Approach"
 
-		trigger_event = { id = nda_hgw.12 days = 5 }
+		trigger_event = { id = nda_hgw.12 days = 10 }
 	}	
 	
 	option = { #"Interesting"
@@ -76,7 +76,7 @@ nda_hgw.11 = { # Getting closer
 	}
 }	
 
-nda_hgw.12 = { #  Closest Approach - Devestation
+nda_hgw.12 = { #  Closest Approach - Devestation (Punishment for Defeating Cthulhu)
 	type = country_event
 	placement = ROOT
 	title = nda_hgw.12.t
@@ -95,9 +95,14 @@ nda_hgw.12 = { #  Closest Approach - Devestation
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	immediate = {
-		debug_log = "Rhe Star - Approach"
+		debug_log = "The Star - Closest Approach"
 
-		trigger_event = { id = nda_hgw.13 days = 7 }
+		if = {
+			limit = { not = { has_global_variable = nda_the_star_devestation }}
+			nda_effect_star_devastation = yes
+		}
+		set_global_variable = nda_the_star_devestation # stop rerun
+		trigger_event = { id = nda_hgw.13 days = 10 }
 	}	
 	
 	option = { #"Interesting"

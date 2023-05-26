@@ -11,6 +11,11 @@ nda_cultist = {
 	command_modifier = {
 	}
 
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.05
+		interest_group_pop_attraction_mult = 0.1
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 		interest_group_pop_attraction_mult = 0.1
@@ -50,6 +55,11 @@ nda_acolyte = {
 
 	}
 	
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.10
+		interest_group_pop_attraction_mult = 0.2
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.10
 		interest_group_pop_attraction_mult = 0.2
@@ -90,6 +100,11 @@ nda_master = {
 		country_authority_add = 50
 	}	
 
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.4
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
@@ -128,6 +143,11 @@ nda_yig_cultist = {
 	command_modifier = {
 	}
 	
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.05
+		interest_group_pop_attraction_mult = 0.1
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 		interest_group_pop_attraction_mult = 0.1
@@ -170,6 +190,11 @@ nda_yig_acolyte = {
 
 	}
 	
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.105
+		interest_group_pop_attraction_mult = 0.2
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.10
 		interest_group_pop_attraction_mult = 0.2
@@ -215,6 +240,11 @@ nda_yig_master = {
 		country_authority_add = 50
 	}
 
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.4
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4
@@ -256,8 +286,16 @@ nda_dagon_cultist = {
 	}
 
 	command_modifier = {
+		unit_offense_mult = 0.05
+		unit_defense_mult = 0.05
+		character_battle_condition_rough_waters_mult = -0.1
 	}
 	
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.05
+		interest_group_pop_attraction_mult = 0.1
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.05
 		interest_group_pop_attraction_mult = 0.1
@@ -296,9 +334,16 @@ nda_dagon_acolyte = {
 	}
 
 	command_modifier = {
-
+		unit_offense_mult = 0.1
+		unit_defense_mult = 0.1
+		character_battle_condition_rough_waters_mult = -0.2
 	}
 	
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.10
+		interest_group_pop_attraction_mult = 0.2
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.10
 		interest_group_pop_attraction_mult = 0.2
@@ -336,7 +381,9 @@ nda_dagon_master = {
 	}
 
 	command_modifier = {
-
+		unit_offense_mult = 0.3
+		unit_defense_mult = 0.3
+		character_battle_condition_rough_waters_mult = -0.3
 	}
 
 	country_modifier = {
@@ -344,6 +391,11 @@ nda_dagon_master = {
 		country_authority_add = 50
 	}
 	
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.4
+	}
+
 	interest_group_modifier = {
 		interest_group_pol_str_mult = 0.20
 		interest_group_pop_attraction_mult = 0.4

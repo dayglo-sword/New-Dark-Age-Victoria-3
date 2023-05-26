@@ -235,7 +235,7 @@ nda_nen.13 = { #
 		c:NEN = ROOT
 
 		has_technology_researched = chemical_warfare # or other chemical tech??
-
+		NOT = { has_global_variable = herbert_west_successful } # run once
 		NOT = { has_global_variable = herbert_west_end } # Can't succeed if dragged to hell by undead!
 	}
 
@@ -549,7 +549,7 @@ nda_nen.21 = { # Plague in Innsmouth
 		# It's not really a Plague - it's the Dagon cult at work on the unbelievers and first gen hybrids leaving to sea.
 		p:x30C040 = { 
 			state = {
-				add_radicals = {
+				add_radicals_in_state = {
 					value =  medium_radicals
 				}
 				add_modifier = {

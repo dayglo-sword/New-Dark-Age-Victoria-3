@@ -1,7 +1,7 @@
 ﻿nda_cul_cultist={
 	color=  { 142 36 170 } # rgb{ 117 127 174 }
 	religion = nda_rel_cultist
-	traits = { }
+	traits = { eldritch_culture_group }
 	
 	male_common_first_names={
 		child_of son_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
@@ -42,7 +42,7 @@
 nda_cul_yigian={
 	color= { 205 220 57 } #rgb{ 21 191 16 }
 	religion = nda_rel_cultist
-	traits = { }
+	traits = { eldritch_culture_group abomination }
 	
 	male_common_first_names={
 		child_of son_of slave_of servant_of beloved_of follower_of minion_of squire_of bairn_of consort_of offspring_of hatchling_of neonate_of
@@ -87,7 +87,7 @@ nda_cul_yigian={
 nda_cul_dagonic={
 	color= rgb { 11 84 179 }
 	religion = nda_rel_cultist
-	traits = { }
+	traits = { eldritch_culture_group abomination }
 	
 	male_common_first_names={
 		child_of son_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 

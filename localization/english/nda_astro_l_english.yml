@@ -23,12 +23,21 @@
  nda_astro.1910.a:0 "A bit worrying..."
  nda_astro.1910.b:0 "Thank God we live in such enlightened times!"
 
- nda_astro.99.t:0 "Conclave test"
- nda_astro.99.d:1 "The Cultists held a Great Conclave, where, along with more bacchanalian activites, they charted the future course of the Cult."
- nda_astro.99.f:1 "[ROOT.Var('nda_conclave_flavour').GetValue]" 
+ nda_astro.10.t:0 "A Long Expected Party"
+ nda_astro.10.d:1 "You have been invited, as the leader of a nation of cultists, to take part in the next [concept_nda_conclave], to be held at the time of the upcoming [concept_nda_conjunction]."
+ nda_astro.10.f:1 ""
+ nda_astro.10.a:0 "We accept the Invite."
+ nda_astro.10.b:0 "We are too busy."
 
- nda_astro.99.a:0 "A bit worrying..."
- nda_astro.99.b:0 "Hurrah!!!"
+ nda_astro.11.t:0 "At the Conclave"
+ nda_astro.11.d:1 "You had arrived at the [concept_nda_conclave] just before the [concept_nda_conjunction] and were accepted as one of them.\n\nOn your return to your country the Cultists that could not attend were most eager to hear about what had occured and seem satified with your participation."
+ nda_astro.11.f:1 ""
+ nda_astro.11.a:0 "An Interesting Conclave."
+
+ nda_astro.12.t:0 "Cultist Unrest"
+ nda_astro.12.d:1 "The Cultists in the country are showing great concern that you did not attend the [concept_nda_conclave]. They strongly suspect that you do not have the interests of the Cult at heart."
+ nda_astro.12.f:1 ""
+ nda_astro.12.a:0 "We could not attend!"
 
  nda_conclave_no_ritual.f:0 "The Cultists held a [concept_nda_conclave], where, along with more bacchanalian activites, they atttempt to chart the future course of the Cult.\n\nThe representatives of [ROOT.Var('nda_conclave_count').GetValue] chapters attended the Conclave, but with no apparent overall leadership, concern was expressed that [concept_nda_ritual] had yet to be started."
  nda_conclave_ritual_halt.f:0 "The Cultists held a [concept_nda_conclave], where, along with more bacchanalian activites, they atttempt to chart the future course of the Cult.\n\nThe representatives of [ROOT.Var('nda_conclave_count').GetValue] chapters attended the Conclave, and concern was expressed that [concept_nda_ritual] was no longer progressing."

@@ -30,9 +30,9 @@ nda_migo.7.d:1 "For the final time your sleep is disturbed by the intruders...\n
 nda_migo.7.f:1 ""
 nda_migo.7.a:0 "For Eternity..."
 
-je_nda_migo_status:0 "Migo Experiment"
+je_nda_migo_status:0 "Migo Observation"
 je_nda_migo_status_reason:0 "The Mi-Go wish for the experiment to succeed! Do not fail them!"
-je_nda_migo_status_goal:0 "To survive to continue the experiment to the end, and then get your final reward!"
+je_nda_migo_status_goal:0 "To survive this phase of observation and to continue the experiment to the end, to then get your final reward!"
 je_nda_migo_status_progress: 0 "Time Till Transfer"
 je_nda_migo_status_complete_tt:0 "When the Mi-Go return to move you on"
 je_nda_migo_status_1:0 "Status - [concept_nda_migo_status_1]"
