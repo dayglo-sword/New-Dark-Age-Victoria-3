@@ -1,16 +1,6 @@
 ﻿namespace = nda_migo
 # it's the Mi-Go mind swapping
-#94170 - Migo Intro - In The Night
-#94171 - All A Dream - Migo rejected
-#94172 - We Will Return
-#94173 - Time To Move On
-#94174 - A New Place
-#94175 - Moving On
-#94176 - The End Is Nigh
-#94177 - The End Of Time
-#94178 - A Bad Place - Hostile IAM
-#94179 - A Strange Place - Cultist Controlled
-#94180 - A Dangerous Place - Cultist Presence
+#TODO
 #94181 - The Brotherhood Visits
 #94182 - The Brotherhood Investigates
 
@@ -21,7 +11,7 @@ nda_migo.1 = { #  Migo Intro - In The Night
 	title = nda_migo.1.t
 	desc = nda_migo.1.d
 	flavor =  nda_migo.1.f
-
+	#popup = yes
 	duration = 3
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -37,6 +27,8 @@ nda_migo.1 = { #  Migo Intro - In The Night
 		game_date >= 1838.4.1 
 		game_date < 1839 
 		is_player = yes
+		NOT ={ has_global_variable =  nda_migo_experiment }
+		#popup = yes
 	}
 
 	cooldown = { months = 12 }
@@ -148,6 +140,7 @@ nda_migo.4 = { #  We Have Returned
 		is_player = yes # player only obviously
 		has_variable = nda_migo_visited
 		NOT = { has_variable = nda_migo_timer } # time is out
+		NOT = { has_global_variable = nda_migo_final_country }
 	}
 
 	cooldown = { months = 12 }
@@ -205,6 +198,128 @@ nda_migo.5 = { #  New Home
 			value = yes
 		}
 		add_journal_entry = { type = je_nda_migo_status } # je to tell current status
+	}	
+	
+	option = {
+		name = nda_migo.5.a
+		default_option = yes
+	}
+}
+
+#94176 - The End Is Nigh - Cthulhu
+nda_migo.1924 = { #  The End Is Nigh
+	type = country_event
+	placement = ROOT
+	title = nda_migo.1924.t
+	desc = nda_migo.1924.d
+	flavor =  nda_migo.1924.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	
+	trigger = {
+		is_player = yes
+		has_global_variable = nda_migo_experiment
+		has_global_variable = nda_ritual_completed	
+		game_date >= 1924.3.23	
+		game_date < 1925.3.23 # the return date	
+		NOT = {
+			has_global_variable = nda_cthulhu_arrives	# run once
+		}
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		# Final Destination till end of game
+		set_global_variable = nda_migo_final_country
+
+		# If exists move back to NEN else highest ranked unvisited
+	}	
+	
+	option = {
+		name = nda_migo.1924.a
+		default_option = yes
+	}
+}
+
+#94176 - The End Is Nigh - The Star
+nda_migo.1927 = { #  The End Is Nigh
+	type = country_event
+	placement = ROOT
+	title = nda_migo.1927.t
+	desc = nda_migo.1927.d
+	flavor =  nda_migo.1927.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = { 
+		is_player = yes
+		has_global_variable =  nda_migo_experiment
+		has_global_variable = nda_ritual_cthulhu_visits	# He didn't stay so Star is on way
+		game_date >= 1927.4.2 # move before the star arrives
+
+	}
+
+	immediate = {
+		# Final Destination till end of game
+		set_global_variable = nda_migo_final_country
+
+		# If exists move back to NEN else highest ranked unvisited
+	}	
+	
+	option = {
+		name = nda_migo.5.a
+		default_option = yes
+	}
+}
+
+#94177 - The End Of Time
+nda_migo.1935 = { #  The End Of Time
+	type = country_event
+	placement = ROOT
+	title = nda_migo.1935.t
+	desc = nda_migo.1935.d
+	flavor =  nda_migo.1935.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	trigger = { # This is an alt to the standard end of game denouncement 'nda_nen.1935'
+		game_date >= 1935.10 
+		is_player = yes
+		has_global_variable =  nda_migo_experiment
+		NOT = { has_global_variable = nda_outro }
+		has_global_variable = nda_ritual_cthulhu_leaves
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
 	}	
 	
 	option = {

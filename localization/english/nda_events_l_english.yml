@@ -1,8 +1,8 @@
 ﻿l_english:
   
  nda_base.1.t:0 "A New Dark Age Dawns"
- nda_base.1.d:0 "The world is changing.\n\nA New Age is beginning, and this will probably not end well for the inhabitants on the not so lonely planet."
- nda_base.1.f:0 "Over the course of the next century, Eldritch entities will emerge out of the depths of space and time, as they begin their corruption of humanity.\n\nSlowly at first, working in the shadows, but then accelerating their plans towards a final confrontation for the soul of the world.\n\nWill the Hasturians defy Cthulhu and go it alone? Will the Mi-Go and their agents just sit by and passively watch? Will Herbert West pay his Miskatonic Library late fees?\n\nBased on vanilla Victoria 3 for an authentic dystopian experience."
+ nda_base.1.d:0 "The world is changing.\n\nA New Age is beginning, and this will probably not end well for the inhabitants on the not so lonely planet.\n\nOver the course of the next century, Eldritch entities will emerge out of the depths of space and time, as they begin their corruption of humanity."
+ nda_base.1.f:0 "Slowly at first, working in the shadows, but then accelerating their plans towards a final confrontation for the soul of the world.\n\nWill the Hasturians defy Cthulhu and go it alone? Will the Mi-Go and their agents just sit by and passively watch? Will Herbert West pay his Miskatonic Library late fees?\n\nBased on vanilla Victoria 3 for an authentic dystopian experience."
  nda_base.1.a:0 "'So It Begins...'"
  nda_base.2.t:0 "Unaussprechlichen Kulten"
  nda_base.2.d:0 "A book by the name of 'Nameless Cults' is being published in Dusseldorf.\n\nThis work of fiction appears to be affecting the minds of all those who read it."
@@ -67,6 +67,11 @@
  nda_base.15.d:0 "After a meeting with senior members of the Cult, [SCOPE.sCharacter('targeted_ig_leader').GetFullName], the leader of this country's chapter of [SCOPE.sCharacter('targeted_ig_leader').GetInterestGroup.GetNameNoIcon], appears to have had a change in their philosophy.\n\nThey have hardened their hearts to become a [SCOPE.sCharacter('targeted_ig_leader').GetIdeology.GetName] instead."
  nda_base.15.f:0 "Looks like the Cult can be very persuasive when they need to be."
  nda_base.15.a:0 "Not Really A Suprise."
+
+ nda_base.16.t:0 "A New Recruit"
+ nda_base.16.d:0 "After a meeting with senior members of the Cult, [SCOPE.sCharacter('targeted_ig_leader').GetFullName], the leader of this country's chapter of [SCOPE.sCharacter('targeted_ig_leader').GetInterestGroup.GetNameNoIcon], appears to have had a change in their philosophy.\n\nThey have willingly srarted participating in Cultist activities."
+ nda_base.16.f:0 "Looks like the Cult can be very persuasive when they need to be."
+ nda_base.16.a:0 "Not Really A Suprise."
 
  # The Inquisition
  nda_base.20.t:0 "An Unusual Offer"

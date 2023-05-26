@@ -59,6 +59,7 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 				save_scope_as = azedarac
 			}			
 		}
+		debug_log = "Azedarac - Start"
 	}	
 	
 	option = { #"Must come to the capital" - set as Devout leader and Master Cultist
@@ -95,6 +96,7 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 			}
 		}
 
+		debug_log = "Azedarac - IG Leader"
 		ai_chance = { # will +ve effect conversion rate
 			base = 80		
 		}
@@ -137,6 +139,7 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 			}
 		}
 
+		debug_log = "Azedarac - In Rome"
 		ai_chance = { 
 			base = 10		
 		}
@@ -168,5 +171,7 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 				add_character_role = agitator				
 			}
 		}
+
+		debug_log = "Azedarac - Agitator"
 	}
 }

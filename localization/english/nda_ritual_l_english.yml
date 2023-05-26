@@ -58,7 +58,7 @@
  # decisions
  nda_ritual_assist_possible_tt:0 "The Cult has commenced the Ritual"
  nda_ritual_assist:0 "Assist The Ritual"
- nda_ritual_assist_desc:0 "The Eldritch Cult has commenced [concept_nda_ritual]\nWe should assist them in all ways possible.\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ nda_ritual_assist_desc:0 "The Eldritch Cult has commenced [concept_nda_ritual]\nWe should assist them in all ways possible to complete this great working.\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
 
  # Journal Entries
  je_nda_ritual_proceeds:0 "The Ritual Commences"
@@ -72,7 +72,7 @@
  je_nda_ritual_time_has_passed_tt:0 "The Ritual has not completed in time!"
 
  je_nda_ritual_assist:0 "Assist The Ritual"
- je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must assist them in all ways possible.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must assist them in all ways possible in this great work.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  je_nda_ritual_assist_fail_is_eld_tt:0 "The country becomes the Eldritch Cult"
  #je_nda_ritual_assist_goal:0 "Assist in the competion of the Ritual to enable Cthulhu's return when the 'Stars are Right.'"
  

@@ -10,6 +10,11 @@ concept_nda_dagon = {
 	#is_loading_tip = yes
 }
 
+concept_nda_deep_ones = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
 concept_nda_hastur = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 	#is_loading_tip = yes
@@ -41,6 +46,11 @@ concept_nda_conclave = {
 }
 
 concept_nda_conjunction = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_yuggoth = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 	#is_loading_tip = yes
 }

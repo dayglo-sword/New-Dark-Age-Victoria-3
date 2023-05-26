@@ -57,7 +57,7 @@ nda_monthly_on_action = {
 		nda_nen.1883 # Colour - Strange Fruit
 		nda_nen.1913 # Maine Meteor - The Green Meadow
 		nda_nen.1922 # Horror at Martins Beach
-		nda_nen.1935 # Outro
+		nda_nen.1935 # New England Outro
 
 		nda_hasturian.1 # Play in Paris 
 		nda_hasturian.2 # Play Spreads 
@@ -85,7 +85,10 @@ nda_monthly_on_action = {
 
 		nda_migo.1
 		nda_migo.4
-		
+		nda_migo.1924 # The End Is Nigh - Cthulhu
+		nda_migo.1927 # The End Is Nigh - The Star
+		nda_migo.1935 # Migo Outro
+
 		nda_hgw.10 # The Star
 
 		nda_cas.10 # Holiness of Azedarac
@@ -107,7 +110,8 @@ on_half_yearly_pulse_country = {
 
 nda_half_yearly_on_action = {
 	events = {
-		nda_base.4 # Death of Junzt (Nameless Cults)			
+		nda_base.4 # Death of Junzt (Nameless Cults)
+		nda_base.16 # Cult Country recruiting			
 		nda_dagonic.4 # Bounty of the Seas
 		nda_dagonic.6 # Fury of Dagon
 		nda_hasturian.8 # The Play Fades

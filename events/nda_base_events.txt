@@ -979,6 +979,54 @@ nda_base.15 = { # Is there non-conformists leader within the cult
 	}	
 }
 
+nda_base.16 = { # Full Cult Country should have cultist as IG leaders - half-yearly check
+	type = country_event
+	placement = ROOT
+	title = nda_base.16.t
+	desc = nda_base.16.d
+	flavor =  nda_base.16.f
+
+	duration = 3
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:targeted_ig_leader # converted_ig.leader
+
+	trigger = {
+		is_cultist_country = yes
+		any_interest_group = {
+			leader = { 
+				has_any_cultist_trait = no
+			} 
+		}		
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = { 
+				leader = { 
+					has_any_cultist_trait = no
+				} 
+			}
+			leader = { 
+				add_trait = nda_cultist				
+				save_scope_as = targeted_ig_leader
+			} 
+		}
+
+		debug_log = "Check for Non-Cultist IG Leader" 				
+
+	}	
+
+	option = { # To be expected
+		name = nda_base.16.a
+		default_option = yes
+
+		debug_log = "Non-Cultist IG Leader - Joined Cult" 	
+
+	}
+}
+
 nda_base.20 = { # Request from the devout
 	type = country_event
 	placement = ROOT

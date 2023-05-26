@@ -10,7 +10,11 @@ concept_nda_yig_desc:0 "Known by many names through the ages of the Earth, worsh
 
 concept_nda_dagon:0 "Dagon, the Lord of the Seas"
 concept_nda_dagon_short:0 "Dagon"
-concept_nda_dagon_desc:0 "Son of the [concept_nda_cthulhu] itself. Sibling of Hydra.\n\nDagon resides in his realm beneath the waves, awaiting the day when he and his Deep One followers can once more rule the Shores as well as the Seas."
+concept_nda_dagon_desc:0 "Son of the [concept_nda_cthulhu] itself. Sibling of Hydra.\n\nDagon resides in his realm beneath the waves, awaiting the day when he and his followers, the [concept_nda_deep_ones], can once more rule the Shores as well as the Seas.\n\n#ITALIC ...the thing slid into view above the dark waters. Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares...\n\n...it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds.#!"
+
+concept_nda_deep_ones:0 "Deep One"
+concept_nda_deep_ones_short:0 "Deep Ones"
+concept_nda_deep_ones_desc:0 "#ITALIC ...they were damnably human in general outline despite webbed hands and feet, shockingly wide and flabby lips, glassy, bulging eyes, and other features less pleasant to recall...#!"
 
 concept_nda_hastur:0 "Hastur, the King in Yellow"
 concept_nda_hastur_short:0 "Hastur"
@@ -18,7 +22,11 @@ concept_nda_hastur_desc:0 "Living in the realm of dreams but with the capability
 
 concept_nda_migo:0 "Mi-Go, the Fungi from Yuggoth"
 concept_nda_migo_short:0 "Mi-Go"
-concept_nda_migo_desc:0 "From the planet Yuggoth in the depths of space. These creatures take over the minds of their victims so they can better observe events."
+concept_nda_migo_desc:0 "Based on the planet [concept_nda_yuggoth] in the depths of space. These creatures take over the minds of their victims so they can better observe events.\n\n#ITALIC ...pinkish things about five feet long; with crustaceous bodies bearing vast pairs of dorsal fins or membranous wings and several sets of articulated limbs, and with a sort of convoluted ellipsoid, covered with multitudes of very short antennae, where a head would ordinarily be...#!"
+
+concept_nda_yuggoth:0 "Yuggoth"
+concept_nda_yuggoth_short:0 "Yuggoth"
+concept_nda_yuggoth_desc:0 "The supposed planet Yuggoth exists in the depths of space beyond the orbit of Neptune. According to the #ITALIC Book of Eibon#! it is the current outpost of the Mi-Go in the solar system.\n\n#ITALIC ...almost lightless at the very edge of our solar system - beyond Neptune, and the ninth in distance from the sun. It is, as we have inferred, the object mystically hinted at as "Yuggoth" in certain ancient and forbidden writings;#!"
 
 concept_nda_old_ones:0 "Great Old Ones"
 concept_nda_old_ones_short:0 "Old Ones"
@@ -39,10 +47,10 @@ concept_nda_conjunction_desc:0 "The Great Conjunction is a conjunction of the pl
 
 # migo experiment help
 concept_nda_migo_status_1:0 "Cultist Country"
-concept_nda_migo_status_1_desc:0 "The Cult has taken control of this country.\n\nThe members of the government do their bidding and furthers the ultimate goal of the cultists... completion of [concept_nda_ritual]"
+concept_nda_migo_status_1_desc:0 "The Cult has taken control of this country.\n\nThe members of the government do their bidding and furthers the ultimate goal of the cultists... the completion of [concept_nda_ritual]"
 concept_nda_migo_status_2:0 "Cultists Active"
-concept_nda_migo_status_2_desc:0 "The Cult is attempting to take control of this country.\n\nThe members of the government are being influenced to do the cults bidding."
+concept_nda_migo_status_2_desc:0 "The Cult is attempting to take control of this country.\n\nThe members of the government are being covertly influenced to do the cults bidding."
 concept_nda_migo_status_3:0 "Cultists Replused"
 concept_nda_migo_status_3_desc:0 "The Cults attempt to take control of this country has failed.\n\nThey may attempt to 'convert' the country by more physical means."
 concept_nda_migo_status_4:0 "No Active Cultists"
-concept_nda_migo_status_4_desc:0 "The Cult has not yet attempted to take control of this country.\n\nThe concepts of the Cultists may still be spreading among the population but not to the extent it threatens control of the political sphere."
+concept_nda_migo_status_4_desc:0 "The Cult has not yet attempted to take control of this country.\n\nThe teachings of the Cultists may still be spreading among the population but not to the extent that it threatens control of the political sphere."
