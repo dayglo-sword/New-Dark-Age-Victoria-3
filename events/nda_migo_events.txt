@@ -164,8 +164,10 @@ nda_migo.4 = { #  We Have Returned
 			save_scope_as = nda_migo_new_country		
 		}
 
-		play_as = scope:nda_migo_new_country	
-
+		hidden_effect = {
+			play_as = scope:nda_migo_new_country			
+		}
+	
 		scope:nda_migo_new_country = {
 			trigger_event = { id = nda_migo.5 }	# welcome to your new home
 		}
@@ -249,6 +251,14 @@ nda_migo.1924 = { #  The End Is Nigh
 	option = {
 		name = nda_migo.1924.a
 		default_option = yes
+
+		hidden_effect = {
+			play_as = scope:nda_migo_new_country			
+		}
+	
+		scope:nda_migo_new_country = {
+			trigger_event = { id = nda_migo.5 }	# welcome to your new home
+		}
 	}
 }
 
@@ -284,6 +294,24 @@ nda_migo.1927 = { #  The End Is Nigh
 		set_global_variable = nda_migo_final_country
 
 		# If exists move back to NEN else highest ranked unvisited
+		IF = {
+			limit = { exists = c:NEN }
+			c:NEN = { save_scope_as = nda_migo_new_country }
+		}
+		ELSE =
+		{
+			# select a new country
+			random_country = {
+				limit = {
+					NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+					NOT = { has_variable = nda_migo_visited }
+					country_rank >= rank_value:unrecognized_regional_power					
+				}
+	
+				save_scope_as = nda_migo_new_country		
+			}			
+		}
+
 	}	
 	
 	option = {

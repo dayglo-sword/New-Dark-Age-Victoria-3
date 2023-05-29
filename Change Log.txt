@@ -1,0 +1,25 @@
+Version v1.3
+Works with current main game version 1.3, with Agitator Compatible game play.
+
+Major Changes
+Mi-Go 'Brain Swap Country Hop' mode returns. (based on Vic 2 version).
+New non-Cthulhu alternate end game based on a work by H G Wells (features Martians, but not those Martians).
+Cult Countries are semi-playable. They are now, in part, decision-based and not random events.
+
+Minor Changes
+AI Cult Countries have custom strategies.
+End-game effects and opponents toughened up.
+Context (aka Tooltips) added to generally improved localisation texts.
+Conjunction effects reworked.
+More Custom Cult IG names.
+
+Added small event paths for...
+'Casting the Runes' (M R James) - For when you need to get rid of those who don't believe in Alchemy
+'Pit and the Pendulum' (E A Poe) - added to the existing Inquisition path.
+'Holiness of Azédarac' (C A Smith) * * Exclusive French Content * * (single event)
+
+Bug Fixes
+Use the correct Localisation for the 1838 event (was using 1848 text).
+Fixed final doom of 'Herbert West'
+'Carnacki' path can finally complete.
+Characters in a Cult IG automatically gets the Cultist trait.

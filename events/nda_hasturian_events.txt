@@ -329,7 +329,7 @@ nda_hasturian.5 = { # Create Imperial America
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"		
+		video = "votp_monarch_holding_court"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -381,9 +381,11 @@ nda_hasturian.5 = { # Create Imperial America
 				traits = {
 					romantic
 					imperious
+					nda_master
 				}
 				on_created = {
-					set_variable = is_castaigne							
+					set_variable = is_castaigne		
+					set_variable = THE_NEFARIOUS_TOP_HAT							
 				}
 			}
 
@@ -422,8 +424,7 @@ nda_hasturian.6 = { # Ruination
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
-		
+		video = "votp_conspiring"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -569,7 +570,7 @@ nda_hasturian.10 = { # If he dies bring him back.
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"		
+		video = "votp_monarch_holding_court"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -615,9 +616,11 @@ nda_hasturian.10 = { # If he dies bring him back.
 				traits = {
 					romantic
 					imperious
+					nda_master
 				}
 				on_created = {
-					set_variable = is_castaigne							
+					set_variable = is_castaigne	
+					set_variable = THE_NEFARIOUS_TOP_HAT						
 				}
 			}
 

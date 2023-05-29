@@ -1,13 +1,13 @@
 ﻿l_english:
   
  nda_ritual.1.t:0 "Cthulhu Has Returned"
- nda_ritual.1.d:0 "So it has come to pass. The worlds worst nightmare.\n\nArtists and Poets go insane, as a mania grips the countries of the World.\n\nBut why does it wait pacifically on its island throne when it can easily take the world?"
- nda_ritual.1.f:0 "'The Thing of the idols, the green, sticky spawn of the stars, has awaked to claim his own...\n\n The stars are right again...\n\n After vigintillions of years [concept_nda_cthulhu]  is loose again, and ravening for delight.'"
- nda_ritual.1.a:0 "'So It Ends...'"
+ nda_ritual.1.d:0 "So it has come to pass. The Cultist greatest dream and the Worlds worst nightmare.\n\nArtists and Poets go insane, as a mania grips the countries of the World.\n\nBut why does [concept_nda_cthulhu] wait pacifically on its island throne when it can easily take the world?"
+ nda_ritual.1.f:0 "'The Thing of the idols, the green, sticky spawn of the stars, has awaked to claim his own...\n\n The stars are right again...\n\n After vigintillions of years [concept_nda_cthulhu] is loose again, and ravening for delight.'"
+ nda_ritual.1.a:0 "'The End has Begun...'"
  nda_ritual.2.t:0 "Cthulhu Has Returned"
- nda_ritual.2.d:0 "So it has come to pass. The worlds worst nightmare.\n\nArtists and Poets go insane, as a mania grips the countries of the World.\n\nBut why does it wait pacifically on its island throne when it can easily take the world?"
+ nda_ritual.2.d:0 "So it has come to pass. The Cultist greatest dream and the Worlds worst nightmare.\n\nArtists and Poets go insane, as a mania grips the countries of the World.\n\nBut why does [concept_nda_cthulhu] wait pacifically on its island throne when it can easily take the world?"
  nda_ritual.2.f:0 "'The Thing of the idols, the green, sticky spawn of the stars, has awaked to claim his own...\n\n The stars are right again...\n\n After vigintillions of years [concept_nda_cthulhu]  is loose again, and ravening for delight.'"
- nda_ritual.2.a:0 "'So It Ends...'"
+ nda_ritual.2.a:0 "'The End has Begun...'"
  nda_ritual.3.t:0 "The Ritual Completed"
  nda_ritual.3.d:0 "It is done!\n\nOur role complete. The return of the [concept_nda_cthulhu] and the Old Ones is ineviatable."
  nda_ritual.3.f:0 "That is not dead which can eternal lie,\nAnd with strange aeons even death may die."

@@ -121,35 +121,38 @@ nda_half_yearly_on_action = {
 	}
 }
 
-# assign Cultists to all leaders of that culture
+# assign Cultist properties to all members of that culture
 on_character_creation = {
 	effect = {
 		if = {
-			limit = {
-				has_culture = cu:nda_cul_cultist				
+			limit = { has_any_cultist_trait = no } # do not duplicate cult trait from char definition, also do not change ideology as presume deliberately not set
+			if = {
+				limit = {
+					has_culture = cu:nda_cul_cultist								
+				}
+				add_trait = nda_cultist
+				change_character_religion = rel:nda_rel_cultist
+				# give cultist ideology
+				nda_effect_ensure_cult_ideology = yes	
 			}
-			add_trait = nda_cultist
-			change_character_religion = rel:nda_rel_cultist
-			# give cultist ideology
-			nda_effect_ensure_cult_ideology = yes	
-		}
-		else_if = { # same for the dagonites
-			limit = {
-				has_culture = cu:nda_cul_dagonic				
+			else_if = { # same for the dagonites
+				limit = {
+					has_culture = cu:nda_cul_dagonic			
+				}
+				add_trait = nda_dagon_cultist
+				change_character_religion = rel:nda_rel_cultist
+				# give cultist ideology
+				nda_effect_ensure_cult_ideology = yes	
+			}		
+			else_if = { # same for the yigians
+				limit = {
+					has_culture = cu:nda_cul_yigian
+				}
+				add_trait = nda_yig_cultist
+				change_character_religion = rel:nda_rel_yigian
+				# give cultist ideology
+				nda_effect_ensure_cult_ideology = yes	
 			}
-			add_trait = nda_dagon_cultist
-			change_character_religion = rel:nda_rel_cultist
-			# give cultist ideology
-			nda_effect_ensure_cult_ideology = yes	
-		}		
-		else_if = { # same for the yigians
-			limit = {
-				has_culture = cu:nda_cul_yigian
-			}
-			add_trait = nda_yig_cultist
-			change_character_religion = rel:nda_rel_yigian
-			# give cultist ideology
-			nda_effect_ensure_cult_ideology = yes	
 		}
 	}
 }

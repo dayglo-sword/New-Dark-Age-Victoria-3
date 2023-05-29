@@ -22,30 +22,35 @@ nda_dagonic_state_modifier = {
 
 nda_dagonic_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_navy_power_projection_mult = 0.2
-	unit_navy_defense_mult = 0.2
-	unit_navy_offense_mult = 0.2
-	unit_convoy_raiding_mult = 0.2
+	country_navy_power_projection_mult = 0.4
+	unit_navy_defense_mult = 0.4
+	unit_navy_offense_mult = 0.4
+	unit_convoy_raiding_mult = 0.4
 }
 
 nda_cult_renaissance_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_authority_mult = 0.2
 	country_bureaucracy_mult = 0.2
+	unit_army_defense_mult = 0.2
+	unit_army_offense_mult = 0.2	
 }
 
 nda_cult_decline_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	country_authority_mult = -0.3
 	country_bureaucracy_mult = -0.3
+	unit_army_defense_mult = -0.1
+	unit_army_offense_mult = -0.1	
 }
 
 nda_reanimated_state_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	state_mortality_mult = 0.1
+	state_mortality_mult = 0.2
 	state_standard_of_living_add = -2
 	state_migration_pull_mult = -0.2
 }
+
 nda_ig_secret_masters_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_pol_str_mult = 0.25
