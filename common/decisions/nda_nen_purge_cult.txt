@@ -17,11 +17,16 @@
 	
 		# but not openly
 		NOT = { has_variable = nda_cultists_in_open }
+		NOT = { # Cultists are powerful in own right - can't purge (possible due to late game revolutions)		
+			any_interest_group = {	
+				has_ideology = ideology:ideology_nda_cabalistic
+				is_in_government = yes	
+				is_powerful = yes						
+			}
+		}
 	}
 
 	possible = {
-		#exists = c:NEN
-
 		custom_tooltip = {
 			text = nda_nen_purge_cult_not_open_cultists_tooltip 
 			NOT = { has_variable = nda_cultists_in_open }			

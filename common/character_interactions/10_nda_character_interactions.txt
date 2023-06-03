@@ -1,0 +1,241 @@
+﻿#icon					Path to icon for both right click menu and character panel buttons
+#clicksound				Clicksound for both right click menu and character panel buttons
+
+#						All scopes are character scopes with the interacting country stored as the actor
+#potential				Trigger to check if the interaction should be shown
+#possible 				Trigger to check if the interaction is available
+#effect					The effects of the interaction
+#cooldown				Scriptable duration that this interaction will be unavailable for the interacting country
+
+#show_requirements		Whether to always show requirements, similar to highlighted options in events
+#show_confirmation_box	Whether to require confirmation
+
+#ai_chance				Scriptable value for the chance (0-100) that the AI will use this interaction when available, default 0
+
+set_head_of_coven = { # If no cult master exists this button 'promotes' character - adds master trait
+	icon = "gfx/interface/character_panel/nda_coven_action.dds" # do custom icon
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		owner = scope:actor	
+		
+		scope:actor = {
+			custom_tooltip = {
+				text = nda_no_senior_cultist_IG_leaders_tt
+				has_variable = nda_cult_leaderless
+				# NOT = { # must not be any other interest groups with cult master.
+				# 	any_interest_group = { 
+				# 		limit = { 
+				# 			leader = {
+				# 				has_trait = nda_master 							
+				# 			}
+				# 		}
+				# 	}
+				#  }
+			}
+			has_cult_culture = yes			
+			# OR = {
+
+			# 	#is_cultist_country = yes # bugged? is possible to have variable set but not have culture.
+			# 	#is_full_cult_country = { COUNTRY=scope:actor } # only for countries with cult in control				
+			# }
+			
+		}	
+		OR = {
+			interest_group.leader = THIS	
+			is_ruler = yes	
+		}
+
+		has_role = politician
+		custom_tooltip = {
+			text = nda_not_senior_cultist_tt
+			has_any_cultist_trait = yes
+			has_any_cultist_master_trait = no
+
+		}
+		
+	}		
+
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		custom_tooltip = {
+			text = nda_not_senior_cultist_tt
+			has_any_cultist_trait = yes
+		}
+		custom_tooltip = {
+			text = nda_no_senior_cultist_IG_leaders_tt
+		}	
+	}
+
+	effect = {
+		if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_cultist 
+				} 				
+			}
+			add_trait = nda_master			
+		}
+		else_if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_dagonic 
+				} 				
+			}
+			add_trait = nda_dagon_master			
+		}
+		else_if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_yigian 
+				} 				
+			}
+			add_trait =  nda_yig_master
+			
+		}
+		set_variable = nda_coven_leader
+
+		scope:actor = { remove_variable = nda_cult_leaderless } # we have a leader!
+	}
+
+	cooldown = { months = 3 }
+	show_confirmation_box = yes
+	show_requirements = yes
+
+	ai_chance = {
+		value = 5
+		if = {
+			limit = {
+				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # nmore chance if cult IG			
+			}
+
+			add = 15
+		}
+		if = {
+			limit = {
+				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
+			}
+
+			add = 10
+		}		
+		if = {
+			limit = {
+				OR = {
+					 # more chance if already at stage 2 - acolyte
+					has_trait = nda_acolyte
+					has_trait = nda_dagon_acolyte
+					has_trait = nda_yig_acolyte
+				}
+				
+			}
+			add = 10
+		}
+		if = { # less chance if 'positive' ideology or traits
+			limit = {
+				has_non_cultist_ideology = yes				
+			}
+			add = -10
+		}
+		if = { # slow down after cthulhu leaves
+			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
+			add = -10
+		}	
+	}
+}
+
+initiate_into_coven = { # If not already give character eldritch trait
+	icon = "gfx/interface/character_panel/nda_coven_action.dds" # do custom icon
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		has_role = politician
+
+		owner = scope:actor
+
+		scope:actor = {
+			has_cult_culture = yes
+		}
+
+		custom_tooltip = {
+			text = nda_not_cultist_tt
+			has_any_cultist_trait = no
+		}
+	}		
+
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		custom_tooltip = {
+			text = nda_not_cultist_tt
+			has_any_cultist_trait = no
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_cultist 
+				} 				
+			}
+			add_trait = nda_cultist			
+		}
+		else_if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_dagonic 
+				} 				
+			}
+			add_trait = nda_dagon_cultist			
+		}
+		else_if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_yigian 
+				} 				
+			}
+			add_trait =  nda_yig_cultist			
+		}
+	}
+
+	cooldown = { months = 3 } # event version was 6mo but this should be better
+	show_confirmation_box = yes
+	show_requirements = yes
+
+	ai_chance = {
+		value = 15
+		if = {
+			limit = {
+				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # need to be for cult IG! Other effects can set it by default, but use this as catch all just in case
+			}
+
+			add = 100
+		}
+		if = {
+			limit = {
+				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
+			}
+
+			add = 10
+		}		
+		if = { # more chance if 'negative' traits
+			limit = {
+				OR = {					 
+					has_trait = ambitious
+					has_trait = cruel
+					has_trait = hedonist
+				}				
+			}
+			add = 10
+		}	
+		if = { # less chance if 'positive' ideology or traits
+			limit = {
+				has_non_cultist_ideology = yes				
+			}
+			add = -10
+		}	
+		if = {
+			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
+			add = -10
+		}	
+	}
+}

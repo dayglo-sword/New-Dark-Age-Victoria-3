@@ -1,0 +1,30 @@
+﻿namespace = nda_monument
+# Events to notify of changes to Monument statuses
+
+nda_monument.10 = {  # Vatican falls to cultists - launched from decision
+	type = country_event
+	placement = p:xB040A0
+	title = nda_monument.10.t
+	desc = nda_monument.10.d
+	flavor =  nda_monument.10.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/nda_StarryNight.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	immediate = {
+		debug_log = "Vatican Falls"
+	}	
+	
+	option = { #
+		name = nda_monument.10.a 
+		default_option = yes
+	}
+}

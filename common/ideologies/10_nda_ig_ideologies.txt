@@ -25,21 +25,7 @@
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
 	}
-
-	lawgroup_policing = {
-		law_militarized_police = strongly_approve
-		law_dedicated_police = approve
-		law_local_police = neutral
-		law_no_police = disapprove
-	}	
-
-	lawgroup_internal_security = {
-		law_secret_police = approve
-		law_national_guard = approve
-		law_no_home_affairs = disapprove
-		law_guaranteed_liberties = strongly_disapprove
-	}	
-			
+		
 	lawgroup_army_model = {
 		law_professional_army = strongly_approve
 		law_mass_conscription = approve
@@ -83,7 +69,7 @@
 	}
 
 	lawgroup_slavery = {
-		law_slave_trade = approve
+		law_slave_trade = strongly_approve
 		law_debt_slavery = approve
 		law_legacy_slavery = neutral
 		law_slavery_banned = strongly_disapprove

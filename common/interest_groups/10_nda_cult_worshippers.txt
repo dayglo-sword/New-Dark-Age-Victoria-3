@@ -7,7 +7,7 @@
 	ideologies = {
 		ideology_nda_cabalistic
 		ideology_reactionary
-		ideology_patriarchal
+		ideology_patriotic
 	}
 	
 	enable = {
@@ -104,7 +104,6 @@
 	pop_weight = {
 
 		# cultists in open
-
 		value = 0 
 
 		add = {
@@ -166,6 +165,14 @@
 					max = 1.25
 					min = 0.75
 				}
+			}
+		}
+		add = {
+			if = {
+				limit = { 
+					has_global_variable = nda_ritual_cthulhu_leaves
+				}
+				value = -100 # big weight - disheartened cultists
 			}
 		}					
 	}

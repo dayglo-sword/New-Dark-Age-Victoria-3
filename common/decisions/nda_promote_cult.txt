@@ -1,0 +1,26 @@
+﻿nda_promote_cult = { # post 'Cthulhu leave' to start dismantling global cult influence
+	is_shown = {
+		# but not openly
+		has_cult_culture = no # does not have but should have	
+		NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+	}
+
+	possible = {
+		any_interest_group = {	
+			has_ideology = ideology:ideology_nda_cabalistic
+			is_in_government = yes	
+			is_powerful = yes						
+		}	
+	}
+    	
+	when_taken = {
+		#fire off cult setup event as if journal completed
+		debug_log =  "Promote Cult : Completed : [THIS.GetCountry.GetNameNoFormatting]"
+		trigger_event = { id = nda_base.7 }	
+	}
+
+	ai_chance = { 
+		base = 15 # up chance to speed up breakdown	
+	}
+
+}

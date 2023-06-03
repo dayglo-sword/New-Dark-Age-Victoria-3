@@ -39,6 +39,14 @@ has_any_cultist_trait = {
 	}
 }
 
+has_any_cultist_master_trait = {
+	OR = { 
+		has_trait = nda_master  
+		has_trait = nda_yig_master  
+		has_trait = nda_dagon_master  		 
+	}
+}
+
 has_non_cultist_ideology = {
 	OR = {
 		has_ideology = ideology:ideology_radical

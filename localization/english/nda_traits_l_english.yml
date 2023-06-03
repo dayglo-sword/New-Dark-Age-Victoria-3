@@ -75,3 +75,10 @@ nda_inquisition_opposed_modifier:0 "Oppose the Inquisition"
 # Custom Triggers
 can_cult_infiltrate:0 "Cultists can infiltrate the country"
 #ADD_WAR_EXHAUSTION_NEG:0 "Inexhaustable Will"
+
+# Character interactions
+set_head_of_coven:0 "Set Head of Coven"
+nda_not_senior_cultist_tt:0 "Is not a Senior Cultist"
+nda_no_senior_cultist_IG_leaders_tt:0 "No Interest Groups are lead by a Senior Cultist"
+nda_not_cultist_tt:0 "Is not a Cultist"
+initiate_into_coven:0 "Initiate into Coven"
