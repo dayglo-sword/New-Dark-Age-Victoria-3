@@ -3,13 +3,17 @@
 		exists = c:ELD
 		this = c:ELD
 		p:xB040A0  = { 
-			state = { owner = ROOT } 
+			state = { 
+				owner = ROOT
+				has_building = building_vatican_city	
+			}					
 		}
 	}
 
 	possible = {
 		this = c:ELD
 		authority  > 0
+
 	}
 	
 	when_taken = {
@@ -27,7 +31,7 @@
 		# Reaction Event for Player
 		every_country = {
 			limit = { is_player = yes}
-			trigger_event = { id = nda_monument.10 }			
+			trigger_event = { id = nda_monuments.10 }			
 		}
 	}
 
@@ -44,8 +48,11 @@ nda_eld_destroy_hagia_sophia = {
 	is_shown = {
 		exists = c:ELD
 		this = c:ELD
-		p:F0A020  = { 
-			state = { owner = ROOT } 
+		p:xF0A020  = { 
+			state = { 
+				owner = ROOT 
+				has_building = building_hagia_sophia
+			} 
 		}
 	}
 
@@ -57,7 +64,7 @@ nda_eld_destroy_hagia_sophia = {
 	when_taken = {
 		debug_log = "nda_eld_destroy_hagia_sophia" 
 
-		p:F0A020  = { 
+		p:xF0A020  = { 
 			state = { remove_building = building_hagia_sophia } 
 		}
 
@@ -69,14 +76,14 @@ nda_eld_destroy_hagia_sophia = {
 		# Reaction Event for Player
 		every_country = {
 			limit = { is_player = yes}
-			trigger_event = { id = nda_monument.10 }			
+			trigger_event = { id = nda_monuments.20 }			
 		}
 	}
 
 	ai_chance = {
 		base = 0
 		modifier = {
-			trigger = { authority  > 0 } # need 100 for the loss from losing the Vatican
+			trigger = { authority  > 0 } 
 			add = 10
 		}	
 	}
@@ -86,8 +93,11 @@ nda_eld_destroy_st_basils = {
 	is_shown = {
 		exists = c:ELD
 		this = c:ELD
-		p:43F336  = { 
-			state = { owner = ROOT } 
+		p:x43F336  = { 
+			state = { 
+				owner = ROOT
+				has_building = building_hagia_sophia
+			} 
 		}
 	}
 
@@ -99,26 +109,26 @@ nda_eld_destroy_st_basils = {
 	when_taken = {
 		debug_log = "nda_eld_destroy_st_basils" 
 
-		p:43F336  = { 
+		p:x43F336  = { 
 			state = { remove_building = building_saint_basils_cathedral } 
 		}
 
 		# Please Cultists
 		add_loyalists = { value = 0.1 religion = rel:nda_rel_cultist }
-		# Anger Sunni in country
+		# Anger Orthodox in country
 		add_radicals = { value = 0.1 religion = rel:orthodox }
 
 		# Reaction Event for Player
 		every_country = {
 			limit = { is_player = yes}
-			trigger_event = { id = nda_monument.10 }			
+			trigger_event = { id = nda_monuments.30 }			
 		}
 	}
 
 	ai_chance = {
 		base = 0
 		modifier = {
-			trigger = { authority  > 0 } # need 100 for the loss from losing the Vatican
+			trigger = { authority  > 0 } 
 			add = 10
 		}	
 	}

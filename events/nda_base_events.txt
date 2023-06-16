@@ -109,6 +109,18 @@ nda_base.2 = { # Nameless Cults published
 
 			set_variable = nda_nameless_cults_selected
 		}
+		random_country = {
+			limit = {
+				country_rank >= rank_value:unrecognized_regional_power					
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
 	}	
 	
 	option = { #"What harm can a book do?"
@@ -216,7 +228,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 		default_option = yes
 		
 		ai_chance = { # will +ve effect conversion rate
-			base = 75		
+			base = 75				
 		}
 
 		# annoy the clergy
@@ -242,7 +254,15 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 		name = nda_base.3.b
 
 		ai_chance = { # will -ve effect conversion rate
-			base = 25		
+			base = 25
+			
+			modifier = {
+				trigger = {
+					EXISTS = c:RUS # RUS is forming ELD far too frequent - Try Nerf by delaying spread - TODO? base on lit rate not just country?
+					c:RUS = THIS					
+				}
+				add = 275
+			}
 		}
 
 		# annoy the intelectuals
@@ -439,7 +459,13 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 					add_homeland = nda_cul_cultist
 				}
 
-				convert_population = { target = rel:nda_rel_cultist value = 0.10 }	
+				convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+					
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_eldritch_cult
+					months = 12
+					value = 0.005
+				}
 			}
 
 			# notify players of change
@@ -1476,5 +1502,100 @@ nda_base.26 = { # The Pit and the Pendulum!
 			}
 	
 		}
+	}
+}
+
+# Cult Interactions for when Player is in Cult Country
+nda_base.30 = { # Cult is leaderless
+	type = country_event
+	placement = ROOT
+	title = nda_base.30.t
+	desc = nda_base.30.d
+	flavor =  nda_base.30.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	trigger = {
+ 		is_player = yes # for players only
+		has_variable = nda_cult_leaderless # no leader!
+		NOT = { has_variable = nda_cult_leaderless_timer } # for some time
+		# Big boss exists else overlord is cultist
+		OR = {
+			any_overlord_or_above = {
+				has_variable = nda_cultists_in_open
+			}	
+			exists = c:ELD		
+		}
+
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		set_variable = nda_cult_leaderless_warning
+
+		random_country = {
+			limit = {
+				OR = {
+					# is an overlord
+					AND = {
+						has_variable = nda_cultists_in_open
+						has_subject_relation_with = ROOT
+						NOT = { is_subject_of = ROOT }						
+					}
+					# or is big bad
+					AND = {
+						EXISTS = c:ELD
+						THIS = c:ELD						
+					}
+				}
+				any_scope_character = { # Must have leader to do the complaint
+					has_variable = nda_coven_leader
+				}
+			}
+
+			save_scope_as = nda_warning_country
+
+			# get cult leader
+			random_scope_character = {
+				limit = {
+					has_variable = nda_coven_leader
+				 }
+				 save_scope_as = nda_warning_leader
+			}
+		}
+	
+	}	
+	
+	option = { #"Issue Promise"
+		name = nda_base.30.a
+		default_option = yes
+
+		set_variable = nda_pander_cults
+	}
+
+	option = { #"Defy"
+		name = nda_base.30.b
+
+		# annoy the overlord badly
+		change_relations = { 
+			country = scope:nda_warning_country 
+			value = -100 
+		}
+
+		# upset local cultists	
+		add_radicals = { value = 0.2 religion = rel:nda_rel_cultist } 
+		add_radicals = { value = 0.2 culture = cu:nda_cul_cultist }
+
+		set_variable = nda_defy_cults
 	}
 }

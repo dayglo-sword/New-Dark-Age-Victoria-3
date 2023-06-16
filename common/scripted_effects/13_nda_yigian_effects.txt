@@ -34,6 +34,19 @@ nda_effect_yigian_setup = {
 			remove_ideology = ideology_anti_slavery
 		}
 
+		# change Char religion, ensure cultist 
+		every_interest_group = {
+			leader = {
+				change_character_religion = rel:nda_rel_cultist
+				IF = {
+					limit = { 
+						has_any_cultist_trait = no 
+					}
+					add_trait = nda_yig_cultist		
+				}
+			}
+		}
+
 		# set (not so) secret goals - need to check they exist!
 		IF = {
 			limit = {
@@ -128,7 +141,14 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 		# give them a boost, both religion and pops
 		every_scope_state = {
 			limit = { exists = THIS }
-			convert_population = { target = rel:nda_rel_yigian value = 0.10 }	
+
+			convert_population = { target = rel:nda_rel_yigian value = 0.02 }
+					
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_yigian_cult
+				months = 12
+				value = 0.005
+			}
 
 			# everyone of Yigian Culture should follow Rite 
 			every_scope_pop = {

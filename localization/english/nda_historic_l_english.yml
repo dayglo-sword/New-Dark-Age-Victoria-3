@@ -16,9 +16,15 @@ nda_historic.1849.f:1 "His final words were, 'Lord, help my poor soul.'"
 nda_historic.1849.a:0 "Nevermore!"
 
 nda_historic.1852.t:0 "A New English Medium In London"
-nda_historic.1852.d:1 "A 'Spiritulist' medium by the name of Mrs Hayden, has travelled over to London and is performing séances.\n\nDespite criticism from both the church and press her audiences continue to grow!"
-nda_historic.1852.f:1 ""
+nda_historic.1852.d:1 "A 'Spiritulist' medium by the name of Mrs Maria Hayden, has travelled over to London from America and is performing séances.\n\nDespite criticism from both the church and press her audiences continue to grow!"
+nda_historic.1852.f:1 "... All was still, hushed as the grave — we looked at each other but spoke not, for words were inadequate for the occasion, as they had noi power to express the throbbing tumult of the heart — had we crossed the stormy Atlantic only to reap disappointment for our reward?\n\nImpossible! they will not desert us now. But hark! a slight tremor is felt in the table; a few faint ticks or raps are heard. Our hearts beat more freely, a mountain haa fallen from our shoulders.\n\n'Oh, thou of little faith, wherefore didst thou doubt?' But louder and firmer came the gentle patterings until the room was musical with the cheering sounds. A moment’s pause succeeds — one long breath of relief is drawn and then comes the call for the alphabet, followed by a well known and to us much loved signal...\n -  Dr. William R. Hayden'"
 nda_historic.1852.a:0 "Just a circus act."
+
+# april 1857 - Banner of Light - Boston
+nda_historic.1857.t:0 "The Banner of Light"
+nda_historic.1857.d:1 "A new weekly newspaper is being published in Boston!\n\nThe 'Banner of Light' is a spiritulist publication.\n\nIt even includes a page that displays messages received by its resident medium, and letters from relatives confirming the authenticity of the messages!"
+nda_historic.1857.f:1 "'Modern spiritualism, so called, discloses all these errors, both in theory and practice, by revealing the higher nature and capabilities of the present life, and its assimilation to the higher sphere.\n\nEach revealment, or manifestation, involves in its regular order, each of the natural elements, from the most ponderable to mlnd and from the most gross or benighted mind, to the purest and most effulgent light, emanating from the mind of Deity himself.\n\nEach requires these elements to be in harmony, that the lower may properly respond to the impulses of the higher, according to the regular law of mechanics.' - Issue I"
+nda_historic.1857.a:0 "An Interesting Read?"
 
 nda_historic.1862.t:0 "The Ghost Club"
 nda_historic.1862.d:1 "A Club has been launched in London to investigate ghosts and other psychic phemomena. It appears their intent is to expose fraudulent claims.\n\nIt is said that Charles Dickens himself is a founding member!\n\nHe knows a thing or two about phantoms and ghosts!"
@@ -36,6 +42,11 @@ nda_historic.1875.t:0 "Divine Wisdom"
 nda_historic.1875.d:1 "A new society, The Theosophical Society, has been launched in New York by Helena Blavatsky and others, with the intent to 'investigate the unexplained laws of nature and the powers latent in man'!\n\nThe word Theosophical can be roughly translated as 'Divine Wisdom'"
 nda_historic.1875.f:1 "'an unsectarian body of seekers after Truth, who endeavor to promote Brotherhood and strive to serve humanity.'"
 nda_historic.1875.a:0 "Sounds quite decent."
+
+nda_historic.1879.t:0 "To The East"
+nda_historic.1879.d:1 "The Theosophical Society, founded in New York, has decided it would be better if their headquarters was further abroad in order to search for the hidden wisdom of the East as handed down from primeval antiquity"
+nda_historic.1879.f:1 "'Colonel Olcott and Madame Blavatsky came to the conclusion that India would be a more suitable centre for their operations than New York, and to India accordingly they proceeded, making their headquarters first at Bombay, and subsequently at Madras.\n\nHere they came into more immediate relations with the Mahatmas, or Himalayan Brethren, whose agents they regard themselves; and they have since travelled through the length and breadth of India, establishing new branches of the Theosophical Society everywhere' - W F Kirkby"
+nda_historic.1879.a:0 "Closer to the source?"
 
 nda_historic.1882.t:0 "The Society for Psychical Research"
 nda_historic.1882.d:1 "A new society has been launched in London to continue the investigation into psychic phemomena such as telepathy and apparitions. It appears their intent is to investigating mesmeric, psychical and spiritualist phenomena in a purely scientific spirit."

@@ -4,7 +4,7 @@
 nda_rel_cultist = {
 	texture = "gfx/interface/icons/religion_icons/animist.dds"
 	traits = {
-		occult
+		abomination occult
 	}
 	color =  { 142 36 170 } #{ 0.33 0.35 0.01 }
 }
@@ -16,4 +16,21 @@ nda_rel_yigian = {
 		abomination occult
 	}
 	color =  { 205 220 57 } #{0.23 0.45 0.01 }
+}
+
+# Spiritulist
+nda_rel_spiritulism = {
+	texture = "gfx/interface/icons/religion_icons/animist.dds"
+	traits = {		
+	}
+	color =  { 142 136 170 } #{ 0.13 0.35 0.01 }
+}
+
+# Theosophical
+nda_rel_theosophic = {
+	texture = "gfx/interface/icons/religion_icons/animist.dds"
+	traits = {
+		occult
+	}
+	color =  { 142 36 70 } #{ 0.33 0.15 0.01 }
 }

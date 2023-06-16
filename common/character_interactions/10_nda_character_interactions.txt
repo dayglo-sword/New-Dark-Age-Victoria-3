@@ -95,7 +95,10 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 		}
 		set_variable = nda_coven_leader
 
-		scope:actor = { remove_variable = nda_cult_leaderless } # we have a leader!
+		scope:actor = { 
+			remove_variable = nda_cult_leaderless # we have a leader!
+			remove_variable = nda_cult_leaderless_timer
+		} 
 	}
 
 	cooldown = { months = 3 }
@@ -194,6 +197,190 @@ initiate_into_coven = { # If not already give character eldritch trait
 				} 				
 			}
 			add_trait =  nda_yig_cultist			
+		}
+	}
+
+	cooldown = { months = 3 } # event version was 6mo but this should be better
+	show_confirmation_box = yes
+	show_requirements = yes
+
+	ai_chance = {
+		value = 15
+		if = {
+			limit = {
+				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # need to be for cult IG! Other effects can set it by default, but use this as catch all just in case
+			}
+
+			add = 100
+		}
+		if = {
+			limit = {
+				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
+			}
+
+			add = 10
+		}		
+		if = { # more chance if 'negative' traits
+			limit = {
+				OR = {					 
+					has_trait = ambitious
+					has_trait = cruel
+					has_trait = hedonist
+				}				
+			}
+			add = 10
+		}	
+		if = { # less chance if 'positive' ideology or traits
+			limit = {
+				has_non_cultist_ideology = yes				
+			}
+			add = -10
+		}	
+		if = {
+			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
+			add = -10
+		}	
+	}
+}
+
+convert_to_dagon = { # If not already give character eldritch trait
+	icon = "gfx/interface/character_panel/nda_coven_action.dds" # do custom icon
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		has_role = politician
+
+		owner = scope:actor
+
+		scope:actor = {
+			has_cult_culture = yes
+			has_variable = nda_dagon_in_open
+		}
+
+		custom_tooltip = {
+			text = nda_eldritch_cultist_tt
+			has_eldritch_trait = yes
+		}
+	}		
+
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		custom_tooltip = {
+			text = nda_eldritch_cultist_tt
+			has_eldritch_trait = yes
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { 
+				has_trait = nda_cultist			
+			}
+			add_trait = nda_dagon_cultist			
+		}
+		else_if = {
+			limit = { 
+				has_trait = nda_acolyte			
+			}
+			add_trait = nda_dagon_acolyte			
+		}
+		else_if = {
+			limit = { 
+				has_trait = nda_master			
+			}
+			add_trait = nda_dagon_master		
+		}
+	}
+
+	cooldown = { months = 3 } # event version was 6mo but this should be better
+	show_confirmation_box = yes
+	show_requirements = yes
+
+	ai_chance = {
+		value = 15
+		if = {
+			limit = {
+				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # need to be for cult IG! Other effects can set it by default, but use this as catch all just in case
+			}
+
+			add = 100
+		}
+		if = {
+			limit = {
+				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
+			}
+
+			add = 10
+		}		
+		if = { # more chance if 'negative' traits
+			limit = {
+				OR = {					 
+					has_trait = ambitious
+					has_trait = cruel
+					has_trait = hedonist
+				}				
+			}
+			add = 10
+		}	
+		if = { # less chance if 'positive' ideology or traits
+			limit = {
+				has_non_cultist_ideology = yes				
+			}
+			add = -10
+		}	
+		if = {
+			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
+			add = -10
+		}	
+	}
+}
+
+convert_to_yig = { # If not already give character eldritch trait
+	icon = "gfx/interface/character_panel/nda_coven_action.dds" # do custom icon
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		has_role = politician
+
+		owner = scope:actor
+
+		scope:actor = {
+			has_cult_culture = yes
+			has_variable = nda_yig_in_open
+		}
+
+		custom_tooltip = {
+			text = nda_eldritch_cultist_tt
+			has_eldritch_trait = yes
+		}
+	}		
+
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		custom_tooltip = {
+			text = nda_eldritch_cultist_tt
+			has_eldritch_trait = yes
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { 
+				has_trait = nda_cultist			
+			}
+			add_trait = nda_yig_cultist			
+		}
+		else_if = {
+			limit = { 
+				has_trait = nda_acolyte			
+			}
+			add_trait = nda_yig_acolyte			
+		}
+		else_if = {
+			limit = { 
+				has_trait = nda_master			
+			}
+			add_trait = nda_yig_master		
 		}
 	}
 

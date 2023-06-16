@@ -1,30 +1,88 @@
-﻿namespace = nda_monument
+﻿namespace = nda_monuments
 # Events to notify of changes to Monument statuses
 
-nda_monument.10 = {  # Vatican falls to cultists - launched from decision
+nda_monuments.10 = {  # Vatican falls to cultists - launched from decision
 	type = country_event
 	placement = p:xB040A0
-	title = nda_monument.10.t
-	desc = nda_monument.10.d
-	flavor =  nda_monument.10.f
+	title = nda_monuments.10.t
+	desc = nda_monuments.10.d
+	flavor =  nda_monuments.10.f
 
 	duration = 3
 
 	event_image = {
-		texture = "gfx/event_pictures/nda_StarryNight.dds"
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
 
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	immediate = {
 		debug_log = "Vatican Falls"
 	}	
 	
 	option = { #
-		name = nda_monument.10.a 
+		name = nda_monuments.10.a 
+		default_option = yes
+	}
+}
+
+nda_monuments.20 = {  # Hagia Sophia falls to cultists - launched from decision
+	type = country_event
+	placement = p:xF0A020
+	title = nda_monuments.20.t
+	desc = nda_monuments.20.d
+	flavor =  nda_monuments.20.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "Hagia Sophia Falls"
+	}	
+	
+	option = { #
+		name = nda_monuments.20.a 
+		default_option = yes
+	}
+}
+
+nda_monuments.30 = {  # St Basils falls to cultists - launched from decision
+	type = country_event
+	placement = p:x43F336
+	title = nda_monuments.30.t
+	desc = nda_monuments.30.d
+	flavor =  nda_monuments.30.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "St Basils Falls"
+	}	
+	
+	option = { #
+		name = nda_monuments.30.a 
 		default_option = yes
 	}
 }

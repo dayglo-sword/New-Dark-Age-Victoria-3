@@ -1,0 +1,16 @@
+﻿l_english:
+  
+nda_monuments.10.t:0 "Holy See Destroyed"
+nda_monuments.10.d:1 "The Vatican has fallen into the hands of the Cultists. The Vicar of Rome martyred as the Catholic Church is driven out. The Apostolic Palace and its Museums and Libraries plundered, its Relics destroyed. Cattle Stampeded through the holy places.\n\nBut despite the devastation it is said that the ghostly image of the City can still be seen above the ruins."
+nda_monuments.10.f:1 ""
+nda_monuments.10.a:0 "Vandals!"
+
+nda_monuments.20.t:0 "Hagia Sophia Demolished."
+nda_monuments.20.d:1 "The Grand Mosque, a lasting legacy of the Eastern Romans, has been destroyed. Its mighty dome has come crashing to the ground.\n\nBoth Muslims and Orthodox Christians morn its demise.\n\nBut despite the devastation it is said that the ghostly image of the Mosque can still be seen above the ruins."
+nda_monuments.20.f:1 ""
+nda_monuments.20.a:0 "Heathens!"
+
+nda_monuments.30.t:0 "St Basils Cathedral Razed"
+nda_monuments.30.d:1 "The landmark building of Red Square has been destroyed. The remains and relics of Basil the Blessed lost, and the leaders of the Othodox Church in the former Russia murdered.\n\nBut despite the devastation it is said that the ghostly image of the Cathedral can still be seen above the ruins."
+nda_monuments.30.f:1 ""
+nda_monuments.30.a:0 "Heathens!"

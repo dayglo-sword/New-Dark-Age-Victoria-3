@@ -5,6 +5,9 @@
  nda_rel_yigian:0 "Yigian Sect"
  nda_rel_dagonic:0 "Dagonic Sect"
 
+ nda_rel_spiritulism:0 "Spiritulist"
+ nda_rel_theosophic:0 "Theosophic"
+
  # Add cultures here as well
  nda_cul_cultist:0 "Eldritch Cult"
  nda_cul_yigian:0 "Yigian Cult"

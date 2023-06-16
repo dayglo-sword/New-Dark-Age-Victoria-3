@@ -1,0 +1,111 @@
+﻿gov_eldritch_cult = {
+	transfer_of_power = hereditary
+	
+	male_ruler = "RULER_TITLE_GRAND_ARCHON"
+	female_ruler = "RULER_TITLE_GRAND_ARCHON"
+
+	male_heir = "RULER_TITLE_ARCHON"
+	female_heir = "RULER_TITLE_ARCHON"
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		OR = {
+			AND = {
+				exists = c:ELD
+				c:ELD = ROOT
+			}
+			AND = {
+				exists = c:DAG
+				c:DAG = ROOT
+			}
+			AND = {
+				exists = c:YIG
+				c:YIG = ROOT
+			}
+		}
+		ruler = { has_variable = nda_coven_leader}
+	}		
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+}
+
+
+gov_eldritch_junta = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_GRAND_ARCHON"
+	female_ruler = "RULER_TITLE_GRAND_ARCHON"
+	
+	possible = {
+		has_law = law_type:law_presidential_republic
+		country_has_voting_franchise = no
+		OR = {
+			has_law = law_type:law_mass_conscription
+			has_law = law_type:law_professional_army
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+}
+
+gov_eldritch_republic = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_GRAND_ARCHON"
+	female_ruler = "RULER_TITLE_GRAND_ARCHON"
+	
+	possible = {
+		has_law = law_type:law_presidential_republic
+		OR = {
+			AND = {
+				exists = c:ELD
+				c:ELD = ROOT
+			}
+			AND = {
+				exists = c:DAG
+				c:DAG = ROOT
+			}
+			AND = {
+				exists = c:YIG
+				c:YIG = ROOT
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+}
+
+gov_cult_controlled = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_HIGH_PRIEST"
+	female_ruler = "RULER_TITLE_HIGH_PRIEST"
+	
+	possible = {
+		has_law = law_type:law_theocracy
+		OR = {
+			AND = {
+				exists = c:ELD
+				c:ELD = ROOT
+			}
+			AND = {
+				exists = c:DAG
+				c:DAG = ROOT
+			}
+			AND = {
+				exists = c:YIG
+				c:YIG = ROOT
+			}
+		}
+	}
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+}

@@ -102,3 +102,10 @@
  nda_base.26.a:0 "We must end this atrocity"!"
  nda_base.26.b:0 "Mistakes happen."
  nda_base_inqusition_closed_tooltip:0 "Close down the Inqusition"
+
+# Cult Interaction
+ nda_base.30.t:0 "A Question Of Leadership"
+ nda_base.30.d:0 "[SCOPE.sCharacter('nda_warning_leader').GetFullName], the [SCOPE.sCharacter('nda_warning_leader').GetCustom('cultist_rank_loc')] of the coven in [SCOPE.sC('nda_warning_country').GetName] is showing concern that the local cult appears to be leaderless and so without direction."
+ nda_base.30.f:0 "''"
+ nda_base.30.a:0 "We will appoint one soon."
+ nda_base.30.b:0 "Thhis is a local matter!"

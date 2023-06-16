@@ -39,3 +39,85 @@ cultist_traits_loc = {
 		localization_key = nda_dagon_master
 	}
 }
+
+cultist_rank_loc = { # should order these by prob of usage? Masters first?
+	type = character
+	random_valid = no
+	text = {
+		trigger = {
+			has_trait = nda_cultist
+		}
+		localization_key = nda_cultist
+	}
+	text = {
+		trigger = {
+			has_trait = nda_dagon_cultist
+		}
+		localization_key = nda_dagon_cultist
+	}
+	text = {
+		trigger = {
+			has_trait = nda_yig_cultist
+		}
+		localization_key = nda_yig_cultist
+	}
+	text = {
+		trigger = {
+			has_trait = nda_acolyte
+		}
+		localization_key = nda_acolyte
+	}
+	text = {
+		trigger = {
+			has_trait = nda_master
+			has_variable = nda_coven_leader
+		}
+		localization_key = nda_grand_master
+	}
+	text = {
+		trigger = {
+			has_trait = nda_master
+		}
+		localization_key = nda_master
+	}
+
+	text = {
+		trigger = {
+			has_trait = nda_dagon_acolyte
+		}
+		localization_key = nda_dagon_acolyte
+	}
+	text = {
+		trigger = {
+			has_trait = nda_dagon_master
+			has_variable = nda_coven_leader
+		}
+		localization_key = nda_dagon_grand_master
+	}
+	text = {
+		trigger = {
+			has_trait = nda_dagon_master
+		}
+		localization_key = nda_dagon_master
+	}
+
+	text = {
+		trigger = {
+			has_trait = nda_yig_acolyte
+		}
+		localization_key = nda_yig_acolyte
+	}
+	text = {
+		trigger = {
+			has_trait = nda_yig_master
+			has_variable = nda_coven_leader
+		}
+		localization_key = nda_yig_grand_master
+	}
+	text = {
+		trigger = {
+			has_trait = nda_yig_master
+		}
+		localization_key = nda_yig_master
+	}
+}

@@ -33,7 +33,7 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { months = 24 }	
 	
 	immediate = {
 		debug_log = "Great Awakening"
@@ -79,8 +79,36 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 		}	
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { months = 24 }	
 	
+	immediate = {
+		debug_log = "Founding of Spiritualist Movement : [THIS.GetCountry.GetNameNoFormatting]" 
+		# give them a boost, both religion and pops
+		p:x01D042 = {
+			state = {
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}
+					debug_log = "Founding of Spiritualist Movement - add pop : [ROOT.GetCountry.GetNameNoFormatting]" 
+					convert_population = { target = rel:nda_rel_spiritulism value = 0.05 }	
+					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritulism
+						months = 12
+						value = 0.005
+					}
+
+					every_neighbouring_state = {
+						set_variable = { # # ongoing conversion of neighbours
+							name = nda_rel_boost_spiritulism
+							months = 12
+							value = 0.005
+						}					
+					}							
+				}
+			} 				
+		}
+	}
+
 	option = { #"Hope it does not spread"
 		name =nda_historic.1848.a
 		default_option = yes	
@@ -120,7 +148,7 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 		}
 	}
 
-	cooldown = { months = 12 }	
+	cooldown = { months = 24 }	
 	
 	option = { #"Nevermore"
 		name = nda_historic.1849.a
@@ -161,14 +189,113 @@ nda_historic.1852 = { # An American Medium in London
 		}	
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { months = 24 }
 	
+	immediate = {
+		debug_log = "American Medium in London : [THIS.GetCountry.GetNameNoFormatting]" 
+		p:x7543C8 = {
+			state = {
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}
+					debug_log = "American Medium in London : [THIS.GetCountry.GetNameNoFormatting]" 
+					convert_population = { target = rel:nda_rel_spiritulism value = 0.05 }	
+					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritulism
+						months = 12
+						value = 0.005
+					}
+
+					every_neighbouring_state = {
+						set_variable = { # # ongoing conversion of neighbours
+							name = nda_rel_boost_spiritulism
+							months = 12
+							value = 0.005
+						}					
+					}				
+				
+				}
+
+			} 				
+		}
+	}
+
 	option = { 
 		name = nda_historic.1852.a
 		default_option = yes
 
 	}
 }
+
+nda_historic.1857 = { # Banner of Light
+	type = country_event
+	placement = p:x211ECF 
+	title = nda_historic.1857.t
+	desc = nda_historic.1857.d
+	flavor =  nda_historic.1857.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+ 		# 1857 1st published Boston 
+		game_date >= 1857.4 
+		game_date < 1858
+
+		# owner of Boston. or NEN
+		OR = {
+			p:x211ECF = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}	
+	}
+
+	cooldown = { months = 24 }	
+	
+	immediate = {
+		debug_log = "Banner of Light : [THIS.GetCountry.GetNameNoFormatting]" 
+		p:x211ECF = {
+			state = {
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}					
+					debug_log = "Banner of Light - add pop : [ROOT.GetCountry.GetNameNoFormatting]" 
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritulism
+						months = 12
+						value = 0.005
+					}
+
+					every_neighbouring_state = {
+						set_variable = { # # ongoing conversion of neighbours
+							name = nda_rel_boost_spiritulism
+							months = 12
+							value = 0.002
+						}					
+					}				
+				
+				}
+
+			} 				
+		}
+	}
+
+	option = { 
+		name = nda_historic.1857.a
+		default_option = yes
+
+	}
+}
+
 
 nda_historic.1862 = { # The Ghost Club
 	type = country_event
@@ -193,7 +320,7 @@ nda_historic.1862 = { # The Ghost Club
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
- 		# 1852 Mrs Hayden visits London 
+ 		# 1862 Ghost Club London 
 		game_date >= 1862 
 		game_date < 1863
 
@@ -207,7 +334,7 @@ nda_historic.1862 = { # The Ghost Club
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { months = 24 }	
 
 	immediate = {
 		p:x7543C8 = { # London
@@ -291,7 +418,7 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe! TODO
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { months = 24 }
 	
 	option = { 
 		name = nda_historic.1865.a
@@ -340,10 +467,95 @@ nda_historic.1875 = { # The Theosophical Society
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { months = 24 }
+
+	immediate = {
+		p:xE217B5 = {
+			state = {
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_theosophic }}
+					convert_population = { target = rel:nda_rel_theosophic value = 0.05 }	
+					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_theosophic
+						months = 12
+						value = 0.005
+					}
+
+					every_neighbouring_state = {
+						set_variable = { # # ongoing conversion of neighbours
+							name = nda_rel_boost_theosophic
+							months = 12
+							value = 0.005
+						}					
+					}
+				}
+			} 				
+		}
+	}
 
 	option = { #"Hope it does not spread"
 		name = nda_historic.1875.a
+		default_option = yes
+	}
+}
+
+#1879 - Theosophical Society moves to Madras!
+nda_historic.1879 = {
+	type = country_event
+	placement = p:x07104C # Madras 
+	title = nda_historic.1879.t
+	desc = nda_historic.1879.d
+	flavor =  nda_historic.1879.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+ 		# 1879 Theosophical Society moves to India
+		game_date >= 1879.4.1 
+		game_date < 1880 
+
+		# owner of Madras. or NEN
+		OR = {
+			p:x07104C = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+	}
+
+	cooldown = { months = 24 }	
+
+	immediate = {
+		p:x07104C = {
+			state = {
+				if = {
+					# do limited conversion unlike NY
+					limit = { NOT = { has_variable = nda_rel_boost_theosophic }}
+					#convert_population = { target = rel:nda_rel_theosophic value = 0.05 }	
+					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_theosophic
+						months = 12
+						value = 0.005
+					}
+				}
+			} 				
+		}
+	}
+
+	option = { #"Hope it does not spread"
+		name = nda_historic.1879.a
 		default_option = yes
 	}
 }
@@ -381,7 +593,7 @@ nda_historic.1882 = { # The Society for Psychical Research
 		}
 	}
 
-	cooldown = { months = 12 }	
+	cooldown = { months = 24 }	
 	
 	option = { 
 		name = nda_historic.1882.a
@@ -422,8 +634,33 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 		}
 	}
 
-	cooldown = { months = 12 }	
-	
+	cooldown = { months = 24 }	
+
+	immediate = {
+		p:xE217B5 = {
+			state = {
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_theosophic }}
+					convert_population = { target = rel:nda_rel_theosophic value = 0.05 }	
+					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_theosophic
+						months = 12
+						value = 0.005
+					}
+
+					every_neighbouring_state = {
+						set_variable = { # # ongoing conversion of neighbours
+							name = nda_rel_boost_theosophic
+							months = 12
+							value = 0.005
+						}					
+					}
+				}
+			} 				
+		}		
+	}
+
 	option = { #"Hope it does not spread"
 		name = nda_historic.1887.a
 		default_option = yes
@@ -463,7 +700,7 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement
 		} 
 	}
 
-	cooldown = { months = 12 }	
+	cooldown = { months = 24 }	
 	
 	option = { 
 		name = nda_historic.1888.a
@@ -504,7 +741,7 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { months = 24 }	
 	
 	option = { 
 		name = nda_historic.1889.a
@@ -544,7 +781,7 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic
 		}
 	}
 
-	cooldown = { months = 12 }	
+	cooldown = { months = 24 }	
 	
 	option = { 
 		name = nda_historic.1892.a

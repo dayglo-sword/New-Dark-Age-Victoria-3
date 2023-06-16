@@ -20,6 +20,7 @@ nda_monthly_on_action = {
 		nda_base.14	# Revolt Reset
 		nda_base.15 # Local Cult Ideology Clean
 		nda_base.20 # Request from the Devout
+		nda_base.30 # Leadership Check
 
 		nda_astro.10 # Party invite
 		nda_astro.1842 
@@ -74,9 +75,11 @@ nda_monthly_on_action = {
 		nda_historic.1848
 		nda_historic.1849
 		nda_historic.1852
+		nda_historic.1857 
 		nda_historic.1862
 		nda_historic.1865
-		nda_historic.1875		
+		nda_historic.1875
+		nda_historic.1879		
 		nda_historic.1882
 		nda_historic.1888
 		nda_historic.1887
@@ -118,11 +121,54 @@ nda_monthly_on_action = {
 
 			}
 			set_variable = nda_cult_leaderless
+			set_variable = { # player should assign leader in this time or else 
+				name = nda_cult_leaderless_timer
+				months = 3
+				value = yes
+			}
 			remove_variable = nda_cult_leader_debug
 		}
 		else = {
 			remove_variable = nda_cult_leaderless
+			remove_variable = nda_cult_leaderless_timer
 			set_variable = nda_cult_leader_debug
+		}
+	}
+}
+
+on_monthly_pulse_state = {
+	on_actions = {
+		nda_monthly_state_conversion_on_action	
+	}
+}
+
+nda_monthly_state_conversion_on_action = {
+	# state level ongoing religious and population conversions
+	effect = {
+		if = {
+			limit = { # Boost Spiritulism
+				has_variable = nda_rel_boost_spiritulism	
+			}
+			convert_population = { target = rel:nda_rel_spiritulism value = var:nda_rel_boost_spiritulism  }	
+		}
+		else_if = {
+			limit = { # Boost Theosophy
+				has_variable = nda_rel_boost_theosophic	
+			}
+			convert_population = { target = rel:nda_rel_theosophic value = var:nda_rel_boost_theosophic }	
+		}
+
+		if = {
+			limit = { # Boost Eldritch Cult
+				has_variable = nda_rel_boost_eldritch_cult	
+			}
+			convert_population = { target = rel:nda_rel_cultist value = var:nda_rel_boost_eldritch_cult  }
+		}
+		else_if = {
+			limit = { # Boost Eldritch Cult
+				has_variable = nda_rel_boost_yigian_cult	
+			}
+			convert_population = { target = rel:nda_rel_yigian value = var:nda_rel_boost_yigian_cult  }			
 		}
 	}
 }

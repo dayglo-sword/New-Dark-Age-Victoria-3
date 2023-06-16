@@ -40,6 +40,13 @@
 			remove_ideology = ideology_anti_slavery
 		}
 
+		# change Char religion 
+		every_interest_group = {
+			leader = {
+				change_character_religion = rel:nda_rel_cultist
+			}
+		}
+
 		# set (not so) secret goals and Strategy - need to check for existence
 		IF = {
 			limit = {
