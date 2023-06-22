@@ -183,7 +183,7 @@
 	
 	agitator_weight = {
 		# Agitators more likely to come from populist IG's rather than elitist
-		value = 1.0
+		value = 2.0
 		# Agitators will never be part of a marginalized IG - but these ones will!!!
 		# if = {
 		# 	limit = {

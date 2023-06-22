@@ -34,6 +34,11 @@
 			
 		}
 		
+		# rename devout to approprite name
+		ig:ig_devout = {
+			set_interest_group_name = ig_nda_non_cultist_church
+		}
+
 		# remove anti-slavery from intel and trade unions 
 		every_interest_group = {
 			limit = { has_ideology = ideology:ideology_anti_slavery }
