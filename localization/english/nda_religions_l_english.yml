@@ -16,11 +16,15 @@
 
  ig_nda_cult_worshippers:0 "Cult Worshippers"
  ig_nda_cult_worshippers_potential_tt:0 "Worships an Eldritch Cult"
+ ig_nda_normal_worshippers_potential_tt:0 "Follows a non-Cultist religion"
+ ig_nda_non_cult_worshippers_potential_tt:0 "Follows a non-Cultist religion in Cult Lands"
  ig_nda_cult_worshippers_only_icon:0 "@nda_cult!"
  ig_nda_cult_worshippers_desc:0 "Cultists who intent is to take over the world and summon the [concept_nda_old_ones] from their slumber."
 
  ig_nda_cultist_church:0 "High Coven of Cthulhu"
  ig_nda_cultist_church_desc:0 "The High Coven of Cthulhu is the ultimate arbiter of Cthulhu's will on Earth."
+ ig_nda_non_cultist_church:0 "Free Worshipers"
+ ig_nda_non_cultist_church_desc:0 "Non-Cultist worshippers of 'traditional' deities."
  ig_nda_dagonic_church:0 "High Church of Dagon"
  ig_nda_dagonic_church_desc:0 "The High Church of Dagon is the ultimate arbiter of Dagon's will on land."
  ig_nda_yigian_church:0 "High Church of Yig"
