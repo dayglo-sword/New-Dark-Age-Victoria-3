@@ -357,7 +357,7 @@ nda_dagon_acolyte = {
 			has_trait = nda_yig_acolyte
 			has_trait = nda_yig_master
 		}
-		owner = { 
+		owner ?= { 
 			has_variable = nda_dagon_in_open
 		}
 	}
@@ -409,7 +409,7 @@ nda_dagon_master = {
 			has_trait = nda_yig_acolyte
 			has_trait = nda_yig_master
 		}
-		owner = { 
+		owner ?= { 
 			has_variable = nda_dagon_in_open
 		}
 	}

@@ -507,6 +507,11 @@ nda_nen.20 = { # Devil Worship in Innsmouth
 
 	immediate = {
 		set_global_variable = innsmouth_cult	
+		set_variable = { # ongoing conversion
+			name = nda_rel_boost_dagonic_cult
+			months = 6
+			value = 0.001
+		}
 	}	
 	
 	option = { #"This will not do"
@@ -601,7 +606,11 @@ nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
 	cooldown = { months = 12 }
 
 	immediate = {
-	
+		set_variable = { # ongoing conversion
+			name = nda_rel_boost_eldritch_cult
+			months = 6
+			value = 0.001
+		}
 	}	
 
 	option = { #"A Bizarre Tale.."

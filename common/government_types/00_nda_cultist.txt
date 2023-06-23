@@ -15,8 +15,8 @@
 				c:ELD = ROOT
 			}
 			AND = {
-				exists = c:DAG
-				c:DAG = ROOT
+				exists = c:DGN
+				c:DGN = ROOT
 			}
 			AND = {
 				exists = c:YIG
@@ -50,8 +50,8 @@ gov_eldritch_junta = {
 				c:ELD = ROOT
 			}
 			AND = {
-				exists = c:DAG
-				c:DAG = ROOT
+				exists = c:DGN
+				c:DGN = ROOT
 			}
 			AND = {
 				exists = c:YIG
@@ -79,8 +79,8 @@ gov_eldritch_republic = {
 				c:ELD = ROOT
 			}
 			AND = {
-				exists = c:DAG
-				c:DAG = ROOT
+				exists = c:DGN
+				c:DGN = ROOT
 			}
 			AND = {
 				exists = c:YIG
@@ -108,8 +108,8 @@ gov_cult_controlled = {
 				c:ELD = ROOT
 			}
 			AND = {
-				exists = c:DAG
-				c:DAG = ROOT
+				exists = c:DGN
+				c:DGN = ROOT
 			}
 			AND = {
 				exists = c:YIG
@@ -140,8 +140,8 @@ ov_eldritch_cult = {
 				c:ELD = ROOT
 			}
 			AND = {
-				exists = c:DAG
-				c:DAG = ROOT
+				exists = c:DGN
+				c:DGN = ROOT
 			}
 			AND = {
 				exists = c:YIG
@@ -171,8 +171,8 @@ gov_eldritch_democracy = {
 				c:ELD = ROOT
 			}
 			AND = {
-				exists = c:DAG
-				c:DAG = ROOT
+				exists = c:DGN
+				c:DGN = ROOT
 			}
 			AND = {
 				exists = c:YIG

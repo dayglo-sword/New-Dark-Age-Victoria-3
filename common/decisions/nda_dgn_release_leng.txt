@@ -16,6 +16,80 @@
 		custom_tooltip = {
 			text = nda_dgn_release_leng_tooltip	
 
+			# release smaller states as per warlord breakup but without warlords
+			if = {
+				limit = { exists = s:STATE_HUNAN.region_state:DGN }
+				create_country = {
+					tag = HNA
+					origin = this
+					state = s:STATE_HUNAN.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make HNA Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_YUNNAN.region_state:DGN }
+				create_country = {  #Yunnan
+					tag = YUN
+					origin = this
+					state = s:STATE_YUNNAN.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make YUN Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_SHANXI.region_state:DGN }
+				create_country = {  #Shanxi
+					tag = SHN
+					origin = this
+					state = s:STATE_SHANXI.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make SHN Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_TUVA.region_state:DGN }
+				create_country = {
+					tag = TUV
+					origin = this
+					state = s:STATE_TUVA.region_state:DGN
+	
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make TUV Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
 			# release tibet - needs to be Leng?
 			c:TIB = {
 				make_independent = yes

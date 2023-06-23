@@ -35,10 +35,22 @@
 		ig:ig_nda_cult_worshippers = {
 			IF = {
 				limit = { 
+					NOT = { has_global_variable = nda_ritual_cthulhu_leaves }	
+					
 					NOT = { has_modifier = nda_ig_secret_masters_modifier } 
 				}
 				add_modifier = {
 					name = nda_ig_secret_masters_modifier
+				}
+			}
+			ELSE_IF = { # Post Cthulhu Debuff
+				limit = { 
+					has_global_variable = nda_ritual_cthulhu_leaves	
+					
+					NOT = { has_modifier = nda_ig_cult_crisis_modifier } 
+				}
+				add_modifier = {
+					name = nda_ig_cult_crisis_modifier 
 				}
 			}
 			# set leader to have appropriate traits
@@ -183,18 +195,18 @@
 	
 	agitator_weight = {
 		# Agitators more likely to come from populist IG's rather than elitist
-		value = 2.0
-		# Agitators will never be part of a marginalized IG - but these ones will!!!
-		# if = {
-		# 	limit = {
-		# 		owner.ig:ig_nda_cult_worshippers = {
-		# 			is_marginal = yes
-		# 		}
-		# 	}
-		# 	multiply = {
-		# 		value = 0
-		# 	}
-		# }
+		value = 3.0
+		# Agitators will never be part of a marginalized IG
+		if = {
+			limit = {
+				owner.ig:ig_nda_cult_worshippers = {
+					is_marginal = yes
+				}
+			}
+			multiply = {
+				value = 0
+			}
+		}
 	}
 
 	commander_weight = {

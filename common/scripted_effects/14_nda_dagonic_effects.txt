@@ -139,9 +139,20 @@ nda_effect_dagonic_annex = {
 				post_notification = nda_dagonic_shores_expand
 		}
 
+		scope:nda_dagonic_annex = {
+			debug_log = "DGN - Country surrenders : [THIS.GetCountry.GetNameNoFormatting]"
+				# release puppets and dominions - needs constraint to check if themselves not cultists
+				every_country = {
+					limit = {
+						is_subject_of = scope:nda_dagonic_annex
+						NOT = { country_has_primary_culture = cu:nda_cul_cultist }	# don't release - they want to be part of ELD		
+					}
+
+					make_independent = yes				
+				}				
+		}
 		annex = scope:nda_dagonic_annex
 
-		debug_log = "Dagonic - Country surrenders."		
 	}	
 	else = {
 		debug_log = "DGN - No Country surrenders."	
@@ -162,27 +173,38 @@ nda_effect_dagonic_influence = { # boost to dagonic influence in area
 			limit = { exists = THIS }
 			convert_population = { target = rel:nda_rel_cultist value = 0.02 }
 					
-			set_variable = { # ongoing conversion
-				name = nda_rel_boost_eldritch_cult
-				months = 12
-				value = 0.005
+			IF = {
+				limit= { is_coastal = yes } # only near sea
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_dagonic_cult
+					months = 12
+					value = 0.005
+				}
+				
+				# everyone of Dagonic Culture should follow Rite 
+				every_scope_pop = {
+					limit ={
+						culture = cu:nda_cul_dagonic
+					}
+					change_pop_religion = { target = rel:nda_rel_cultist value = 1 }			
+				}	
+				# everyone of DGN Religion should follow Rite 
+				every_scope_pop = {
+					limit ={
+						has_pop_religion = nda_rel_cultist
+						NOT = { culture = cu:nda_cul_dagonic }
+					}
+					change_pop_culture = { target = cu:nda_cul_dagonic value = 1 }			
+				}					
 			}
-
-			# everyone of Dagonic Culture should follow Rite 
-			every_scope_pop = {
-				limit ={
-					culture = cu:nda_cul_dagonic
-				}
-				change_pop_religion = { target = rel:nda_rel_cultist value = 1 }			
-			}	
-			# everyone of DGN Religion should follow Rite 
-			every_scope_pop = {
-				limit ={
-					has_pop_religion = nda_rel_cultist
-					NOT = { culture = cu:nda_cul_dagonic }
-				}
-				change_pop_culture = { target = cu:nda_cul_dagonic value = 1 }			
-			}				
+			ELSE = {
+				set_variable = { # ongoing conversion to normal cult
+					name = nda_rel_boost_eldritch_cult
+					months = 12
+					value = 0.005
+				}									
+			}
+			
 		}
 
 		# Mass Delusion		

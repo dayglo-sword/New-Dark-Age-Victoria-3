@@ -21,6 +21,7 @@ nda_monthly_on_action = {
 		nda_base.15 # Local Cult Ideology Clean
 		nda_base.20 # Request from the Devout
 		nda_base.30 # Leadership Check
+		nda_base.31 # Leadership Defy
 
 		nda_astro.10 # Party invite
 		nda_astro.1842 
@@ -163,12 +164,45 @@ nda_monthly_state_conversion_on_action = {
 				has_variable = nda_rel_boost_eldritch_cult	
 			}
 			convert_population = { target = rel:nda_rel_cultist value = var:nda_rel_boost_eldritch_cult  }
+			every_scope_pop = {
+				limit = {
+					has_pop_religion = nda_rel_cultist
+					NOT = { 
+						culture = cu:nda_cul_cultist
+						culture = cu:nda_cul_dagonic
+					}
+				}
+				change_pop_culture = { target = cu:nda_cul_cultist value = 1 }			
+			}
 		}
 		else_if = {
-			limit = { # Boost Eldritch Cult
+			limit = { # Boost Yigian Cult
 				has_variable = nda_rel_boost_yigian_cult	
 			}
-			convert_population = { target = rel:nda_rel_yigian value = var:nda_rel_boost_yigian_cult  }			
+			convert_population = { target = rel:nda_rel_yigian value = var:nda_rel_boost_yigian_cult  }		
+			every_scope_pop = {
+				limit = {
+					has_pop_religion = nda_rel_yigian
+					NOT = { culture = cu:nda_cul_yigian }
+				}
+				change_pop_culture = { target = cu:nda_cul_yigian value = 1 }			
+			}	
+		}
+		else_if = {
+			limit = { # Boost Dagonic Cult
+				has_variable = nda_rel_boost_dagonic_cult	
+			}
+			convert_population = { target = rel:nda_rel_cultist value = var:nda_rel_boost_dagonic_cult  }		
+			every_scope_pop = {
+				limit = {
+					has_pop_religion = nda_rel_cultist
+					NOT = { 
+						culture = cu:nda_cul_cultist
+						culture = cu:nda_cul_dagonic
+					}
+				}
+				change_pop_culture = { target = cu:nda_cul_dagonic value = 1 }			
+			}	
 		}
 	}
 }

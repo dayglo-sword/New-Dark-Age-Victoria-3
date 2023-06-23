@@ -88,7 +88,7 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 			state = {
 				if = {
 					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}
-					debug_log = "Founding of Spiritualist Movement - add pop : [ROOT.GetCountry.GetNameNoFormatting]" 
+					debug_log = "Founding of Spiritualist Movement - add pop" 
 					convert_population = { target = rel:nda_rel_spiritulism value = 0.05 }	
 					
 					set_variable = { # ongoing conversion
@@ -299,7 +299,7 @@ nda_historic.1857 = { # Banner of Light
 
 nda_historic.1862 = { # The Ghost Club
 	type = country_event
-	placement = p:x7543C8 #scope:spiritulist_state
+	placement = p:x7543C8 
 	title = nda_historic.1862.t
 	desc = nda_historic.1862.d
 	flavor =  nda_historic.1862.f
@@ -562,7 +562,7 @@ nda_historic.1879 = {
 
 nda_historic.1882 = { # The Society for Psychical Research
 	type = country_event
-	placement = p:x7543C8 #scope:spiritulist_state
+	placement = p:x7543C8 
 	title = nda_historic.1882.t
 	desc = nda_historic.1882.d
 	flavor =  nda_historic.1882.f

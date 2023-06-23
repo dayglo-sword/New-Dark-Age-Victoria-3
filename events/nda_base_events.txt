@@ -1532,17 +1532,24 @@ nda_base.30 = { # Cult is leaderless
 		OR = {
 			any_overlord_or_above = {
 				has_variable = nda_cultists_in_open
+				any_scope_character = { # Must have leader to do the complaint
+					has_variable = nda_coven_leader
+				}
+			}
+			AND = {
+				exists = c:ELD	
+				c:ELD = {
+					any_scope_character = { # Must have leader to do the complaint
+						has_variable = nda_coven_leader
+					}
+				}				
 			}	
-			exists = c:ELD		
 		}
-
 	}
 
 	cooldown = { months = 12 }
 
 	immediate = {
-		set_variable = nda_cult_leaderless_warning
-
 		random_country = {
 			limit = {
 				OR = {
@@ -1581,6 +1588,12 @@ nda_base.30 = { # Cult is leaderless
 		default_option = yes
 
 		set_variable = nda_pander_cults
+
+		set_variable = { # player should assign leader in this time or else 
+			name = nda_cult_pander_timer
+			months = 3
+			value = yes
+		}
 	}
 
 	option = { #"Defy"
@@ -1598,4 +1611,100 @@ nda_base.30 = { # Cult is leaderless
 
 		set_variable = nda_defy_cults
 	}
+}
+
+nda_base.31 = { # Pandered to cult but failed to add leader - worse than normal defy
+	type = country_event
+	placement = ROOT
+	title = nda_base.31.t
+	desc = nda_base.31.d
+	flavor =  nda_base.31.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	trigger = {
+ 		is_player = yes # for players only
+		has_variable = nda_cult_leaderless # still no leader!
+		has_variable = nda_pander_cults
+		NOT = { has_variable = nda_cult_pander_timer } # for some time
+		# Big boss exists else overlord is cultist
+		OR = {
+			any_overlord_or_above = {
+				has_variable = nda_cultists_in_open
+				any_scope_character = { # Must have leader to do the complaint
+					has_variable = nda_coven_leader
+				}
+			}
+			AND = {
+				exists = c:ELD	
+				c:ELD = {
+					any_scope_character = { # Must have leader to do the complaint
+						has_variable = nda_coven_leader
+					}
+				}				
+			}	
+		}
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		random_country = {
+			limit = {
+				OR = {
+					# is an overlord
+					AND = {
+						has_variable = nda_cultists_in_open
+						has_subject_relation_with = ROOT
+						NOT = { is_subject_of = ROOT }						
+					}
+					# or is big bad
+					AND = {
+						EXISTS = c:ELD
+						THIS = c:ELD						
+					}
+				}
+				any_scope_character = { # Must have leader to do the complaint
+					has_variable = nda_coven_leader
+				}
+			}
+
+			save_scope_as = nda_warning_country
+
+			# get cult leader
+			random_scope_character = {
+				limit = {
+					has_variable = nda_coven_leader
+				 }
+				 save_scope_as = nda_warning_leader
+			}
+		}
+
+		
+		# annoy the overlord badly
+		change_relations = { 
+			country = scope:nda_warning_country 
+			value = -200 
+		}
+
+		# upset local cultists	
+		add_radicals = { value = 0.3 religion = rel:nda_rel_cultist } 
+		add_radicals = { value = 0.3 culture = cu:nda_cul_cultist }
+	
+	}	
+	
+	option = { #"Too Late Now"
+		name = nda_base.31.a
+		default_option = yes
+	}
+
 }

@@ -12,8 +12,31 @@
 				name = nda_dark_skies_modifier
 			}
 
-		}
+			# Cultists everywhere!
+			convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+					
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_eldritch_cult
+				months = 12
+				value = 0.005
+			}
 
+			# everyone of Eldritch Culture should follow Rite 
+			every_scope_pop = {
+				limit = {
+					culture = cu:nda_cul_cultist
+				}
+				change_pop_religion = { target = rel:nda_rel_cultist value = 1 }			
+			}	
+			# everyone of Eldritch Rite should be Cultists
+			every_scope_pop = {
+				limit = {
+					has_pop_religion = nda_rel_cultist
+					NOT = { culture = cu:nda_cul_cultist }
+				}
+				change_pop_culture = { target = cu:nda_cul_cultist value = 1 }			
+			}			
+		}
 
 		if = { # cultists outside cult country
 			limit = {
@@ -227,8 +250,8 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				change_relations = { country = c:YIG value = -100 }
 			}
 			if = {
-				limit = { exists = c:DAG}
-				change_relations = { country = c:DAG value = -100 }
+				limit = { exists = c:DGN}
+				change_relations = { country = c:DGN value = -100 }
 			}
 		}
 		else = { # not cultists  - make happier
@@ -265,8 +288,8 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				change_relations = { country = c:YIG value = -100 }
 			}
 			if = {
-				limit = { exists = c:DAG }
-				change_relations = { country = c:DAG value = -100 }
+				limit = { exists = c:DGN }
+				change_relations = { country = c:DGN value = -100 }
 			}
 
 			# remove any cultist homelands and claims

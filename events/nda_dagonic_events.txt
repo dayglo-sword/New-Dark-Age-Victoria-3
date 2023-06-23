@@ -123,9 +123,11 @@ nda_dagonic.2 = { # Cult in country converts to dagonic - called from journal 'j
 					}
 					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
 				}
-				# convert general pop
-				every_scope_pop = {
-					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.05 }
+
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_dagonic_cult
+					months = 12
+					value = 0.005
 				}
 			}
 			# Change IG name - IG Should already exist
@@ -293,6 +295,17 @@ nda_dagonic.5 = {
 		debug_log_scopes = yes
 		add_modifier = {
 			name = nda_dagonic_state_modifier
+		}
+
+		#boost dagonic cult a bit in gratitude
+		IF = {
+			limit = { NOT = { has_variable = nda_rel_boost_dagonic_cult }}
+
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_dagonic_cult
+				months = 12
+				value = 0.005
+			}			
 		}
 	}
 	option = {
