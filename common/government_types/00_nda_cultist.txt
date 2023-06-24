@@ -9,20 +9,7 @@
 	
 	possible = {
 		#has_law = law_type:law_monarchy
-		OR = {
-			AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-			}
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-		}
+		is_full_cult_country = { COUNTRY="THIS" } 
 		ruler = { has_variable = nda_coven_leader}
 	}		
 
@@ -38,26 +25,14 @@ gov_eldritch_junta = {
 	female_ruler = "RULER_TITLE_GRAND_ARCHON"
 	
 	possible = {
+		
 		has_law = law_type:law_presidential_republic
 		country_has_voting_franchise = no
 		OR = {
 			has_law = law_type:law_mass_conscription
 			has_law = law_type:law_professional_army
 		}
-		OR = {
-			AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-			}
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-		}
+		is_full_cult_country = { COUNTRY="THIS" } 
 	}
 
 	on_government_type_change = {
@@ -73,20 +48,7 @@ gov_eldritch_republic = {
 	
 	possible = {
 		has_law = law_type:law_presidential_republic
-		OR = {
-			AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-			}
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-		}
+		is_full_cult_country = { COUNTRY="THIS" } 
 	}
 
 	on_government_type_change = {
@@ -102,20 +64,7 @@ gov_cult_controlled = {
 	
 	possible = {
 		has_law = law_type:law_theocracy
-		OR = {
-			AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-			}
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-		}
+		is_full_cult_country = { COUNTRY="THIS" } 
 	}
 
 	on_government_type_change = {
@@ -123,31 +72,17 @@ gov_cult_controlled = {
 	}
 }
 
-ov_eldritch_cult = {
+gov_eldritch_cult = {
 	transfer_of_power = hereditary
 	
 	male_ruler = "RULER_TITLE_ARCHON"
 	female_ruler = "RULER_TITLE_ARCHON"
 
-	male_heir = ""
-	female_heir = ""
+	male_heir = "RULER_TITLE_ARCHON"
+	female_heir = "RULER_TITLE_ARCHON"
 	
 	possible = {
-		#has_law = law_type:law_monarchy
-		OR = {
-			AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-			}
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-		}
+		is_full_cult_country = { COUNTRY="THIS" } 
 	}		
 
 	on_government_type_change = {
@@ -165,20 +100,7 @@ gov_eldritch_democracy = {
 	possible = {
 		has_law = law_type:law_parliamentary_republic
 		country_has_voting_franchise = yes
-		OR = {
-			AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-			}
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-		}
+		is_full_cult_country = { COUNTRY="THIS" } 
 	}
 
 	on_government_type_change = {

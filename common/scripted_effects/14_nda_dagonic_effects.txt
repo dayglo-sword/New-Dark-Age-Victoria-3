@@ -13,6 +13,11 @@
 
 		# set state religion
 		set_state_religion = rel:nda_rel_cultist
+
+		# change to absolute Monarchy
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy
+
 		# make recognized if not already
 		set_country_type = recognized
 
@@ -178,7 +183,7 @@ nda_effect_dagonic_influence = { # boost to dagonic influence in area
 				set_variable = { # ongoing conversion
 					name = nda_rel_boost_dagonic_cult
 					months = 12
-					value = 0.005
+					value = nda_small_conversion
 				}
 				
 				# everyone of Dagonic Culture should follow Rite 
@@ -201,7 +206,7 @@ nda_effect_dagonic_influence = { # boost to dagonic influence in area
 				set_variable = { # ongoing conversion to normal cult
 					name = nda_rel_boost_eldritch_cult
 					months = 12
-					value = 0.005
+					value = nda_small_conversion
 				}									
 			}
 			
@@ -313,7 +318,7 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 			set_variable = { # ongoing conversion
 				name = nda_rel_boost_eldritch_cult
 				months = 12
-				value = 0.005
+				value = nda_small_conversion
 			}
 
 			# everyone of Eldritch Culture should follow Rite 

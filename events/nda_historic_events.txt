@@ -94,14 +94,14 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 					set_variable = { # ongoing conversion
 						name = nda_rel_boost_spiritulism
 						months = 12
-						value = 0.005
+						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
 							name = nda_rel_boost_spiritulism
 							months = 12
-							value = 0.005
+							value = nda_small_conversion
 						}					
 					}							
 				}
@@ -203,14 +203,14 @@ nda_historic.1852 = { # An American Medium in London
 					set_variable = { # ongoing conversion
 						name = nda_rel_boost_spiritulism
 						months = 12
-						value = 0.005
+						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
 							name = nda_rel_boost_spiritulism
 							months = 12
-							value = 0.005
+							value = nda_small_conversion
 						}					
 					}				
 				
@@ -268,18 +268,18 @@ nda_historic.1857 = { # Banner of Light
 			state = {
 				if = {
 					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}					
-					debug_log = "Banner of Light - add pop : [ROOT.GetCountry.GetNameNoFormatting]" 
+					debug_log = "Banner of Light - add pop" 
 					set_variable = { # ongoing conversion
 						name = nda_rel_boost_spiritulism
 						months = 12
-						value = 0.005
+						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
 							name = nda_rel_boost_spiritulism
 							months = 12
-							value = 0.002
+							value = nda_trivial_conversion
 						}					
 					}				
 				
@@ -474,19 +474,19 @@ nda_historic.1875 = { # The Theosophical Society
 			state = {
 				if = {
 					limit = { NOT = { has_variable = nda_rel_boost_theosophic }}
-					convert_population = { target = rel:nda_rel_theosophic value = 0.05 }	
+					convert_population = { target = rel:nda_rel_theosophic value = nda_medium_conversion }	
 					
 					set_variable = { # ongoing conversion
 						name = nda_rel_boost_theosophic
 						months = 12
-						value = 0.005
+						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
 							name = nda_rel_boost_theosophic
 							months = 12
-							value = 0.005
+							value = nda_small_conversion
 						}					
 					}
 				}
@@ -547,7 +547,7 @@ nda_historic.1879 = {
 					set_variable = { # ongoing conversion
 						name = nda_rel_boost_theosophic
 						months = 12
-						value = 0.005
+						value = nda_small_conversion
 					}
 				}
 			} 				
@@ -646,14 +646,14 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 					set_variable = { # ongoing conversion
 						name = nda_rel_boost_theosophic
 						months = 12
-						value = 0.005
+						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
 							name = nda_rel_boost_theosophic
 							months = 12
-							value = 0.005
+							value = nda_small_conversion
 						}					
 					}
 				}

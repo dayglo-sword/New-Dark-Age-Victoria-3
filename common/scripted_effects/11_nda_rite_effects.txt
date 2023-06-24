@@ -13,7 +13,7 @@
 			set_variable = { # ongoing conversion
 				name = nda_rel_boost_eldritch_cult
 				months = 12
-				value = 0.005
+				value = nda_small_conversion
 			}
 
 			# everyone of Eldritch Culture should follow Rite 

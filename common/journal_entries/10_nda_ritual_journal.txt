@@ -92,7 +92,7 @@
 	}
 
 	goal_add_value = {
-		add = 5000 # 20 years? depending on helpers and how soon ELD appears
+		add = nda_ritual_goal_value # 20 years? depending on helpers and how soon ELD appears
 	}
 
     fail = {
@@ -175,7 +175,7 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 	}
 
 	goal_add_value = {
-		add = 5000 # 20 years? depending on helpers
+		add = nda_ritual_goal_value # 20 years? depending on helpers
 	}
 
     fail = {

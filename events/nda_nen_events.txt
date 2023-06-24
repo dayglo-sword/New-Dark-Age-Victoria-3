@@ -510,7 +510,7 @@ nda_nen.20 = { # Devil Worship in Innsmouth
 		set_variable = { # ongoing conversion
 			name = nda_rel_boost_dagonic_cult
 			months = 6
-			value = 0.001
+			value = nda_trivial_conversion
 		}
 	}	
 	
@@ -609,7 +609,7 @@ nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
 		set_variable = { # ongoing conversion
 			name = nda_rel_boost_eldritch_cult
 			months = 6
-			value = 0.001
+			value = nda_trivial_conversion
 		}
 	}	
 

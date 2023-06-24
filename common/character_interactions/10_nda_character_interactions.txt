@@ -109,6 +109,13 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 		value = 5
 		if = {
 			limit = {
+				is_ruler = yes # boost for ruler, chance to be 'Grand Archon'			
+			}
+
+			add = 20
+		}	
+		if = {
+			limit = {
 				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # nmore chance if cult IG			
 			}
 
@@ -141,7 +148,7 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 		}
 		if = { # slow down after cthulhu leaves
 			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
-			add = -10
+			add = -20
 		}	
 	}
 }

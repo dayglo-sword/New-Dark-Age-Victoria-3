@@ -1,3 +1,24 @@
+Version v1.3.5
+Works with patch v1.3.5
+Mainly a 'Religious' Rework
+
+Add new 'historic' beliefs - Spiritulism and Theosophy.
+New mechanism for Religious and Cult Spread.
+Character Interactions to recruit / promote them within the Cult
+Change Devout IG to be non-Cult only. Change Devout name in Cult countries.
+Extra 'Historic' events and additional text and actions associated with existing events.
+'Ruination' decisions and events for when Cult owns the Vatican, St Peters, or Hagia Sophia
+Add new Title for leader of Cult country.
+Prevent politically powerful Cults from being purged.
+Decision for Cult country takeover if Cult IG is powerful.
+Cult Crisis IG modifier after Cthulhu leaves.
+Add progress bar on 'Assist Ritual' journal. 
+
+Bug Fixes
+Correct DAG references to DGN
+
+------
+
 Version v1.3
 Works with current main game version 1.3, with Agitator Compatible game play.
 

@@ -13,6 +13,10 @@
 		# set state religion
 		set_state_religion = rel:nda_rel_cultist
 		
+		# change to Oligarchy Monarchy
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_oligarchy
+
 		# set devout to be cultists and to be power brokers
 		ig:ig_nda_cult_worshippers = {
 			set_interest_group_name = ig_nda_cultist_church

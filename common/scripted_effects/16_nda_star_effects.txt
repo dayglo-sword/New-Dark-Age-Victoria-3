@@ -9,7 +9,7 @@
 			is_decaying = yes
 		}
 		# Fatalities from close passage
-		kill_population_percent_in_state = { percent = 5 }
+		kill_population_percent_in_state = { percent = 15 }
 	}
 
 	scope:nda_star_epicentre = {
@@ -20,7 +20,7 @@
 				is_decaying = yes
 			}	
 			# Fatalities from close passage
-			kill_population_percent_in_state = { percent = 2 }  		
+			kill_population_percent_in_state = { percent = 5 }  		
 		}		
 	}
 
@@ -33,7 +33,7 @@
 			is_decaying = yes
 		}
 		# Tsunami fatalities
-		kill_population_percent_in_state = { percent = 1 } 
+		kill_population_percent_in_state = { percent = 2 } 
 	}
 
 	# scorch all states not already hit
