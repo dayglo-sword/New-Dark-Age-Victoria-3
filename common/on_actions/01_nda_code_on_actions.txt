@@ -47,14 +47,14 @@ nda_monthly_on_action = {
 		nda_dagonic.3 # Dagonic Shores Proclaimed
 
 
-		nda_nen.10 # Founding of Miskatonic Uni
-		nda_nen.11 # Plague in Arkham
-		nda_nen.13 # Dr West - Breakthrough
-		nda_nen.14 # Dr West - End
-		nda_nen.15 # Dr West - Denouncement
-		nda_nen.20 # Cult in Innsmouth
-		nda_nen.21 # Plague in Innsmouth
+		nda_nen.1842 # Founding of Miskatonic Uni
+		nda_nen.1903 # Plague in Arkham
+		nda_nen.1918 # Dr West - Breakthrough
+		nda_nen.1920 # Dr West - End	
+		nda_nen.1845 # Cult in Innsmouth
+		nda_nen.1846 # Plague in Innsmouth
 		nda_nen.1844 # Church of Starry Wisdom
+		nda_nen.1877 # Starry Wisdom Controversy
 		nda_nen.1882 # Colour - Strange Meteor
 		nda_nen.1883 # Colour - Strange Fruit
 		nda_nen.1913 # Maine Meteor - The Green Meadow
@@ -220,7 +220,7 @@ nda_half_yearly_on_action = {
 		nda_dagonic.4 # Bounty of the Seas
 		nda_dagonic.6 # Fury of Dagon
 		nda_hasturian.8 # The Play Fades
-		nda_nen.15 # From the Future
+		nda_nen.1934 # Dr West - Denouncement
 		nda_nen.17 # Reanimated Spreads
 		nda_nen.16 # Reanimated Plague Starts
 	}

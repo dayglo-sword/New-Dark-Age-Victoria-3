@@ -1,4 +1,4 @@
-﻿nda_effect_cthulhu_arrives = { # Used at end of Ritual
+﻿nda_effect_cthulhu_arrives = { # Used as end result after Ritual
 	# everywhere
 	every_country = {
 		every_scope_state = {
@@ -13,7 +13,12 @@
 			}
 
 			# Cultists everywhere!
-			convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+			if = { limit = { is_capital = yes }  # boost in capital
+				convert_population = { target = rel:nda_rel_cultist value = 0.05 }			
+			}
+			else = {
+				convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+			}
 					
 			set_variable = { # ongoing conversion
 				name = nda_rel_boost_eldritch_cult
@@ -32,7 +37,10 @@
 			every_scope_pop = {
 				limit = {
 					has_pop_religion = nda_rel_cultist
-					NOT = { culture = cu:nda_cul_cultist }
+					NOT = { 
+						culture = cu:nda_cul_cultist 
+						culture = cu:nda_cul_dagonic
+					}
 				}
 				change_pop_culture = { target = cu:nda_cul_cultist value = 1 }			
 			}			
@@ -48,7 +56,7 @@
 			every_scope_culture = {
 				if = {
 					limit = {
-						NOT = {
+						OR = {
 							THIS = cu:nda_cul_cultist
 							THIS = cu:nda_cul_yigian
 							THIS = cu:nda_cul_dagonic
@@ -87,7 +95,7 @@
 					# Make cultists in cult lands happy!
 					ROOT = {
 						add_loyalists = {
-							value = 0.5
+							value = 1
 							culture = THIS
 						}
 					}				

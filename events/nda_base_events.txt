@@ -459,7 +459,12 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 					add_homeland = nda_cul_cultist
 				}
 
-				convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+				if = { limit = { is_capital = yes }  # boost in capital
+					convert_population = { target = rel:nda_rel_cultist value = 0.05 }			
+				}
+				else = {
+					convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+				}
 					
 				set_variable = { # ongoing conversion
 					name = nda_rel_boost_eldritch_cult
@@ -1635,6 +1640,7 @@ nda_base.31 = { # Pandered to cult but failed to add leader - worse than normal 
  		is_player = yes # for players only
 		has_variable = nda_cult_leaderless # still no leader!
 		has_variable = nda_pander_cults
+		NOT = { has_variable =  nda_defy_cults} # not really needed but stops log errors
 		NOT = { has_variable = nda_cult_pander_timer } # for some time
 		# Big boss exists else overlord is cultist
 		OR = {

@@ -111,7 +111,6 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 			limit = {
 				is_ruler = yes # boost for ruler, chance to be 'Grand Archon'			
 			}
-
 			add = 20
 		}	
 		if = {
@@ -121,11 +120,16 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 
 			add = 15
 		}
+		if = { # Devout should be in opposition 
+			limit = { 
+				interest_group = { is_interest_group_type = ig_devout } 
+			}
+			add = -20
+		}	
 		if = {
 			limit = {
 				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
 			}
-
 			add = 10
 		}		
 		if = {
@@ -135,8 +139,7 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 					has_trait = nda_acolyte
 					has_trait = nda_dagon_acolyte
 					has_trait = nda_yig_acolyte
-				}
-				
+				}			
 			}
 			add = 10
 		}

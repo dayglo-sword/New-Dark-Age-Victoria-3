@@ -29,10 +29,11 @@ nda_cultist = {
 				has_trait = nda_master
 			} 
 		}
+		exists = owner
 		owner = { 
 			has_variable = nda_cultists_in_open
 			NOT = {has_variable = nda_yig_in_open}
-		}
+		}			
 	}
 	
 	weight = 1
@@ -68,6 +69,7 @@ nda_acolyte = {
 	
 	possible = {
 		NOT = { has_trait = nda_master }
+		exists = owner
 		owner = { 
 			has_variable = nda_cultists_in_open
 			NOT = { has_variable = nda_yig_in_open }
@@ -112,6 +114,7 @@ nda_master = {
 	}
 
 	possible = {
+		exists = owner
 		owner = { 
 			has_variable = nda_cultists_in_open
 			NOT = {has_variable = nda_yig_in_open}
@@ -164,6 +167,7 @@ nda_yig_cultist = {
 				has_trait = nda_dagon_master
 			} 
 		}
+		exists = owner
 		owner = { 
 			has_variable = nda_yig_in_open
 		}
@@ -208,6 +212,7 @@ nda_yig_acolyte = {
 			has_trait = nda_dagon_acolyte
 			has_trait = nda_dagon_master
 		}
+		exists = owner
 		owner = { 
 			has_variable = nda_yig_in_open
 		}
@@ -257,6 +262,7 @@ nda_yig_master = {
 			has_trait = nda_dagon_acolyte
 			has_trait = nda_dagon_master
 		}
+		exists = owner
 		owner = { 
 			has_variable = nda_yig_in_open
 		}
@@ -312,6 +318,7 @@ nda_dagon_cultist = {
 				has_trait = nda_yig_master
 			} 
 		}
+		exists = owner
 		owner = { 
 			has_variable = nda_dagon_in_open
 		}
@@ -357,7 +364,8 @@ nda_dagon_acolyte = {
 			has_trait = nda_yig_acolyte
 			has_trait = nda_yig_master
 		}
-		owner ?= { 
+		exists = owner
+		owner = { 
 			has_variable = nda_dagon_in_open
 		}
 	}
@@ -409,7 +417,8 @@ nda_dagon_master = {
 			has_trait = nda_yig_acolyte
 			has_trait = nda_yig_master
 		}
-		owner ?= { 
+		exists = owner
+		owner = { 
 			has_variable = nda_dagon_in_open
 		}
 	}

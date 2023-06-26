@@ -8,10 +8,10 @@ Timeline of events in mod
 
 1842.1      nda_astro.1842      Conjunction 1
 1842.3		nda_cas.10			Holiness of Azedarac
-1842.6      nda_nen.10          Founding of Miskatonic Uni
+1842.6      nda_nen.1842        Founding of Miskatonic Uni
 1844.7      nda_nen.1844        Church of Starry Wisdom.
-1845.9      nda_nen.20          Devil Worship in Innsmouth, Captain Marsh
-1846.3      nda_nen.21          Plague in Innsmouth
+1845.9      nda_nen.1845        Devil Worship in Innsmouth, Captain Marsh
+1846.3      nda_nen.1846        Plague in Innsmouth
 1848.4      nda_historic.1848   Founding of Spiritualist Movement
 1849.10     nda_historic.1849   Death of Poe
 
@@ -21,7 +21,7 @@ Timeline of events in mod
 1862.1      nda_historic.1862   London - The Ghost Club
 1865.6      nda_historic.1865   Zetetic Astronomy - Earth is not a globe!
 1875.4      nda_historic.1875   NY - The Theosophical Society
-
+1877.3      nda_nen.1877        Starry Wisdom - Close Down
 1881.4      nda_astro.1881      Conjunction 3
 1882.1      nda_historic.1882   London - The Society for Psychical Research
 1882.6      nda_nen.1882        The Colour Out Of Space
@@ -38,7 +38,7 @@ Timeline of events in mod
 
 1901        nda_whh.1           House on the Borderlands
 1901.11     nda_astro.1901      Conjunction 4
-1903.1      nda_nen.11          Herbert West - Appeal for reinstatement
+1903.1      nda_nen.1903        Herbert West - Appeal for reinstatement
 1903.6      nda_nen.12          Plague in Arkham
 1904        nda_whh.11          Carnacki the Ghost Finder
 1906        nda_whh.12          Carnacki Asylum Request
@@ -47,8 +47,8 @@ Timeline of events in mod
 1910.1      nda_astro.1910      Great Comet 2
 1910.8      nda_ritual.4        Cthulhu Leaves Early
 1913.9      nda_nen.1913        Green Meadow - Maine Meteor
-1918.1      nda_nen.13          Herbert West - Research breakthrough  
-1920.1      nda_nen.14          Herbert West - Disappearence 
+1918.1      nda_nen.1918        Herbert West - Research breakthrough  
+1920.1      nda_nen.1920        Herbert West - Disappearence 
 1921.9      nda_astro.1921      Conjunction 5
 1922.8      nda_nen.1922        Horror at Martin's Beach
 1925.3      nda_ritual.1        Cthulhu Returns

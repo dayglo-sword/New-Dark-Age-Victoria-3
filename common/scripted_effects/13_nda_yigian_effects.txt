@@ -162,8 +162,13 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 		every_scope_state = {
 			limit = { exists = THIS }
 
-			convert_population = { target = rel:nda_rel_yigian value = 0.02 }
-					
+			if = { limit = { is_capital = yes }  # boost in capital
+				convert_population = { target = rel:nda_rel_yigian value = 0.05 }			
+			}
+			else = {
+				convert_population = { target = rel:nda_rel_yigian value = 0.02 }
+			}
+
 			set_variable = { # ongoing conversion
 				name = nda_rel_boost_yigian_cult
 				months = 12

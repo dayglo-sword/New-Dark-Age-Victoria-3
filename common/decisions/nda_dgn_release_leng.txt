@@ -36,6 +36,23 @@
 				}
 			}
 			if = {
+				limit = { exists = s:STATE_GUANGXI.region_state:DGN }
+				create_country = { #Guangxi
+					tag = GNG
+					origin = this
+					state = s:STATE_GUANGXI.region_state:DGN
+					on_created = {
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make GNG Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
 				limit = { exists = s:STATE_YUNNAN.region_state:DGN }
 				create_country = {  #Yunnan
 					tag = YUN
@@ -66,6 +83,24 @@
 								is_cultist_country = no
 							}
 							debug_log = "Make SHN Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_GUIZHOU.region_state:DGN }
+				create_country = { #Guizhou
+					tag = GUI
+					origin = this
+					state = s:STATE_GUIZHOU.region_state:DGN
+	
+					on_created = {
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make GUI Cultist"
 							trigger_event = { id = nda_base.7 }		
 						}
 					}

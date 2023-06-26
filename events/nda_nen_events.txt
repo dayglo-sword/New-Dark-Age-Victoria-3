@@ -8,12 +8,12 @@
 
 # Miskatonic Uni - Library and Herbert West - start events at #10
 
-nda_nen.10 = { # Founding of Library
+nda_nen.1842 = { # Founding of Library
 	type = country_event #state_event
 	placement = p:x2B5499 #scope:university_state
-	title = nda_nen.10.t
-	desc = nda_nen.10.d
-	flavor =  nda_nen.10.f
+	title = nda_nen.1842.t
+	desc = nda_nen.1842.d
+	flavor =  nda_nen.1842.f
 
 	duration = 3
 
@@ -51,7 +51,7 @@ nda_nen.10 = { # Founding of Library
 	}	
 	
 	option = { #"Accept donations and build Library"
-		name = nda_nen.10.a
+		name = nda_nen.1842.a
 		default_option = yes
 		
 		ai_chance = { # should be most likely
@@ -89,7 +89,7 @@ nda_nen.10 = { # Founding of Library
 	}
 
 	option = { #"Build Statue instead"
-		name = nda_nen.10.b
+		name = nda_nen.1842.b
 
 		ai_chance = { # could always do something daft
 			base = 20		
@@ -101,12 +101,12 @@ nda_nen.10 = { # Founding of Library
 }
 
 #94140 - Appeal for reinstatement
-nda_nen.11 = { # Appeal for reinstatement
+nda_nen.1903 = { # Appeal for reinstatement
 	type = country_event
 	placement = p:x2B5499
-	title = nda_nen.11.t
-	desc = nda_nen.11.d
-	flavor =  nda_nen.11.f
+	title = nda_nen.1903.t
+	desc = nda_nen.1903.d
+	flavor =  nda_nen.1903.f
 
 	duration = 3
 
@@ -144,7 +144,7 @@ nda_nen.11 = { # Appeal for reinstatement
 	}	
 	
 	option = { #" Of course"
-		name = nda_nen.11.a
+		name = nda_nen.1903.a
 		default_option = yes
 
 		# main stream herbert
@@ -155,7 +155,7 @@ nda_nen.11 = { # Appeal for reinstatement
 	}
 
 	option = { #"no we will not"
-		name = nda_nen.11.b
+		name = nda_nen.1903.b
 		debug_log = "Herbert West Expelled" # End of Story? NO of cource not!
 
 		#trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham
@@ -185,7 +185,7 @@ nda_nen.12 = { # Plague in Arkham
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	trigger = {
- 		# from event nda_nen.11 
+ 		# from event nda_nen.1903 
 	}
 
 	immediate = {
@@ -205,12 +205,12 @@ nda_nen.12 = { # Plague in Arkham
 
 }
 #94142 - Research breakthrough
-nda_nen.13 = { # 
+nda_nen.1918 = { # 
 	type = country_event
 	placement = p:x2B5499
-	title = nda_nen.13.t
-	desc = nda_nen.13.d
-	flavor =  nda_nen.13.f
+	title = nda_nen.1918.t
+	desc = nda_nen.1918.d
+	flavor =  nda_nen.1918.f
 
 	duration = 3
 
@@ -246,7 +246,7 @@ nda_nen.13 = { #
 	}	
 	
 	option = { #"We must back this"
-		name = nda_nen.13.a
+		name = nda_nen.1918.a
 		default_option = yes
 		
 		# enable decision 'tonic for the troops'
@@ -256,7 +256,7 @@ nda_nen.13 = { #
 		debug_log = "Herbert West Successful"
 	}
 	option = { #"Is it too late to stop him?"
-		name = nda_nen.13.b
+		name = nda_nen.1918.b
 		default_option = yes
 
 		# Do nothing
@@ -267,12 +267,12 @@ nda_nen.13 = { #
 
 
 #94143 - Disappearence of Dr West
-nda_nen.14 = { # Disappearence of Dr West
+nda_nen.1920 = { # Disappearence of Dr West
 	type = country_event
 	placement = scope:university_state
-	title = nda_nen.14.t
-	desc = nda_nen.14.d
-	flavor =  nda_nen.14.f
+	title = nda_nen.1920.t
+	desc = nda_nen.1920.d
+	flavor =  nda_nen.1920.f
 
 	duration = 3
 
@@ -307,7 +307,7 @@ nda_nen.14 = { # Disappearence of Dr West
 	}	
 	
 	option = { #" A tragic event"
-		name = nda_nen.14.a
+		name = nda_nen.1920.a
 		default_option = yes
 
 		debug_log = "Herbert West End"
@@ -316,12 +316,12 @@ nda_nen.14 = { # Disappearence of Dr West
 }
 
 
-nda_nen.15 = { # End Herbert West with warning from the future - Actually a homage to Clark Ashton Smith
+nda_nen.1934 = { # End Herbert West with warning from the future - Actually a homage to Clark Ashton Smith
 	type = country_event
 	placement = ROOT 
-	title = nda_nen.15.t
-	desc = nda_nen.15.d
-	flavor =  nda_nen.15.f
+	title = nda_nen.1934.t
+	desc = nda_nen.1934.d
+	flavor =  nda_nen.1934.f
 
 	duration = 3
 
@@ -337,7 +337,7 @@ nda_nen.15 = { # End Herbert West with warning from the future - Actually a homa
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	trigger = {
-		game_date >= 1935  # 
+		game_date >= 1934  # 
 		exists = c:NEN
 		c:NEN = ROOT
 		has_global_variable = herbert_west_successful
@@ -349,7 +349,7 @@ nda_nen.15 = { # End Herbert West with warning from the future - Actually a homa
 	}	
 	
 	option = { #" Our Future"
-		name = nda_nen.15.a
+		name = nda_nen.1934.a
 		default_option = yes
 
 		debug_log = "Herbert West Future"
@@ -400,7 +400,7 @@ nda_nen.16 = { # A plague of reanimated - End result of 'tonic for the troops' -
 	}	
 	
 	option = { #" A tragic event"
-		name = nda_nen.14.a
+		name = nda_nen.1920.a
 		default_option = yes
 
 		debug_log = "Herbert West End"
@@ -477,12 +477,12 @@ nda_nen.18 = { # The plague of reanimated spreads
 }
 
 #Shadow over Innsmouth events
-nda_nen.20 = { # Devil Worship in Innsmouth
+nda_nen.1845 = { # Devil Worship in Innsmouth
 	type = country_event
 	placement = p:x30C040 
-	title = nda_nen.20.t
-	desc = nda_nen.20.d
-	flavor =  nda_nen.20.f
+	title = nda_nen.1845.t
+	desc = nda_nen.1845.d
+	flavor =  nda_nen.1845.f
 
 	duration = 3
 
@@ -515,20 +515,20 @@ nda_nen.20 = { # Devil Worship in Innsmouth
 	}	
 	
 	option = { #"This will not do"
-		name = nda_nen.20.a
+		name = nda_nen.1845.a
 		default_option = yes
 
 	}
 
 }
 
-nda_nen.21 = { # Plague in Innsmouth
+nda_nen.1846 = { # Plague in Innsmouth
 
 	type = country_event
 	placement = p:x30C040 
-	title = nda_nen.21.t
-	desc = nda_nen.21.d
-	flavor =  nda_nen.21.f
+	title = nda_nen.1846.t
+	desc = nda_nen.1846.d
+	flavor =  nda_nen.1846.f
 
 	duration = 3
 
@@ -566,7 +566,7 @@ nda_nen.21 = { # Plague in Innsmouth
 	}	
 	
 	option = { #"Too late to help the poor souls."
-		name = nda_nen.21.a
+		name = nda_nen.1846.a
 		default_option = yes
 
 	}
@@ -589,13 +589,13 @@ nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+		video = "gfx/event_pictures/southamerica_christianity.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
 	trigger = {
 		game_date >= 1844.7 # founded july 
@@ -606,16 +606,207 @@ nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
 	cooldown = { months = 12 }
 
 	immediate = {
-		set_variable = { # ongoing conversion
-			name = nda_rel_boost_eldritch_cult
-			months = 6
-			value = nda_trivial_conversion
+		p:x1A77EA = { 
+			state = { 
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_eldritch_cult
+					months = 6
+					value = nda_trivial_conversion
+				}
+			}
 		}
 	}	
 
 	option = { #"A Bizarre Tale.."
 		name = nda_nen.1844.a
 		default_option = yes
+	}
+}
+# follow on event with to shut it down if not cult country, or promote it if cult??
+# Action promised Feb. 1877 - church closes in April.
+nda_nen.1877 = { # Controvesy surrounding the Church of Starry Wisdom - Rhode Island
+	type = country_event
+	placement = p:x1A77EA 
+	title = nda_nen.1877.t
+	desc = nda_nen.1877.d
+	flavor =  nda_nen.1877.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_christianity.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	trigger = {
+		game_date >= 1877.3 
+		game_date < 1878 
+		p:x1A77EA = { state = { owner = ROOT } }
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		p:x1A77EA = { 
+
+		}
+	}	
+
+	option = { #"Leave it be.."
+		name = nda_nen.1877.a
+		default_option = yes
+		# if cult country do nothing
+		if = {
+			limit = { not = { has_variable = nda_cultists_in_open } }
+				# riot forces shut down
+				trigger_event = { id = nda_nen.1879 days = 28 }	# ruin church, trapezoid lost - 'historic' result
+		}
+	}
+
+	option = { #"A Noble church"
+		name = nda_nen.1877.b
+		trigger = { has_variable = nda_cultists_in_open }	
+		# boost attendance!
+		p:x1A77EA = { 
+			state = { 
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_eldritch_cult
+					months = 6
+					value = nda_trivial_conversion
+				}
+			}
+		}
+	}
+
+	option = { #"Close it down"
+		name = nda_nen.1877.c
+		trigger = { NOT = { has_variable = nda_cultists_in_open } }	
+		trigger_event = { id = nda_nen.1878 days = 7 }	# fire shutdown event
+
+	}	
+}
+
+# If Church Shut down by Gov get Trapezoid event - Looking into this triggers country to become cultist as leader goes mad.
+nda_nen.1878 = { # Founding of Church of Starry Wisdom - Rhode Island
+	type = country_event
+	placement = p:x1A77EA 
+	title = nda_nen.1878.t
+	desc = nda_nen.1878.d
+	flavor =  nda_nen.1878.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_christianity.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	trigger = {
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+
+	}	
+
+	option = { #"What's in the Box?"
+		name = nda_nen.1878.a
+		default_option = yes
+
+		trigger_event = { id = nda_nen.1880 days = 1 }	# fire trapezoid event
+	}
+	option = { #"Put it somewhere safe"
+		name = nda_nen.1878.b
+	}	
+}
+
+# Otherwise shut down by locals 'Gang - Federal Hill Boys - threaten Dr '
+nda_nen.1879 = { 
+	type = country_event
+	placement = p:x1A77EA 
+	title = nda_nen.1879.t
+	desc = nda_nen.1879.d
+	flavor =  nda_nen.1879.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+
+	}	
+
+	option = { #"A tragedy or not?"
+		name = nda_nen.1879.a
+		default_option = yes
+	}
+}
+
+# open the box!
+nda_nen.1880 = { 
+	type = country_event
+	placement = ROOT
+	title = nda_nen.1880.t
+	desc = nda_nen.1880.d
+	flavor =  nda_nen.1880.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+
+	}	
+
+	option = { #"What's that behind me?"
+		name = nda_nen.1880.a
+		default_option = yes
+
+		ruler = {
+			if = {
+				 limit = {not = { has_trait = psychological_affliction }}
+				add_trait = psychological_affliction
+			}
+			if = {
+				limit = {not = { has_trait = nda_master }}
+			   add_trait = nda_master
+		   }
+		}
+		
+		
 	}
 }
 
@@ -629,13 +820,13 @@ nda_nen.1882 = { # The Colour Out Of Space - The Meteor
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
 	trigger = {
 		game_date >= 1882.6 
@@ -667,13 +858,13 @@ nda_nen.1883 = { # The Colour Out Of Space
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
 	trigger = {
 		game_date >= 1883.3 
