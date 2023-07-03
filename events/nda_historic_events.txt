@@ -89,18 +89,16 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 				if = {
 					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}
 					debug_log = "Founding of Spiritualist Movement - add pop" 
-					convert_population = { target = rel:nda_rel_spiritulism value = 0.05 }	
+					convert_population = { target = rel:nda_rel_spiritualism value = 0.05 }	
 					
 					set_variable = { # ongoing conversion
-						name = nda_rel_boost_spiritulism
-						months = 12
+						name = nda_rel_boost_spiritualism						months = 12
 						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
-							name = nda_rel_boost_spiritulism
-							months = 12
+							name = nda_rel_boost_spiritualism							months = 12
 							value = nda_small_conversion
 						}					
 					}							
@@ -198,18 +196,16 @@ nda_historic.1852 = { # An American Medium in London
 				if = {
 					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}
 					debug_log = "American Medium in London : [THIS.GetCountry.GetNameNoFormatting]" 
-					convert_population = { target = rel:nda_rel_spiritulism value = 0.05 }	
+					convert_population = { target = rel:nda_rel_spiritualism value = 0.05 }	
 					
 					set_variable = { # ongoing conversion
-						name = nda_rel_boost_spiritulism
-						months = 12
+						name = nda_rel_boost_spiritualism						months = 12
 						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
-							name = nda_rel_boost_spiritulism
-							months = 12
+							name = nda_rel_boost_spiritualism							months = 12
 							value = nda_small_conversion
 						}					
 					}				
@@ -270,15 +266,13 @@ nda_historic.1857 = { # Banner of Light
 					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}					
 					debug_log = "Banner of Light - add pop" 
 					set_variable = { # ongoing conversion
-						name = nda_rel_boost_spiritulism
-						months = 12
+						name = nda_rel_boost_spiritualism						months = 12
 						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
-							name = nda_rel_boost_spiritulism
-							months = 12
+							name = nda_rel_boost_spiritualism							months = 12
 							value = nda_trivial_conversion
 						}					
 					}				

@@ -3,7 +3,7 @@ Works with patch v1.3.6
 Mainly a 'Religious' Rework
 
 Major Changes
-Add new 'historic' beliefs - Spiritulism and Theosophy.
+Add new 'historic' beliefs - Spiritualism and Theosophy.
 New mechanism for Religious and Cult Spread.
 Character Interactions to recruit / promote them within the Cult.
 Change Devout IG to be non-Cult only. Change Devout name in Cult countries.

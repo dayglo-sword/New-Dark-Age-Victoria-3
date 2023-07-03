@@ -19,7 +19,7 @@ nda_rel_yigian = {
 }
 
 # Spiritulist
-nda_rel_spiritulism = {
+nda_rel_spiritualism = {
 	texture = "gfx/interface/icons/religion_icons/animist.dds"
 	traits = {		
 	}

@@ -147,10 +147,9 @@ nda_monthly_state_conversion_on_action = {
 	# state level ongoing religious and population conversions
 	effect = {
 		if = {
-			limit = { # Boost Spiritulism
-				has_variable = nda_rel_boost_spiritulism	
+			limit = { # Boost spiritualism				has_variable = nda_rel_boost_spiritulism	
 			}
-			convert_population = { target = rel:nda_rel_spiritulism value = var:nda_rel_boost_spiritulism  }	
+			convert_population = { target = rel:nda_rel_spiritualism value = var:nda_rel_boost_spiritulism  }	
 		}
 		else_if = {
 			limit = { # Boost Theosophy
