@@ -1,16 +1,16 @@
 ﻿l_english:
   
-nda_monuments.10.t:0 "Holy See Destroyed"
-nda_monuments.10.d:1 "The Vatican has fallen into the hands of the Cultists. The Vicar of Rome martyred as the Catholic Church is driven out. The Apostolic Palace and its Museums and Libraries plundered, its Relics destroyed. Cattle Stampeded through the holy places.\n\nBut despite the devastation it is said that the ghostly image of the City can still be seen above the ruins."
-nda_monuments.10.f:1 ""
+nda_monuments.10.t:0 "Vatican Destroyed"
+nda_monuments.10.d:1 "The Vatican has fallen into the hands of the Cultists...\nThe Vicar of Rome martyred as the Holy See of the Catholic Church is driven out.\nThe Apostolic Palace and its Museums and Libraries plundered, its Relics destroyed.\nCattle stampeded through the holy places.\n\nBut despite the devastation it is said that the ghostly image of the City can still be seen above the ruins."
+nda_monuments.10.f:1 "The Vatican Palace was not intended and built as a residence. Only a comparatively small portion of the palace is residential; all the remainder serves the purposes of art and science or is employed for the administration of the official business of the Church and for the management of the palace, The rooms formerly intended specially for residence are to-day utilized to accommodate collections or as halls of state. Hence, the Vatican can more properly be regarded as a huge museum and a centre of scientific investigation than as a residence.\n\nIt was only natural that the Church from the first centuries of her existence should devote great care to the collection of all important documents and to preserving them in the manner then customary. There is very little information to be found concerning the manner and extent of these archival collections, since the documentary treasures of early Christianity have been lost.\n- Catholic_Encyclopedia"
 nda_monuments.10.a:0 "Vandals!"
 
 nda_monuments.20.t:0 "Hagia Sophia Demolished."
 nda_monuments.20.d:1 "The Grand Mosque, a lasting legacy of the Eastern Romans, has been destroyed. Its mighty dome has come crashing to the ground.\n\nBoth Muslims and Orthodox Christians morn its demise.\n\nBut despite the devastation it is said that the ghostly image of the Mosque can still be seen above the ruins."
-nda_monuments.20.f:1 ""
+nda_monuments.20.f:1 "The present edifice was built by Justinian the Great, under the direction of Anthemius of Tralles and his nephew Isidorus of Miletus. It was founded in 532 and dedicated on Christmas Day 538. It replaced two earlier churches of that name, the first of which was built by Constantius and burnt down in 404, on the occasion of the exile of Chrysostom, while the second was erected by Theodosius II. in 415, and destroyed by fire in the Nika riot of 532. Naturally the church has undergone repair from time to time. The original dome fell in 558, as the result of an earthquake.\n- Encyclopædia Britannica "
 nda_monuments.20.a:0 "Heathens!"
 
 nda_monuments.30.t:0 "St Basils Cathedral Razed"
 nda_monuments.30.d:1 "The landmark building of Red Square has been destroyed. The remains and relics of Basil the Blessed lost, and the leaders of the Othodox Church in the former Russia murdered.\n\nBut despite the devastation it is said that the ghostly image of the Cathedral can still be seen above the ruins."
-nda_monuments.30.f:1 ""
+nda_monuments.30.f:1 "At its lower end stands the fantastic Pokrovsky Cathedral (usually known as Vasili Blazhennyi), one of the wonders of Moscow, on account of its towers, all differing from each other and representing, in their variety of colours, pine-apples, melons and the like. It was begun by Ivan the Terrible in 1554 to commemorate the conquest of Kazan, but not completed until 1679. It was plundered and desecrated by the French in 1812, but restored in 1839–1845.\n- Encyclopædia Britannica "
 nda_monuments.30.a:0 "Heathens!"

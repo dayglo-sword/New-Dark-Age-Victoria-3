@@ -1,17 +1,21 @@
-Version v1.3.5
-Works with patch v1.3.5
+Version v1.3.6
+Works with patch v1.3.6
 Mainly a 'Religious' Rework
 
+Major Changes
 Add new 'historic' beliefs - Spiritulism and Theosophy.
 New mechanism for Religious and Cult Spread.
-Character Interactions to recruit / promote them within the Cult
+Character Interactions to recruit / promote them within the Cult.
 Change Devout IG to be non-Cult only. Change Devout name in Cult countries.
+Decision for Cult country takeover if Cult IG in neutral is powerful.
+
+Minor Changes
 Extra 'Historic' events and additional text and actions associated with existing events.
-'Ruination' decisions and events for when Cult owns the Vatican, St Peters, or Hagia Sophia
+'Haunter of the Dark' (HPL) event path.
+'Ruination' decisions and events for when Cult owns the Vatican, St Basils, or Hagia Sophia.
 Add new Title for leader of Cult country.
 Prevent politically powerful Cults from being purged.
-Decision for Cult country takeover if Cult IG is powerful.
-Cult Crisis IG modifier after Cthulhu leaves.
+Cult Crisis IG modifier if Cthulhu leaves.
 Add progress bar on 'Assist Ritual' journal. 
 
 Bug Fixes
