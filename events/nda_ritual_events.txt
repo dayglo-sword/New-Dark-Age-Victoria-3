@@ -34,7 +34,7 @@ nda_ritual.1924 = { # Cthulhu Return - 1925 already used below
 				days = 1000
 				value = yes
 			}	
-			trigger_event = { id = nda_ritual.1 }		
+			trigger_event = { id = nda_ritual.1 popup = yes }		
 		}
 
 		nda_effect_cthulhu_arrives = yes
@@ -111,7 +111,7 @@ nda_ritual.1890 = { # Cthulhu Early Return
 				value = yes
 			}	
 
-			trigger_event = { id = nda_ritual.2 }				
+			trigger_event = { id = nda_ritual.2 popup = yes}				
 		}
 		
 		nda_effect_cthulhu_arrives = yes
@@ -597,7 +597,7 @@ nda_ritual.9 = { # Reaction to last war
 		# cop out of war! but get sent back!
 		hidden_effect = {
 			set_variable = nda_ritual_experiment
-			trigger_event = { id = nda_ritual.10 } # loop back - really need external descriptor event
+			trigger_event = { id = nda_ritual.10 popup = yes } # loop back - really need external descriptor event
 		}
 	}
 }
@@ -620,10 +620,6 @@ nda_ritual.10 = { # Foreshadowing of future story paths
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	trigger = { 
-
-	}
-
 	immediate = {
 
 	}	
@@ -632,7 +628,7 @@ nda_ritual.10 = { # Foreshadowing of future story paths
 		name = nda_ritual.10.a
 		default_option = yes
 		hidden_effect = {
-			trigger_event = { id = nda_ritual.9 } # loop back - really need external descriptor event
+			trigger_event = { id = nda_ritual.9 popup = yes } # loop back - really need external descriptor event
 		}
 	}
 }

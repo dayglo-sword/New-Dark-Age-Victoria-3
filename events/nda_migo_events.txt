@@ -40,13 +40,13 @@ nda_migo.1 = { #  Migo Intro - In The Night
 	option = { #
 		name = nda_migo.1.a
 		# follow on event
-		trigger_event = { id = nda_migo.3 }	
+		trigger_event = { id = nda_migo.3 popup = yes }	
 	}
 	option = { #
 		name = nda_migo.1.b 
 		default_option = yes
 		# wake up
-		trigger_event = { id = nda_migo.2 }	
+		trigger_event = { id = nda_migo.2 popup = yes}	
 	}
 }
 
@@ -169,7 +169,7 @@ nda_migo.4 = { #  We Have Returned
 		}
 	
 		scope:nda_migo_new_country = {
-			trigger_event = { id = nda_migo.5 }	# welcome to your new home
+			trigger_event = { id = nda_migo.5 popup = yes }	# welcome to your new home
 		}
 	}
 }
@@ -257,7 +257,7 @@ nda_migo.1924 = { #  The End Is Nigh
 		}
 	
 		scope:nda_migo_new_country = {
-			trigger_event = { id = nda_migo.5 }	# welcome to your new home
+			trigger_event = { id = nda_migo.5 popup = yes }	# welcome to your new home
 		}
 	}
 }

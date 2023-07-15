@@ -6,7 +6,8 @@ concept_nda_cthulhu_desc:0 "The prime Great Old One on the planet.\n\nThey await
 
 concept_nda_yig:0 "Yig, the Serpent God"
 concept_nda_yig_short:0 "Yig"
-concept_nda_yig_desc:0 "Known by many names through the ages of the Earth, worshipped as Set in the lost realm of Stygia. Yig is the form of the god as it appears in the Americas."
+concept_nda_yig_set:0 "Set"
+concept_nda_yig_desc:0 "Known by many names through the ages of the Earth, Yig is the master of the serpents. Worshipped as Set in the lost realm of [concept_nda_stygia], Yig is the form of the god as it appears in the Americas."
 
 concept_nda_dagon:0 "Dagon, the Lord of the Seas"
 concept_nda_dagon_short:0 "Dagon"
@@ -50,7 +51,14 @@ concept_nda_migo_status_1:0 "Cultist Country"
 concept_nda_migo_status_1_desc:0 "The Cult has taken control of this country.\n\nThe members of the government do their bidding and furthers the ultimate goal of the cultists... the completion of [concept_nda_ritual]"
 concept_nda_migo_status_2:0 "Cultists Active"
 concept_nda_migo_status_2_desc:0 "The Cult is attempting to take control of this country.\n\nThe members of the government are being covertly influenced to do the cults bidding."
-concept_nda_migo_status_3:0 "Cultists Replused"
+concept_nda_migo_status_3:0 "Cultists Repulsed"
 concept_nda_migo_status_3_desc:0 "The Cults attempt to take control of this country has failed.\n\nThey may attempt to 'convert' the country by more physical means."
 concept_nda_migo_status_4:0 "No Active Cultists"
 concept_nda_migo_status_4_desc:0 "The Cult has not yet attempted to take control of this country.\n\nThe teachings of the Cultists may still be spreading among the population but not to the extent that it threatens control of the political sphere."
+
+# lost lands
+concept_nda_stygia:0 "Stygia"
+concept_nda_stygia_desc:0 "The home of the Snake-Peoples after the age of #BOLD Atlantis#! and the sinking of [concept_nda_lemuria]. Worshippers of [Concept('concept_nda_yig','$concept_nda_yig_set$')], they ruled their land of slaves with terror, before fading from history. Their legacy being maintained by human priests using occult powers derived from their serpent worship.\n\n The land was devastated at the end of the #BOLD Hyborean Age#! as what is now the Mediterranean flooded."
+
+concept_nda_lemuria:0 "Lemuria"
+concept_nda_lemuria_desc:0 "Lemuria, the companion continent of Atlantis, before the oceans swallowed the bulk of the land in the cataclysm. The surviviors scattered across the world as it headed into the #BOLD Hyborean Age#!"

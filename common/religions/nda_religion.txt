@@ -18,7 +18,7 @@ nda_rel_yigian = {
 	color =  { 205 220 57 } #{0.23 0.45 0.01 }
 }
 
-# Spiritulist
+# Spiritualist
 nda_rel_spiritualism = {
 	texture = "gfx/interface/icons/religion_icons/animist.dds"
 	traits = {		

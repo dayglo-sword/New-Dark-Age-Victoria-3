@@ -199,6 +199,14 @@ nda_effect_cthulhu_leaves = { # Used at departure
 			add_modifier = {
 				name = nda_cult_decline_country_modifier 
 			}	
+
+			# drop cultist religion - convert in part to Theosophy as they are partially right!
+			every_scope_pop = {
+				limit = {
+					religion = rel:nda_rel_cultist
+				}
+				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.05 }			
+			}
 		}
 		else_if = {
 			limit = {
@@ -261,6 +269,14 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				limit = { exists = c:DGN}
 				change_relations = { country = c:DGN value = -100 }
 			}
+
+			# drop cultist religion - convert in part to Theosophy as they are partially right!
+			every_scope_pop = {
+				limit = {
+					religion = rel:nda_rel_cultist
+				}
+				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.1 }			
+			}
 		}
 		else = { # not cultists  - make happier
 			every_scope_culture = {
@@ -306,6 +322,14 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					is_homeland = cu:nda_cul_cultist			
 				}
 				remove_homeland = nda_cul_cultist						
+			}
+
+			# drop cultist religion - convert in part to Theosophy as they are partially right!
+			every_scope_pop = {
+				limit = {
+					religion = rel:nda_rel_cultist
+				}
+				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.1 }			
 			}
 		}	
 

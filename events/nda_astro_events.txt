@@ -23,7 +23,7 @@ nda_astro.1842 = { # 1842 conjunction
 				}				
 			}
 
-			trigger_event = { id = nda_astro.1 }	# fire main events		
+			trigger_event = { id = nda_astro.1 popup = yes }	# fire main events		
 		}		
 		set_global_variable = nda_conjunction_1
 	}	
@@ -80,7 +80,7 @@ nda_astro.1861 = { # 1861 conjunction
 				}				
 			}
 
-			trigger_event = { id = nda_astro.2 }	# fire main events		
+			trigger_event = { id = nda_astro.2 popup = yes }	# fire main events		
 		}	
 
 		trigger_event = { id = nda_astro.21 days = 7 }	# fire follow up event
@@ -265,7 +265,7 @@ nda_astro.1881 = { # 1881 conjunction
 				}				
 			}
 
-			trigger_event = { id = nda_astro.3 }	# fire main events		
+			trigger_event = { id = nda_astro.3 popup = yes }	# fire main events		
 		}	
 
 		trigger_event = { id = nda_astro.21 days = 7 }	# fire follow up event
@@ -403,7 +403,7 @@ nda_astro.1901 = {  # 1901 conjunction
 				}				
 			}
 
-			trigger_event = { id = nda_astro.4 }	# fire main events		
+			trigger_event = { id = nda_astro.4 popup = yes }	# fire main events		
 		}	
  
  		trigger_event = { id = nda_astro.21 days = 21 }	# fire follow up event on delay as above can take sometime.
@@ -536,7 +536,7 @@ nda_astro.1921 = { # 1921 conjunction
 				}				
 			}
 
-			trigger_event = { id = nda_astro.5 }	# fire main events		
+			trigger_event = { id = nda_astro.5 popup = yes }	# fire main events		
 		}	
 
  		trigger_event = { id = nda_astro.21 days = 21 }	# fire follow up event

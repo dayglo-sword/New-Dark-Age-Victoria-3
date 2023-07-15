@@ -65,7 +65,7 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
- 		# 1848 spiritulist movement founded in Up State New York 
+ 		# 1848 spiritualist movement founded in Up State New York 
 		game_date >= 1848.4.1 
 		game_date < 1849 
 
@@ -87,7 +87,7 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 		p:x01D042 = {
 			state = {
 				if = {
-					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}
+					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}
 					debug_log = "Founding of Spiritualist Movement - add pop" 
 					convert_population = { target = rel:nda_rel_spiritualism value = 0.05 }	
 					
@@ -194,7 +194,7 @@ nda_historic.1852 = { # An American Medium in London
 		p:x7543C8 = {
 			state = {
 				if = {
-					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}
+					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}
 					debug_log = "American Medium in London : [THIS.GetCountry.GetNameNoFormatting]" 
 					convert_population = { target = rel:nda_rel_spiritualism value = 0.05 }	
 					
@@ -263,7 +263,7 @@ nda_historic.1857 = { # Banner of Light
 		p:x211ECF = {
 			state = {
 				if = {
-					limit = { NOT = { has_variable = nda_rel_boost_spiritulism }}					
+					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
 					debug_log = "Banner of Light - add pop" 
 					set_variable = { # ongoing conversion
 						name = nda_rel_boost_spiritualism						months = 12
@@ -332,7 +332,7 @@ nda_historic.1862 = { # The Ghost Club
 
 	immediate = {
 		p:x7543C8 = { # London
-			state = { save_scope_as = spiritulist_state 
+			state = { save_scope_as = spiritualist_state 
 				# add Dickens to country
 				owner = {
 					create_character = { # based on ecchi_gbr_dickens_character_template
@@ -680,7 +680,7 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
- 		# 1888 spiritulist movement discredited 
+ 		# 1888 spiritualist movement discredited 
 		game_date >= 1888.4.1 
 		game_date < 1889 
 
