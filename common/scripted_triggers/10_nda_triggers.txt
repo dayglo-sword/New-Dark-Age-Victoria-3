@@ -135,6 +135,23 @@ is_potentially_dagonic = {
 	}
 }
 
+
+has_lost_city = { # state level
+	OR = {
+		has_building = building_nda_lostcity_knyan
+		has_building = building_nda_lostcity_yhanthlei
+		has_building = building_nda_lostcity_shamballa
+	}
+}
+
+lost_cities_exist = {
+	OR = {
+		has_global_variable = nda_lostcity_knyan_exists
+		has_global_variable = nda_lostcity_yhanthlei_exists
+		has_global_variable = nda_lostcity_shamballa_exists
+	}
+}
+
 is_potentially_dagonic_lands = { 
 # has capital and coast in certain asian/pacific lands
 	is_coastal = yes # state level check
@@ -160,6 +177,26 @@ has_cult_culture = {
 	}
 }
 
+has_non_cult_culture = {
+	any_scope_culture = {
+		is_primary_culture_of = ROOT
+		NOT = {
+			OR = {
+				THIS = cu:nda_cul_cultist 
+				THIS = cu:nda_cul_dagonic
+				THIS =cu:nda_cul_yigian				
+			}
+		}
+	}
+}
+
+is_cult_culture = {
+	OR = {
+		THIS = cu:nda_cul_cultist 
+		THIS = cu:nda_cul_dagonic
+		THIS = cu:nda_cul_yigian		
+	}
+}
 can_cult_infiltrate = {
 	# can the cult start to infiltrate - yes if not ongoing or previously failed
 	NOT = {

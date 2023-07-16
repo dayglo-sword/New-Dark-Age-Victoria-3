@@ -1,39 +1,4 @@
-﻿#building_nda_orne_library = { # don't need library and Miskitonic Uni ??
-#	building_group = bg_monuments
-#	texture = "gfx/interface/icons/building_icons/big_ben.dds"
-#	expandable = no
-#	downsizeable = no
-#	unique = yes
-#	#locator = "big_ben_locator"
-#	
-#	#entity_not_constructed = { }
-#	#entity_under_construction = { "building_construction_2x2_entity" }
-#	#entity_constructed = { "wonder_big_ben_01_entity"}
-#	
-#	#city_gfx_interactions = {
-#	#	clear_size_area = yes
-#	#	size = 2
-#	#}
-#	
-#	production_method_groups = {
-#		pmg_base_building_university
-#		pmg_university_academia
-#	}
-#	
-#	required_construction = construction_cost_monument
-#	
-#	possible = {
-#		error_check = {
-#			severity = invalid
-#			this = {
-#				state_region = s:STATE_NEW_HAMPSHIRE
-#			}
-#		}
-#	}
-#	
-#	ai_value = 10000
-#}
-
+﻿
 building_nda_miskatonic_university = {
 	building_group = bg_technology
 	texture = "gfx/interface/icons/building_icons/building_university.dds"
@@ -92,42 +57,75 @@ building_nda_miskatonic_university = {
 	required_construction = construction_cost_medium
 }
 
-# try and overide base so that we can stop duplicate with Miskatonic
-#building_university = {
-#
-#	building_group = bg_technology
-#
-#	city_type = city
-#
-#	levels_per_mesh = 5
-#
-#	unlocking_technologies = {
-#		academia
-#	}
-#
-#	production_method_groups = {
-#		pmg_base_building_university
-#		pmg_university_academia
-#	}
-#
-#	texture = "gfx/interface/icons/building_icons/building_university.dds"
-#
-#	required_construction = construction_cost_medium
-#
-#	#possible = {
-#	#	error_check = {
-#	#		severity = invalid
-#	#		exists = THIS
-#	#		#NOT =  { THIS = { state_region = s:STATE_NEW_HAMPSHIRE } }
-#	#		THIS = { 
-#	#			state_region = { 
-#	#				exists = THIS
-#	#				is_state_region_land = yes 
-##
-##				}
-##				NOT = { state_region = s:STATE_NEW_HAMPSHIRE }				
-##			} 				
-##		}
-##	}
-#}
 
+# K'n-yan - https://www.lovecraft-stories.com/story/the-mound - tie it in to YIG as serpent people memntioned
+building_nda_lostcity_knyan = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "kn_yan_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { "wonder_chichen_itza_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_nda_esoteric_lostcity
+	}
+}
+
+# Y'ha-nthlei - https://www.lovecraft-stories.com/story/the-mound - tie it in to DGN 
+building_nda_lostcity_yhanthlei = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "yha_nthlei_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { "wonder_chichen_itza_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_nda_esoteric_lostcity
+	}
+}
+
+# Shamballa - The Theosophic version
+building_nda_lostcity_shamballa = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "shamballa_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { "wonder_chichen_itza_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_nda_esoteric_lostcity
+	}
+}

@@ -11,10 +11,16 @@
 
         # on border
         has_strategic_land_adjacency = c:NBS
+		has_healthy_economy = yes
+
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no
 
 		c:NBS = { 
 			relations:root >= relations_threshold:amicable 
-		
+			is_player = no
 			OR = {
 				is_subject = no
 				AND = {
@@ -24,6 +30,7 @@
 					}			
 				}
 			}
+			is_at_war = no
 		}
 
 		NOT = { has_war_with = c:NBS }
@@ -80,10 +87,16 @@ nda_nen_novascotia_union = {
 
         # on border
         has_strategic_land_adjacency = c:NVS
+		has_healthy_economy = yes
+		
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no
 
 		c:NVS = { 
 			relations:root >= relations_threshold:amicable 
-			
+			is_player = no
 			OR = {
 				is_subject = no
 				AND = {
@@ -92,7 +105,8 @@ nda_nen_novascotia_union = {
 						relations:root >= relations_threshold:amicable 
 					}			
 				}
-			}			
+			}	
+			is_at_war = no		
 		}
 
 		NOT = { has_war_with = c:NVS }

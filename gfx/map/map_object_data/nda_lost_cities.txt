@@ -1,0 +1,47 @@
+﻿game_object_locator={
+	name="kn_yan_locator"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="static"
+	instances={
+		{
+			id=1
+			position={ 1931.000000 0.000000 2363.000000 } # indian territories / oklahoma
+			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
+			scale={ 1.000000 1.000000 1.000000 }
+		}
+	}
+}
+
+game_object_locator={
+	name="yha_nthlei_locator"
+	clamp_to_water_level=no
+	render_under_water=yes
+	generated_content=no
+	layer="static"
+	instances={
+		{
+			id=1
+			position={ 2488.000000 0.000000 2522.000000 } # off the coast off New England / Innsmouth
+			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
+			scale={ 1.000000 1.000000 1.000000 }
+		}
+	}
+}
+
+game_object_locator={
+	name="shamballa_locator"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="static"
+	instances={
+		{
+			id=1
+			position={ 5930.000000 0.000000 2237.000000 } # tibet
+			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
+			scale={ 1.000000 1.000000 1.000000 }
+		}
+	}
+}

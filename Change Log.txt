@@ -1,3 +1,17 @@
+Version v1.4.0
+
+Major Changes
+Add 'Lost Cities' buildings
+Add occult Goods substitutes - 'Vril Rods' and 'Black Lotus Powder'
+
+Minor Changes
+Add Historic Vril events
+
+Bug Fixes
+Correct spelling of Spiritualist
+
+-----
+
 Version v1.3.6
 Works with patch v1.3.6
 Mainly a 'Religious' Rework

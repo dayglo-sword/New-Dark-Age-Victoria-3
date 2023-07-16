@@ -31,7 +31,7 @@
 		# Reaction Event for Player
 		every_country = {
 			limit = { is_player = yes}
-			trigger_event = { id = nda_monuments.10 }			
+			trigger_event = { id = nda_monuments.10 popup = yes }			
 		}
 	}
 
@@ -76,7 +76,7 @@ nda_eld_destroy_hagia_sophia = {
 		# Reaction Event for Player
 		every_country = {
 			limit = { is_player = yes}
-			trigger_event = { id = nda_monuments.20 }			
+			trigger_event = { id = nda_monuments.20 popup = yes }			
 		}
 	}
 
@@ -121,7 +121,7 @@ nda_eld_destroy_st_basils = {
 		# Reaction Event for Player
 		every_country = {
 			limit = { is_player = yes}
-			trigger_event = { id = nda_monuments.30 }			
+			trigger_event = { id = nda_monuments.30 popup = yes }			
 		}
 	}
 

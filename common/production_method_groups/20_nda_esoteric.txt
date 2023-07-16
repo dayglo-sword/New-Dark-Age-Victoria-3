@@ -3,9 +3,22 @@ pmg_nda_esoteric_academia = {
 	texture = "gfx/interface/icons/generic_icons/literacy.dds"
 	ai_selection = most_productive
 
+	is_hidden_when_unavailable = yes	
+
 	production_methods = {
 		pm_nda_conventional_academia
 		pm_nda_esoteric_academia
 	}
 }
 
+pmg_nda_esoteric_lostcity = {
+	texture = "gfx/interface/icons/generic_icons/literacy.dds"
+	ai_selection = most_productive
+
+	is_hidden_when_unavailable = yes	
+
+	production_methods = {
+		pm_nda_esoteric_vril
+		pm_nda_esoteric_blacklotus
+	}
+}

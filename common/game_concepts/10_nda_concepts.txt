@@ -81,3 +81,18 @@ concept_nda_lemuria = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 	#is_loading_tip = yes
 }
+
+concept_nda_atlantis = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_chaugnar_faugn = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}
+
+concept_nda_hyborian_age = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	#is_loading_tip = yes
+}

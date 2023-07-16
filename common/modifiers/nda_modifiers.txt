@@ -144,3 +144,10 @@ nda_inquisition_opposed_modifier = {
 	interest_group_approval_add = -2
 	interest_group_pol_str_mult = 0.1
 }
+
+nda_lostcity_defense_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_defense_add = 100 # go daft for testing
+	unit_provinces_lost_mult = -0.05
+	unit_kill_rate_add = 5
+}

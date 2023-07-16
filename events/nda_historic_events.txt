@@ -428,6 +428,58 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe! TODO
 	}
 }
 
+nda_historic.1871 = { # Vril - Power of the coming race : book by Edward Bulwer-Lytton
+	type = country_event
+	placement = p:x7543C8 # put in Edinburgh for a change
+	title = nda_historic.1871.t
+	desc = nda_historic.1871.d
+	flavor =  nda_historic.1871.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { #published anonymously in May 1871, by Blackwood and Sons of Edinburgh and London
+		game_date >= 1871.5 
+		game_date < 1872
+
+		# owner of Edinburgh. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+	}
+
+	cooldown = { months = 24 }
+	
+	option = { 
+		name = nda_historic.1871.a
+		default_option = yes
+	}
+
+	option = { 
+		# we already know this stuff exists - if any lost_city exists
+		name = nda_historic.1871.b
+		trigger = { lost_cities_exist = yes }
+	}
+
+	option = { 
+		# they have learnt our secret - if country is cultist
+		name = nda_historic.1871.c
+		trigger = { has_variable = nda_cultists_in_open }
+	}
+}
+
 nda_historic.1875 = { # The Theosophical Society
 	type = country_event
 	placement = p:xE217B5 
@@ -741,6 +793,72 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 		name = nda_historic.1889.a
 		default_option = yes
 	}
+}
+
+nda_historic.1891 = { # Vril-Ya Bazaar and Fete
+	type = country_event
+	placement = p:x7543C8
+	title = nda_historic.1891.t
+	desc = nda_historic.1891.d
+	flavor =  nda_historic.1891.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+		game_date >= 1893.6 
+		game_date < 1894
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+	}
+
+	cooldown = { months = 24 }	
+	
+	option = { # It'll never catch on
+		name = nda_historic.1891.a
+		default_option = yes		
+	}
+
+	option = { 
+		name = nda_historic.1891.b
+		# boost theosophy ?
+	}
+
+	option = { # if lost_city supply exists give as cultural obsession to a primary culture in non-cult country
+		name = nda_historic.1891.c	
+		trigger = { 
+			lost_cities_exist = yes 
+			has_non_cult_culture = yes
+		}
+		random_primary_culture = {
+			limit = { 
+				is_cult_culture = no
+				NOT = { has_cultural_obsession = vril }
+			}
+			add_cultural_obsession = vril			
+		}
+
+	}
+
+	option = { # Playing while the world burns!
+	name = nda_historic.1891.e	
+	trigger = { has_global_variable = nda_cthulhu_arrives }
+}
 }
 
 nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic

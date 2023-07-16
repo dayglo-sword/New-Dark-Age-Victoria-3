@@ -31,15 +31,21 @@ concept_nda_yuggoth_desc:0 "The supposed planet Yuggoth exists in the depths of 
 
 concept_nda_old_ones:0 "Great Old Ones"
 concept_nda_old_ones_short:0 "Old Ones"
-concept_nda_old_ones_desc:0 "Creatures from beyond this planet that many worship as Gods due to their vast power, including the ability to change reality itself."
+concept_nda_old_ones_desc:0 "Creatures from beyond this planet that many throughout the ages of the world have worship as Gods due to their vast power, including the ability to change reality itself."
+
+
+concept_nda_chaugnar_faugn:0 "Chaugnar Faugn, the elephantine god"
+concept_nda_chaugnar_faugn_short:0 "Chaugnar Faugn"
+concept_nda_chaugnar_faugn_desc:0 "Twice exiled, first from their home planet and then from Earth into the Dreamlands. Chaugnar Faugn is the last survivor of the Elephntine race, the last of his former companions being killed towards the end of the [concept_nda_hyborian_age]."
+
 
 concept_nda_ritual:0 "The Ritual"
 concept_nda_ritual_short:0 "The Ritual"
-concept_nda_ritual_desc:0 "There are many spells, incantations, and rites for the worship of the [concept_nda_old_ones], but only one worthy of the title #BOLD The Ritual#!.\n\nIt is the rite to release [concept_nda_cthulhu] himself from his deathless slumber.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+concept_nda_ritual_desc:0 "There are many spells, incantations, and rites for the worship of the [concept_nda_old_ones], but only one worthy of the title #BOLD The Ritual#!.\n\nIt is the rite to release [concept_nda_cthulhu] himself from his deathless slumber when the stars are right.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
 
 concept_nda_conclave:0 "Grand Conclave"
 concept_nda_conclave_short:0 "Conclave"
-concept_nda_conclave_desc:0 "A great meeting of Cultists of all persuasions. Matters of importance and the future course of the worship of the [concept_nda_old_ones] are decided behind closed doors."
+concept_nda_conclave_desc:0 "A great meeting of Cultists of all persuasions. Matters of importance and the future course of the worship of the [concept_nda_old_ones] are decided behind closed doors by the elders of the Cults."
 
 concept_nda_conjunction:0 "Great Conjunction"
 concept_nda_conjunction_short:0 "Conjunction"
@@ -57,8 +63,15 @@ concept_nda_migo_status_4:0 "No Active Cultists"
 concept_nda_migo_status_4_desc:0 "The Cult has not yet attempted to take control of this country.\n\nThe teachings of the Cultists may still be spreading among the population but not to the extent that it threatens control of the political sphere."
 
 # lost lands
+concept_nda_hyborian_age:0 "Hyborian Age"
+concept_nda_hyborian_age_short:0 "Hyborian"
+concept_nda_hyborian_age_desc:0 "The age of the Earth immediately prior to our own. It is after the Great Cataclysm that sank [concept_nda_atlantis] and [concept_nda_lemuria], but before the Great Flood and upheaval that sees the current form of the continents.\n\nDespite them being the direct ancestors of all the Earths inhabitants little is know the peoples of this time."
+
 concept_nda_stygia:0 "Stygia"
 concept_nda_stygia_desc:0 "The home of the Snake-Peoples after the age of #BOLD Atlantis#! and the sinking of [concept_nda_lemuria]. Worshippers of [Concept('concept_nda_yig','$concept_nda_yig_set$')], they ruled their land of slaves with terror, before fading from history. Their legacy being maintained by human priests using occult powers derived from their serpent worship.\n\n The land was devastated at the end of the #BOLD Hyborean Age#! as what is now the Mediterranean flooded."
 
 concept_nda_lemuria:0 "Lemuria"
-concept_nda_lemuria_desc:0 "Lemuria, the companion continent of Atlantis, before the oceans swallowed the bulk of the land in the cataclysm. The surviviors scattered across the world as it headed into the #BOLD Hyborean Age#!"
+concept_nda_lemuria_desc:0 "Lemuria, the companion continent of [concept_nda_atlantis], before the oceans swallowed the bulk of the land in the Great Cataclysm. The surviviors scattered across the world as it headed into the [concept_nda_hyborian_age], where they became enslaved by the followers of [Concept('concept_nda_yig','$concept_nda_yig_set$')]. Their decendants would eventually rebel, driving the snake worshippers westwards to [concept_nda_stygia]."
+
+concept_nda_atlantis:0 "Atlantis"
+concept_nda_atlantis_desc:0 "Atlantis, the companion continent of [concept_nda_lemuria], before the oceans swallowed the bulk of the land in the Great Cataclysm. The surviviors scattered across the world as it headed into the [concept_nda_hyborian_age]"

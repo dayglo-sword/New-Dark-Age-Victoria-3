@@ -79,12 +79,14 @@ nda_monthly_on_action = {
 		nda_historic.1857 
 		nda_historic.1862
 		nda_historic.1865
+		nda_historic.1871
 		nda_historic.1875
 		nda_historic.1879		
 		nda_historic.1882
 		nda_historic.1888
 		nda_historic.1887
 		nda_historic.1889
+		nda_historic.1891		
 		nda_historic.1892
 
 		nda_migo.1
@@ -112,14 +114,13 @@ nda_monthly_on_action = {
 				NOT = { # must not be any other interest groups with cult master. - need check for non-IG head of state??
 					OR = {
 						any_interest_group = { 
-								leader = { 
-									has_any_cultist_master_trait = yes				
-								}
-							}				
-						}	
-						ruler = { has_any_cultist_master_trait = yes }					
+							leader = { 
+								has_any_cultist_master_trait = yes				
+							}
+						}				
 					}	
-
+					ruler = { has_any_cultist_master_trait = yes }					
+				}	
 			}
 			set_variable = nda_cult_leaderless
 			set_variable = { # player should assign leader in this time or else 
@@ -147,9 +148,10 @@ nda_monthly_state_conversion_on_action = {
 	# state level ongoing religious and population conversions
 	effect = {
 		if = {
-			limit = { # Boost spiritualism				has_variable = nda_rel_boost_spiritulism	
+			limit = { # Boost spiritualism				
+				has_variable = nda_rel_boost_spiritualism	
 			}
-			convert_population = { target = rel:nda_rel_spiritualism value = var:nda_rel_boost_spiritulism  }	
+			convert_population = { target = rel:nda_rel_spiritualism value = var:nda_rel_boost_spiritualism  }	
 		}
 		else_if = {
 			limit = { # Boost Theosophy
@@ -434,3 +436,44 @@ nda_create_leng_on_action = {
 #		}		
 #	}	
 #}
+
+# Root = attacker or defender country
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_started = {
+    on_actions = {
+        nda_on_battle_started
+    }
+}
+
+nda_on_battle_started = {
+    effect = {
+        if = {
+			limit = {
+				exists = scope:state
+                scope:state = {
+					has_lost_city = yes
+                    
+                    OR = {
+                        owner = scope:defender.owner
+                        owner = {
+                            is_in_war_together = scope:defender.owner
+                        }
+                    }
+                }
+				
+				scope:defender = {
+					NOT = {
+						has_modifier = nda_lostcity_defense_modifier
+					}
+				}
+			}
+			debug_log = "City Boost to Defenders"			
+			scope:defender = {
+				add_modifier = { name = nda_lostcity_defense_modifier }
+			}
+		}
+	}
+}

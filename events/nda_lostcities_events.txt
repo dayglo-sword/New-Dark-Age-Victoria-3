@@ -1,0 +1,260 @@
+﻿namespace = nda_lostcities
+# Events to notify of changes to Monument statuses
+
+nda_lostcities.10 = {  # K'N-Yan revealed ?
+	type = country_event
+	placement = p:xA07F85 #xEB66DA #
+	title = nda_lostcities.10.t
+	desc = nda_lostcities.10.d
+	flavor =  nda_lostcities.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "City revealed immediate"
+
+		p:xA07F85 = {
+			state = {
+				# state level
+				create_building={
+					building="building_nda_lostcity_knyan" 
+					#level=1
+					#reserves=1
+				}	
+				# Notify world
+				set_global_variable = nda_lostcity_knyan_exists								
+			}	
+		}
+	}	
+	
+	option = { #
+		name = nda_lostcities.10.a 
+		default_option = yes	
+		debug_log = "City revealed option"
+
+	}
+}
+
+nda_lostcities.11 = {  # K'N-Yan hidden ?
+	type = country_event
+	placement = p:xA07F85 #xEB66DA #
+	title = nda_lostcities.11.t
+	desc = nda_lostcities.11.d
+	flavor =  nda_lostcities.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "City revealed immediate"
+		p:xA07F85 = {
+			state = {
+				# state level
+				remove_building = "building_nda_lostcity_knyan" 
+				# Notify world
+				remove_global_variable = nda_lostcity_knyan_exists							
+			}			
+		}
+	}	
+	
+	option = { #
+		name = nda_lostcities.11.a 
+		default_option = yes	
+		debug_log = "City hidden again option"
+
+	}
+}
+
+
+nda_lostcities.20 = {  # K'N-Yan revealed ?
+	type = country_event
+	placement = p:x30C040
+	title = nda_lostcities.20.t
+	desc = nda_lostcities.20.d
+	flavor =  nda_lostcities.20.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "City revealed immediate"
+
+		p:x30C040 = {
+			state = {
+				# state level
+				create_building={
+					building="building_nda_lostcity_yhanthlei" 
+					#level=1
+					#reserves=1
+				}
+				
+				# Notify world
+				set_global_variable = nda_lostcity_yhanthlei_exists
+			}	
+		}
+
+
+	}	
+	
+	option = { #
+		name = nda_lostcities.20.a 
+		default_option = yes	
+		debug_log = "City revealed option"
+
+	}
+}
+
+nda_lostcities.21 = {  # K'N-Yan hidden ?
+	type = country_event
+	placement = p:x30C040 #xA07F85 #
+	title = nda_lostcities.21.t
+	desc = nda_lostcities.21.d
+	flavor =  nda_lostcities.21.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "City revealed immediate"
+		p:x30C040 = {
+			state = {
+				# state level
+				remove_building = "building_nda_lostcity_yhanthlei" 	
+				
+				# Notify world
+				remove_global_variable = nda_lostcity_yhanthlei_exists	
+			}	
+		}
+
+	}	
+	
+	option = { #
+		name = nda_lostcities.21.a 
+		default_option = yes	
+		debug_log = "City hidden again option"
+
+	}
+}
+
+
+nda_lostcities.30 = {  # Shamballa revealed ?
+	type = country_event
+	placement = p:xB9B797 
+	title = nda_lostcities.30.t
+	desc = nda_lostcities.30.d
+	flavor =  nda_lostcities.30.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "City revealed immediate"
+
+		p:xB9B797 = {
+			state = {
+				# state level
+				create_building={
+					building="building_nda_lostcity_shamballa" 
+					#level=1
+					#reserves=1
+				}
+								
+				# Notify world
+				set_global_variable = nda_lostcity_shamballa_exists			
+			}	
+		}
+	}	
+	
+	option = { #
+		name = nda_lostcities.30.a 
+		default_option = yes	
+		debug_log = "City revealed option"
+
+	}
+}
+
+nda_lostcities.31 = {  # Shamballa hidden ?
+	type = country_event
+	placement = p:xB9B797
+	title = nda_lostcities.31.t
+	desc = nda_lostcities.31.d
+	flavor =  nda_lostcities.31.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "City revealed immediate"
+		p:xB9B797 = {
+			state = {
+				# state level
+				remove_building = "building_nda_lostcity_shamballa" 	
+				
+				# Notify world
+				remove_global_variable = nda_lostcity_shamballa_exists						
+			}	
+		}
+
+	}	
+	
+	option = { #
+		name = nda_lostcities.31.a 
+		default_option = yes	
+		debug_log = "City hidden again option"
+
+	}
+}

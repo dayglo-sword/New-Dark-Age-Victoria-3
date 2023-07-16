@@ -3,4 +3,30 @@
  pmg_nda_esoteric_academia:0 "Academia"
  pm_nda_esoteric_academia:0 "Esoteric"
  pm_nda_conventional_academia:0 "Conventional"
- 
+
+#lost/hidden cities
+pmg_nda_esoteric_lostcity:0 "Hidden Lore"
+pm_nda_esoteric_vril:0 "Vril Generation"
+pm_nda_esoteric_blacklotus:0 "Black Lotus Preparation" 
+
+# occult goods
+black_lotus:0 "Black Lotus Powder"
+
+trade_route_import_lens_option_black_lotus_tooltip:0 "Establish a Black Lotus Powder import trade route"
+trade_route_export_lens_option_black_lotus_tooltip:0 "Establish a Black Lotus Powder export trade roure"
+
+modifier_building_output_black_lotus_add:0 "Black Lotus Powder output"
+modifier_building_output_black_lotus_add_desc:0 "Black Lotus Powder production output"
+modifier_building_input_black_lotus_add:0 ""
+modifier_building_input_black_lotus_add_desc:0 ""
+
+vril:0 "Vril Energy Rods"
+
+trade_route_import_lens_option_vril_tooltip:0 "Establish a Vril Energy Rod import trade route"
+trade_route_export_lens_option_vril_tooltip:0 "Establish a Vril Energy Rod export trade route"
+
+modifier_building_output_vril_add:0 "Vril Rod output"
+modifier_building_output_vril_add_desc:0 "Vril Energy Rod output"
+
+modifier_building_input_vril_add:0 ""
+modifier_building_input_vril_add_desc:0 ""
