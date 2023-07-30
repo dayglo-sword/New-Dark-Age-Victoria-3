@@ -10,3 +10,25 @@ texticon = {
     fontsize = 22
   }
 }
+
+### Goods
+
+texticon = {
+	icon = black_lotus
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/opium.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = vril
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/lead.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

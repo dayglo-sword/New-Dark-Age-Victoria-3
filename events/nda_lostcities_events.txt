@@ -1,7 +1,7 @@
 ﻿namespace = nda_lostcities
-# Events to notify of changes to Monument statuses
+# Events to notify of changes to Lost Cities status
 
-nda_lostcities.10 = {  # K'N-Yan revealed ?
+nda_lostcities.10 = {  # K'N-Yan revealed ? Do trigger but should be decision for YIG?
 	type = country_event
 	placement = p:xA07F85 #xEB66DA #
 	title = nda_lostcities.10.t
@@ -20,6 +20,17 @@ nda_lostcities.10 = {  # K'N-Yan revealed ?
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	trigger = {
+		exists = c:YIG
+		NOT = { has_global_variable = nda_lostcity_knyan_exists }
+		p:xA07F85 = {
+			state = {
+				owner = c:YIG
+				NOT = { has_building = building_nda_lostcity_knyan }
+			}
+		}
+	}
+
 	immediate = {
 		debug_log = "City revealed immediate"
 
@@ -32,6 +43,10 @@ nda_lostcities.10 = {  # K'N-Yan revealed ?
 					#reserves=1
 				}	
 				# Notify world
+				every_country = {
+					post_notification = nda_lostcity_knyan_reveal
+				}
+
 				set_global_variable = nda_lostcity_knyan_exists								
 			}	
 		}
@@ -64,14 +79,30 @@ nda_lostcities.11 = {  # K'N-Yan hidden ?
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	trigger = {
+		
+		has_global_variable = nda_lostcity_knyan_exists 
+		p:xA07F85 = {
+			state = {
+				owner = { is_cultist_country = no } # Cultists no longer control it
+				has_building = building_nda_lostcity_knyan
+			}
+		}
+	}
+
 	immediate = {
-		debug_log = "City revealed immediate"
+		debug_log = "City removal immediate"
 		p:xA07F85 = {
 			state = {
 				# state level
 				remove_building = "building_nda_lostcity_knyan" 
+
 				# Notify world
-				remove_global_variable = nda_lostcity_knyan_exists							
+				every_country = {
+					post_notification = nda_lostcity_knyan_hidden
+				}				
+				remove_global_variable = nda_lostcity_knyan_exists	
+
 			}			
 		}
 	}	
@@ -85,7 +116,7 @@ nda_lostcities.11 = {  # K'N-Yan hidden ?
 }
 
 
-nda_lostcities.20 = {  # K'N-Yan revealed ?
+nda_lostcities.20 = {  # y'han-thlei revealed ?
 	type = country_event
 	placement = p:x30C040
 	title = nda_lostcities.20.t
@@ -104,6 +135,17 @@ nda_lostcities.20 = {  # K'N-Yan revealed ?
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	trigger = {
+		exists = c:DGN
+		NOT = { has_global_variable = nda_lostcity_yhanthlei_exists }
+		p:x30C040 = {
+			state = {
+				owner = c:DGN
+				NOT = { has_building = building_nda_lostcity_yhanthlei }
+			}
+		}
+	}
+
 	immediate = {
 		debug_log = "City revealed immediate"
 
@@ -117,6 +159,10 @@ nda_lostcities.20 = {  # K'N-Yan revealed ?
 				}
 				
 				# Notify world
+				every_country = {
+					post_notification = nda_lostcity_yhanthlei_reveal
+				}
+
 				set_global_variable = nda_lostcity_yhanthlei_exists
 			}	
 		}
@@ -132,7 +178,7 @@ nda_lostcities.20 = {  # K'N-Yan revealed ?
 	}
 }
 
-nda_lostcities.21 = {  # K'N-Yan hidden ?
+nda_lostcities.21 = {  #  y'han-thlei  hidden ?
 	type = country_event
 	placement = p:x30C040 #xA07F85 #
 	title = nda_lostcities.21.t
@@ -151,6 +197,17 @@ nda_lostcities.21 = {  # K'N-Yan hidden ?
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	trigger = {
+		
+		has_global_variable = nda_lostcity_yhanthlei_exists 
+		p:x30C040 = {
+			state = {
+				owner = { is_cultist_country = no } # Cultists no longer control it
+				has_building = building_nda_lostcity_yhanthlei
+			}
+		}
+	}
+
 	immediate = {
 		debug_log = "City revealed immediate"
 		p:x30C040 = {
@@ -159,10 +216,13 @@ nda_lostcities.21 = {  # K'N-Yan hidden ?
 				remove_building = "building_nda_lostcity_yhanthlei" 	
 				
 				# Notify world
+				every_country = {
+					post_notification = nda_lostcity_yhanthlei_hidden
+				}
+
 				remove_global_variable = nda_lostcity_yhanthlei_exists	
 			}	
 		}
-
 	}	
 	
 	option = { #
@@ -193,6 +253,17 @@ nda_lostcities.30 = {  # Shamballa revealed ?
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	trigger = {
+		exists = c:LEN
+		NOT = { has_global_variable = nda_lostcity_shamballa_exists }
+		p:xB9B797 = {
+			state = {
+				owner = c:LEN
+				NOT = { has_building = building_nda_lostcity_shamballa }
+			}
+		}
+	}
+
 	immediate = {
 		debug_log = "City revealed immediate"
 
@@ -206,6 +277,10 @@ nda_lostcities.30 = {  # Shamballa revealed ?
 				}
 								
 				# Notify world
+				every_country = {
+					post_notification = nda_lostcity_shamballa_reveal
+				}
+
 				set_global_variable = nda_lostcity_shamballa_exists			
 			}	
 		}
@@ -237,6 +312,17 @@ nda_lostcities.31 = {  # Shamballa hidden ?
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
+	trigger = {
+		
+		has_global_variable = nda_lostcity_shamballa_exists 
+		p:xB9B797 = {
+			state = {
+				owner = { is_cultist_country = no } # Cultists no longer control it
+				has_building = building_nda_lostcity_shamballa
+			}
+		}
+	}
+
 	immediate = {
 		debug_log = "City revealed immediate"
 		p:xB9B797 = {
@@ -245,6 +331,10 @@ nda_lostcities.31 = {  # Shamballa hidden ?
 				remove_building = "building_nda_lostcity_shamballa" 	
 				
 				# Notify world
+				every_country = {
+					post_notification = nda_lostcity_shamballa_hidden
+				}
+
 				remove_global_variable = nda_lostcity_shamballa_exists						
 			}	
 		}

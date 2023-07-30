@@ -21,6 +21,12 @@
  ig_nda_cult_worshippers_only_icon:0 "@nda_cult!"
  ig_nda_cult_worshippers_desc:0 "Cultists who intent is to take over the world and summon the [concept_nda_old_ones] from their slumber."
 
+ig_variant_nda_cult_worshippers:0 "[GetInterestGroupVariant('ig_nda_cult_worshippers',GetPlayer).GetNameWithCountryVariant]"
+
+modifier_interest_group_ig_nda_cult_worshippers_pol_str_mult:0 "$ig_variant_nda_cult_worshippers$ [concept_political_strength]"
+modifier_interest_group_ig_nda_cult_worshippers_pol_str_mult_desc:0 "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_nda_cult_worshippers$ [concept_interest_group]"
+
+#alternate names
  ig_nda_cultist_church:0 "High Coven of Cthulhu"
  ig_nda_cultist_church_desc:0 "The High Coven of Cthulhu is the ultimate arbiter of Cthulhu's will on Earth."
  ig_nda_non_cultist_church:0 "Free Worshipers"

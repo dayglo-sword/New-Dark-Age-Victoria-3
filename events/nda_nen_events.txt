@@ -468,6 +468,7 @@ nda_nen.18 = { # The plague of reanimated spreads
 		add_modifier = { 
 			name = nda_reanimated_state_modifier
 		}
+		save_scope_as = plague_state_scope
 	}	
 	
 	option = { #" A tragic event"
@@ -624,7 +625,7 @@ nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
 }
 # follow on event with to shut it down if not cult country, or promote it if cult??
 # Action promised Feb. 1877 - church closes in April.
-nda_nen.1877 = { # Controvesy surrounding the Church of Starry Wisdom - Rhode Island
+nda_nen.1877 = { # Controversy surrounding the Church of Starry Wisdom - Rhode Island
 	type = country_event
 	placement = p:x1A77EA 
 	title = nda_nen.1877.t

@@ -1,0 +1,22 @@
+# based on original 'building_special_borobudur_temple' from 'MMJM SEA Holding Models' for CK3
+# by Matt "Legoman"
+pdxmesh = {
+	name = "shamballa_mesh"
+	file = "shamballa.mesh"
+	scale = 0.3
+
+	meshsettings = {
+		name = "building_special_borobudur_temple" # internal to mesh - unchangable
+		index = 0
+		texture_diffuse = "shamballa_diffuse.dds"
+		texture_normal = "shamballa_normal.dds"
+		texture_specular = "shamballa_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "shamballa_entity"
+	pdxmesh = "shamballa_mesh"
+}

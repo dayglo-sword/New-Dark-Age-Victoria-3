@@ -151,3 +151,8 @@ nda_lostcity_defense_modifier = {
 	unit_provinces_lost_mult = -0.05
 	unit_kill_rate_add = 5
 }
+
+nda_red_death_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_mortality_mult = 1.5 # needs to be more? or scaled like plague?
+}

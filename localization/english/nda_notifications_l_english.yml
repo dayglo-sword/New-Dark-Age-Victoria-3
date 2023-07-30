@@ -53,3 +53,28 @@
  notification_nda_hastur_coronation_tooltip:0 "#header $notification_nda_carnacki_exile_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_hastur_coronation_desc$"
  notification_nda_hastur_coronation_name:1 "A Grand Coronation"
  notification_nda_hastur_coronation_desc:1 "Hail Emperor Castaigne! Wearer of the Yellow Crown of Hastur.\n\nAmerica can dream again!"
+
+# lost cities
+ notification_nda_lostcity_knyan_reveal_tooltip:0 "#header $notification_nda_lostcity_knyan_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_knyan_reveal_desc$"
+ notification_nda_lostcity_knyan_reveal_name:1 " K'N-Yan Revealed"
+ notification_nda_lostcity_knyan_reveal_desc:1 "Hail Emperor Castaigne! Wearer of the Yellow Crown of Hastur.\n\nAmerica can dream again!"
+
+ notification_nda_lostcity_knyan_hidden_tooltip:0 "#header $notification_nda_lostcity_knyan_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_knyan_hidden_desc$"
+ notification_nda_lostcity_knyan_hidden_name:1 " K'N-Yan Sealed"
+ notification_nda_lostcity_knyan_hidden_desc:1 "Hail Emperor Castaigne! Wearer of the Yellow Crown of Hastur.\n\nAmerica can dream again!"
+
+ notification_nda_lostcity_yhanthlei_reveal_tooltip:0 "#header $notification_nda_lostcity_yhanthlei_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_yhanthlei_reveal_desc$"
+ notification_nda_lostcity_yhanthlei_reveal_name:1 "Y'han-thlei Rises"
+ notification_nda_lostcity_yhanthlei_reveal_desc:1 "Hail Emperor Castaigne! Wearer of the Yellow Crown of Hastur.\n\nAmerica can dream again!"
+
+ notification_nda_lostcity_yhanthlei_hidden_tooltip:0 "#header $notification_nda_lostcity_yhanthlei_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_yhanthlei_hidden_desc$"
+ notification_nda_lostcity_yhanthlei_hidden_name:1 "Y'han-thlei Recedes"
+ notification_nda_lostcity_yhanthlei_hidden_desc:1 "Hail Emperor Castaigne! Wearer of the Yellow Crown of Hastur.\n\nAmerica can dream again!"
+
+ notification_nda_lostcity_shamballa_reveal_tooltip:0 "#header $notification_nda_lostcity_shamballa_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_shamballa_reveal_desc$"
+ notification_nda_lostcity_shamballa_reveal_name:1 "Shamballa Discovered"
+ notification_nda_lostcity_shamballa_reveal_desc:1 "Hail Emperor Castaigne! Wearer of the Yellow Crown of Hastur.\n\nAmerica can dream again!"
+
+ notification_nda_lostcity_shamballa_hidden_tooltip:0 "#header $notification_nda_lostcity_shamballa_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_shamballa_hidden_desc$"
+ notification_nda_lostcity_shamballa_hidden_name:1 "Shamballa Disappears"
+ notification_nda_lostcity_shamballa_hidden_desc:1 "Hail Emperor Castaigne! Wearer of the Yellow Crown of Hastur.\n\nAmerica can dream again!"

@@ -58,6 +58,30 @@ building_nda_miskatonic_university = {
 }
 
 
+# R-lyeh - 
+building_nda_lostcity_rlyeh = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "rlyeh_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { "knyan_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_dummy #pmg_nda_esoteric_lostcity
+	}
+}
+
 # K'n-yan - https://www.lovecraft-stories.com/story/the-mound - tie it in to YIG as serpent people memntioned
 building_nda_lostcity_knyan = {
 	building_group = bg_monuments
@@ -70,19 +94,20 @@ building_nda_lostcity_knyan = {
 	
 	entity_not_constructed = { }
 	entity_under_construction = { }
-	entity_constructed = { "wonder_chichen_itza_01_entity"}
+	entity_constructed = { "knyan_entity"} #wonder_chichen_itza_01_entity
 	
 	city_gfx_interactions = {
 		clear_size_area = yes
 		size = 4
 	}
 	
-	production_method_groups = {
+	production_method_groups = {		
 		pmg_nda_esoteric_lostcity
+		pmg_nda_esoteric_lostcity_goods
 	}
 }
 
-# Y'ha-nthlei - https://www.lovecraft-stories.com/story/the-mound - tie it in to DGN 
+# Y'ha-nthlei - tie it in to DGN 
 building_nda_lostcity_yhanthlei = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
@@ -94,7 +119,7 @@ building_nda_lostcity_yhanthlei = {
 	
 	entity_not_constructed = { }
 	entity_under_construction = { }
-	entity_constructed = { "wonder_chichen_itza_01_entity"}
+	entity_constructed = { "knyan_entity" }
 	
 	city_gfx_interactions = {
 		clear_size_area = yes
@@ -103,6 +128,7 @@ building_nda_lostcity_yhanthlei = {
 	
 	production_method_groups = {
 		pmg_nda_esoteric_lostcity
+		pmg_nda_esoteric_lostcity_goods
 	}
 }
 
@@ -118,14 +144,15 @@ building_nda_lostcity_shamballa = {
 	
 	entity_not_constructed = { }
 	entity_under_construction = { }
-	entity_constructed = { "wonder_chichen_itza_01_entity"}
+	entity_constructed = { "shamballa_entity" }
 	
 	city_gfx_interactions = {
 		clear_size_area = yes
-		size = 4
+		size = 1
 	}
 	
 	production_method_groups = {
 		pmg_nda_esoteric_lostcity
+		pmg_nda_esoteric_lostcity_goods
 	}
 }

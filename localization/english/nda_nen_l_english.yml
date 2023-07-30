@@ -76,8 +76,8 @@ nda_nen.16.d:0 "Plague in Arkham!\n\nStrange behaviour amongst the war veterans 
 nda_nen.16.f:0 "It would appear that Dr. Wests 'Combat Serum' might have some unfortunate after effects after all.\n\nWith luck these dreadful things might die down soon."
 nda_nen.16.a:0 "I'm sure we can keep a lid on it."
 
-nda_nen.18.t:0 "A Plague Spreads"
-nda_nen.18.d:0 "The 'Plague' is no longer contained to Arkham!\n\nIt has spread to other states.\n\nSimilar tales of strange folk wandering the streets at night and tombs being desecrated."
+nda_nen.18.t:0 "The Plague Spreads to [SCOPE.sState('plague_state_scope').GetName]"
+nda_nen.18.d:0 "The 'Plague' is no longer contained to Arkham!\n\nIt has spread to [SCOPE.sState('plague_state_scope').GetName].\n\nSimilar tales of strange folk wandering the streets at night and tombs being desecrated."
 nda_nen.18.f:0 "'I saw outlined against some phosphorescence of the nether world a horde of silent toiling things which only insanity—or worse—could create.\n\nTheir outlines were human, semi-human, fractionally human, and not human at all — the horde was grotesquely heterogeneous.'"
 nda_nen.18.a:0 "We had no choice!"
 

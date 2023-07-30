@@ -6,3 +6,6 @@ nda_large_conversion = 0.1
 
 #ritual goal values
 nda_ritual_goal_value = 6000
+
+# red death duration (max number of months)
+nda_red_death_duration = 16 

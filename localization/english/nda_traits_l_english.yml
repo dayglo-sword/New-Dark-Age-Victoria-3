@@ -27,7 +27,7 @@ nda_dagon_grand_master:0 "Archon"
 # Idealogies
 ideology_nda_cabalistic:0 "Cabalistic"
 ideology_nda_cabalistic_desc:0 "Cabalistic Ideology."
-ideology_nda_cultist:0 "Cult Supremacy"
+ideology_nda_cultist:0 "Cult Supremacist"
 ideology_nda_cultist_desc:0 "This leader seeks to see the supremacy of their cult secured in totality regardess of others wishes."
 
 # Discrimination Traits
@@ -76,6 +76,9 @@ nda_inquisition_rightous_modifier:0 "A Rightous Inquisition"
 nda_inquisition_unjust_modifier:0 "An Unjust Inquisition"
 nda_inquisition_disliked_modifier:0 "A Hated Inquisition"
 nda_inquisition_opposed_modifier:0 "Oppose the Inquisition"
+
+nda_red_death_modifier:0 "The Red Death"
+nda_red_death_modifier_desc:0 "The Red Death is running rampant in this state."
 
 # Custom Triggers
 can_cult_infiltrate:0 "Cultists can infiltrate the country"

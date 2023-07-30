@@ -1,0 +1,20 @@
+﻿l_english:
+
+nda_eap.10.t:0 "An Unusual Disease"
+nda_eap.10.d:0 "There has been the spread of an unusual disease in Baltimore.\n\nDue to the horrific nature of the afflicton people have started refering to it as #BOLD The Red Death !#"
+nda_eap.10.f:0 "'...Blood was its Avatar and its seal — the redness and the horror of blood. There were sharp pains, and sudden dizziness, and then profuse bleeding at the pores, with dissolution. The scarlet stains upon the body and especially upon the face of the victim, were the pest ban which shut him out from the aid and from the sympathy of his fellow-men. And the whole seizure, progress and termination of the disease, were the incidents of half an hour.'"
+nda_eap.10.a:0 "Disturbing..."
+
+nda_eap.11.t:0 "The Red Death in "
+nda_eap.11.d:0 ""
+nda_eap.11.a:0 ""
+
+nda_eap.12.t:0 "The Red Death Spreads to [SCOPE.sState('red_death_state_scope').GetName]"
+nda_eap.12.d:0 "[SCOPE.sState('red_death_state_scope').GetName]"
+nda_eap.12.f:0 "'And now was acknowledged the presence of the Red Death. He had come like a thief in the night...'"
+nda_eap.12.a:0 "The is dreadful!."
+
+nda_eap.13.t:0 "Masque of the Red Death"
+nda_eap.13.d:0 "In what appears to be an arrogant act of contempt, the powerful and wealthy of [SCOPE.sState('red_death_state_scope').GetName] are hosting a Masked Ball in the middle of the epidemic!"
+nda_eap.13.f:0 "'...it was a gay and magnificent revel. The tastes of the host were peculiar. He had a fine eye for colours and effects. He disregarded the decora of mere fashion. His plans were bold and fiery, and his conceptions glowed with barbaric lustre. There are some who would have thought him mad. His followers felt that he was not. It was necessary to hear and see and touch him to be sure that he was not...\n\nAnd one by one dropped the revellers in the blood-bedewed halls of their revel, and died each in the despairing posture of his fall...\n\nAnd Darkness and Decay and the Red Death held illimitable dominion over all.'"
+nda_eap.13.a:0 "Our Condolences"

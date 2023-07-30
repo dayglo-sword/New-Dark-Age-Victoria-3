@@ -148,10 +148,33 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 
 	cooldown = { months = 24 }	
 	
+	immediate = {
+		set_global_variable = nda_poe_death
+	}
 	option = { #"Nevermore"
 		name = nda_historic.1849.a
 		default_option = yes
+
+		ai_chance = {
+			base = 80		
+		}
 	}
+
+	option = { #"Some sort of disease?" - NEN can force it on USA! or US can bring it on themselves
+		name = nda_historic.1849.b
+
+		ai_chance = {
+			base = 20		
+		}
+
+		hidden_effect = {
+			p:x0E3435 = { 
+				state = { 
+					trigger_event = { id = nda_eap.10 days = 7 }					
+				} 
+			}
+		}
+	}	
 }
 
 nda_historic.1852 = { # An American Medium in London

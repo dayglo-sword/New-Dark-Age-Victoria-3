@@ -200,3 +200,58 @@ nda_hastur_coronation = {
 	notification_type = toast
  
 }
+
+### Lost Cities
+nda_lostcity_knyan_reveal = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_lostcity_knyan_hidden = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_lostcity_yhanthlei_reveal = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_lostcity_yhanthlei_hidden = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_lostcity_shamballa_reveal = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_lostcity_shamballa_hidden = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}

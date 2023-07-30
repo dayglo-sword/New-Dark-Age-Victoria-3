@@ -17,3 +17,9 @@ building_input_black_lotus_add = {
 	good = no
 	percent = no
 }
+
+interest_group_ig_nda_cult_worshippers_pol_str_mult = {
+	neutral = yes
+	percent = yes
+	num_decimals = 0
+}

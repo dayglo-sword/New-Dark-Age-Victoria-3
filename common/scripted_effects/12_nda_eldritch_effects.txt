@@ -142,33 +142,7 @@ nda_effect_eldritch_annex = {
 			#position = 3 # don't want largest countries just yet
 
 			save_scope_as = nda_eldritch_annex
-			
-			# Reduce radicals before annex else high revolt risk
-			add_radicals  = { value = -0.5 }	
-
-			# make cultists happy
-			every_scope_culture = {
-				if = {
-					limit = {
-						OR = {
-							THIS = cu:nda_cul_cultist
-							THIS = cu:nda_cul_yigian
-							THIS = cu:nda_cul_dagonic
-						}
-					}
-					# Make cultists happy for annex
-					scope:nda_eldritch_annex = {
-						add_radicals = {
-							value = -1
-							culture = THIS
-						}	
-						add_loyalists = {
-							value = 1
-							culture = THIS
-						}				
-					}				
-				}					
-			}		
+		
 		}
 
 		if = {
@@ -183,6 +157,34 @@ nda_effect_eldritch_annex = {
 
 			scope:nda_eldritch_annex = { 
 				debug_log = "ELD - Country surrenders : [THIS.GetCountry.GetNameNoFormatting]"
+							
+				# Reduce radicals before annex else high revolt risk
+				add_radicals  = { value = -0.5 }	
+
+				# make cultists happy
+				every_scope_culture = {
+					if = {
+						limit = {
+							OR = {
+								THIS = cu:nda_cul_cultist
+								THIS = cu:nda_cul_yigian
+								THIS = cu:nda_cul_dagonic
+							}
+						}
+						# Make cultists happy for annex
+						scope:nda_eldritch_annex = {
+							add_radicals = {
+								value = -1
+								culture = THIS
+							}	
+							add_loyalists = {
+								value = 1
+								culture = THIS
+							}				
+						}				
+					}					
+				}
+
 				# release puppets and dominions - needs constraint to check if themselves not cultists
 				every_country = {
 					limit = {

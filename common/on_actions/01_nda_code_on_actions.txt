@@ -100,6 +100,8 @@ nda_monthly_on_action = {
 		nda_cas.10 # Holiness of Azedarac
 
 		nda_mrj.10 # Casting the Runes
+
+		nda_eap.11 # The Red Death Spreads
 	}
 	random_events = {
 		1 = 0
@@ -141,6 +143,10 @@ nda_monthly_on_action = {
 on_monthly_pulse_state = {
 	on_actions = {
 		nda_monthly_state_conversion_on_action	
+		nda_monthly_red_death_effect_on_action
+	}
+	events = {
+		nda_eap.13 # The Masque of the Red Death
 	}
 }
 
@@ -208,6 +214,36 @@ nda_monthly_state_conversion_on_action = {
 	}
 }
 
+nda_monthly_red_death_effect_on_action = {
+	# state level ongoing religious and population conversions
+	effect = {
+		if = {
+			limit = { # Red Death in play
+				has_global_variable = nda_poe_red_death				
+				has_variable = nda_poe_red_death_state	
+			}
+			# work out adjustments for variable - do simple countdown to begin with
+			if = {
+				limit = {
+					var:nda_poe_red_death_state < 0
+				}
+				# has run it's course - remove modifier
+				remove_modifier = nda_red_death_modifier
+				set_variable = nda_red_death_passes
+			}
+			else_if = {
+				limit = {
+					var:nda_poe_red_death_state > -1
+				}
+				change_variable = {
+					name = nda_poe_red_death_state
+					subtract = 1
+				}	
+			}
+		}
+	}
+}
+
 on_half_yearly_pulse_country = {
 	on_actions = {
 		nda_half_yearly_on_action	
@@ -224,6 +260,16 @@ nda_half_yearly_on_action = {
 		nda_nen.1934 # Dr West - Denouncement
 		nda_nen.17 # Reanimated Spreads
 		nda_nen.16 # Reanimated Plague Starts
+
+		# lost cities don't need to be monthly
+		nda_lostcities.10
+		nda_lostcities.11
+		nda_lostcities.20
+		nda_lostcities.21
+		nda_lostcities.30
+		nda_lostcities.31
+
+
 	}
 }
 
