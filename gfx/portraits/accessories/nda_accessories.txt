@@ -1,0 +1,107 @@
+﻿# # These assets are then used in the genes (game/common/genes/..) at the bottom of the file. 
+
+# #####################################
+# #									#
+# # 			 Cultist Headgear		#
+# #									#
+# #####################################
+
+
+# ## Cultist Archon Headgear ##
+# cultist_headgear_archon = {
+# 	entity = { required_tags = ""					shared_pose_entity = head		entity = "male_headgear_chinese_imperial_01_entity" }	
+# }
+
+# ## Cultist Leader Headgear
+# cultist_headgear_fez = {
+# 	entity = { required_tags = ""					shared_pose_entity = head		entity = "male_headgear_arabic_common_01_entity" }	
+# }
+
+## Cultist Leader Headgear
+cultist_headgear_mask = {
+	set_tags = "no_beard,nose_guard"
+	set_tags = "no_hair"
+	entity = { required_tags = "mask"		shared_pose_entity = head	 }
+	entity = {
+		required_tags = ""
+		shared_pose_entity = head
+		entity = cultist_face_mask_male_entity 
+	}
+}
+
+cultist_headgear_mask_female = {
+	set_tags = "nose_guard"
+	set_tags = "no_hair"
+	entity = { required_tags = "mask"		shared_pose_entity = head	 }
+	entity = {
+		required_tags = ""
+		shared_pose_entity = head
+		entity = cultist_face_mask_female_entity 
+	}
+}
+
+cultist_headgear_mask_eldritch = {
+	set_tags = "no_beard,nose_guard"
+	set_tags = "no_hair"
+	entity = { required_tags = "mask"		shared_pose_entity = head	 }
+	entity = {
+		required_tags = ""
+		shared_pose_entity = head
+		entity = eldritch_face_mask_male_entity
+	}
+}
+
+cultist_headgear_mask_eldritch_female = {
+	set_tags = "no_beard,nose_guard"
+	set_tags = "no_hair"
+	entity = { required_tags = "mask"		shared_pose_entity = head	 }
+	entity = {
+		required_tags = ""
+		shared_pose_entity = head
+		entity = eldritch_face_mask_female_entity 
+	}
+}
+
+cultist_headgear_mask_dagonic = {
+	set_tags = "no_beard,nose_guard"
+	set_tags = "no_hair"
+	entity = { required_tags = "mask"		shared_pose_entity = head	 }
+	entity = {
+		required_tags = ""
+		shared_pose_entity = head
+		entity = dagonic_face_mask_male_entity
+	}
+}
+
+cultist_headgear_mask_dagonic_female = {
+	set_tags = "no_beard,nose_guard"
+	set_tags = "no_hair"
+	entity = { required_tags = "mask"		shared_pose_entity = head	 }
+	entity = {
+		required_tags = ""
+		shared_pose_entity = head
+		entity = dagonic_face_mask_female_entity
+	}
+}
+
+cultist_headgear_mask_yigian = {
+	set_tags = "no_beard,nose_guard"
+	set_tags = "no_hair"
+	entity = { required_tags = "mask"		shared_pose_entity = head	 }
+	entity = {
+		required_tags = ""
+		shared_pose_entity = head
+		entity = yigian_face_mask_male_entity
+	}
+}
+
+cultist_headgear_mask_yigian_female = {
+	set_tags = "no_beard,nose_guard"
+	set_tags = "no_hair"
+	entity = { required_tags = "mask"		shared_pose_entity = head	 }
+	entity = {
+		required_tags = ""
+		shared_pose_entity = head
+		entity = yigian_face_mask_female_entity
+	}
+}
