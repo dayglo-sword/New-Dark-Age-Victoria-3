@@ -47,4 +47,10 @@ modifier_interest_group_ig_nda_cult_worshippers_pol_str_mult_desc:0 "A bonus or 
  ig_nda_starry_wisdom_cult_desc:0 "Church of the Starry Wisdom"
  ig_nda_illuminati_cult:0 "Illuminati"
  ig_nda_illuminati_cult_desc:0 "Order of the Illuminated"
- 
+
+#alternate devout
+ig_nda_rel_spiritualism:0 "Spiritualist Movement"
+ig_nda_rel_theosophic:0 "Theosophic Movement"
+
+# variables used
+nda_rel_boost_spiritualism:0 "Rising Spiritualism"

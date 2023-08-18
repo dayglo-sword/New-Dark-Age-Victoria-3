@@ -102,6 +102,9 @@ nda_monthly_on_action = {
 		nda_mrj.10 # Casting the Runes
 
 		nda_eap.11 # The Red Death Spreads
+		nda_eap.13 # The Masque of the Red Death
+		nda_eap.14 # Red Death Redemption
+
 	}
 	random_events = {
 		1 = 0
@@ -109,19 +112,21 @@ nda_monthly_on_action = {
 		1 = nda_ritual.7 # Eldritch gains cultural radicals
 	}
 	effect = {
-		# check if cult country has cult leader else set flag so can promote via character interaction - improves performance to do it here?
+		# check if cult country has coven leader else set flag so can promote via character interaction - improves performance to do it here?
 		if = {
 			limit = {
 				has_cult_culture = yes	
-				NOT = { # must not be any other interest groups with cult master. - need check for non-IG head of state??
+
+				NOT = { # must not be any interest groups with coven_leader. - need check for non-IG head of state??
 					OR = {
 						any_interest_group = { 
-							leader = { 
-								has_any_cultist_master_trait = yes				
+							leader = { 								
+								#has_any_cultist_master_trait = yes	
+								has_variable = nda_coven_leader			
 							}
 						}				
 					}	
-					ruler = { has_any_cultist_master_trait = yes }					
+					ruler = { has_variable = nda_coven_leader }					
 				}	
 			}
 			set_variable = nda_cult_leaderless
@@ -137,6 +142,35 @@ nda_monthly_on_action = {
 			remove_variable = nda_cult_leaderless_timer
 			set_variable = nda_cult_leader_debug
 		}
+
+		# Check for missing IG leaders - is there a problem with Hasturian America to cause no leaders and shadow men (id : -1)
+		if = {
+			limit = {
+				any_interest_group = {
+					NOT = { exists = leader } # is leaderless
+					#save_scope_as = leaderless_ig
+				}
+			}
+
+			debug_log = "Add missing leader : [THIS.GetCountry.GetNameNoFormatting]"
+
+			random_interest_group = {
+				limit ={
+					NOT = { exists = leader } # is leaderless					
+				}
+
+				save_scope_as = leaderless_ig
+			}
+
+			create_character = {
+				interest_group = scope:leaderless_ig
+
+				on_created = {
+					set_as_interest_group_leader = yes			
+				}				
+			}
+
+		}
 	}
 }
 
@@ -144,9 +178,6 @@ on_monthly_pulse_state = {
 	on_actions = {
 		nda_monthly_state_conversion_on_action	
 		nda_monthly_red_death_effect_on_action
-	}
-	events = {
-		nda_eap.13 # The Masque of the Red Death
 	}
 }
 
@@ -268,7 +299,8 @@ nda_half_yearly_on_action = {
 		nda_lostcities.21
 		nda_lostcities.30
 		nda_lostcities.31
-
+		nda_lostcities.40
+		nda_lostcities.41
 
 	}
 }

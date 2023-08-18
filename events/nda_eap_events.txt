@@ -4,8 +4,8 @@
 # https://www.gutenberg.org/files/1064/1064-h/1064-h.htm
 
 nda_eap.10 = { # The initial outbreak - (Baltimore) direct from Poe Death event.
-	type = state_event
-	placement = ROOT
+	type = country_event
+	placement = p:x0E3435
 	title = nda_eap.10.t
 	desc = nda_eap.10.d
 	flavor =  nda_eap.10.f
@@ -27,15 +27,23 @@ nda_eap.10 = { # The initial outbreak - (Baltimore) direct from Poe Death event.
 
 		set_global_variable = nda_poe_red_death
 
-		set_variable = {
-			name = nda_poe_red_death_state
-			value = nda_red_death_duration
-		} 
+		p:x0E3435 = { 
+			state = { 	
+				set_variable = {
+					name = nda_poe_red_death_state
+					value = nda_red_death_duration
+				} 
 
-		# action effect - pop death and mortality increase modifier
-		add_modifier = {
-			name = nda_red_death_modifier
+				# action effect - pop death and mortality increase modifier
+				IF = {
+					limit = { NOT = { has_modifier =  nda_red_death_modifier }
+					add_modifier = {
+						name = nda_red_death_modifier
+					}					
+				}
+			} 
 		}
+
 		# notification??
 
 		##trigger_event = { id = nda_eap.11 days = 10 } # 3 months as per story
@@ -56,6 +64,7 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 	trigger = { 
 		has_global_variable = nda_poe_red_death
 		any_scope_state = { has_variable = nda_poe_red_death_state 	}
+		game_date <= 1853.10.1 # 4 years of the Red Death should be enough
 	}
 
 	immediate = {		
@@ -71,7 +80,7 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 
 				# if previously hit reduce chance of spread - will not prevent secondary waves
 				
-				debug_log = "Red death spreads"
+				debug_log = "Red death spreads : [THIS.GetState.GetNameNoFormatting]"
 				trigger_event = { id = nda_eap.12 }	# fire main event						
 				save_scope_as = scope_spread_state
 			}			
@@ -89,7 +98,7 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 
 				# if previously hit reduce chance of spread - will not prevent secondary waves
 				
-				debug_log = "Red death spreads by jump"
+				debug_log = "Red death spreads by jump : [THIS.GetState.GetNameNoFormatting]"
 				trigger_event = { id = nda_eap.12 }	# fire main event						
 				save_scope_as = scope_spread_state
 			}
@@ -133,7 +142,7 @@ nda_eap.12 = { # The plague spreads
 }
 
 nda_eap.13 = { # Masque of the Red Death
-	type = state_event
+	type = country_event
 	placement = ROOT
 	title = nda_eap.13.t
 	desc = nda_eap.13.d
@@ -150,30 +159,116 @@ nda_eap.13 = { # Masque of the Red Death
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	trigger = {
-		is_capital = yes
-		has_modifier =  nda_red_death_modifier
-		has_variable = nda_poe_red_death_state
-		owner = {
-			not = { has_variable = nda_poe_red_death_masque }			
+
+		has_global_variable = nda_poe_red_death
+		NOT = { has_variable = nda_poe_red_death_masque }
+
+		any_scope_state = {
+			is_capital = yes				
+			has_variable = nda_poe_red_death_state	
+			has_modifier =  nda_red_death_modifier					
 		}
 	}
 
 	immediate = {
-		owner = {
-			set_variable = nda_poe_red_death_masque			
+
+		set_variable = nda_poe_red_death_masque			
+
+		random_scope_state = {
+			limit = {
+				is_capital = yes					
+			}
+					
+			save_scope_as = red_death_state_scope
+
+			# kill off some wealthy pops
+			kill_population_percent_in_state = { percent = 0.1 strata = rich }	
+			
+			# kill of a powerful leader??			
 		}
-
-		save_scope_as = red_death_state_scope
-
-		# kill off some wealthy pops
-		kill_population_percent_in_state = { percent = 0.1 strata = rich }	
-		
-		# kill of a powerful leader??
-
 	}	
 	
 	option = { #" A tragic event"
 		name = nda_eap.13.a
 		default_option = yes
+	}
+}
+
+nda_eap.14 = { # Red Death Redemption - post Red Death Spiritualist boost
+	type = country_event
+	placement = ROOT
+	title = nda_eap.14.t
+	desc = nda_eap.14.d
+	flavor =  nda_eap.14.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+
+		game_date >= 1854.10.1 # allow 5 years after initial Red Death
+		game_date < 1856.10.1
+
+		NOT = {
+			any_scope_state = { # Red Death is finished in country
+				has_modifier =  nda_red_death_modifier
+			}		
+		}
+		any_scope_state = {  
+			has_variable = nda_poe_red_death_state
+		}
+	}
+
+	cooldown = { months = 24 }
+
+	immediate = {
+
+	}	
+	
+	option = { # Ignore for minor boost
+		name = nda_eap.14.a
+		default_option = yes
+
+		every_scope_state = {
+			limit = { has_variable = nda_poe_red_death_state }
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism						
+					months = 12
+					value = nda_trivial_conversion
+				}		
+			
+			}
+		}
+	}
+
+	option = { # Promote for major boost
+		name = nda_eap.14.b
+
+		every_scope_state = {
+			limit = { has_variable = nda_poe_red_death_state }
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism						
+					months = 12
+					value = nda_small_conversion
+				}		
+			
+			}
+		}
+	}
+
+	option = { # supress
+		name = nda_eap.14.c
+
 	}
 }

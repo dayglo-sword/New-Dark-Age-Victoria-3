@@ -96,3 +96,19 @@ concept_nda_hyborian_age = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 	#is_loading_tip = yes
 }
+
+concept_nda_knyan = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+}
+
+concept_nda_yhanthlei = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+}
+
+concept_nda_shamballa = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+}
+
+concept_nda_nameless_city = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+}

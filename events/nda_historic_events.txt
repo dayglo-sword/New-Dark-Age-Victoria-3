@@ -92,13 +92,15 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 					convert_population = { target = rel:nda_rel_spiritualism value = 0.05 }	
 					
 					set_variable = { # ongoing conversion
-						name = nda_rel_boost_spiritualism						months = 12
+						name = nda_rel_boost_spiritualism						
+						months = 12
 						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
-							name = nda_rel_boost_spiritualism							months = 12
+							name = nda_rel_boost_spiritualism							
+							months = 12
 							value = nda_small_conversion
 						}					
 					}							
@@ -108,8 +110,24 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 	}
 
 	option = { #"Hope it does not spread"
-		name =nda_historic.1848.a
+		name = nda_historic.1848.a
 		default_option = yes	
+	}
+	option = { #"What harm can it do"
+		name = nda_historic.1848.b
+		every_scope_state = {
+			limit = {
+				is_incorporated = yes
+				NOT = { has_variable = nda_rel_boost_spiritualism }
+			}
+
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_spiritualism	
+				months = 12
+				value = nda_trivial_conversion
+			}						
+
+		}
 	}
 }
 
@@ -149,14 +167,15 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 	cooldown = { months = 24 }	
 	
 	immediate = {
-		set_global_variable = nda_poe_death
+		#set_global_variable = nda_poe_death # not used
+		debug_log = "Death of Poe" 
 	}
 	option = { #"Nevermore"
 		name = nda_historic.1849.a
 		default_option = yes
 
 		ai_chance = {
-			base = 80		
+			base = 20 #80		
 		}
 	}
 
@@ -164,15 +183,21 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 		name = nda_historic.1849.b
 
 		ai_chance = {
-			base = 20		
+			base = 80 #20		
 		}
-
-		hidden_effect = {
+		debug_log = "Death of Poe - choose disease" 
 			p:x0E3435 = { 
 				state = { 
-					trigger_event = { id = nda_eap.10 days = 7 }					
+						debug_log = "Death of Poe - call disease event" 
+						#set_variable = temp_red_death
+						# this does not work to trigger state event - convert to country event and call from owner
+						owner = {
+							trigger_event = { id = nda_eap.10 days = 7 }								
+						}
 				} 
-			}
+			}		
+		hidden_effect = {
+
 		}
 	}	
 }
@@ -244,6 +269,31 @@ nda_historic.1852 = { # An American Medium in London
 		default_option = yes
 
 	}
+	option = { #"What harm can it do"
+
+		name = nda_historic.1852.b
+		trigger = {
+			p:x7543C8 = {
+				state = {
+					owner = ROOT
+				}
+			}
+        }
+
+		every_scope_state = {
+			limit = {
+				is_incorporated = yes
+				NOT = { has_variable = nda_rel_boost_spiritualism }
+			}
+
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_spiritualism	
+				months = 12
+				value = nda_trivial_conversion
+			}						
+
+		}
+	}
 }
 
 nda_historic.1857 = { # Banner of Light
@@ -282,6 +332,12 @@ nda_historic.1857 = { # Banner of Light
 	cooldown = { months = 24 }	
 	
 	immediate = {
+	}
+
+	option = { 
+		name = nda_historic.1857.a
+		default_option = yes
+
 		debug_log = "Banner of Light : [THIS.GetCountry.GetNameNoFormatting]" 
 		p:x211ECF = {
 			state = {
@@ -289,13 +345,15 @@ nda_historic.1857 = { # Banner of Light
 					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
 					debug_log = "Banner of Light - add pop" 
 					set_variable = { # ongoing conversion
-						name = nda_rel_boost_spiritualism						months = 12
+						name = nda_rel_boost_spiritualism						
+						months = 12
 						value = nda_small_conversion
 					}
 
 					every_neighbouring_state = {
 						set_variable = { # # ongoing conversion of neighbours
-							name = nda_rel_boost_spiritualism							months = 12
+							name = nda_rel_boost_spiritualism							
+							months = 12
 							value = nda_trivial_conversion
 						}					
 					}				
@@ -307,9 +365,34 @@ nda_historic.1857 = { # Banner of Light
 	}
 
 	option = { 
-		name = nda_historic.1857.a
-		default_option = yes
-
+		name = nda_historic.1857.b
+		p:x211ECF = {
+			state = {
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+					debug_log = "Banner of Light - add pop" 
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritualism						
+						months = 12
+						value = nda_small_conversion
+					}		
+				
+				}
+				save_scope_as = nda_publish_state_scope
+			} 							
+		}
+		every_scope_state = {
+			limit = { NOT = { THIS = scope:nda_publish_state_scope } }
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism						
+					months = 12
+					value = nda_trivial_conversion
+				}		
+			
+			}
+		}
 	}
 }
 

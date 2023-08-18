@@ -68,3 +68,7 @@ nda_eld_destroy_hagia_sophia_tooltip:0 "Destroy the Hagia Sophia."
 nda_eld_destroy_saint_basils:0 "Destroy Saint Basils Cathedral"
 nda_eld_destroy_saint_basils_desc:0 "Saint Basils Cathedral is still a focus point for the Orthodox Religion. We should erase it from the planet to erode the Churches power."
 nda_eld_destroy_saint_basils_tooltip:0 "Destroy Saint Basils Cathedral."
+
+nda_adopt_spiritualism:0 "Adopt Spiritualism as State Religion"
+nda_adopt_spiritualism_desc:0 "The number of people following Spiritualism is becoming so great that it should be adopted as the religion of the country."
+nda_adopt_spiritualism_tooltip:0 "Set Spiritualism as the State Religion."

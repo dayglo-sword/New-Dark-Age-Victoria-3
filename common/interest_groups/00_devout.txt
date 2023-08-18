@@ -268,6 +268,7 @@
 			}
 			multiply = 2
 		}
+	
 		# Cultists have own IG
 		if = {
 			limit = {
@@ -322,6 +323,17 @@
 				value = 0.01
 			}
 		}
+		if = {
+			limit = {
+				OR = { # both historically had women as major players - need way to make them state religions??
+					owner.religion = rel:nda_rel_spiritualism
+					owner.religion = rel:nda_rel_theosophic
+				}
+			}
+			add = {
+				value = 0.49
+			}
+		}
 	}
 
 	female_agitator_chance = {
@@ -361,7 +373,19 @@
 			add = {
 				value = 0.01
 			}
-		}		
+		}	
+		
+		if = {
+			limit = {
+				OR = { # both historically had women as major players - need way to make them state religions??
+					owner.religion = rel:nda_rel_spiritualism
+					owner.religion = rel:nda_rel_theosophic
+				}
+			}
+			add = {
+				value = 0.46
+			}
+		}
 	}
 
 	# The chance that a commander belonging to this IG takes over leadership when it changes

@@ -141,6 +141,7 @@ has_lost_city = { # state level
 		has_building = building_nda_lostcity_knyan
 		has_building = building_nda_lostcity_yhanthlei
 		has_building = building_nda_lostcity_shamballa
+		has_building = building_nda_lostcity_nameless_city
 	}
 }
 
@@ -149,6 +150,7 @@ lost_cities_exist = {
 		has_global_variable = nda_lostcity_knyan_exists
 		has_global_variable = nda_lostcity_yhanthlei_exists
 		has_global_variable = nda_lostcity_shamballa_exists
+		has_global_variable = nda_lostcity_nameless_city_exists
 	}
 }
 

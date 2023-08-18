@@ -328,7 +328,17 @@ nda_base.5 = { # First Cultist in Country
 	type = country_event
 	placement = ROOT
 	title = nda_base.5.t
-	desc = nda_base.5.d
+	desc = { 
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:converted_ig.leader = { has_variable = nda_cured_by_cult }
+				}
+				desc = nda_base.5.d2 
+			}
+			desc = nda_base.5.d
+		}
+	}
 	flavor =  nda_base.5.f
 
 	duration = 3
@@ -358,13 +368,19 @@ nda_base.5 = { # First Cultist in Country
 
 	immediate = {
 		# set ig leader character to be Cultist - exclude devout initially?
-		random_interest_group = {
+		ordered_interest_group = {
 			limit = { NOT = { is_interest_group_type = ig_devout } }
+			order_by = nda_leader_cult_potential
+			max = 1
+
 			leader = { 
-				add_trait = nda_cultist 
+				add_trait = nda_cultist
+				# perks of the cult 
+				nda_effect_cult_perks = yes
+
 				save_scope_as = converted_ig_leader
-				}
-				save_scope_as = converted_ig					
+			}
+			save_scope_as = converted_ig					
 		}
 
 		# start journal for initial cult spread
@@ -396,7 +412,7 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 
 	immediate = {
 		# set ig leader character to be Cultist - exclude devout initially?
-		random_interest_group = {
+		ordered_interest_group = {
 			limit = { 
 				NOT = { 
 					leader = { 
@@ -404,8 +420,14 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 					} 
 				}
 			}
+			order_by = nda_leader_cult_potential
+			max = 1
+
 			leader = { 
 				add_trait = nda_cultist 
+				# perks of the cult 
+				nda_effect_cult_perks = yes
+
 				save_scope_as = converted_ig_leader
 			}
 			save_scope_as = converted_ig	
@@ -700,30 +722,29 @@ nda_base.12 = { # Secret Cultists in Country - fired from event nda_base.6 calle
 	type = country_event
 	placement = ROOT
 	title = nda_base.12.t
-	# if already repented then they have gone back on their word
+	
 
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					scope:converted_ig_leader = {
-						has_variable = nda_repented
+						has_variable = nda_repented # if already repented then they have gone back on their word
 					}
 				}
 				desc = nda_base.12.u
 			}
-			# standard 
 			triggered_desc = {
 				trigger = {
-					NOT = { 
-						scope:converted_ig_leader = {
-							has_variable = nda_repented
-						}
+					scope:converted_ig.leader = { 
+						has_variable = nda_cured_by_cult # cured by the cult
 					}
 				}
-
-				desc = nda_base.12.d
+				desc = nda_base.12.d2 
 			}
+
+			desc = nda_base.12.d
+
 		}
 	}
 
@@ -988,7 +1009,7 @@ nda_base.20 = { # Request from the devout
 		
 		ig:ig_devout = {
 			add_modifier = {
-				name = nda_inquisition_rightous_modifier # lasts till inqu ends or is rejected
+				name = nda_inquisition_righteous_modifier # lasts till inqu ends or is rejected
 			}			
 		}
 		ig:ig_intelligentsia = {
@@ -1083,7 +1104,7 @@ nda_base.22 = { # A Cultist converted
 			set_variable = { name = nda_repented }
 		}
 
-		debug_log = "Cult Traits Removed" 
+		debug_log = "Inquisition - Cult Traits Removed" 
 	}	
 	
 	option = { #"Saw Sense"
@@ -1125,7 +1146,7 @@ nda_base.23 = { # A Cultist refuses
 	}
 
 	immediate = {
-
+		debug_log = "Inquisition - Cultist Refuses" 
 	}	
 	
 	option = { #"Oh dear."
@@ -1164,8 +1185,8 @@ nda_base.24 = { # The Inquisition ends
 			leader = { 
 				save_scope_as = devout_ig_leader
 			}
-			if = { limit = { has_modifier = nda_inquisition_rightous_modifier }
-				remove_modifier = nda_inquisition_rightous_modifier
+			if = { limit = { has_modifier = nda_inquisition_righteous_modifier }
+				remove_modifier = nda_inquisition_righteous_modifier
 			}
 		}
 
@@ -1175,6 +1196,8 @@ nda_base.24 = { # The Inquisition ends
 			}
 			remove_modifier = nda_inquisition_opposed_modifier
 		}
+
+		debug_log = "Inquisition - Ends" 
 	}	
 	
 	option = { #"Oh dear."
@@ -1228,7 +1251,7 @@ nda_base.25 = { # An Innocent condemned
 			25 = { scope:targeted_ig_leader = { add_trait = opium_addiction } }
 		}		
 	
-		debug_log = "Innocent persecuted" 
+		debug_log = "Inquisition - Innocent persecuted" 
 		set_variable = "nda_innocent_condemmed"
 	}	
 	
@@ -1297,6 +1320,8 @@ nda_base.26 = { # The Pit and the Pendulum!
 				save_scope_as = devout_ig_leader
 			}
 		}
+
+		debug_log = "Inquisition - Pit and Pendulum" 
 	}	
 	
 	option = { #"We must end this atrocity"
@@ -1308,8 +1333,8 @@ nda_base.26 = { # The Pit and the Pendulum!
 
 		# bad debuff for devout, inqusition ends
 		ig:ig_devout = {
-			if = { limit = {has_modifier = nda_inquisition_rightous_modifier }
-				remove_modifier = nda_inquisition_rightous_modifier
+			if = { limit = {has_modifier = nda_inquisition_righteous_modifier }
+				remove_modifier = nda_inquisition_righteous_modifier
 			}
 			add_modifier = {
 				name = nda_inquisition_unjust_modifier
@@ -1336,8 +1361,8 @@ nda_base.26 = { # The Pit and the Pendulum!
 		name = nda_base.26.b
 		# debuff for devout and government
 		ig:ig_devout = {
-			if = { limit = {has_modifier = nda_inquisition_rightous_modifier }
-				remove_modifier = nda_inquisition_rightous_modifier
+			if = { limit = {has_modifier = nda_inquisition_righteous_modifier }
+				remove_modifier = nda_inquisition_righteous_modifier
 			}			
 		}
 

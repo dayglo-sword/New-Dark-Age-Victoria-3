@@ -9,7 +9,7 @@ nda_dark_skies_modifier = {
 	building_group_bg_agriculture_throughput_mult = -0.4
 	building_group_bg_ranching_throughput_mult = -0.4
 	building_group_bg_plantations_throughput_mult = -0.4
-	state_mortality_mult = 0.10
+	state_mortality_mult = 0.30
 	state_standard_of_living_add = -2
 }
 
@@ -46,7 +46,7 @@ nda_cult_decline_country_modifier = {
 
 nda_reanimated_state_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	state_mortality_mult = 0.2
+	state_mortality_mult = 0.4
 	state_standard_of_living_add = -2
 	state_migration_pull_mult = -0.2
 }
@@ -123,7 +123,7 @@ nda_star_ruination_country_modifier = {
 	country_bureaucracy_mult = -0.2
 }
 
-nda_inquisition_rightous_modifier = {
+nda_inquisition_righteous_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_approval_add = 3
 	interest_group_pol_str_mult = 0.1
@@ -155,4 +155,5 @@ nda_lostcity_defense_modifier = {
 nda_red_death_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	state_mortality_mult = 1.5 # needs to be more? or scaled like plague?
+	state_migration_pull_mult = -0.2
 }

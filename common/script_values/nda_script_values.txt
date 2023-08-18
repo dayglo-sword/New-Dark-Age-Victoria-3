@@ -9,3 +9,45 @@ nda_ritual_goal_value = 6000
 
 # red death duration (max number of months)
 nda_red_death_duration = 16 
+
+# ROOT scope is IG - use to find candidate cultists
+nda_leader_cult_potential =
+{
+	value = 1
+	if = {
+		limit = { leader = { has_trait = cruel } }
+		add = 5
+	}		
+	if = {
+		limit = { leader = { has_trait = bigoted } }
+		add = 5
+	}
+	if = {
+		limit = { leader = { has_trait = reckless } }
+		add = 2
+	}
+	if = {
+		limit = { leader = { has_trait = expensive_tastes } }
+		add = 2
+	}	
+	if = {
+		limit = { leader = { has_trait = psychological_affliction } }
+		add = 2
+	}	
+	if = {
+		limit = { leader = { has_trait = syphilis } }
+		add = 3
+	}	
+	if = {
+		limit = { leader = { has_trait = cancer } }
+		add = 2
+	}	
+	if = {
+		limit = { leader = { has_trait = sickly } }
+		add = 2
+	}
+	if = {
+		limit = { leader = { has_trait = brave } }
+		add = -2
+	}
+}

@@ -52,7 +52,7 @@ DGN = {	# Eldritch Realm
 		overlord_canton_scale = { 0.4 0.4 }	
 		subject_canton = DGN 
 	}
-		flag_definition = { # Cthulhu In the House Flag
+	flag_definition = { # Cthulhu In the House Flag
 		coa = DGN_CTH 
 		coa_with_overlord_canton = DGN
 		overlord_canton_offset = { 0.067 0.1 }
@@ -71,7 +71,7 @@ IAM = {	# Imperial America
 		coa_with_overlord_canton = IAM
 		overlord_canton_offset = { 0.067 0.1 }
 		overlord_canton_scale = { 0.4 0.4 }	
-		subject_canton = IAM 
+		subject_canton = IAM_CAN 
 	}
 }
 
@@ -94,5 +94,36 @@ LEN = {	# Leng
         trigger = { 
             nda_coa_def_cthulhu_trigger = yes
         }
+	}
+}
+
+STY = { # Stygia
+	flag_definition = {
+		coa = STY 
+		coa_with_overlord_canton = STY
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = STY
+	}
+}
+
+DLM = { # Dagonic Lemuria
+	flag_definition = {
+		coa = DLM 
+		coa_with_overlord_canton = DLM
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = DLM
+	}
+}
+
+
+LEM = { # Free Lemuria
+	flag_definition = {
+		coa = LEM 
+		coa_with_overlord_canton = LEM
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = LEM
 	}
 }

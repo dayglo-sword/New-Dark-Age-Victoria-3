@@ -19,7 +19,7 @@
 				months = 60
 				is_decaying = yes
 			}	
-			# Fatalities from close passage
+			# Fatalities from near passage
 			kill_population_percent_in_state = { percent = 0.05 }  		
 		}		
 	}

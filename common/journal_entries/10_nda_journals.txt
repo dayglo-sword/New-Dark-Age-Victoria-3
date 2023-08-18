@@ -613,6 +613,7 @@ je_nda_devout_inquisition = {
 			limit = { 
 				NOT = { has_variable = nda_inqusition_closed } # not externally cancelled
 			}
+			debug_log =  "Inquisition : Failed :"
 			trigger_event = { id = nda_base.24 }			
 		}
 	

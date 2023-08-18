@@ -1,6 +1,6 @@
 ﻿vril = {
-	texture = "gfx/interface/icons/goods_icons/electricity.dds"
-	cost = 50
+	texture = "gfx/interface/icons/goods_icons/vril.dds"
+	cost = 100
 	category = staple
 	
 	obsession_chance = 2.0
@@ -10,8 +10,8 @@
 }
 
 black_lotus = {
-	texture = "gfx/interface/icons/goods_icons/opium.dds"
-	cost = 80
+	texture = "gfx/interface/icons/goods_icons/black_lotus.dds"
+	cost = 100
 	category = luxury
 	
 	obsession_chance = 2.0

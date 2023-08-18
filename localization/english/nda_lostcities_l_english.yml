@@ -4,37 +4,48 @@ building_nda_lostcity_rlyeh:0 "R'lyeh"
 building_nda_lostcity_knyan:0 "Hidden Land of K'n-yan"
 building_nda_lostcity_yhanthlei:0 "Undersea City of Y'ha-nthlei"
 building_nda_lostcity_shamballa:0 "Hidden Realm of Shamballa"
+building_nda_lostcity_nameless_city:0 "The Nameless City"
 
 # modifiers
-nda_lostcity_defense_modifier:0 "War below the surface."
+nda_lostcity_defense_modifier:0 "War Below the Surface."
 
 # event text
 nda_lostcities.10.t:0 "K'n-yan Rises"
-nda_lostcities.10.d:1 "The hidden land of K'n-yan has risen, pushing numerous entrances above the surface of the mounds it lay under.\n\nThe inhabitants appear to be freely give away esoteric goods, but at what future cost?"
+nda_lostcities.10.d:1 "The hidden land of [concept_nda_knyan] has risen, pushing numerous entrances above the surface of the mounds it lay under.\n\nThe inhabitants appear to be freely give away esoteric goods, but at what future cost?"
 nda_lostcities.10.f:1 "'The people of K'n-yan all dwelt in the great, tall city of Tsath beyond the mountains. Formerly several races of them had inhabited the entire underground world, which stretched down to unfathomable abysses and which included besides the blue-litten region a red-litten region called Yoth, where relics of a still older and non-human race were found by archaeologists.'"
 nda_lostcities.10.a:0 "Good News?"
 
 nda_lostcities.11.t:0 "K'n-yan Receeds"
-nda_lostcities.11.d:1 "The hidden land of K'n-yan has once more disappeared below the surface, only rubble being left of its former presence."
+nda_lostcities.11.d:1 "The hidden land of [concept_nda_knyan] has once more disappeared below the surface, only rubble being left of its former presence."
 nda_lostcities.11.f:1 "'These mounds had something to do with the evil world down there — they were probably ancient closed-up passages to it, for once the Old Ones below had had colonies on the surface and had traded with men everywhere, even in the lands that had sunk under the big waters. It was when those lands had sunk that the Old Ones closed themselves up below and refused to deal with surface people.'"
 nda_lostcities.11.a:0 "Good News?"
 
 nda_lostcities.20.t:0 " Y'ha-nthlei Rises"
-nda_lostcities.20.d:1 "The hidden city of Y'ha-nthlei has risen, pushing numerous entrances above the surface of the sea it lay under.\n\nThe Deep One inhabitants appear to be freely give away esoteric goods, but at what future cost?"
+nda_lostcities.20.d:1 "The hidden city of [concept_nda_yhanthlei] has risen, pushing numerous entrances above the surface of the sea it lay under.\n\nThe Deep One inhabitants appear to be freely give away esoteric goods, but at what future cost?"
 nda_lostcities.20.f:1 "'Many-columned Y'ha-nthlei... titanic sunken porticos and labyrinths of weedy cyclopean walls ...a phosphorescent palace of many terraces, with gardens of strange leprous corals and grotesque brachiate efflorescences...'"
 nda_lostcities.20.a:0 "Good News?"
 
 nda_lostcities.21.t:0 " Y'ha-nthlei Receeds"
-nda_lostcities.21.d:1 "The hidden city of Y'ha-nthlei has once more disappeared below the surface, only small, dangerous shoals suggests its former presence."
+nda_lostcities.21.d:1 "The hidden city of [concept_nda_yhanthlei] has once more disappeared below the surface, only small, dangerous shoals suggests its former presence."
 nda_lostcities.21.f:1 "'Y'ha-nthlei was not destroyed when the upper-earth men shot death into the sea. It was hurt, but not destroyed. The Deep Ones could never be destroyed, even though the palaeogean magic of the forgotten Old Ones might sometimes check them. For the present they would rest; but some day, if they remembered, they would rise again for the tribute Great Cthulhu craved.'"
 nda_lostcities.21.a:0 "Good News?"
 
 nda_lostcities.30.t:0 "Shamballa Revealed"
-nda_lostcities.30.d:1 ""
+nda_lostcities.30.d:1 " [concept_nda_shamballa]"
 nda_lostcities.30.f:1 "'Who will come forth from Shamballa, the “City of Gods,” which is in the West for some nations, in the East for others, in the North or South for yet others. And this is the reason why, from the Indian Rishi to Virgil,  and from Zoroaster down to the latest Sibyl, all have, since the beginning of the Fifth Race, prophesied, sung, and promised the cyclic return of the Virgin — Virgo, the constellation — and the birth of a divine child who should bring back to our earth the Golden Age.'"
 nda_lostcities.30.a:0 "Good News?"
 
 nda_lostcities.31.t:0 "Shamballa Hidden"
-nda_lostcities.31.d:1 "."
+nda_lostcities.31.d:1 " [concept_nda_shamballa]."
 nda_lostcities.31.f:1 "'The truth with its mysterious details as given in the Secret Doctrine is known but to them; it can be given out fully only to the direct followers of the great Dravidian Guru, and it is for them alone to reveal of it as much as they think fit. Still it is maintained that this Adept of Adepts lives to this day in his spiritual entity as a mysterious, unseen, yet overpowering presence among the Brotherhood of Shamballa, beyond, far beyond, the snowy-capped Himâlayas.'"
 nda_lostcities.31.a:0 "Good News?"
+
+nda_lostcities.40.t:0 "The Nameless City Revealed"
+nda_lostcities.40.d:1 "A massive sandstorm has hit []. The locals described it as being of supernatural intensity, and it appears that the shifted sands has revealed it secrets.\n\nThe [concept_nda_nameless_city], the lost city of legend has now been revealed to the world!"
+nda_lostcities.40.f:1 "'Remote in the desert of Araby lies the nameless city, crumbling and inarticulate, its low walls nearly hidden by the sands of uncounted ages. It must have been thus before the first stones of Memphis were laid, and while the bricks of Babylon were yet unbaked.\n\nThere is no legend so old as to give it a name, or to recall that it was ever alive; but it is told of in whispers around campfires and muttered about by grandams in the tents of sheiks, so that all the tribes shun it without wholly knowing why. It was of this place that Abdul Alhazred the mad poet dreamed on the night before he sang his unexplainable couplet...\n\n“That is not dead which can eternal lie, And with strange aeons even death may die.”'"
+nda_lostcities.40.a:0 "Good News?"
+
+nda_lostcities.41.t:0 "The Nameless City Hidden"
+nda_lostcities.41.d:1 "The desert has once more swallowed up the [concept_nda_nameless_city].\n\nWhen will it be uncovered again?"
+nda_lostcities.41.f:1 "'...for behind the last of the creatures the great brazen door clanged shut with a deafening peal of metallic music whose reverberations swelled out to the distant world to hail the rising sun as Memnon hails it from the banks of the Nile.'"
+nda_lostcities.41.a:0 "Good News?"

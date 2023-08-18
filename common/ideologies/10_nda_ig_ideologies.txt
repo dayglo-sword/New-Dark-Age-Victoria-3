@@ -10,13 +10,11 @@
 	}
 	
 	lawgroup_distribution_of_power = {
-		law_landed_voting = strongly_approve
+		law_landed_voting = neutral
 		law_autocracy = strongly_approve
-		law_oligarchy = approve
+		law_oligarchy = strongly_approve
 		law_wealth_voting = neutral
-		law_landed_voting = disapprove
 		law_census_voting = disapprove
-		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 	}
 
@@ -24,13 +22,6 @@
 		law_hereditary_bureaucrats = strongly_approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
-	}
-		
-	lawgroup_army_model = {
-		law_professional_army = strongly_approve
-		law_mass_conscription = approve
-		law_national_militia = disapprove
-		law_peasant_levies = disapprove
 	}
 	
 	lawgroup_colonization = {
@@ -49,9 +40,9 @@
 	lawgroup_economic_system = {		
 		law_traditionalism = strongly_approve
 		law_agrarianism = approve
+		law_command_economy = approve		
 		law_interventionism = neutral
 		law_laissez_faire = disapprove
-		law_command_economy = strongly_disapprove
 	}
 	
 	lawgroup_trade_policy = {		

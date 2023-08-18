@@ -3,12 +3,19 @@ Version v1.4.0
 Major Changes
 Add 'Lost Cities' buildings
 Add occult Goods substitutes - 'Vril Rods' and 'Black Lotus Powder'
+Add the 'Red Death' (E A Poe)
+New 'Lost Countries' Formables that should only be possible for Players.
 
 Minor Changes
 Add Historic Vril events
+Add Masks to openly Cult Leaders
+Increase mortality effects of existing bad things modifiers
+Initial Cultists selected from those with negative/vulnerable traits
 
 Bug Fixes
 Correct spelling of Spiritualist
+Change Ideology 'Cult Supremacy' to 'Cult Supremacist' 
+Adjust Coven Leader selection to favour cult cultures
 
 -----
 

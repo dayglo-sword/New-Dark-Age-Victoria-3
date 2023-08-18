@@ -1,0 +1,70 @@
+﻿nda_adopt_spiritualism = {
+	is_shown = {
+		NOT = { country_has_state_religion = rel:nda_rel_spiritualism }
+		religion_percent_country = {
+			target = rel:nda_rel_spiritualism
+			value > 0.05
+		  }
+	}
+
+	possible = {
+		#custom_tooltip = {
+		#	text = is_meiji_japan
+		#	has_variable = meiji_restoration_complete
+		#}
+		ig:ig_devout = {
+			is_marginal = yes # existing devout should be weak
+		}
+
+		religion_percent_country = {
+			target = rel:nda_rel_spiritualism
+			value > 0.3
+		  }
+
+		NOT = { has_law = law_type:law_state_religion } # spiritualism isn't that rigid
+	}
+
+	when_taken = {
+		set_state_religion = rel:nda_rel_spiritualism
+		ig:ig_devout = {
+			hidden_effect = { set_interest_group_name = ig_nda_rel_spiritualism }
+			remove_ideology = ideology_patriarchal # go from paternal to fraternal
+			add_ideology = ideology_feminist_ig #ideology_anti_clerical
+		}
+		random_scope_state = {
+			limit = {
+				owner = ROOT
+				is_capital = yes
+			}
+
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}
+				convert_population = { target = rel:nda_rel_spiritualism value = 0.05 }	
+				
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism	months = 12
+					value = nda_small_conversion
+				}						
+			}
+		}
+		every_scope_state = {
+			limit = {
+				is_incorporated = yes
+				NOT = { is_capital = yes }
+			}
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}
+				
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism	months = 12
+					value = nda_small_conversion
+				}						
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 1
+	}
+}
+

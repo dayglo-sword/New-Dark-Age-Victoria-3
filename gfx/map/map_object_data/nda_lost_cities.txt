@@ -61,3 +61,19 @@ game_object_locator={
 		}
 	}
 }
+
+game_object_locator={
+	name="nameless_city_locator"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="static"
+	instances={
+		{
+			id=1
+			position={ 5040.000000 0.000000 2215.000000 } # arabia
+			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
+			scale={ 1.000000 1.000000 1.000000 }
+		}
+	}
+}

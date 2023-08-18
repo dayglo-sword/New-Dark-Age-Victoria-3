@@ -26,9 +26,9 @@ nda_dagon_grand_master:0 "Archon"
 
 # Idealogies
 ideology_nda_cabalistic:0 "Cabalistic"
-ideology_nda_cabalistic_desc:0 "Cabalistic Ideology."
+ideology_nda_cabalistic_desc:0 "This group seeks to impose their Cabalistic Ideology upon the country."
 ideology_nda_cultist:0 "Cult Supremacist"
-ideology_nda_cultist_desc:0 "This leader seeks to see the supremacy of their cult secured in totality regardess of others wishes."
+ideology_nda_cultist_desc:0 "This leader seeks to see the supremacy of their cult secured in totality, regardess of others wishes."
 
 # Discrimination Traits
 eldritch_culture_group:0 "Eldritch"
@@ -72,7 +72,7 @@ nda_star_ruination_country_modifier:0 "Great Disruption"
 nda_star_ruination_country_modifier_desc:0 "The passing of the Star and destruction it caused makes governing difficult."
 
 
-nda_inquisition_rightous_modifier:0 "A Rightous Inquisition"
+nda_inquisition_righteous_modifier:0 "A Righteous Inquisition"
 nda_inquisition_unjust_modifier:0 "An Unjust Inquisition"
 nda_inquisition_disliked_modifier:0 "A Hated Inquisition"
 nda_inquisition_opposed_modifier:0 "Oppose the Inquisition"

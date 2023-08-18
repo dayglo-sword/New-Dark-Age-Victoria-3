@@ -38,6 +38,7 @@ pm_nda_esoteric_streetlights = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
+			interest_group_ig_nda_cult_worshippers_pol_str_mult = -0.5
 			country_weekly_innovation_add = 2
 		}
 	}
@@ -55,7 +56,7 @@ pm_nda_esoteric_streetlights = {
 	}
 }
 
-# lost city pms - in effect are free goods as no above ground population needed
+# lost city pms - in effect are free goods as minimal above ground population needed
 pm_nda_esoteric_lost_city = { #
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 

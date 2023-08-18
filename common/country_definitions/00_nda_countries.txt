@@ -63,3 +63,39 @@ LEN = { # Leng
 	cultures = { nda_cul_cultist }
 	capital = STATE_LHASA
 }
+
+#yigian stygia
+STY = {
+	color = { 31 201 26 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { nda_cul_yigian }
+	capital = STATE_UPPER_EGYPT # Egypt?
+}
+
+#dagonic lemuria
+DLM = {
+	color = { 48 208 228 } #{ 11 84 179 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { nda_cul_dagonic }
+	capital = STATE_SOUTH_SUMATRA # Indonesia?
+}
+
+#free lemuria
+LEM = {
+	color = { 48 168 208 } #{ 11 84 179 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { balinese batak bornean dayak javan malay moluccan sumatran }
+	capital = STATE_SOUTH_SUMATRA
+}

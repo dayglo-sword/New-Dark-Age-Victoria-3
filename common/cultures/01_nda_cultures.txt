@@ -52,13 +52,13 @@ nda_cul_yigian={
 	}
 	common_last_names={
 		yig the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha ghatanothoa zoth-ommog
-		lotan typhaon
+		lotan typhaon tulu the_stygian
 		# Hyperborian version of names from CAS - Yigians are ancient race
 		yok-zothoth kthulhut zhothaqquah ubbo-satha
 	}
 
 	noble_last_names = {
-		yig set the_great_dragon the_father_serpent the_snake the_serpent the_blackadder the_ophidia yidhra ayi'ig k'baa lotan typhaon
+		yig set the_great_dragon the_father_serpent the_snake the_serpent the_blackadder the_ophidia yidhra ayi'ig k'baa lotan typhaon tulu
 	}
 	
 	male_regal_first_names = {

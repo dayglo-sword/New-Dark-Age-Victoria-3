@@ -255,3 +255,21 @@ nda_lostcity_shamballa_hidden = {
 	notification_type = toast
  
 }
+
+nda_lostcity_nameless_city_reveal = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_lostcity_nameless_city_hidden = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}

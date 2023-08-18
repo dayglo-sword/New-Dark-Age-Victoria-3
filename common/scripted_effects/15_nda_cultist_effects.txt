@@ -37,3 +37,21 @@ nda_effect_failing_cult_ideology = { # character should have an appropriate ideo
 			}
 		}
 }
+
+nda_effect_cult_perks = {
+	# perks of the cult 
+	if = {
+		limit = {
+			OR = {
+				has_trait = sickly
+				has_trait = cancer
+				has_trait = syphilis
+			}
+		}
+		remove_trait = sickly
+		remove_trait = cancer
+		remove_trait = syphilis	
+		set_variable = nda_cured_by_cult				
+	}	
+}
+

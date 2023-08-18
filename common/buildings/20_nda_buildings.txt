@@ -156,3 +156,28 @@ building_nda_lostcity_shamballa = {
 		pmg_nda_esoteric_lostcity_goods
 	}
 }
+
+# The Nameless City
+building_nda_lostcity_nameless_city = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "nameless_city_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { }
+	entity_constructed = { "wonder_giza_necropolis_01_entity" } # overusing knyan - need more appropriate
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 1
+	}
+	
+	production_method_groups = {
+		pmg_nda_esoteric_lostcity
+		pmg_nda_esoteric_lostcity_goods
+	}
+}

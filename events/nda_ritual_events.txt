@@ -43,6 +43,21 @@ nda_ritual.1924 = { # Cthulhu Return - 1925 already used below
 		every_country = {
 			post_notification = nda_ritual_cthulhu_returns
 		}
+
+		IF = {
+			limit = { NOT = { has_global_variable =  nda_lostcity_rlyeh_exists}}
+			# add cosmetic rlyeh to map
+			p:xA07F85 = {
+				state = {
+					# state level
+					create_building={
+						building="building_nda_lostcity_rlyeh" 
+					}	
+
+					set_global_variable = nda_lostcity_rlyeh_exists								
+				}	
+			}			
+		}
 	}	
 }
 
@@ -119,6 +134,21 @@ nda_ritual.1890 = { # Cthulhu Early Return
 
 		every_country = {
 			post_notification = nda_ritual_cthulhu_returns
+		}
+		
+		IF = {
+			limit = { NOT = { has_global_variable =  nda_lostcity_rlyeh_exists}}
+			# add cosmetic rlyeh to map
+			p:xA07F85 = {
+				state = {
+					# state level
+					create_building={
+						building="building_nda_lostcity_rlyeh" 
+					}	
+
+					set_global_variable = nda_lostcity_rlyeh_exists								
+				}	
+			}			
 		}
 	}	
 }
@@ -465,6 +495,8 @@ nda_ritual.8 = { # The Last war
 				c:YIG = { 
 					change_relations = { country = c:ELD value = 100 } 
 					change_relations = { country = c:NEN value = -100 }
+					# add interest in area
+					add_declared_interest = region_new_england
 				}
 				add_initiator_backers = { c:YIG }
 				add_diplomatic_play_war_support = { target = c:YIG value = 100 }	
@@ -475,6 +507,8 @@ nda_ritual.8 = { # The Last war
 				c:DGN = { 
 					change_relations = { country = c:ELD value = 100 }
 					change_relations = { country = c:NEN value = -100 }
+					# add interest in area
+					add_declared_interest = region_new_england
 				}				
 				add_initiator_backers = { c:DGN }	
 				add_diplomatic_play_war_support = { target = c:DGN value = 100 }			
@@ -484,6 +518,8 @@ nda_ritual.8 = { # The Last war
 				c:LEN = { 
 					change_relations = { country = c:ELD value = 100 } 
 					change_relations = { country = c:NEN value = -100 }
+					# add interest in area
+					add_declared_interest = region_new_england
 				}
 				add_initiator_backers = { c:LEN }
 				add_diplomatic_play_war_support = { target = c:LEN value = 100 }				
@@ -507,6 +543,8 @@ nda_ritual.8 = { # The Last war
 				# improve relations to give chance they will stay interested in war
 				change_relations = { country = c:ELD value = -100 }
 				change_relations = { country = c:NEN value = 100 }
+				# add interest in area
+				add_declared_interest = region_new_england
 
 				scope:nda_dp_final_war_scope = {
 					add_target_backers = { PREV }	

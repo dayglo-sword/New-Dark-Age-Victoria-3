@@ -34,3 +34,80 @@ DGN = {
 	}
 }
 
+STY = { # Stygia
+	states = { 
+		STATE_LOWER_EGYPT 
+		STATE_MIDDLE_EGYPT
+		STATE_UPPER_EGYPT 
+		STATE_EGYPTIAN_DESERT 
+		STATE_MATRUH
+		STATE_SINAI
+		STATE_DONGOLA
+		STATE_KORDOFAN
+		STATE_BLUE_NILE
+		STATE_DARFUR
+		STATE_LIBYA
+		STATE_LIBYAN_DESERT 
+		STATE_TRIPOLI
+
+	}
+
+	required_num_states = 9
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		# owns cairo - 
+		owns_entire_state_region = STATE_LOWER_EGYPT 
+
+		# is yigian culture
+		OR = {
+			country_has_primary_culture = cu:nda_cul_yigian
+			country_has_primary_culture = cu:nda_cul_cultist
+		}	
+		any_country = {
+			OR = {
+				country_has_primary_culture = cu:nda_cul_yigian
+			}			
+			has_technology_researched = nationalism
+		}
+	}
+}
+
+DLM = { # Dagonic Lemuria - This is different to standard Lemuria as Cultist
+	states = {
+		STATE_ACEH
+		STATE_CENTRAL_JAVA
+		STATE_EAST_BORNEO
+		STATE_EAST_JAVA
+		STATE_MALAYA
+		STATE_MOLUCCAS
+		STATE_CELEBES
+		STATE_NORTH_BORNEO
+		STATE_NORTH_SUMATRA
+		STATE_SOUTH_SUMATRA
+		STATE_SUNDA_ISLANDS
+		STATE_WEST_BORNEO
+		STATE_WESTERN_NEW_GUINEA
+		STATE_WEST_JAVA
+	}
+
+	required_num_states = 9
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+
+		has_technology_researched = pan-nationalism
+		# is yigian culture
+		OR = {
+			country_has_primary_culture = cu:nda_cul_dagonic
+		}	
+		any_country = {
+			OR = {
+				country_has_primary_culture = cu:nda_cul_dagonic
+			}			
+			has_technology_researched = nationalism
+		}
+	}
+}

@@ -22,6 +22,7 @@ nda_lostcities.10 = {  # K'N-Yan revealed ? Do trigger but should be decision fo
 
 	trigger = {
 		exists = c:YIG
+		c:YIG = THIS
 		NOT = { has_global_variable = nda_lostcity_knyan_exists }
 		p:xA07F85 = {
 			state = {
@@ -137,6 +138,7 @@ nda_lostcities.20 = {  # y'han-thlei revealed ?
 
 	trigger = {
 		exists = c:DGN
+		c:DGN = THIS
 		NOT = { has_global_variable = nda_lostcity_yhanthlei_exists }
 		p:x30C040 = {
 			state = {
@@ -343,6 +345,122 @@ nda_lostcities.31 = {  # Shamballa hidden ?
 	
 	option = { #
 		name = nda_lostcities.31.a 
+		default_option = yes	
+		debug_log = "City hidden again option"
+
+	}
+}
+
+nda_lostcities.40 = {  # Nameless City revealed ?
+	type = country_event
+	placement = p:x68A578 
+	title = nda_lostcities.40.t
+	desc = nda_lostcities.40.d
+	flavor =  nda_lostcities.40.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		exists = c:ELD
+		c:ELD = THIS
+		NOT = { has_global_variable = nda_lostcity_nameless_city_exists }
+		p:x68A578 = {
+			state = {
+				owner = c:ELD
+				NOT = { has_building = building_nda_lostcity_nameless_city }
+			}
+		}
+	}
+
+	immediate = {
+		debug_log = "City revealed immediate"
+
+		p:x68A578 = {
+			state = {
+				# state level
+				create_building={
+					building="building_nda_lostcity_nameless_city" 
+					#level=1
+					#reserves=1
+				}
+								
+				# Notify world
+				every_country = {
+					post_notification = nda_lostcity_nameless_city_reveal
+				}
+
+				set_global_variable = nda_lostcity_nameless_city_exists			
+			}	
+		}
+	}	
+	
+	option = { #
+		name = nda_lostcities.40.a 
+		default_option = yes	
+		debug_log = "City revealed option"
+
+	}
+}
+
+nda_lostcities.41 = {  # nameless_city hidden ?
+	type = country_event
+	placement = p:x68A578
+	title = nda_lostcities.41.t
+	desc = nda_lostcities.41.d
+	flavor =  nda_lostcities.41.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		
+		has_global_variable = nda_lostcity_nameless_city_exists 
+		p:xB9B797 = {
+			state = {
+				owner = { is_cultist_country = no } # Cultists no longer control it
+				has_building = building_nda_lostcity_nameless_city
+			}
+		}
+	}
+
+	immediate = {
+		debug_log = "City hidden immediate"
+		p:x68A578 = {
+			state = {
+				# state level
+				remove_building = "building_nda_lostcity_nameless_city" 	
+				
+				# Notify world
+				every_country = {
+					post_notification = nda_lostcity_nameless_city_hidden
+				}
+
+				remove_global_variable = nda_lostcity_nameless_city_exists						
+			}	
+		}
+
+	}	
+	
+	option = { #
+		name = nda_lostcities.41.a 
 		default_option = yes	
 		debug_log = "City hidden again option"
 

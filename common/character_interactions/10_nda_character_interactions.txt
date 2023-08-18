@@ -12,7 +12,7 @@
 
 #ai_chance				Scriptable value for the chance (0-100) that the AI will use this interaction when available, default 0
 
-set_head_of_coven = { # If no cult master exists this button 'promotes' character - adds master trait
+set_head_of_coven = { # If no coven leader exists this button 'promotes' character - adds master trait
 	icon = "gfx/interface/character_panel/nda_coven_action.dds" # do custom icon
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
@@ -23,22 +23,10 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 			custom_tooltip = {
 				text = nda_no_senior_cultist_IG_leaders_tt
 				has_variable = nda_cult_leaderless
-				# NOT = { # must not be any other interest groups with cult master.
-				# 	any_interest_group = { 
-				# 		limit = { 
-				# 			leader = {
-				# 				has_trait = nda_master 							
-				# 			}
-				# 		}
-				# 	}
-				#  }
+
 			}
 			has_cult_culture = yes			
-			# OR = {
 
-			# 	#is_cultist_country = yes # bugged? is possible to have variable set but not have culture.
-			# 	#is_full_cult_country = { COUNTRY=scope:actor } # only for countries with cult in control				
-			# }
 			
 		}	
 		OR = {
@@ -50,7 +38,7 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 		custom_tooltip = {
 			text = nda_not_senior_cultist_tt
 			has_any_cultist_trait = yes
-			has_any_cultist_master_trait = no
+			#has_any_cultist_master_trait = no
 
 		}
 		
@@ -120,18 +108,59 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 
 			add = 15
 		}
+
+		# has matching cult culture
+		if = {
+			limit = {				
+				culture = cu:nda_cul_cultist				
+				owner = { country_has_primary_culture =  cu:nda_cul_cultist }
+
+			}
+			add = 15
+		}
+		else_if = {
+			limit = {				
+				culture = cu:nda_cul_dagonic								
+				owner = { country_has_primary_culture =  cu:nda_cul_dagonic }
+
+			}
+			add = 15
+		}
+		else_if = {
+			limit = {				
+				culture = cu:nda_cul_yigian								
+				owner = { country_has_primary_culture =  cu:nda_cul_yigian }
+
+			}
+			add = 15
+		}
+		else = {
+			add = -15
+		}
+
 		if = { # Devout should be in opposition 
 			limit = { 
 				interest_group = { is_interest_group_type = ig_devout } 
 			}
-			add = -20
+			add = -30
 		}	
 		if = {
 			limit = {
 				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
 			}
 			add = 10
-		}		
+		}	
+		if = {
+			limit = {
+				OR = {
+					 # more chance if already master
+					has_trait = nda_master
+					has_trait = nda_dagon_master
+					has_trait = nda_yig_master
+				}			
+			}
+			add = 30
+		}	
 		if = {
 			limit = {
 				OR = {
@@ -147,7 +176,7 @@ set_head_of_coven = { # If no cult master exists this button 'promotes' characte
 			limit = {
 				has_non_cultist_ideology = yes				
 			}
-			add = -10
+			add = -20
 		}
 		if = { # slow down after cthulhu leaves
 			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
