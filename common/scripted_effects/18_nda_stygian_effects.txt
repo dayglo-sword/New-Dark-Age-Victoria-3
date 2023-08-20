@@ -1,0 +1,131 @@
+﻿
+nda_effect_stygian_setup = {
+	# Set Country Leader as Cultist if not already
+	every_scope_character = {
+		limit = { 
+			is_ruler = yes 
+			has_yigian_trait = no 
+		}
+		add_trait = nda_yig_master # need to add to heirs as well?
+		change_character_religion = rel:nda_rel_yigian
+		nda_effect_ensure_cult_ideology = yes
+	}
+
+	# set state religion
+	set_state_religion = rel:nda_rel_yigian
+
+	# change to absolute Monarchy
+	activate_law = law_type:law_monarchy
+	activate_law = law_type:law_autocracy
+
+	# make recognized if not already
+	set_country_type = recognized
+	
+	# set cult to be cultists and to be power brokers
+	ig:ig_nda_cult_worshippers = {
+		set_interest_group_name = ig_nda_stygian_church
+
+		IF = {
+			limit = { NOT = { has_modifier = nda_ig_secret_masters_modifier } }
+			add_modifier = {
+				name = nda_ig_secret_masters_modifier
+			}
+		}
+	}
+	# rename devout to approprite name
+	ig:ig_devout = {
+		set_interest_group_name = ig_nda_non_cultist_church
+	}
+
+	# remove anti-slavery from intel and trade unions 
+	every_interest_group = {
+		limit = { has_ideology = ideology:ideology_anti_slavery }
+		remove_ideology = ideology_anti_slavery
+	}
+
+	# change Char religion, ensure cultist 
+	every_interest_group = {
+		leader = {
+			change_character_religion = rel:nda_rel_cultist
+			IF = {
+				limit = { 
+					has_any_cultist_trait = no 
+				}
+				add_trait = nda_yig_cultist		
+			}
+		}
+	}
+
+	# set (not so) secret goals - need to check they exist!
+	IF = {
+		limit = {
+			exists = c:NEN
+		}
+		set_secret_goal = {
+			country = c:NEN
+			secret_goal = antagonize
+		}			
+	}
+	IF = {
+		limit = {
+			exists = c:ELD
+		}
+		set_secret_goal = {
+			country = c:ELD
+			secret_goal = befriend
+		}			
+	}
+	IF = {
+		limit = {
+			exists = c:DGN
+		}
+		set_secret_goal = {
+			country = c:DGN
+			secret_goal = befriend
+		}			
+	}
+	IF = {
+		limit = {
+			exists = c:YIG
+		}
+		set_secret_goal = {
+			country = c:YIG
+			secret_goal = befriend
+		}			
+	}
+
+	set_strategy = ai_strategy_nda_eldritch_administrative_agenda
+	set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
+	set_strategy = ai_strategy_nda_eldritch_political_agenda
+
+	# set up homelands - remove eldritch, add yigian
+	every_scope_state = {
+		state_region = {
+			add_homeland = nda_cul_yigian	
+			remove_homeland = nda_cul_cultist	
+			remove_claim = c:ELD			
+		}
+
+		# convert some cultists to yigian	
+		hidden_effect = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:nda_cul_cultist
+				}
+				change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
+			}
+		}				
+	}
+
+	# add claims to non-cultist neighbours
+	every_scope_state = {
+		every_neighbouring_state = {
+			limit = {
+				owner = { has_cult_culture = no }					
+			}
+			state_region = {
+				add_claim = c:STY
+			}
+		}			
+	}	
+}

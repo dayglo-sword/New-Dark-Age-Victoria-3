@@ -378,6 +378,7 @@ nda_lostcities.40 = {  # Nameless City revealed ?
 			state = {
 				owner = c:ELD
 				NOT = { has_building = building_nda_lostcity_nameless_city }
+				save_scope_as = nameless_city_state_scope
 			}
 		}
 	}
@@ -433,7 +434,7 @@ nda_lostcities.41 = {  # nameless_city hidden ?
 	trigger = {
 		
 		has_global_variable = nda_lostcity_nameless_city_exists 
-		p:xB9B797 = {
+		p:x68A578 = {
 			state = {
 				owner = { is_cultist_country = no } # Cultists no longer control it
 				has_building = building_nda_lostcity_nameless_city

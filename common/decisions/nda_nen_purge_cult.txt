@@ -116,6 +116,10 @@
 					limit = { has_trait = nda_acolyte }
 					add = 1
 				}
+				if = {
+					limit = { is_historical = yes }
+					add = 3
+				}
 			}
 			max = 1
 			save_scope_as = nda_purge_exile_char

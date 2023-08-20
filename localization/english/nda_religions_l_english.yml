@@ -35,6 +35,8 @@ modifier_interest_group_ig_nda_cult_worshippers_pol_str_mult_desc:0 "A bonus or 
  ig_nda_dagonic_church_desc:0 "The High Church of Dagon is the ultimate arbiter of Dagon's will on land."
  ig_nda_yigian_church:0 "High Church of Yig"
  ig_nda_yigian_church_desc:0 "The High Church of Yig is the ultimate arbiter of Yig's will on Earth."
+ ig_nda_stygian_church:0 "High Church of Set"
+ ig_nda_stygian_church_desc:0 "The High Church of Set is the ultimate arbiter of Set's will on Earth."
  ig_nda_dagonic_cult:0 "Dagon Worshippers"
  ig_nda_dagonic_cult_desc:0 "Cultists who intent is to take over the world and in the name of the fish-god Dagon."
  ig_nda_yigian_cult:0 "Serpent Worshippers"

@@ -41,7 +41,7 @@ nda_lostcities.31.f:1 "'The truth with its mysterious details as given in the Se
 nda_lostcities.31.a:0 "Good News?"
 
 nda_lostcities.40.t:0 "The Nameless City Revealed"
-nda_lostcities.40.d:1 "A massive sandstorm has hit []. The locals described it as being of supernatural intensity, and it appears that the shifted sands has revealed it secrets.\n\nThe [concept_nda_nameless_city], the lost city of legend has now been revealed to the world!"
+nda_lostcities.40.d:1 "A massive sandstorm has hit [SCOPE.sState('nameless_city_state_scope').GetName]. The locals described it as being of supernatural intensity, and it appears that the shifted sands has revealed it secrets.\n\nThe [concept_nda_nameless_city], the lost city of legend has now been revealed to the world!"
 nda_lostcities.40.f:1 "'Remote in the desert of Araby lies the nameless city, crumbling and inarticulate, its low walls nearly hidden by the sands of uncounted ages. It must have been thus before the first stones of Memphis were laid, and while the bricks of Babylon were yet unbaked.\n\nThere is no legend so old as to give it a name, or to recall that it was ever alive; but it is told of in whispers around campfires and muttered about by grandams in the tents of sheiks, so that all the tribes shun it without wholly knowing why. It was of this place that Abdul Alhazred the mad poet dreamed on the night before he sang his unexplainable couplet...\n\n“That is not dead which can eternal lie, And with strange aeons even death may die.”'"
 nda_lostcities.40.a:0 "Good News?"
 
@@ -49,3 +49,8 @@ nda_lostcities.41.t:0 "The Nameless City Hidden"
 nda_lostcities.41.d:1 "The desert has once more swallowed up the [concept_nda_nameless_city].\n\nWhen will it be uncovered again?"
 nda_lostcities.41.f:1 "'...for behind the last of the creatures the great brazen door clanged shut with a deafening peal of metallic music whose reverberations swelled out to the distant world to hail the rising sun as Memnon hails it from the banks of the Nile.'"
 nda_lostcities.41.a:0 "Good News?"
+
+#decisions
+nda_eld_nameless_city:0 "Quest for the Nameless City"
+nda_eld_nameless_city_desc:0 "A traveller, from an antique land, has suggested to us that the [concept_nda_nameless_city] is somewhere in these lands. We should conquer them to make our search easier."
+nda_eld_nameless_city_possible_tt:0 "Target is not at War."

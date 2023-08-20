@@ -1,0 +1,86 @@
+﻿nda_eld_nameless_city = {
+	is_shown = {
+		exists = c:ELD
+		this = c:ELD
+		p:x68A578 = {
+			state = {
+				NOT = { owner = c:ELD }
+				NOT = { has_building = building_nda_lostcity_nameless_city }
+				owner = {
+					has_strategic_land_adjacency = c:ELD
+					is_revolutionary = no # wait till revoultion is over
+				}
+			}
+		}
+		# c:ELD = { 
+		# 	NOT = { has_variable = nda_eld_spread_to_puppet_cooldown  }					
+		# 	any_subject_or_below = { 
+		# 		can_cult_infiltrate = yes
+		# 		#NOT = { 
+		# 		#	has_variable = nda_cultists_in_open 
+		# 		#	has_journal_entry = je_nda_cult_spreads
+		# 		#	has_variable = nda_cult_spread_failed
+		# 		#} 
+		# 	} 
+		# }
+	}
+
+	possible = {
+		c:ELD = { 			 	
+			is_at_war = no
+		}
+
+		custom_tooltip = {
+			text = nda_eld_nameless_city_possible_tt
+
+			p:x68A578 = {
+				state = {
+					owner = {
+						is_at_war = no
+					}
+				}
+			}	
+		}
+	}
+	
+	when_taken = {
+		#debug_log = "nda_eld_spread_to_puppet" # should this actually be diplo action?
+				# launch diplo-play to conquor NEN and/or player
+		p:x68A578 = {
+			state = {
+				owner = {
+					save_scope_as = conquest_target
+				}
+			}
+		}
+
+		create_diplomatic_play = {
+			name = nda_dp_final_war
+		
+			target_country = scope:conquest_target
+			
+			war = yes # not straight off
+			
+			type = dp_conquer_state
+
+		} 
+	}
+
+	ai_chance = {
+		base = 10
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		# modifier based on relationship
+
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -10
+		}		
+	}
+
+}

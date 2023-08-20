@@ -80,6 +80,10 @@ is_full_cult_country = {
 			exists = c:LEN
 			owner = { c:LEN = $COUNTRY$ }				
 		}
+		AND = {
+			exists = c:STY
+			owner = { c:STY = $COUNTRY$ }				
+		}		
 	}
 }
 

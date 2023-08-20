@@ -36,7 +36,7 @@ concept_nda_old_ones_desc:0 "Creatures from beyond this planet that many through
 
 concept_nda_chaugnar_faugn:0 "Chaugnar Faugn, the elephantine god"
 concept_nda_chaugnar_faugn_short:0 "Chaugnar Faugn"
-concept_nda_chaugnar_faugn_desc:0 "Twice exiled, first from their home planet and then from Earth into the Dreamlands. Chaugnar Faugn is the last survivor of the Elephntine race, the last of his former companions being killed towards the end of the [concept_nda_hyborian_age]."
+concept_nda_chaugnar_faugn_desc:0 "Twice exiled, first from their home planet and then from Earth into the Dreamlands. Chaugnar Faugn is the last survivor of the Elephantine race, the last of his former companions being killed towards the end of the [concept_nda_hyborian_age]."
 
 
 concept_nda_ritual:0 "The Ritual"
@@ -86,4 +86,4 @@ concept_nda_shamballa:0 "Shamballa"
 concept_nda_shamballa_desc:0 "Atlantis, the companion continent of [concept_nda_lemuria], before the oceans swallowed the bulk of the land in the Great Cataclysm. The surviviors scattered across the world as it headed into the [concept_nda_hyborian_age]"
 
 concept_nda_nameless_city:0 "Nameless City"
-concept_nda_nameless_city:0 "Atlantis, the companion continent of [concept_nda_lemuria], before the oceans swallowed the bulk of the land in the Great Cataclysm. The surviviors scattered across the world as it headed into the [concept_nda_hyborian_age]"
+concept_nda_nameless_city_desc:0 "Atlantis, the companion continent of [concept_nda_lemuria], before the oceans swallowed the bulk of the land in the Great Cataclysm. The surviviors scattered across the world as it headed into the [concept_nda_hyborian_age]"

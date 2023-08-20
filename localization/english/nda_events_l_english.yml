@@ -59,8 +59,8 @@
  nda_base.12.a:0 "What can we do?"
 
  nda_base.13.t:0 "The Cult Stymied"
- nda_base.13.d:0 "Despite the number of politicians that have pledged alligence to the Cult enough of the inner workings of government is still in the hands of decent people.\n\nThe Cult has been stymied in its spread and is now concentrating its efforts elsewhere."
- nda_base.13.f:0 "A strange man, clad all in black but of indistinct appearance, has appeared to you and has issued a warning\n\n#ITALIC 'You have not stopped the Cult, you have just held off the ineviatable.'#!"
+ nda_base.13.d:0 "Despite the number of politicians that have pledged alligence to the Cult enough of the inner workings of government is still in the hands of decent people.\n\nThe Cult has been stymied in its spread and is now concentrating its efforts elsewhere.\n\nThe prominent Cultist [SCOPE.sCharacter('exiled_ig_leader').GetFullName] has fled into exile rather than face the consequences of their failure."
+ nda_base.13.f:0 "A strange man, clad all in black but of indistinct appearance, has appeared to you and has issued a warning\n\n'You have not stopped the Cult.\nYou can not stop things beyond your limited comprehension.\nYou have just held off the ineviatable.'#!"
  nda_base.13.a:0 "We will be waiting."
  nda_base.13.b:0 "Maybe your right."
  nda_base.13.c:0 "Yours is a failed philosophy."

@@ -36,7 +36,7 @@ nda_eap.10 = { # The initial outbreak - (Baltimore) direct from Poe Death event.
 
 				# action effect - pop death and mortality increase modifier
 				IF = {
-					limit = { NOT = { has_modifier =  nda_red_death_modifier }
+					limit = { NOT = { has_modifier =  nda_red_death_modifier } }
 					add_modifier = {
 						name = nda_red_death_modifier
 					}					

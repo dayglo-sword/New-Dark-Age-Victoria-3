@@ -529,6 +529,46 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 				}
 				trigger_event = { id = nda_base.8 }	# spread the cult
 			}
+
+			# exile a non-cultist politician character if they exist
+			ordered_scope_character = {
+				limit = { 
+					is_ruler = no
+					has_role = politician
+					has_any_cultist_trait = no
+				}
+				order_by = { 
+					add = 1
+					if = {
+						limit = {
+							interest_group = { is_powerful = yes }							
+						}
+						add = 2
+					}
+					if = {
+						limit = { is_historical = yes }
+						add = 3
+					}
+				}
+				max = 1
+				save_scope_as = exiled_ig_leader
+				
+			}
+	
+			IF = {
+				limit = { exists = scope:exiled_ig_leader }
+				scope:exiled_ig_leader = {
+					#exile_character = yes
+					IF = {
+						limit = {
+							NOT = { has_role = agitator }
+						}
+						add_character_role = agitator # make an agitator before kicking out
+					}
+	
+					exile_character_with_martyrdom = yes
+				}			
+			}
 		}		
 	}	
 	
@@ -801,6 +841,54 @@ nda_base.13 = { # The Cult fails to spread
 
 	immediate = {
 		set_variable = nda_cult_spread_failed
+		# exile a cultist
+		ordered_scope_character = {
+			limit = { 
+				is_ruler = no
+				has_role = politician
+				has_any_cultist_trait = yes
+			}
+			order_by = { 
+				add = 1
+				if = {
+					limit = { has_trait = nda_master }
+					add = 3
+				}
+				if = {
+					limit = { has_trait = nda_acolyte }
+					add = 1
+				}
+				if = {
+					limit = {
+						interest_group = { is_powerful = yes }							
+					}
+					add = 2
+				}
+				if = {
+					limit = { is_historical = yes }
+					add = 5
+				}
+			}
+			max = 1
+			save_scope_as = exiled_ig_leader
+			
+		}
+
+		IF = {
+			limit = { exists = scope:exiled_ig_leader }
+			scope:exiled_ig_leader = {
+				#exile_character = yes
+				IF = {
+					limit = {
+						NOT = { has_role = agitator }
+					}
+					add_character_role = agitator # make an agitator before kicking out
+				}
+
+				exile_character_with_martyrdom = yes
+			}			
+		}
+
 	}	
 	
 	option = { #We will be waiting
@@ -808,6 +896,9 @@ nda_base.13 = { # The Cult fails to spread
 		default_option = yes
 
 		nda_effect_eldritch_anger = yes
+		ai_chance = { # should be most likely if available
+			base = 30		
+		}
 	}
 	option = { #May be your right
 		name = nda_base.13.b
@@ -815,31 +906,38 @@ nda_base.13 = { # The Cult fails to spread
 		# remove fail variable - should allow retrigger of journal
 		remove_variable = nda_cult_spread_tracker		
 		remove_variable = nda_cult_spread_failed	
+
+		ai_chance = { # should be most likely if available
+			base = 10		
+		}
 	}
 	option = { # Yours is a failed philosophy 
 		# Cthulhu is gone so no response from despondent cultists
 		name = nda_base.13.c
 		trigger = { has_global_variable = nda_ritual_cthulhu_leaves }
 		ai_chance = { # should be most likely if available
-			base = 100		
+			base = 200		
 		}		
 	}
 }
 
-nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them
+nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them - update changed this so it does not trigger using nda_cultists_in_open
 	type = country_event
 	hidden = yes 
 
 	trigger = {
 		is_full_cult_country = { COUNTRY="THIS" } # any full cult country
-		NOT = { has_variable = nda_cultists_in_open }
+		#NOT = { has_variable = nda_cultists_in_open }
+		any_interest_group = {
+			has_ideology = ideology:ideology_anti_slavery # ideologies have been reset by revolt
+		}
 	}
 
 	immediate = {
 		set_variable = nda_cultists_in_open
 		set_variable = {
 			name = nda_cult_spread_tracker
-			value = 901
+			value = 1101
 		}
 
 		if = { # Eldritch only
@@ -881,6 +979,21 @@ nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them
 
 			# Set up Dagonic leadership and IGs
 			nda_effect_dagonic_setup = yes
+		}
+		else_if = { # Stygia only		
+			limit = { 				
+				exists = c:STY
+				c:STY = ROOT 
+			}
+
+			set_variable = nda_yig_in_open
+			set_variable = {
+				name = nda_cult_to_yigian_tracker
+				value = 301
+			}
+
+			# Set up Stygian leadership and IGs
+			nda_effect_stygian_setup = yes
 		}
 	}	
 }
