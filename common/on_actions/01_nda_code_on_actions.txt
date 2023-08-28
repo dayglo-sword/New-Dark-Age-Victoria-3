@@ -299,6 +299,7 @@ nda_half_yearly_on_action = {
 		nda_lostcities.21
 		nda_lostcities.30
 		nda_lostcities.31
+		nda_lostcities.32
 		nda_lostcities.40
 		nda_lostcities.41
 

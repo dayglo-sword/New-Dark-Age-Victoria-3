@@ -70,12 +70,10 @@ STY = { # Stygia
 			country_has_primary_culture = cu:nda_cul_yigian
 			country_has_primary_culture = cu:nda_cul_cultist
 		}	
-		any_country = {
-			OR = {
-				country_has_primary_culture = cu:nda_cul_yigian
-			}			
-			has_technology_researched = nationalism
-		}
+			
+		has_technology_researched = nationalism
+
+		exists = c:YIG
 	}
 }
 
@@ -104,15 +102,9 @@ DLM = { # Dagonic Lemuria - This is different to standard Lemuria as Cultist
 	possible = {
 
 		has_technology_researched = pan-nationalism
-		# is yigian culture
-		OR = {
-			country_has_primary_culture = cu:nda_cul_dagonic
-		}	
-		any_country = {
-			OR = {
-				country_has_primary_culture = cu:nda_cul_dagonic
-			}			
-			has_technology_researched = nationalism
-		}
+		# is dagonic culture
+		country_has_primary_culture = cu:nda_cul_dagonic
+	
+		exists = c:DGN
 	}
 }

@@ -47,7 +47,7 @@ nda_ritual.1924 = { # Cthulhu Return - 1925 already used below
 		IF = {
 			limit = { NOT = { has_global_variable =  nda_lostcity_rlyeh_exists}}
 			# add cosmetic rlyeh to map
-			p:xA07F85 = {
+			p:xA000B0 = {
 				state = {
 					# state level
 					create_building={
@@ -139,7 +139,7 @@ nda_ritual.1890 = { # Cthulhu Early Return
 		IF = {
 			limit = { NOT = { has_global_variable =  nda_lostcity_rlyeh_exists}}
 			# add cosmetic rlyeh to map
-			p:xA07F85 = {
+			p:xA000B0 = {
 				state = {
 					# state level
 					create_building={

@@ -66,7 +66,7 @@ LEN = { # Leng
 
 #yigian stygia
 STY = {
-	color = { 31 201 26 }
+	color = { 31 20 26 }
 	
 	country_type = recognized
 

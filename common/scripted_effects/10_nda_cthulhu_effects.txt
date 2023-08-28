@@ -14,16 +14,16 @@
 
 			# Cultists everywhere!
 			if = { limit = { is_capital = yes }  # boost in capital
-				convert_population = { target = rel:nda_rel_cultist value = 0.05 }			
+				convert_population = { target = rel:nda_rel_cultist value = 0.1 }			
 			}
 			else = {
-				convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+				convert_population = { target = rel:nda_rel_cultist value = 0.05 }
 			}
 					
 			set_variable = { # ongoing conversion
 				name = nda_rel_boost_eldritch_cult
 				months = 12
-				value = nda_small_conversion
+				value = nda_medium_conversion
 			}
 
 			# everyone of Eldritch Culture should follow Rite 
@@ -96,6 +96,10 @@
 					ROOT = {
 						add_loyalists = {
 							value = 1
+							culture = THIS
+						}
+						add_radicals = {
+							value = -1
 							culture = THIS
 						}
 					}				

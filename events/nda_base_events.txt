@@ -559,11 +559,32 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 				limit = { exists = scope:exiled_ig_leader }
 				scope:exiled_ig_leader = {
 					#exile_character = yes
-					IF = {
-						limit = {
-							NOT = { has_role = agitator }
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = { has_role = agitator }
+							}
+							add_character_role = agitator
 						}
-						add_character_role = agitator # make an agitator before kicking out
+						if = {
+							limit = {
+								has_role = general
+							}
+							remove_character_role = general
+						}
+						if = {
+							limit = {
+								has_role = admiral
+							}
+							remove_character_role = admiral
+						}
+						if = {
+							limit = {
+								has_role = politician
+							}
+							set_as_interest_group_leader = no
+							remove_character_role = politician
+						}
 					}
 	
 					exile_character_with_martyrdom = yes
@@ -878,11 +899,32 @@ nda_base.13 = { # The Cult fails to spread
 			limit = { exists = scope:exiled_ig_leader }
 			scope:exiled_ig_leader = {
 				#exile_character = yes
-				IF = {
-					limit = {
-						NOT = { has_role = agitator }
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_role = agitator }
+						}
+						add_character_role = agitator
 					}
-					add_character_role = agitator # make an agitator before kicking out
+					if = {
+						limit = {
+							has_role = general
+						}
+						remove_character_role = general
+					}
+					if = {
+						limit = {
+							has_role = admiral
+						}
+						remove_character_role = admiral
+					}
+					if = {
+						limit = {
+							has_role = politician
+						}
+						set_as_interest_group_leader = no
+						remove_character_role = politician
+					}
 				}
 
 				exile_character_with_martyrdom = yes

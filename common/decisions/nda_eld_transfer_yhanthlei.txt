@@ -1,0 +1,79 @@
+﻿nda_eld_transfer_yhanthlei = {
+	is_shown = {
+		exists = c:ELD
+		this = c:ELD
+		exists = c:DGN
+		p:x30C040  = { #Innsmouth
+			state = {
+				owner = c:ELD
+			}
+		}
+
+	}
+
+	possible = {
+		c:ELD = { 			 	
+			is_at_war = no
+		}
+
+		c:DGN = { 
+			relations:root >= relations_threshold:amicable 
+			is_player = no
+			OR = {
+				is_subject = no
+				AND = {
+					is_subject = yes		
+					any_overlord_or_above = {
+						relations:root >= relations_threshold:amicable 
+					}			
+				}
+			}	
+			is_at_war = no		
+		}
+	}
+	
+	when_taken = {
+		# Give Innsmouth and over as a treaty port to DGN
+		p:x30C040  = {
+			state = {
+				owner = {
+					save_scope_as = conquest_target
+				}
+				state_region = {
+					create_state = {
+						country = c:DGN
+						owned_provinces = { x30C040  }
+						state_type = treaty_port						
+					}
+					add_homeland = nda_cul_dagonic
+				}				
+			}
+		}
+
+		## is under populated - add POPS and buildings?
+		p:x30C040  = {
+			state = {
+				create_pop = { size = 10 culture = nda_cul_dagonic religion = nda_rel_cultist pop_type = aristocrats }
+				create_pop = { size = 40 culture = nda_cul_dagonic religion = nda_rel_cultist pop_type = clergymen }
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 10
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		# modifier based on relationship
+
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -10
+		}		
+	}
+
+}

@@ -10,6 +10,7 @@ pmg_nda_esoteric_lostcity_goods:0 "Hidden Lore"
 pm_nda_esoteric_lost_city:0 "Ancient Texts of the Masters"
 pm_nda_esoteric_vril:0 "Vril Generation"
 pm_nda_esoteric_blacklotus:0 "Black Lotus Preparation" 
+pm_nda_esoteric_goods:0 "Esoteric Goods" 
 
 # occult goods
 black_lotus:0 "Black Lotus Powder"

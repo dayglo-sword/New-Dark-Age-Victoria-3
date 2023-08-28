@@ -25,7 +25,7 @@ NEN_FLAVOR_TEXT:0 "After the compromise of 1816, New England stradles both the O
 IAM_FLAVOR_TEXT:0 "By the grace of the #BOLD King in Yellow#!, #BOLD Lord Hastur#!, these are our lands on this pitiful planet while we dream our dreams, and await the end of all and our deliverance to #BOLDCarcosa!#!"
 LEN_FLAVOR_TEXT:0 "Once existing only in the dreams of cultists, the #BOLD Masters of the Plateau of Leng#! now exist in this reality! Or were they here all along?"
 
-STY_FLAVOR_TEXT:0 "The home of the Snake-Peoples after the age of #BOLD Atlantis#!. Worshippers of [concept_nda_yig], they ruled their land of slaves with terror, before fading from history. Their legacy being maintained by human priests.\n\n The land was devastated at the end of the #BOLD Hyborean Age#! as what is now the Mediterranean flooded.\n\n Now is the time of renewal."
+STY_FLAVOR_TEXT:0 "The home of the Snake-Peoples after the age of [concept_nda_atlantis]. Worshippers of [Concept('concept_nda_yig','$concept_nda_yig_set$')], they ruled their land of slaves with terror, before fading from history. Their legacy being maintained by human priests.\n\n The land was devastated at the end of the [concept_nda_hyborian_age] as what is now the Mediterranean flooded.\n\n Now is the time of renewal."
 
 RULER_TITLE_GRAND_ARCHON:0 "Grand Archon"
 RULER_TITLE_ARCHON:0 "Archon"

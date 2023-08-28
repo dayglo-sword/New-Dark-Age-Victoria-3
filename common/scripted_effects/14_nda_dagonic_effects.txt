@@ -146,18 +146,89 @@ nda_effect_dagonic_annex = {
 
 		scope:nda_dagonic_annex = {
 			debug_log = "DGN - Country surrenders : [THIS.GetCountry.GetNameNoFormatting]"
-				# release puppets and dominions - needs constraint to check if themselves not cultists
-				every_country = {
-					limit = {
-						is_subject_of = scope:nda_dagonic_annex
-						NOT = { country_has_primary_culture = cu:nda_cul_cultist }	# don't release - they want to be part of ELD		
+			# release puppets and dominions - needs constraint to check if themselves not cultists
+			every_country = {
+				limit = {
+					is_subject_of = scope:nda_dagonic_annex
+					NOT = { country_has_primary_culture = cu:nda_cul_cultist }	# don't release - they want to be part of ELD		
+				}
+
+				make_independent = yes				
+			}
+
+			# transfer a leading character to DGN (preferably an historic one)
+			ordered_scope_character = {
+				limit = { 
+					is_ruler = no
+					has_role = politician
+					has_any_cultist_trait = yes
+				}
+				order_by = { 
+					add = 1
+					if = {
+						limit = { has_trait = nda_dagon_master }
+						add = 3
+					}
+					if = {
+						limit = { has_trait = nda_dagon_acolyte }
+						add = 1
+					}
+					if = {
+						limit = {
+							interest_group = { is_powerful = yes }							
+						}
+						add = 2
+					}
+					if = {
+						limit = { is_historical = yes }
+						add = 5
+					}
+				}
+				max = 1
+				save_scope_as = transfered_ig_leader
+				
+			}
+	
+			IF = {
+				limit = { exists = scope:transfered_ig_leader }
+				scope:transfered_ig_leader = {
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = { has_role = agitator }
+							}
+							add_character_role = agitator
+						}
+						if = {
+							limit = {
+								has_role = general
+							}
+							remove_character_role = general
+						}
+						if = {
+							limit = {
+								has_role = admiral
+							}
+							remove_character_role = admiral
+						}
+						if = {
+							limit = {
+								has_role = politician
+							}
+							set_as_interest_group_leader = no
+							remove_character_role = politician
+						}
 					}
 
-					make_independent = yes				
-				}				
+					exile_character_with_martyrdom = yes					
+					#transfer_character = c:ELD
+					remove_variable = nda_coven_leader
+				}			
+			}
+			
+		
 		}
 		annex = scope:nda_dagonic_annex
-
 	}	
 	else = {
 		debug_log = "DGN - No Country surrenders."	

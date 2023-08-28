@@ -21,12 +21,22 @@ nda_lostcities.10 = {  # K'N-Yan revealed ? Do trigger but should be decision fo
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
-		exists = c:YIG
-		c:YIG = THIS
-		NOT = { has_global_variable = nda_lostcity_knyan_exists }
+		NOT = { has_global_variable = nda_lostcity_knyan_exists }	
+
+		OR = {
+			AND = {
+				exists = c:ELD
+				c:ELD = THIS			
+			}
+			AND = {
+				exists = c:YIG
+				c:YIG = THIS			
+			}							
+		}
+
 		p:xA07F85 = {
 			state = {
-				owner = c:YIG
+				owner = ROOT
 				NOT = { has_building = building_nda_lostcity_knyan }
 			}
 		}
@@ -48,8 +58,27 @@ nda_lostcities.10 = {  # K'N-Yan revealed ? Do trigger but should be decision fo
 					post_notification = nda_lostcity_knyan_reveal
 				}
 
-				set_global_variable = nda_lostcity_knyan_exists								
+				set_global_variable = nda_lostcity_knyan_exists		
+				
+				# boost cultists in state
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_yigian_cult }}
+					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_yigian_cult
+						months = 12
+						value = nda_small_conversion
+					}
+				}
 			}	
+		}
+
+		# boost from discovery
+		add_loyalists = {
+			value = 0.1
+		}
+		add_radicals = {
+			value = -0.1
 		}
 	}	
 	
@@ -137,9 +166,19 @@ nda_lostcities.20 = {  # y'han-thlei revealed ?
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
-		exists = c:DGN
-		c:DGN = THIS
-		NOT = { has_global_variable = nda_lostcity_yhanthlei_exists }
+		NOT = { has_global_variable = nda_lostcity_yhanthlei_exists }	
+
+		OR = {
+			AND = {
+				exists = c:ELD
+				c:ELD = THIS			
+			}
+			AND = {
+				exists = c:DGN
+				c:DGN = THIS			
+			}							
+		}
+
 		p:x30C040 = {
 			state = {
 				owner = c:DGN
@@ -149,7 +188,7 @@ nda_lostcities.20 = {  # y'han-thlei revealed ?
 	}
 
 	immediate = {
-		debug_log = "City revealed immediate"
+		debug_log = "City revealed immediate -  y'han-thlei"
 
 		p:x30C040 = {
 			state = {
@@ -168,7 +207,14 @@ nda_lostcities.20 = {  # y'han-thlei revealed ?
 				set_global_variable = nda_lostcity_yhanthlei_exists
 			}	
 		}
-
+		
+		# boost from discovery
+		add_loyalists = {
+			value = 0.1
+		}
+		add_radicals = {
+			value = -0.1
+		}
 
 	}	
 	
@@ -236,7 +282,7 @@ nda_lostcities.21 = {  #  y'han-thlei  hidden ?
 }
 
 
-nda_lostcities.30 = {  # Shamballa revealed ?
+nda_lostcities.30 = {  # Shamballa revealed - unlike other cities ELD can not reveal it - is part of Chagnaur Faur plan
 	type = country_event
 	placement = p:xB9B797 
 	title = nda_lostcities.30.t
@@ -285,6 +331,14 @@ nda_lostcities.30 = {  # Shamballa revealed ?
 
 				set_global_variable = nda_lostcity_shamballa_exists			
 			}	
+		}
+
+		# boost from discovery
+		add_loyalists = {
+			value = 0.1
+		}
+		add_radicals = {
+			value = -0.1
 		}
 	}	
 	
@@ -351,7 +405,125 @@ nda_lostcities.31 = {  # Shamballa hidden ?
 	}
 }
 
-nda_lostcities.40 = {  # Nameless City revealed ?
+nda_lostcities.32 = {  # False teaching destablise Hindu and Buddhist countries
+	type = country_event
+	placement = p:xB9B797
+	title = nda_lostcities.32.t
+	desc = nda_lostcities.32.d
+	flavor =  nda_lostcities.32.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	trigger = {
+		# should not occur immediately after Shamballa reveal. place as half-year event?
+		has_global_variable = nda_lostcity_shamballa_exists 
+		NOT = { has_variable = nda_false_teachings }
+
+		OR = {
+			country_has_state_religion = rel:hindu
+			country_has_state_religion = rel:gelugpa
+			country_has_state_religion = rel:mahayana	
+			country_has_state_religion = rel:theravada		
+		}
+	}
+
+	immediate = {
+		debug_log = "False Teachings in [THIS.GetCountry.GetNameNoFormatting]"
+
+		set_variable = nda_false_teachings
+
+		# boost Cultist and Theo religions in capital
+		random_scope_state = {
+			limit = { is_capital = yes }
+		
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_theosophic }}
+				convert_population = { target = rel:nda_rel_theosophic value = nda_medium_conversion }	
+				
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_theosophic
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_eldritch_cult }}
+				convert_population = { target = rel:nda_rel_cultist value = nda_medium_conversion }	
+				
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_eldritch_cult
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+
+
+		}
+		
+		# upset locals	
+		add_radicals = { value = 0.1 religion = rel:hindu } 
+		add_radicals = { value = 0.1 religion = rel:gelugpa } 
+		add_radicals = { value = 0.1 religion = rel:mahayana } 
+		add_radicals = { value = 0.1 religion = rel:theravada } 
+	}	
+	
+	option = { # Denounce teachings - destablise existing religious base
+		name = nda_lostcities.32.a 
+		default_option = yes	
+
+		# add negative modifier to Devout for Conflicted Teachings
+		IF = {
+			limit = { exists = ig:ig_devout }
+			ig:ig_devout = {
+				add_modifier = {
+					name = ig_power_challenged
+					months = 24
+				}
+			}			
+		}
+	}
+
+	option = { # Accept teachings - increase Cultists
+		name = nda_lostcities.32.b 
+
+		# add positive modifier to Cult IG for 'Convergent Teachings'
+		IF = {
+			limit = { exists = ig:ig_nda_cult_worshippers }
+			ig:ig_nda_cult_worshippers = {
+				add_modifier = {
+					name = ig_gaining_support
+					months = 24
+				}
+			}			
+		}
+
+		# boost # of Cultists
+		every_scope_state = {
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_eldritch_cult }}
+				
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_eldritch_cult
+					months = 12
+					value = nda_small_conversion
+				}
+			}			
+		}
+	}
+}
+
+
+nda_lostcities.40 = {  # Nameless City revealed - For ELD or STY (original owners!)
 	type = country_event
 	placement = p:x68A578 
 	title = nda_lostcities.40.t
@@ -371,14 +543,24 @@ nda_lostcities.40 = {  # Nameless City revealed ?
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
-		exists = c:ELD
-		c:ELD = THIS
-		NOT = { has_global_variable = nda_lostcity_nameless_city_exists }
+		NOT = { has_global_variable = nda_lostcity_nameless_city_exists }	
+
+		OR = {
+			AND = {
+				exists = c:ELD
+				c:ELD = THIS			
+			}
+			AND = {
+				exists = c:STY
+				c:STY = THIS			
+			}							
+		}
+
 		p:x68A578 = {
 			state = {
-				owner = c:ELD
+				owner = ROOT
 				NOT = { has_building = building_nda_lostcity_nameless_city }
-				save_scope_as = nameless_city_state_scope
+				#save_scope_as = nameless_city_state_scope
 			}
 		}
 	}
@@ -400,8 +582,27 @@ nda_lostcities.40 = {  # Nameless City revealed ?
 					post_notification = nda_lostcity_nameless_city_reveal
 				}
 
-				set_global_variable = nda_lostcity_nameless_city_exists			
+				set_global_variable = nda_lostcity_nameless_city_exists	
+				
+				# boost cultists in state
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_eldritch_cult }}
+					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_eldritch_cult
+						months = 12
+						value = nda_small_conversion
+					}
+				}				
 			}	
+		}
+
+		# boost from discovery
+		add_loyalists = {
+			value = 0.1
+		}
+		add_radicals = {
+			value = -0.1
 		}
 	}	
 	

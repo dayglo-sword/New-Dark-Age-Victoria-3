@@ -30,6 +30,7 @@ pmg_nda_esoteric_lostcity_goods = {
 
 	production_methods = {
 		pm_nda_esoteric_vril
+		pm_nda_esoteric_goods
 		pm_nda_esoteric_blacklotus
 	}
 }

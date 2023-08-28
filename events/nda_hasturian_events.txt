@@ -293,7 +293,7 @@ nda_hasturian.4 = { # The Repairers Offer
 
 		ai_chance = { 
 			base = 20	
-			# If Mi-Go in play need to guarantee Hastur
+			# If Mi-Go in play need to guarantee Hastur as opponent
 			modifier = {
 				trigger = {
 					has_global_variable =  nda_migo_experiment				
@@ -389,13 +389,26 @@ nda_hasturian.5 = { # Create Imperial America
 				}
 			}
 
-			# make everyone happy
+			#  The national delusion is strong. Make everyone happy
 			add_radicals = { value = -1 }
 			add_loyalists = { value = 1 }
 
 			# change cultists IG to Hasturian
 			ig:ig_nda_cult_worshippers = {
 				set_interest_group_name = ig_nda_hasturian_cult
+			}
+
+			every_interest_group = {
+				limit = { NOT = { has_modifier = nda_hastur_critics_choice_ig_modifier } }
+				
+				add_modifier = nda_hastur_critics_choice_ig_modifier # what a guy!
+
+				leader = {
+					IF = {
+						limit = { has_any_cultist_trait = no }
+						add_trait = nda_cultist
+					}					
+				}
 			}
 
 			# remove eldritch homeland - replace with 'The Dreamlands'?

@@ -1,14 +1,26 @@
 ﻿nda_eld_nameless_city = {
 	is_shown = {
-		exists = c:ELD
-		this = c:ELD
+		OR = {
+			AND = {
+				exists = c:ELD
+				this = c:ELD				
+			}
+			AND = {
+				exists = c:STY
+				this = c:STY				
+			}			
+		}
+
 		p:x68A578 = {
 			state = {
-				NOT = { owner = c:ELD }
+				NOT = { owner = ROOT }
 				NOT = { has_building = building_nda_lostcity_nameless_city }
 				owner = {
-					has_strategic_land_adjacency = c:ELD
+					has_strategic_land_adjacency = ROOT
 					is_revolutionary = no # wait till revoultion is over
+
+					#save_scope_as = conquest_target
+
 				}
 			}
 		}
@@ -26,7 +38,7 @@
 	}
 
 	possible = {
-		c:ELD = { 			 	
+		ROOT = { 			 	
 			is_at_war = no
 		}
 
@@ -37,10 +49,12 @@
 				state = {
 					owner = {
 						is_at_war = no
+						save_temporary_scope_as = conquest_target
 					}
 				}
-			}	
+			}									
 		}
+		scope:conquest_target.country_rank < rank_value:minor_power
 	}
 	
 	when_taken = {
@@ -59,9 +73,9 @@
 		
 			target_country = scope:conquest_target
 			
-			war = yes # not straight off
+			war = yes 
 			
-			type = dp_conquer_state
+			type = dp_annex_war # dp_conquer_state - can't be done ??
 
 		} 
 	}

@@ -156,6 +156,7 @@ dp_final_war = {
 	
 	texture = "gfx/interface/icons/war_goals/annex_country.dds"
 	
+	requires_interest_marker = no
 	allow_negotiated_peace = no
 
 	selectable_in_lens = {

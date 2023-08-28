@@ -80,6 +80,9 @@ nda_inquisition_opposed_modifier:0 "Oppose the Inquisition"
 nda_red_death_modifier:0 "The Red Death"
 nda_red_death_modifier_desc:0 "The Red Death is running rampant in this state."
 
+nda_hastur_critics_choice_ig_modifier:0 "The Critics Choice"
+nda_hastur_critics_choice_ig_modifier_desc:0 "The performance by Castaigne is so superlative who could disapprove!"
+
 # Custom Triggers
 can_cult_infiltrate:0 "Cultists can infiltrate the country"
 #ADD_WAR_EXHAUSTION_NEG:0 "Inexhaustable Will"

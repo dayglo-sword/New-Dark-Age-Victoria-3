@@ -193,10 +193,176 @@ nda_effect_eldritch_annex = {
 					}
 
 					make_independent = yes				
-				}				
-			}
-			annex = scope:nda_eldritch_annex	
+				}	
 				
+				ig:ig_nda_cult_worshippers = {
+					leader = {
+						debug_log = "'Exile' Cult Leader : [THIS.GetCountry.GetNameNoFormatting]"					
+						hidden_effect = {
+							if = {
+								limit = {
+									NOT = { has_role = agitator }
+								}
+								add_character_role = agitator
+							}
+							if = {
+								limit = {
+									has_role = general
+								}
+								remove_character_role = general
+							}
+							if = {
+								limit = {
+									has_role = admiral
+								}
+								remove_character_role = admiral
+							}
+							if = {
+								limit = {
+									has_role = politician
+								}
+								set_as_interest_group_leader = no
+								remove_character_role = politician
+							}
+						}
+						remove_variable = nda_coven_leader		
+
+						exile_character_with_martyrdom = yes
+						set_home_country = c:ELD # are characters disappearing because original home is gone?			
+						#transfer_character = c:ELD
+
+					}
+				}
+				# # transfer a leading character to the main ELD country (preferably an historic one)
+				# ordered_scope_character = {
+				# 	limit = { 
+				# 		is_ruler = no
+				# 		has_role = politician
+				# 		has_any_cultist_trait = yes
+				# 	}
+				# 	order_by = { 
+				# 		add = 1
+				# 		if = {
+				# 			limit = { has_trait = nda_master }
+				# 			add = 3
+				# 		}
+				# 		if = {
+				# 			limit = { has_trait = nda_acolyte }
+				# 			add = 1
+				# 		}
+				# 		if = {
+				# 			limit = {
+				# 				interest_group = { is_powerful = no }							
+				# 			}
+				# 			add = 2
+				# 		}
+				# 		if = {
+				# 			limit = { is_historical = yes }
+				# 			add = 5
+				# 		}
+				# 	}
+				# 	max = 1
+				# 	save_scope_as = transfered_ig_leader
+					
+				# }
+		
+				# IF = {
+				# 	limit = { exists = scope:transfered_ig_leader }
+				# 	debug_log = "ELD - Transfer Character : [THIS.GetCountry.GetNameNoFormatting]"					
+				# 	scope:transfered_ig_leader = {
+				# 		IF = {
+				# 			limit = {
+				# 				NOT = { has_role = agitator }
+				# 			}
+				# 			add_character_role = agitator # make an agitator before kicking out
+				# 		}
+				# 		set_home_country = c:ELD 
+				# 		exile_character_with_martyrdom = yes					
+				# 		#transfer_character = c:ELD
+				# 		remove_variable = nda_coven_leader
+				# 	}			
+				# }
+				# else = {
+				# 	debug_log = "ELD - Transfer Character : Not Found"	
+				# }					
+
+				# ordered_scope_character = {
+				# 	limit = { 
+				# 		is_ruler = no
+				# 		has_role = general
+				# 		has_any_cultist_trait = yes
+				# 	}
+				# 	order_by = { 
+				# 		add = 1
+				# 		if = {
+				# 			limit = { is_historical = yes }
+				# 			add = 5
+				# 		}
+				# 	}
+				# 	max = 1
+				# 	save_scope_as = transfered_ig_general
+					
+				# }
+				# IF = {
+				# 	limit = { exists = scope:transfered_ig_general }
+				# 	scope:transfered_ig_general = {			
+				# 		transfer_character = c:ELD
+				# 		remove_variable = nda_coven_leader
+				# 		place_character_in_void = 2
+				# 	}			
+				# }	
+				# ordered_scope_character = {
+				# 	limit = { 
+				# 		is_ruler = no
+				# 		has_role = admiral
+				# 		has_any_cultist_trait = yes
+				# 	}
+				# 	order_by = { 
+				# 		add = 1
+				# 		if = {
+				# 			limit = { is_historical = yes }
+				# 			add = 5
+				# 		}
+				# 	}
+				# 	max = 1
+				# 	save_scope_as = transfered_ig_admiral
+					
+				# }
+				# IF = {
+				# 	limit = { exists = scope:transfered_ig_admiral }
+				# 	scope:transfered_ig_admiral = {			
+				# 		transfer_character = c:ELD
+				# 		remove_variable = nda_coven_leader
+				# 		place_character_in_void = 2
+				# 	}			
+				# }
+			}
+			annex = scope:nda_eldritch_annex
+
+			# IF = {
+			# 	limit = { exists = scope:transfered_ig_leader }
+			# 	scope:transfered_ig_leader = {
+			# 		debug_log = "ELD - Transfer Character : Set as Leader"
+			# 		free_character_from_void = yes # are they in void as they don't appear on transfer
+			# 		set_as_interest_group_leader = yes
+			# 	}			
+			# }
+			# IF = {
+			# 	limit = { exists = scope:transfered_ig_general }
+			# 	scope:transfered_ig_general = {
+			# 		debug_log = "ELD - Transfer Character : Set as General"
+			# 		free_character_from_void = yes # are they in void as they don't appear on transfer
+			# 		#set_as_interest_group_leader = yes
+			# 	}			
+			# }
+			# IF = {
+			# 	limit = { exists = scope:transfered_ig_leader }
+			# 	scope:transfered_ig_admiral = {
+			# 		debug_log = "ELD - Transfer Character : Set as Admiral"
+			# 		free_character_from_void = yes # are they in void as they don't appear on transfer
+			# 		#set_as_interest_group_leader = yes
+			# 	}			
+			# }	
 		}
 		else = {
 			debug_log = "ELD - No Country surrenders."	

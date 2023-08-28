@@ -157,3 +157,8 @@ nda_red_death_modifier = {
 	state_mortality_mult = 1.5 # needs to be more? or scaled like plague?
 	state_migration_pull_mult = -0.2
 }
+
+nda_hastur_critics_choice_ig_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 5
+}

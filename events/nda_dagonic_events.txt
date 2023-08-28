@@ -162,6 +162,17 @@ nda_dagonic.2 = { # Cult in country converts to dagonic - called from journal 'j
 
 				set_variable = nda_nameless_cults_selected
 			}
+
+			random_country = {
+				limit = {				
+					NOT = { has_variable = nda_nameless_cults_selected }
+					any_scope_state = { 
+						is_potentially_dagonic = yes
+					}
+				}
+
+				set_variable = nda_nameless_cults_selected
+			}
 		}
 		
 		set_global_variable = nda_dagon_in_open	
@@ -221,7 +232,18 @@ nda_dagonic.3 = { # Notifications that the Dagonic Shores has formed
 		# get other countries onside by increasing approval
 		nda_effect_dagonic_influence = yes
 
-		# push conversion a bit as currently too slow
+		# push conversion a bit as currently too slow - too many small countries
+		random_country = {
+			limit = {				
+				NOT = { has_variable = nda_nameless_cults_selected }
+				any_scope_state = { 
+					is_potentially_dagonic = yes
+				}
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+
 		random_country = {
 			limit = {				
 				NOT = { has_variable = nda_nameless_cults_selected }

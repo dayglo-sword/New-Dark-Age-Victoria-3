@@ -25,3 +25,9 @@ https://forum.paradoxplaza.com/forum/threads/mod-eldritch-mod.1160898/ (login ne
 
 and their inspirational AAR...
 https://forum.paradoxplaza.com/forum/threads/miskatonic-university-class-of-1836.1126469/
+
+## Additional Credits
+'Shamballa' - Models of Prambanan and Borobudur temple by Matt Alexi 
+'Masks' - Models by ALU, from original 'fantasy_war_01' off the CK3 Modding Discord 
+
+

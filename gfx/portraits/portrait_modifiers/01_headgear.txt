@@ -1305,8 +1305,17 @@
                 add = 500
                 scope:character ?= {
                     has_variable = nda_coven_leader
-                    exists = c:YIG
-                    owner = c:YIG      
+                    OR = {
+                        AND = {
+                            exists = c:YIG
+                            owner = c:YIG                        
+                        }
+                        AND = {
+                            exists = c:STY
+                            owner = c:STY                        
+                        }                          
+                    }
+    
                 }
             }
         }

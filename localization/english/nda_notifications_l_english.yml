@@ -57,11 +57,11 @@
 # lost cities
  notification_nda_lostcity_knyan_reveal_tooltip:0 "#header $notification_nda_lostcity_knyan_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_knyan_reveal_desc$"
  notification_nda_lostcity_knyan_reveal_name:1 "K'N-Yan Revealed"
- notification_nda_lostcity_knyan_reveal_desc:1 "From beneath the mounds of Oklahoma entrances to the hidden realm of [concept_nda_knyan] has been opened!"
+ notification_nda_lostcity_knyan_reveal_desc:1 "From beneath the mounds of Oklahoma entrances to the hidden realm of [concept_nda_knyan] has been opened! Once only thought of as a native legend, access to the lands below is now possible."
 
  notification_nda_lostcity_knyan_hidden_tooltip:0 "#header $notification_nda_lostcity_knyan_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_knyan_hidden_desc$"
  notification_nda_lostcity_knyan_hidden_name:1 "K'N-Yan Sealed"
- notification_nda_lostcity_knyan_hidden_desc:1 "The entrances to the realm of [concept_nda_knyan] have disappeared, sealed once more by the mounds.!"
+ notification_nda_lostcity_knyan_hidden_desc:1 "The entrances to the realm of [concept_nda_knyan] have disappeared, sealed from the world once more by the mounds!"
 
  notification_nda_lostcity_yhanthlei_reveal_tooltip:0 "#header $notification_nda_lostcity_yhanthlei_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_yhanthlei_reveal_desc$"
  notification_nda_lostcity_yhanthlei_reveal_name:1 "Y'han-thlei Rises"
@@ -69,19 +69,19 @@
 
  notification_nda_lostcity_yhanthlei_hidden_tooltip:0 "#header $notification_nda_lostcity_yhanthlei_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_yhanthlei_hidden_desc$"
  notification_nda_lostcity_yhanthlei_hidden_name:1 "Y'han-thlei Recedes"
- notification_nda_lostcity_yhanthlei_hidden_desc:1 "Once more [concept_nda_yhanthlei], the city of the [concept_nda_deep_ones], returns to the depths!"
+ notification_nda_lostcity_yhanthlei_hidden_desc:1 "Once more [concept_nda_yhanthlei], the city of the [concept_nda_deep_ones], returns to the depths! Access from the surface is no longer possible."
 
  notification_nda_lostcity_shamballa_reveal_tooltip:0 "#header $notification_nda_lostcity_shamballa_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_shamballa_reveal_desc$"
  notification_nda_lostcity_shamballa_reveal_name:1 "Shamballa Discovered"
- notification_nda_lostcity_shamballa_reveal_desc:1 "The entrance to the sacred lost city of [concept_nda_shamballa] has been revealed!"
+ notification_nda_lostcity_shamballa_reveal_desc:1 "The entrance to the sacred lost city of [concept_nda_shamballa] has been revealed! Legend says it exists on both a spiritual and physical plane. Its sudden appearence appears to confirm this."
 
  notification_nda_lostcity_shamballa_hidden_tooltip:0 "#header $notification_nda_lostcity_shamballa_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_shamballa_hidden_desc$"
  notification_nda_lostcity_shamballa_hidden_name:1 "Shamballa Disappears"
- notification_nda_lostcity_shamballa_hidden_desc:1 "The entrance to [concept_nda_shamballa] has disappeared! No one can find the route to the fabled realm any more."
+ notification_nda_lostcity_shamballa_hidden_desc:1 "The entrance to [concept_nda_shamballa] has disappeared! No one can find the route to the fabled realm any more.
 
  notification_nda_lostcity_nameless_city_reveal_tooltip:0 "#header $notification_nda_lostcity_nameless_city_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_nameless_city_reveal_desc$"
  notification_nda_lostcity_nameless_city_reveal_name:1 "Nameless City Discovered"
- notification_nda_lostcity_nameless_city_reveal_desc:1 "The sands have blown away, and the [concept_nda_nameless_city], the lost city of legend, has now been revealed to the world!"
+ notification_nda_lostcity_nameless_city_reveal_desc:1 "A massive sandstorm has hit [SCOPE.sState('nameless_city_state_scope').GetName]. The locals described it as being of supernatural intensity, and it appears that the shifted sands has revealed it secrets.\n\nThe [concept_nda_nameless_city], the lost city of legend has now been revealed to the world!"
 
  notification_nda_lostcity_nameless_city_hidden_tooltip:0 "#header $notification_nda_lostcity_nameless_city_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_nameless_city_hidden_desc$"
  notification_nda_lostcity_nameless_city_hidden_name:1 "Nameless City Disappears"

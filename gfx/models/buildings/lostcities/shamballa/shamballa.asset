@@ -1,12 +1,12 @@
-# based on original 'building_special_borobudur_temple' from 'MMJM SEA Holding Models' for CK3
-# by Matt "Legoman"
+# based on original 'building_special_prambanan_temple' from 'MMJM SEA Holding Models' for CK3
+# by Matt Alexi
 pdxmesh = {
 	name = "shamballa_mesh"
 	file = "shamballa.mesh"
 	scale = 0.3
 
 	meshsettings = {
-		name = "building_special_borobudur_temple" # internal to mesh - unchangable
+		name = "building_special_prambanan_temple"
 		index = 0
 		texture_diffuse = "shamballa_diffuse.dds"
 		texture_normal = "shamballa_normal.dds"
@@ -20,3 +20,4 @@ entity = {
 	name = "shamballa_entity"
 	pdxmesh = "shamballa_mesh"
 }
+
