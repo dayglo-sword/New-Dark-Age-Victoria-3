@@ -738,7 +738,6 @@
 				index = 43
 
 				male = {
-					
 					1 = male_headgear_slavic_agitator_lenin
 				}
 
@@ -759,39 +758,58 @@
 				}
 
 				female = {
-				
 					1 = female_headgear_agitator_pankhurst
 				}
 				boy = male
 				girl = female
 			}
 
-			# # Cultist Headgear
-			# cult_archon_headgear = {
-			# 	index = 100
-			# 	male = {
-			# 		1 = cultist_headgear_archon
-			# 	}
+			female_headgear_slavic_kokoshnik = {
 
-			# 	female = {
-			# 		1 = cultist_headgear_archon
-			# 	}
-			# 	boy = male
-			# 	girl = female
-			# }		
+				index = 45
 
-			# cultist_fez_headgear = {
-			# 	index = 101
-			# 	male = {
-			# 		1 = cultist_headgear_fez
-			# 	}
+				male = {
+					1 = male_headgear_european_common_02
+				}
 
-			# 	female = {
-			# 		1 = cultist_headgear_fez
-			# 	}
-			# 	boy = male
-			# 	girl = female
-			# }
+				female = {
+					1 = female_headgear_slavic_kokoshnik_01
+				}
+				boy = male
+				girl = female
+			}
+
+			female_headgear_slavic_midsummer = {
+
+				index = 46
+
+				male = {
+					#
+				}
+
+				female = {
+				
+					1 = female_headgear_slavic_midsummer_01
+				}
+				boy = male
+				girl = female
+			}
+
+
+			male_headgear_carnaval_pierrot = {
+
+				index = 47
+
+				male = {
+					1 = male_headgear_european_carnaval_pierrot_01
+				}
+
+				female = {
+					#
+				}
+				boy = male
+				girl = female
+			}
 
 			cultist_mask_headgear = {
 				index = 110
@@ -844,43 +862,6 @@
 				boy = male
 				girl = female
 			}
-
-			# generic_medals = {
-			# 	index = 2
-			# 	male = {
-			# 		1 = male_medals_generic_01_01
-			# 		1 = male_medals_generic_01_02
-			# 		1 = male_medals_generic_01_03
-			# 		1 = male_medals_generic_01_04
-			# 		1 = male_medals_generic_01_05
-			# 		1 = empty
-			# 	}
-
-			# 	female = {
-			# 	}
-			# 	boy = male
-			# 	girl = female
-			# }	 
-
-
-			# prussian_medals = {
-			# 	index = 3
-			# 	male = {
-			# 		1 = male_medals_prussian_01_01
-			# 		1 = male_medals_prussian_01_02
-			# 		1 = male_medals_prussian_01_03
-			# 		1 = male_medals_prussian_01_04
-			# 		1 = male_medals_prussian_01_05
-			# 		1 = empty
-
-
-			# 	}
-
-			# 	female = {
-			# 	}
-			# 	boy = male
-			# 	girl = female
-			# }
 		}
 	}
 }

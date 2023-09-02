@@ -6,6 +6,10 @@
 		any_interest_group = {	
 			has_ideology = ideology:ideology_nda_cabalistic				
 		}
+		culture_percent_country = {
+			target = cu:nda_cul_cultist
+			value >= 0.1
+		}
 	}
 
 	possible = {
@@ -17,7 +21,7 @@
 		culture_percent_country = {
 			target = cu:nda_cul_cultist
 			value >= 0.2
-		  }
+		}
 	}
     	
 	when_taken = {

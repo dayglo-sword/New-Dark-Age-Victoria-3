@@ -44,7 +44,7 @@
 		}
 
 		debug_log = "Become DGN puppet : [THIS.GetCountry.GetNameNoFormatting]"
-		debug_log_scopes = no
+		#debug_log_scopes = no
 	}
 
 	ai_chance = {

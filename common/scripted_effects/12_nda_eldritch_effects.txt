@@ -49,8 +49,9 @@
 			remove_ideology = ideology_anti_slavery
 		}
 
-		# change Char religion 
+		# change Char religion (except for devout who become opposition)
 		every_interest_group = {
+			limit = { NOT = { is_interest_group_type = ig_devout } } 
 			leader = {
 				change_character_religion = rel:nda_rel_cultist
 			}
@@ -472,21 +473,14 @@ nda_effect_eldritch_strife
 		random_scope_state = { # select an homeland state to get culture
 			limit = {
 				any_scope_culture = {
-					#NOT = { is_primary_culture_of = ROOT }
-					NOT = {
-						OR = {
-							THIS = cu:nda_cul_cultist
-							THIS = cu:nda_cul_dagonic
-							THIS = cu:nda_cul_yigian
-						}
-					}
+					is_cult_culture = no
 				}
 			}
 			save_scope_as = culture_state
 			random_scope_culture = {
-				limit = { NOT = { is_primary_culture_of = ROOT } }
+				limit = { is_cult_culture = no }
 				save_scope_as = nda_eldritch_rebels
-				debug_log_scopes = yes
+				#debug_log_scopes = yes
 			}
 		}
 
@@ -504,15 +498,49 @@ nda_effect_eldritch_strife
 							has_pop_culture = nda_cul_yigian				
 						}
 					}
+					#change_pop_religion = { target = rel:nda_rel_cultist value = -0.33 }	
+					#change_pop_religion = { target = rel:nda_rel_yigian value = -0.33 }						
 					change_pop_culture = { target = scope:nda_eldritch_rebels value = 0.33 }
-					change_pop_religion = { target = rel:nda_rel_cultist value = -0.33 }					
+				
 				}	
-				#every_scope_pop = {
-				#	limit ={
-				#		has_pop_culture = scope:nda_eldritch_rebels # << Error: has_pop_culture trigger [ Invalid database object 'scope:nda_eldritch_rebels' ]
-				#	}
-				#	change_pop_religion = { target = rel:nda_rel_cultist value = -0.8 }			
-				#}				
+				random_scope_pop = {
+					limit = {
+						NOT =  {
+							OR = {
+								religion = rel:nda_rel_cultist
+								religion = rel:nda_rel_yigian									
+							}							
+						}							
+					}
+					religion = {
+						save_scope_as = nda_rebel_religion
+					}					
+				}
+				debug_log_scopes = yes
+				every_scope_pop = {
+					limit ={
+						exists = scope:nda_rebel_religion
+						NOT = {
+							OR = {
+								has_pop_culture = nda_cul_cultist	
+								has_pop_culture = nda_cul_dagonic	
+								has_pop_culture = nda_cul_yigian				
+							}							
+						}
+
+					}
+					if = {
+						limit = {
+							OR = {
+								religion = rel:nda_rel_cultist
+								religion = rel:nda_rel_yigian									
+							}							
+						}
+						change_pop_religion = { target = scope:nda_rebel_religion value = 0.20 }	
+			
+					}
+									
+				}			
 			}
 
 			add_loyalists = { value = -0.8 culture = scope:nda_eldritch_rebels }	

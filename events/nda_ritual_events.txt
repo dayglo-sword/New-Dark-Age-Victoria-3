@@ -428,15 +428,27 @@ nda_ritual.7 = { # Unrest in Eldritch lands
 
 	trigger = { 
 		has_global_variable = nda_ritual_cthulhu_leaves	
-		AND = {
-			exists = c:ELD
-			c:ELD = ROOT
-		}	
+		#is_full_cult_country = { COUNTRY="THIS" } 
+		OR = {
+			AND = {
+				exists = c:ELD
+				c:ELD = ROOT
+			}	
+			AND = {
+				exists = c:YIG
+				c:YIG = ROOT
+			}
+			AND = {
+				exists = c:DGN
+				c:DGN = ROOT
+			}		
+		}
+	
 		#is_player = no # only for AI
 
 		# has subject that is not a cultist stronghold
 		any_scope_culture = {
-			NOT = { is_primary_culture_of = ROOT }
+			is_cult_culture = no
 		}
 	}
 
@@ -579,7 +591,7 @@ nda_ritual.9 = { # Reaction to last war
 	}
 
 	immediate = {
-			debug_log_scopes = yes	
+			#debug_log_scopes = yes	
 	}	
 
 	option = { # To The Death!
@@ -668,6 +680,119 @@ nda_ritual.10 = { # Foreshadowing of future story paths
 		hidden_effect = {
 			trigger_event = { id = nda_ritual.9 popup = yes } # loop back - really need external descriptor event
 		}
+	}
+}
+
+# Dagon Annex after Arrival
+nda_ritual.11 = { # The world surrenders. - Boost DGN by auto adding Cult countries on a regular basis
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.11.t
+	desc = nda_ritual.11.d
+	flavor =  nda_ritual.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+		
+		# Cthulhu is still here
+		has_global_variable = nda_cthulhu_arrives
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+		AND = {
+			exists = c:DGN
+			c:DGN = ROOT
+		}	
+		is_player = no # only for AI
+		# Has country that can join DGN
+		any_country = { 
+			is_player = no
+			is_country_alive = yes
+			country_has_primary_culture = cu:nda_cul_dagonic
+			NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+			NOT = { # Hastur does not surrender to a giant cat with squid on its head
+				has_variable = nda_king_in_yellow_rules						
+			}
+		}
+
+	}
+
+	immediate = {
+		debug_log = "Ritual - The world surrenders to DGN"	
+
+		# random select country to join DGN
+		nda_effect_dagonic_annex = yes
+	}	
+	
+	option = { # Good. Good.
+		name = nda_ritual.11.a
+		default_option = yes
+	}
+}
+# Yig annex after arrival
+nda_ritual.12 = { # The world surrenders. - Boost ELD by auto adding Cult countries on a regular basis
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.12.t
+	desc = nda_ritual.12.d
+	flavor =  nda_ritual.12.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+		
+		# Cthulhu is still here
+		has_global_variable = nda_cthulhu_arrives
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+		AND = {
+			exists = c:YIG
+			c:YIG = ROOT
+		}	
+		is_player = no # only for AI
+		# Has country that can join DGN
+		any_country = { 
+			is_player = no
+			is_country_alive = yes
+			country_has_primary_culture = cu:nda_cul_yigian
+			NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+			NOT = { # Hastur does not surrender to a giant cat with squid on its head
+				has_variable = nda_king_in_yellow_rules						
+			}
+		}
+
+	}
+
+	immediate = {
+		debug_log = "Ritual - The world surrenders to YIG."	
+
+		# random select country to join YIG
+		nda_effect_yigian_annex = yes
+	}	
+	
+	option = { # Good. Good.
+		name = nda_ritual.12.a
+		default_option = yes
 	}
 }
 

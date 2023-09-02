@@ -676,6 +676,7 @@ nda_astro.1858 = { # 1858 great comet 'Donati's comet'
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 	
 	trigger = { 
+		is_player = yes
 		game_date >= 1858.7	
 		game_date < 1859
 	}
@@ -716,6 +717,7 @@ nda_astro.1910 = { #  Great January Comet of 1910
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 	
 	trigger = { 
+		is_player = yes
 		game_date >= 1910.1	
 		game_date < 1911
 	}

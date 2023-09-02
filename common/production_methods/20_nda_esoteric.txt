@@ -28,10 +28,12 @@ pm_nda_esoteric_academia = {
 	}			
 }			
 
-# Carnacki Experment outcome?
+# Carnacki Experment outcome? - still to be implemented
 pm_nda_esoteric_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 	
+	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
+
 	unlocking_technologies = {
 		electrical_generation # need electric_pentacle tech??
 	}
@@ -72,6 +74,7 @@ pm_nda_esoteric_lost_city = { #
 
 pm_nda_esoteric_vril = { # supernatural energy - can power advanced tech and prolong life - should be own good with substitutions for existing
 	texture = "gfx/interface/icons/production_method_icons/percussion_caps.dds"
+	pollution_generation = 10
 
 	building_modifiers = {
 
@@ -89,7 +92,8 @@ pm_nda_esoteric_vril = { # supernatural energy - can power advanced tech and pro
 
 pm_nda_esoteric_blacklotus = { # supernatural drug / poison - should be own good with substitutions for existing
 	texture = "gfx/interface/icons/production_method_icons/sweeteners.dds"
-	
+	pollution_generation = 10
+
 	building_modifiers = {
 
 		level_scaled = {	
@@ -98,15 +102,15 @@ pm_nda_esoteric_blacklotus = { # supernatural drug / poison - should be own good
 		}
 
 		unscaled = {
-			#building_output_opium_add = 30
-			building_output_black_lotus_add = 250		
+			building_output_black_lotus_add = 300	# how much more production than Vril to be valid selection?	
 		}
 	}
 }
 
 pm_nda_esoteric_goods = { # balanced goods between Vril and black lotus
 	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
-	
+	pollution_generation = 10
+
 	building_modifiers = {
 
 		level_scaled = {	
@@ -117,7 +121,7 @@ pm_nda_esoteric_goods = { # balanced goods between Vril and black lotus
 
 		unscaled = {
 			#building_output_opium_add = 30
-			building_output_black_lotus_add = 125	
+			building_output_black_lotus_add = 150	
 			building_output_vril_add = 125			
 		}
 	}

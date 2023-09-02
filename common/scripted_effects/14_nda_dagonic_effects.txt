@@ -64,6 +64,7 @@
 
 		# change Char religion, ensure cultist 
 		every_interest_group = {
+			limit = { NOT = { is_interest_group_type = ig_devout } } 
 			leader = {
 				change_character_religion = rel:nda_rel_cultist
 				IF = {

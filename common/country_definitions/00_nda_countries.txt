@@ -54,7 +54,7 @@ NEN = {
 }
 
 LEN = { # Leng 
-	color = { 65  127  186 }
+	color = { 75  137  196 }
 	
 	country_type = unrecognized
 	
@@ -90,7 +90,7 @@ DLM = {
 
 #free lemuria
 LEM = {
-	color = { 48 168 208 } #{ 11 84 179 }
+	color = { 58 178 218 } #{ 11 84 179 }
 	
 	country_type = recognized
 

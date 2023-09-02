@@ -27,7 +27,7 @@
 	when_taken = {
 
 		debug_log = "Revoke Cult"
-		debug_log_scopes = yes
+		#debug_log_scopes = yes
 
 		remove_primary_culture = cu:nda_cul_cultist
 

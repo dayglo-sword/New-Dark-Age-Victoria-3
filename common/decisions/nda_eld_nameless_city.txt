@@ -1,5 +1,6 @@
 ﻿nda_eld_nameless_city = {
 	is_shown = {
+		is_player = no
 		OR = {
 			AND = {
 				exists = c:ELD
@@ -16,25 +17,11 @@
 				NOT = { owner = ROOT }
 				NOT = { has_building = building_nda_lostcity_nameless_city }
 				owner = {
-					has_strategic_land_adjacency = ROOT
 					is_revolutionary = no # wait till revoultion is over
-
-					#save_scope_as = conquest_target
-
+					is_adjacent = ROOT
 				}
 			}
 		}
-		# c:ELD = { 
-		# 	NOT = { has_variable = nda_eld_spread_to_puppet_cooldown  }					
-		# 	any_subject_or_below = { 
-		# 		can_cult_infiltrate = yes
-		# 		#NOT = { 
-		# 		#	has_variable = nda_cultists_in_open 
-		# 		#	has_journal_entry = je_nda_cult_spreads
-		# 		#	has_variable = nda_cult_spread_failed
-		# 		#} 
-		# 	} 
-		# }
 	}
 
 	possible = {
@@ -42,19 +29,33 @@
 			is_at_war = no
 		}
 
-		custom_tooltip = {
-			text = nda_eld_nameless_city_possible_tt
-
-			p:x68A578 = {
-				state = {
-					owner = {
-						is_at_war = no
-						save_temporary_scope_as = conquest_target
-					}
+		p:x68A578 = {
+			state = {
+				owner = {
+					is_at_war = no
+					is_adjacent = ROOT
+					#save_scope_as = conquest_target
+					country_rank < rank_value:minor_power 
 				}
-			}									
+			}
 		}
-		scope:conquest_target.country_rank < rank_value:minor_power
+
+		#custom_tooltip = {
+		#	text = nda_eld_nameless_city_possible_tt
+#
+		#	p:x68A578 = {
+		#		state = {
+		#			owner = {
+		#				is_at_war = no
+		#				has_strategic_land_adjacency = ROOT
+		#				save_scope_as = conquest_target
+		#				country_rank < rank_value:minor_power 
+		#			}
+		#		}
+		#	}									
+		#}
+		#has_strategic_land_adjacency = scope:conquest_target
+		#scope:conquest_target.country_rank < rank_value:minor_power
 	}
 	
 	when_taken = {
@@ -63,7 +64,7 @@
 		p:x68A578 = {
 			state = {
 				owner = {
-					save_scope_as = conquest_target
+					save_scope_as = conquest_target_country
 				}
 			}
 		}
@@ -71,7 +72,7 @@
 		create_diplomatic_play = {
 			name = nda_dp_final_war
 		
-			target_country = scope:conquest_target
+			target_country = scope:conquest_target_country
 			
 			war = yes 
 			

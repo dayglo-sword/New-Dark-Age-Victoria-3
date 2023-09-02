@@ -39,7 +39,7 @@
 		}
 
 		debug_log = "Become YIG puppet : [THIS.GetCountry.GetNameNoFormatting]"
-		debug_log_scopes = no
+		#debug_log_scopes = no
 		#custom_tooltip = nda_yig_overlordship_tooltip
 	}
 

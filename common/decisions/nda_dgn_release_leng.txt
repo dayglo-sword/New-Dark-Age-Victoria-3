@@ -2,9 +2,11 @@
 	is_shown = {
 		exists = c:DGN
 		this = c:DGN
-		# has tibet as puppet
+		# no china - presume takeover (DGN or ELD)
+		NOT = { exists = c:CHI }
+		
 		exists = c:TIB
-		c:TIB = { is_subject_of = ROOT }
+		c:TIB = { is_player = no }
 	}
 
 	possible = {

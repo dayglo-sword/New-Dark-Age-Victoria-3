@@ -98,6 +98,14 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	
 	aggression = {
 		value = 1
+
+		if = {
+			limit = { 
+				NOT = { is_country_type = unrecognized }
+				scope:target_country = { is_country_type = unrecognized } 
+			}
+			add = 1
+		}
 		
 		# not aggressive towards main cultists
 		if = {

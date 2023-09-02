@@ -314,7 +314,7 @@ nda_dagonic.5 = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
 	immediate = {
-		debug_log_scopes = yes
+		#debug_log_scopes = yes
 		add_modifier = {
 			name = nda_dagonic_state_modifier
 		}
@@ -394,7 +394,7 @@ nda_dagonic.7 = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
 	immediate = {
-		debug_log_scopes = no
+		#debug_log_scopes = no
 
 		save_scope_as = nda_dagon_target
 

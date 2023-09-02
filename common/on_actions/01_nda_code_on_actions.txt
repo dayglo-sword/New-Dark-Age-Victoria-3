@@ -135,12 +135,12 @@ nda_monthly_on_action = {
 				months = 3
 				value = yes
 			}
-			remove_variable = nda_cult_leader_debug
+			#remove_variable = nda_cult_leader_debug
 		}
 		else = {
 			remove_variable = nda_cult_leaderless
 			remove_variable = nda_cult_leaderless_timer
-			set_variable = nda_cult_leader_debug
+			#set_variable = nda_cult_leader_debug
 		}
 
 		# Check for missing IG leaders - is there a problem with Hasturian America to cause no leaders and shadow men (id : -1)
@@ -249,7 +249,8 @@ nda_monthly_red_death_effect_on_action = {
 	# state level ongoing religious and population conversions
 	effect = {
 		if = {
-			limit = { # Red Death in play
+			limit = { # Red Death in play			
+				game_date < 1857 # should be all over by then
 				has_global_variable = nda_poe_red_death				
 				has_variable = nda_poe_red_death_state	
 			}
@@ -292,6 +293,9 @@ nda_half_yearly_on_action = {
 		nda_nen.17 # Reanimated Spreads
 		nda_nen.16 # Reanimated Plague Starts
 
+		nda_ritual.11 # Dagonic add Cult countries
+		nda_ritual.12 # Yigian add Cult countries
+
 		# lost cities don't need to be monthly
 		nda_lostcities.10
 		nda_lostcities.11
@@ -309,35 +313,36 @@ nda_half_yearly_on_action = {
 # assign Cultist properties to all members of that culture
 on_character_creation = {
 	effect = {
+		# do not duplicate cult trait from char definition, also do not change ideology as presume deliberately not set
 		if = {
-			limit = { has_any_cultist_trait = no } # do not duplicate cult trait from char definition, also do not change ideology as presume deliberately not set
-			if = {
-				limit = {
-					has_culture = cu:nda_cul_cultist								
-				}
-				add_trait = nda_cultist
-				change_character_religion = rel:nda_rel_cultist
-				# give cultist ideology
-				nda_effect_ensure_cult_ideology = yes	
+			limit = {
+				has_culture = cu:nda_cul_cultist
+				has_any_cultist_trait = no								
 			}
-			else_if = { # same for the dagonites
-				limit = {
-					has_culture = cu:nda_cul_dagonic			
-				}
-				add_trait = nda_dagon_cultist
-				change_character_religion = rel:nda_rel_cultist
-				# give cultist ideology
-				nda_effect_ensure_cult_ideology = yes	
-			}		
-			else_if = { # same for the yigians
-				limit = {
-					has_culture = cu:nda_cul_yigian
-				}
-				add_trait = nda_yig_cultist
-				change_character_religion = rel:nda_rel_yigian
-				# give cultist ideology
-				nda_effect_ensure_cult_ideology = yes	
+			add_trait = nda_cultist
+			change_character_religion = rel:nda_rel_cultist
+			# give cultist ideology
+			nda_effect_ensure_cult_ideology = yes	
+		}
+		else_if = { # same for the dagonites
+			limit = {
+				has_culture = cu:nda_cul_dagonic
+				has_any_cultist_trait = no			
 			}
+			add_trait = nda_dagon_cultist
+			change_character_religion = rel:nda_rel_cultist
+			# give cultist ideology
+			nda_effect_ensure_cult_ideology = yes	
+		}		
+		else_if = { # same for the yigians
+			limit = {
+				has_culture = cu:nda_cul_yigian
+				has_any_cultist_trait = no
+			}
+			add_trait = nda_yig_cultist
+			change_character_religion = rel:nda_rel_yigian
+			# give cultist ideology
+			nda_effect_ensure_cult_ideology = yes	
 		}
 	}
 }
@@ -479,15 +484,20 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 					limit = { 
 						has_global_variable = nda_ritual_cthulhu_leaves					
 						is_secessionist = yes
-						has_war_with = c:ELD # Presume that it's a seccesion against ELD
+						OR = {
+							has_war_with = c:ELD # Presume that it's a seccesion against ELD	
+							has_war_with = c:DGN
+							has_war_with = c:YIG						
+						}
+
 					}
 					save_scope_as = freedom_country
-					debug_log_scopes = yes						
+					#debug_log_scopes = yes						
 				}			
 			}
 			if = {
 				limit = { exists = scope:freedom_country }
-				add_war_exhaustion = { target = scope:freedom_country value = -0.25 } # FREEDOM!!					
+				add_war_exhaustion = { target = scope:freedom_country value = -0.30 } # FREEDOM!!					
 			}
 
 		}

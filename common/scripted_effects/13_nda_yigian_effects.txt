@@ -45,6 +45,7 @@ nda_effect_yigian_setup = {
 
 		# change Char religion, ensure cultist 
 		every_interest_group = {
+			limit = { NOT = { is_interest_group_type = ig_devout } } 
 			leader = {
 				change_character_religion = rel:nda_rel_cultist
 				IF = {
@@ -121,7 +122,7 @@ nda_effect_yigian_annex = {
 		}
 
 		debug_log = "Yigian - Country surrenders."	
-		debug_log_scopes = yes	
+		#debug_log_scopes = yes	
 
 		# send notification - does country still exist after annex?
 		every_country = {
@@ -227,7 +228,7 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 		}
 
 		debug_log = "Has YIG in open : [THIS.GetCountry.GetNameNoFormatting]" 
-		debug_log_scopes = no
+		#debug_log_scopes = no
 
 		# give them a boost, both religion and pops
 		every_scope_state = {

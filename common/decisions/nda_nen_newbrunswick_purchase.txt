@@ -10,7 +10,7 @@
         exists = c:NBS
 
         # on border
-        has_strategic_land_adjacency = c:NBS
+        is_adjacent = c:NBS
 		has_healthy_economy = yes
 
 		# same as alaska decision
@@ -86,7 +86,7 @@ nda_nen_novascotia_union = {
         exists = c:NVS
 
         # on border
-        has_strategic_land_adjacency = c:NVS
+        is_adjacent = c:NVS
 		has_healthy_economy = yes
 		
 		# same as alaska decision

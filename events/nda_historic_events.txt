@@ -37,7 +37,7 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	
 	immediate = {
 		debug_log = "Great Awakening"
-		debug_log_scopes = yes		
+		#debug_log_scopes = yes		
 	}
 
 	option = { #"Any more pending?"

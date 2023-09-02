@@ -21,6 +21,7 @@ nda_lostcities.10 = {  # K'N-Yan revealed ? Do trigger but should be decision fo
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
 		NOT = { has_global_variable = nda_lostcity_knyan_exists }	
 
 		OR = {
@@ -166,6 +167,7 @@ nda_lostcities.20 = {  # y'han-thlei revealed ?
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
 		NOT = { has_global_variable = nda_lostcity_yhanthlei_exists }	
 
 		OR = {
@@ -181,7 +183,7 @@ nda_lostcities.20 = {  # y'han-thlei revealed ?
 
 		p:x30C040 = {
 			state = {
-				owner = c:DGN
+				owner = ROOT			
 				NOT = { has_building = building_nda_lostcity_yhanthlei }
 			}
 		}
@@ -303,6 +305,7 @@ nda_lostcities.30 = {  # Shamballa revealed - unlike other cities ELD can not re
 
 	trigger = {
 		exists = c:LEN
+		#NOT = { has_global_variable = nda_ritual_cthulhu_leaves	} # retain as not directly cthulhu related
 		NOT = { has_global_variable = nda_lostcity_shamballa_exists }
 		p:xB9B797 = {
 			state = {
@@ -543,6 +546,7 @@ nda_lostcities.40 = {  # Nameless City revealed - For ELD or STY (original owner
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	trigger = {
+		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}	
 		NOT = { has_global_variable = nda_lostcity_nameless_city_exists }	
 
 		OR = {
@@ -576,7 +580,9 @@ nda_lostcities.40 = {  # Nameless City revealed - For ELD or STY (original owner
 					#level=1
 					#reserves=1
 				}
-								
+				
+				save_scope_as = nameless_city_state_scope
+
 				# Notify world
 				every_country = {
 					post_notification = nda_lostcity_nameless_city_reveal

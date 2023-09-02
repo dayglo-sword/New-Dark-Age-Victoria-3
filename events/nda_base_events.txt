@@ -664,11 +664,8 @@ nda_base.9 = { # Is there some non-conformists within the cult
 				has_any_cultist_trait = yes
 				has_non_cultist_ideology = yes
 			} 
-		}	
-		#any_scope_character = {
-		#	has_any_cultist_trait = yes
-		#	has_non_cultist_ideology = yes
-		#}	
+			NOT = { is_interest_group_type = ig_devout } # 'free' devout should be resistant 		
+		}		
 	}
 
 	immediate = {
@@ -678,6 +675,8 @@ nda_base.9 = { # Is there some non-conformists within the cult
 					has_any_cultist_trait = yes
 					has_non_cultist_ideology = yes
 				} 
+				
+				NOT = { is_interest_group_type = ig_devout } # 'free' devout should be resistant 
 			}
 			leader = {
 				save_scope_as = targeted_ig_leader
@@ -1493,6 +1492,8 @@ nda_base.26 = { # The Pit and the Pendulum!
 			}
 			add_modifier = {
 				name = nda_inquisition_unjust_modifier
+				months = 12
+				is_decaying = yes				 
 			}			
 		}
 
@@ -1510,6 +1511,8 @@ nda_base.26 = { # The Pit and the Pendulum!
 			#	name = nda_inquisition_unjust_modifier
 			#}			
 		}
+
+		debug_log = "Inquisition - Pit and Pendulum - End Atrocity" 
 	}
 
 	option = { #"Mistakes happen"
@@ -1537,6 +1540,8 @@ nda_base.26 = { # The Pit and the Pendulum!
 			}
 	
 		}
+
+		debug_log = "Inquisition - Pit and Pendulum - Mistakes happen" 
 	}
 }
 

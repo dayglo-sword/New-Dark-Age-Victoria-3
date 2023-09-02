@@ -18,7 +18,7 @@ lod_percentages = {
 		texture_specular = "european_city_university_properties.dds"
 		texture = { file = "european_city_university_01_tint.dds" index = 5 }
 		shader = "standard"
-		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" "HUB_BUILDING"}
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 
@@ -48,9 +48,9 @@ lod_percentages = {
 	meshsettings = {
 		name = "LOD_0|trees|treesShape"
 		index = 0
-		texture_diffuse = "arabic_bush_01_diffuse.dds"
-		texture_normal = "arabic_bush_01_normal.dds"
-		texture_specular = "arabic_bush_01_properties.dds"
+		texture_diffuse = "tree_oak_002_diffuse.dds"
+		texture_normal = "tree_oak_002_normal.dds"
+		texture_specular = "tree_oak_002_properties.dds"
 		shader = "tree"
 		shader_file = "gfx/FX/tree.shader"
 	}
@@ -63,7 +63,7 @@ lod_percentages = {
 		texture_specular = "european_city_university_properties.dds"
 		texture = { file = "european_city_university_01_tint.dds" index = 5 }
 		shader = "standard"
-		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" "HUB_BUILDING" }
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 
@@ -93,9 +93,9 @@ lod_percentages = {
 	meshsettings = {
 		name = "LOD_1|trees|treesShape"
 		index = 0
-		texture_diffuse = "arabic_bush_01_diffuse.dds"
-		texture_normal = "arabic_bush_01_normal.dds"
-		texture_specular = "arabic_bush_01_properties.dds"
+		texture_diffuse = "tree_oak_002_diffuse.dds"
+		texture_normal = "tree_oak_002_normal.dds"
+		texture_specular = "tree_oak_002_properties.dds"
 		shader = "tree"
 		shader_file = "gfx/FX/tree.shader"
 	}
@@ -108,7 +108,7 @@ lod_percentages = {
 		texture_specular = "european_city_university_properties.dds"
 		texture = { file = "european_city_university_01_tint.dds" index = 5 }
 		shader = "standard"
-		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" "HUB_BUILDING" }
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 
@@ -138,9 +138,9 @@ lod_percentages = {
 	meshsettings = {
 		name = "LOD_2|trees|treesShape"
 		index = 0
-		texture_diffuse = "arabic_bush_01_diffuse.dds"
-		texture_normal = "arabic_bush_01_normal.dds"
-		texture_specular = "arabic_bush_01_properties.dds"
+		texture_diffuse = "tree_oak_002_diffuse.dds"
+		texture_normal = "tree_oak_002_normal.dds"
+		texture_specular = "tree_oak_002_properties.dds"
 		shader = "tree"
 		shader_file = "gfx/FX/tree.shader"
 	}
@@ -153,7 +153,7 @@ lod_percentages = {
 		texture_specular = "european_city_university_properties.dds"
 		texture = { file = "european_city_university_01_tint.dds" index = 5 }
 		shader = "standard"
-		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" "HUB_BUILDING" }
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 
@@ -183,9 +183,9 @@ lod_percentages = {
 	meshsettings = {
 		name = "LOD_3|trees|treesShape"
 		index = 0
-		texture_diffuse = "arabic_bush_01_diffuse.dds"
-		texture_normal = "arabic_bush_01_normal.dds"
-		texture_specular = "arabic_bush_01_properties.dds"
+		texture_diffuse = "tree_oak_002_diffuse.dds"
+		texture_normal = "tree_oak_002_normal.dds"
+		texture_specular = "tree_oak_002_properties.dds"
 		shader = "tree"
 		shader_file = "gfx/FX/tree.shader"
 	}

@@ -65,10 +65,10 @@
 			}
 			create_building={
 				building="building_construction_sector"
-				level=3
+				level=2
 				reserves=1
 				activate_production_methods={ "pm_iron_frame_buildings" }
-			}			
+			}
 			create_building={
 				building="building_arms_industry"
 				level=3
@@ -175,12 +175,6 @@
 				level=2
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
-			}
-			create_building={
-				building="building_construction_sector"
-				level=1
-				reserves=1
-				activate_production_methods={ "pm_iron_frame_buildings" }
 			}				
 			create_building={
 				building="building_arms_industry"
@@ -817,6 +811,12 @@
 				activate_production_methods={ "pm_blister_steel_process" "pm_automation_disabled" "pm_privately_owned_industry" }
 			}
 			create_building={
+				building="building_construction_sector"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_iron_frame_buildings" }
+			}
+			create_building={
 				building="building_textile_mills"
 				level=2
 				reserves=1
@@ -918,6 +918,12 @@
 	}
 	s:STATE_RHODE_ISLAND={
 		region_state:NEN={
+			create_building={
+				building="building_government_administration"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
 			create_building={
 				building="building_glassworks"
 				level=1
@@ -1061,7 +1067,7 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled" "pm_privately_owned_building_paper_mills" }
-			}	
+		}
 			create_building={
 				building="building_fishing_wharf"
 				level=1
@@ -1100,6 +1106,12 @@
 	}
 	s:STATE_MAINE={
 		region_state:NEN={
+			create_building={
+				building="building_government_administration"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_horizontal_drawer_cabinets" }
+			}
 			create_building={
 				building="building_furniture_manufacturies"
 				level=1
