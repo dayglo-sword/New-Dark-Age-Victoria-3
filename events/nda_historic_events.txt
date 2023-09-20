@@ -46,6 +46,57 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	}
 }
 
+nda_historic.1842 = { # Zanoni novel by Edward Bulwer-Lytton
+	type = country_event
+	placement = p:x7543C8 
+	title = nda_historic.1842.t
+	desc = nda_historic.1842.d
+	flavor =  nda_historic.1842.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+ 		# 1842 year of release 
+		game_date >= 1842.8 
+		game_date < 1844
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}	
+	}
+
+	cooldown = { months = 24 }
+	
+	immediate = {
+		debug_log = "Zanoni : [THIS.GetCountry.GetNameNoFormatting]" 
+		# nothing special
+	}
+
+	option = { 
+		name = nda_historic.1842.a
+		default_option = yes
+
+	}
+	option = { #"What harm can it do"
+
+		name = nda_historic.1842.b
+	}
+}
+
 nda_historic.1848 = { # Founding of Spiritualist Movement
 	type = country_event
 	placement = p:x01D042
@@ -293,6 +344,57 @@ nda_historic.1852 = { # An American Medium in London
 			}						
 
 		}
+	}
+}
+
+nda_historic.1854 = { # Eliphas Levi - Dogme et Rituel de la Haute Magie 'The Doctrine and Ritual of High Magic'
+	type = country_event
+	placement = p:x71DA2E # paris or work out where character is if we implement him?
+	title = nda_historic.1854.t
+	desc = nda_historic.1854.d
+	flavor =  nda_historic.1854.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+ 		# 1854 year of release of part 1
+		game_date >= 1854.3 
+		game_date < 1855
+
+		# owner of Paris. or NEN
+		OR = {
+			p:x71DA2E = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}	
+	}
+
+	cooldown = { months = 24 }
+	
+	immediate = {
+		debug_log = "Eliphas Levi - Dogme et Rituel : [THIS.GetCountry.GetNameNoFormatting]" 
+		# nothing special
+	}
+
+	option = { 
+		name = nda_historic.1854.a
+		default_option = yes
+
+	}
+	option = { #"What harm can it do"
+
+		name = nda_historic.1854.b
 	}
 }
 
@@ -920,8 +1022,8 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
-		game_date >= 1893.6 
-		game_date < 1894
+		game_date >= 1891.3 
+		game_date < 1892
 
 		# owner of London. or NEN
 		OR = {
@@ -967,7 +1069,7 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 }
 }
 
-nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic
+nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc
 	type = country_event
 	placement = p:x7543C8
 	title = nda_historic.1892.t
@@ -986,8 +1088,8 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
-		game_date >= 1893.6 
-		game_date < 1894
+		game_date >= 1892.9 
+		game_date < 1893
 
 		# owner of London. or NEN
 		OR = {

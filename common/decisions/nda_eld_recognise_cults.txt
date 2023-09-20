@@ -125,7 +125,9 @@ nda_eld_release_dagonic_lands = {
 			}	
 			state_region = {
 				remove_claim = c:ELD
+				remove_homeland = nda_cul_cultist
 			}
+
 			set_state_owner = c:DGN
 			hidden_effect = {
 				# convert some cultists to yigian					
@@ -138,6 +140,7 @@ nda_eld_release_dagonic_lands = {
 			}
 		}
 		
+		change_relations = { country = c:DGN value = 100 } # Make friends
 	}
 
 	ai_chance = {
@@ -240,7 +243,7 @@ nda_eld_release_yigian_lands = {
 
 		any_scope_state = { 
 			state_region = {
-					is_homeland = cu:nda_cul_yigian
+				is_homeland = cu:nda_cul_yigian
 			}	
 		}
 
@@ -260,6 +263,7 @@ nda_eld_release_yigian_lands = {
 
 			state_region = {
 				remove_claim = c:ELD
+				remove_homeland = nda_cul_cultist
 			}
 			
 			set_state_owner = c:YIG
@@ -274,6 +278,7 @@ nda_eld_release_yigian_lands = {
 			}
 		}
 		
+		change_relations = { country = c:YIG value = 100 } # Make friends
 	}
 
 	ai_chance = {

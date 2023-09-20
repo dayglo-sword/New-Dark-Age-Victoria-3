@@ -127,3 +127,93 @@ LEM = { # Free Lemuria
 		subject_canton = LEM
 	}
 }
+
+NEN = { # New England Cultist
+	flag_definition = {
+		coa = NEN_Cultist
+		priority = 200
+		trigger = { 
+			nda_coa_def_cultist_trigger = yes
+		}
+	}
+}
+
+USA = { # New England Cultist
+	flag_definition = {
+		coa = USA_Cultist
+		priority = 200
+		trigger = { 
+			nda_coa_def_cultist_trigger = yes
+		}
+	}
+}
+
+AUS = {
+	flag_definition = {
+		coa = AUS_Cultist
+		priority = 200
+		trigger = { 
+			nda_coa_def_cultist_trigger = yes
+		}
+	}
+}
+
+BRZ = {
+	flag_definition = {
+		coa = BRZ_Cultist
+		coa_with_overlord_canton = BRZ_Cultist
+		priority = 200
+		trigger = { 
+			nda_coa_def_cultist_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = BRZ_Yigian
+		coa_with_overlord_canton = BRZ_Yigian
+		priority = 300
+		trigger = { 
+			nda_coa_def_yigian_trigger = yes
+		}
+	}
+}
+
+MEX = {
+	flag_definition = {
+		coa = MEX_Cultist
+		priority = 200
+		trigger = { 
+			nda_coa_def_cultist_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = MEX_Yigian
+		priority = 300
+		trigger = { 
+			nda_coa_def_yigian_trigger = yes
+		}
+	}
+}
+
+JAP = { # Japan
+	flag_definition = {
+		coa = JAP_Cultist
+		coa_with_overlord_canton = JAP_Cultist			
+		subject_canton = JAP
+		priority = 200
+		trigger = { 
+			nda_coa_def_cultist_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = JAP_Dagonic
+		coa_with_overlord_canton = JAP_Dagonic			
+		subject_canton = JAP
+		priority = 300
+		trigger = { 
+			nda_coa_def_dagonic_trigger = yes
+		}
+	}
+}

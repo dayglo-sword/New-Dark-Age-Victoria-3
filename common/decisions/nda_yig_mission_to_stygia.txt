@@ -1,0 +1,44 @@
+﻿nda_yig_mission_to_stygia = { # Yig conversion for stygian homelands - once complete should allow Stygia to form 
+	is_shown = {
+		#is_player = no
+		exists = c:YIG
+		ROOT = c:YIG
+		NOT = { 
+			exists = c:STY
+		}
+	}
+
+	possible = {
+		# when cult is in strong political postion and friends with YIG
+		# if owner of middle egypt is cultists allow yig journal to start
+		any_country = {
+			owns_entire_state_region = STATE_MIDDLE_EGYPT
+			country_has_primary_culture = cu:nda_cul_cultist
+		}
+		 
+	}
+	
+	when_taken = {
+
+		every_country = {
+			limit = {
+				owns_entire_state_region = STATE_MIDDLE_EGYPT
+				country_has_primary_culture = cu:nda_cul_cultist
+			}
+
+			debug_log =  "Yigian Mission to Stygia : [THIS.GetCountry.GetNameNoFormatting]"
+			trigger_event = { id = nda_yigian.2 }
+		} 
+	}
+
+	ai_chance = {
+		base = 10	
+		# boost if cthuhlu in town
+		modifier = {
+			trigger = { 
+				has_global_variable = nda_cthulhu_arrives
+			}
+			add = 20
+		}	
+	}
+}

@@ -179,6 +179,10 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 					scope:target_state = {
 						state_region = {
 							is_homeland = cu:nda_cul_cultist
+							NOR = {
+								is_homeland = cu:nda_cul_yigian
+								is_homeland = cu:nda_cul_dagonic
+							}
 						}
 						owner = {
 							NOR = { 
@@ -200,6 +204,10 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 					scope:target_state = {
 						state_region = {
 							is_homeland = cu:nda_cul_dagonic
+							NOR = {
+								is_homeland = cu:nda_cul_yigian
+								is_homeland = cu:nda_cul_cultist
+							}
 						}
 						owner = {
 							NOR = { 
@@ -221,6 +229,10 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 					scope:target_state = {
 						state_region = {
 							is_homeland = cu:nda_cul_yigian
+							NOR = {
+								is_homeland = cu:nda_cul_dagonic
+								is_homeland = cu:nda_cul_cultist
+							}
 						}
 						owner = {
 							NOR = { 
@@ -244,6 +256,10 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 					scope:target_state = {
 						state_region = {
 							is_homeland = cu:nda_cul_cultist
+							NOR = {
+								is_homeland = cu:nda_cul_dagonic
+								is_homeland = cu:nda_cul_yigian
+							}
 						}					
 					}
 					can_reach_target_state = yes
@@ -256,6 +272,10 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 					scope:target_state = {
 						state_region = {
 							is_homeland = cu:nda_cul_dagonic
+							NOR = {
+								is_homeland = cu:nda_cul_yigian
+								is_homeland = cu:nda_cul_cultist
+							}
 						}					
 					}
 					can_reach_target_state = yes
@@ -268,6 +288,10 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 					scope:target_state = {
 						state_region = {
 							is_homeland = cu:nda_cul_yigian
+							NOR = {
+								is_homeland = cu:nda_cul_dagonic
+								is_homeland = cu:nda_cul_cultist
+							}
 						}					
 					}
 					can_reach_target_state = yes
@@ -281,7 +305,15 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		dominate = {
 			if = {
 				limit = {
+					scope:target_country = { is_full_cult_country = { COUNTRY="THIS" } } 
+					NOT = { has_global_variable = nda_ritual_cthulhu_leaves }
+				}
+				multiply = 0.00 # never dominate full cultists (until cthulhu has gone)
+			}
+			if = {
+				limit = {
 					scope:target_country = { is_cultist_country = yes } # try and dominate the minions
+
 				}
 				add = 50
 			}		
@@ -298,6 +330,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 			if = {
 				limit = {
 					scope:target_country = { is_full_cult_country = { COUNTRY="THIS" } } 
+					NOT = { has_global_variable = nda_ritual_cthulhu_leaves }
 				}
 				multiply = 0.00 # never conquer full cultists
 			}

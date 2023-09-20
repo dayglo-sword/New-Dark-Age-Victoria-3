@@ -1,0 +1,123 @@
+﻿# DEFAULT = {
+# 	dynamic_country_name = {
+# 		name = nda_generic_worshippers_revolt
+# 		adjective = nda_generic_worshippers_revolt_adj
+		
+# 		#is_secessionist = yes
+
+# 		priority = 100
+		
+# 		trigger = {
+# 			exists = scope:actor
+# 			scope:actor = {
+# 				is_secessionist = yes
+# 				any_primary_culture = { THIS = cu:nda_cul_cultist }
+# 			}
+# 		}
+# 	}
+# }
+
+ELD = {
+	dynamic_country_name = {
+		name = nda_eld_worshippers_revolt
+		adjective = nda_eld_worshippers_revolt_adj
+		
+		is_revolutionary = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				any_interest_group = {
+					is_in_government = yes
+					is_strongest_ig_in_government = yes
+					has_ideology = ideology:ideology_nda_cabalistic
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = nda_generic_worshippers_revolt
+		adjective = nda_generic_worshippers_revolt_adj
+		
+		#is_secessionist = yes
+
+		priority = 100
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = yes
+				any_primary_culture = { THIS = cu:nda_cul_cultist }
+			}
+		}
+	}
+}
+
+YIG = {
+	dynamic_country_name = {
+		name = nda_yig_worshippers_revolt
+		adjective = nda_yig_worshippers_revolt_adj
+		
+		is_revolutionary = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				any_interest_group = {
+					is_in_government = yes
+					is_strongest_ig_in_government = yes
+					has_ideology = ideology:ideology_nda_cabalistic
+				}
+			}
+		}
+	}
+}
+
+DGN = {
+	dynamic_country_name = {
+		name = nda_dgn_worshippers_revolt
+		adjective = nda_dgn_worshippers_revolt_adj
+		
+		is_revolutionary = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				any_interest_group = {
+					is_in_government = yes
+					is_strongest_ig_in_government = yes
+					has_ideology = ideology:ideology_nda_cabalistic
+				}
+			}
+		}
+	}
+}
+
+STY = {
+	dynamic_country_name = {
+		name = nda_sty_worshippers_revolt
+		adjective = nda_sty_worshippers_revolt_adj
+		
+		is_revolutionary = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				any_interest_group = {
+					is_in_government = yes
+					is_strongest_ig_in_government = yes
+					has_ideology = ideology:ideology_nda_cabalistic
+				}
+			}
+		}
+	}
+}

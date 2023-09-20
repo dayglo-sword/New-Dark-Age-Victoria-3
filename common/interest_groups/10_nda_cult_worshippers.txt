@@ -13,17 +13,24 @@
 	enable = {
 		#always = yes
 		#has_variable = nda_cultists_in_open # what happens if revolt country but IG is part of revolt / split
-		any_scope_pop = {
-			OR = {
-				religion = rel:nda_rel_cultist
-				religion = rel:nda_rel_yigian
-			}		
+		# any_scope_pop = {
+		# 	OR = {
+		# 		religion = rel:nda_rel_cultist
+		# 		religion = rel:nda_rel_yigian
+		# 	}		
+		# }
+		# have percentage of religion so that early 0% does not occur
+		OR = {
+			religion_percent_country = { target = rel:nda_rel_cultist value > 0.01 }
+			religion_percent_country = { target = rel:nda_rel_yigian value > 0.01 }			
 		}
+
 	}
 	
+	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_be_fruitful_and_multiply
-		ig_trait_divine_right
+		ig_trait_family_ties
 		ig_trait_pious_fiction
 	}	
 	
@@ -31,8 +38,12 @@
 		# add as powerbrokers ? this just makes them happy? - nothing to do with adding power - current scope is country??
 		debug_log = "Enable IG Cultists : [THIS.GetCountry.GetNameNoFormatting]" 
 
-
 		ig:ig_nda_cult_worshippers = {
+			
+			set_ig_trait = ig_trait:ig_trait_pious_fiction
+			set_ig_trait = ig_trait:ig_trait_family_ties
+			set_ig_trait = ig_trait:ig_trait_be_fruitful_and_multiply
+
 			IF = {
 				limit = { 
 					NOT = { has_global_variable = nda_ritual_cthulhu_leaves }	

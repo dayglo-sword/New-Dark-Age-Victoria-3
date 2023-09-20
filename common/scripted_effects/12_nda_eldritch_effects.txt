@@ -38,9 +38,34 @@
 			
 		}
 		
-		# rename devout to approprite name
+		# rename devout to appropriate name
 		ig:ig_devout = {
 			set_interest_group_name = ig_nda_non_cultist_church
+		}
+
+		# rename other groups? or back to vanilla names?		
+		ig:ig_armed_forces = {
+			set_interest_group_name = ig_armed_forces
+		}
+
+		ig:ig_rural_folk = {
+			set_interest_group_name = ig_nda_old_ways
+		}
+
+		ig:ig_intelligentsia = {
+			set_interest_group_name = ig_nda_illuminati_cult # also used for main bavarian cult
+		}
+
+		ig:ig_landowners = {
+			set_interest_group_name = ig_landowners
+		}
+
+		ig:ig_petty_bourgeoisie = {
+			set_interest_group_name = ig_nda_black_lodge
+		}
+
+		ig:ig_trade_unions = {
+			set_interest_group_name = ig_trade_unions
 		}
 
 		# remove anti-slavery from intel and trade unions 
@@ -498,9 +523,9 @@ nda_effect_eldritch_strife
 							has_pop_culture = nda_cul_yigian				
 						}
 					}
-					#change_pop_religion = { target = rel:nda_rel_cultist value = -0.33 }	
-					#change_pop_religion = { target = rel:nda_rel_yigian value = -0.33 }						
+					
 					change_pop_culture = { target = scope:nda_eldritch_rebels value = 0.33 }
+					#scope:nda_eldritch_rebels.Religion
 				
 				}	
 				random_scope_pop = {
@@ -536,8 +561,8 @@ nda_effect_eldritch_strife
 								religion = rel:nda_rel_yigian									
 							}							
 						}
-						change_pop_religion = { target = scope:nda_rebel_religion value = 0.20 }	
-			
+						change_pop_religion = { target = scope:nda_eldritch_rebels.Religion value = 0.10 }
+						change_pop_religion = { target = scope:nda_rebel_religion value = 0.10 }				
 					}
 									
 				}			

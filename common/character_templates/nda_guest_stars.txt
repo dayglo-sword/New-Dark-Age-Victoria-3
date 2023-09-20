@@ -58,3 +58,185 @@ ecchi_gbr_dickens_character_template = {
     #}
 }
 
+#Prince Zaleski - 1895 by M. P. Shiel
+
+investigator_harry_escott = {  # from the stories by Fitz-James O’Brien
+    first_name = Harry
+    last_name = Escott
+    historical = no
+    culture = cu:british
+    religion = rel:atheist
+    female = no
+    interest_group = ig_intelligentsia
+    ideology = ideology_humanitarian
+    birth_date = 1828.11.8 # October 27th in the Old Style calendar
+    dna = ecchi_dna_charles_dickens
+    traits = {
+        nda_investigator
+        charismatic
+        imposing
+    }
+    agitator_usage = {
+        country_trigger = {
+            OR = {
+                c:GBR ?= this
+                c:ENG ?= this
+            }
+        } 
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_trade_unions
+                is_interest_group_type = ig_rural_folk
+            } 
+        }   
+        earliest_usage_date = 1855.11.1 # year of first pub - push backwards?
+        latest_usage_date = 1955.12.31
+        chance = 75
+    }
+}
+
+investigator_john_silence = { # from the stories by Algernon Blackwood
+	first_name = John
+	last_name = Silence
+	historical = no
+	culture = cu:british
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian
+	birth_date = 1888.11.8 
+	dna = ecchi_dna_charles_dickens
+	traits = {
+        nda_investigator
+		charismatic
+		imposing
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:GBR ?= this
+				c:ENG ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_trade_unions
+                is_interest_group_type = ig_rural_folk
+            } 
+        }   
+		earliest_usage_date = 1905.11.1 # year of first pub - push backwards?
+		latest_usage_date = 1955.12.31
+		chance = 75
+	}
+}
+
+investigator_simon_iff = { # from the stories by Aleister Crowley
+	first_name = Simon
+	last_name = Iff
+	historical = no
+	culture = cu:british
+	religion = rel:nda_rel_theosophic # closest to Thelema
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian
+	birth_date = 1850.11.8 
+	dna = ecchi_dna_charles_dickens
+	traits = {
+        nda_investigator
+		charismatic
+		imposing
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:GBR ?= this
+				c:ENG ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_trade_unions
+                is_interest_group_type = ig_rural_folk
+            } 
+        }   
+		earliest_usage_date = 1880.11.1 # arbitary as stories are from 1916 onwards
+		latest_usage_date = 1955.12.31
+		chance = 75
+	}
+}
+
+Lisa la Giuffria
+investigator_lisa_la_guiffria = { # from the story Moonchild by Aleister Crowley
+	first_name = Lisa
+	last_name = La_guiffria
+	historical = no
+	culture = cu:british
+	religion = rel:nda_rel_theosophic # closest to Thelema
+	female = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian
+	birth_date = 1895.11.8 
+	dna = ecchi_dna_charles_dickens # female? what the dickens!
+	traits = {
+        nda_investigator
+		charismatic
+		imposing
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:GBR ?= this
+				c:ENG ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_trade_unions
+                is_interest_group_type = ig_rural_folk
+            } 
+        }   
+		earliest_usage_date = 1895.11.1 # is still young in 1917
+		latest_usage_date = 1955.12.31
+		chance = 75
+	}
+}
+
+investigator_jules_de_grandin = { # from the stories by Seabury Quinn
+	first_name = Jules
+	last_name = De_Grandin
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian
+	birth_date = 1888.11.8 
+	dna = ecchi_dna_charles_dickens
+	traits = {
+		nda_investigator
+        charismatic
+		imposing
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:USA ?= this
+				c:NEN ?= this
+			}
+		}
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_trade_unions
+                is_interest_group_type = ig_rural_folk
+            } 
+        }   
+		earliest_usage_date = 1925.1.1 # year of first pub - push backwards?
+		latest_usage_date = 1955.12.31
+		chance = 75
+	}
+}

@@ -7,9 +7,15 @@
 	instances={
 		{
 			id=1
-			position={ 1313.000000 0.000000 519.000000 } # off the coast off New England / Innsmouth
+			position={ 1313.000000 0.000000 519.000000 } # south of Tahiti
 			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
-			scale={ 1.000000 1.000000 1.000000 }
+			scale={ 2.000000 1.000000 1.000000 }
+		}
+		{
+			id=2
+			position={ 1312.000000 0.000000 519.000000 } # south of Tahiti
+			rotation={ -0.100000 -0.000000 -0.000000 0.000000 }
+			scale={ 1.000000 2.000000 1.000000 }
 		}
 	}
 }
@@ -39,7 +45,7 @@ game_object_locator={
 	instances={
 		{
 			id=1
-			position={ 2491.000000 0.000000 2553.000000 } # off the coast off New England / Innsmouth
+			position={ 2491.000000 0.000000 2553.000000 } # off the coast of New England / Innsmouth
 			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
 			scale={ 1.000000 1.000000 1.000000 }
 		}

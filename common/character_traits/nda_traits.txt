@@ -1,0 +1,43 @@
+﻿### Non-Eldritch
+
+nda_investigator = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/erudite.dds"
+	
+	character_modifier = {
+		character_health_add = 0.1
+	}
+
+	command_modifier = {
+	}
+
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.05
+		interest_group_pop_attraction_mult = 0.1
+	}
+
+	interest_group_modifier = {
+
+	}				
+	
+	possible = { # Random is not possible
+		# NOT = { age < define:NCharacters|ADULT_AGE }	
+		# NOT = { 
+		# 	OR = {
+		# 		has_trait = nda_acolyte
+		# 		has_trait = nda_master
+		# 	} 
+		# }
+		# exists = owner
+		# owner = { 
+		# 	NOT = {has_variable = nda_cultists_in_open}
+		# }			
+	}
+	
+	weight = 1
+	
+	replace = {																
+	}
+	
+	value = 3
+}

@@ -1,6 +1,6 @@
 ﻿l_english:
   
- nda_rel_cultist:0 "Eldritch Rite"
+ nda_rel_cultist:0 "Esoteric Rite"
  nda_yigian:0 "Yigian"
  nda_rel_yigian:0 "Yigian Sect"
  nda_rel_dagonic:0 "Dagonic Sect"
@@ -9,9 +9,9 @@
  nda_rel_theosophic:0 "Theosophic"
 
  # Add cultures here as well
- nda_cul_cultist:0 "Eldritch Cult"
- nda_cul_yigian:0 "Yigian Cult"
- nda_cul_dagonic:0 "Dagonic Cult"
+ nda_cul_cultist:0 "Cultist"
+ nda_cul_yigian:0 "Yigian"
+ nda_cul_dagonic:0 "Dagonic"
  nda_cul_trueyankee:0 "True Yankee"
 
  ig_nda_cult_worshippers:0 "Cult Worshippers"
@@ -49,10 +49,13 @@ modifier_interest_group_ig_nda_cult_worshippers_pol_str_mult_desc:0 "A bonus or 
  ig_nda_starry_wisdom_cult_desc:0 "Church of the Starry Wisdom"
  ig_nda_illuminati_cult:0 "Illuminati"
  ig_nda_illuminati_cult_desc:0 "Order of the Illuminated"
-
+ ig_nda_black_lodge:0 "The Black Lodge"
+ ig_nda_old_ways:0 "The Old Ways"
 #alternate devout
 ig_nda_rel_spiritualism:0 "Spiritualist Movement"
 ig_nda_rel_theosophic:0 "Theosophic Movement"
+
+
 
 # variables used
 nda_rel_boost_spiritualism:0 "Rising Spiritualism"

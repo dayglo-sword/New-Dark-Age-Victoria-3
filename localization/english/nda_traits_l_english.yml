@@ -18,6 +18,10 @@ nda_dagon_acolyte:0 "Dagonic Apostle"
 nda_dagon_acolyte_desc:0 "This person is an Apostle, a trusted member of the Dagonic Cult."
 nda_dagon_master:0 "Dagonic Master"
 nda_dagon_master_desc:0 "This person has become a Master of the Dagonic Cult."
+
+nda_investigator:0 "Investigator"
+nda_investigator_desc:0 "This person has the habit of poking their nose where it doesn't belong."
+
 # Rank based
 nda_grand_master:0 "Archon"
 nda_yig_grand_master:0 "Archon"

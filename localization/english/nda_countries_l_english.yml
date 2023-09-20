@@ -42,3 +42,17 @@ gov_eldritch_republic:0 ""Coven Controlled"
 gov_eldritch_republic_desc:0 ""The country is directly controlled by members of the Coven"
 gov_eldritch_democracy:0 ""Coven Manipulated"
 gov_eldritch_democracy_desc:0 ""The country is nominally democratically controlled, but with the Cult pulling the strings."
+
+# Cultist Revolt - Cult IG are leaders
+nda_eld_worshippers_revolt:0 "Eldritch Restoration"
+nda_eld_worshippers_revolt_adj:0 "Eldritch"
+nda_yig_worshippers_revolt:0 "Yigian Restoration"
+nda_yig_worshippers_revolt_adj:0 "Yigian"
+nda_dgn_worshippers_revolt:0 "Dagonic Restoration"
+nda_dgn_worshippers_revolt_adj:0 "Dagonic"
+nda_sty_worshippers_revolt:0 "Stygian Restoration"
+nda_sty_worshippers_revolt_adj:0 "Stygian"
+
+# Cult Cultural Seccession
+nda_generic_worshippers_revolt:0 "Cultist Uprising"
+nda_generic_worshippers_revolt_adj:0 "Cultist"

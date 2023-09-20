@@ -9,6 +9,7 @@ Timeline of events in mod
 1842.1      nda_astro.1842      Conjunction 1
 1842.3		nda_cas.10			Holiness of Azedarac
 1842.6      nda_nen.1842        Founding of Miskatonic Uni
+1842.8		nda_historic.1842	Zanoni by Edward Bulwer-Lytton, a story of love and occult. 
 1844.7      nda_nen.1844        Church of Starry Wisdom.
 1845.9      nda_nen.1845        Devil Worship in Innsmouth, Captain Marsh
 1846.3      nda_nen.1846        Plague in Innsmouth
@@ -16,10 +17,12 @@ Timeline of events in mod
 1849.10     nda_historic.1849   Death of Poe
 
 1852.1      nda_historic.1852   An American Medium in London
+1854.3		nda_historic.1854	Eliphas Levi - Dogme et Rituel de la Haute Magie
 1858.7      nda_astro.1858      Great Comet 1
 1861.10     nda_astro.1861      Conjunction 2
 1862.1      nda_historic.1862   London - The Ghost Club
 1865.6      nda_historic.1865   Zetetic Astronomy - Earth is not a globe!
+1871.5		nda_historic.1871	Vril - Power of the coming race : book by Edward Bulwer-Lytton
 1875.4      nda_historic.1875   NY - The Theosophical Society
 1877.3      nda_nen.1877        Starry Wisdom - Close Down
 1881.4      nda_astro.1881      Conjunction 3
@@ -35,7 +38,7 @@ Timeline of events in mod
 1892.1      nda_hasturian.3     The King in Yellow - The Repairer of Reputations
 1892.7~     nda_hasturian.5     The King in Yellow - Imperial America
 1892.9      nda_historic.1892   Zetetic Astronomy - Universal Zetetic Society TODO
-
+1896							Eliphas Levi - Waite Translation
 1901        nda_whh.1           House on the Borderlands
 1901.11     nda_astro.1901      Conjunction 4
 1903.1      nda_nen.1903        Herbert West - Appeal for reinstatement

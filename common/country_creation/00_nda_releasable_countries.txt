@@ -62,13 +62,13 @@ STY = { # Stygia
 	ai_will_do = { always = yes }
 
 	possible = {
-		# owns cairo - 
-		owns_entire_state_region = STATE_LOWER_EGYPT 
+		# owns Luxor? - cairo is potentially out of bounds as capital of EGY
+		owns_entire_state_region = STATE_MIDDLE_EGYPT 
 
 		# is yigian culture
 		OR = {
 			country_has_primary_culture = cu:nda_cul_yigian
-			country_has_primary_culture = cu:nda_cul_cultist
+			#country_has_primary_culture = cu:nda_cul_cultist
 		}	
 			
 		has_technology_researched = nationalism

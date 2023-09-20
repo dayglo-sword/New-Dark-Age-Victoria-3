@@ -393,6 +393,23 @@ DEFAULT = {
 			}
 		}
 	}
+
+	dynamic_country_name = {
+		name = nda_generic_worshippers_revolt
+		adjective = nda_generic_worshippers_revolt_adj
+		
+		#is_secessionist = yes
+
+		priority = 100
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = yes
+				any_primary_culture = { THIS = cu:nda_cul_cultist }
+			}
+		}
+	}
 }
 
 SWE = {
