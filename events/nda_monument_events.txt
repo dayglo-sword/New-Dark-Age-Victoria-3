@@ -1,5 +1,6 @@
 ﻿namespace = nda_monuments
 # Events to notify of changes to Monument statuses
+# include destuction of the Miskatonic Uni
 
 nda_monuments.10 = {  # Vatican falls to cultists - launched from decision
 	type = country_event
@@ -83,6 +84,35 @@ nda_monuments.30 = {  # St Basils falls to cultists - launched from decision
 	
 	option = { #
 		name = nda_monuments.30.a 
+		default_option = yes
+	}
+}
+
+nda_monuments.40 = {  # Miskatonic Uni falls to cultists - launched from decision
+	type = country_event
+	placement = p:x2B5499
+	title = nda_monuments.40.t
+	desc = nda_monuments.40.d
+	flavor =  nda_monuments.40.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		debug_log = "Miskatonic Falls"
+	}	
+	
+	option = { #
+		name = nda_monuments.40.a 
 		default_option = yes
 	}
 }

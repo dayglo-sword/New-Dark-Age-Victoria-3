@@ -510,7 +510,7 @@ nda_historic.1862 = { # The Ghost Club
 
 	gui_window = event_window_1char_tabloid
 
-	left_icon = scope:character_to_display
+	left_icon = scope:dickens_scope
 
 	#event_image = {
 	#	video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
@@ -541,41 +541,36 @@ nda_historic.1862 = { # The Ghost Club
 	immediate = {
 		p:x7543C8 = { # London
 			state = { save_scope_as = spiritualist_state 
-				# add Dickens to country
+				# add Dickens to country - could already exist due to VOTP DLC so check first
 				owner = {
-					create_character = { # based on ecchi_gbr_dickens_character_template
-						first_name = Charles
-						last_name = ecchi_Dickens
-						culture = cu:british
-						female = no
-						religion = protestant
-						ideology = ideology_reformer
-						interest_group = ig_intelligentsia
-						dna = ecchi_dna_charles_dickens
-						birth_date = 1812.2.7
-						traits = { inspirational_orator }
-						#interest_group_leader_usage = {
-						#	country_trigger = {
-						#		exists = c:GBR
-						#		this = c:GBR
-						#	}
-						#	interest_group_trigger = {
-						#		is_interest_group_type = ig_intelligentsia
-						#	}
-						#	earliest_usage_date = 1836.1.1
-						#	latest_usage_date = 1870.6.9
-						#	chance = 90
-						#}
-						on_created = {
-							set_variable = is_dickens
-							
+
+					IF = { 
+						limit = {
+							NOT = { any_character = { has_variable = dickens_var } }
 						}
+						# create using ecchi - could be a return from dead?
+						create_character = {
+							template = ecchi_gbr_dickens_character_template 
+							on_created = {
+								set_variable = dickens_var						
+							}
+						}						
 					}
 
 					random_scope_character = {
-							limit = { has_variable = is_dickens } #use the variable to scope to that specific character
-							save_scope_as = character_to_display #save the scope here
-					}
+						limit = {
+							has_variable = dickens_var
+						}
+						# make investigator!
+						IF = { 
+							limit = { NOT = { has_trait = nda_investigator }}
+							add_trait = nda_investigator
+							
+						}
+						add_character_role = agitator # should already have this?
+
+						save_scope_as = dickens_scope
+					}			
 				}
 			}
 		}
@@ -584,7 +579,6 @@ nda_historic.1862 = { # The Ghost Club
 	option = { 
 		name = nda_historic.1862.a
 		default_option = yes
-
 	}
 }
 
@@ -1000,6 +994,11 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 	option = { 
 		name = nda_historic.1889.a
 		default_option = yes
+	}
+	option = { 
+		name = nda_historic.1889.b
+		# William Wynn Westcott as investigator
+
 	}
 }
 

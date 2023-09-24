@@ -18,6 +18,7 @@ Timeline of events in mod
 
 1852.1      nda_historic.1852   An American Medium in London
 1854.3		nda_historic.1854	Eliphas Levi - Dogme et Rituel de la Haute Magie
+1857.1							Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritulism
 1858.7      nda_astro.1858      Great Comet 1
 1861.10     nda_astro.1861      Conjunction 2
 1862.1      nda_historic.1862   London - The Ghost Club

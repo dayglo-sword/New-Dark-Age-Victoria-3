@@ -53,6 +53,10 @@ nda_dgn_worshippers_revolt_adj:0 "Dagonic"
 nda_sty_worshippers_revolt:0 "Stygian Restoration"
 nda_sty_worshippers_revolt_adj:0 "Stygian"
 
+# Illuminati
+nda_eld_illuminati:0 "Illuminated Realm"
+nda_eld_illuminati_adj:0 "Illuminated"
+
 # Cult Cultural Seccession
 nda_generic_worshippers_revolt:0 "Cultist Uprising"
 nda_generic_worshippers_revolt_adj:0 "Cultist"

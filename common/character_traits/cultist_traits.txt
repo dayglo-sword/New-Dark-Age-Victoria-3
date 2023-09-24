@@ -41,7 +41,7 @@ nda_cultist = {
 	replace = {																
 	}
 	
-	value = 3
+	value = 1
 }
 
 nda_acolyte = {
@@ -88,7 +88,7 @@ nda_acolyte = {
 		nda_cultist															
 	}
 	
-	value = 3
+	value = 2
 }
 
 nda_master = {
@@ -188,7 +188,7 @@ nda_yig_cultist = {
 		nda_cultist														
 	}
 	
-	value = 3
+	value = 1
 }
 
 nda_yig_acolyte = {
@@ -236,7 +236,7 @@ nda_yig_acolyte = {
 		nda_yig_cultist															
 	}
 	
-	value = 3
+	value = 2
 }
 
 nda_yig_master = {
@@ -341,7 +341,7 @@ nda_dagon_cultist = {
 	replace = {																
 	}
 	
-	value = 3
+	value = 1
 }
 
 nda_dagon_acolyte = {
@@ -391,7 +391,7 @@ nda_dagon_acolyte = {
 		nda_dagon_cultist															
 	}
 	
-	value = 3
+	value = 2
 }
 
 nda_dagon_master = {

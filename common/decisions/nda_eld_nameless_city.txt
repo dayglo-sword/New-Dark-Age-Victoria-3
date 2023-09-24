@@ -22,6 +22,8 @@
 				}
 			}
 		}
+
+		NOT = { has_variable = nda_eld_nameless_city_cooldown }	# use truce check instead	
 	}
 
 	possible = {
@@ -39,34 +41,24 @@
 				}
 			}
 		}
-
-		#custom_tooltip = {
-		#	text = nda_eld_nameless_city_possible_tt
-#
-		#	p:x68A578 = {
-		#		state = {
-		#			owner = {
-		#				is_at_war = no
-		#				has_strategic_land_adjacency = ROOT
-		#				save_scope_as = conquest_target
-		#				country_rank < rank_value:minor_power 
-		#			}
-		#		}
-		#	}									
-		#}
-		#has_strategic_land_adjacency = scope:conquest_target
-		#scope:conquest_target.country_rank < rank_value:minor_power
 	}
 	
 	when_taken = {
-		#debug_log = "nda_eld_spread_to_puppet" # should this actually be diplo action?
-				# launch diplo-play to conquor NEN and/or player
+
 		p:x68A578 = {
 			state = {
 				owner = {
 					save_scope_as = conquest_target_country
 				}
 			}
+		}
+
+		# don't keep repeating! When they have strong allies it's painful
+		hidden_effect = {
+			set_variable = {
+				name = nda_eld_nameless_city_cooldown
+				months = 36
+			}			
 		}
 
 		create_diplomatic_play = {

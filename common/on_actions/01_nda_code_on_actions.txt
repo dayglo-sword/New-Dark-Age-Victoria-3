@@ -73,9 +73,11 @@ nda_monthly_on_action = {
 		nda_whh.13 # Electric Pentangle
 
 		nda_historic.1838
+		nda_historic.1842
 		nda_historic.1848
 		nda_historic.1849
 		nda_historic.1852
+		nda_historic.1854
 		nda_historic.1857 
 		nda_historic.1862
 		nda_historic.1865

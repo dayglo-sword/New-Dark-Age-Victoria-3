@@ -54,6 +54,26 @@ ELD = {
 			}
 		}
 	}
+
+	# Illuminati is main IG
+	dynamic_country_name = {
+		name = nda_eld_illuminati
+		adjective = nda_eld_illuminati_adj
+		
+		priority = 10
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				any_interest_group = {
+					is_in_government = yes
+					is_strongest_ig_in_government = yes
+					is_interest_group_type = ig_intelligentsia
+				}
+			}
+		}
+	}
 }
 
 YIG = {

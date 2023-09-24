@@ -20,14 +20,22 @@ nda_investigator = {
 
 	}				
 	
-	possible = { # Random is not possible
-		# NOT = { age < define:NCharacters|ADULT_AGE }	
-		# NOT = { 
-		# 	OR = {
-		# 		has_trait = nda_acolyte
-		# 		has_trait = nda_master
-		# 	} 
-		# }
+	possible = { # Random is not possible - but it is!
+
+		 NOT = { age < define:NCharacters|ADULT_AGE }	
+		 NOT = { 
+		 	OR = {
+				has_trait = nda_cultist
+				has_trait = nda_acolyte
+				has_trait = nda_master
+				has_trait = nda_dagon_cultist
+				has_trait = nda_dagon_acolyte
+				has_trait = nda_dagon_master
+				has_trait = nda_yig_cultist
+				has_trait = nda_yig_acolyte
+				has_trait = nda_yig_master
+		 	} 
+		 }
 		# exists = owner
 		# owner = { 
 		# 	NOT = {has_variable = nda_cultists_in_open}
@@ -39,5 +47,5 @@ nda_investigator = {
 	replace = {																
 	}
 	
-	value = 3
+	value = 1
 }

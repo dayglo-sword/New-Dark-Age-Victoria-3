@@ -49,6 +49,19 @@
 			}
 			add = 20
 		}
+		# # reduce if investigators in play - how to do proper count?? Should this be possible internally?
+		# modifier = {
+		# 	trigger = { 
+		# 		any_scope_character = {
+		# 			has_trait = nda_investigator
+		# 			OR = {
+		# 				has_role = politician
+		# 				has_role = agitator
+		# 			}
+		# 			is_busy = no
+		# 		}
+		# 	}
+		# 	subtract = 3
+		# }
 	}
-
 }

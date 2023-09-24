@@ -416,7 +416,11 @@ nda_base.6 = { # Secret Cultists in Country - only fired from journals: je_nda_c
 			limit = { 
 				NOT = { 
 					leader = { 
-						has_any_cultist_trait = yes
+						OR  = {
+							has_any_cultist_trait = yes	
+							has_trait = nda_investigator # exclude investigators						
+						}
+
 					} 
 				}
 			}
@@ -549,6 +553,10 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 						limit = { is_historical = yes }
 						add = 3
 					}
+					if = {
+						limit = { has_trait = nda_investigator } # plot armour
+						add = 2
+					}
 				}
 				max = 1
 				save_scope_as = exiled_ig_leader
@@ -585,9 +593,18 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 							set_as_interest_group_leader = no
 							remove_character_role = politician
 						}
+						if = {
+							limit = {
+								NOT = { has_trait = nda_investigator }
+								
+							}
+							add_trait = nda_investigator # has a grudge against the cult!
+						}
 					}
 	
 					exile_character_with_martyrdom = yes
+
+					debug_log = "[THIS.GetCountry.GetNameNoFormatting] - Non-cult IG Leader exiled"
 				}			
 			}
 		}		

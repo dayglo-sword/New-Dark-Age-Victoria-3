@@ -40,22 +40,70 @@ ecchi_gbr_dickens_character_template = {
     female = no
     religion = protestant
     ideology = ideology_reformer
-    interest_group = ig_intelligentsia
+    interest_group = ig_petty_bourgeoisie
 	dna = ecchi_dna_charles_dickens
     birth_date = 1812.2.7
-    traits = { inspirational_orator }
-    #interest_group_leader_usage = {
-    #    country_trigger = {
-    #        exists = c:GBR
-    #        this = c:GBR
-    #    }
-    #    interest_group_trigger = {
-    #        is_interest_group_type = ig_intelligentsia
-    #    }
-    #    earliest_usage_date = 1836.1.1
-    #    latest_usage_date = 1870.6.9
-    #    chance = 90
-    #}
+    traits = { 
+		literary
+		inspirational_orator
+	}
+	#is_agitator = yes # add only if available
+}
+
+protagonist_azedarac = { # many of these traits would need changing afterward to reveal true nature.
+	first_name = Hildred
+	last_name = Azedarac
+	historical = yes # not really!
+	female = no
+	birth_date = 1807.7.4 # claimed, not actual!
+	interest_group = ig_devout
+	dna = ecchi_dna_charles_dickens
+	ideology = ideology_traditionalist
+	religion = rel:catholic # should be state religion?
+	traits = {
+		romantic # not really !!
+		inspirational_orator 				
+	}
+}
+
+
+# Lovecraft Investigators
+investigator_professor_webb = { # from the Call of Cthulhu
+	first_name = Professor
+	last_name = Webb
+	historical = yes
+	culture = cu:yankee
+	religion = rel:atheist
+	female = no
+	interest_group = ig_intelligentsia
+	ideology = ideology_humanitarian
+	birth_date = 1828.11.8 
+	dna = ecchi_dna_charles_dickens
+	traits = {
+		nda_investigator
+		explorer
+        charismatic
+	}
+	#is_agitator = yes # set agitator later so as not to add them automatically
+
+	# agitator_usage = {
+	# 	country_trigger = {
+	# 		OR = {
+	# 			c:USA ?= this
+	# 			c:NEN ?= this
+	# 		}
+	# 	}
+    #     interest_group_trigger = {
+    #         is_marginal = no
+    #         OR = {
+    #             is_interest_group_type = ig_petty_bourgeoisie
+    #             is_interest_group_type = ig_intelligentsia
+    #         } 
+    #     }   
+	# 	earliest_usage_date = 1860.5.1 # year of appearanace - should be triggered from event ritual.1860 and have no defaults?
+	# 	latest_usage_date = 1955.12.31
+	# 	chance = 100
+	# }
 }
 
 #Prince Zaleski - 1895 by M. P. Shiel
@@ -64,33 +112,33 @@ investigator_harry_escott = {  # from the stories by Fitz-James O’Brien
     first_name = Harry
     last_name = Escott
     historical = no
-    culture = cu:british
+    culture = cu:yankee
     religion = rel:atheist
     female = no
     interest_group = ig_intelligentsia
     ideology = ideology_humanitarian
-    birth_date = 1828.11.8 # October 27th in the Old Style calendar
+    birth_date = 1828.11.8 
     dna = ecchi_dna_charles_dickens
     traits = {
         nda_investigator
         charismatic
         imposing
-    }
+    }	
     agitator_usage = {
         country_trigger = {
             OR = {
-                c:GBR ?= this
-                c:ENG ?= this
+                c:USA ?= this
+                c:FSA ?= this
             }
         } 
         interest_group_trigger = {
             is_marginal = no
             OR = {
                 is_interest_group_type = ig_trade_unions
-                is_interest_group_type = ig_rural_folk
+                is_interest_group_type = ig_intelligentsia
             } 
         }   
-        earliest_usage_date = 1855.11.1 # year of first pub - push backwards?
+        earliest_usage_date = 1850.1.1 # 1855.11.1 # year of first pub - push backwards?
         latest_usage_date = 1955.12.31
         chance = 75
     }
@@ -122,7 +170,7 @@ investigator_john_silence = { # from the stories by Algernon Blackwood
         interest_group_trigger = {
             is_marginal = no
             OR = {
-                is_interest_group_type = ig_trade_unions
+                is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_rural_folk
             } 
         }   
@@ -158,8 +206,8 @@ investigator_simon_iff = { # from the stories by Aleister Crowley
         interest_group_trigger = {
             is_marginal = no
             OR = {
-                is_interest_group_type = ig_trade_unions
-                is_interest_group_type = ig_rural_folk
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_intelligentsia
             } 
         }   
 		earliest_usage_date = 1880.11.1 # arbitary as stories are from 1916 onwards
@@ -168,7 +216,7 @@ investigator_simon_iff = { # from the stories by Aleister Crowley
 	}
 }
 
-Lisa la Giuffria
+#Lisa la Giuffria
 investigator_lisa_la_guiffria = { # from the story Moonchild by Aleister Crowley
 	first_name = Lisa
 	last_name = La_guiffria
@@ -195,11 +243,11 @@ investigator_lisa_la_guiffria = { # from the story Moonchild by Aleister Crowley
         interest_group_trigger = {
             is_marginal = no
             OR = {
-                is_interest_group_type = ig_trade_unions
-                is_interest_group_type = ig_rural_folk
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_intelligentsia
             } 
         }   
-		earliest_usage_date = 1895.11.1 # is still young in 1917
+		earliest_usage_date = 1912.11.1 # is still young in 1917
 		latest_usage_date = 1955.12.31
 		chance = 75
 	}
@@ -231,12 +279,26 @@ investigator_jules_de_grandin = { # from the stories by Seabury Quinn
         interest_group_trigger = {
             is_marginal = no
             OR = {
-                is_interest_group_type = ig_trade_unions
-                is_interest_group_type = ig_rural_folk
+                is_interest_group_type = ig_petty_bourgeoisie
+                is_interest_group_type = ig_intelligentsia
             } 
         }   
 		earliest_usage_date = 1925.1.1 # year of first pub - push backwards?
 		latest_usage_date = 1955.12.31
 		chance = 75
 	}
+}
+
+investigator_real_william_wynn_wescott = { #founder of the Golden Dawn
+    first_name = William
+    last_name = Wescott
+    culture = cu:british
+    female = no
+    religion = protestant
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_charles_dickens
+    birth_date = 1848.1.1
+    traits = { nda_investigator inspirational_orator }
+	is_agitator = yes
 }

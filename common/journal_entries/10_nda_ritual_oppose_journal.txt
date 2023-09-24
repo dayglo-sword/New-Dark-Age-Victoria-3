@@ -1,0 +1,104 @@
+﻿je_nda_ritual_oppose = {
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	is_shown_when_inactive = {
+		OR = {
+			is_player = yes
+			this ?= c:NEN
+		}
+		has_cult_culture = no
+		exists = c:ELD
+		NOT = { has_global_variable = nda_ritual_completed  }
+		has_global_variable = je_nda_ritual_proceeds_tracker # ritual has started
+	}
+
+	possible = {
+
+		custom_tooltip = {
+				text = je_nda_ritual_oppose_possible_tt
+
+				exists = c:ELD
+
+				NOT = { has_global_variable = nda_ritual_completed  }
+				NOT = { has_global_variable = nda_ritual_cthulhu_visits  }
+		}
+	}
+
+	immediate = {
+
+		save_scope_as = nda_je_ritual_oppose_scope
+		
+		# relations with Cult Countries should plummet
+
+		debug_log = "Ritual Opposed Journal : Started : "
+	}
+
+    complete = {
+		custom_tooltip = {
+			text = je_nda_ritual_oppose_complete_tt
+			OR = {
+				has_global_variable = nda_ritual_cthulhu_visits # ritual failed to complete in time				
+				NOT = { exists = c:ELD } # if no ELD Ritual stops
+			}
+
+		}
+    }
+
+	on_complete = {
+		debug_log =  "Ritual Opposed Journal : Completed :"
+
+		set_global_variable = nda_ritual_completed
+		trigger_event = { id = nda_ritual.3 }		
+	}
+
+	on_monthly_pulse = {
+	
+		# need better count up
+		effect = {
+			# auto reduce - should really be based on country status?
+			scope:nda_je_scope = {
+				change_variable = {
+					name = je_nda_ritual_proceeds_tracker
+					subtract = 1
+				}					
+			}	
+
+			# reduce if Investigators are around
+			every_scope_character = {
+				limit = {
+					has_trait = nda_investigator
+					OR = {
+						has_role = politician
+						has_role = agitator
+					}
+					is_busy = no
+				}
+				scope:nda_je_scope = {
+					change_variable = {
+						name = je_nda_ritual_proceeds_tracker
+						subtract = 1
+					}					
+				}	
+			}				
+		}		
+	}
+
+    fail = {
+		# if ritual succeded
+		custom_tooltip = {
+			text = je_nda_ritual_oppose_fail_tt
+			has_global_variable = nda_ritual_completed  
+		}
+    }
+	
+	on_fail = {
+
+	}
+
+	weight = 200
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

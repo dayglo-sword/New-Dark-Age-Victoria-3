@@ -1402,6 +1402,7 @@
             modifier = {
                 add = 500
                 scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
                     has_variable = nda_coven_leader
                     exists = c:ELD
                     owner = c:ELD      
@@ -1431,6 +1432,7 @@
             modifier = {
                 add = 500
                 scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
                     has_variable = nda_coven_leader
                     OR = {
                         AND = {
@@ -1469,6 +1471,7 @@
             modifier = {
                 add = 500
                 scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
                     has_variable = nda_coven_leader
                     exists = c:DGN
                     owner = c:DGN      
@@ -1498,6 +1501,7 @@
             modifier = {
                 add = 200
                 scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
                     has_variable = nda_coven_leader
                     owner = {
                         has_variable = nda_cultists_in_open			

@@ -133,3 +133,50 @@ nda_eld_destroy_st_basils = {
 		}	
 	}
 }
+
+nda_cult_destroy_miskatonic_uni = {
+	is_shown = {
+		OR = {
+			AND = {
+				exists = c:ELD
+				this = c:ELD					
+			}
+			AND = {
+				exists = c:DGN
+				this = c:DGN					
+			}		
+		}
+
+		p:x2B5499  = { 
+			state = { 
+				owner = ROOT
+				has_building = building_nda_miskatonic_university	
+			}					
+		}
+	}
+
+	possible = {
+		authority  > 0
+	}
+	
+	when_taken = {
+		debug_log = "nda_cult_destroy_miskatonic_uni" 
+
+		p:x2B5499  = { 
+			state = { remove_building = building_nda_miskatonic_university } 
+		}
+
+		# Please Cultists
+		add_loyalists = { value = 0.1 religion = rel:nda_rel_cultist }
+
+		# Reaction Event for Player
+		every_country = {
+			limit = { is_player = yes}
+			trigger_event = { id = nda_monuments.40 popup = yes }			
+		}
+	}
+
+	ai_chance = {
+		base = 10	
+	}
+}

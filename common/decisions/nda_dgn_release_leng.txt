@@ -221,3 +221,194 @@
 	}
 
 }
+
+nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN giving vast inland non Dagonic homelands and in part blocking ELD creation.
+	is_shown = {
+		exists = c:DGN
+		this = c:DGN
+		# no china - presume takeover (DGN or ELD)
+		NOT = { exists = c:CHI }		
+		NOT = { exists = c:TIB } # Only do if we can't trigger the Leng release above
+	}
+
+	possible = {
+		is_at_war = no
+		#has chinese inland provinces
+		OR = {
+			exists = s:STATE_HUNAN.region_state:DGN 
+			exists = s:STATE_GUANGXI.region_state:DGN
+			exists = s:STATE_YUNNAN.region_state:DGN
+			exists = s:STATE_SHANXI.region_state:DGN
+			exists = s:STATE_GUIZHOU.region_state:DGN 
+			exists = s:STATE_TUVA.region_state:DGN
+			exists = s:STATE_URGA.region_state:DGN
+			exists = s:STATE_TIANSHAN.region_state:DGN
+		}
+	}
+	
+	when_taken = {
+
+		custom_tooltip = {
+			text = nda_dgn_release_chinese_lands_tooltip	
+
+			# release smaller states as per warlord breakup but without warlords
+			if = {
+				limit = { exists = s:STATE_HUNAN.region_state:DGN }
+				create_country = {
+					tag = HNA
+					origin = this
+					state = s:STATE_HUNAN.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make HNA Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_GUANGXI.region_state:DGN }
+				create_country = { #Guangxi
+					tag = GNG
+					origin = this
+					state = s:STATE_GUANGXI.region_state:DGN
+					on_created = {
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make GNG Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_YUNNAN.region_state:DGN }
+				create_country = {  #Yunnan
+					tag = YUN
+					origin = this
+					state = s:STATE_YUNNAN.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make YUN Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_SHANXI.region_state:DGN }
+				create_country = {  #Shanxi
+					tag = SHN
+					origin = this
+					state = s:STATE_SHANXI.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make SHN Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_GUIZHOU.region_state:DGN }
+				create_country = { #Guizhou
+					tag = GUI
+					origin = this
+					state = s:STATE_GUIZHOU.region_state:DGN
+	
+					on_created = {
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make GUI Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = s:STATE_TUVA.region_state:DGN }
+				create_country = {
+					tag = TUV
+					origin = this
+					state = s:STATE_TUVA.region_state:DGN
+	
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make TUV Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}	
+			# Mongolia
+			if = {
+				limit = { exists = s:STATE_URGA.region_state:DGN }
+				create_country = {
+					tag = MGL
+					origin = this
+					state = s:STATE_URGA.region_state:DGN
+					state = s:STATE_ULIASTAI.region_state:DGN
+					state = s:STATE_ALXA.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make MGL Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+			}
+			# Ugyhurstan
+			if = {
+				limit = { exists = s:STATE_TIANSHAN.region_state:DGN }
+				create_country = {
+					tag = XIN
+					origin = this
+					state = s:STATE_TIANSHAN.region_state:DGN
+					state = s:STATE_DZUNGARIA.region_state:DGN
+					state = s:STATE_JETISY.region_state:DGN #ILI
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make MGL Cultist"
+							trigger_event = { id = nda_base.7 }		
+						}
+					}
+				}
+				# transfer lands if not done automatically by creation?
+
+			}					
+		}
+	}
+
+	ai_chance = {
+		base = 20 # should be quite high to get rid of inland.	
+	}
+
+}

@@ -14,6 +14,8 @@
 		any_country = {
 			owns_entire_state_region = STATE_MIDDLE_EGYPT
 			country_has_primary_culture = cu:nda_cul_cultist
+			# Needs to exclude ELD!
+			NOT = { c:ELD ?= this }
 		}
 		 
 	}
@@ -24,6 +26,7 @@
 			limit = {
 				owns_entire_state_region = STATE_MIDDLE_EGYPT
 				country_has_primary_culture = cu:nda_cul_cultist
+
 			}
 
 			debug_log =  "Yigian Mission to Stygia : [THIS.GetCountry.GetNameNoFormatting]"

@@ -51,3 +51,17 @@ nda_leader_cult_potential =
 		add = -2
 	}
 }
+
+# Cult Conversion- ROOT scope is IG - marginal IG should already be filtered out
+nda_cult_spread_total =
+{
+	value = 1
+	if = {
+		limit = { is_in_government = yes }
+		add = 1
+	}
+	if = {
+		limit = { is_powerful = yes }
+		add = 1
+	}
+}

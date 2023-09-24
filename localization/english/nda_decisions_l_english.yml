@@ -23,6 +23,10 @@ nda_dgn_release_leng:0 "Release the Lands of Leng"
 nda_dgn_release_leng_desc:0 "It is in our power to release the secret country of Leng upon the world. Once hidden between this world and the land of dreams, we can make it real again."
 nda_dgn_release_leng_tooltip:0 "Release the Plateau of Leng and award it our inland domains."
 
+nda_dgn_release_chinese_lands:0 "Release the Asian Lands"
+nda_dgn_release_chinese_lands_desc:0 "It is in our power to release the inland domains which are of no use to us."
+nda_dgn_release_chinese_lands_tooltip:0 "Release the our inland domains in Asia."
+
 nda_nen_newbrunswick_union:0 "Union with New Brunswick"
 nda_nen_newbrunswick_union_desc:0 "Why fight for land when we can just merge with friends! New Brunswick has long been our neighbours, it's time we took them under our benevolent wings."
 nda_nen_newbrunswick_union_tooltip:0 "Enter in union with New Brunswick"
@@ -76,3 +80,7 @@ nda_eld_destroy_saint_basils_tooltip:0 "Destroy Saint Basils Cathedral."
 nda_adopt_spiritualism:0 "Adopt Spiritualism as State Religion"
 nda_adopt_spiritualism_desc:0 "The number of people following Spiritualism is becoming so great that it should be adopted as the religion of the country."
 nda_adopt_spiritualism_tooltip:0 "Set Spiritualism as the State Religion."
+
+nda_cult_destroy_miskatonic_uni:0 "Destroy the Miskatonic University"
+nda_cult_destroy_miskatonic_uni_desc:0 "The Miskatonic University and it's academics have long been a thorn in our side. We should raize it to the ground."
+nda_cult_destroy_miskatonic_uni_tooltip:0 "Destroy the buildings of the Miskatonic University."

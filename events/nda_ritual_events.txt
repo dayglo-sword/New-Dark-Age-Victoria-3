@@ -894,11 +894,42 @@ nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol - best as par
 		set_variable = nda_ritual_webb	
 		debug_log = "Ritual - The Tale of Professor Webb "	
 
+		create_character = {
+			template = investigator_professor_webb
+
+			on_created = {
+			 	set_variable = prof_webb_var
+			}
+		}	
+		
+		random_scope_character = {
+			limit = {
+				has_variable = prof_webb_var
+			}
+			save_scope_as = prof_webb_scope
+		}
 	}	
 	
 	option = { # A Strange Tale
 		name = nda_ritual.1860.a
 		default_option = yes
+
+		# remove webb as unneeded
+		hidden_effect = {
+			scope:prof_webb_scope = {
+				kill_character = { hidden = yes value = yes }
+			}
+		}
+	}
+
+	option = { # but an interesting fellow
+		name = nda_ritual.1860.b
+		# recruit as investigator
+		trigger = { empty_agitator_slots >= 1 }
+
+		scope:prof_webb_scope = { 
+			add_character_role = agitator			
+		}
 	}
 }
 

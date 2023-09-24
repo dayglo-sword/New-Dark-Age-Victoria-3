@@ -19,7 +19,7 @@ nda_dagon_acolyte_desc:0 "This person is an Apostle, a trusted member of the Dag
 nda_dagon_master:0 "Dagonic Master"
 nda_dagon_master_desc:0 "This person has become a Master of the Dagonic Cult."
 
-nda_investigator:0 "Investigator"
+nda_investigator:0 "Occult Investigator"
 nda_investigator_desc:0 "This person has the habit of poking their nose where it doesn't belong."
 
 # Rank based
