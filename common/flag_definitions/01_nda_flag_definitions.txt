@@ -130,6 +130,26 @@ LEM = { # Free Lemuria
 
 NEN = { # New England Cultist
 	flag_definition = {
+		coa = NEN
+		subject_canton = NEN
+		priority = 1
+	}
+	flag_definition = {
+		coa = NEN_subject_GBR
+		priority = 20
+		trigger = { 
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = NEN_republic
+		subject_canton = NEN_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
 		coa = NEN_Cultist
 		priority = 200
 		trigger = { 
@@ -138,7 +158,7 @@ NEN = { # New England Cultist
 	}
 }
 
-USA = { # New England Cultist
+USA = { # This overrides existing???
 	flag_definition = {
 		coa = USA_Cultist
 		priority = 200
@@ -150,6 +170,71 @@ USA = { # New England Cultist
 
 AUS = {
 	flag_definition = {
+		coa = AUS
+		subject_canton = AUS		
+		allow_overlord_canton = yes
+		priority = 1
+	}
+
+	flag_definition = {
+		coa = AUS_absolute_monarchy
+		subject_canton = AUS_absolute_monarchy
+		coa_with_overlord_canton = AUS_subject
+		allow_overlord_canton = yes		
+		overlord_canton_scale = { 0.337 0.337 }			
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = AUS_republic
+		subject_canton = AUS_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = AUS_dictatorship
+		subject_canton = AUS_dictatorship
+		priority = 20
+		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = AUS_theocracy
+		subject_canton = AUS_theocracy
+		priority = 10
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = KUK
+		subject_canton = KUK
+		priority = 100
+		trigger = { 
+			scope:actor = { country_has_primary_culture = cu:hungarian }
+		}
+	}
+	flag_definition = {
+		coa = AUS_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = AUS_fascist
+		subject_canton = AUS_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
 		coa = AUS_Cultist
 		priority = 200
 		trigger = { 
@@ -160,9 +245,64 @@ AUS = {
 
 BRZ = {
 	flag_definition = {
+		coa = BRZ
+		subject_canton = BRZ
+		allow_overlord_canton = yes	
+		coa_with_overlord_canton = BRZ_subject			
+		priority = 1
+	}
+	flag_definition = {
+		coa = BRZ_republic
+		subject_canton = BRZ_republic	
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BRZ_dictatorship
+		subject_canton = BRZ_dictatorship			
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BRZ_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BRZ_fascist
+		subject_canton = BRZ_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}		
+	flag_definition = {
+		coa = BRZ_subject_GBR
+		allow_overlord_canton = yes		
+		priority = 50
+		trigger = { 
+			coa_def_british_ensign_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BRZ_subject_USA
+		allow_overlord_canton = yes	
+		overlord_canton_scale = { 0.5 0.54 }	
+		priority = 50
+		trigger = { 
+			coa_def_american_ensign_trigger = yes
+		}
+	}	
+	flag_definition = {
 		coa = BRZ_Cultist
 		coa_with_overlord_canton = BRZ_Cultist
-		priority = 200
+		priority = 2000
 		trigger = { 
 			nda_coa_def_cultist_trigger = yes
 		}
@@ -171,7 +311,7 @@ BRZ = {
 	flag_definition = {
 		coa = BRZ_Yigian
 		coa_with_overlord_canton = BRZ_Yigian
-		priority = 300
+		priority = 3000
 		trigger = { 
 			nda_coa_def_yigian_trigger = yes
 		}
@@ -180,16 +320,54 @@ BRZ = {
 
 MEX = {
 	flag_definition = {
+		coa = MEX
+		subject_canton = MEX
+		allow_overlord_canton = yes		
+		coa_with_overlord_canton = MEX_subject			
+		priority = 1
+	}
+	flag_definition = {
+		coa = MEX_absolute_monarchy
+		subject_canton = MEX_absolute_monarchy
+		allow_overlord_canton = yes		
+		coa_with_overlord_canton = MEX_subject			
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = MEX_dictatorship
+		subject_canton = MEX_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = MEX_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = MEX_subject_USA
+		priority = 50
+		trigger = { 
+			coa_def_american_ensign_trigger = yes
+		}
+	}	
+	flag_definition = {
 		coa = MEX_Cultist
-		priority = 200
+		priority = 2000
 		trigger = { 
 			nda_coa_def_cultist_trigger = yes
 		}
 	}
-
 	flag_definition = {
 		coa = MEX_Yigian
-		priority = 300
+		priority = 3000
 		trigger = { 
 			nda_coa_def_yigian_trigger = yes
 		}
@@ -198,10 +376,92 @@ MEX = {
 
 JAP = { # Japan
 	flag_definition = {
+		coa = JAP
+		allow_overlord_canton = yes		
+		coa_with_overlord_canton = JAP_subject			
+		subject_canton = JAP
+		priority = 1		
+	}
+	flag_definition = {
+		coa = JAP_rising_sun
+		subject_canton = JAP_rising_sun		
+		priority = 10
+		trigger = {
+			coa_def_military_junta_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = JAP_tokugawa
+		subject_canton = JAP_tokugawa
+		priority = 20
+		trigger = {
+			scope:actor = { NOT = { has_variable = meiji_var } }
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = JAP_tokugawa_late
+		subject_canton = JAP_tokugawa_late
+		priority = 20
+		trigger = {
+			scope:actor = { NOT = { has_variable = meiji_var } }
+			coa_def_absolute_monarchy_flag_trigger = no
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = JAP_absolute_monarchy
+		subject_canton = JAP_absolute_monarchy
+		priority = 20
+		trigger = {
+			scope:actor = { has_variable = meiji_var }
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = JAP_republic
+		subject_canton = JAP_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = JAP_dictatorship
+		subject_canton = JAP_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = JAP_theocracy
+		subject_canton = JAP_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = JAP_usa
+		priority = 30
+		trigger = { 
+			coa_def_american_ensign_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = JAP_fascist
+		subject_canton = JAP_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
 		coa = JAP_Cultist
 		coa_with_overlord_canton = JAP_Cultist			
 		subject_canton = JAP
-		priority = 200
+		priority = 2000
 		trigger = { 
 			nda_coa_def_cultist_trigger = yes
 		}
@@ -211,7 +471,7 @@ JAP = { # Japan
 		coa = JAP_Dagonic
 		coa_with_overlord_canton = JAP_Dagonic			
 		subject_canton = JAP
-		priority = 300
+		priority = 3000
 		trigger = { 
 			nda_coa_def_dagonic_trigger = yes
 		}

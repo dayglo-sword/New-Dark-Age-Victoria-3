@@ -1,0 +1,142 @@
+﻿namespace = nda_investigator # 
+
+nda_investigator.1 = { # Character event - becomes Investigator
+	type = country_event
+	placement = ROOT
+	title = nda_investigator.1.t
+	desc = nda_investigator.1.d
+	flavor =  nda_investigator.1.f
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:nda_potential_investigator_scope
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	#cooldown = { months = 12 }
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = nda_potential_investigator
+			}
+			save_scope_as = scope_investigator
+
+			add_trait = nda_investigator
+			remove_variable = nda_potential_investigator
+		}			
+	}	
+	
+	cancellation_trigger = {
+		scope:nda_potential_investigator_scope = {
+			OR = {
+				is_character_alive = no				
+				has_any_cultist_trait = yes
+			}
+		}
+	}
+
+	option = { 
+		name = nda_investigator.1.a
+		default_option = yes
+	}
+}
+
+nda_investigator.2 = { # Character event - becomes Cultist
+	type = country_event
+	placement = ROOT
+	title = nda_investigator.2.t
+	desc = nda_investigator.2.d
+	flavor =  nda_investigator.2.f
+
+	duration = 3
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:nda_potential_investigator_scope
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	#cooldown = { months = 12 }
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = nda_potential_investigator
+			}
+			save_scope_as = scope_investigator
+
+			add_trait = nda_cultist
+			remove_variable = nda_potential_investigator
+		}			
+	}	
+	
+	cancellation_trigger = {
+		scope:nda_potential_investigator_scope = {
+			OR = {
+				is_character_alive = no				
+				#has_any_cultist_trait = yes
+			}
+		}
+	}
+
+	option = { 
+		name = nda_investigator.2.a
+		default_option = yes
+	}
+}
+
+nda_investigator.3 = { # Character event - Assasinated
+	type = country_event
+	placement = ROOT
+	title = nda_investigator.3.t
+	desc = nda_investigator.3.d
+	flavor =  nda_investigator.3.f
+
+	duration = 3
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:nda_potential_investigator_scope
+	duration = 3
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	#cooldown = { months = 12 }
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = nda_potential_investigator
+			}
+			save_scope_as = scope_investigator
+
+			kill_character = yes 
+		}			
+	}	
+	
+	cancellation_trigger = {
+		scope:nda_potential_investigator_scope = {
+			OR = {
+				#is_character_alive = no # causes auto close due to kill_character above				
+				has_any_cultist_trait = yes
+			}
+		}
+	}
+
+	option = { 
+		name = nda_investigator.3.a
+		default_option = yes
+	}
+}

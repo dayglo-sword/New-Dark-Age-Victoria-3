@@ -70,7 +70,7 @@ protagonist_azedarac = { # many of these traits would need changing afterward to
 # Lovecraft Investigators
 investigator_professor_webb = { # from the Call of Cthulhu
 	first_name = Professor
-	last_name = Webb
+	last_name = Channing_Webb
 	historical = yes
 	culture = cu:yankee
 	religion = rel:atheist

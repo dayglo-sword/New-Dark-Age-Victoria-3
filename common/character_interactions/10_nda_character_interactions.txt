@@ -465,3 +465,64 @@ convert_to_yig = { # If not already give character eldritch trait
 		}	
 	}
 }
+
+set_as_investigator = { # If no investigator exists as IG leader this button 'promotes' character - adds 'Occult Investigator' trait if nothing bad happens
+	icon = "gfx/interface/character_panel/nda_coven_action.dds" # do custom icon
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		owner = scope:actor	
+		
+		interest_group.leader = THIS
+		# has_role = politician	 # not needed due to IG leader check
+		scope:actor = {
+			# has cult spread journal
+			has_journal_entry = je_nda_cult_spreads		
+			
+			any_scope_character = {
+				has_role = politician				
+				OR = {
+					has_any_cultist_trait = yes
+					has_trait = nda_investigator # don't make available if already an investigator in play
+				}
+			}
+		}	
+		
+		custom_tooltip = {
+			text = nda_not_investigator_tt
+			has_any_cultist_trait = no
+			NOT = { has_trait = nda_investigator }
+		}
+		
+	}		
+
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		custom_tooltip = {
+			text = nda_not_investigator_tt
+			has_any_cultist_trait = no
+		}
+	}
+
+	effect = {
+
+		set_variable = nda_potential_investigator
+
+		save_scope_as = nda_potential_investigator_scope
+
+		# 3 possible results at random - gain Investigator trait, join cult, or assasinated
+		random_list = {
+			4 = { scope:actor = { trigger_event = { id = nda_investigator.1 popup = yes days = 10 } } }
+			1 = { scope:actor = { trigger_event = { id = nda_investigator.2 popup = yes days = 10 } } }
+			1 = { scope:actor = { trigger_event = { id = nda_investigator.3 popup = yes days = 10 } } }
+		}
+	}
+
+	cooldown = { months = 3 }
+	show_confirmation_box = yes
+	show_requirements = yes
+
+	ai_chance = {
+		value = 0 # for player only
+	}
+}

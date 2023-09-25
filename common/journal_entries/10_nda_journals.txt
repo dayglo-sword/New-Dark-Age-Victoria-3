@@ -45,6 +45,30 @@
 		trigger_event = { id = nda_base.7 }				
 	}
 
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_nda_cult_spreads_inquisition_status
+				trigger = {
+					has_journal_entry = je_nda_devout_inquisition
+				}
+			}
+			triggered_desc = {
+				desc = je_nda_cult_spreads_investigated_status
+				trigger = {
+					has_investigators = yes
+				}
+			}			
+			
+			triggered_desc = {
+				desc = je_nda_cult_spreads_not_investigated_status
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
 	on_monthly_pulse = {
 	
 		# check count of cultists in government. add to counter
@@ -96,6 +120,22 @@
 					}					
 				}	
 			}
+			# reduce based on power of investigators IG
+			every_interest_group = {
+				limit = { 
+					is_marginal = no 
+					leader = { 
+						has_trait = nda_investigator
+					}
+				}
+				
+				scope:nda_je_scope = {
+					change_variable = {
+						name = nda_cult_spread_tracker
+						subtract = prev.nda_cult_spread_total
+					}					
+				}				
+			}	
 
 			# Old Ones are here
 			if = {

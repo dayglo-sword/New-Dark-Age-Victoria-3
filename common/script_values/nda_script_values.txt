@@ -52,7 +52,7 @@ nda_leader_cult_potential =
 	}
 }
 
-# Cult Conversion- ROOT scope is IG - marginal IG should already be filtered out
+# Cult Conversion- ROOT scope is IG - marginal IG should already be filtered out. Is also used for Investigator deductions
 nda_cult_spread_total =
 {
 	value = 1

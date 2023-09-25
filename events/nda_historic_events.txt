@@ -995,11 +995,11 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 		name = nda_historic.1889.a
 		default_option = yes
 	}
-	option = { 
-		name = nda_historic.1889.b
-		# William Wynn Westcott as investigator
+	# option = { 
+	# 	name = nda_historic.1889.b
+	# 	# William Wynn Westcott as investigator
 
-	}
+	# }
 }
 
 nda_historic.1891 = { # Vril-Ya Bazaar and Fete
