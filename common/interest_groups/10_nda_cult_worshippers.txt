@@ -70,7 +70,8 @@
 					limit = { 
 						has_any_cultist_trait = no 
 					}
-					add_trait = nda_cultist		
+					add_trait = nda_cultist	
+					remove_trait = nda_investigator 
 				}
 
 				nda_effect_ensure_cult_ideology = yes			
@@ -107,7 +108,8 @@
 			limit = { 
 				has_any_cultist_trait = no 
 			}
-			add_trait = nda_cultist		
+			add_trait = nda_cultist	
+			remove_trait = nda_investigator 
 		}
 
 		nda_effect_ensure_cult_ideology = yes	

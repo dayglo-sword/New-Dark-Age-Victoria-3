@@ -67,9 +67,10 @@ ELD = {
 			scope:actor = {
 				is_secessionist = no
 				any_interest_group = {
+					is_interest_group_type = ig_intelligentsia
+					ig_clout > 0.3
 					is_in_government = yes
 					is_strongest_ig_in_government = yes
-					is_interest_group_type = ig_intelligentsia
 				}
 			}
 		}

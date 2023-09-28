@@ -202,6 +202,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 			text = nda_not_cultist_tt
 			has_any_cultist_trait = no
 		}
+		NOT = { has_trait = nda_investigator } # investigators are immune
 	}		
 
 	possible = {
@@ -480,11 +481,15 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 			has_journal_entry = je_nda_cult_spreads		
 			
 			any_scope_character = {
-				has_role = politician				
-				OR = {
-					has_any_cultist_trait = yes
-					has_trait = nda_investigator # don't make available if already an investigator in play
-				}
+				has_role = politician			
+				has_any_cultist_trait = yes					
+			}
+
+			NOT = { # Not already an Investigator active
+				any_scope_character = {
+					has_role = politician			
+					has_trait = nda_investigator 					
+				}				
 			}
 		}	
 		
@@ -501,7 +506,7 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 		custom_tooltip = {
 			text = nda_not_investigator_tt
 			has_any_cultist_trait = no
-		}
+		}		
 	}
 
 	effect = {

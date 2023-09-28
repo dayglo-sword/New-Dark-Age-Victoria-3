@@ -346,6 +346,8 @@ on_character_creation = {
 			# give cultist ideology
 			nda_effect_ensure_cult_ideology = yes	
 		}
+		# remove as investigator if auto generated
+		remove_trait = nda_investigator 
 	}
 }
 

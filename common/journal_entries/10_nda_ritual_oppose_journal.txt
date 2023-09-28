@@ -57,7 +57,7 @@
 		# need better count up
 		effect = {
 			# auto reduce - should really be based on country status?
-			scope:nda_je_scope = {
+			scope:nda_je_ritual_proceeds_scope = {
 				change_variable = {
 					name = je_nda_ritual_proceeds_tracker
 					subtract = 1
@@ -74,7 +74,7 @@
 					}
 					is_busy = no
 				}
-				scope:nda_je_scope = {
+				scope:nda_je_ritual_proceeds_scope = {
 					change_variable = {
 						name = je_nda_ritual_proceeds_tracker
 						subtract = 1
@@ -86,9 +86,16 @@
 
     fail = {
 		# if ritual succeded
-		custom_tooltip = {
-			text = je_nda_ritual_oppose_fail_tt
-			has_global_variable = nda_ritual_completed  
+		OR = {
+			custom_tooltip = {
+				text = je_nda_ritual_oppose_fail_ritual_tt
+				has_global_variable = nda_ritual_completed  
+			}
+			# if country becomes cultist
+			custom_tooltip = {
+				text = je_nda_ritual_oppose_fail_cult_tt
+				has_cult_culture = yes
+			}			
 		}
     }
 	

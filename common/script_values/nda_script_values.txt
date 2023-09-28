@@ -23,6 +23,10 @@ nda_leader_cult_potential =
 		add = 5
 	}
 	if = {
+		limit = { leader = { has_trait = hedonist } }
+		add = 3
+	}
+	if = {
 		limit = { leader = { has_trait = reckless } }
 		add = 2
 	}
@@ -49,6 +53,10 @@ nda_leader_cult_potential =
 	if = {
 		limit = { leader = { has_trait = brave } }
 		add = -2
+	}
+	if = {
+		limit = { leader = { has_trait = nda_investigator } } # should never be candidate
+		add = -20
 	}
 }
 

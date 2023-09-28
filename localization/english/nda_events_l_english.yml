@@ -19,9 +19,9 @@
  nda_base.4.f:0 "His corpse was found in a locked and bolted room with the marks of taloned fingers on his throat. Authorities have decided not to investigate further."
  nda_base.4.a:0 "At least the nonsense should stop now."
  nda_base.5.t:0 "The Cult Infiltrates"
- nda_base.5.d:0 "A senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has covertly pledged their alligance to a secretive cult who appear to be dedecated to worshiping some sort of occult entity."
- nda_base.5.d2:0 "A senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has covertly pledged their alligance to a secretive cult who appear to be dedecated to worshiping some sort of occult entity.\n\nIt appears that they have struck a deal to cure them of their afflictions."
- nda_base.5.f:0 "With this person in their sway the cult now has an in road to the reigns of power.\n\nThey are currently operating in secret, their leaders never revealing themselves to the wider world, with their members stated public position being just a front.\n\nBut what do they actually desire? What do they hope to achieve by their infiltration?"
+ nda_base.5.d:0 "A senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has covertly pledged their alligance to a secretive cult who appear to be dedicated to worshiping some sort of occult entity."
+ nda_base.5.d2:0 "A senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has covertly pledged their alligance to a secretive cult who appear to be dedicated to worshiping some sort of occult entity.\n\nIt appears that they have struck a deal to cure them of their afflictions."
+ nda_base.5.f:0 "With this person in their sway the cult now has an in road to the reigns of power.\n\nThey are currently operating in secret, with their leaders never revealing themselves to the wider world, and their members stated public position being just a front.\n\nBut what do they actually desire? What do they hope to achieve by their infiltration?"
  nda_base.5.a:0 "What can we do?"
 
  nda_base.7.t:0 "Revelations"

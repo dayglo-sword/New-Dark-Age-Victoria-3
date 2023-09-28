@@ -6,7 +6,7 @@ nda_not_investigator_tt:0 "Not a member of the Cult"
 # events
 nda_investigator.1.t:0 "A Diligent Investigator"
 nda_investigator.1.d:0 "After initial investigations into the Cult, [SCOPE.sCharacter('nda_potential_investigator_scope').GetFullName] has decided that the threat is serious enough for them to dedicate further time and resources into hindering the Cultist schemes."
-nda_investigator.1.f:0 "... after a knowledge of what they had learned of the cult.\n\n...an investigation of the utmost thoroughness was eminently natural;"
+nda_investigator.1.f:0 "'The matter of the cult still remained to fascinate me, and at times I had visions of personal fame from researches into its origin and connexions.\n\n...I felt sure that I was on the track of a very real, very secret, and very ancient religion...'"
 nda_investigator.1.a:0 "A Good Result!"
 
 nda_investigator.2.t:0 "A Strange Turn"

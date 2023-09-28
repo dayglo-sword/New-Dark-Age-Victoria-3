@@ -928,7 +928,8 @@ nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol - best as par
 		trigger = { empty_agitator_slots >= 1 }
 
 		scope:prof_webb_scope = { 
-			add_character_role = agitator			
+			add_character_role = agitator	
+			add_trait = nda_investigator		
 		}
 	}
 }

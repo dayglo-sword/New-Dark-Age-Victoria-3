@@ -406,18 +406,14 @@ nda_hasturian.5 = { # Create Imperial America
 
 				leader = {
 					IF = {
-						limit = { has_any_cultist_trait = no }
+						limit = { 
+							has_any_cultist_trait = no
+							NOT = { has_trait = nda_investigator } # investigators are immune
+						}
 						add_trait = nda_cultist
 					}					
 				}
 			}
-
-			# remove eldritch homeland - replace with 'The Dreamlands'?
-			#every_scope_state = {
-			#	state_region = {
-			#		remove_homeland	= nda_cul_cultist	
-			#	}		
-			#}
 		}
 
 		# Notify the world		

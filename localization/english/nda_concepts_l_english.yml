@@ -87,3 +87,7 @@ concept_nda_shamballa_desc:0 "'Who will come forth from Shamballa, the “City o
 
 concept_nda_nameless_city:0 "Nameless City"
 concept_nda_nameless_city_desc:0 "A City of legend, lost to the world for so long no record of it's name exists.\n\n'Remote in the desert of Araby lies the nameless city, crumbling and inarticulate, its low walls nearly hidden by the sands of uncounted ages. It must have been thus before the first stones of Memphis were laid, and while the bricks of Babylon were yet unbaked.'\n\n'It was of this place that Abdul Alhazred the mad poet dreamed on the night before he sang his unexplainable couplet - \n “That is not dead which can eternal lie, And with strange aeons even death may die.”'\n\n'...the tale of a mighty sea-coast metropolis that ruled the world before Africa rose out of the waves, and of its struggles as the sea shrank away, and the desert crept into the fertile valley that held it...'"
+
+concept_nda_investigator:0 "Occult Investigators"
+concept_nda_investigator_short:0 "Investigators"
+concept_nda_investigator_desc:0 "Occult Investigators have the habit of poking their nose where it doesn't belong and working against the machinations of the Cults that worship the [concept_nda_old_ones].\n\nOften they have taken it upon themselves to initiate their investigations, sometimes it's due to personal tragedy or being a victim of the Cult's political maneuvers.\n\nGetting a disbelieving world to listen is difficult, and not without its own dangers."

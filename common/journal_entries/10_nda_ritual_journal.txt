@@ -32,7 +32,7 @@
 			set_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
 					value = 0
-			}		
+			}			
 		}
 		
 		# double check - the rename disappeared or was never set so re-assert
@@ -50,7 +50,9 @@
 						}
 					}
 				}			
-			}			
+			}	
+			
+			nda_effect_ritual_assist_counts = yes				
 		}
 
 		save_scope_as = nda_je_ritual_proceeds_scope
@@ -82,9 +84,11 @@
 				change_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
 					add = 10
-				}					
-			}				
-		}		
+				}
+				
+				nda_effect_ritual_assist_counts = yes				
+			}						
+		}				
 	}
 
 	current_value = {
@@ -108,6 +112,13 @@
 	}
 
 	progressbar = yes
+	
+	# is_progressing = {
+	# 	always = yes
+	# }
+
+	progress_desc = {  desc = je_nda_ritual_proceeds_counts }
+
 	weight = 200
 
 	#inheritable = yes
@@ -210,6 +221,7 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 	}
 
 	progressbar = yes
+
 	weight = 200
 
 	#inheritable = yes

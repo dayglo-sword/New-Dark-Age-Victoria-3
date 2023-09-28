@@ -369,7 +369,10 @@ nda_base.5 = { # First Cultist in Country
 	immediate = {
 		# set ig leader character to be Cultist - exclude devout initially?
 		ordered_interest_group = {
-			limit = { NOT = { is_interest_group_type = ig_devout } }
+			limit = { 
+				NOT = { is_interest_group_type = ig_devout } 
+				NOT = { leader = { has_trait = nda_investigator } }
+			}	
 			order_by = nda_leader_cult_potential
 			max = 1
 
@@ -603,8 +606,9 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 					}
 	
 					exile_character_with_martyrdom = yes
-
+					
 					debug_log = "[THIS.GetCountry.GetNameNoFormatting] - Non-cult IG Leader exiled"
+					debug_log_scopes = no
 				}			
 			}
 		}		
@@ -962,7 +966,10 @@ nda_base.13 = { # The Cult fails to spread
 		name = nda_base.13.b
 		
 		# remove fail variable - should allow retrigger of journal
-		remove_variable = nda_cult_spread_tracker		
+		set_variable = { # can't just remove as causes error if details of failed journal still displayed 'current_value'
+			name = nda_cult_spread_tracker
+			value = 0
+		}	
 		remove_variable = nda_cult_spread_failed	
 
 		ai_chance = { # should be most likely if available

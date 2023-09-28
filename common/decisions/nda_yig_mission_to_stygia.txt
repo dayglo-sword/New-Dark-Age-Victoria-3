@@ -12,16 +12,23 @@
 		# when cult is in strong political postion and friends with YIG
 		# if owner of middle egypt is cultists allow yig journal to start
 		any_country = {
-			owns_entire_state_region = STATE_MIDDLE_EGYPT
-			country_has_primary_culture = cu:nda_cul_cultist
-			# Needs to exclude ELD!
-			NOT = { c:ELD ?= this }
-		}
-		 
+			custom_tooltip = {
+				text = nda_yig_mission_to_stygia_possible_tt
+
+				can_cult_infiltrate = yes 
+				owns_entire_state_region = STATE_MIDDLE_EGYPT
+				country_has_primary_culture = cu:nda_cul_cultist
+				# Needs to exclude ELD!
+				NOT = { c:ELD ?= this }
+				NOT = { c:YIG = this }
+			}
+		}		 
 	}
 	
 	when_taken = {
-
+		custom_tooltip = {
+			text = nda_yig_mission_to_stygia_effect_tt
+		}
 		every_country = {
 			limit = {
 				owns_entire_state_region = STATE_MIDDLE_EGYPT

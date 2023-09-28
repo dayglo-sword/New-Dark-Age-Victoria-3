@@ -80,6 +80,8 @@
 
  je_nda_ritual_time_has_passed_tt:0 "The Ritual has not completed in time!"
 
+ je_nda_ritual_proceeds_counts:0 "[SCOPE.sC('nda_je_ritual_proceeds_scope').MakeScope.Var('nda_ritual_count').GetValue] Cultist chapters exist, of which [SCOPE.sC('nda_je_ritual_proceeds_scope').MakeScope.Var('nda_ritual_assist_count').GetValue] are assisting [concept_nda_ritual]."  
+
  je_nda_ritual_assist:0 "Assist The Ritual"
  je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must assist them in all ways possible in this great work.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  je_nda_ritual_assist_fail_is_eld_tt:0 "The country becomes the Eldritch Cult"
@@ -95,7 +97,8 @@
  je_nda_ritual_oppose_complete_tt:0 "The Cult has failed the completion [concept_nda_ritual]."
  je_nda_ritual_oppose_complete:0 "The Cult has failed the completion [concept_nda_ritual]."
 
- je_nda_ritual_oppose_fail_tt:0 "The Ritual has not completed in time!"
+ je_nda_ritual_oppose_fail_ritual_tt:0 "The Ritual has completed."
+ je_nda_ritual_oppose_fail_cult_tt:0 "The Cultists have taken over the country."
 
 # Notifications
  notification_nda_ritual_cthulhu_returns_tooltip:0 "#header $notification_nda_ritual_cthulhu_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_returns_desc$"

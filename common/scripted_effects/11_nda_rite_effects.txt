@@ -171,3 +171,36 @@ nda_effect_conclave_refused = {
 	# Cult countries decrease relations
 	
 }
+
+nda_effect_ritual_assist_counts = {
+
+	set_variable = { name = nda_ritual_count value = 0 }
+	set_variable = { name = nda_ritual_assist_count value = 0 }
+	
+	every_country = {
+		limit = {
+				has_variable = nda_cultists_in_open			
+		}
+		PREV = {
+			change_variable = {
+				name = nda_ritual_count
+				add = 1
+			}					
+		}
+
+		if = {
+			limit = { 
+				OR = { 
+					has_journal_entry = je_nda_ritual_proceeds
+					has_journal_entry = je_nda_ritual_assist
+				}
+			}
+			PREV = {
+				change_variable = {
+					name = nda_ritual_assist_count
+					add = 1
+				}									
+			}
+		}	
+	}
+}

@@ -112,3 +112,7 @@ concept_nda_shamballa = {
 concept_nda_nameless_city = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
 }
+
+concept_nda_investigator = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+}

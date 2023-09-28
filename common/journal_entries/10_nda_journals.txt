@@ -198,6 +198,7 @@
 	weight = 100
 
 	#inheritable = yes
+	#progress_desc = "journal_entry_goal_progress_integer"
 
 	should_be_pinned_by_default = yes
 }

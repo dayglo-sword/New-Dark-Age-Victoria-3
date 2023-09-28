@@ -7,7 +7,7 @@
  je_nda_cult_spread_complete:0 "The Cult spreads throughout the political sphere. Soon they will be able to operate openly, without fear, in public."
  je_nda_cult_spread_hasleader_complete_tt:0 "A powerful leader of the government is a Cultist."
  je_nda_cult_spread_fail_tt:0 "The Cult has failed in its objectives."
- je_nda_cult_spreads_investigated_status:0 "Investigators are working on this."
+ je_nda_cult_spreads_investigated_status:0 "[Concept('concept_nda_investigator','$concept_nda_investigator_short$')] are working against this."
  je_nda_cult_spreads_not_investigated_status:0 "No one is investigating this."
  je_nda_cult_spreads_inquisition_status:0 "The Inquisition is working on this."
  je_nda_cult_to_yigian:0 "Yig Worship Spreads"
