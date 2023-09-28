@@ -1472,7 +1472,7 @@ nda_base.26 = { # The Pit and the Pendulum!
 	weight_multiplier = {
 		base = 0
 		modifier = {
-			has_variable =  "nda_innocent_condemmed"
+			has_variable = nda_innocent_condemmed
 			add = 10
 		}
 	}

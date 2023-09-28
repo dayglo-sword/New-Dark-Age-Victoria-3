@@ -1,0 +1,49 @@
+﻿je_nda_ritual_oppose_btn_start = {
+	name = "je_nda_ritual_oppose_btn_start"
+	desc = "je_nda_ritual_oppose_btn_start_desc"
+
+	visible = { 
+		always = yes 
+	}
+
+	possible = {
+		not = {
+			custom_tooltip = {
+				text = je_nda_ritual_oppose_btn_start_possible_tt
+				has_variable = je_nda_ritual_opposition_started
+			}
+		}
+	}
+
+
+	effect = {
+        custom_tooltip =  {
+			text = je_nda_ritual_oppose_btn_start_effect_tt
+			set_variable = je_nda_ritual_opposition_started
+		} 
+	}
+}
+
+je_nda_ritual_oppose_btn_halt = {
+	name = "je_nda_ritual_oppose_btn_halt"
+	desc = "je_nda_ritual_oppose_btn_halt_desc"
+
+	visible = { 
+		always = yes 
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = je_nda_ritual_oppose_btn_halt_possible_tt
+			has_variable = je_nda_ritual_opposition_started
+		}
+	}
+
+
+	effect = {
+        custom_tooltip = {
+			text = je_nda_ritual_oppose_btn_halt_effect_tt 
+			remove_variable = je_nda_ritual_opposition_started			
+		} 
+	}
+}

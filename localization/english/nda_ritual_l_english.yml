@@ -100,6 +100,18 @@
  je_nda_ritual_oppose_fail_ritual_tt:0 "The Ritual has completed."
  je_nda_ritual_oppose_fail_cult_tt:0 "The Cultists have taken over the country."
 
+ je_nda_ritual_oppose_start_status:0 "Investigations Active"
+ je_nda_ritual_oppose_halt_status:0 "Investigations Halted"
+ je_nda_ritual_oppose_btn_start:0 "Start Operations"
+ je_nda_ritual_oppose_btn_start_desc:0 "Put our efforts into stopping the Ritual."
+ je_nda_ritual_oppose_btn_start_possible_tt:0 "We have not already started."
+ je_nda_ritual_oppose_btn_start_effect_tt:0 "Commence our efforts into stopping the Ritual."
+
+ je_nda_ritual_oppose_btn_halt:0 "Halt Operations"
+ je_nda_ritual_oppose_btn_halt_desc:0 "Stop our efforts against the Ritual."
+ je_nda_ritual_oppose_btn_halt_possible_tt:0 "We have already started."
+ je_nda_ritual_oppose_btn_halt_effect_tt:0 "Halt our efforts into stopping the Ritual."
+
 # Notifications
  notification_nda_ritual_cthulhu_returns_tooltip:0 "#header $notification_nda_ritual_cthulhu_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_returns_desc$"
  notification_nda_ritual_cthulhu_returns_name:0 "Cthulhu Has Returned"

@@ -5,7 +5,7 @@
 	is_shown_when_inactive = {
 		OR = {
 			is_player = yes
-			this ?= c:NEN
+			#this ?= c:NEN
 		}
 		has_cult_culture = no
 		exists = c:ELD
@@ -39,7 +39,7 @@
 			text = je_nda_ritual_oppose_complete_tt
 			OR = {
 				has_global_variable = nda_ritual_cthulhu_visits # ritual failed to complete in time				
-				NOT = { exists = c:ELD } # if no ELD Ritual stops
+				#NOT = { exists = c:ELD } # if no ELD Ritual stops - don't stop - allow counter to continue to drop
 			}
 
 		}
@@ -47,40 +47,63 @@
 
 	on_complete = {
 		debug_log =  "Ritual Opposed Journal : Completed :"
+	
+	}
 
-		set_global_variable = nda_ritual_completed
-		trigger_event = { id = nda_ritual.3 }		
+	scripted_button = je_nda_ritual_oppose_btn_start
+	scripted_button = je_nda_ritual_oppose_btn_halt
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_nda_ritual_oppose_start_status
+				trigger = {
+					has_variable = je_nda_ritual_opposition_started						
+				}
+			}
+			
+			triggered_desc = {
+				desc = je_nda_ritual_oppose_halt_status
+				trigger = {
+					always = yes
+				}
+			}
+		}
+
 	}
 
 	on_monthly_pulse = {
 	
 		# need better count up
 		effect = {
-			# auto reduce - should really be based on country status?
-			scope:nda_je_ritual_proceeds_scope = {
-				change_variable = {
+			debug_log = "oppose cult effect"
+			IF = {
+				limit = { has_variable = je_nda_ritual_opposition_started }		
+				debug_log = "oppose cult counter"
+				# auto reduce - should really be based on country status?			
+				change_global_variable = {
 					name = je_nda_ritual_proceeds_tracker
 					subtract = 1
 				}					
-			}	
 
-			# reduce if Investigators are around
-			every_scope_character = {
-				limit = {
-					has_trait = nda_investigator
-					OR = {
-						has_role = politician
-						has_role = agitator
+				# reduce if Investigators are around
+				every_scope_character = {
+					limit = {
+						has_trait = nda_investigator
+						OR = {
+							has_role = politician
+							has_role = agitator
+						}
+						is_busy = no
 					}
-					is_busy = no
-				}
-				scope:nda_je_ritual_proceeds_scope = {
-					change_variable = {
+					change_global_variable = {
 						name = je_nda_ritual_proceeds_tracker
 						subtract = 1
-					}					
+					}						
 				}	
-			}				
+
+			}			
+			
 		}		
 	}
 
@@ -99,9 +122,9 @@
 		}
     }
 	
-	on_fail = {
+	# on_fail = {
 
-	}
+	# }
 
 	weight = 200
 
