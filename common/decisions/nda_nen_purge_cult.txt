@@ -1,193 +1,193 @@
-﻿nda_nen_purge_cult = {
-	is_shown = {
-		OR = {
-			is_player = yes
-			AND = {			
-				exists = c:NEN
-				this = c:NEN			
-			}							
-		}
+﻿# nda_nen_purge_cult = {
+# 	is_shown = {
+# 		OR = {
+# 			is_player = yes
+# 			AND = {			
+# 				exists = c:NEN
+# 				this = c:NEN			
+# 			}							
+# 		}
 
-        # has cultists
-		any_interest_group = {	
-			leader = { 
-				has_eldritch_trait = yes
-			}
-		}			
+#         # has cultists
+# 		any_interest_group = {	
+# 			leader = { 
+# 				has_eldritch_trait = yes
+# 			}
+# 		}			
 	
-		# but not openly
-		NOT = { has_variable = nda_cultists_in_open }
-		NOT = { # Cultists are powerful in own right - can't purge (possible due to late game revolutions)		
-			any_interest_group = {	
-				has_ideology = ideology:ideology_nda_cabalistic
-				is_in_government = yes	
-				is_powerful = yes						
-			}
-		}
-	}
+# 		# but not openly
+# 		NOT = { has_variable = nda_cultists_in_open }
+# 		NOT = { # Cultists are powerful in own right - can't purge (possible due to late game revolutions)		
+# 			any_interest_group = {	
+# 				has_ideology = ideology:ideology_nda_cabalistic
+# 				is_in_government = yes	
+# 				is_powerful = yes						
+# 			}
+# 		}
+# 	}
 
-	possible = {
-		custom_tooltip = {
-			text = nda_nen_purge_cult_not_open_cultists_tooltip 
-			NOT = { has_variable = nda_cultists_in_open }			
-		}
+# 	possible = {
+# 		custom_tooltip = {
+# 			text = nda_nen_purge_cult_not_open_cultists_tooltip 
+# 			NOT = { has_variable = nda_cultists_in_open }			
+# 		}
 
-		OR = {
-			any_interest_group = {	
-				custom_tooltip = {
-					text = nda_nen_purge_cult_lead_by_cultist_tooltip
-					leader = { 
-						has_eldritch_trait = yes
-					}							
-				}
+# 		OR = {
+# 			any_interest_group = {	
+# 				custom_tooltip = {
+# 					text = nda_nen_purge_cult_lead_by_cultist_tooltip
+# 					leader = { 
+# 						has_eldritch_trait = yes
+# 					}							
+# 				}
 
-				is_in_government = yes	
-				is_powerful = yes			
-			}	
-			any_scope_character = {
-				is_ruler = yes
-				custom_tooltip = {
-					text = nda_nen_purge_cult_is_cultist_tooltip
-					has_eldritch_trait = yes					
-				}
-			}			
-		}
-	}
+# 				is_in_government = yes	
+# 				is_powerful = yes			
+# 			}	
+# 			any_scope_character = {
+# 				is_ruler = yes
+# 				custom_tooltip = {
+# 					text = nda_nen_purge_cult_is_cultist_tooltip
+# 					has_eldritch_trait = yes					
+# 				}
+# 			}			
+# 		}
+# 	}
   	
-	when_taken = {
-		save_scope_as = nda_purge_scope
+# 	when_taken = {
+# 		save_scope_as = nda_purge_scope
 		
-		if = {
-			limit = { has_law = law_type:law_protected_speech } # should not really be doing this!
-			custom_tooltip = {
-				text = nda_nen_purge_cult_protected_speech_tooltip
-				change_infamy = 10
+# 		if = {
+# 			limit = { has_law = law_type:law_protected_speech } # should not really be doing this!
+# 			custom_tooltip = {
+# 				text = nda_nen_purge_cult_protected_speech_tooltip
+# 				change_infamy = 10
 
-				# every country that has protected speech hates you
-				every_country = {
-					limit = { has_law = law_type:law_protected_speech }
-					change_relations = { country = ROOT value = -50 } 
-				}
-			}	
-		}
+# 				# every country that has protected speech hates you
+# 				every_country = {
+# 					limit = { has_law = law_type:law_protected_speech }
+# 					change_relations = { country = ROOT value = -50 } 
+# 				}
+# 			}	
+# 		}
 
- 		custom_tooltip = nda_nen_purge_cult_tooltip       
-		# remove cultist from IG leadership
-		every_interest_group = {
-			limit = {			
-				custom_tooltip = {
-					text = nda_nen_purge_cult_is_cultist_tooltip
+#  		custom_tooltip = nda_nen_purge_cult_tooltip       
+# 		# remove cultist from IG leadership
+# 		every_interest_group = {
+# 			limit = {			
+# 				custom_tooltip = {
+# 					text = nda_nen_purge_cult_is_cultist_tooltip
 
-					leader = { 
-						has_eldritch_trait = yes
-					}				
-				}				
-			}
+# 					leader = { 
+# 						has_eldritch_trait = yes
+# 					}				
+# 				}				
+# 			}
 
-			leader = {
-				set_variable = nda_purge_victim
-				#kill_character = yes
-			}
+# 			leader = {
+# 				set_variable = nda_purge_victim
+# 				#kill_character = yes
+# 			}
 
-			# make IG unhappy	
-			add_modifier = {
-				name = ig_mass_arrests
-				months = normal_modifier_time
-			}	
-		}
+# 			# make IG unhappy	
+# 			add_modifier = {
+# 				name = ig_mass_arrests
+# 				months = normal_modifier_time
+# 			}	
+# 		}
 
-		# select which one to exile!
-		ordered_scope_character = {
-			limit = { 
-				#has_eldritch_trait = yes	
-				has_variable = 	nda_purge_victim	
-			}
-			order_by = { 
-				add = 1
-				if = {
-					limit = { is_ruler = yes }
-					add = 1
-				}
-				if = {
-					limit = { has_trait = nda_master }
-					add = 3
-				}
-				if = {
-					limit = { has_trait = nda_acolyte }
-					add = 1
-				}
-				if = {
-					limit = { is_historical = yes }
-					add = 3
-				}
-			}
-			max = 1
-			save_scope_as = nda_purge_exile_char
+# 		# select which one to exile!
+# 		ordered_scope_character = {
+# 			limit = { 
+# 				#has_eldritch_trait = yes	
+# 				has_variable = 	nda_purge_victim	
+# 			}
+# 			order_by = { 
+# 				add = 1
+# 				if = {
+# 					limit = { is_ruler = yes }
+# 					add = 1
+# 				}
+# 				if = {
+# 					limit = { has_trait = nda_master }
+# 					add = 3
+# 				}
+# 				if = {
+# 					limit = { has_trait = nda_acolyte }
+# 					add = 1
+# 				}
+# 				if = {
+# 					limit = { is_historical = yes }
+# 					add = 3
+# 				}
+# 			}
+# 			max = 1
+# 			save_scope_as = nda_purge_exile_char
 
-			set_variable = nda_purge_exile				
-		}
+# 			set_variable = nda_purge_exile				
+# 		}
 
-		every_scope_character = { # and ruler as well!
-			limit = { 
-				OR = {
-					has_role = politician
-					is_ruler = yes 					
-				}
-				has_variable = nda_purge_victim
-				has_eldritch_trait = yes
-			}
+# 		every_scope_character = { # and ruler as well!
+# 			limit = { 
+# 				OR = {
+# 					has_role = politician
+# 					is_ruler = yes 					
+# 				}
+# 				has_variable = nda_purge_victim
+# 				has_eldritch_trait = yes
+# 			}
 
-			# should exile? - best candidate already selected above
-			IF = {
-				limit = { has_variable = nda_purge_exile }
+# 			# should exile? - best candidate already selected above
+# 			IF = {
+# 				limit = { has_variable = nda_purge_exile }
 
-				# exile
-				hidden_effect = {
-					if = {
-						limit = {
-							NOT = { has_role = agitator }
-						}
-						add_character_role = agitator
-					}
-					if = {
-						limit = {
-							has_role = general
-						}
-						remove_character_role = general
-					}
-					if = {
-						limit = {
-							has_role = admiral
-						}
-						remove_character_role = admiral
-					}
-					if = {
-						limit = {
-							has_role = politician
-						}
-						set_as_interest_group_leader = no
-						remove_character_role = politician
-					}
-				}
-				exile_character_with_martyrdom = yes
-				#kill_character = yes				
-			}
-			ELSE = {
-				kill_character = yes				
-			}
+# 				# exile
+# 				hidden_effect = {
+# 					if = {
+# 						limit = {
+# 							NOT = { has_role = agitator }
+# 						}
+# 						add_character_role = agitator
+# 					}
+# 					if = {
+# 						limit = {
+# 							has_role = general
+# 						}
+# 						remove_character_role = general
+# 					}
+# 					if = {
+# 						limit = {
+# 							has_role = admiral
+# 						}
+# 						remove_character_role = admiral
+# 					}
+# 					if = {
+# 						limit = {
+# 							has_role = politician
+# 						}
+# 						set_as_interest_group_leader = no
+# 						remove_character_role = politician
+# 					}
+# 				}
+# 				exile_character_with_martyrdom = yes
+# 				#kill_character = yes				
+# 			}
+# 			ELSE = {
+# 				kill_character = yes				
+# 			}
 	
-		}
+# 		}
 
-		add_modifier = {
-			name = government_conflict
-			months = normal_modifier_time
-		}	
+# 		add_modifier = {
+# 			name = government_conflict
+# 			months = normal_modifier_time
+# 		}	
 
-		# infamy, infamy!
-		change_infamy = 10 	
-	}
+# 		# infamy, infamy!
+# 		change_infamy = 10 	
+# 	}
 
-	ai_chance = { # should be player only
-		base = 0	
-	}
-}
+# 	ai_chance = { # should be player only
+# 		base = 0	
+# 	}
+# }

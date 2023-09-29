@@ -161,17 +161,25 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 
 	on_complete = {
 		debug_log =  "Ritual Assist Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"	
+		remove_variable = je_nda_ritual_assist_started	
 	}
+
+	scripted_button = je_nda_ritual_assist_btn_start
+	scripted_button = je_nda_ritual_assist_btn_halt
 
 	on_monthly_pulse = {
 	
 		# need better count up
 		effect = {
-			scope:nda_je_ritual_proceeds_scope = {
-				change_global_variable = {
-					name = je_nda_ritual_proceeds_tracker
-					add = 1
-				}					
+			IF = {
+				limit = { has_variable = je_nda_ritual_assist_started }
+
+				scope:nda_je_ritual_proceeds_scope = {
+					change_global_variable = {
+						name = je_nda_ritual_proceeds_tracker
+						add = 1
+					}					
+				}				
 			}
 			
 			set_variable = {
@@ -216,7 +224,8 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 			# is withdrawl fron Ritual, not total fail of
 			every_country = {
 				post_notification = nda_ritual_halt_notice
-			}				
+			}	
+			remove_variable = je_nda_ritual_assist_started				
 		}
 	}
 

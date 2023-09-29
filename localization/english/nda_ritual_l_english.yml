@@ -65,9 +65,9 @@
  nda_ritual.1925.a:0 "'A Weird Tale'"
 
  # decisions
- nda_ritual_assist_possible_tt:0 "The Cult has commenced the Ritual"
- nda_ritual_assist:0 "Assist The Ritual"
- nda_ritual_assist_desc:0 "The Eldritch Cult has commenced [concept_nda_ritual]\nWe should assist them in all ways possible to complete this great working.\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+#  nda_ritual_assist_possible_tt:0 "The Cult has commenced the Ritual"
+#  nda_ritual_assist:0 "Assist The Ritual"
+#  nda_ritual_assist_desc:0 "The Eldritch Cult has commenced [concept_nda_ritual]\nWe should assist them in all ways possible to complete this great working.\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
 
  # Journal Entries
  je_nda_ritual_proceeds:0 "The Ritual Commences"
@@ -89,6 +89,11 @@
  
  je_nda_ritual_assist_complete_tt:0 "The Cult has completed [concept_nda_ritual]. The return is now inevitable."
  je_nda_ritual_assist_complete:0 "The Cult has completed [concept_nda_ritual]. The return is now inevitable."
+
+ je_nda_ritual_assist_btn_start:0 "Assist Ritual"
+ je_nda_ritual_assist_btn_start_desc:0 "Put our efforts into assisting the Ritual."
+ je_nda_ritual_assist_btn_halt:0 "Halt Cooperation"
+ je_nda_ritual_assist_btn_halt_desc:0 "Halt our efforts in assisting the Ritual."
 
  je_nda_ritual_oppose:0 "Oppose The Ritual"
  je_nda_ritual_oppose_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must use all our power to stop this!\n\nWe must investigate and attempt to undermine this fiendish plot."

@@ -1,4 +1,78 @@
-﻿je_nda_ritual_oppose_btn_start = {
+﻿je_nda_ritual_assist_btn_start = {
+	name = "je_nda_ritual_assist_btn_start"
+	desc = "je_nda_ritual_assist_btn_start_desc"
+
+	visible = { 
+		always = yes 
+	}
+
+	possible = {
+		not = {
+			custom_tooltip = {
+				text = je_nda_ritual_assist_btn_start_possible_tt
+				has_variable = je_nda_ritual_opposition_started
+				c:ELD = { relations:root >= relations_threshold:amicable }
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 5	
+		modifier = {
+			trigger = { 
+				has_global_variable = nda_conjunction_4 # speed things up
+			}
+			add = 10
+		}
+		modifier = {
+			trigger = { 
+				has_global_variable = nda_conjunction_5 # really need to speed things up
+			}
+			add = 20
+		}
+	}
+
+	effect = {
+        custom_tooltip =  {
+			text = je_nda_ritual_assist_btn_start_effect_tt
+			set_variable = je_nda_ritual_assist_started
+		} 
+		# add_modifier = {
+		# 	name = nda_investigation_cost_modifier
+		# }
+	}
+}
+
+je_nda_ritual_assist_btn_halt = {
+	name = "je_nda_ritual_assist_btn_halt"
+	desc = "je_nda_ritual_assist_btn_halt_desc"
+
+	visible = { 
+		always = yes 
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = je_nda_ritual_assist_btn_halt_possible_tt
+			has_variable = je_nda_ritual_opposition_started
+			c:ELD = { relations:root <= relations_threshold:cold }
+		}
+	}
+
+	ai_chance = {
+		base = 100	
+	}
+
+	effect = {
+        custom_tooltip = {
+			text = je_nda_ritual_assist_btn_halt_effect_tt 
+			remove_variable = je_nda_ritual_assist_started			
+		} 
+		#remove_modifier = nda_investigation_cost_modifier
+	}
+}
+
+je_nda_ritual_oppose_btn_start = {
 	name = "je_nda_ritual_oppose_btn_start"
 	desc = "je_nda_ritual_oppose_btn_start_desc"
 
@@ -21,6 +95,9 @@
 			text = je_nda_ritual_oppose_btn_start_effect_tt
 			set_variable = je_nda_ritual_opposition_started
 		} 
+		add_modifier = {
+			name = nda_investigation_cost_modifier
+		}
 	}
 }
 
@@ -45,5 +122,191 @@ je_nda_ritual_oppose_btn_halt = {
 			text = je_nda_ritual_oppose_btn_halt_effect_tt 
 			remove_variable = je_nda_ritual_opposition_started			
 		} 
+		remove_modifier = nda_investigation_cost_modifier
 	}
+}
+
+je_nda_cult_spreads_btn_purge = {
+	name = "je_nda_cult_spreads_btn_purge"
+	desc = "je_nda_cult_spreads_btn_purge_desc"
+
+	visible = { 
+		OR = {
+			is_player = yes
+			AND = {			
+				exists = c:NEN
+				this = c:NEN			
+			}							
+		}
+
+        # has cultists
+		any_interest_group = {	
+			leader = { 
+				has_eldritch_trait = yes
+			}
+		}			
+	
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = je_nda_cult_spreads_btn_purge_not_open_cultists_tooltip 
+			NOT = { has_variable = nda_cultists_in_open }			
+		}
+
+		OR = {
+			any_interest_group = {	
+				custom_tooltip = {
+					text = je_nda_cult_spreads_btn_purge_lead_by_cultist_tooltip
+					leader = { 
+						has_eldritch_trait = yes
+					}							
+				}
+
+				is_in_government = yes	
+				is_powerful = yes			
+			}	
+			any_scope_character = {
+				is_ruler = yes
+				custom_tooltip = {
+					text = je_nda_cult_spreads_btn_purge_is_cultist_tooltip
+					has_eldritch_trait = yes					
+				}
+			}			
+		}
+	}
+
+
+	effect = {
+		save_scope_as = nda_purge_scope
+		
+		if = {
+			limit = { has_law = law_type:law_protected_speech } # should not really be doing this!
+			custom_tooltip = {
+				text = je_nda_cult_spreads_btn_purge_protected_speech_tooltip
+				change_infamy = 20
+
+				# every country that has protected speech hates you
+				every_country = {
+					limit = { has_law = law_type:law_protected_speech }
+					change_relations = { country = ROOT value = -50 } 
+				}
+			}	
+		}
+
+ 		custom_tooltip = je_nda_cult_spreads_btn_purge_tooltip       
+		# remove cultist from IG leadership
+		every_interest_group = {
+			limit = {			
+				custom_tooltip = {
+					text = je_nda_cult_spreads_btn_purge_is_cultist_tooltip
+
+					leader = { 
+						has_eldritch_trait = yes
+					}				
+				}				
+			}
+
+			leader = {
+				set_variable = nda_purge_victim
+				#kill_character = yes
+			}
+
+			# make IG unhappy	
+			add_modifier = {
+				name = ig_mass_arrests
+				months = normal_modifier_time
+			}	
+		}
+
+		# select which one to exile!
+		ordered_scope_character = {
+			limit = { 
+				#has_eldritch_trait = yes	
+				has_variable = 	nda_purge_victim	
+			}
+			order_by = { 
+				add = 1
+				if = {
+					limit = { is_ruler = yes }
+					add = 1
+				}
+				if = {
+					limit = { has_trait = nda_master }
+					add = 3
+				}
+				if = {
+					limit = { has_trait = nda_acolyte }
+					add = 1
+				}
+				if = {
+					limit = { is_historical = yes }
+					add = 3
+				}
+			}
+			max = 1
+			save_scope_as = nda_purge_exile_char
+
+			set_variable = nda_purge_exile				
+		}
+
+		every_scope_character = { # and ruler as well!
+			limit = { 
+				OR = {
+					has_role = politician
+					is_ruler = yes 					
+				}
+				has_variable = nda_purge_victim
+				has_eldritch_trait = yes
+			}
+
+			# should exile? - best candidate already selected above
+			IF = {
+				limit = { has_variable = nda_purge_exile }
+
+				# exile
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { has_role = agitator }
+						}
+						add_character_role = agitator
+					}
+					if = {
+						limit = {
+							has_role = general
+						}
+						remove_character_role = general
+					}
+					if = {
+						limit = {
+							has_role = admiral
+						}
+						remove_character_role = admiral
+					}
+					if = {
+						limit = {
+							has_role = politician
+						}
+						set_as_interest_group_leader = no
+						remove_character_role = politician
+					}
+				}
+				exile_character_with_martyrdom = yes
+				#kill_character = yes				
+			}
+			ELSE = {
+				kill_character = yes				
+			}
+	
+		}
+
+		add_modifier = {
+			name = government_conflict
+			months = normal_modifier_time
+		}	
+
+		# infamy, infamy!
+		change_infamy = 20 	
+	}	
 }

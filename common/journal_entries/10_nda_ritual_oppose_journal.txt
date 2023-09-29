@@ -47,7 +47,11 @@
 
 	on_complete = {
 		debug_log =  "Ritual Opposed Journal : Completed :"
-	
+		custom_tooltip = {
+			text = je_nda_ritual_oppose_halt_status
+			remove_modifier = nda_investigation_cost_modifier
+			remove_variable = je_nda_ritual_opposition_started
+		}
 	}
 
 	scripted_button = je_nda_ritual_oppose_btn_start
@@ -122,9 +126,13 @@
 		}
     }
 	
-	# on_fail = {
-
-	# }
+	on_fail = {
+		custom_tooltip = {
+			text = je_nda_ritual_oppose_halt_status
+			remove_modifier = nda_investigation_cost_modifier
+			remove_variable = je_nda_ritual_opposition_started
+		}
+	}
 
 	weight = 200
 

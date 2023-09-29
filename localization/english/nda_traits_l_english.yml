@@ -87,6 +87,9 @@ nda_red_death_modifier_desc:0 "The Red Death is running rampant in this state."
 nda_hastur_critics_choice_ig_modifier:0 "The Critics Choice"
 nda_hastur_critics_choice_ig_modifier_desc:0 "The performance by Castaigne is so superlative who could disapprove!"
 
+nda_investigation_cost_modifier:0 "Opposing the Ritual"
+nda_investigation_cost_modifier_desc:0 "Opposing the Ritual takes resources"
+
 # Custom Triggers
 can_cult_infiltrate:0 "Cultists can infiltrate the country"
 #ADD_WAR_EXHAUSTION_NEG:0 "Inexhaustable Will"

@@ -45,6 +45,8 @@
 		trigger_event = { id = nda_base.7 }				
 	}
 
+	scripted_button = je_nda_cult_spreads_btn_purge
+	
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
