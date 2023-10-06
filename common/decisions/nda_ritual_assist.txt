@@ -1,4 +1,5 @@
-﻿# nda_ritual_assist = { # Assist ELD in the ritual - same logic as original journal trigger but with random timing
+﻿# # temp bring back for this playthru
+# nda_ritual_assist = { # Assist ELD in the ritual - same logic as original journal trigger but with random timing
 # 	is_shown = {
 # 		has_cult_culture = yes
 

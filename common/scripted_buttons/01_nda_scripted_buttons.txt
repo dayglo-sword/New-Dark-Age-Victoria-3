@@ -6,14 +6,15 @@
 		always = yes 
 	}
 
-	possible = {
-		not = {
-			custom_tooltip = {
-				text = je_nda_ritual_assist_btn_start_possible_tt
-				has_variable = je_nda_ritual_opposition_started
-				c:ELD = { relations:root >= relations_threshold:amicable }
-			}
-		}
+	possible = {		
+		custom_tooltip = {
+			text = je_nda_ritual_assist_btn_start_possible_tt
+			NOT = { has_variable = je_nda_ritual_assist_started }
+			NOT = { has_variable = je_nda_ritual_assist_started_cooldown }
+			
+			c:ELD = { relations:root >= relations_threshold:amicable }
+			
+		}		
 	}
 
 	ai_chance = {
@@ -36,10 +37,14 @@
         custom_tooltip =  {
 			text = je_nda_ritual_assist_btn_start_effect_tt
 			set_variable = je_nda_ritual_assist_started
+			set_variable = { name = je_nda_ritual_assist_started_cooldown months = 3 } # cooldown
 		} 
-		# add_modifier = {
-		# 	name = nda_investigation_cost_modifier
-		# }
+
+		# notification to players
+		every_country = {
+			post_notification = nda_ritual_assist_notice
+		}
+
 	}
 }
 
@@ -54,7 +59,8 @@ je_nda_ritual_assist_btn_halt = {
 	possible = {
 		custom_tooltip = {
 			text = je_nda_ritual_assist_btn_halt_possible_tt
-			has_variable = je_nda_ritual_opposition_started
+			has_variable = je_nda_ritual_assist_started
+			NOT = { has_variable = je_nda_ritual_assist_started_cooldown }			
 			c:ELD = { relations:root <= relations_threshold:cold }
 		}
 	}
@@ -66,9 +72,14 @@ je_nda_ritual_assist_btn_halt = {
 	effect = {
         custom_tooltip = {
 			text = je_nda_ritual_assist_btn_halt_effect_tt 
-			remove_variable = je_nda_ritual_assist_started			
+			remove_variable = je_nda_ritual_assist_started	
+			set_variable = { name = je_nda_ritual_assist_started_cooldown months = 3 } # cooldown 
 		} 
-		#remove_modifier = nda_investigation_cost_modifier
+
+		# is withdrawl fron Ritual, not total fail of
+		every_country = {
+			post_notification = nda_ritual_halt_notice
+		}
 	}
 }
 
@@ -80,12 +91,28 @@ je_nda_ritual_oppose_btn_start = {
 		always = yes 
 	}
 
+	ai_chance = {
+		base = 10
+		modifier = {
+			trigger = { 
+				has_investigators = yes
+			}
+			add = 40
+		}		
+	}
+
 	possible = {
 		not = {
 			custom_tooltip = {
 				text = je_nda_ritual_oppose_btn_start_possible_tt
 				has_variable = je_nda_ritual_opposition_started
 			}
+		}
+		NOT = {
+			custom_tooltip = {
+				text = je_nda_ritual_btn_cooldown_tt
+				has_variable = je_nda_ritual_oppose_started_cooldown
+			}			
 		}
 	}
 
@@ -98,6 +125,11 @@ je_nda_ritual_oppose_btn_start = {
 		add_modifier = {
 			name = nda_investigation_cost_modifier
 		}
+		custom_tooltip =  {
+			text = je_nda_ritual_btn_cooldown_effect_tt
+			set_variable = { name = je_nda_ritual_oppose_started_cooldown months = 1 } # cooldown to stop cheesing 
+		} 
+		
 	}
 }
 
@@ -109,10 +141,26 @@ je_nda_ritual_oppose_btn_halt = {
 		always = yes 
 	}
 
+	ai_chance = {
+		base = 10
+		modifier = {
+			trigger = { 
+				has_investigators = no
+			}
+			add = 40
+		}
+	}
+
 	possible = {
 		custom_tooltip = {
 			text = je_nda_ritual_oppose_btn_halt_possible_tt
 			has_variable = je_nda_ritual_opposition_started
+		}
+		NOT = {
+			custom_tooltip = {
+				text = je_nda_ritual_btn_cooldown_tt
+				has_variable = je_nda_ritual_oppose_started_cooldown
+			}			
 		}
 	}
 
@@ -123,6 +171,10 @@ je_nda_ritual_oppose_btn_halt = {
 			remove_variable = je_nda_ritual_opposition_started			
 		} 
 		remove_modifier = nda_investigation_cost_modifier
+		custom_tooltip =  {
+			text = je_nda_ritual_btn_cooldown_effect_tt
+			set_variable = { name = je_nda_ritual_oppose_started_cooldown months = 1 } # cooldown to stop cheesing 
+		} 
 	}
 }
 
@@ -174,6 +226,13 @@ je_nda_cult_spreads_btn_purge = {
 				}
 			}			
 		}
+
+		NOT = { 
+			custom_tooltip = {
+				text = je_nda_cult_spreads_btn_purge_cooldown_tt
+				has_variable = je_nda_cult_spreads_btn_purge_cooldown
+			}
+		}
 	}
 
 
@@ -193,6 +252,11 @@ je_nda_cult_spreads_btn_purge = {
 				}
 			}	
 		}
+		
+		custom_tooltip = { 
+			text = je_nda_cult_spreads_btn_purge_cooldown_effect_tt
+			set_variable = { name = je_nda_cult_spreads_btn_purge_cooldown months = 3 }
+		}		
 
  		custom_tooltip = je_nda_cult_spreads_btn_purge_tooltip       
 		# remove cultist from IG leadership

@@ -763,23 +763,23 @@ nda_astro.10 = {
 		has_variable = nda_cultists_in_open # Cult in country
 		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	} # They've gone so no Cult rational	
 
-		# 6 months before Conclaves
+		# 6 months before Conclaves - don't do within 3 as country switch can extend it beyond conj
 		or = {
 			and = {
 				game_date >= 1861.4.25		
-				game_date < 1862 # stop late forming countries getting event			
+				game_date < 1861.7.25	 # stop late forming countries getting event			
 			}
 			and = {
 				game_date >= 1880.10.22		
-				game_date < 1882 # stop late forming countries getting event		
+				game_date < 1881.1.22 # stop late forming countries getting event		
 			}
 			and = {
 				game_date >= 1901.5.28		
-				game_date < 1902 # stop late forming countries getting event
+				game_date < 1901.8.28 # stop late forming countries getting event
 			}
 			and = {
 				game_date >= 1921.3.14	
-				game_date < 1922 # stop late forming countries getting event	
+				game_date < 1921.6.14 # stop late forming countries getting event	
 			}			
 		}	
 	}

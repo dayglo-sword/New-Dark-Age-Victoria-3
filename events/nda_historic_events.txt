@@ -392,10 +392,10 @@ nda_historic.1854 = { # Eliphas Levi - Dogme et Rituel de la Haute Magie 'The Do
 		default_option = yes
 
 	}
-	option = { #"What harm can it do"
+	# option = { #"What harm can it do"
 
-		name = nda_historic.1854.b
-	}
+	# 	name = nda_historic.1854.b
+	# }
 }
 
 nda_historic.1857 = { # Banner of Light

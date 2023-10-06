@@ -1,4 +1,156 @@
-﻿je_nda_ritual_proceeds = {
+﻿
+je_nda_ritual_assist = { # other countries should be able to help - launched via decision
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	is_shown_when_inactive = {
+
+		has_cult_culture = yes
+		exists = c:ELD
+		NOT = { THIS = c:ELD }
+		NOT = { has_global_variable = nda_ritual_completed  }
+		has_global_variable = je_nda_ritual_proceeds_tracker # ritual has started
+	}
+
+	possible = {
+		has_cult_culture = yes
+
+		exists = c:ELD
+		NOT = { THIS ?= c:ELD }
+
+		has_global_variable = je_nda_ritual_proceeds_tracker
+
+		NOT = { has_global_variable = nda_ritual_completed  }
+	}
+
+	immediate = {
+
+		save_scope_as = nda_je_ritual_proceeds_scope
+		
+		debug_log = "Ritual Assist Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+
+		# # notification to players
+		# every_country = {
+		# 	post_notification = nda_ritual_assist_notice
+		# }
+
+		# have local variable to synch with global
+		if = {
+			limit = { NOT = { has_variable = je_nda_ritual_proceeds_tracker  } }
+
+			set_variable = {
+					name = je_nda_ritual_proceeds_tracker
+					value = 0
+			}		
+		}
+	}
+
+    complete = {
+		custom_tooltip = {
+			text = je_nda_ritual_proceeds_complete_tt
+			has_global_variable = nda_ritual_completed  
+		}
+    }
+
+	on_complete = {
+		debug_log =  "Ritual Assist Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"	
+		remove_variable = je_nda_ritual_assist_started	
+	}
+
+	scripted_button = je_nda_ritual_assist_btn_start
+	scripted_button = je_nda_ritual_assist_btn_halt
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_nda_ritual_assist_start_status
+				trigger = {
+					has_variable = je_nda_ritual_assist_started						
+				}
+			}
+			
+			triggered_desc = {
+				desc = je_nda_ritual_assist_halt_status
+				trigger = {
+					always = yes
+				}
+			}
+		}
+
+	}
+	on_monthly_pulse = {
+	
+		# need better count up
+		effect = {
+			IF = {
+				limit = { has_variable = je_nda_ritual_assist_started }
+
+				scope:nda_je_ritual_proceeds_scope = {
+					change_global_variable = {
+						name = je_nda_ritual_proceeds_tracker
+						add = 1
+					}					
+				}				
+			}
+			
+			set_variable = {
+				name = je_nda_ritual_proceeds_tracker
+				value = global_var:je_nda_ritual_proceeds_tracker
+			}
+		}		
+	}
+
+	current_value = {
+		value = var:je_nda_ritual_proceeds_tracker
+	}
+
+	goal_add_value = {
+		add = nda_ritual_goal_value # 20 years? depending on helpers
+	}
+
+    fail = {
+		# if ritual failed or star alignment occured
+		# if relations have deteriorated
+		OR = {
+			custom_tooltip = {
+				# If becomes ELD due to original ELD destruction stop assist
+				text = je_nda_ritual_assist_fail_is_eld_tt
+				ROOT = c:ELD		
+			}
+			custom_tooltip = {
+				text = je_nda_ritual_time_has_passed_tt
+				has_global_variable = nda_ritual_cthulhu_visits # Ritual is too late
+			}
+			#c:ELD = { relations:root <= relations_threshold:cold }
+		}
+    }
+	
+	on_fail = {
+		# celebratory event?
+		# notification to players
+		if = {
+			limit = { 
+				NOT = { has_global_variable = nda_ritual_cthulhu_visits }			
+			}
+			# # is withdrawl fron Ritual, not total fail of
+			# every_country = {
+			# 	post_notification = nda_ritual_halt_notice
+			# }	
+			remove_variable = je_nda_ritual_assist_started				
+		}
+	}
+
+	progressbar = yes
+
+	weight = 2000
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}
+
+
+je_nda_ritual_proceeds = {
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
@@ -52,7 +204,7 @@
 				}			
 			}	
 			
-			nda_effect_ritual_assist_counts = yes				
+			nda_effect_ritual_assist_counts = yes # initialises counts 				
 		}
 
 		save_scope_as = nda_je_ritual_proceeds_scope
@@ -118,118 +270,6 @@
 	# }
 
 	progress_desc = {  desc = je_nda_ritual_proceeds_counts }
-
-	weight = 200
-
-	#inheritable = yes
-
-	should_be_pinned_by_default = yes
-}
-
-je_nda_ritual_assist = { # other countries should be able to help - launched via decision
-
-	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-
-	immediate = {
-
-		save_scope_as = nda_je_ritual_proceeds_scope
-		
-		debug_log = "Ritual Assist Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
-
-		# notification to players
-		every_country = {
-			post_notification = nda_ritual_assist_notice
-		}
-
-		# have local variable to synch with global
-		if = {
-			limit = { NOT = { has_variable = je_nda_ritual_proceeds_tracker  } }
-
-			set_variable = {
-					name = je_nda_ritual_proceeds_tracker
-					value = 0
-			}		
-		}
-	}
-
-    complete = {
-		custom_tooltip = {
-			text = je_nda_ritual_proceeds_complete_tt
-			has_global_variable = nda_ritual_completed  
-		}
-    }
-
-	on_complete = {
-		debug_log =  "Ritual Assist Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"	
-		remove_variable = je_nda_ritual_assist_started	
-	}
-
-	scripted_button = je_nda_ritual_assist_btn_start
-	scripted_button = je_nda_ritual_assist_btn_halt
-
-	on_monthly_pulse = {
-	
-		# need better count up
-		effect = {
-			IF = {
-				limit = { has_variable = je_nda_ritual_assist_started }
-
-				scope:nda_je_ritual_proceeds_scope = {
-					change_global_variable = {
-						name = je_nda_ritual_proceeds_tracker
-						add = 1
-					}					
-				}				
-			}
-			
-			set_variable = {
-				name = je_nda_ritual_proceeds_tracker
-				value = global_var:je_nda_ritual_proceeds_tracker
-			}
-		}		
-	}
-
-	current_value = {
-		value = var:je_nda_ritual_proceeds_tracker
-	}
-
-	goal_add_value = {
-		add = nda_ritual_goal_value # 20 years? depending on helpers
-	}
-
-    fail = {
-		# if ritual failed or star alignment occured
-		# if relations have deteriorated
-		OR = {
-			custom_tooltip = {
-				# If becomes ELD due to original ELD destruction stop assist
-				text = je_nda_ritual_assist_fail_is_eld_tt
-				ROOT = c:ELD		
-			}
-			custom_tooltip = {
-				text = je_nda_ritual_time_has_passed_tt
-				has_global_variable = nda_ritual_cthulhu_visits # Ritual is too late
-			}
-			c:ELD = { relations:root <= relations_threshold:cold }
-		}
-    }
-	
-	on_fail = {
-		# celebratory event?
-		# notification to players
-		if = {
-			limit = { 
-				NOT = { has_global_variable = nda_ritual_cthulhu_visits }			
-			}
-			# is withdrawl fron Ritual, not total fail of
-			every_country = {
-				post_notification = nda_ritual_halt_notice
-			}	
-			remove_variable = je_nda_ritual_assist_started				
-		}
-	}
-
-	progressbar = yes
 
 	weight = 200
 

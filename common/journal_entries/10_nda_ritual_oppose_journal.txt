@@ -5,7 +5,7 @@
 	is_shown_when_inactive = {
 		OR = {
 			is_player = yes
-			#this ?= c:NEN
+			this ?= c:NEN
 		}
 		has_cult_culture = no
 		exists = c:ELD
@@ -21,7 +21,7 @@
 				exists = c:ELD
 
 				NOT = { has_global_variable = nda_ritual_completed  }
-				NOT = { has_global_variable = nda_ritual_cthulhu_visits  }
+				NOT = { has_global_variable = nda_ritual_cthulhu_visits  }				
 		}
 	}
 

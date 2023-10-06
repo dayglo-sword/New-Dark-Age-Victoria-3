@@ -263,7 +263,7 @@ nda_monthly_red_death_effect_on_action = {
 				}
 				# has run it's course - remove modifier
 				remove_modifier = nda_red_death_modifier
-				set_variable = nda_red_death_passes
+				#set_variable = nda_red_death_passes
 			}
 			else_if = {
 				limit = {

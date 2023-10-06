@@ -1,3 +1,26 @@
+Version v1.4.2
+
+Major Changes
+Add 'Occult Investigator' Trait and Character Interaction to set it.
+Adjust 'Cult Spread' count to be slowed by available Investigators
+Add 'Oppose the Ritual' Journal, to use investigators to slow Ritual progress.
+
+Minor Changes
+Characters exiled due to Cult takeover gain 'Occult Investigator' trait
+'Purge Cult' decision converted to Journal Button.
+New Flag variants for when the cult controls certain major countries. 
+'Lost Cities' now use high mortality Labourers
+Added 'Historic' event for Eliphas Levi
+Charles Dickens can become Investigator via 'Ghost Club'
+Custom Revolt names for Cult IG lead revolts
+Convert Character creation to Template based
+
+Bug Fixes
+Reinstate Cult IG traits lost in 1.4 conversion
+Add cooldown to Pit and Pendulum
+
+-----
+
 Version v1.4.0
 
 Major Changes

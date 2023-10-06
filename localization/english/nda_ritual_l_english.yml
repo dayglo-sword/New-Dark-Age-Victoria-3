@@ -90,10 +90,18 @@
  je_nda_ritual_assist_complete_tt:0 "The Cult has completed [concept_nda_ritual]. The return is now inevitable."
  je_nda_ritual_assist_complete:0 "The Cult has completed [concept_nda_ritual]. The return is now inevitable."
 
+ je_nda_ritual_assist_start_status:0 "Participating in Ritual"
+ je_nda_ritual_assist_halt_status:0 "Ignoring the Ritual"
+
  je_nda_ritual_assist_btn_start:0 "Assist Ritual"
  je_nda_ritual_assist_btn_start_desc:0 "Put our efforts into assisting the Ritual."
+ je_nda_ritual_assist_btn_start_possible_tt:0 "It is possible for us to assist in the Ritual"
+ je_nda_ritual_assist_btn_start_effect_tt:0 "Assist the Eldritch Cult in executing the Ritual"
+
  je_nda_ritual_assist_btn_halt:0 "Halt Cooperation"
  je_nda_ritual_assist_btn_halt_desc:0 "Halt our efforts in assisting the Ritual."
+ je_nda_ritual_assist_btn_halt_possible_tt:0 "We can stop assisting our opponents, the Eldritch Cult, in their Ritual."
+ je_nda_ritual_assist_btn_halt_effect_tt:0 "Stop assisting the Eldritch Cult in the Ritual"
 
  je_nda_ritual_oppose:0 "Oppose The Ritual"
  je_nda_ritual_oppose_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must use all our power to stop this!\n\nWe must investigate and attempt to undermine this fiendish plot."
@@ -116,6 +124,9 @@
  je_nda_ritual_oppose_btn_halt_desc:0 "Stop our efforts against the Ritual."
  je_nda_ritual_oppose_btn_halt_possible_tt:0 "We have already started."
  je_nda_ritual_oppose_btn_halt_effect_tt:0 "Halt our efforts into stopping the Ritual."
+
+ je_nda_ritual_btn_cooldown_tt:0 "Not on 1 Month Cooldown"
+ je_nda_ritual_btn_cooldown_effect_tt:0 "Set 1 Month Cooldown"
 
 # Notifications
  notification_nda_ritual_cthulhu_returns_tooltip:0 "#header $notification_nda_ritual_cthulhu_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_returns_desc$"

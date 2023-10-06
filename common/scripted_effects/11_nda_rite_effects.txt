@@ -192,7 +192,7 @@ nda_effect_ritual_assist_counts = {
 			limit = { 
 				OR = { 
 					has_journal_entry = je_nda_ritual_proceeds
-					has_journal_entry = je_nda_ritual_assist
+					has_variable = je_nda_ritual_assist_started
 				}
 			}
 			PREV = {

@@ -41,7 +41,7 @@ concept_nda_chaugnar_faugn_desc:0 "Twice exiled, first from their home planet an
 
 concept_nda_ritual:0 "The Ritual"
 concept_nda_ritual_short:0 "The Ritual"
-concept_nda_ritual_desc:0 "There are many spells, incantations, and rites for the worship of the [concept_nda_old_ones], but only one worthy of the title #BOLD The Ritual#!.\n\nIt is the rite to release [concept_nda_cthulhu] himself from his deathless slumber when the stars are right.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+concept_nda_ritual_desc:0 "There are many spells, incantations, and rites for the worship of the [concept_nda_old_ones], but only one worthy of the title #BOLD The Ritual#!.\n\nIt is the rite to release [concept_nda_cthulhu] himself from his deathless slumber when the 'Stars are Right'.\n\nOccult Astrologers believe there are two upcoming windows of opportunity; First in 1890, and then in 1925.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
 
 concept_nda_conclave:0 "Grand Conclave"
 concept_nda_conclave_short:0 "Conclave"

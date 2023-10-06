@@ -1477,6 +1477,8 @@ nda_base.26 = { # The Pit and the Pendulum!
 		}
 	}
 
+	cooldown = { months = 4 } # stop repeat while still open
+
 	immediate = {
 		random_interest_group = {
 			limit = { 				
