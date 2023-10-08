@@ -531,7 +531,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 			# Need to try and spread further so pass off to a non-cultist neighbour
 			random_country = {
 				limit = {
-					is_adjacent = ROOT
+					is_adjacent_to_country = ROOT
 					can_cult_infiltrate = yes
 				}
 				trigger_event = { id = nda_base.8 }	# spread the cult
@@ -783,7 +783,7 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 		# spread to non-cultist  Neighbour
 		random_country = {
 			limit = {
-				is_adjacent = ROOT
+				is_adjacent_to_country = ROOT
 				can_cult_infiltrate = yes
 			}
 			trigger_event = { id = nda_base.8 }	# spread the cult

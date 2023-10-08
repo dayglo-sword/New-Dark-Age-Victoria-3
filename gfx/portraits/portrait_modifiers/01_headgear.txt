@@ -136,9 +136,21 @@
         weight = {
             base = 0
             modifier = {
-                add = 100
+                add = 2000
                 japanese_clothes_trigger = yes
-                agitator_character_trigger = yes
+                OR = {
+                    agitator_character_trigger = yes
+                    AND = {
+                        politician_clothes_trigger = yes
+                        armed_forces_clothes_trigger = yes
+                        scope:character ?= {
+                            owner = {
+                                has_variable = meiji_restoration_complete
+                            }
+                            has_ideology = ideology:ideology_traditionalist
+                        }
+                    }
+                }
             }
         }
     }
@@ -606,24 +618,94 @@
                 mode = add
                 gene = headgear
                 template = french_military_headgear
-                range = { 0 1 } # For the randomness to work correctly
+                range = { 0 1 }
             }
         }
         weight = {
             base = 0
             modifier = {
                 add = 100
-                french_empire_clothes_trigger = yes
                 OR = {
-                    scope:character = {
-                        has_role = general
+                    AND = {
+                        french_empire_clothes_trigger = yes
+                        OR = {
+                            scope:character = {
+                                has_role = general
+                            }
+                            AND = {
+                                politician_clothes_trigger = yes
+                                armed_forces_clothes_trigger = yes
+                            }
+                        }
+                        agitator_character_trigger = no
                     }
                     AND = {
-                        politician_clothes_trigger = yes
-                        armed_forces_clothes_trigger = yes
+                        scope:pop ?= {
+                            culture = {
+                                has_discrimination_trait = european_heritage
+                            }
+                            owner = {
+                                c:FRA ?= this
+                            }
+                        }
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
                     }
                 }
-                agitator_character_trigger = no
+            }
+        }
+    }
+
+    japanese_meiji_military_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = european_military_02_colors
+                range = { 0 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1200
+                OR = {
+                    AND = {
+                        scope:character ?= {
+                            culture = cu:japanese
+                            owner = {
+                                has_variable = meiji_restoration_complete
+                            }
+                        }
+                        OR = {
+                            scope:character = {
+                                has_role = general
+                            }
+                            AND = {
+                                politician_clothes_trigger = yes
+                                armed_forces_clothes_trigger = yes
+                                scope:character ?= {
+                                    NOT = { has_ideology = ideology:ideology_traditionalist }
+                                }
+                            }
+                        }
+                        agitator_character_trigger = no
+                    }
+                    AND = {
+                        scope:pop ?= {
+                            culture = cu:japanese
+                            owner = {
+                                has_variable = meiji_restoration_complete
+                            }
+                        }
+                        OR = {
+                            soldier_clothes_pop_trigger = yes
+                            officers_clothes_pop_trigger = yes
+                        }
+                    }
+                }
             }
         }
     }
@@ -994,7 +1076,19 @@
             modifier = {
                 add = 100
                 japanese_clothes_pop_trigger = yes
-                poor_clothes_pop_trigger = yes   
+                scope:pop ?= {
+                    OR = {
+                        is_pop_type = farmers
+                        is_pop_type = peasants
+                        is_pop_type = laborers
+                        AND = {
+                            is_pop_type = machinists
+                            owner = {
+                                NOT = { has_variable = meiji_restoration_complete }
+                            }
+                        }
+                    }
+                }   
             }
         }
     }
