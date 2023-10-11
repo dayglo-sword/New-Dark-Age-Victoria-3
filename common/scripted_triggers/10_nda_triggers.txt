@@ -141,11 +141,14 @@ is_potentially_dagonic = {
 
 
 has_lost_city = { # state level
-	OR = {
-		has_building = building_nda_lostcity_knyan
-		has_building = building_nda_lostcity_yhanthlei
-		has_building = building_nda_lostcity_shamballa
-		has_building = building_nda_lostcity_nameless_city
+	custom_tooltip = {
+		text = nda_has_lost_city_tt	
+		OR = {
+			has_building = building_nda_lostcity_knyan
+			has_building = building_nda_lostcity_yhanthlei
+			has_building = building_nda_lostcity_shamballa
+			has_building = building_nda_lostcity_nameless_city
+		}
 	}
 }
 

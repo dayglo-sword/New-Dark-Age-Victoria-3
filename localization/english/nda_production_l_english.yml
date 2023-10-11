@@ -33,3 +33,6 @@ modifier_goods_output_vril_add_desc:0 "Vril Energy Rod output"
 
 modifier_goods_input_vril_add:0 ""
 modifier_goods_input_vril_add_desc:0 ""
+
+# company names
+company_nda_bovril:0 "Bovine Vril Company"
