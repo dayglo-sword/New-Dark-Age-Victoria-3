@@ -40,3 +40,8 @@
  je_nda_devout_inquisition_fail_tt:0 "If the Cultists gain control of the government."
  je_nda_devout_inquisition_closed_tt:0 "The Church closes the Inquisition"
  je_nda_devout_inquisition_cancel_tt:0 "The Government cancels the Inquisition"
+
+# Lost Cities
+ je_nda_knyan_search:0 "Search for K'N-Yan"
+ je_nda_knyan_search_reason:0 "It is rumoured that there is a great lost realm below the earth with its entrance hidden."
+ je_nda_knyan_search_goal:0 "Find clues to the location of K'N-Yan"

@@ -251,7 +251,7 @@ nda_nen.1918 = { #
 		
 		# enable decision 'tonic for the troops'
 		set_global_variable = herbert_west_successful	
-
+		set_variable = nda_tonic_for_the_troops
 
 		debug_log = "Herbert West Successful"
 	}

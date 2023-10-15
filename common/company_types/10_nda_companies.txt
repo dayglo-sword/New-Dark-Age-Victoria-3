@@ -24,9 +24,9 @@ company_nda_bovril = {
 					level > 10
 				}
 			}
-			any_scope_state = {
+			#any_scope_state = { # will work at country level?
 				has_lost_city = yes
-			}			
+			#}			
 		}
 
 	}

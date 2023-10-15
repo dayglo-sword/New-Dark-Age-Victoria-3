@@ -139,7 +139,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 			create_building={
 				building="building_port"
@@ -192,7 +192,7 @@
 				building="building_livestock_ranch"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_privately_owned" "pm_intensive_grazing_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_slaughterhouses" }
+				activate_production_methods={ "pm_privately_owned" "pm_sheep_farms" "pm_standard_fences" "pm_unrefrigerated" "pm_slaughterhouses" }
 			}
 			create_building={
 				building="building_tobacco_plantation"
@@ -210,7 +210,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 			create_building={
 				building="building_shipyards"
@@ -336,7 +336,7 @@
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_intensive_grazing_ranch" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+				activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 		}
 	}
@@ -364,7 +364,7 @@
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_intensive_grazing_ranch" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+				activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 		}
 	}
@@ -486,13 +486,13 @@
 				building="building_livestock_ranch"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_intensive_grazing_ranch" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+				activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 			create_building={
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 		}
 	}
@@ -544,13 +544,13 @@
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_intensive_grazing_ranch" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+				activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 			create_building={
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}			
 		}
 	}
@@ -578,7 +578,7 @@
 				building="building_livestock_ranch"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_intensive_grazing_ranch" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+				activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 			create_building={
 				building="building_tobacco_plantation"
@@ -596,7 +596,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}			
 		}
 	}
@@ -664,7 +664,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 			create_building={
 				building="building_port"
@@ -696,7 +696,7 @@
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_intensive_grazing_ranch" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+				activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 			create_building={
 				building="building_sugar_plantation"
@@ -720,7 +720,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 			create_building={
 				building="building_port"
@@ -804,7 +804,7 @@
 				building="building_livestock_ranch"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_intensive_grazing_ranch" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+				activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 		}
 	}
@@ -886,7 +886,7 @@
 				building="building_livestock_ranch"
 				level=3
 				reserves=1
-				activate_production_methods={ "pm_intensive_grazing_ranch" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
+				activate_production_methods={ "pm_sheep_farms" "pm_slaughterhouses" "pm_standard_fences" "pm_unrefrigerated" "pm_privately_owned" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -898,7 +898,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 		}
 	}
@@ -1062,7 +1062,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 			create_building={
 				building="building_naval_base"
@@ -1105,10 +1105,10 @@
 				activate_production_methods={ "pm_privately_owned" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" "pm_open_air_stockyards" }
 			}			
 			create_building={
-					building="building_paper_mills"
-					level=1
-					reserves=1
-					activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled" "pm_privately_owned_building_paper_mills" }
+				building="building_paper_mills"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_sulfite_pulping" "pm_automation_disabled" "pm_privately_owned_building_paper_mills" }
 			}
 			create_building={
 				building="building_fishing_wharf"
@@ -1170,7 +1170,7 @@
 				building="building_shipyards"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" "pm_no_military_shipbuilding" }
+				activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" }
 			}
 			create_building={
 				building="building_fishing_wharf"
@@ -1228,7 +1228,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 			create_building={
 				building="building_port"
@@ -1267,6 +1267,12 @@
 				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
 			}	
 			create_building={
+				building="building_dye_plantation"
+				level=2
+				reserves=1
+				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" "pm_privately_owned_plantation" }
+			}	
+			create_building={
 				building="building_maize_farm"
 				level=5
 				reserves=1
@@ -1276,7 +1282,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_skirmish_infantry" }
+				activate_production_methods={ "pm_advanced_tactics_training" }
 			}
 			create_building={
 				building="building_port"
@@ -1391,7 +1397,7 @@
 				building="building_barracks"
 				level=5
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 		}
 	}
@@ -1413,7 +1419,7 @@
 				building="building_barracks"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 			create_building={
 				building="building_port"
@@ -1433,7 +1439,7 @@
 				building="building_barracks"
 				level=3
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 			create_building={
 				building="building_port"
@@ -1485,7 +1491,7 @@
 				building="building_barracks"
 				level=5
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 			create_building={
 				building="building_port"
@@ -1537,7 +1543,7 @@
 				building="building_barracks"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}				
 		}
 	}
@@ -1553,7 +1559,7 @@
 				building="building_barracks"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -1611,13 +1617,13 @@
 				building="building_barracks"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}	
 			create_building={
 				building="building_conscription_center"
 				level=5
 				reserves=1
-				activate_production_methods={  "pm_line_infantry_conscription" }
+				activate_production_methods={  "pm_general_training_conscription" }
 			}				
 		}
 		region_state:MEX={
@@ -1723,7 +1729,7 @@
 				building="building_barracks"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 			create_building={
 				building= "building_chichen_itza"
@@ -1796,7 +1802,7 @@
 				building="building_barracks"
 				level=3
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 		}
 	}
@@ -1836,7 +1842,7 @@
 				building="building_barracks"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}	
 		}
 	}
@@ -1876,7 +1882,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 		}
 	}
@@ -1910,7 +1916,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 		}
 	}
@@ -1978,7 +1984,7 @@
 				building="building_barracks"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_line_infantry" }
+				activate_production_methods={ "pm_general_training" }
 			}
 		}
 	}

@@ -1,0 +1,62 @@
+﻿###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Infantry
+
+combat_unit_type_cultist_infantry = {
+	group = combat_unit_group_infantry
+
+	battle_modifier = {
+        unit_offense_add = 15
+        unit_defense_add = 10
+		unit_morale_loss_add = 5
+	}
+
+    upkeep_modifier = {
+    	goods_input_small_arms_add = 0.1
+    }
+
+    # scope = country
+    can_build = {
+        is_full_cult_country = yes
+    }
+
+    can_build_conscript = {
+        always = yes
+    }    
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/nda_infantry_cultist.dds"
+    }
+}
+
+
+combat_unit_type_leviathan = {
+    group = combat_unit_group_capital_ship
+
+    upkeep_modifier = {
+        goods_input_fish_add = 30
+    }
+
+    battle_modifier = {
+        unit_offense_add = 200
+        unit_defense_add = 200
+		unit_morale_loss_add = 4
+    }
+
+    can_build = {
+       c:DGN ?= THIS
+        #has_technology_researched = battleship_tech
+    }
+
+    # Fallback if nothing else matches
+    combat_unit_image = {
+        trigger = { always = yes }
+        texture = "gfx/unit_illustrations/nda_leviathan.dds"
+    }
+}

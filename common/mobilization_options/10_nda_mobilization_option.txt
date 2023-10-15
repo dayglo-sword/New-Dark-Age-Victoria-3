@@ -1,0 +1,109 @@
+﻿mobilization_option_nda_black_lotus = {
+	texture = "gfx/interface/icons/production_method_icons/unused/apothecaries.dds"
+
+	is_shown = {		
+		is_cultist_country = yes # cultist only		
+	}
+
+	possible = {
+		# has access to source of Black Lotus - don't just allow market purchase
+		has_lost_city = yes
+	}	
+
+	upkeep_modifier = {
+		goods_input_black_lotus_add = 0.5
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.2
+
+	}
+	ai_value = 5 # have high as restricted
+
+	group = supplements
+
+}
+
+mobilization_option_nda_black_smoke = {
+	texture = "gfx/interface/icons/production_method_icons/unused/chemical_artillery.dds"
+
+	is_shown = {		
+		is_cultist_country = yes # cultist only		
+	}
+
+	possible = {
+		# has access to source of Black Lotus - don't just allow market purchase
+		has_lost_city = yes
+	}	
+
+	unlocking_technologies = {
+		chemical_warfare
+	}
+	upkeep_modifier = {
+		goods_input_fertilizer_add = 2
+		goods_input_black_lotus_add = 0.5
+	}
+	unit_modifier = {
+		unit_offense_add = 30
+		unit_kill_rate_add = 0.8
+		unit_recovery_rate_add = -0.2
+		unit_morale_damage_mult = 0.1
+	}
+	ai_value = 1
+
+    group = special_weapons
+}
+
+mobilization_option_nda_death_ray = {
+	texture = "gfx/interface/icons/production_method_icons/unused/vacuum_tubes.dds"
+
+	is_shown = {		
+		is_cultist_country = yes # cultist only		
+	}
+
+	possible = {
+		# has access to source of Black Lotus - don't just allow market purchase
+		has_lost_city = yes
+	}	
+
+	unlocking_technologies = {
+		flamethrowers
+	}
+	upkeep_modifier = {
+		goods_input_vril_add = 1
+	}
+	unit_modifier = {
+		unit_offense_add = 50
+		unit_devastation_mult = 0.8
+		unit_morale_damage_mult = 0.2
+	}
+	ai_value = 1
+
+    group = special_weapons
+}
+
+mobilization_option_nda_west_tonic = {
+	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
+	unlocking_technologies = {
+		modern_nursing
+		# already requires chemical warefare for Dr West to finish research - no need to include here
+	}
+	is_shown = {	
+		has_global_variable = herbert_west_successful	
+		has_variable = nda_tonic_for_the_troops		
+	}
+	possible = {
+		has_global_variable = herbert_west_successful	
+		has_variable = nda_tonic_for_the_troops
+	}
+	upkeep_modifier = {
+		goods_input_opium_add = 2
+		goods_input_tools_add = 1
+	}
+	unit_modifier = {
+		unit_recovery_rate_add = 0.5
+		unit_morale_loss_mult = -0.5		
+	}
+	ai_value = 1
+
+    group = medic_support
+}

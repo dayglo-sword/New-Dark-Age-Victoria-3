@@ -140,7 +140,7 @@ is_potentially_dagonic = {
 }
 
 
-has_lost_city = { # state level
+has_lost_city = { # state level - works for country as well?
 	custom_tooltip = {
 		text = nda_has_lost_city_tt	
 		OR = {

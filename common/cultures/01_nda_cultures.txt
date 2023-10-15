@@ -81,7 +81,7 @@ nda_cul_yigian={
 		1 = native_american
 		1 = yigian_hybrid
 	}
-	graphics = generic
+	graphics = decentralised_americas
 }
 
 nda_cul_dagonic={

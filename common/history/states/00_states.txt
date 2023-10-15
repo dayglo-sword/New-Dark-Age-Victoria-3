@@ -2651,14 +2651,12 @@ STATES = {
 	s:STATE_CONSTANTINE = {
 		create_state = {
 			country = c:CON
-			owned_provinces = { "x01D0A0" "x01EE15" "x137E91" "x1AF7B7" "x265E07" "x3AD789" "x3EE58D" "x79D029" "x7C6240" "x8050A0" "x991E79" "xA12B39" "xA31194" "xA39A15" "xB5486B" "xC3090D" "xC65997" "xD99A74" "xDC0687" "xDF1F38" "xFCF985" "x0C42E2" "xB04F35" "x8FFB18" 
-			#Bougie - Should belong to France, but due to naval invasion wackiness will have to stay with Constantine for now.
-			"x8090DF"
+			owned_provinces = { "x01D0A0" "x01EE15" "x137E91" "x1AF7B7" "x265E07" "x3AD789" "x3EE58D" "x79D029" "x7C6240" "x8050A0" "x991E79" "xA12B39" "xA31194" "xA39A15" "xB5486B" "xC3090D" "xC65997" "xD99A74" "xDC0687" "xDF1F38" "xFCF985" "x0C42E2" "xB04F35" "x8FFB18"
 			}
 		}
 		create_state = {
 			country = c:FRA
-			owned_provinces = { "x0050A0" }
+			owned_provinces = { "x0050A0" "x8090DF" }
 			state_type = unincorporated
 		}
 		create_state = {
@@ -5290,6 +5288,7 @@ STATES = {
 		
 		add_homeland = persian
 		add_homeland = baluchi
+		add_homeland = bedouin
 	}	
 	s:STATE_SISTAN = {
 		create_state = {
@@ -5308,6 +5307,7 @@ STATES = {
 		
 		add_homeland = persian
 		add_homeland = turkmen
+		add_homeland = kurdish
 	}
 	s:STATE_KHUZESTAN = {
 		create_state = {
@@ -5341,6 +5341,7 @@ STATES = {
 		}
 		
 		add_homeland = persian
+		add_homeland = turkmen
 	}
 	s:STATE_IRAKAJEMI = {
 		create_state = {
@@ -5560,6 +5561,7 @@ STATES = {
 		add_homeland = pashtun
 		add_homeland = tajik
 		add_homeland = hazara
+		add_homeland = persian
 	}
 	s:STATE_DIYARBAKIR = {
 		create_state = {

@@ -20,8 +20,8 @@ trade_route_export_lens_option_black_lotus_tooltip:0 "Establish a Black Lotus Po
 
 modifier_goods_output_black_lotus_add:0 "Black Lotus Powder output"
 modifier_goods_output_black_lotus_add_desc:0 "Black Lotus Powder production output"
-modifier_goods_input_black_lotus_add:0 ""
-modifier_goods_input_black_lotus_add_desc:0 ""
+modifier_goods_input_black_lotus_add:0 "Black Lotus Powder input"
+modifier_goods_input_black_lotus_add_desc:0 "The amount of Black Lotus Powder consumed"
 
 vril:0 "Vril Energy Rods"
 
@@ -31,8 +31,14 @@ trade_route_export_lens_option_vril_tooltip:0 "Establish a Vril Energy Rod expor
 modifier_goods_output_vril_add:0 "Vril Rod output"
 modifier_goods_output_vril_add_desc:0 "Vril Energy Rod output"
 
-modifier_goods_input_vril_add:0 ""
-modifier_goods_input_vril_add_desc:0 ""
+modifier_goods_input_vril_add:0 "Vril Energy input"
+modifier_goods_input_vril_add_desc:0 "The amount of Vril Energy Rods consumed"
 
 # company names
 company_nda_bovril:0 "Bovine Vril Company"
+
+#combat unit type
+combat_unit_type_leviathan:0 "Leviathan"
+combat_unit_type_leviathan_desc:0 "Summoned from the unfathomable depths, the Leviathan rises."
+combat_unit_type_cultist_infantry:0 "Horde"
+combat_unit_type_cultist_infantry_desc:0 "A host of Cultists."

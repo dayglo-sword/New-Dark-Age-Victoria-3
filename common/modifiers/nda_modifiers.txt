@@ -74,10 +74,11 @@ nda_ig_cult_crisis_modifier = {
 	interest_group_pol_str_mult = -0.50
 }
 
-nda_tonic_for_troops_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	unit_recovery_rate_add = 0.2
-}
+# now redundant with mobilzation option
+# nda_tonic_for_troops_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+# 	unit_recovery_rate_add = 0.2
+# }
 
 nda_dagonic_state_ruin_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds

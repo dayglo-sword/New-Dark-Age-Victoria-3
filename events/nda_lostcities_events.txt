@@ -32,7 +32,11 @@ nda_lostcities.10 = {  # K'N-Yan revealed ? Do trigger but should be decision fo
 			AND = {
 				exists = c:YIG
 				c:YIG = THIS			
-			}							
+			}	
+			AND = {
+				is_cultist_country = yes
+				has_variable = nda_lostcity_knyan_search_finishing
+			}						
 		}
 
 		p:xA07F85 = {
