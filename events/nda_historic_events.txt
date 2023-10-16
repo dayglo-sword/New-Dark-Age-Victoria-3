@@ -237,19 +237,16 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 			base = 80 #20		
 		}
 		debug_log = "Death of Poe - choose disease" 
-			p:x0E3435 = { 
-				state = { 
-						debug_log = "Death of Poe - call disease event" 
-						#set_variable = temp_red_death
-						# this does not work to trigger state event - convert to country event and call from owner
-						owner = {
-							trigger_event = { id = nda_eap.10 days = 7 }								
-						}
-				} 
-			}		
-		hidden_effect = {
-
-		}
+		p:x0E3435 = { 
+			state = { 
+					debug_log = "Death of Poe - call disease event" 
+					#set_variable = temp_red_death
+					# this does not work to trigger state event - convert to country event and call from owner
+					owner = {
+						trigger_event = { id = nda_eap.10 days = 7 }								
+					}
+			} 
+		}		
 	}	
 }
 
@@ -441,63 +438,224 @@ nda_historic.1857 = { # Banner of Light
 		default_option = yes
 
 		debug_log = "Banner of Light : [THIS.GetCountry.GetNameNoFormatting]" 
-		p:x211ECF = {
-			state = {
-				if = {
-					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-					debug_log = "Banner of Light - add pop" 
-					set_variable = { # ongoing conversion
-						name = nda_rel_boost_spiritualism						
-						months = 12
-						value = nda_small_conversion
-					}
-
-					every_neighbouring_state = {
-						set_variable = { # # ongoing conversion of neighbours
-							name = nda_rel_boost_spiritualism							
+		IF = { # only owner should not trigger this
+			limit = {
+				p:x211ECF = { state = { owner = ROOT } }
+			}
+			p:x211ECF = {
+				state = {
+					if = {
+						limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+						debug_log = "Banner of Light - add pop" 
+						set_variable = { # ongoing conversion
+							name = nda_rel_boost_spiritualism						
 							months = 12
-							value = nda_trivial_conversion
-						}					
-					}				
-				
-				}
+							value = nda_small_conversion
+						}
 
-			} 				
+						every_neighbouring_state = {
+							set_variable = { # # ongoing conversion of neighbours
+								name = nda_rel_boost_spiritualism							
+								months = 12
+								value = nda_trivial_conversion
+							}					
+						}									
+					}
+				} 				
+			}
 		}
 	}
 
 	option = { 
 		name = nda_historic.1857.b
-		p:x211ECF = {
-			state = {
+		IF = { # only owner should not trigger this
+			limit = {
+				p:x211ECF = { state = { owner = ROOT } }
+			}
+			p:x211ECF = {
+				state = {
+					if = {
+						limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+						debug_log = "Banner of Light - add pop" 
+						set_variable = { # ongoing conversion
+							name = nda_rel_boost_spiritualism						
+							months = 12
+							value = nda_small_conversion
+						}		
+					
+					}
+					save_scope_as = nda_publish_state_scope
+				} 							
+			}
+			# country wide
+			every_scope_state = {
+				limit = { NOT = { THIS = scope:nda_publish_state_scope } }
 				if = {
 					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-					debug_log = "Banner of Light - add pop" 
 					set_variable = { # ongoing conversion
 						name = nda_rel_boost_spiritualism						
 						months = 12
-						value = nda_small_conversion
+						value = nda_trivial_conversion
+					}		
+				
+				}
+			}		
+		}
+	}
+}
+
+nda_historic.1858 = { # Le Livre des Esprits
+	type = country_event
+	placement = p:xB04060 # Lyon - Kardecs home town
+	title = nda_historic.1858.t
+	desc = nda_historic.1858.d
+	flavor =  nda_historic.1858.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+ 		# 1857 1st published Lyon? 
+		game_date >= 1857.8 
+		game_date < 1858
+
+		# owner of Lyon. or NEN
+		OR = {
+			p:xB04060 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}	
+	}
+
+	cooldown = { months = 24 }	
+	
+	immediate = {
+	}
+
+	option = { 
+		name = nda_historic.1858.a
+		default_option = yes
+
+		debug_log = "Le Livre des Esprits : [THIS.GetCountry.GetNameNoFormatting]" 
+
+		IF = { # only owner should not trigger this
+			limit = {
+				p:xB04060 = { state = { owner = ROOT } }
+			}
+			p:xB04060 = {
+				state = {
+					if = {
+						limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+						debug_log = "Le Livre des Esprits - add pop" 
+						set_variable = { # ongoing conversion
+							name = nda_rel_boost_spiritualism						
+							months = 12
+							value = nda_small_conversion
+						}
+
+						every_neighbouring_state = {
+							set_variable = { # # ongoing conversion of neighbours
+								name = nda_rel_boost_spiritualism							
+								months = 12
+								value = nda_trivial_conversion
+							}					
+						}				
+					
+					}
+
+				} 				
+			}			
+		}
+
+	}
+
+	option = { 
+		name = nda_historic.1858.b
+		IF = { # only owner should not trigger this
+			limit = {
+				p:xB04060 = { state = { owner = ROOT } }
+			}
+			p:xB04060 = {
+				state = {
+					if = {
+						limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+						debug_log = "Le Livre des Esprits - add pop" 
+						set_variable = { # ongoing conversion
+							name = nda_rel_boost_spiritualism						
+							months = 12
+							value = nda_small_conversion
+						}		
+					
+					}
+					save_scope_as = nda_publish_state_scope
+				} 							
+			}
+			# country wide
+			every_scope_state = {
+				limit = { NOT = { THIS = scope:nda_publish_state_scope } }
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritualism						
+						months = 12
+						value = nda_trivial_conversion
+					}		
+				
+				}
+			}		
+		}
+	}
+
+	# suppress if not freedom of religion?
+	option = {
+		name = nda_historic.1858.c
+
+		trigger = { 
+			p:xB04060 = { state = { owner = ROOT } }
+			NOT = { 
+				OR = {
+					has_law = law_type:law_protected_speech 
+					has_law = law_type:law_total_separation 				
+				}
+			 } 
+		}
+
+		# limit to Lyon - trivial amount only
+		p:xB04060 = {
+			state = {
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+					debug_log = "Le Livre des Esprits - add pop" 
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritualism						
+						months = 12
+						value = nda_trivial_conversion
 					}		
 				
 				}
 				save_scope_as = nda_publish_state_scope
 			} 							
-		}
-		every_scope_state = {
-			limit = { NOT = { THIS = scope:nda_publish_state_scope } }
-			if = {
-				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-				set_variable = { # ongoing conversion
-					name = nda_rel_boost_spiritualism						
-					months = 12
-					value = nda_trivial_conversion
-				}		
-			
-			}
+		}	
+		
+		# boost devout
+		ig:ig_devout = {
+			add_modifier = {
+	            name = stopped_obscene_publication
+	            months = 36
+	        }
 		}
 	}
 }
-
 
 nda_historic.1862 = { # The Ghost Club
 	type = country_event

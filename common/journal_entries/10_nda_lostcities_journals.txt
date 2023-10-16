@@ -55,13 +55,15 @@
 	on_weekly_pulse = {		
 	}
 
-	on_monthly_pulse = {	
-		scope:nda_je_knyan_search_scope = {
-			change_variable = {
-				name = nda_knyan_search_count
-				add = 1
-			}			
-		}	
+	on_monthly_pulse = {
+		effect = {	
+			scope:nda_je_knyan_search_scope = {
+				change_variable = {
+					name = nda_knyan_search_count
+					add = 1
+				}			
+			}
+		}
 	}
 
 	current_value = {

@@ -22,7 +22,11 @@ combat_unit_type_cultist_infantry = {
 
     # scope = country
     can_build = {
-        is_full_cult_country = yes
+        OR = {
+            c:ELD ?= THIS
+            c:DGN ?= THIS
+            c:YIG ?= THIS
+        }
     }
 
     can_build_conscript = {

@@ -79,6 +79,7 @@ nda_monthly_on_action = {
 		nda_historic.1852
 		nda_historic.1854
 		nda_historic.1857 
+		nda_historic.1858
 		nda_historic.1862
 		nda_historic.1865
 		nda_historic.1871
@@ -106,6 +107,9 @@ nda_monthly_on_action = {
 		nda_eap.11 # The Red Death Spreads
 		nda_eap.13 # The Masque of the Red Death
 		nda_eap.14 # Red Death Redemption
+
+		nda_acd.1884
+		nda_acd.1904
 
 	}
 	random_events = {
@@ -314,6 +318,12 @@ nda_half_yearly_on_action = {
 
 # assign Cultist properties to all members of that culture
 on_character_creation = {
+	on_actions = {
+		nda_on_character_creation_on_action	
+	}
+}
+
+nda_on_character_creation_on_action = {
 	effect = {
 		# do not duplicate cult trait from char definition, also do not change ideology as presume deliberately not set
 		if = {
@@ -353,6 +363,12 @@ on_character_creation = {
 
 # check that characters such as those in exile have appropriate ideology - does it work on agitators and generals?? renders conversion events obsolete?
 on_half_yearly_pulse_character = {
+	on_actions = {
+		nda_on_half_yearly_pulse_character_on_action	
+	}
+}
+
+nda_on_half_yearly_pulse_character_on_action = {
 	effect = {
 		if = {
 			limit = {

@@ -18,7 +18,8 @@ Timeline of events in mod
 
 1852.1      nda_historic.1852   An American Medium in London
 1854.3		nda_historic.1854	Eliphas Levi - Dogme et Rituel de la Haute Magie
-1857.1							Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritulism
+1857.4		nda_historic.1857	Spiritulism - The Banner of Light
+1857.8		nda_historic.1858	Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritulism
 1858.7      nda_astro.1858      Great Comet 1
 1861.10     nda_astro.1861      Conjunction 2
 1862.1      nda_historic.1862   London - The Ghost Club
@@ -29,7 +30,7 @@ Timeline of events in mod
 1881.4      nda_astro.1881      Conjunction 3
 1882.1      nda_historic.1882   London - The Society for Psychical Research
 1882.6      nda_nen.1882        The Colour Out Of Space
-1884.5      TODO                Lot No. 249 - Mummy in Oxford
+1884.5      nda_acd.1884        Lot No. 249 - Mummy in Oxford
 1888.4      nda_historic.1888   Fox's come clean - Spiritualist Movement
 1888.8      nda_historic.1887   Theosophical Society - The Secret Doctrine
 1888.10     nda_historic.1889   The Golden Dawn
@@ -48,6 +49,7 @@ Timeline of events in mod
 1904        nda_whh.11          Carnacki the Ghost Finder
 1906        nda_whh.12          Carnacki Asylum Request
 1907        nda_ritual.1907     The Tale of Inspector Legrasse
+1908.11		nda_acd.1907		Challenger Expedition returns
 1910.1      TODO                Under the Pyramids
 1910.1      nda_astro.1910      Great Comet 2
 1910.8      nda_ritual.4        Cthulhu Leaves Early

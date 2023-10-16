@@ -65,7 +65,8 @@ pm_nda_esoteric_lost_city = { #
 	country_modifiers = {
 		workforce_scaled = {
 			#country_legitimacy_headofstate_add = 20
-			#interest_group_ig_nda_cult_worshippers_pol_str_mult = 0.25 # this does not work - shows politically unaligned
+			interest_group_ig_landowners_pol_str_mult = 0.05 
+			interest_group_ig_nda_cult_worshippers_pol_str_mult = 0.05 # this does not work - shows politically unaligned
 			country_authority_add = 25
 			country_prestige_add = 25
 		}

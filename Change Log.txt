@@ -1,3 +1,20 @@
+Version v1.5.3
+
+Major Changes
+New Horde Unit for Cultist Countries
+New Naval Unit for Dagonic Shores
+Mobilization Options based on Esoteric Goods
+
+Minor Changes
+Add 'Lot. No. 249' (A C Doyle) potential Cultist Agitator - Bellingham
+Add 'Professor Challenger'
+Convert Herbert West Tonic to Mobilization Option from Country Modifier
+
+Bug Fixes
+Restrict efects of Historic Events to source country
+
+-----
+
 Version v1.4.2
 
 Major Changes

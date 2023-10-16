@@ -42,6 +42,14 @@ nda_historic.1857.f:1 "'Modern spiritualism, so called, discloses all these erro
 nda_historic.1857.a:0 "An Interesting Read?"
 nda_historic.1857.b:0 "Distribute across the nation!"
 
+# april 1857 - Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritulism
+nda_historic.1858.t:0 "Le Livre des Esprits"
+nda_historic.1858.d:1 "The French author Allen Kardec has relised a book called 'Le Livre des Esprits' - (The Spirits' Book) where they are aspousing what seems to be a more Christian version of Spiritualism.\n\nIt appears to be an attempt to frame the Spiritualist belief, along with other beliefs such as reincarnation, into a Christian framework."
+nda_historic.1858.f:1 "'Strictly speaking, spiritualism is the opposite of materialism and everyone who believes there is something within them that is more than matter are spiritualists; however, it does not necessarily follow that they must therefore believe in the existence of spirits or in communications with the invisible world. Therefore, instead of the words spiritual and spiritualism for designating this latter belief, we have coined and employed the words Spiritist and Spiritism' - Allen Kardec"
+nda_historic.1858.a:0 "Christan Ghosts?"
+nda_historic.1858.b:0 "Distribute across the nation!"
+nda_historic.1858.c:0 "Stop this heresy!"
+
 nda_historic.1862.t:0 "The Ghost Club"
 nda_historic.1862.d:1 "A Club has been launched in London to investigate ghosts and other psychic phemomena. It appears their intent is to expose fraudulent claims.\n\nIt is said that [SCOPE.sCharacter('dickens_scope').GetFullName] himself is a founding member!\n\nHe knows a thing or two about phantoms and ghosts!"
 nda_historic.1862.f:1 "'I have not yet met with any Ghost Story that was proved to me, or that had not the noticeable peculiarity in it—that the alteration of some slight circumstance would bring it within the range of common natural probabilities.' - Charles Dickens"

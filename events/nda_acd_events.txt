@@ -1,0 +1,213 @@
+﻿namespace = nda_acd #  Arthur Conan Doyle
+
+nda_acd.1884 = { # Lot No. 249 - Mummy in Oxford
+	type = country_event
+	placement = p:x60E0C0
+	title = nda_acd.1884.t
+	desc = nda_acd.1884.d
+	flavor =  nda_acd.1884.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = { 
+		
+		# 1860 
+	   game_date >= 1884.4.1 
+	   game_date < 1885 
+
+		# owner of Oxford. or NEN
+		OR = {
+			p:x60E0C0 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}			
+   }
+
+	cooldown = { months = 24 }
+
+	immediate = {
+		debug_log = "Lot No. 249"
+
+		IF = {
+			limit = {
+				p:x60E0C0 = { state = { owner = ROOT } }
+			 }
+
+			create_character = {
+				template = protagonist_bellingham 
+				on_created = {
+					set_variable = is_bellingham						
+				}
+			}
+						
+			random_scope_character = {
+				limit = {
+					has_variable = is_bellingham
+				}
+				save_scope_as = scope_bellingham
+			}	
+		}
+	}	
+	
+	option = {
+		name = nda_acd.1884.a
+		default_option = yes
+
+		IF = {
+			limit = { p:x60E0C0 = { state = { owner = ROOT } } }
+
+				# Send Bellingham into exile
+				scope:scope_bellingham = { 
+					add_character_role = agitator
+					exile_character_with_martyrdom = yes
+				}				
+			}
+	
+	}
+	option = {
+		name = nda_acd.1884.b
+		trigger = {
+			p:x60E0C0 = { state = { owner = ROOT } }
+			is_cultist_country = yes
+			empty_agitator_slots >= 1
+		}
+
+		# Recruit Bellingham
+		scope:scope_bellingham = { 
+			add_character_role = agitator
+		}						
+	}
+	option = {
+		name = nda_acd.1884.c
+		trigger = {
+			p:x60E0C0 = { state = { owner = ROOT } }
+			is_cultist_country = no
+
+		}
+
+		# Send Bellingham into exile - needs tooltipping for flees abroad
+		scope:scope_bellingham = { 
+			add_character_role = agitator
+			exile_character_with_martyrdom = yes
+		}				
+
+	}
+}
+
+#nda_acd.1893 = { # The amnesiac
+
+nda_acd.1908 = { # Proffesor Challenger returns
+	type = country_event
+	placement = p:x7543C8
+	title = nda_acd.1908.t
+	desc = nda_acd.1908.d
+	flavor =  nda_acd.1908.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = 24 }
+	
+	trigger = { 
+		
+		# 1860 
+	   game_date >= 1884.4.1 
+	   game_date < 1885 
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}			
+    }
+
+	immediate = {
+		debug_log = "Professor Challenger"
+
+		IF = {
+			limit = {
+				p:x7543C8 = { state = { owner = ROOT } }
+			 }
+
+			create_character = {
+				template = investigator_professor_challenger 
+				on_created = {
+					set_variable = is_challenger						
+				}
+			}
+						
+			random_scope_character = {
+				limit = {
+					has_variable = is_challenger
+				}
+				save_scope_as = scope_challenger
+			}	
+		}
+	}	
+	
+	option = {
+		name = nda_acd.1908.a
+		default_option = yes
+
+		IF = {
+			limit = { p:x7543C8 = { state = { owner = ROOT } } }
+
+			# Send Challenger into exile
+			scope:scope_challenger = { 
+				add_character_role = agitator
+				exile_character_with_martyrdom = yes
+			}				
+		}	
+	}
+
+	option = {
+		name = nda_acd.1908.b
+
+		trigger = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			is_cultist_country = no
+			empty_agitator_slots >= 1
+		}
+
+		# Recruit Bellingham
+		scope:scope_challenger = { 
+			add_character_role = agitator
+		}						
+	}
+
+	option = {
+		name = nda_acd.1908.c
+		trigger = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			is_cultist_country = yes
+
+		}
+
+		# Send Challenger into exile
+		scope:scope_challenger = { 
+			add_character_role = agitator
+			exile_character_with_martyrdom = yes
+		}				
+
+	}
+}

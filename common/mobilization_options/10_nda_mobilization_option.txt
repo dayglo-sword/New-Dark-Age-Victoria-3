@@ -68,6 +68,7 @@ mobilization_option_nda_death_ray = {
 	unlocking_technologies = {
 		flamethrowers
 	}
+	
 	upkeep_modifier = {
 		goods_input_vril_add = 1
 	}
