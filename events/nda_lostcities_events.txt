@@ -119,7 +119,9 @@ nda_lostcities.11 = {  # K'N-Yan hidden ?
 		has_global_variable = nda_lostcity_knyan_exists 
 		p:xA07F85 = {
 			state = {
-				owner = { is_cultist_country = no } # Cultists no longer control it
+				owner = { is_cultist_country = no } 
+				NOT = { c:ELD ?= THIS } # can lose cultist tag somehow
+			# Cultists no longer control it
 				has_building = building_nda_lostcity_knyan
 			}
 		}

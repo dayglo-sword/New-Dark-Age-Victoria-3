@@ -1,0 +1,10 @@
+﻿
+NDA_ARES = {	# MARS
+	flag_definition = {
+		coa = NDA_ARES 
+		coa_with_overlord_canton = NDA_ARES
+		overlord_canton_offset = { 0.067 0.1 }
+		overlord_canton_scale = { 0.4 0.4 }	
+		subject_canton = NDA_ARES 
+	}
+}

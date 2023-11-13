@@ -109,7 +109,7 @@ nda_monthly_on_action = {
 		nda_eap.14 # Red Death Redemption
 
 		nda_acd.1884
-		nda_acd.1904
+		nda_acd.1908
 
 	}
 	random_events = {

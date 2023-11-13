@@ -1,0 +1,39 @@
+﻿
+# lost city pms - in effect are free goods as minimal above ground population needed - have both goods available in all methods to try and kickstart demand
+pm_nda_ares_generator = { #
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 40
+			country_bureaucracy_add = 60
+			country_prestige_add = 25
+			country_weekly_innovation_add = 40
+		}
+	}
+}
+
+pm_nda_ares_generator_goods = { # supernatural energy - can power advanced tech and prolong life - should be own good with substitutions for existing
+	texture = "gfx/interface/icons/production_method_icons/percussion_caps.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 50
+		}
+	}
+
+	building_modifiers = {
+
+		level_scaled = {	
+			building_employment_laborers_add = 200		
+		}
+
+		unscaled = {
+			goods_output_electricity_add = 20
+			goods_output_vril_add = 60	
+			goods_output_black_lotus_add = 60	
+			goods_output_fertilizer_add = 20	
+			building_laborers_mortality_mult = 0.5
+		}
+	}
+}

@@ -58,7 +58,7 @@
 				}
 				owns_entire_state_region = STATE_MONTANA
 				owns_entire_state_region = STATE_WYOMING
-				c:GBR = {
+				c:GBR ?= {
 					relations:ROOT >= relations_threshold:cordial
 				}
 			}
@@ -129,9 +129,12 @@
         }
     }
 
-	fail = {		
-		NOT = {	exists = c:USA }
-		NOT = { exists = c:GBR }
+	fail = {	
+		OR = {
+			NOT = {	exists = c:USA }
+			NOT = { exists = c:GBR }			
+		}	
+
     }
 
 	on_fail = {

@@ -1,0 +1,73 @@
+﻿nda_effect_ensure_aresian_ideology = { # character should have an appropriate ideology
+	if = {
+		limit = { has_non_aresian_ideology = yes } # should work for martian as well
+		random_list = {	
+			20 = { set_ideology = ideology:ideology_jingoist_leader }
+			15 = { set_ideology = ideology:ideology_fascist }
+			20 = { set_ideology = ideology:ideology_slaver }
+			10 = { set_ideology = ideology:ideology_authoritarian }
+			#10 = { set_ideology = ideology:ideology_luddite }			
+		}
+	}
+}
+
+nda_effect_martian_setup = {
+	# use the no revolutions flag
+	set_immune_to_revolutions = yes
+
+	# set government to be technocratic - change laws as appropriate
+	activate_law = law_type:law_monarchy
+	activate_law = law_type:law_technocracy
+	activate_law = law_type:law_ethnostate
+	activate_law = law_type:law_slave_trade
+	activate_law = law_type:law_state_atheism
+	
+	# activate tech
+	add_era_researched = era_3
+
+	# Stop Cult Spread before it can start
+	set_variable = nda_cult_spread_failed
+
+	ig:ig_devout = {
+		set_interest_group_name = ig_devout
+	}
+	
+	ig:ig_armed_forces = {
+		set_interest_group_name = ig_armed_forces
+	}
+
+	ig:ig_rural_folk = {
+		set_interest_group_name = ig_ares_rural_folk
+	}
+
+	ig:ig_intelligentsia = {
+		set_interest_group_name = ig_intelligentsia
+	}
+
+	ig:ig_landowners = {
+		set_interest_group_name = ig_ares_landowners
+	}
+
+	ig:ig_petty_bourgeoisie = {
+		set_interest_group_name = ig_petty_bourgeoisie
+	}
+
+	ig:ig_trade_unions = {
+		set_interest_group_name = ig_ares_trade_unions
+	}
+
+	# remove anti-slavery from intel and trade unions 
+	every_interest_group = {
+		limit = { has_ideology = ideology:ideology_anti_slavery }
+		remove_ideology = ideology_anti_slavery
+	}
+
+	# martian unity
+	every_interest_group = {
+		add_modifier = nda_ares_ig_martian_unity_modifier
+	}
+
+	set_strategy = ai_strategy_nda_ares_administrative_agenda
+	set_strategy = ai_strategy_nda_ares_diplomatic_agenda
+	set_strategy = ai_strategy_nda_ares_political_agenda
+}

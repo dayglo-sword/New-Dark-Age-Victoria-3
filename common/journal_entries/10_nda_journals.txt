@@ -76,6 +76,18 @@
 		# check count of cultists in government. add to counter
 		effect = {
 
+			# fix bug where this reruns when ELD revolts
+			IF = {
+				limit = { c:ELD ?= THIS }
+
+				scope:nda_je_scope = {
+					change_variable = {
+						name = nda_cult_spread_tracker
+						add = 1200 # can send negative despite clamp?
+					}					
+				}					
+			}
+
 			# use ban on 'nameless Cults' to throtle back
 			IF = {
 				limit = { has_variable = nda_nameless_cults_supressed}

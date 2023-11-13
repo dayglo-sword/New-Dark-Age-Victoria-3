@@ -1,0 +1,50 @@
+﻿
+mobilization_option_nda_ares_black_smoke = {
+	texture = "gfx/interface/icons/production_method_icons/unused/chemical_artillery.dds"
+
+	is_shown = {		
+		c:NDA_ARES ?= THIS # martians only		
+	}
+
+	possible = {
+
+	}	
+
+	upkeep_modifier = {
+		goods_input_fertilizer_add = 2
+		goods_input_black_lotus_add = 0.5
+	}
+	unit_modifier = {
+		unit_offense_add = 60
+		unit_kill_rate_add = 0.8
+		unit_recovery_rate_add = -0.2
+		unit_morale_damage_mult = 0.5
+	}
+	ai_value = 3
+
+    group = special_weapons
+}
+
+mobilization_option_nda_ares_death_ray = {
+	texture = "gfx/interface/icons/production_method_icons/unused/vacuum_tubes.dds"
+
+	is_shown = {		
+		c:NDA_ARES ?= THIS # martians only	
+	}
+
+	possible = {
+
+	}	
+
+	upkeep_modifier = {
+		goods_input_vril_add = 1
+	}
+	unit_modifier = {
+		unit_offense_add = 100
+		unit_devastation_mult = 2
+		unit_morale_damage_mult = 0.5
+	}
+	ai_value = 3
+
+    group = special_weapons
+}

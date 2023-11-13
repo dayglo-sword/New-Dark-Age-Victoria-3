@@ -1,0 +1,24 @@
+﻿
+building_nda_ares_generators = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	
+	city_type = city
+	# entity_not_constructed = { }
+	# entity_under_construction = { }
+	# entity_constructed = { "knyan_entity" } #wonder_chichen_itza_01_entity
+	
+	# city_gfx_interactions = {
+	# 	clear_size_area = yes
+	# 	size = 4
+	# }
+	
+	production_method_groups = {		
+		pmg_nda_ares_generator
+		pmg_nda_ares_generator_goods
+	}
+}

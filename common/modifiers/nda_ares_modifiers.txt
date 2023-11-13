@@ -1,0 +1,17 @@
+﻿nda_ares_ig_martian_unity_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 5
+}
+
+nda_ares_state_martian_terror_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_migration_pull_mult = -0.8
+	state_standard_of_living_add = -2
+}
+
+nda_ares_state_red_lands_modifier= {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_mortality_mult = 1 # martians shouldn't out breed monkey people
+	state_standard_of_living_add = 5
+	state_migration_pull_mult = -0.5 # really shouldn't want to live here
+}
