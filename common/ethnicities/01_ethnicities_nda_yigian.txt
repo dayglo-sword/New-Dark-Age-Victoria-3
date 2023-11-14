@@ -78,11 +78,3 @@ yigian_hybrid = {
         10 = { name = no_mustache       range = { 0.0 1.0 } }
 	}
 } 
-
-
-
-
-
- 
-
-

@@ -13,7 +13,7 @@
 		}
 		# don't include for cultists
 		NOT = {
-			c:NDA_ARES ?= THIS	
+			#c:NDA_ARES ?= THIS	
 			is_full_cult_country = { COUNTRY="THIS" }			
 		}
 	}
@@ -64,6 +64,12 @@
 		}
 	}
 	
+	
+    complete = {
+		# needs to close if country converts to full cult country
+		is_full_cult_country = { COUNTRY="THIS" }	
+    }
+
 	# Establish Colonial Administration
 	scripted_button = je_colonial_administration_button_senegal
 	scripted_button = je_colonial_administration_button_niger

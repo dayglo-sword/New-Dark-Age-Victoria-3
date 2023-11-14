@@ -1,0 +1,168 @@
+﻿# previously were decisions - moved to journal
+je_nda_maritimes_btn_new_brunswick = {
+	name = "je_nda_maritimes_btn_new_brunswick"
+	desc = "je_nda_maritimes_btn_new_brunswick_desc"
+
+	visible = { 
+		always = yes 
+	}
+
+	possible = {
+		exists = c:NEN
+        exists = c:NBS
+
+        # on border
+        is_adjacent_to_country = c:NBS
+		has_healthy_economy = yes
+
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no
+
+		c:NBS = { 
+			relations:root >= relations_threshold:amicable 
+			is_player = no
+			OR = {
+				is_subject = no
+				AND = {
+					is_subject = yes		
+					any_overlord_or_above = {
+						relations:root >= relations_threshold:amicable 
+					}			
+				}
+			}
+			is_at_war = no
+		}
+
+		NOT = { has_war_with = c:NBS }
+		NOT = { owes_obligation_to =  c:NBS }	
+	}
+
+	ai_chance = {
+		base = 5	
+
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}	
+	}
+
+	effect = {
+		custom_tooltip = nda_nen_newbrunswick_union_tooltip       
+        annex = c:NBS
+	}
+}
+
+je_nda_maritimes_btn_nova_scotia = {
+	name = "je_nda_maritimes_btn_nova_scotia"
+	desc = "je_nda_maritimes_btn_nova_scotia_desc"
+
+	visible = { 
+		always = yes 
+	}
+
+	possible = {
+		exists = c:NEN
+        exists = c:NVS
+
+        # on border
+        is_adjacent_to_country = c:NVS
+		has_healthy_economy = yes
+		
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no
+
+		c:NVS = { 
+			relations:root >= relations_threshold:amicable 
+			is_player = no
+			OR = {
+				is_subject = no
+				AND = {
+					is_subject = yes		
+					any_overlord_or_above = {
+						relations:root >= relations_threshold:amicable 
+					}			
+				}
+			}	
+			is_at_war = no		
+		}
+
+		NOT = { has_war_with = c:NVS }
+		NOT = { owes_obligation_to =  c:NVS }
+	}
+
+	ai_chance = {
+		base = 5
+
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}	
+	}
+
+	effect = {
+		custom_tooltip = nda_nen_novascotia_union_tooltip 
+        annex = c:NVS
+	}
+}
+
+je_nda_maritimes_btn_strange_ways = {
+	name = "je_nda_maritimes_btn_strange_ways"
+	desc = "je_nda_maritimes_btn_strange_ways_desc"
+
+	visible = { 
+		always = yes 
+	}
+
+	possible = {
+		NOT = { country_has_primary_culture = cu:anglo_canadian }		
+	}
+
+	effect = {
+		add_primary_culture = cu:anglo_canadian
+	}
+
+	ai_chance = {
+		base = 5		
+	}
+}
+
+je_nda_maritimes_btn_old_ways = {
+	name = "je_nda_maritimes_btn_old_ways"
+	desc = "je_nda_maritimes_btn_old_ways_desc"
+
+	visible = { 
+		always = yes 
+	}
+
+	possible = {
+		NOT = { country_has_primary_culture = cu:anglo_canadian }
+		NOT = { has_variable = nda_maritimes_no_canadians }
+	}
+
+
+	effect = {
+		set_variable = nda_maritimes_no_canadians
+	}
+
+	ai_chance = {
+		base = 5		
+	}
+}
