@@ -5,20 +5,12 @@ je_nda_maritimes_btn_new_brunswick = {
 
 	visible = { 
 		always = yes 
+		exists = c:NBS
 	}
 
 	possible = {
 		exists = c:NEN
         exists = c:NBS
-
-        # on border
-        is_adjacent_to_country = c:NBS
-		has_healthy_economy = yes
-
-		# same as alaska decision
-		in_default = no
-		taking_loans = no
-		is_at_war = no
 
 		c:NBS = { 
 			relations:root >= relations_threshold:amicable 
@@ -35,8 +27,17 @@ je_nda_maritimes_btn_new_brunswick = {
 			is_at_war = no
 		}
 
-		NOT = { has_war_with = c:NBS }
+		# NOT = { has_war_with = c:NBS } # don't need this as peace conditions exist
 		NOT = { owes_obligation_to =  c:NBS }	
+
+        # on border
+        is_adjacent_to_country = c:NBS
+		has_healthy_economy = yes
+
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no		
 	}
 
 	ai_chance = {
@@ -56,7 +57,7 @@ je_nda_maritimes_btn_new_brunswick = {
 	}
 
 	effect = {
-		custom_tooltip = nda_nen_newbrunswick_union_tooltip       
+		custom_tooltip = je_nda_maritimes_btn_new_brunswick_union_tooltip       
         annex = c:NBS
 	}
 }
@@ -67,20 +68,13 @@ je_nda_maritimes_btn_nova_scotia = {
 
 	visible = { 
 		always = yes 
+		exists = c:NVS
 	}
 
 	possible = {
 		exists = c:NEN
         exists = c:NVS
 
-        # on border
-        is_adjacent_to_country = c:NVS
-		has_healthy_economy = yes
-		
-		# same as alaska decision
-		in_default = no
-		taking_loans = no
-		is_at_war = no
 
 		c:NVS = { 
 			relations:root >= relations_threshold:amicable 
@@ -97,8 +91,17 @@ je_nda_maritimes_btn_nova_scotia = {
 			is_at_war = no		
 		}
 
-		NOT = { has_war_with = c:NVS }
+		# NOT = { has_war_with = c:NVS } # don't need this as peace conditions exist
 		NOT = { owes_obligation_to =  c:NVS }
+
+        # on border
+        is_adjacent_to_country = c:NVS
+		has_healthy_economy = yes
+		
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no
 	}
 
 	ai_chance = {
@@ -118,7 +121,7 @@ je_nda_maritimes_btn_nova_scotia = {
 	}
 
 	effect = {
-		custom_tooltip = nda_nen_novascotia_union_tooltip 
+		custom_tooltip = je_nda_maritimes_btn_nova_scotia_union_tooltip 
         annex = c:NVS
 	}
 }
@@ -128,11 +131,14 @@ je_nda_maritimes_btn_strange_ways = {
 	desc = "je_nda_maritimes_btn_strange_ways_desc"
 
 	visible = { 
-		always = yes 
+		NOT = { country_has_primary_culture = cu:anglo_canadian }	
 	}
 
 	possible = {
-		NOT = { country_has_primary_culture = cu:anglo_canadian }		
+		NOT = { country_has_primary_culture = cu:anglo_canadian }	
+		
+		any_scope_state = { state_region = { is_homeland = cu:anglo_canadian } }
+		#owns_entire_state_region = STATE_NEW_BRUNSWICK
 	}
 
 	effect = {
@@ -149,16 +155,19 @@ je_nda_maritimes_btn_old_ways = {
 	desc = "je_nda_maritimes_btn_old_ways_desc"
 
 	visible = { 
-		always = yes 
+		NOT = { country_has_primary_culture = cu:anglo_canadian }	
 	}
 
 	possible = {
 		NOT = { country_has_primary_culture = cu:anglo_canadian }
 		NOT = { has_variable = nda_maritimes_no_canadians }
+
+		any_scope_state = { state_region = { is_homeland = cu:anglo_canadian } }
 	}
 
 
 	effect = {
+		custom_tooltip = je_nda_maritimes_btn_old_ways_tooltip 
 		set_variable = nda_maritimes_no_canadians
 	}
 

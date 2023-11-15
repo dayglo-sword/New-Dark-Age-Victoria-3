@@ -113,8 +113,8 @@ nda_dagonic.2 = { # Cult in country converts to dagonic - called from journal 'j
 			every_scope_state = {
 				limit = { is_coastal = yes }
 				state_region = {
-					add_homeland = nda_cul_dagonic
-					remove_homeland = nda_cul_cultist
+					add_homeland = cu:nda_cul_dagonic
+					remove_homeland = cu:nda_cul_cultist
 				}
 				# convert cultists to dagonic				
 				every_scope_pop = {

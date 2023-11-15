@@ -57,8 +57,8 @@
 				}	
 
 				state_region = {
-					add_homeland = nda_cul_dagonic
-					remove_homeland = nda_cul_cultist						
+					add_homeland = cu:nda_cul_dagonic
+					remove_homeland = cu:nda_cul_cultist						
 				}
 							
 			#}
@@ -125,7 +125,7 @@ nda_eld_release_dagonic_lands = {
 			}	
 			state_region = {
 				remove_claim = c:ELD
-				remove_homeland = nda_cul_cultist
+				remove_homeland = cu:nda_cul_cultist
 			}
 
 			set_state_owner = c:DGN
@@ -196,8 +196,8 @@ nda_eld_recognise_yigian_lands = {
 				}	
 
 				state_region = {
-					add_homeland = nda_cul_yigian
-					remove_homeland = nda_cul_cultist						
+					add_homeland = cu:nda_cul_yigian
+					remove_homeland = cu:nda_cul_cultist						
 				}
 							
 			#}
@@ -263,7 +263,7 @@ nda_eld_release_yigian_lands = {
 
 			state_region = {
 				remove_claim = c:ELD
-				remove_homeland = nda_cul_cultist
+				remove_homeland = cu:nda_cul_cultist
 			}
 			
 			set_state_owner = c:YIG

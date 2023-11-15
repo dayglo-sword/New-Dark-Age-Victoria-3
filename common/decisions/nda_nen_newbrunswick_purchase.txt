@@ -1,151 +1,151 @@
-﻿nda_nen_newbrunswick_union = {
-	is_shown = {
-		exists = c:NEN
-		this = c:NEN
-        exists = c:NBS
-	}
+﻿# nda_nen_newbrunswick_union = {
+# 	is_shown = {
+# 		exists = c:NEN
+# 		this = c:NEN
+#         exists = c:NBS
+# 	}
 
-	possible = {
-		exists = c:NEN
-        exists = c:NBS
+# 	possible = {
+# 		exists = c:NEN
+#         exists = c:NBS
 
-        # on border
-        is_adjacent_to_country = c:NBS
-		has_healthy_economy = yes
+#         # on border
+#         is_adjacent_to_country = c:NBS
+# 		has_healthy_economy = yes
 
-		# same as alaska decision
-		in_default = no
-		taking_loans = no
-		is_at_war = no
+# 		# same as alaska decision
+# 		in_default = no
+# 		taking_loans = no
+# 		is_at_war = no
 
-		c:NBS = { 
-			relations:root >= relations_threshold:amicable 
-			is_player = no
-			OR = {
-				is_subject = no
-				AND = {
-					is_subject = yes		
-					any_overlord_or_above = {
-						relations:root >= relations_threshold:amicable 
-					}			
-				}
-			}
-			is_at_war = no
-		}
+# 		c:NBS = { 
+# 			relations:root >= relations_threshold:amicable 
+# 			is_player = no
+# 			OR = {
+# 				is_subject = no
+# 				AND = {
+# 					is_subject = yes		
+# 					any_overlord_or_above = {
+# 						relations:root >= relations_threshold:amicable 
+# 					}			
+# 				}
+# 			}
+# 			is_at_war = no
+# 		}
 
-		NOT = { has_war_with = c:NBS }
-		NOT = { owes_obligation_to =  c:NBS }
+# 		NOT = { has_war_with = c:NBS }
+# 		NOT = { owes_obligation_to =  c:NBS }
 
-        # has same government form?
-        #custom_tooltip = {
-		#	text = nda_nen_newbrunswick_union_gov_tooltip
-        #
-        #    c:NBS = { has_government_type = c:NEN.government_type }
-		#}
+#         # has same government form?
+#         #custom_tooltip = {
+# 		#	text = nda_nen_newbrunswick_union_gov_tooltip
+#         #
+#         #    c:NBS = { has_government_type = c:NEN.government_type }
+# 		#}
 
-	}
+# 	}
 
     	
-	when_taken = {
+# 	when_taken = {
 
- 		custom_tooltip = nda_nen_newbrunswick_union_tooltip       
-        annex = c:NBS
+#  		custom_tooltip = nda_nen_newbrunswick_union_tooltip       
+#         annex = c:NBS
 
-		# have expenses as per Alaska purchase
-        # add anglo-candian as acceptable - unbalances number of politicians
-        # add_primary_culture = cu:anglo_canadian
-	}
+# 		# have expenses as per Alaska purchase
+#         # add anglo-candian as acceptable - unbalances number of politicians
+#         # add_primary_culture = cu:anglo_canadian
+# 	}
 
-	ai_chance = {
-		base = 5
+# 	ai_chance = {
+# 		base = 5
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
-			add = 5
-		}
-		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
-			}
-			add = -1000
-		}		
-	}
+# 		modifier = {
+# 			trigger = { bureaucracy > 0 }
+# 			add = 5
+# 		}
+# 		modifier = {
+# 			OR = {
+# 				is_diplomatic_play_committed_participant = yes
+# 				is_at_war = yes
+# 			}
+# 			add = -1000
+# 		}		
+# 	}
 
-}
+# }
 
-nda_nen_novascotia_union = {
-	is_shown = {
-		exists = c:NEN
-		this = c:NEN
-        exists = c:NVS
-	}
+# nda_nen_novascotia_union = {
+# 	is_shown = {
+# 		exists = c:NEN
+# 		this = c:NEN
+#         exists = c:NVS
+# 	}
 
-	possible = {
-		exists = c:NEN
-        exists = c:NVS
+# 	possible = {
+# 		exists = c:NEN
+#         exists = c:NVS
 
-        # on border
-        is_adjacent_to_country = c:NVS
-		has_healthy_economy = yes
+#         # on border
+#         is_adjacent_to_country = c:NVS
+# 		has_healthy_economy = yes
 		
-		# same as alaska decision
-		in_default = no
-		taking_loans = no
-		is_at_war = no
+# 		# same as alaska decision
+# 		in_default = no
+# 		taking_loans = no
+# 		is_at_war = no
 
-		c:NVS = { 
-			relations:root >= relations_threshold:amicable 
-			is_player = no
-			OR = {
-				is_subject = no
-				AND = {
-					is_subject = yes		
-					any_overlord_or_above = {
-						relations:root >= relations_threshold:amicable 
-					}			
-				}
-			}	
-			is_at_war = no		
-		}
+# 		c:NVS = { 
+# 			relations:root >= relations_threshold:amicable 
+# 			is_player = no
+# 			OR = {
+# 				is_subject = no
+# 				AND = {
+# 					is_subject = yes		
+# 					any_overlord_or_above = {
+# 						relations:root >= relations_threshold:amicable 
+# 					}			
+# 				}
+# 			}	
+# 			is_at_war = no		
+# 		}
 
-		NOT = { has_war_with = c:NVS }
-		NOT = { owes_obligation_to =  c:NVS }
+# 		NOT = { has_war_with = c:NVS }
+# 		NOT = { owes_obligation_to =  c:NVS }
 
-        #custom_tooltip = {
-		#	text = nda_nen_novascotia_union_gov_tooltip
-#
- #           c:NVS = { has_government_type = c:NEN.government_type }
-#		}
+#         #custom_tooltip = {
+# 		#	text = nda_nen_novascotia_union_gov_tooltip
+# #
+#  #           c:NVS = { has_government_type = c:NEN.government_type }
+# #		}
 
-        # has same government form? Not puppet
+#         # has same government form? Not puppet
 
-	}
+# 	}
 
     	
-	when_taken = {
+# 	when_taken = {
 
-		custom_tooltip = nda_nen_novascotia_union_tooltip 
-        annex = c:NVS
+# 		custom_tooltip = nda_nen_novascotia_union_tooltip 
+#         annex = c:NVS
 
-        # add anglo-candian as acceptable - unbalances number of politicians
-        # add_primary_culture = cu:anglo_canadian    
-	}
+#         # add anglo-candian as acceptable - unbalances number of politicians
+#         # add_primary_culture = cu:anglo_canadian    
+# 	}
 
-	ai_chance = {
-		base = 5
+# 	ai_chance = {
+# 		base = 5
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
-			add = 5
-		}
-		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
-			}
-			add = -1000
-		}		
-	}
+# 		modifier = {
+# 			trigger = { bureaucracy > 0 }
+# 			add = 5
+# 		}
+# 		modifier = {
+# 			OR = {
+# 				is_diplomatic_play_committed_participant = yes
+# 				is_at_war = yes
+# 			}
+# 			add = -1000
+# 		}		
+# 	}
 
-}
+# }

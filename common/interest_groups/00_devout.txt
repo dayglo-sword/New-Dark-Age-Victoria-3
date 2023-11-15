@@ -362,6 +362,17 @@
 				add_ideology = ideology_sikh_moralist
 			}
 		}
+
+		### Corporatism
+		if = {
+			limit = {
+				has_technology_researched = corporatism
+			}
+			ig:ig_devout = {
+				remove_ideology = ideology_pious
+				add_ideology = ideology_corporatist
+			}
+		}
 	}
 	on_disable = {}
 	on_character_ig_membership = {
@@ -382,6 +393,7 @@
 
 
 	pop_potential = {
+		has_state_religion = yes
 		NOT = {
 			has_pop_religion = atheist
 			has_pop_religion = nda_rel_cultist
@@ -409,7 +421,7 @@
 					}	
 				}
 			}	
-		}		
+		}
 	}
 
 	pop_weight = {
@@ -485,6 +497,22 @@
 			}
 		}
 		
+		if = {
+			limit = {
+				owner = {
+					has_technology_researched = corporatism
+					NOT = {
+						has_law = law_type:law_total_separation
+						has_law = law_type:law_state_atheism
+					}
+				}
+			}
+			multiply = {
+				desc = "CORPORATISM_TECH"
+				value = 1.25
+			}
+		}
+
 		add = {
 			desc = "POP_LITERACY"
 			this = {
@@ -729,7 +757,7 @@
 				value = 0.01
 			}
 		}		
-		
+
 		if = {
 			limit = {
 				OR = { # both historically had women as major players - need way to make them state religions??

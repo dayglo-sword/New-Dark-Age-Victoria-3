@@ -1,6 +1,8 @@
 ﻿je_nda_maritimes = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
+	group = je_group_foreign_affairs
+
 	is_shown_when_inactive = {
 		c:NEN ?= ROOT
 		#is_cultist_country = no
@@ -23,10 +25,18 @@
 
     complete = {
 
-		NOT = { exists = c:NBS }
-		NOT = {	exists = c:NVS }
-		# also if culture adoption flagged
-		country_has_primary_culture = cu:anglo_canadian
+		custom_tooltip = {
+			text = je_nda_maritimes_complete_tt
+			NOT = { exists = c:NBS }
+			NOT = {	exists = c:NVS }
+
+			# also if culture adoption flagged
+			OR = {
+				country_has_primary_culture = cu:anglo_canadian	
+				has_variable = nda_maritimes_no_canadians	
+				NOT = { any_scope_state = { state_region = { is_homeland = cu:anglo_canadian } } }	
+			}
+		}
     }
 
 	on_complete = {
@@ -40,7 +50,7 @@
 	scripted_button = je_nda_maritimes_btn_old_ways
 
 	progressbar = no
-	weight = 100
+	weight = 10
 
 	#inheritable = yes
 

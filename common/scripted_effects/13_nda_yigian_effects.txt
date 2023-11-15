@@ -336,7 +336,7 @@ nda_effect_yigian_buff = { # boost to yig
 				}	
 			}
 			state_region = {
-				add_homeland = nda_cul_yigian
+				add_homeland = cu:nda_cul_yigian
 			}
 			
 		}

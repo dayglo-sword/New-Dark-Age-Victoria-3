@@ -355,7 +355,7 @@ nda_effect_dagonic_buff = { # boost to dagon
 				}	
 			}
 			state_region = {
-				add_homeland = nda_cul_dagonic
+				add_homeland = cu:nda_cul_dagonic
 			}
 			
 		}

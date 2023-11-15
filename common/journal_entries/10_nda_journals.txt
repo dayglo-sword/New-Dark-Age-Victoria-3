@@ -1,6 +1,8 @@
 ﻿je_nda_cult_spreads = {
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
 
+	group = je_group_nda_eldritch
+
 	immediate = {
 		set_variable = {
 				name = nda_cult_spread_tracker
@@ -220,6 +222,8 @@
 # Eldritch conversion to Yigian
 je_nda_cult_to_yigian = {
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	
+	group = je_group_nda_eldritch
 
 	is_shown_when_inactive = {
 		country_has_primary_culture = cu:nda_cul_cultist 
@@ -397,6 +401,8 @@ je_nda_cult_to_yigian = {
 # Eldritch conversion to Dagonic
 je_nda_cult_to_dagonic = {
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	group = je_group_nda_eldritch
 
 	is_shown_when_inactive = {
 		country_has_primary_culture = cu:nda_cul_cultist 
@@ -578,6 +584,8 @@ je_nda_cult_to_dagonic = {
 je_nda_devout_inquisition = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
+	group = je_group_nda_eldritch
+	
 	immediate = {
 
 		debug_log = "Inquisition : Started : "

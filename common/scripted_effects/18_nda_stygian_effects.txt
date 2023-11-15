@@ -102,8 +102,8 @@ nda_effect_stygian_setup = {
 	# set up homelands - remove eldritch, add yigian
 	every_scope_state = {
 		state_region = {
-			add_homeland = nda_cul_yigian	
-			remove_homeland = nda_cul_cultist	
+			add_homeland = cu:nda_cul_yigian	
+			remove_homeland = cu:nda_cul_cultist	
 			remove_claim = c:ELD			
 		}
 

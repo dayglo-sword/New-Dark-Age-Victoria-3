@@ -180,7 +180,7 @@
 					set_state_owner = c:TIB		
 					# remove dagonic culture
 					state_region = {
-						remove_homeland	= nda_cul_dagonic	
+						remove_homeland	= cu:nda_cul_dagonic	
 					}	
 
 					# add cultists - should force IG to be enabled before leng setup below

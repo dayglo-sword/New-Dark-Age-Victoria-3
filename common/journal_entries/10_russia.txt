@@ -1,13 +1,19 @@
 ﻿# need to overwrite existing je, as RUS forming ELD causes mass of errors if je already running
 je_the_eastern_border = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_historical_content
+
+    scripted_button = je_the_eastern_border_treaty_of_beijing
+    scripted_button = je_the_eastern_border_russia_chuguchak_protocol
+    
     is_shown_when_inactive = {
         exists = c:RUS
         THIS = c:RUS
         is_subject = no
     }
       possible = {
-	    exists = c:RUS
+        exists = c:RUS
         THIS = c:RUS
         has_technology_researched = nationalism
         NAND = {

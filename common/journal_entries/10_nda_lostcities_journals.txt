@@ -1,6 +1,8 @@
 ﻿je_nda_knyan_search = {
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
 
+	group = je_group_nda_eldritch
+	
 	is_shown_when_inactive = {
 		is_cultist_country = yes
 	}

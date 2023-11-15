@@ -1,5 +1,6 @@
 ﻿l_english:
-  
+ je_group_nda_eldritch:0 "Eldritch Happenings"
+
  je_nda_cult_spreads:0 "The Cult Spreads"
  je_nda_cult_spreads_reason:0 "In the dark corridors of power the Cult has started spreading its influence.\n\nSlowly the politicians and bureaucrats fall under their malignant spell, as the whisperers catch their ears with talk of prolonged life and even immortality."
  je_nda_cult_spreads_goal:0 "Create Shadow Government"
@@ -48,12 +49,16 @@
 
 # Maritime Expansion
 je_nda_maritimes:0 "Maritime Expansion"
-je_nda_maritimes_reason:0 "The Maritimes to the north can be seen as being rightfully ours. After all we do havsharee a certain amount of kinship with the Anglo-Canadians."
+je_nda_maritimes_reason:0 "The Maritimes to the north can be seen as being rightfully ours. After all we do share a certain amount of kinship with the Anglo-Canadians."
+je_nda_maritimes_complete_tt:0 "The Maritime question has been resolved."
 je_nda_maritimes_btn_new_brunswick:0 "Union with New Brunswick"
-je_nda_maritimes_btn_new_brunswick_desc:0 "Why fight for land when we can just merge with friends! New Brunswick has long been our neighbours, it's time we took them under our benevolent wings."
+je_nda_maritimes_btn_new_brunswick_desc:0 "Why fight for land when we can just join with friends! New Brunswick has long been our neighbours, it's time we took them under our benevolent wings."
+je_nda_maritimes_btn_new_brunswick_union_tooltip:0 "Enter into a Union with New Brunswick"
 je_nda_maritimes_btn_nova_scotia:0 "Union with Nova Scotia"
-je_nda_maritimes_btn_nova_scotia_desc:0 "Why fight for land when we can just merge with friends! Nova Scotia are our neighbours, it's time we took them under our benevolent wings."
+je_nda_maritimes_btn_nova_scotia_desc:0 "Why fight for land when we can just join with friends! Nova Scotia are our neighbours, it's time we took them under our benevolent wings."
+je_nda_maritimes_btn_nova_scotia_union_tooltip:0 "Enter into a Union with Nova Scotia"
 je_nda_maritimes_btn_strange_ways:0 "Adopt Strange Ways"
 je_nda_maritimes_btn_strange_ways_desc:0 "Maybe we should adopt some of the strange ways of our northern brethren, or at least allow some of their traditions."
 je_nda_maritimes_btn_old_ways:0 "Keep the Old Ways"
-je_nda_maritimes_btn_old_ways_desc:0 "Close as we may be to the Anglo-Candians, theirs no reason to promote their ways amongst our population."
+je_nda_maritimes_btn_old_ways_desc:0 "Close as we may be to the Anglo-Canadians, there is no reason to promote their ways amongst our population."
+je_nda_maritimes_btn_old_ways_tooltip:0 "Retain and celebrate our proud culture like a True Yankee should."

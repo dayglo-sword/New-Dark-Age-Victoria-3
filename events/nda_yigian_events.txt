@@ -111,8 +111,8 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 			# set country states as homeland, convert % of pops to religion?
 			every_scope_state = {
 				state_region = {
-					add_homeland = nda_cul_yigian
-					remove_homeland = nda_cul_cultist
+					add_homeland = cu:nda_cul_yigian
+					remove_homeland = cu:nda_cul_cultist
 				}
 				# full conversion of cult
 				# convert cultists to yigian				

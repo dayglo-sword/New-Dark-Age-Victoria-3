@@ -257,7 +257,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				limit = { 
 					is_homeland = cu:nda_cul_cultist			
 				}
-				remove_homeland = nda_cul_cultist						
+				remove_homeland = cu:nda_cul_cultist						
 			}
 
 			# decrease relations with cult countries
@@ -325,7 +325,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				limit = { 
 					is_homeland = cu:nda_cul_cultist			
 				}
-				remove_homeland = nda_cul_cultist						
+				remove_homeland = cu:nda_cul_cultist						
 			}
 
 			# drop cultist religion - convert in part to Theosophy as they are partially right!
