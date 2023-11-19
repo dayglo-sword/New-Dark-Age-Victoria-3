@@ -8,6 +8,7 @@
 			}
 			add_trait = nda_dagon_master # need to add to heirs as well?
 			change_character_religion = rel:nda_rel_cultist # no nda_rel_dagonic as yet
+			change_character_culture = cu:nda_cul_dagonic
 			nda_effect_ensure_cult_ideology = yes	
 		}
 
@@ -17,6 +18,12 @@
 		# change to absolute Monarchy
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy
+		
+		# if not slave then regress
+		if = { 
+			limit = { has_law = law_type:law_slavery_banned }
+			activate_law = law_type:law_debt_slavery
+		}
 
 		# make recognized if not already
 		set_country_type = recognized
@@ -212,18 +219,40 @@ nda_effect_dagonic_annex = {
 							}
 							remove_character_role = admiral
 						}
-						if = {
-							limit = {
-								has_role = politician
-							}
-							set_as_interest_group_leader = no
-							remove_character_role = politician
-						}
+						# if = {
+						# 	limit = {
+						# 		has_role = politician
+						# 	}
+						# 	set_as_interest_group_leader = no
+						# 	remove_character_role = politician
+						# }
 					}
 
-					exile_character_with_martyrdom = yes					
-					#transfer_character = c:ELD
 					remove_variable = nda_coven_leader
+
+					interest_group = {
+						save_scope_as = target_IG_type						
+					}
+
+					if = { 
+						limit = { 
+							has_trait = nda_dagon_master 
+							# the respective YIG chararater does not, so replace with senior cultist							
+							c:YIG = { 
+								any_interest_group = { 
+									is_same_interest_group_type = scope:target_IG_type
+									NOT = { leader = { has_trait = nda_dagon_master } }
+								} 
+							}
+						}
+						transfer_character = c:DGN
+						set_as_interest_group_leader = yes
+						debug_log = "DGN Master Transfered"
+					}
+					else = {
+						exile_character_with_martyrdom = yes	
+						debug_log = "DGN Master Released"					
+					}
 				}			
 			}
 			

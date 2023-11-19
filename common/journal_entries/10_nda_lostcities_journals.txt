@@ -5,6 +5,7 @@
 	
 	is_shown_when_inactive = {
 		is_cultist_country = yes
+		NOT = { has_global_variable = nda_lostcity_knyan_exists }	
 	}
 
 	possible = {
@@ -16,14 +17,17 @@
 				has_global_variable = nda_conjunction_2 # limit to after 1861 if early ELD
 		}
 
-		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
-		NOT = { has_global_variable = nda_lostcity_knyan_exists }	
-		is_cultist_country = yes
-		p:xA07F85 = {
-			state = {
-				owner = ROOT
-				NOT = { has_building = building_nda_lostcity_knyan }
+		custom_tooltip = {
+			text = je_nda_knyan_search_possible_tt
+			NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+			NOT = { has_global_variable = nda_lostcity_knyan_exists }	
+			p:xA07F85 = {
+				state = {
+					owner = ROOT
+					NOT = { has_building = building_nda_lostcity_knyan }
+				}
 			}
+			is_cultist_country = yes
 		}
 	}	
 
@@ -40,12 +44,11 @@
     complete = {
 		# time to move on
 		custom_tooltip = {
-			text = je_nda_migo_status_complete_tt
+			text = je_nda_knyan_search_complete_tt
 			scope:journal_entry = {
 				is_goal_complete = yes
 			}
 		}
-		NOT  = { has_variable = nda_migo_timer } # timer has run out
     }
 
 	on_complete = {

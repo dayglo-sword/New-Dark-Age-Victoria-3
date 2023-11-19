@@ -149,34 +149,34 @@ nda_monthly_on_action = {
 			#set_variable = nda_cult_leader_debug
 		}
 
-		# Check for missing IG leaders - is there a problem with Hasturian America to cause no leaders and shadow men (id : -1)
-		if = {
-			limit = {
-				any_interest_group = {
-					NOT = { exists = leader } # is leaderless
-					#save_scope_as = leaderless_ig
-				}
-			}
+		# # Check for missing IG leaders - is there a problem with Hasturian America to cause no leaders and shadow men (id : -1)
+		# if = {
+		# 	limit = {
+		# 		any_interest_group = {
+		# 			NOT = { exists = leader } # is leaderless
+		# 			#save_scope_as = leaderless_ig
+		# 		}
+		# 	}
 
-			debug_log = "Add missing leader : [THIS.GetCountry.GetNameNoFormatting]"
+		# 	debug_log = "Add missing leader : [THIS.GetCountry.GetNameNoFormatting]"
 
-			random_interest_group = {
-				limit ={
-					NOT = { exists = leader } # is leaderless					
-				}
+		# 	random_interest_group = {
+		# 		limit ={
+		# 			NOT = { exists = leader } # is leaderless					
+		# 		}
 
-				save_scope_as = leaderless_ig
-			}
+		# 		save_scope_as = leaderless_ig
+		# 	}
 
-			create_character = {
-				interest_group = scope:leaderless_ig
+		# 	create_character = {
+		# 		interest_group = scope:leaderless_ig
 
-				on_created = {
-					set_as_interest_group_leader = yes			
-				}				
-			}
+		# 		on_created = {
+		# 			set_as_interest_group_leader = yes			
+		# 		}				
+		# 	}
 
-		}
+		# }
 	}
 }
 
@@ -418,15 +418,17 @@ on_diplo_play_war_start = {
 nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to save files
 	effect = {
 		war = {
+			
 			IF = { 
 				limit = { 
 					exists = c:ELD
 					is_war_participant = c:ELD 
 				} 
-
+				debug_log = "WAR! - ELD"
 				IF = { 
 					limit = { has_global_variable = nda_ritual_cthulhu_leaves}
-						add_war_exhaustion = { target = c:ELD value = 0.25 } # disheartened cultists						
+						add_war_exhaustion = { target = c:ELD value = 0.25 } # disheartened cultists
+						add_war_war_support = { target = c:ELD value = -0.25  } 						
 				}
 				ELSE_IF = {
 					limit = { has_global_variable = nda_cthulhu_arrives}
@@ -441,7 +443,8 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 					exists = c:DGN
 					is_war_participant = c:DGN 
 					c:DGN = { NOT = { has_war_with = c:ELD }} # No boosts anywhere if at war with boss
-				} 
+				} 				
+				debug_log = "WAR! - DGN"
 
 				IF = { 
 					limit = { has_global_variable = nda_ritual_cthulhu_leaves}
@@ -461,7 +464,7 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 					is_war_participant = c:YIG 
 					c:YIG = { NOT = { has_war_with = c:ELD }} # No boosts anywhere if at war with boss
 				} 
-
+				debug_log = "WAR! - YIG"
 				IF = { 
 					limit = { has_global_variable = nda_ritual_cthulhu_leaves}
 						add_war_exhaustion = { target = c:YIG value = 0.25 } # disheartened cultists - appropriate for YIG who are semi independent?						
@@ -517,16 +520,30 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 			}
 			if = {
 				limit = { exists = scope:freedom_country }
-				add_war_exhaustion = { target = scope:freedom_country value = -0.30 } # FREEDOM!!					
+				add_war_exhaustion = { target = scope:freedom_country value = -0.30 } # FREEDOM!!	
+				add_war_war_support = { target = scope:freedom_country value = 0.25  } 
+				debug_log = "WAR! - FREEDOM!!"				
 			}
 
 		}
 	}	
 }
 
+on_country_formed = {
+	on_actions = {
+		delay = { days = 7 }
+		nda_create_leng_on_action
+	}
+}
 nda_create_leng_on_action = {
 	effect = {
-		nda_effect_leng_setup = yes		
+		if = {
+			limit = {
+				c:LEN ?= ROOT
+			}
+			debug_log = "nda_create_leng_on_action"
+			nda_effect_leng_setup = yes	
+		}		
 	}
 }
 
@@ -559,30 +576,30 @@ on_battle_started = {
 
 nda_on_battle_started = {
     effect = {
-        if = {
-			limit = {
-				exists = scope:state
-                scope:state = {
-					has_lost_city = yes
+        # if = {
+		# 	limit = {
+		# 		exists = scope:state
+        #         scope:state = {
+		# 			has_lost_city = yes
                     
-                    OR = {
-                        owner = scope:defender.owner
-                        owner = {
-                            is_in_war_together = scope:defender.owner
-                        }
-                    }
-                }
+        #             OR = {
+        #                 owner = scope:defender.owner
+        #                 owner = {
+        #                     is_in_war_together = scope:defender.owner
+        #                 }
+        #             }
+        #         }
 				
-				scope:defender = {
-					NOT = {
-						has_modifier = nda_lostcity_defense_modifier
-					}
-				}
-			}
-			debug_log = "City Boost to Defenders"			
-			scope:defender = {
-				add_modifier = { name = nda_lostcity_defense_modifier }
-			}
-		}
+		# 		scope:defender = {
+		# 			NOT = {
+		# 				has_modifier = nda_lostcity_defense_modifier
+		# 			}
+		# 		}
+		# 	}
+		# 	debug_log = "City Boost to Defenders"			
+		# 	scope:defender = {
+		# 		add_modifier = { name = nda_lostcity_defense_modifier }
+		# 	}
+		# }
 	}
 }

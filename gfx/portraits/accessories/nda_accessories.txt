@@ -1,9 +1,54 @@
 ﻿# # These assets are then used in the genes (game/common/genes/..) at the bottom of the file. 
 
+male_robe_cultist_master = {
+
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "male_top_layer_cultist_master_own_entity" } #"male_top_layer_ethiopian_royal_02_entity"}	#
+}
+
+male_robe_eldritch_master = {
+
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "male_top_layer_eldritch_master_entity" } #"male_top_layer_ethiopian_royal_02_entity"}	#
+}
+
+male_robe_dagonic_master = {
+
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "male_top_layer_dagonic_master_entity" } #"male_top_layer_ethiopian_royal_02_entity"}	#
+}
+
+male_robe_yigian_master = {
+
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "male_top_layer_yigian_master_entity" } #"male_top_layer_ethiopian_royal_02_entity"}	#
+}
+
+female_robe_cultist_master = {
+
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "female_top_layer_cultist_master_entity" } #female_outfit_chinese_01_high"male_top_layer_ethiopian_royal_02_entity"}	#
+}
+
+female_robe_eldritch_master = {
+
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "female_top_layer_eldritch_master_entity" } #"female_outfit_polynesian_01_high" } #"male_top_layer_ethiopian_royal_02_entity"}	#
+}
+
+female_robe_dagonic_master = {
+
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "female_top_layer_dagonic_master_entity" } #"female_outfit_chinese_01_high" } #""male_top_layer_ethiopian_royal_02_entity"}	#
+}
+
+female_robe_yigian_master = {
+
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "female_top_layer_yigian_master_entity" } #"female_outfit_chinese_01_high" } #""male_top_layer_ethiopian_royal_02_entity"}	#
+}
+
+# male_top_layer_ethiopian_royal_01 = {
+
+# 	entity = { required_tags = ""					shared_pose_entity = torso		entity = "male_top_layer_ethiopian_royal_01_entity" }	
+# }
+
 # #####################################
-# #									#
-# # 			 Cultist Headgear		#
-# #									#
+# #									  #
+# # 			 Cultist Headgear	  #
+# #									  #
 # #####################################
 
 

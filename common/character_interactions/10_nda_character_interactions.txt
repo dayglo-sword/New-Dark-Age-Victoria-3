@@ -103,7 +103,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		}	
 		if = {
 			limit = {
-				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # nmore chance if cult IG			
+				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # more chance if cult IG			
 			}
 
 			add = 15
@@ -253,6 +253,16 @@ initiate_into_coven = { # If not already give character eldritch trait
 
 			add = 100
 		}
+		if = { # Devout should be in opposition 
+			limit = { 
+				interest_group = { is_interest_group_type = ig_devout } 
+			}
+			add = -30
+
+			if = { limit = { owner = { is_full_cult_country = { COUNTRY="THIS" } }}
+				add = -50 # 'Free Worshippers' shouldn't have cultist leading
+			}
+		}	
 		if = {
 			limit = {
 				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
@@ -300,6 +310,7 @@ convert_to_dagon = { # If not already give character eldritch trait
 		custom_tooltip = {
 			text = nda_eldritch_cultist_tt
 			has_eldritch_trait = yes
+			has_dagonic_trait = no # possible to have both so restrict
 		}
 	}		
 
@@ -392,6 +403,7 @@ convert_to_yig = { # If not already give character eldritch trait
 		custom_tooltip = {
 			text = nda_eldritch_cultist_tt
 			has_eldritch_trait = yes
+			has_yigian_trait = no # possible to have both so restrict
 		}
 	}		
 
@@ -598,7 +610,7 @@ adopt_cult_culture = {
 	show_requirements = yes
 
 	ai_chance = {
-		value = 15
+		value = 5
 		if = {
 			limit = {
 				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # need to be for cult IG! Other effects can set it by default, but use this as catch all just in case
@@ -627,11 +639,15 @@ adopt_cult_culture = {
 			limit = {
 				has_non_cultist_ideology = yes				
 			}
-			add = -10
+			add = -20
 		}	
 		if = {
 			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
-			add = -10
+			add = -20
 		}	
+		if = {
+			limit = { is_historical = yes } # Changing historical culture can change DNA depiction!!!!
+			add = -50
+		}
 	}
 }

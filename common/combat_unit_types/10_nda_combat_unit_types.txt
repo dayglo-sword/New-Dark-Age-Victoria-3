@@ -44,7 +44,7 @@ combat_unit_type_leviathan = {
     group = combat_unit_group_capital_ship
 
     upkeep_modifier = {
-        goods_input_fish_add = 30
+        goods_input_fish_add = 50
     }
 
     battle_modifier = {
@@ -56,6 +56,8 @@ combat_unit_type_leviathan = {
     can_build = {
        c:DGN ?= THIS
         #has_technology_researched = battleship_tech
+        has_global_variable = nda_cthulhu_arrives
+        NOT = { has_global_variable = nda_ritual_cthulhu_leaves }
     }
 
     # Fallback if nothing else matches

@@ -109,6 +109,7 @@ mobilization_option_nda_west_tonic = {
 	upkeep_modifier = {
 		goods_input_opium_add = 2
 		goods_input_tools_add = 1
+		goods_input_black_lotus_add = 0.1
 	}
 	unit_modifier = {
 		unit_recovery_rate_add = 0.5

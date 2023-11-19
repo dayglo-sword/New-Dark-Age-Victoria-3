@@ -16,7 +16,10 @@
 		# don't include for cultists
 		NOT = {
 			#c:NDA_ARES ?= THIS	
-			is_full_cult_country = { COUNTRY="THIS" }			
+			AND = {
+				is_full_cult_country = { COUNTRY="ROOT" }	
+				has_global_variable = nda_ritual_cthulhu_leaves
+			}	
 		}
 	}
 
@@ -67,8 +70,11 @@
 	}
 		
     complete = {
-		# needs to close if country converts to full cult country
-		is_full_cult_country = { COUNTRY="THIS" }	
+		# needs to close if country converts to full cult country - re-enable after CTH leaves - invalid stops it repeating??
+		AND - {
+			is_full_cult_country = { COUNTRY="ROOT" }	
+			NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+		}
 	}
 	
 	# Establish Colonial Administration

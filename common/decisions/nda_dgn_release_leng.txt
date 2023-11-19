@@ -32,7 +32,8 @@
 								is_cultist_country = no
 							}
 							debug_log = "Make HNA Cultist"
-							trigger_event = { id = nda_base.7 }		
+							#trigger_event = { id = nda_base.7 days= 2 }	
+							add_journal_entry = { type = je_nda_cult_spreads }		
 						}
 					}
 				}
@@ -49,7 +50,8 @@
 								is_cultist_country = no
 							}
 							debug_log = "Make GNG Cultist"
-							trigger_event = { id = nda_base.7 }		
+							#trigger_event = { id = nda_base.7 days = 4 }	
+							add_journal_entry = { type = je_nda_cult_spreads }		
 						}
 					}
 				}
@@ -67,7 +69,8 @@
 								is_cultist_country = no
 							}
 							debug_log = "Make YUN Cultist"
-							trigger_event = { id = nda_base.7 }		
+							#trigger_event = { id = nda_base.7 days = 6 }	
+							add_journal_entry = { type = je_nda_cult_spreads }		
 						}
 					}
 				}
@@ -85,7 +88,8 @@
 								is_cultist_country = no
 							}
 							debug_log = "Make SHN Cultist"
-							trigger_event = { id = nda_base.7 }		
+							#trigger_event = { id = nda_base.7 days = 8 }
+							add_journal_entry = { type = je_nda_cult_spreads }			
 						}
 					}
 				}
@@ -103,7 +107,8 @@
 								is_cultist_country = no
 							}
 							debug_log = "Make GUI Cultist"
-							trigger_event = { id = nda_base.7 }		
+							#trigger_event = { id = nda_base.7 days = 10 }
+							add_journal_entry = { type = je_nda_cult_spreads }			
 						}
 					}
 				}
@@ -122,7 +127,8 @@
 								is_cultist_country = no
 							}
 							debug_log = "Make TUV Cultist"
-							trigger_event = { id = nda_base.7 }		
+							#trigger_event = { id = nda_base.7 days = 12 }	
+							add_journal_entry = { type = je_nda_cult_spreads }		
 						}
 					}
 				}
@@ -205,14 +211,18 @@
 				change_tag = LEN # now change to Leng
 			}
 
-			c:LEN = {
+			#c:LEN = {
 				# time delay to let cult ig form
-				trigger_event = {
-					on_action = nda_create_leng_on_action
-					days = 7 # days/months/years = X
-				}
-				#nda_effect_leng_setup = yes
-			}						
+				# trigger_event = {
+				# 	on_action = nda_create_leng_on_action
+				# 	days = 7 # days/months/years = X
+				# }
+				#on_actions = {
+				#	delay = { days = 7 }
+				#	nda_create_leng_on_action				
+				#}
+				#nda_effect_leng_setup = yes	# trust the on action to launch this			
+			#}						
 		}
 	}
 
@@ -229,6 +239,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 		# no china - presume takeover (DGN or ELD)
 		NOT = { exists = c:CHI }		
 		NOT = { exists = c:TIB } # Only do if we can't trigger the Leng release above
+		NOT = { exists = c:LEN } # don't do if Leng exists
 	}
 
 	possible = {
@@ -265,7 +276,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make HNA Cultist"
-							trigger_event = { id = nda_base.7 }		
+							trigger_event = { id = nda_base.7 days = 1 }		
 						}
 					}
 				}
@@ -282,7 +293,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make GNG Cultist"
-							trigger_event = { id = nda_base.7 }		
+							trigger_event = { id = nda_base.7 days = 2 }		
 						}
 					}
 				}
@@ -300,7 +311,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make YUN Cultist"
-							trigger_event = { id = nda_base.7 }		
+							trigger_event = { id = nda_base.7 days = 3 }		
 						}
 					}
 				}
@@ -318,7 +329,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make SHN Cultist"
-							trigger_event = { id = nda_base.7 }		
+							trigger_event = { id = nda_base.7 days = 4 }		
 						}
 					}
 				}
@@ -336,7 +347,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make GUI Cultist"
-							trigger_event = { id = nda_base.7 }		
+							trigger_event = { id = nda_base.7 days = 5 }		
 						}
 					}
 				}
@@ -355,7 +366,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make TUV Cultist"
-							trigger_event = { id = nda_base.7 }		
+							trigger_event = { id = nda_base.7 days = 6 }		
 						}
 					}
 				}
@@ -376,7 +387,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make MGL Cultist"
-							trigger_event = { id = nda_base.7 }		
+							trigger_event = { id = nda_base.7 days = 7 }		
 						}
 					}
 				}
@@ -397,7 +408,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make MGL Cultist"
-							trigger_event = { id = nda_base.7 }		
+							trigger_event = { id = nda_base.7 days = 8 }		
 						}
 					}
 				}

@@ -1079,7 +1079,7 @@ nda_base.15 = { # Is there non-conformists leader within the cult
 	trigger = {
 		exists = ig:ig_nda_cult_worshippers
 		ig:ig_nda_cult_worshippers = {
-			leader = { 
+			leader ?= { 
 				has_any_cultist_trait = yes
 				has_non_cultist_ideology = yes
 			} 

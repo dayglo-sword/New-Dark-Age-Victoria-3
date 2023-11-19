@@ -2,10 +2,11 @@
 	is_shown = {
 		is_player = no
 		OR = {
-			AND = {
-				exists = c:ELD
-				this = c:ELD				
-			}
+			# now via journal button for ELD
+			# AND = {
+			# 	exists = c:ELD
+			# 	this = c:ELD				
+			# }
 			AND = {
 				exists = c:STY
 				this = c:STY				

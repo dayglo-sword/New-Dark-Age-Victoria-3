@@ -309,7 +309,7 @@ je_nda_cult_to_yigian = {
 				limit = { 
 					is_marginal = no 
 					leader = { 
-						has_dagonic_trait = yes
+						has_yigian_trait = yes
 					}
 				}
 				

@@ -36,14 +36,17 @@ nda_cult_renaissance_country_modifier = {
 	country_bureaucracy_mult = 0.2
 	unit_army_defense_mult = 0.2
 	unit_army_offense_mult = 0.2	
+	state_slave_import_mult = 0.5
 }
 
 nda_cult_decline_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	country_authority_mult = -0.3
 	country_bureaucracy_mult = -0.3
-	unit_army_defense_mult = -0.1
-	unit_army_offense_mult = -0.1	
+	unit_army_defense_mult = -0.2
+	unit_army_offense_mult = -0.2	
+	unit_recovery_rate_add = -0.2
+	#unit_morale_loss_add = -0.2
 }
 
 nda_reanimated_state_modifier = {
@@ -161,8 +164,8 @@ nda_lostcity_defense_modifier = {
 
 nda_red_death_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	state_mortality_mult = 1.5 # needs to be more? or scaled like plague?
-	state_migration_pull_mult = -0.2
+	state_mortality_mult = 1.7 # needs to be more? or scaled like plague?
+	state_migration_pull_mult = -0.3
 }
 
 nda_hastur_critics_choice_ig_modifier = {

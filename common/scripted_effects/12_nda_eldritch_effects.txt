@@ -19,6 +19,12 @@
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_oligarchy
 
+		# if not slave then regress
+		if = { 
+			limit = { has_law = law_type:law_slavery_banned }
+			activate_law = law_type:law_debt_slavery
+		}
+
 		# set devout to be cultists and to be power brokers
 		ig:ig_nda_cult_worshippers = {
 			set_interest_group_name = ig_nda_cultist_church
@@ -223,7 +229,7 @@ nda_effect_eldritch_annex = {
 					make_independent = yes				
 				}	
 				
-				ig:ig_nda_cult_worshippers = {
+				ig:ig_nda_cult_worshippers = { # add cult leader to exile 
 					leader = {
 						debug_log = "'Exile' Cult Leader : [THIS.GetCountry.GetNameNoFormatting]"					
 						hidden_effect = {
@@ -256,114 +262,103 @@ nda_effect_eldritch_annex = {
 						remove_variable = nda_coven_leader		
 
 						exile_character_with_martyrdom = yes
-						set_home_country = c:ELD # are characters disappearing because original home is gone?			
-						#transfer_character = c:ELD
-
+						set_home_country = c:ELD # are characters disappearing because original home is gone?								
 					}
 				}
-				# # transfer a leading character to the main ELD country (preferably an historic one)
-				# ordered_scope_character = {
-				# 	limit = { 
-				# 		is_ruler = no
-				# 		has_role = politician
-				# 		has_any_cultist_trait = yes
-				# 	}
-				# 	order_by = { 
-				# 		add = 1
-				# 		if = {
-				# 			limit = { has_trait = nda_master }
-				# 			add = 3
-				# 		}
-				# 		if = {
-				# 			limit = { has_trait = nda_acolyte }
-				# 			add = 1
-				# 		}
-				# 		if = {
-				# 			limit = {
-				# 				interest_group = { is_powerful = no }							
-				# 			}
-				# 			add = 2
-				# 		}
-				# 		if = {
-				# 			limit = { is_historical = yes }
-				# 			add = 5
-				# 		}
-				# 	}
-				# 	max = 1
-				# 	save_scope_as = transfered_ig_leader
-					
-				# }
-		
-				# IF = {
-				# 	limit = { exists = scope:transfered_ig_leader }
-				# 	debug_log = "ELD - Transfer Character : [THIS.GetCountry.GetNameNoFormatting]"					
-				# 	scope:transfered_ig_leader = {
-				# 		IF = {
-				# 			limit = {
-				# 				NOT = { has_role = agitator }
-				# 			}
-				# 			add_character_role = agitator # make an agitator before kicking out
-				# 		}
-				# 		set_home_country = c:ELD 
-				# 		exile_character_with_martyrdom = yes					
-				# 		#transfer_character = c:ELD
-				# 		remove_variable = nda_coven_leader
-				# 	}			
-				# }
-				# else = {
-				# 	debug_log = "ELD - Transfer Character : Not Found"	
-				# }					
 
-				# ordered_scope_character = {
-				# 	limit = { 
-				# 		is_ruler = no
-				# 		has_role = general
-				# 		has_any_cultist_trait = yes
-				# 	}
-				# 	order_by = { 
-				# 		add = 1
-				# 		if = {
-				# 			limit = { is_historical = yes }
-				# 			add = 5
-				# 		}
-				# 	}
-				# 	max = 1
-				# 	save_scope_as = transfered_ig_general
+			# transfer a leading character to ELD (preferably an historic one)
+			ordered_scope_character = {
+				limit = { 
+					is_ruler = no
+					has_role = politician
+					has_any_cultist_trait = yes
+				}
+				order_by = { 
+					add = 1
+					if = {
+						limit = { has_trait = nda_master }
+						add = 3
+					}
+					if = {
+						limit = { has_trait = nda_acolyte }
+						add = 1
+					}
+					if = {
+						limit = {
+							interest_group = { is_powerful = yes }							
+						}
+						add = 2
+					}
+					if = {
+						limit = { is_historical = yes }
+						add = 5
+					}
+				}
+				max = 1
+				save_scope_as = transfered_ig_leader
+				
+			}
+	
+			IF = {
+				limit = { exists = scope:transfered_ig_leader }
+				scope:transfered_ig_leader = {
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = { has_role = agitator }
+							}
+							add_character_role = agitator
+						}
+						if = {
+							limit = {
+								has_role = general
+							}
+							remove_character_role = general
+						}
+						if = {
+							limit = {
+								has_role = admiral
+							}
+							remove_character_role = admiral
+						}
+						# if = {
+						# 	limit = {
+						# 		has_role = politician
+						# 	}
+						# 	set_as_interest_group_leader = no
+						# 	remove_character_role = politician
+						# }
+					}
+
+					remove_variable = nda_coven_leader
+
+					interest_group = {
+						save_scope_as = target_IG_type						
+					}
+
+					if = { 
+						limit = { 
+							has_trait = nda_master 
+							# the respective chararater does not, so replace with senior cultist							
+							c:ELD = { 
+								any_interest_group = { 
+									is_same_interest_group_type = scope:target_IG_type 
+									NOT = { leader = { has_trait = nda_master } }
+								} 
+							}
+						}
+						transfer_character = c:ELD
+						set_as_interest_group_leader = yes
+
+						debug_log = "ELD Master Transfered"
+					}
+					else = {
+						exile_character_with_martyrdom = yes
+						debug_log = "ELD Master Released"						
+					}
 					
-				# }
-				# IF = {
-				# 	limit = { exists = scope:transfered_ig_general }
-				# 	scope:transfered_ig_general = {			
-				# 		transfer_character = c:ELD
-				# 		remove_variable = nda_coven_leader
-				# 		place_character_in_void = 2
-				# 	}			
-				# }	
-				# ordered_scope_character = {
-				# 	limit = { 
-				# 		is_ruler = no
-				# 		has_role = admiral
-				# 		has_any_cultist_trait = yes
-				# 	}
-				# 	order_by = { 
-				# 		add = 1
-				# 		if = {
-				# 			limit = { is_historical = yes }
-				# 			add = 5
-				# 		}
-				# 	}
-				# 	max = 1
-				# 	save_scope_as = transfered_ig_admiral
-					
-				# }
-				# IF = {
-				# 	limit = { exists = scope:transfered_ig_admiral }
-				# 	scope:transfered_ig_admiral = {			
-				# 		transfer_character = c:ELD
-				# 		remove_variable = nda_coven_leader
-				# 		place_character_in_void = 2
-				# 	}			
-				# }
+				}			
+			}
 			}
 			annex = scope:nda_eldritch_annex
 

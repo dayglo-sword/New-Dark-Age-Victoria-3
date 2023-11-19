@@ -1,0 +1,158 @@
+﻿special_genes = {
+	accessory_genes = {
+	#####################################
+	#									#
+	# 		   CULTIST TOP LAYER		#
+	#									#
+	#####################################
+
+		nda_top_layer = {
+			inheritable = no
+			
+			all_top_layers = {
+				index = 0
+				male = {
+				}
+				female = {
+				}
+				boy = male
+				girl = female
+			}		
+
+			no_top_layer = {
+				index = 1
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}	 
+
+
+			# Cultist - based on Ethiopian
+			eldritch_master_top_layer = {
+				index = 100
+				male = {
+					1 = male_robe_eldritch_master #male_top_layer_ethiopian_royal_01 #male_top_layer_south_american_bandit_lampiao_01 #
+				}
+
+				female = {
+					1 = female_robe_eldritch_master
+				}
+				boy = male
+				girl = male
+			} 
+			dagonic_master_top_layer = {
+				index = 101
+				male = {
+					1 = male_robe_dagonic_master #male_top_layer_ethiopian_royal_01 #male_top_layer_south_american_bandit_lampiao_01 #
+				}
+
+				female = {
+					1 = female_robe_dagonic_master
+				}
+				boy = male
+				girl = male
+			} 
+			yigian_master_top_layer = {
+				index = 102
+				male = {
+					1 = male_robe_yigian_master #male_top_layer_ethiopian_royal_01 #male_top_layer_south_american_bandit_lampiao_01 #
+				}
+
+				female = {
+					1 = female_robe_yigian_master
+				}
+				boy = male
+				girl = male
+			} 
+			cultist_master_top_layer = {
+				index = 103
+				male = {
+					1 = male_robe_cultist_master #male_top_layer_ethiopian_royal_01 #male_top_layer_south_american_bandit_lampiao_01 #
+				}
+
+				female = {
+					1 = female_robe_cultist_master
+				}
+				boy = male
+				girl = male
+			} 
+		}
+
+	#####################################
+	#									#
+	# 			CULTIST HEADGEAR		#
+	#									#
+	#####################################
+
+		nda_headgear = {
+			inheritable = no		
+
+			no_headgear = {
+				index = 1
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			cultist_mask_headgear = {
+				index = 110
+				male = {
+					1 = cultist_headgear_mask
+				}
+
+				female = {
+					1 = cultist_headgear_mask_female
+				}
+				boy = male
+				girl = female
+			}
+
+			cultist_mask_headgear_eldritch = {
+				index = 100
+				male = {
+					1 = cultist_headgear_mask_eldritch
+				}
+
+				female = {
+					1 = cultist_headgear_mask_eldritch_female
+				}
+				boy = male
+				girl = female
+			}
+
+			cultist_mask_headgear_yigian = {
+				index = 101
+				male = {
+					1 = cultist_headgear_mask_yigian
+				}
+
+				female = {
+					1 = cultist_headgear_mask_yigian_female
+				}
+				boy = male
+				girl = female
+			}
+
+			cultist_mask_headgear_dagonic = {
+				index = 102
+				male = {
+					1 = cultist_headgear_mask_dagonic
+				}
+
+				female = {
+					1 = cultist_headgear_mask_dagonic_female
+				}
+				boy = male
+				girl = female
+			}
+
+		}
+
+	}
+}

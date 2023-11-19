@@ -146,6 +146,12 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 			# set religion
 			set_state_religion = rel:nda_rel_yigian
 
+			# convert cultist chars to yigian
+			every_scope_character = {
+				limit = { culture = cu:nda_cul_cultist }
+				change_character_culture = cu:nda_cul_yigian 					
+			}
+
 			# notify players of change
 			save_scope_as = originator
 

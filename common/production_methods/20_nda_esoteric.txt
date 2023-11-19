@@ -78,7 +78,7 @@ pm_nda_esoteric_vril = { # supernatural energy - can power advanced tech and pro
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10
+			state_pollution_generation_add = 100
 		}
 	}
 
@@ -104,7 +104,7 @@ pm_nda_esoteric_blacklotus = { # supernatural drug / poison - should be own good
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10
+			state_pollution_generation_add = 100
 		}
 	}
 
@@ -128,7 +128,7 @@ pm_nda_esoteric_goods = { # balanced goods between Vril and black lotus
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_pollution_generation_add = 10
+			state_pollution_generation_add = 100
 		}
 	}
 

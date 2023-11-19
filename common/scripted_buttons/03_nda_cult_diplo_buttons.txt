@@ -1,0 +1,423 @@
+﻿# previously were decisions - moved to journal
+je_nda_cult_diplo_btn_recognise_dagonic_lands = {
+	name = "je_nda_cult_diplo_btn_recognise_dagonic_lands"
+	desc = "je_nda_cult_diplo_btn_recognise_dagonic_lands_desc"
+
+	visible = { 
+		exists = c:ELD
+		this = c:ELD
+	}
+
+	possible = {
+		any_scope_state = { #is in coastal asia/pacific
+			#owner = ROOT
+			is_coastal = yes
+			state_region = {
+					is_homeland = cu:nda_cul_cultist
+					NOT = { is_homeland = cu:nda_cul_dagonic }
+			}	
+			OR = {
+				region = sr:region_indochina
+				region = sr:region_indonesia
+				region = sr:region_north_china
+				region = sr:region_manchuria
+				region = sr:region_south_china
+				region = sr:region_japan
+				region = sr:region_oceania
+				region = sr:region_south_india
+			}		
+
+		}
+
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no		
+	}
+
+	ai_chance = {
+		base = 5	
+
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}	
+	}
+
+	effect = {
+		debug_log = "nda_eld_recognise_dagonic_lands" 
+		# set nda_cul_dagonic
+		every_scope_state = {
+			#IF = {
+				limit = { 
+					#owner = ROOT
+				 	#is_potentially_dagonic_lands = yes 
+					is_coastal = yes
+					state_region = {
+						is_homeland = cu:nda_cul_cultist
+						NOT = { is_homeland = cu:nda_cul_dagonic }
+					}	
+					OR = {
+						region = sr:region_indochina
+						region = sr:region_indonesia
+						region = sr:region_north_china
+						region = sr:region_manchuria
+						region = sr:region_south_china
+						region = sr:region_japan
+						region = sr:region_oceania
+						region = sr:region_south_india
+					}
+				}	
+
+				state_region = {
+					add_homeland = cu:nda_cul_dagonic
+					remove_homeland = cu:nda_cul_cultist						
+				}
+							
+			#}
+
+			# convert some cultists to dagonic	
+			hidden_effect = {				
+				every_scope_pop = {
+					limit = {
+						culture = cu:nda_cul_cultist
+					}
+					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
+				}
+			}
+		}
+		custom_tooltip = nda_eld_recognise_dagonic_lands_tooltip
+	}
+}
+
+je_nda_cult_diplo_btn_release_dagonic_lands = {
+	name = "je_nda_cult_diplo_btn_release_dagonic_lands"
+	desc = "je_nda_cult_diplo_btn_release_dagonic_lands_desc"
+
+	visible = { 
+		exists = c:ELD
+		this = c:ELD
+		exists = c:DGN
+	}
+
+	possible = {
+		c:DGN = { relations:root >= relations_threshold:amicable }
+		any_scope_state = { 
+			state_region = {
+					is_homeland = cu:nda_cul_dagonic
+			}	
+		}
+
+		has_healthy_economy = yes
+		
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no
+	}
+
+	ai_chance = {
+		base = 5
+
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}	
+	}
+
+	effect = {
+		debug_log = "nda_eld_release_dagonic_lands" 
+		custom_tooltip = nda_eld_release_dagonic_lands_tooltip
+
+		# set to Dagonic
+		every_scope_state = {
+			limit = { 
+				state_region = {
+					is_homeland = cu:nda_cul_dagonic
+				}	
+			}	
+			state_region = {
+				remove_claim = c:ELD
+				remove_homeland = cu:nda_cul_cultist
+			}
+
+			set_state_owner = c:DGN
+			hidden_effect = {
+				# convert some cultists to yigian					
+				every_scope_pop = {
+					limit = {
+						culture = cu:nda_cul_cultist
+					}
+					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
+				}
+			}
+		}
+		
+		change_relations = { country = c:DGN value = 100 } # Make friends
+	}
+}
+
+
+je_nda_cult_diplo_btn_recognise_yigian_lands = {
+	name = "je_nda_cult_diplo_btn_recognise_yigian_lands"
+	desc = "je_nda_cult_diplo_btn_recognise_yigian_lands_desc"
+
+	visible = { 
+		exists = c:ELD
+		this = c:ELD
+	}
+
+	possible = {
+
+		any_scope_state = { #is in coastal asia/pacific
+			
+			is_potentially_yigian_lands = yes
+			state_region = {
+					is_homeland = cu:nda_cul_cultist
+					NOT = { is_homeland = cu:nda_cul_yigian }
+			}	
+		}
+
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no		
+	}
+
+	ai_chance = {
+		base = 5	
+
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}	
+	}
+
+	effect = {
+		debug_log = "nda_eld_recognise_yigian_lands" 
+		custom_tooltip = nda_eld_recognise_yigian_lands_tooltip
+
+		# set nda_cul_yigian
+		every_scope_state = {
+			#IF = {
+				limit = { 
+					is_potentially_yigian_lands = yes
+					state_region = {
+						is_homeland = cu:nda_cul_cultist
+						NOT = { is_homeland = cu:nda_cul_yigian }
+					}	
+				}	
+
+				state_region = {
+					add_homeland = cu:nda_cul_yigian
+					remove_homeland = cu:nda_cul_cultist						
+				}
+							
+			#}
+
+			# convert some cultists to yigian	
+			hidden_effect = {
+				every_scope_pop = {
+					limit = {
+						culture = cu:nda_cul_cultist
+					}
+					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
+				}
+			}				
+		}
+	}
+}
+
+je_nda_cult_diplo_btn_release_yigian_lands = {
+	name = "je_nda_cult_diplo_btn_release_yigian_lands"
+	desc = "je_nda_cult_diplo_btn_release_yigian_lands_desc"
+
+	visible = { 
+		exists = c:ELD
+		this = c:ELD
+		exists = c:YIG
+	}
+
+	possible = {
+		c:YIG = { relations:root >= relations_threshold:amicable }
+
+		any_scope_state = { 
+			state_region = {
+				is_homeland = cu:nda_cul_yigian
+			}	
+		}
+
+		has_healthy_economy = yes
+		
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no
+	}
+
+	ai_chance = {
+		base = 5
+
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}	
+	}
+
+	effect = {
+		debug_log = "nda_eld_release_yigian_lands" 
+		custom_tooltip = nda_eld_release_yigian_lands_tooltip
+
+		# set to Yigian
+		every_scope_state = {
+			limit = { 
+				state_region = {
+					is_homeland = cu:nda_cul_yigian
+				}	
+			}	
+
+			state_region = {
+				remove_claim = c:ELD
+				remove_homeland = cu:nda_cul_cultist
+			}
+			
+			set_state_owner = c:YIG
+			hidden_effect = {
+				# convert some cultists to yigian					
+				every_scope_pop = {
+					limit = {
+						culture = cu:nda_cul_cultist
+					}
+					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
+				}
+			}
+		}
+		
+		change_relations = { country = c:YIG value = 100 } # Make friends
+	}
+}
+
+je_nda_cult_diplo_btn_nameless_city = {
+	name = "je_nda_cult_diplo_btn_nameless_city"
+	desc = "je_nda_cult_diplo_btn_nameless_city_desc"
+
+	visible = { 
+		is_player = no
+		OR = {
+			AND = {
+				exists = c:ELD
+				this = c:ELD				
+			}
+			AND = {
+				exists = c:STY
+				this = c:STY				
+			}			
+		}
+
+		p:x68A578 = {
+			state = {
+				NOT = { owner = ROOT }
+				NOT = { has_building = building_nda_lostcity_nameless_city }
+				owner = {
+					is_revolutionary = no # wait till revoultion is over
+					is_adjacent_to_country = ROOT
+				}
+			}
+		}
+	}
+
+	possible = {
+		NOT = { has_variable = nda_eld_nameless_city_cooldown }	# use truce check instead
+
+		p:x68A578 = {
+			state = {
+				owner = {
+					is_at_war = no
+					is_adjacent_to_country = ROOT
+					#save_scope_as = conquest_target
+					country_rank < rank_value:minor_power 
+				}
+			}
+		}
+
+		has_healthy_economy = yes
+		
+		# same as alaska decision
+		in_default = no
+		taking_loans = no
+		is_at_war = no
+	}
+
+	ai_chance = {
+		base = 10
+
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}	
+	}
+
+	effect = {
+		p:x68A578 = {
+			state = {
+				owner = {
+					save_scope_as = conquest_target_country
+				}
+			}
+		}
+
+		# don't keep repeating! When they have strong allies it's painful
+		hidden_effect = {
+			set_variable = {
+				name = nda_eld_nameless_city_cooldown
+				months = 36
+			}			
+		}
+
+		create_diplomatic_play = {
+			name = nda_dp_final_war
+		
+			target_country = scope:conquest_target_country
+			
+			war = yes 
+			
+			type = dp_annex_war # dp_conquer_state - can't be done ??
+
+		} 
+	}
+}

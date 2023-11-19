@@ -46,6 +46,12 @@
  je_nda_knyan_search:0 "Search for K'N-Yan"
  je_nda_knyan_search_reason:0 "It is rumoured that there is a great lost realm below the earth with its entrance hidden."
  je_nda_knyan_search_goal:0 "Find clues to the location of K'N-Yan"
+ je_nda_knyan_search_possible_tt:0 "The lost realm of K'N-Yan can still be found."
+ je_nda_knyan_search_complete_tt:0 "We have tracked down the location of K'N-Yan"
+
+# Eldritch Colonial
+je_nda_eldritch_colonial_administration:0 "Colonial Administration"
+je_nda_eldritch_colonial_administration_reason:0 "Without the Great Cthulhu to hold things together we must seek a better way to control our minions in Africa."
 
 # Maritime Expansion
 je_nda_maritimes:0 "Maritime Expansion"

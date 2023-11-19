@@ -24,8 +24,18 @@ je_the_eastern_border = {
         }
     }
     immediate = {
-        c:CHI = {
+        # do not stop journal just because China no longer exists       
+        c:CHI ?= {
             save_scope_as = china_scope
+        }
+        if = {
+             limit = { 
+                NOT = { exists = scope:china_scope } 
+                exists = c:DGN # most probable power in region (possibly Leng as well?)
+            }
+            c:DGN = {
+                save_scope_as = china_scope
+            }
         }
         s:STATE_OUTER_MANCHURIA = {
             add_claim = c:RUS
