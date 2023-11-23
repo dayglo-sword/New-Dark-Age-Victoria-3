@@ -210,10 +210,10 @@ nda_cultist_robe = {
                         has_variable = nda_coven_leader     
                         has_trait = nda_yig_master                  
                     }
-                    OR = {
-                        EXISTS = c:YIG
-                        EXISTS = c:STY
-                    }
+                    # OR = {
+                    #     EXISTS = c:YIG
+                    #     EXISTS = c:STY
+                    # }
                     owner = { country_has_primary_culture = cu:nda_cul_yigian } 
                 }
             }
@@ -242,7 +242,7 @@ nda_cultist_robe = {
                 add = 500
                 scope:character ?= {
                     is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
-                    EXISTS = c:DGN # only after DGN appears
+                    #EXISTS = c:DGN # only after DGN appears
                     OR = {
                         has_variable = nda_coven_leader 
                         has_trait = nda_dagon_master                       

@@ -18,8 +18,8 @@
  je_nda_cult_spreads_btn_purge_protected_speech_tooltip:0 "This goes against the principle of Protected Speech."
  je_nda_cult_spreads_btn_purge_lead_by_cultist_tooltip:0 "Is lead by a Cultist."
  je_nda_cult_spreads_btn_purge_is_cultist_tooltip:0 "Is a Cultist."
- je_nda_cult_spreads_btn_purge_cooldown_tt:0 "Not on 3 Month Cooldown"
- je_nda_cult_spreads_btn_purge_cooldown_effect_tt:0 "Will have 3 month cooldown"
+ je_nda_cult_spreads_btn_purge_cooldown_tt:0 "Not on 12 Month Cooldown"
+ je_nda_cult_spreads_btn_purge_cooldown_effect_tt:0 "Will have 12 month cooldown"
 
  je_nda_cult_to_yigian:0 "Yig Worship Spreads"
  je_nda_cult_to_yigian_reason:0 "In the dark corridors of power the Cult is increasingly worshiping [concept_nda_yig].\n\nSlowly the Cultists of this country are switching alliegence and falling under Yig's spell."
@@ -48,6 +48,20 @@
  je_nda_knyan_search_goal:0 "Find clues to the location of K'N-Yan"
  je_nda_knyan_search_possible_tt:0 "The lost realm of K'N-Yan can still be found."
  je_nda_knyan_search_complete_tt:0 "We have tracked down the location of K'N-Yan"
+
+# Cult Diplomacy
+je_nda_cult_diplomacy:0 "Cult Diplomacy"
+je_nda_cult_diplomacy_reason:0 "We should pay attemtion to the needs of the other Cults."
+je_nda_cult_diplo_btn_recognise_dagonic_lands:0 "Recognise the Dagonic Shores"
+je_nda_cult_diplo_btn_recognise_dagonic_lands_desc:0 "Along certain sections of our coasts the worship of Dagon grows strong. May be it is time we recognised them as our potential allies."
+je_nda_cult_diplo_btn_release_dagonic_lands:0 "Release the Dagonic Lands"
+je_nda_cult_diplo_btn_release_dagonic_lands_desc:0 "It is in our power to release to the Deep Ones their homelands which we currently occupy."
+je_nda_cult_diplo_btn_recognise_yigian_lands:0 "Recognise the Yigian Lands"
+je_nda_cult_diplo_btn_recognise_yigian_lands_desc:0 "Certain sections of our land have an historical afinity to the worship of Yig. May be it is time we recognised them as our potential allies."
+je_nda_cult_diplo_btn_release_yigian_lands:0 "Release the Yigian Lands"
+je_nda_cult_diplo_btn_release_yigian_lands_desc:0 "It is in our power to release to the Yigians their homelands which we currently occupy."
+je_nda_cult_diplo_btn_nameless_city:0 "Quest for the Nameless City"
+je_nda_cult_diplo_btn_nameless_city_desc:0 "A traveller, from an antique land, has suggested to us that the [concept_nda_nameless_city] is somewhere within the lands of Arabia near Hail. We should conquer this realm to make our search for this lost city easier."
 
 # Eldritch Colonial
 je_nda_eldritch_colonial_administration:0 "Colonial Administration"

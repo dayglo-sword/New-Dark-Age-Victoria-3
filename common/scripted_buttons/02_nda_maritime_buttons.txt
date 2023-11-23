@@ -63,9 +63,12 @@ je_nda_maritimes_btn_new_brunswick = {
 		every_country = {
 			limit = { 
 				country_has_primary_culture = cu:anglo_canadian 
-				NOT = { THIS = ROOT }
+				NOT = { 
+					THIS = ROOT 
+					THIS = c:NBS
+				}
 			}
-			change_relations = { country = c:ROOT value = -50 }
+			change_relations = { country = ROOT value = -50 }
 		}
 	}
 }
@@ -132,12 +135,16 @@ je_nda_maritimes_btn_nova_scotia = {
 		custom_tooltip = je_nda_maritimes_btn_nova_scotia_union_tooltip 
         annex = c:NVS
 		# anger the canadian neighbours = will slow down 2nd integration
+		# anger the canadian neighbours = will slow down 2nd integration
 		every_country = {
 			limit = { 
 				country_has_primary_culture = cu:anglo_canadian 
-				NOT = { THIS = ROOT }
+				NOT = { 
+					THIS = ROOT 
+					THIS = c:NVS
+				}
 			}
-			change_relations = { country = c:ROOT value = -50 }
+			change_relations = { country = ROOT value = -50 }
 		}
 	}
 }
@@ -187,6 +194,7 @@ je_nda_maritimes_btn_old_ways = {
 
 	effect = {
 		custom_tooltip = je_nda_maritimes_btn_old_ways_tooltip 
+		every_scope_state = { limit = { state_region = { is_homeland = cu:anglo_canadian } } state_region = {  add_homeland = cu:nda_cul_trueyankee } }
 		set_variable = nda_maritimes_no_canadians
 		add_radicals = { value = 0.1 culture = cu:anglo_canadian }
 		add_radicals = { value = 0.2 culture = cu:franco_canadian }

@@ -2,12 +2,12 @@ pdxmesh = {
 	name = "female_top_layer_cultist_master_mesh"
 	file = "female_top_layer_cultist_master.mesh"
 
-	blend_shape = { id = "female_top_layer_native_american_01_bs_fat"                type = "female_top_layer_native_american_01_bs_fat.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_gaunt"              type = "female_top_layer_native_american_01_bs_gaunt.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_infant"             type = "female_top_layer_native_american_01_bs_infant.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_old"                type = "female_top_layer_native_american_01_bs_old.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_thick"              type = "female_top_layer_native_american_01_bs_thick.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_thin"               type = "female_top_layer_native_american_01_bs_thin.mesh" }
+	blend_shape = { id = "female_top_layer_cultist_master_bs_fat"                type = "female_top_layer_cultist_master_bs_fat.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_gaunt"              type = "female_top_layer_cultist_master_bs_gaunt.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_infant"             type = "female_top_layer_cultist_master_bs_infant.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_old"                type = "female_top_layer_cultist_master_bs_old.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_thick"              type = "female_top_layer_cultist_master_bs_thick.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_thin"               type = "female_top_layer_cultist_master_bs_thin.mesh" }
 	
 
 	meshsettings = {
@@ -26,12 +26,12 @@ entity = {
 	pdxmesh = "female_top_layer_cultist_master_mesh"
 
 
-	attribute = { name = "body_bs_fat"                                 blend_shape = "female_top_layer_native_american_01_bs_fat" }
-    attribute = { name = "body_bs_gaunt"                               blend_shape = "female_top_layer_native_american_01_bs_gaunt" }
-    attribute = { name = "body_bs_infant"                              blend_shape = "female_top_layer_native_american_01_bs_infant" }
-    attribute = { name = "body_bs_old"                                 blend_shape = "female_top_layer_native_american_01_bs_old" }
-    attribute = { name = "body_bs_thick"                               blend_shape = "female_top_layer_native_american_01_bs_thick" }
-    attribute = { name = "body_bs_thin"                                blend_shape = "female_top_layer_native_american_01_bs_thin" }
+	attribute = { name = "body_bs_fat"                                 blend_shape = "female_top_layer_cultist_master_bs_fat" }
+    attribute = { name = "body_bs_gaunt"                               blend_shape = "female_top_layer_cultist_master_bs_gaunt" }
+    attribute = { name = "body_bs_infant"                              blend_shape = "female_top_layer_cultist_master_bs_infant" }
+    attribute = { name = "body_bs_old"                                 blend_shape = "female_top_layer_cultist_master_bs_old" }
+    attribute = { name = "body_bs_thick"                               blend_shape = "female_top_layer_cultist_master_bs_thick" }
+    attribute = { name = "body_bs_thin"                                blend_shape = "female_top_layer_cultist_master_bs_thin" }
 	
 
 
@@ -52,12 +52,12 @@ pdxmesh = {
 	name = "female_top_layer_yigian_master_mesh"
 	file = "female_top_layer_cultist_master.mesh"
 
-	blend_shape = { id = "female_top_layer_native_american_01_bs_fat"                type = "female_top_layer_native_american_01_bs_fat.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_gaunt"              type = "female_top_layer_native_american_01_bs_gaunt.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_infant"             type = "female_top_layer_native_american_01_bs_infant.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_old"                type = "female_top_layer_native_american_01_bs_old.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_thick"              type = "female_top_layer_native_american_01_bs_thick.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_thin"               type = "female_top_layer_native_american_01_bs_thin.mesh" }
+	blend_shape = { id = "female_top_layer_cultist_master_bs_fat"                type = "female_top_layer_cultist_master_bs_fat.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_gaunt"              type = "female_top_layer_cultist_master_bs_gaunt.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_infant"             type = "female_top_layer_cultist_master_bs_infant.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_old"                type = "female_top_layer_cultist_master_bs_old.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_thick"              type = "female_top_layer_cultist_master_bs_thick.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_thin"               type = "female_top_layer_cultist_master_bs_thin.mesh" }
 	
 	meshsettings = {
 		name = "female_top_layer_native_american_01Shape"
@@ -75,12 +75,12 @@ entity = {
 	pdxmesh = "female_top_layer_yigian_master_mesh"
 	
 
-	attribute = { name = "body_bs_fat"                                 blend_shape = "female_top_layer_native_american_01_bs_fat" }
-    attribute = { name = "body_bs_gaunt"                               blend_shape = "female_top_layer_native_american_01_bs_gaunt" }
-    attribute = { name = "body_bs_infant"                              blend_shape = "female_top_layer_native_american_01_bs_infant" }
-    attribute = { name = "body_bs_old"                                 blend_shape = "female_top_layer_native_american_01_bs_old" }
-    attribute = { name = "body_bs_thick"                               blend_shape = "female_top_layer_native_american_01_bs_thick" }
-    attribute = { name = "body_bs_thin"                                blend_shape = "female_top_layer_native_american_01_bs_thin" }
+	attribute = { name = "body_bs_fat"                                 blend_shape = "female_top_layer_cultist_master_bs_fat" }
+    attribute = { name = "body_bs_gaunt"                               blend_shape = "female_top_layer_cultist_master_bs_gaunt" }
+    attribute = { name = "body_bs_infant"                              blend_shape = "female_top_layer_cultist_master_bs_infant" }
+    attribute = { name = "body_bs_old"                                 blend_shape = "female_top_layer_cultist_master_bs_old" }
+    attribute = { name = "body_bs_thick"                               blend_shape = "female_top_layer_cultist_master_bs_thick" }
+    attribute = { name = "body_bs_thin"                                blend_shape = "female_top_layer_cultist_master_bs_thin" }
 }
 
 #Dagonic
@@ -88,12 +88,12 @@ pdxmesh = {
 	name = "female_top_layer_dagonic_master_mesh"
 	file = "female_top_layer_cultist_master.mesh"
 
-	blend_shape = { id = "female_top_layer_native_american_01_bs_fat"                type = "female_top_layer_native_american_01_bs_fat.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_gaunt"              type = "female_top_layer_native_american_01_bs_gaunt.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_infant"             type = "female_top_layer_native_american_01_bs_infant.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_old"                type = "female_top_layer_native_american_01_bs_old.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_thick"              type = "female_top_layer_native_american_01_bs_thick.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_thin"               type = "female_top_layer_native_american_01_bs_thin.mesh" }
+	blend_shape = { id = "female_top_layer_cultist_master_bs_fat"                type = "female_top_layer_cultist_master_bs_fat.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_gaunt"              type = "female_top_layer_cultist_master_bs_gaunt.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_infant"             type = "female_top_layer_cultist_master_bs_infant.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_old"                type = "female_top_layer_cultist_master_bs_old.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_thick"              type = "female_top_layer_cultist_master_bs_thick.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_thin"               type = "female_top_layer_cultist_master_bs_thin.mesh" }
 	
 	meshsettings = {
 		name = "female_top_layer_native_american_01Shape"
@@ -111,12 +111,12 @@ entity = {
 	pdxmesh = "female_top_layer_dagonic_master_mesh"
 	
 
-	attribute = { name = "body_bs_fat"                                 blend_shape = "female_top_layer_native_american_01_bs_fat" }
-    attribute = { name = "body_bs_gaunt"                               blend_shape = "female_top_layer_native_american_01_bs_gaunt" }
-    attribute = { name = "body_bs_infant"                              blend_shape = "female_top_layer_native_american_01_bs_infant" }
-    attribute = { name = "body_bs_old"                                 blend_shape = "female_top_layer_native_american_01_bs_old" }
-    attribute = { name = "body_bs_thick"                               blend_shape = "female_top_layer_native_american_01_bs_thick" }
-    attribute = { name = "body_bs_thin"                                blend_shape = "female_top_layer_native_american_01_bs_thin" }
+	attribute = { name = "body_bs_fat"                                 blend_shape = "female_top_layer_cultist_master_bs_fat" }
+    attribute = { name = "body_bs_gaunt"                               blend_shape = "female_top_layer_cultist_master_bs_gaunt" }
+    attribute = { name = "body_bs_infant"                              blend_shape = "female_top_layer_cultist_master_bs_infant" }
+    attribute = { name = "body_bs_old"                                 blend_shape = "female_top_layer_cultist_master_bs_old" }
+    attribute = { name = "body_bs_thick"                               blend_shape = "female_top_layer_cultist_master_bs_thick" }
+    attribute = { name = "body_bs_thin"                                blend_shape = "female_top_layer_cultist_master_bs_thin" }
 }
 
 # Eldritch
@@ -124,12 +124,12 @@ pdxmesh = {
 	name = "female_top_layer_eldritch_master_mesh"
 	file = "female_top_layer_cultist_master.mesh"
 
-	blend_shape = { id = "female_top_layer_native_american_01_bs_fat"                type = "female_top_layer_native_american_01_bs_fat.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_gaunt"              type = "female_top_layer_native_american_01_bs_gaunt.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_infant"             type = "female_top_layer_native_american_01_bs_infant.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_old"                type = "female_top_layer_native_american_01_bs_old.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_thick"              type = "female_top_layer_native_american_01_bs_thick.mesh" }
-    blend_shape = { id = "female_top_layer_native_american_01_bs_thin"               type = "female_top_layer_native_american_01_bs_thin.mesh" }
+	blend_shape = { id = "female_top_layer_cultist_master_bs_fat"                type = "female_top_layer_cultist_master_bs_fat.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_gaunt"              type = "female_top_layer_cultist_master_bs_gaunt.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_infant"             type = "female_top_layer_cultist_master_bs_infant.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_old"                type = "female_top_layer_cultist_master_bs_old.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_thick"              type = "female_top_layer_cultist_master_bs_thick.mesh" }
+    blend_shape = { id = "female_top_layer_cultist_master_bs_thin"               type = "female_top_layer_cultist_master_bs_thin.mesh" }
 	
 	meshsettings = {
 		name = "female_top_layer_native_american_01Shape"
@@ -147,10 +147,10 @@ entity = {
 	pdxmesh = "female_top_layer_eldritch_master_mesh"
 	
 
-	attribute = { name = "body_bs_fat"                                 blend_shape = "female_top_layer_native_american_01_bs_fat" }
-    attribute = { name = "body_bs_gaunt"                               blend_shape = "female_top_layer_native_american_01_bs_gaunt" }
-    attribute = { name = "body_bs_infant"                              blend_shape = "female_top_layer_native_american_01_bs_infant" }
-    attribute = { name = "body_bs_old"                                 blend_shape = "female_top_layer_native_american_01_bs_old" }
-    attribute = { name = "body_bs_thick"                               blend_shape = "female_top_layer_native_american_01_bs_thick" }
-    attribute = { name = "body_bs_thin"                                blend_shape = "female_top_layer_native_american_01_bs_thin" }
+	attribute = { name = "body_bs_fat"                                 blend_shape = "female_top_layer_cultist_master_bs_fat" }
+    attribute = { name = "body_bs_gaunt"                               blend_shape = "female_top_layer_cultist_master_bs_gaunt" }
+    attribute = { name = "body_bs_infant"                              blend_shape = "female_top_layer_cultist_master_bs_infant" }
+    attribute = { name = "body_bs_old"                                 blend_shape = "female_top_layer_cultist_master_bs_old" }
+    attribute = { name = "body_bs_thick"                               blend_shape = "female_top_layer_cultist_master_bs_thick" }
+    attribute = { name = "body_bs_thin"                                blend_shape = "female_top_layer_cultist_master_bs_thin" }
 }

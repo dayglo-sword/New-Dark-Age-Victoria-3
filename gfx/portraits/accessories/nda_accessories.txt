@@ -2,7 +2,7 @@
 
 male_robe_cultist_master = {
 
-	entity = { required_tags = ""					shared_pose_entity = torso		entity = "male_top_layer_cultist_master_own_entity" } #"male_top_layer_ethiopian_royal_02_entity"}	#
+	entity = { required_tags = ""					shared_pose_entity = torso		entity = "male_top_layer_cultist_master_entity" } #"male_top_layer_ethiopian_royal_02_entity"}	#
 }
 
 male_robe_eldritch_master = {

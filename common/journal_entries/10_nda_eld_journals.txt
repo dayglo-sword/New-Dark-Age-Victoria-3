@@ -11,8 +11,8 @@
 
 	possible = {
 		OR = {
-			c:YIG = exists
-			c:DGN = exists
+			exists = c:YIG 
+			exists = c:DGN
 		}
 	}
 

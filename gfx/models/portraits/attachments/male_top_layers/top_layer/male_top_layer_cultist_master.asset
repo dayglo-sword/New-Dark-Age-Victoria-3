@@ -21,20 +21,8 @@ pdxmesh = {
 }
 
 entity = {
-	name = "male_top_layer_cultist_master_own_entity"
+	name = "male_top_layer_cultist_master_entity"
 	pdxmesh = "male_top_layer_cultist_master_mesh"
-	
-		attribute = { name = "body_bs_fat"					blend_shape = "male_top_layer_cultist_master_bs_fat" }
-		attribute = { name = "body_bs_gaunt"				blend_shape = "male_top_layer_cultist_master_bs_gaunt" }
-		attribute = { name = "body_bs_old"					blend_shape = "male_top_layer_cultist_master_bs_old" }
-		attribute = { name = "body_bs_infant"				blend_shape = "male_top_layer_cultist_master_bs_infant" }
-		attribute = { name = "body_bs_thick"				blend_shape = "male_top_layer_cultist_master_bs_thick" }
-		attribute = { name = "body_bs_thin"					blend_shape = "male_top_layer_cultist_master_bs_thin" }
-}
-
-entity = {
-	name = "male_top_layer_cultist_master_alt_entity"
-	pdxmesh = "male_top_layer_ethiopian_royal_01_mesh"
 	
 		attribute = { name = "body_bs_fat"					blend_shape = "male_top_layer_cultist_master_bs_fat" }
 		attribute = { name = "body_bs_gaunt"				blend_shape = "male_top_layer_cultist_master_bs_gaunt" }

@@ -252,7 +252,7 @@ je_nda_cult_spreads_btn_purge = {
 		
 		custom_tooltip = { 
 			text = je_nda_cult_spreads_btn_purge_cooldown_effect_tt
-			set_variable = { name = je_nda_cult_spreads_btn_purge_cooldown months = 3 }
+			set_variable = { name = je_nda_cult_spreads_btn_purge_cooldown months = 12 }
 		}		
 
  		custom_tooltip = je_nda_cult_spreads_btn_purge_tooltip       

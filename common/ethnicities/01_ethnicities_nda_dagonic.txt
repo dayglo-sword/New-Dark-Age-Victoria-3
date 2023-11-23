@@ -128,7 +128,7 @@ dagonic_main = {
     }
 
     gene_eye_corner_depth_min= {
-        15 = { name = eye_shut   range = { 0.0 0.0 }      }
+        15 = { name = eye_corner_depth_min   range = { 0.0 0.0 }      }
     }
 
     gene_eye_height = {

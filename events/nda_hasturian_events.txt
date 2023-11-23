@@ -220,6 +220,7 @@ nda_hasturian.3 = { # The Repairer of Reputations
 			has_variable = nda_king_in_yellow_meeting
 			is_full_cult_country = { COUNTRY="ROOT" }
 			is_revolutionary = no # exclude revolution as can cause ELD to flip IAM if revolt succesful
+			is_at_war = no
 		}
 		# capital should be in americas?
 	}
