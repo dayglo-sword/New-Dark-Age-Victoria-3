@@ -4,15 +4,14 @@ je_nda_maritimes_btn_new_brunswick = {
 	desc = "je_nda_maritimes_btn_new_brunswick_desc"
 
 	visible = { 
-		always = yes 
 		exists = c:NBS
 	}
 
-	possible = {
+	possible = { 
+		exists = c:NBS
 		exists = c:NEN
-        exists = c:NBS
 
-		c:NBS = { 
+		c:NBS ?= { 
 			relations:root >= relations_threshold:amicable 
 			is_player = no
 			OR = {
@@ -28,7 +27,7 @@ je_nda_maritimes_btn_new_brunswick = {
 		}
 
 		# NOT = { has_war_with = c:NBS } # don't need this as peace conditions exist
-		NOT = { owes_obligation_to =  c:NBS }	
+		NOT = { owes_obligation_to = c:NBS }	
 
         # on border
         is_adjacent_to_country = c:NBS
@@ -78,7 +77,6 @@ je_nda_maritimes_btn_nova_scotia = {
 	desc = "je_nda_maritimes_btn_nova_scotia_desc"
 
 	visible = { 
-		always = yes 
 		exists = c:NVS
 	}
 
@@ -86,8 +84,7 @@ je_nda_maritimes_btn_nova_scotia = {
 		exists = c:NEN
         exists = c:NVS
 
-
-		c:NVS = { 
+		c:NVS ?= { 
 			relations:root >= relations_threshold:amicable 
 			is_player = no
 			OR = {

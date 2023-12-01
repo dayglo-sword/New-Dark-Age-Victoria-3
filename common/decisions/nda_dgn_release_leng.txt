@@ -2,8 +2,9 @@
 	is_shown = {
 		exists = c:DGN
 		this = c:DGN
-		# no china - presume takeover (DGN or ELD)
+		# no china - presume takeover (DGN or ELD) - could be Heavenly kingdom??
 		NOT = { exists = c:CHI }
+		NOT = { exists = c:TPG }
 		
 		exists = c:TIB
 		c:TIB = { is_player = no }

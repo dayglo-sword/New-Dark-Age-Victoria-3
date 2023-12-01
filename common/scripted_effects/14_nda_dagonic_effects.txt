@@ -448,6 +448,20 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 		# obviously cultists
 		set_variable = nda_cultists_in_open
 
+		# convert existing? 
+		every_interest_group = {
+			limit = { 
+				is_marginal = no 
+				leader = { 
+					has_eldritch_trait = no
+					is_historical = no
+				}
+			}
+			
+			leader = {
+				add_trait = nda_cultist
+			}
+		}	
 
 		# set to be cultists and to be power brokers - can fail if cult not already activated
 		ig:ig_nda_cult_worshippers = {

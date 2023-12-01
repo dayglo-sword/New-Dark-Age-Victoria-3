@@ -177,6 +177,7 @@ nda_cultist_robe = {
                     }
 
                     EXISTS = c:ELD
+                    age > 16
                     owner = { country_has_primary_culture = cu:nda_cul_cultist }    
                 }
             }
@@ -210,6 +211,7 @@ nda_cultist_robe = {
                         has_variable = nda_coven_leader     
                         has_trait = nda_yig_master                  
                     }
+                    age > 16
                     # OR = {
                     #     EXISTS = c:YIG
                     #     EXISTS = c:STY
@@ -247,6 +249,7 @@ nda_cultist_robe = {
                         has_variable = nda_coven_leader 
                         has_trait = nda_dagon_master                       
                     }
+                    age > 16
                     owner = { country_has_primary_culture = cu:nda_cul_dagonic }                                       
                 }
             }
@@ -282,7 +285,7 @@ nda_cultist_robe = {
                             has_global_variable = nda_cthulhu_arrives
                         }
                     }
-                    
+                    age > 16
                     owner = {
                         #has_variable = nda_cultists_in_open	# can exist in country that has reveted cultures?
                         has_cult_culture = yes		

@@ -332,14 +332,16 @@ je_nda_cult_diplo_btn_nameless_city = {
 	visible = { 
 		is_player = no
 		OR = {
-			AND = {
-				exists = c:ELD
-				this = c:ELD				
-			}
-			AND = {
-				exists = c:STY
-				this = c:STY				
-			}			
+			c:ELD ?= THIS
+			c:STY ?= THIS
+			# AND = {
+			# 	exists = c:ELD
+			# 	this = c:ELD				
+			# }
+			# AND = {
+			# 	exists = c:STY
+			# 	this = c:STY				
+			# }			
 		}
 
 		p:x68A578 = {
