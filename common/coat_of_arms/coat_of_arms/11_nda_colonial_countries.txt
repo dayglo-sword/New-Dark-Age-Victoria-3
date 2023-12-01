@@ -1,0 +1,150 @@
+colonial_zanj_cultist = {
+	pattern = "pattern_solid.tga"
+	color1 = "purple"
+	color2 = "purple"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.75 0.75 } position = { 0.75 0.5 } }		
+	}
+
+	colored_emblem = {
+		texture = "ce_lion_rampant.dds"
+		color1 = "red"
+		color2 = "red"
+		color3 = "red"
+		instance = { scale = { 0.45 0.45 } position = { 0.75 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "yellow"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.27 0.5 } rotation = 180 }			
+	}
+}
+
+colonial_ethiopia_cultist = {
+	pattern = "pattern_solid.tga"
+	color1 = "purple"
+	color2 = "purple"
+
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 1 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "yellow"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.27 0.5 } rotation = 180 }			
+	}
+}
+
+colonial_southern_africa_cultist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_shield_heater_border.dds"
+		color1 = "blue"
+		color2 = "white"
+		instance = { scale = { 0.75 0.75 } position = { 0.75 0.5 } }		
+	}
+
+	colored_emblem = {
+		texture = "ce_sun.dds"
+		color1 = "pearl"
+		color2 = "pearl"
+		instance = { scale = { 0.16 0.16 } position = { 0.75 0.35 } }		
+	}
+
+	colored_emblem = {
+		texture = "ce_bull_head_african.dds"
+		color1 = "pearl"
+		color2 = "pearl"
+		color3 = "pearl"
+		instance = { scale = { 0.35 0.35 } position = { 0.75 0.5 } }				
+	}
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "pearl"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.27 0.5 } rotation = 180 }			
+	}
+}
+
+colonial_congo_cultist = {
+	pattern = "pattern_solid.tga"
+	color1 = "purple"
+	color2 = "purple"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "green"
+		#instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }		
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }	
+	}
+
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "yellow"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.5 0.5 } rotation = 180 }			
+	}
+}
+
+colonial_niger_cultist = {
+	pattern = "pattern_solid.tga"
+	color1 = "purple"
+	color2 = "purple"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "red"
+		#instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }		
+		instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 } }	
+	}
+
+	# colored_emblem = {
+	# 	texture = "ce_star_hexagram.dds"
+	# 	color1 = "green"
+	# 	color2 = "green"
+	# 	color3 = "green"
+	# 	instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } }				
+	# }
+
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "green"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.5 0.5 } rotation = 180 }			
+	}
+}
+
+colonial_senegal_cultist = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_kanaga.dds"
+		color1 = "black"
+		color2 = "black"
+		color3 = "black"
+		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } }				
+	}
+
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "black"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.27 0.5 } rotation = 180 }			
+	}
+}

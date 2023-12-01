@@ -114,7 +114,7 @@ nda_monthly_on_action = {
 
 	}
 	random_events = {
-		3 = 0
+		4 = 0
 		1 = nda_ritual.6 # Eldritch lose non-Cult countries
 		#1 = nda_ritual.7 # Eldritch gains cultural radicals
 	}
