@@ -1,9 +1,10 @@
-Version v1.5.7
+Version v1.5.10
 
 Major Changes
 New Horde Unit for Cultist Countries
 New Naval Unit for Dagonic Shores
 Mobilization Options based on Esoteric Goods
+Releasable African Cult Colonies
 
 Minor Changes
 New 'Maritmes' Journal, replacing and expanding New Brunswick decisions
@@ -12,12 +13,14 @@ Add 'Professor Challenger'
 Convert Herbert West 'Tonic' to Mobilization Option from Country Modifier
 Add 'Cultist Robes' and refactored Masks to not use base game 'gene' files
 Character Interaction to 'Adopt Cult Culture'
-Cult Countries will start with start with slavery if not already in forming country.
+Cult Countries will start with slavery if not already existing in forming country.
 'Red Death' Spread - reverse uno protection on Native American states. Tweak modifiers to increase mortality.
 
 Bug Fixes
 Restrict efects of Historic Events to source country.
 Reduce 'Free Worshipper' chance of being cultist.
+Fix Leng creation upon Heavenly Kingdom displacing China
+Fix 'load screen 9'
 
 -----
 
