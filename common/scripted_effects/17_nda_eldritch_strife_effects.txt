@@ -1,11 +1,11 @@
 ﻿nda_effect_eldritch_strife
 {
 	# The Cult is falling apart after Cthulhu leaves. Cultures are re-asserting themselves
-	IF = {
-		limit = {
-			exists = THIS
-			is_full_cult_country = { COUNTRY="THIS" }  			
-		}
+	#IF = { # remove condition as action selection done in on_action
+		# limit = {
+		# 	exists = THIS
+		# 	is_full_cult_country = { COUNTRY="THIS" }  			
+		# }
 
 		random_scope_state = { # select an homeland state to get culture
 			limit = {
@@ -22,11 +22,13 @@
 		}
 
 		THIS = {
-			# convert cultists back to culture in  homeland
+			# convert cultists back to culture in homeland
 			every_scope_state = {
 				limit = {
 					state_region = { is_homeland = scope:nda_eldritch_rebels }
 				}
+				save_scope_as = nda_rebel_homeland # use to see if anything worth notifiing occured
+
 				every_scope_pop = {
 					limit ={
 						OR = {
@@ -90,10 +92,22 @@
 			#debug_log_scopes = yes
 			debug_log = "Ritual - Eldritch Cult Rebels : [THIS.GetCountry.GetNameNoFormatting]"		
 
-			# notification to world of unrest
-			every_country = {
-				post_notification = nda_ritual_post_cthulhu_strife
-			}					
+			# notification to world of unrest - only for major cultists or player if running minor
+			if = {
+				limit = {
+					exists = scope:nda_rebel_homeland # at least one home land affected
+				}
+				every_country = {
+					limit = {
+						OR = {
+							is_full_cult_country = { COUNTRY="ROOT" } 	
+							ROOT = { is_player = yes }					
+						}
+					}
+					post_notification = nda_ritual_post_cthulhu_strife
+				}				
+			}
+					
 		}
-	}
+	#}
 }

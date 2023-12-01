@@ -103,7 +103,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		}	
 		if = {
 			limit = {
-				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # nmore chance if cult IG			
+				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # more chance if cult IG			
 			}
 
 			add = 15
@@ -253,6 +253,16 @@ initiate_into_coven = { # If not already give character eldritch trait
 
 			add = 100
 		}
+		if = { # Devout should be in opposition 
+			limit = { 
+				interest_group = { is_interest_group_type = ig_devout } 
+			}
+			add = -30
+
+			if = { limit = { owner = { is_full_cult_country = { COUNTRY="THIS" } }}
+				add = -50 # 'Free Worshippers' shouldn't have cultist leading
+			}
+		}	
 		if = {
 			limit = {
 				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
@@ -300,6 +310,7 @@ convert_to_dagon = { # If not already give character eldritch trait
 		custom_tooltip = {
 			text = nda_eldritch_cultist_tt
 			has_eldritch_trait = yes
+			has_dagonic_trait = no # possible to have both so restrict
 		}
 	}		
 
@@ -392,6 +403,7 @@ convert_to_yig = { # If not already give character eldritch trait
 		custom_tooltip = {
 			text = nda_eldritch_cultist_tt
 			has_eldritch_trait = yes
+			has_yigian_trait = no # possible to have both so restrict
 		}
 	}		
 
@@ -529,5 +541,113 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 
 	ai_chance = {
 		value = 0 # for player only
+	}
+}
+
+adopt_cult_culture = {
+	icon = "gfx/interface/character_panel/nda_coven_action.dds" # do custom icon
+	clicksound = "event:/SFX/UI/Military/command_grant"
+
+	potential = {
+		#has_role = politician
+
+		owner = scope:actor
+
+		scope:actor = {
+			has_cult_culture = yes
+		}
+
+		culture = { is_cult_culture = no }		
+
+		custom_tooltip = {
+			text = nda_is_cultist_tt
+			has_any_cultist_trait = yes
+		}
+
+		NOT = { has_trait = nda_investigator } # investigators are immune
+	}		
+
+	possible = {
+		age >= define:NCharacters|ADULT_AGE
+		custom_tooltip = {
+			text = nda_is_cultist_tt
+			has_any_cultist_trait = yes
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_cultist 
+				} 				
+			}
+			change_character_culture = cu:nda_cul_cultist 
+			change_character_religion = rel:nda_rel_cultist		
+		}
+		else_if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_dagonic 
+				} 				
+			}
+			change_character_culture = cu:nda_cul_dagonic 	
+			change_character_religion = rel:nda_rel_cultist		
+		}
+		else_if = {
+			limit = { 
+				scope:actor = {
+					country_has_primary_culture = cu:nda_cul_yigian 
+				} 				
+			}
+			change_character_culture = cu:nda_cul_yigian 	
+			change_character_religion = rel:nda_rel_yigian		
+		}
+	}
+
+	cooldown = { months = 3 } # event version was 6mo but this should be better
+	show_confirmation_box = yes
+	show_requirements = yes
+
+	ai_chance = {
+		value = 5
+		if = {
+			limit = {
+				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # need to be for cult IG! Other effects can set it by default, but use this as catch all just in case
+			}
+
+			add = 100
+		}
+		if = {
+			limit = {
+				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
+			}
+
+			add = 10
+		}		
+		if = { # more chance if 'negative' traits
+			limit = {
+				OR = {					 
+					has_trait = ambitious
+					has_trait = cruel
+					has_trait = hedonist
+				}				
+			}
+			add = 10
+		}	
+		if = { # less chance if 'positive' ideology or traits
+			limit = {
+				has_non_cultist_ideology = yes				
+			}
+			add = -20
+		}	
+		if = {
+			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
+			add = -20
+		}	
+		if = {
+			limit = { is_historical = yes } # Changing historical culture can change DNA depiction!!!!
+			add = -50
+		}
 	}
 }

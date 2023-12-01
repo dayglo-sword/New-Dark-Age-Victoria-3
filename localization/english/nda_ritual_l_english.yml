@@ -104,7 +104,7 @@
  je_nda_ritual_assist_btn_halt_effect_tt:0 "Stop assisting the Eldritch Cult in the Ritual"
 
  je_nda_ritual_oppose:0 "Oppose The Ritual"
- je_nda_ritual_oppose_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must use all our power to stop this!\n\nWe must investigate and attempt to undermine this fiendish plot."
+ je_nda_ritual_oppose_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must use all our power to stop this!\n\nWe must investigate and attempt to undermine this fiendish plot... But do we have enough investigators to even try?"
  #je_nda_ritual_oppose_goal:0 "Halt the Ritual to stop [concept_nda_cthulhu]'s return when the 'Stars are Right.'"
  je_nda_ritual_oppose_possible_tt:0 "Is not a Cult Country."
  je_nda_ritual_oppose_complete_tt:0 "The Cult has failed the completion [concept_nda_ritual]."

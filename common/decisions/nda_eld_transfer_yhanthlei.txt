@@ -45,7 +45,7 @@
 						owned_provinces = { x30C040  }
 						state_type = treaty_port						
 					}
-					add_homeland = nda_cul_dagonic
+					add_homeland = cu:nda_cul_dagonic
 				}				
 			}
 		}

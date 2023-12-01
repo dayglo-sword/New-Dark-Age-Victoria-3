@@ -2,10 +2,12 @@
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
+	group = je_group_nda_eldritch
+	
 	is_shown_when_inactive = {
 		OR = {
 			is_player = yes
-			this ?= c:NEN
+			c:NEN ?= THIS
 		}
 		has_cult_culture = no
 		exists = c:ELD

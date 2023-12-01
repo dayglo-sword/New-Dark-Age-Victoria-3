@@ -47,8 +47,8 @@ pm_nda_esoteric_streetlights = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			building_input_electricity_add = 12 # normal is 10
-			building_output_services_add = 50
+			goods_input_electricity_add = 12 # normal is 10
+			goods_output_services_add = 50
 		}
 
 		level_scaled = {
@@ -65,7 +65,8 @@ pm_nda_esoteric_lost_city = { #
 	country_modifiers = {
 		workforce_scaled = {
 			#country_legitimacy_headofstate_add = 20
-			#interest_group_ig_nda_cult_worshippers_pol_str_mult = 0.25 # this does not work - shows politically unaligned
+			interest_group_ig_landowners_pol_str_mult = 0.05 
+			interest_group_ig_nda_cult_worshippers_pol_str_mult = 0.05 # this does not work - shows politically unaligned
 			country_authority_add = 25
 			country_prestige_add = 25
 		}
@@ -74,7 +75,12 @@ pm_nda_esoteric_lost_city = { #
 
 pm_nda_esoteric_vril = { # supernatural energy - can power advanced tech and prolong life - should be own good with substitutions for existing
 	texture = "gfx/interface/icons/production_method_icons/percussion_caps.dds"
-	pollution_generation = 10
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 100
+		}
+	}
 
 	building_modifiers = {
 
@@ -86,8 +92,8 @@ pm_nda_esoteric_vril = { # supernatural energy - can power advanced tech and pro
 
 		unscaled = {
 			#building_output_electricity_add = 30
-			building_output_vril_add = 250	
-			building_output_black_lotus_add = 30	
+			goods_output_vril_add = 250	
+			goods_output_black_lotus_add = 30	
 			building_laborers_mortality_mult = 0.5
 		}
 	}
@@ -95,7 +101,12 @@ pm_nda_esoteric_vril = { # supernatural energy - can power advanced tech and pro
 
 pm_nda_esoteric_blacklotus = { # supernatural drug / poison - should be own good with substitutions for existing
 	texture = "gfx/interface/icons/production_method_icons/sweeteners.dds"
-	pollution_generation = 10
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 100
+		}
+	}
 
 	building_modifiers = {
 
@@ -105,8 +116,8 @@ pm_nda_esoteric_blacklotus = { # supernatural drug / poison - should be own good
 		}
 
 		unscaled = {
-			building_output_black_lotus_add = 300	# how much more production than Vril to be valid selection?	
-			building_output_vril_add = 25
+			goods_output_black_lotus_add = 300	# how much more production than Vril to be valid selection?	
+			goods_output_vril_add = 25
 			building_laborers_mortality_mult = 0.5
 		}
 	}
@@ -114,7 +125,12 @@ pm_nda_esoteric_blacklotus = { # supernatural drug / poison - should be own good
 
 pm_nda_esoteric_goods = { # balanced goods between Vril and black lotus
 	texture = "gfx/interface/icons/production_method_icons/synthetic_dyes.dds"
-	pollution_generation = 10
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 100
+		}
+	}
 
 	building_modifiers = {
 
@@ -125,9 +141,8 @@ pm_nda_esoteric_goods = { # balanced goods between Vril and black lotus
 		}
 
 		unscaled = {
-			#building_output_opium_add = 30
-			building_output_black_lotus_add = 165	
-			building_output_vril_add = 140	
+			goods_output_black_lotus_add = 165	
+			goods_output_vril_add = 140	
 			building_laborers_mortality_mult = 0.5		
 		}
 	}

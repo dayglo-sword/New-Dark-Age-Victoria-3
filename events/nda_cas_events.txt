@@ -34,7 +34,7 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 		create_character = {
 			template = protagonist_azedarac 
 			on_created = {
-				set_variable = is_azedarac						
+				set_variable = is_azedarac									
 			}
 		}
 
@@ -88,6 +88,7 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 		hidden_effect = {
 			scope:scope_azedarac = { 
 				add_trait = nda_master 
+				set_character_immortal = yes	
 			}			
 		}
 
@@ -105,6 +106,7 @@ nda_cas.10 = { # The Holiness of Azedarac - Character event
 		hidden_effect = {
 			scope:scope_azedarac = { 
 				add_trait = nda_master 
+				set_character_immortal = yes	
 			}			
 		}
 

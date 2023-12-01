@@ -12,7 +12,7 @@
 			NOT = { has_variable = je_nda_ritual_assist_started }
 			NOT = { has_variable = je_nda_ritual_assist_started_cooldown }
 			
-			c:ELD = { relations:root >= relations_threshold:amicable }
+			c:ELD ?= { relations:root >= relations_threshold:amicable }
 			
 		}		
 	}
@@ -185,10 +185,7 @@ je_nda_cult_spreads_btn_purge = {
 	visible = { 
 		OR = {
 			is_player = yes
-			AND = {			
-				exists = c:NEN
-				this = c:NEN			
-			}							
+			c:NEN ?= THIS									
 		}
 
         # has cultists
@@ -255,7 +252,7 @@ je_nda_cult_spreads_btn_purge = {
 		
 		custom_tooltip = { 
 			text = je_nda_cult_spreads_btn_purge_cooldown_effect_tt
-			set_variable = { name = je_nda_cult_spreads_btn_purge_cooldown months = 3 }
+			set_variable = { name = je_nda_cult_spreads_btn_purge_cooldown months = 12 }
 		}		
 
  		custom_tooltip = je_nda_cult_spreads_btn_purge_tooltip       

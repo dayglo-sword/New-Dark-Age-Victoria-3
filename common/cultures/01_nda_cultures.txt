@@ -81,7 +81,7 @@ nda_cul_yigian={
 		1 = native_american
 		1 = yigian_hybrid
 	}
-	graphics = generic
+	graphics = decentralised_americas
 }
 
 nda_cul_dagonic={
@@ -120,7 +120,8 @@ nda_cul_dagonic={
 		1 = arab
 		1 = central_asian
 		1 = african
-		1 = dagonic_hybrid
+		2 = dagonic_hybrid
+		2 = dagonic_main
 	}
 	graphics = european
 }

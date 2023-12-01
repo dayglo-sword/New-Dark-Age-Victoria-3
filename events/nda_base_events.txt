@@ -261,11 +261,11 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 					EXISTS = c:RUS # RUS is forming ELD far too frequent - Try Nerf by delaying spread - TODO? base on lit rate not just country?
 					c:RUS = THIS					
 				}
-				add = 275
+				add = 65
 			}
 		}
 
-		# annoy the intelectuals
+		# annoy the intellectuals
 		ig:ig_intelligentsia = {
 			add_modifier = {
 	            name = curtailed_free_speech
@@ -485,7 +485,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 			# set country states as homeland, convert % of pops to religion?
 			every_scope_state = {
 				state_region = {
-					add_homeland = nda_cul_cultist
+					add_homeland = cu:nda_cul_cultist
 				}
 
 				if = { limit = { is_capital = yes }  # boost in capital
@@ -531,7 +531,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 			# Need to try and spread further so pass off to a non-cultist neighbour
 			random_country = {
 				limit = {
-					is_adjacent = ROOT
+					is_adjacent_to_country = ROOT
 					can_cult_infiltrate = yes
 				}
 				trigger_event = { id = nda_base.8 }	# spread the cult
@@ -783,7 +783,7 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 		# spread to non-cultist  Neighbour
 		random_country = {
 			limit = {
-				is_adjacent = ROOT
+				is_adjacent_to_country = ROOT
 				can_cult_infiltrate = yes
 			}
 			trigger_event = { id = nda_base.8 }	# spread the cult
@@ -1079,7 +1079,7 @@ nda_base.15 = { # Is there non-conformists leader within the cult
 	trigger = {
 		exists = ig:ig_nda_cult_worshippers
 		ig:ig_nda_cult_worshippers = {
-			leader = { 
+			leader ?= { 
 				has_any_cultist_trait = yes
 				has_non_cultist_ideology = yes
 			} 

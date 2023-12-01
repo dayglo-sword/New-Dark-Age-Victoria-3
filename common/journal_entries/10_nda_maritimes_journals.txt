@@ -1,0 +1,58 @@
+﻿je_nda_maritimes = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		c:NEN ?= ROOT
+		#is_cultist_country = no
+		NOT = { has_variable = je_nda_maritimes_completed }
+	}
+
+	possible = {
+		c:NEN ?= ROOT
+		OR = {
+			exists = c:NBS
+			exists = c:NVS			
+		}
+	}	
+
+	immediate = {
+		
+		debug_log = "Maritimes Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+
+	}
+
+    complete = {
+
+		custom_tooltip = {
+			text = je_nda_maritimes_complete_tt
+			NOT = { exists = c:NBS }
+			NOT = {	exists = c:NVS }
+
+			# also if culture adoption flagged
+			OR = {
+				country_has_primary_culture = cu:anglo_canadian	
+				has_variable = nda_maritimes_no_canadians	
+				NOT = { any_scope_state = { state_region = { is_homeland = cu:anglo_canadian } } }	
+			}
+		}
+    }
+
+	on_complete = {
+		set_variable = je_nda_maritimes_completed
+	}
+
+ 	# Maritime decisions
+	scripted_button = je_nda_maritimes_btn_new_brunswick
+	scripted_button = je_nda_maritimes_btn_nova_scotia
+	scripted_button = je_nda_maritimes_btn_strange_ways
+	scripted_button = je_nda_maritimes_btn_old_ways
+
+	progressbar = no
+	weight = 10
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

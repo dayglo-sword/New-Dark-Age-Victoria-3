@@ -1,298 +1,298 @@
-﻿nda_eld_recognise_dagonic_lands = {
-	is_shown = {
-		exists = c:ELD
-		this = c:ELD
-	}
+﻿# nda_eld_recognise_dagonic_lands = {
+# 	is_shown = {
+# 		exists = c:ELD
+# 		this = c:ELD
+# 	}
 
-	possible = {
-		#this = c:ELD
-		#exists = c:DGN
-		#c:DGN = { relations:root >= relations_threshold:amicable }
+# 	possible = {
+# 		#this = c:ELD
+# 		#exists = c:DGN
+# 		#c:DGN = { relations:root >= relations_threshold:amicable }
 
-		any_scope_state = { #is in coastal asia/pacific
-			#owner = ROOT
-			is_coastal = yes
-			state_region = {
-					is_homeland = cu:nda_cul_cultist
-					NOT = { is_homeland = cu:nda_cul_dagonic }
-			}	
-			OR = {
-				region = sr:region_indochina
-				region = sr:region_indonesia
-				region = sr:region_north_china
-				region = sr:region_manchuria
-				region = sr:region_south_china
-				region = sr:region_japan
-				region = sr:region_oceania
-				region = sr:region_south_india
-			}		
+# 		any_scope_state = { #is in coastal asia/pacific
+# 			#owner = ROOT
+# 			is_coastal = yes
+# 			state_region = {
+# 					is_homeland = cu:nda_cul_cultist
+# 					NOT = { is_homeland = cu:nda_cul_dagonic }
+# 			}	
+# 			OR = {
+# 				region = sr:region_indochina
+# 				region = sr:region_indonesia
+# 				region = sr:region_north_china
+# 				region = sr:region_manchuria
+# 				region = sr:region_south_china
+# 				region = sr:region_japan
+# 				region = sr:region_oceania
+# 				region = sr:region_south_india
+# 			}		
 
-		}
+# 		}
 
-	}
+# 	}
 	
-	when_taken = {
-		debug_log = "nda_eld_recognise_dagonic_lands" 
-		# set nda_cul_dagonic
-		every_scope_state = {
-			#IF = {
-				limit = { 
-					#owner = ROOT
-				 	#is_potentially_dagonic_lands = yes 
-					is_coastal = yes
-					state_region = {
-						is_homeland = cu:nda_cul_cultist
-						NOT = { is_homeland = cu:nda_cul_dagonic }
-					}	
-					OR = {
-						region = sr:region_indochina
-						region = sr:region_indonesia
-						region = sr:region_north_china
-						region = sr:region_manchuria
-						region = sr:region_south_china
-						region = sr:region_japan
-						region = sr:region_oceania
-						region = sr:region_south_india
-					}
-				}	
+# 	when_taken = {
+# 		debug_log = "nda_eld_recognise_dagonic_lands" 
+# 		# set nda_cul_dagonic
+# 		every_scope_state = {
+# 			#IF = {
+# 				limit = { 
+# 					#owner = ROOT
+# 				 	#is_potentially_dagonic_lands = yes 
+# 					is_coastal = yes
+# 					state_region = {
+# 						is_homeland = cu:nda_cul_cultist
+# 						NOT = { is_homeland = cu:nda_cul_dagonic }
+# 					}	
+# 					OR = {
+# 						region = sr:region_indochina
+# 						region = sr:region_indonesia
+# 						region = sr:region_north_china
+# 						region = sr:region_manchuria
+# 						region = sr:region_south_china
+# 						region = sr:region_japan
+# 						region = sr:region_oceania
+# 						region = sr:region_south_india
+# 					}
+# 				}	
 
-				state_region = {
-					add_homeland = nda_cul_dagonic
-					remove_homeland = nda_cul_cultist						
-				}
+# 				state_region = {
+# 					add_homeland = cu:nda_cul_dagonic
+# 					remove_homeland = cu:nda_cul_cultist						
+# 				}
 							
-			#}
+# 			#}
 
-			# convert some cultists to dagonic	
-			hidden_effect = {				
-				every_scope_pop = {
-					limit = {
-						culture = cu:nda_cul_cultist
-					}
-					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
-				}
-			}
-		}
-		custom_tooltip = nda_eld_recognise_dagonic_lands_tooltip
-	}
+# 			# convert some cultists to dagonic	
+# 			hidden_effect = {				
+# 				every_scope_pop = {
+# 					limit = {
+# 						culture = cu:nda_cul_cultist
+# 					}
+# 					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
+# 				}
+# 			}
+# 		}
+# 		custom_tooltip = nda_eld_recognise_dagonic_lands_tooltip
+# 	}
 
-	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { bureaucracy > 0 }
-			add = 5
-		}
-		# modifier based on relationship
+# 	ai_chance = {
+# 		base = 0
+# 		modifier = {
+# 			trigger = { bureaucracy > 0 }
+# 			add = 5
+# 		}
+# 		# modifier based on relationship
 
-		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
-			}
-			add = -10
-		}		
-	}
+# 		modifier = {
+# 			OR = {
+# 				is_diplomatic_play_committed_participant = yes
+# 				is_at_war = yes
+# 			}
+# 			add = -10
+# 		}		
+# 	}
 
-}
+# }
 
-nda_eld_release_dagonic_lands = {
-	is_shown = {
-		exists = c:ELD
-		this = c:ELD
-		exists = c:DGN
-	}
+# nda_eld_release_dagonic_lands = {
+# 	is_shown = {
+# 		exists = c:ELD
+# 		this = c:ELD
+# 		exists = c:DGN
+# 	}
 
-	possible = {
-		c:DGN = { relations:root >= relations_threshold:amicable }
-		any_scope_state = { 
-			state_region = {
-					is_homeland = cu:nda_cul_dagonic
-			}	
-		}
+# 	possible = {
+# 		c:DGN = { relations:root >= relations_threshold:amicable }
+# 		any_scope_state = { 
+# 			state_region = {
+# 					is_homeland = cu:nda_cul_dagonic
+# 			}	
+# 		}
 
-	}
+# 	}
 	
-	when_taken = {
-		debug_log = "nda_eld_release_dagonic_lands" 
-		custom_tooltip = nda_eld_release_dagonic_lands_tooltip
+# 	when_taken = {
+# 		debug_log = "nda_eld_release_dagonic_lands" 
+# 		custom_tooltip = nda_eld_release_dagonic_lands_tooltip
 
-		# set to Dagonic
-		every_scope_state = {
-			limit = { 
-				state_region = {
-					is_homeland = cu:nda_cul_dagonic
-				}	
-			}	
-			state_region = {
-				remove_claim = c:ELD
-				remove_homeland = nda_cul_cultist
-			}
+# 		# set to Dagonic
+# 		every_scope_state = {
+# 			limit = { 
+# 				state_region = {
+# 					is_homeland = cu:nda_cul_dagonic
+# 				}	
+# 			}	
+# 			state_region = {
+# 				remove_claim = c:ELD
+# 				remove_homeland = cu:nda_cul_cultist
+# 			}
 
-			set_state_owner = c:DGN
-			hidden_effect = {
-				# convert some cultists to yigian					
-				every_scope_pop = {
-					limit = {
-						culture = cu:nda_cul_cultist
-					}
-					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
-				}
-			}
-		}
+# 			set_state_owner = c:DGN
+# 			hidden_effect = {
+# 				# convert some cultists to yigian					
+# 				every_scope_pop = {
+# 					limit = {
+# 						culture = cu:nda_cul_cultist
+# 					}
+# 					change_pop_culture = { target = cu:nda_cul_dagonic value = 0.5 }		
+# 				}
+# 			}
+# 		}
 		
-		change_relations = { country = c:DGN value = 100 } # Make friends
-	}
+# 		change_relations = { country = c:DGN value = 100 } # Make friends
+# 	}
 
-	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { bureaucracy > 0 }
-			add = 5
-		}
-		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
-			}
-			add = -10
-		}		
-	}
+# 	ai_chance = {
+# 		base = 0
+# 		modifier = {
+# 			trigger = { bureaucracy > 0 }
+# 			add = 5
+# 		}
+# 		modifier = {
+# 			OR = {
+# 				is_diplomatic_play_committed_participant = yes
+# 				is_at_war = yes
+# 			}
+# 			add = -10
+# 		}		
+# 	}
 
-}
+# }
 
-nda_eld_recognise_yigian_lands = {
-	is_shown = {
-		exists = c:ELD
-		this = c:ELD
-	}
+# nda_eld_recognise_yigian_lands = {
+# 	is_shown = {
+# 		exists = c:ELD
+# 		this = c:ELD
+# 	}
 
-	possible = {
-		#this = c:ELD
-		#c:YIG = { relations:root >= relations_threshold:amicable }
+# 	possible = {
+# 		#this = c:ELD
+# 		#c:YIG = { relations:root >= relations_threshold:amicable }
 
-		any_scope_state = { #is in coastal asia/pacific
+# 		any_scope_state = { #is in coastal asia/pacific
 			
-			is_potentially_yigian_lands = yes
-			state_region = {
-					is_homeland = cu:nda_cul_cultist
-					NOT = { is_homeland = cu:nda_cul_yigian }
-			}	
-		}
-	}
+# 			is_potentially_yigian_lands = yes
+# 			state_region = {
+# 					is_homeland = cu:nda_cul_cultist
+# 					NOT = { is_homeland = cu:nda_cul_yigian }
+# 			}	
+# 		}
+# 	}
 	
-	when_taken = {
-		debug_log = "nda_eld_recognise_yigian_lands" 
-		custom_tooltip = nda_eld_recognise_yigian_lands_tooltip
+# 	when_taken = {
+# 		debug_log = "nda_eld_recognise_yigian_lands" 
+# 		custom_tooltip = nda_eld_recognise_yigian_lands_tooltip
 
-		# set nda_cul_yigian
-		every_scope_state = {
-			#IF = {
-				limit = { 
-					is_potentially_yigian_lands = yes
-					state_region = {
-						is_homeland = cu:nda_cul_cultist
-						NOT = { is_homeland = cu:nda_cul_yigian }
-					}	
-				}	
+# 		# set nda_cul_yigian
+# 		every_scope_state = {
+# 			#IF = {
+# 				limit = { 
+# 					is_potentially_yigian_lands = yes
+# 					state_region = {
+# 						is_homeland = cu:nda_cul_cultist
+# 						NOT = { is_homeland = cu:nda_cul_yigian }
+# 					}	
+# 				}	
 
-				state_region = {
-					add_homeland = nda_cul_yigian
-					remove_homeland = nda_cul_cultist						
-				}
+# 				state_region = {
+# 					add_homeland = cu:nda_cul_yigian
+# 					remove_homeland = cu:nda_cul_cultist						
+# 				}
 							
-			#}
+# 			#}
 
-			# convert some cultists to yigian	
-			hidden_effect = {
-				every_scope_pop = {
-					limit = {
-						culture = cu:nda_cul_cultist
-					}
-					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
-				}
-			}				
-		}
-	}
+# 			# convert some cultists to yigian	
+# 			hidden_effect = {
+# 				every_scope_pop = {
+# 					limit = {
+# 						culture = cu:nda_cul_cultist
+# 					}
+# 					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
+# 				}
+# 			}				
+# 		}
+# 	}
 
-	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { bureaucracy > 0 }
-			add = 5
-		}
-		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
-			}
-			add = -1000
-		}		
-	}
+# 	ai_chance = {
+# 		base = 0
+# 		modifier = {
+# 			trigger = { bureaucracy > 0 }
+# 			add = 5
+# 		}
+# 		modifier = {
+# 			OR = {
+# 				is_diplomatic_play_committed_participant = yes
+# 				is_at_war = yes
+# 			}
+# 			add = -1000
+# 		}		
+# 	}
 
-}
+# }
 
-nda_eld_release_yigian_lands = {
-	is_shown = {
-		exists = c:ELD
-		this = c:ELD
-		exists = c:YIG
-	}
+# nda_eld_release_yigian_lands = {
+# 	is_shown = {
+# 		exists = c:ELD
+# 		this = c:ELD
+# 		exists = c:YIG
+# 	}
 
-	possible = {
-		c:YIG = { relations:root >= relations_threshold:amicable }
+# 	possible = {
+# 		c:YIG = { relations:root >= relations_threshold:amicable }
 
-		any_scope_state = { 
-			state_region = {
-				is_homeland = cu:nda_cul_yigian
-			}	
-		}
+# 		any_scope_state = { 
+# 			state_region = {
+# 				is_homeland = cu:nda_cul_yigian
+# 			}	
+# 		}
 
-	}
+# 	}
 	
-	when_taken = {
-		debug_log = "nda_eld_release_yigian_lands" 
-		custom_tooltip = nda_eld_release_yigian_lands_tooltip
+# 	when_taken = {
+# 		debug_log = "nda_eld_release_yigian_lands" 
+# 		custom_tooltip = nda_eld_release_yigian_lands_tooltip
 
-		# set to Yigian
-		every_scope_state = {
-			limit = { 
-				state_region = {
-					is_homeland = cu:nda_cul_yigian
-				}	
-			}	
+# 		# set to Yigian
+# 		every_scope_state = {
+# 			limit = { 
+# 				state_region = {
+# 					is_homeland = cu:nda_cul_yigian
+# 				}	
+# 			}	
 
-			state_region = {
-				remove_claim = c:ELD
-				remove_homeland = nda_cul_cultist
-			}
+# 			state_region = {
+# 				remove_claim = c:ELD
+# 				remove_homeland = cu:nda_cul_cultist
+# 			}
 			
-			set_state_owner = c:YIG
-			hidden_effect = {
-				# convert some cultists to yigian					
-				every_scope_pop = {
-					limit = {
-						culture = cu:nda_cul_cultist
-					}
-					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
-				}
-			}
-		}
+# 			set_state_owner = c:YIG
+# 			hidden_effect = {
+# 				# convert some cultists to yigian					
+# 				every_scope_pop = {
+# 					limit = {
+# 						culture = cu:nda_cul_cultist
+# 					}
+# 					change_pop_culture = { target = cu:nda_cul_yigian value = 0.5 }		
+# 				}
+# 			}
+# 		}
 		
-		change_relations = { country = c:YIG value = 100 } # Make friends
-	}
+# 		change_relations = { country = c:YIG value = 100 } # Make friends
+# 	}
 
-	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { bureaucracy > 0 }
-			add = 5
-		}
-		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
-			}
-			add = -10
-		}		
-	}
-}
+# 	ai_chance = {
+# 		base = 0
+# 		modifier = {
+# 			trigger = { bureaucracy > 0 }
+# 			add = 5
+# 		}
+# 		modifier = {
+# 			OR = {
+# 				is_diplomatic_play_committed_participant = yes
+# 				is_at_war = yes
+# 			}
+# 			add = -10
+# 		}		
+# 	}
+# }

@@ -1,19 +1,19 @@
-﻿building_output_vril_add = {
+﻿goods_output_vril_add = {
 	good = yes
 	percent = no
 }
 
-building_output_black_lotus_add = {
+goods_output_black_lotus_add = {
 	good = yes
 	percent = no
 }
 
-building_input_vril_add = {
+goods_input_vril_add = {
 	good = no
 	percent = no	
 }
 
-building_input_black_lotus_add = {
+goods_input_black_lotus_add = {
 	good = no
 	percent = no
 }

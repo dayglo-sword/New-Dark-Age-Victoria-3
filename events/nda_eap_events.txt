@@ -76,6 +76,7 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 			random_neighbouring_state = {
 				limit = {
 					NOT = { has_variable = nda_poe_red_death_state  }							
+					owner = { coa_def_native_american_trigger = no } # reverse uno - don't hit native americans
 				}
 
 				# if previously hit reduce chance of spread - will not prevent secondary waves
@@ -93,7 +94,8 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 			random_scope_state = {
 				limit = {
 					NOT = { has_variable = nda_poe_red_death_state  }	
-					is_coastal = yes # presume it came in by sea						
+					is_coastal = yes # presume it came in by sea	
+					owner = { coa_def_native_american_trigger = no } # reverse uno - don't hit native americans					
 				}
 
 				# if previously hit reduce chance of spread - will not prevent secondary waves

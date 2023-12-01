@@ -388,10 +388,45 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 			make_independent = yes
 
 			if = {
-				limit = { country_has_primary_culture = cu:nda_cul_cultist }
+				limit = { 
+					country_has_primary_culture = cu:nda_cul_cultist 
+					any_primary_culture = { is_cult_culture = no } # do not remove if no immediate alternative
+				}
 
-				remove_primary_culture = cu:nda_cul_cultist				
+				remove_primary_culture = cu:nda_cul_cultist # this can lead to countries having no culture!		
 			}	
+			else = {
+				# cause strife as had to retain cult culture
+				nda_effect_eldritch_strife = yes	
+			}
+
+			# # this does not work staright off??
+			# if = { 
+			# 	limit = { 
+			# 		NOT = { # no non cultist primary culture
+			# 			any_scope_culture = {
+			# 				is_cult_culture = no
+			# 				is_primary_culture_of = ROOT
+			# 			}
+			# 		}
+			# 	}
+
+			# 	# non cult culture so add the largest non cult as primary
+			# 	random_scope_culture = {
+			# 		limit = { 
+			# 			is_cult_culture = no
+			# 			has_homeland = ROOT.capital 
+			# 		}
+			# 		save_scope_as = new_primary_culture
+			# 	}
+
+			# 	if = {
+			# 		limit = { exists = scope:new_primary_culture }
+			# 		add_primary_culture = scope:new_primary_culture
+			# 	}				
+
+			# }
+
 			save_scope_as = nda_eldritch_freedom
 			every_country = {
 				post_notification = nda_ritual_post_cthulhu_split
@@ -402,63 +437,6 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 	
 	option = { # It's Over
 		name = nda_ritual.6.a
-		default_option = yes
-	}
-}
-
-nda_ritual.7 = { # Unrest in Eldritch lands
-	type = country_event
-	placement = ROOT
-	title = nda_ritual.7.t
-	desc = nda_ritual.7.d
-	flavor =  nda_ritual.7.f
-
-	duration = 3
-
-	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"
-		
-	}
-	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
-
-	trigger = { 
-		has_global_variable = nda_ritual_cthulhu_leaves	
-		#is_full_cult_country = { COUNTRY="THIS" } 
-		OR = {
-			AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-			}	
-			AND = {
-				exists = c:YIG
-				c:YIG = ROOT
-			}
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}		
-		}
-	
-		#is_player = no # only for AI
-
-		# has subject that is not a cultist stronghold
-		any_scope_culture = {
-			is_cult_culture = no
-		}
-	}
-
-	immediate = {
-		debug_log = "Ritual - Eldritch Cult Rebels Select"	
-		nda_effect_eldritch_strife = yes
-	}	
-	
-	option = { # It's Over
-		name = nda_ritual.7.a
 		default_option = yes
 	}
 }

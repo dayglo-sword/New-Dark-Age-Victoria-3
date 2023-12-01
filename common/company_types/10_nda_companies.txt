@@ -1,0 +1,53 @@
+﻿# The Bovine Vril Company - based on real life Bovril being named after Vril!!
+company_nda_bovril = {
+	icon = "gfx/interface/icons/company_icons/nda_bovril_co.dds"
+	# https://commons.wikimedia.org/wiki/File:Bovril_1897_token_with_%27VR%27.JPG#/media/File:Bovril_1897_token_with_'VR'.JPG
+	# By Rosser1954 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=38536681
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_food_industry
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:nda_cul_cultist
+		has_interest_marker_in_region = region_north_sea_coast				
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_north_sea_coast	
+			}
+		}
+	}
+
+	possible = { 
+		AND = {
+			any_scope_state = {
+				region = sr:region_north_sea_coast	
+
+				any_scope_building = {
+					is_building_type = building_food_industry
+					level > 10
+				}
+			}
+			#any_scope_state = { # will work at country level?
+				has_lost_city = yes
+			#}			
+		}
+
+	}
+	
+	prosperity_modifier = {
+		building_livestock_ranch_throughput_add = 0.1
+		building_food_industry_throughput_add = 0.1
+		#state_loyalists_from_sol_change_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 5 # Higher base value for mod companies!!
+	}
+}

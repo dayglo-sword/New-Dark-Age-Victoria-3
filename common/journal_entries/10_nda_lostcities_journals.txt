@@ -1,0 +1,96 @@
+﻿je_nda_knyan_search = {
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
+
+	group = je_group_nda_eldritch
+	
+	is_shown_when_inactive = {
+		is_cultist_country = yes
+		NOT = { has_global_variable = nda_lostcity_knyan_exists }	
+	}
+
+	possible = {
+
+		custom_tooltip = {
+				text = je_nda_ritual_proceeds_possible_tt
+
+				#exists = c:ELD		
+				has_global_variable = nda_conjunction_2 # limit to after 1861 if early ELD
+		}
+
+		custom_tooltip = {
+			text = je_nda_knyan_search_possible_tt
+			NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+			NOT = { has_global_variable = nda_lostcity_knyan_exists }	
+			p:xA07F85 = {
+				state = {
+					owner = ROOT
+					NOT = { has_building = building_nda_lostcity_knyan }
+				}
+			}
+			is_cultist_country = yes
+		}
+	}	
+
+	immediate = {
+		save_scope_as = nda_je_knyan_search_scope
+		debug_log = "knyan search : Started : [THIS.GetCountry.GetNameNoFormatting]"
+
+		set_variable = {
+			name = nda_knyan_search_count
+			value = 0
+		}
+	}
+
+    complete = {
+		# time to move on
+		custom_tooltip = {
+			text = je_nda_knyan_search_complete_tt
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+    }
+
+	on_complete = {
+		debug_log = "knyan search  : Completed : [THIS.GetCountry.GetNameNoFormatting]"
+
+		set_variable = nda_lostcity_knyan_search_finishing
+	}
+
+	on_weekly_pulse = {		
+	}
+
+	on_monthly_pulse = {
+		effect = {	
+			scope:nda_je_knyan_search_scope = {
+				change_variable = {
+					name = nda_knyan_search_count
+					add = 1
+				}			
+			}
+		}
+	}
+
+	current_value = {
+		value = root.var:nda_knyan_search_count
+	}
+
+	goal_add_value = {
+		add = 5 # will this countdown?
+	}
+
+    fail = {
+    }
+	
+	on_fail = {	
+	}
+
+	#timeout = 3000
+
+	progressbar = yes
+	weight = 10
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

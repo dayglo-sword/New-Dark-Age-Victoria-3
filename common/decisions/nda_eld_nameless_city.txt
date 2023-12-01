@@ -2,10 +2,11 @@
 	is_shown = {
 		is_player = no
 		OR = {
-			AND = {
-				exists = c:ELD
-				this = c:ELD				
-			}
+			# now via journal button for ELD
+			# AND = {
+			# 	exists = c:ELD
+			# 	this = c:ELD				
+			# }
 			AND = {
 				exists = c:STY
 				this = c:STY				
@@ -18,7 +19,7 @@
 				NOT = { has_building = building_nda_lostcity_nameless_city }
 				owner = {
 					is_revolutionary = no # wait till revoultion is over
-					is_adjacent = ROOT
+					is_adjacent_to_country = ROOT
 				}
 			}
 		}
@@ -35,7 +36,7 @@
 			state = {
 				owner = {
 					is_at_war = no
-					is_adjacent = ROOT
+					is_adjacent_to_country = ROOT
 					#save_scope_as = conquest_target
 					country_rank < rank_value:minor_power 
 				}

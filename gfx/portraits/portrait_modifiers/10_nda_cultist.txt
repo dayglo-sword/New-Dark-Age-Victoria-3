@@ -1,0 +1,297 @@
+﻿nda_cultist_mask = {
+	usage = game
+	selection_behavior = weighted_random
+	fallback = no_cultist_mask
+
+    no_cultist_mask = {
+        # no stuff needed
+    }
+
+    # CULT MASKS
+    cultist_mask_headgear_eldritch = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = nda_headgear
+                template = cultist_mask_headgear_eldritch
+                range = { 0.0 1.0 } 
+            }
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
+                    has_variable = nda_coven_leader # leader only
+                    exists = c:ELD
+                    owner = c:ELD      
+                }
+            }
+        }
+    }
+
+    cultist_mask_headgear_yigian = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = nda_headgear
+                template = cultist_mask_headgear_yigian
+                range = { 0.0 1.0 } 
+            }
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
+                    has_variable = nda_coven_leader
+                    OR = {
+                        AND = {
+                            exists = c:YIG
+                            owner = c:YIG                        
+                        }
+                        AND = {
+                            exists = c:STY
+                            owner = c:STY                        
+                        }                          
+                    }
+
+                }
+            }
+        }
+    }
+
+    cultist_mask_headgear_dagonic = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = nda_headgear
+                template = cultist_mask_headgear_dagonic
+                range = { 0.0 1.0 } 
+            }
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
+                    has_variable = nda_coven_leader
+                    exists = c:DGN
+                    owner = c:DGN      
+                }
+            }
+        }
+    }
+
+    cultist_mask_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = nda_headgear
+                template = cultist_mask_headgear
+                range = { 0.0 1.0 } 
+            }
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
+                    has_variable = nda_coven_leader
+                    owner = {
+                        has_variable = nda_cultists_in_open			
+                    }                   
+                }
+            }
+        }
+    }
+}
+
+nda_cultist_robe = {
+    usage = game
+	selection_behavior = weighted_random
+	fallback = no_cultist_robe
+
+    no_cultist_robe = {
+        # no stuff needed
+    }
+
+    cultist_robe_eldritch = {
+        dna_modifiers = {
+            # add cult robes
+            accessory = {
+                mode = add
+                gene = nda_top_layer
+                template = eldritch_master_top_layer
+                range = { 1 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = outfits
+                template = peasant_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
+                    OR = {
+                        has_variable = nda_coven_leader     
+                        has_trait = nda_master                  
+                    }
+
+                    EXISTS = c:ELD
+                    age > 16
+                    owner = { country_has_primary_culture = cu:nda_cul_cultist }    
+                }
+            }
+        }
+    }
+
+    cultist_robe_yigian = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = nda_top_layer
+                template = yigian_master_top_layer
+                range = { 1 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = outfits
+                template = peasant_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
+
+                    OR = {
+                        has_variable = nda_coven_leader     
+                        has_trait = nda_yig_master                  
+                    }
+                    age > 16
+                    # OR = {
+                    #     EXISTS = c:YIG
+                    #     EXISTS = c:STY
+                    # }
+                    owner = { country_has_primary_culture = cu:nda_cul_yigian } 
+                }
+            }
+        }
+    }
+
+    cultist_robe_dagonic = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = nda_top_layer
+                template = dagonic_master_top_layer
+                range = { 1 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = outfits
+                template = peasant_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
+                    #EXISTS = c:DGN # only after DGN appears
+                    OR = {
+                        has_variable = nda_coven_leader 
+                        has_trait = nda_dagon_master                       
+                    }
+                    age > 16
+                    owner = { country_has_primary_culture = cu:nda_cul_dagonic }                                       
+                }
+            }
+        }
+    }
+
+    cultist_robe_standard = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = nda_top_layer
+                template = cultist_master_top_layer
+                range = { 1 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = outfits
+                template = peasant_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                scope:character ?= {
+                    is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
+                    OR = {
+                        has_variable = nda_coven_leader
+                        AND = {
+                            has_any_cultist_trait = yes
+                            has_global_variable = nda_cthulhu_arrives
+                        }
+                    }
+                    age > 16
+                    owner = {
+                        #has_variable = nda_cultists_in_open	# can exist in country that has reveted cultures?
+                        has_cult_culture = yes		
+                    }                   
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,8 @@
 ﻿je_nda_cult_spreads = {
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
 
+	group = je_group_nda_eldritch
+
 	immediate = {
 		set_variable = {
 				name = nda_cult_spread_tracker
@@ -75,6 +77,18 @@
 	
 		# check count of cultists in government. add to counter
 		effect = {
+
+			# fix bug where this reruns when ELD revolts
+			IF = {
+				limit = { c:ELD ?= THIS }
+
+				scope:nda_je_scope = {
+					change_variable = {
+						name = nda_cult_spread_tracker
+						add = 1200 # can send negative despite clamp?
+					}					
+				}					
+			}
 
 			# use ban on 'nameless Cults' to throtle back
 			IF = {
@@ -208,6 +222,8 @@
 # Eldritch conversion to Yigian
 je_nda_cult_to_yigian = {
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	
+	group = je_group_nda_eldritch
 
 	is_shown_when_inactive = {
 		country_has_primary_culture = cu:nda_cul_cultist 
@@ -293,7 +309,7 @@ je_nda_cult_to_yigian = {
 				limit = { 
 					is_marginal = no 
 					leader = { 
-						has_dagonic_trait = yes
+						has_yigian_trait = yes
 					}
 				}
 				
@@ -385,6 +401,8 @@ je_nda_cult_to_yigian = {
 # Eldritch conversion to Dagonic
 je_nda_cult_to_dagonic = {
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	group = je_group_nda_eldritch
 
 	is_shown_when_inactive = {
 		country_has_primary_culture = cu:nda_cul_cultist 
@@ -566,6 +584,8 @@ je_nda_cult_to_dagonic = {
 je_nda_devout_inquisition = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
+	group = je_group_nda_eldritch
+	
 	immediate = {
 
 		debug_log = "Inquisition : Started : "

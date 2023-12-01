@@ -1,5 +1,6 @@
 ﻿l_english:
-  
+ je_group_nda_eldritch:0 "Eldritch Happenings"
+
  je_nda_cult_spreads:0 "The Cult Spreads"
  je_nda_cult_spreads_reason:0 "In the dark corridors of power the Cult has started spreading its influence.\n\nSlowly the politicians and bureaucrats fall under their malignant spell, as the whisperers catch their ears with talk of prolonged life and even immortality."
  je_nda_cult_spreads_goal:0 "Create Shadow Government"
@@ -17,8 +18,8 @@
  je_nda_cult_spreads_btn_purge_protected_speech_tooltip:0 "This goes against the principle of Protected Speech."
  je_nda_cult_spreads_btn_purge_lead_by_cultist_tooltip:0 "Is lead by a Cultist."
  je_nda_cult_spreads_btn_purge_is_cultist_tooltip:0 "Is a Cultist."
- je_nda_cult_spreads_btn_purge_cooldown_tt:0 "Not on 3 Month Cooldown"
- je_nda_cult_spreads_btn_purge_cooldown_effect_tt:0 "Will have 3 month cooldown"
+ je_nda_cult_spreads_btn_purge_cooldown_tt:0 "Not on 12 Month Cooldown"
+ je_nda_cult_spreads_btn_purge_cooldown_effect_tt:0 "Will have 12 month cooldown"
 
  je_nda_cult_to_yigian:0 "Yig Worship Spreads"
  je_nda_cult_to_yigian_reason:0 "In the dark corridors of power the Cult is increasingly worshiping [concept_nda_yig].\n\nSlowly the Cultists of this country are switching alliegence and falling under Yig's spell."
@@ -40,3 +41,44 @@
  je_nda_devout_inquisition_fail_tt:0 "If the Cultists gain control of the government."
  je_nda_devout_inquisition_closed_tt:0 "The Church closes the Inquisition"
  je_nda_devout_inquisition_cancel_tt:0 "The Government cancels the Inquisition"
+
+# Lost Cities
+ je_nda_knyan_search:0 "Search for K'N-Yan"
+ je_nda_knyan_search_reason:0 "It is rumoured that there is a great lost realm below the earth with its entrance hidden."
+ je_nda_knyan_search_goal:0 "Find clues to the location of K'N-Yan"
+ je_nda_knyan_search_possible_tt:0 "The lost realm of K'N-Yan can still be found."
+ je_nda_knyan_search_complete_tt:0 "We have tracked down the location of K'N-Yan"
+
+# Cult Diplomacy
+je_nda_cult_diplomacy:0 "Cult Diplomacy"
+je_nda_cult_diplomacy_reason:0 "We should pay attemtion to the needs of the other Cults."
+je_nda_cult_diplo_btn_recognise_dagonic_lands:0 "Recognise the Dagonic Shores"
+je_nda_cult_diplo_btn_recognise_dagonic_lands_desc:0 "Along certain sections of our coasts the worship of Dagon grows strong. May be it is time we recognised them as our potential allies."
+je_nda_cult_diplo_btn_release_dagonic_lands:0 "Release the Dagonic Lands"
+je_nda_cult_diplo_btn_release_dagonic_lands_desc:0 "It is in our power to release to the Deep Ones their homelands which we currently occupy."
+je_nda_cult_diplo_btn_recognise_yigian_lands:0 "Recognise the Yigian Lands"
+je_nda_cult_diplo_btn_recognise_yigian_lands_desc:0 "Certain sections of our land have an historical afinity to the worship of Yig. May be it is time we recognised them as our potential allies."
+je_nda_cult_diplo_btn_release_yigian_lands:0 "Release the Yigian Lands"
+je_nda_cult_diplo_btn_release_yigian_lands_desc:0 "It is in our power to release to the Yigians their homelands which we currently occupy."
+je_nda_cult_diplo_btn_nameless_city:0 "Quest for the Nameless City"
+je_nda_cult_diplo_btn_nameless_city_desc:0 "A traveller, from an antique land, has suggested to us that the [concept_nda_nameless_city] is somewhere within the lands of Arabia near Hail. We should conquer this realm to make our search for this lost city easier."
+
+# Eldritch Colonial
+je_nda_eldritch_colonial_administration:0 "Colonial Administration"
+je_nda_eldritch_colonial_administration_reason:0 "Without the Great Cthulhu to hold things together we must seek a better way to control our minions in Africa."
+
+# Maritime Expansion
+je_nda_maritimes:0 "Maritime Expansion"
+je_nda_maritimes_reason:0 "The Maritimes to the north can be seen as being rightfully ours. After all we do share a certain amount of kinship with the Anglo-Canadians."
+je_nda_maritimes_complete_tt:0 "The Maritime question has been resolved."
+je_nda_maritimes_btn_new_brunswick:0 "Union with New Brunswick"
+je_nda_maritimes_btn_new_brunswick_desc:0 "Why fight for land when we can just join with friends! New Brunswick has long been our neighbours, it's time we took them under our benevolent wings."
+je_nda_maritimes_btn_new_brunswick_union_tooltip:0 "Enter into a Union with New Brunswick"
+je_nda_maritimes_btn_nova_scotia:0 "Union with Nova Scotia"
+je_nda_maritimes_btn_nova_scotia_desc:0 "Why fight for land when we can just join with friends! Nova Scotia are our neighbours, it's time we took them under our benevolent wings."
+je_nda_maritimes_btn_nova_scotia_union_tooltip:0 "Enter into a Union with Nova Scotia"
+je_nda_maritimes_btn_strange_ways:0 "Adopt Strange Ways"
+je_nda_maritimes_btn_strange_ways_desc:0 "Maybe we should adopt some of the strange ways of our northern brethren, or at least allow some of their traditions."
+je_nda_maritimes_btn_old_ways:0 "Keep the Old Ways"
+je_nda_maritimes_btn_old_ways_desc:0 "Close as we may be to the Anglo-Canadians, there is no reason to promote their ways amongst our population."
+je_nda_maritimes_btn_old_ways_tooltip:0 "Retain and celebrate our proud culture like a True Yankee should."

@@ -86,7 +86,7 @@
 				}	
 			}
 			state_region = {
-				add_homeland = nda_cul_cultist
+				add_homeland = cu:nda_cul_cultist
 			}
 			
 		}
