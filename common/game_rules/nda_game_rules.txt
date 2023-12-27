@@ -1,0 +1,12 @@
+﻿cult_spread_speed = {
+	default = cult_spread_normal
+
+	cult_spread_slower = {
+	}
+
+	cult_spread_normal = {
+	}
+
+	cult_spread_faster = {
+	}
+}

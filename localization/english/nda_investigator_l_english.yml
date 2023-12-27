@@ -10,11 +10,11 @@ nda_investigator.1.f:0 "'The matter of the cult still remained to fascinate me, 
 nda_investigator.1.a:0 "A Good Result!"
 
 nda_investigator.2.t:0 "A Strange Turn"
-nda_investigator.2.d:0 "After an initial investigation into the dealings of the Cult, [SCOPE.sCharacter('nda_potential_investigator_scope').GetFullName] has decided to join their organisation in an apparent quest for power!\n\n The Cultist schemes progress onwards."
-nda_investigator.2.f:0 "Always a dweller on the surface of phantasy and strangeness, they now delved deep into the actual runes and riddles left by a fabulous past for the guidance or puzzlement of posterity."
+nda_investigator.2.d:0 "After an initial investigation into the dealings of the Cult, [SCOPE.sCharacter('nda_potential_investigator_scope').GetFullName] has decided to join that organisation in an apparent quest for power!\n\n The Cultist schemes progress onwards."
+nda_investigator.2.f:0 "'Always a dweller on the surface of phantasy and strangeness, they now delved deep into the actual runes and riddles left by a fabulous past for the guidance or puzzlement of posterity.'"
 nda_investigator.2.a:0 "Most Disagreable!"
 
 nda_investigator.3.t:0 "A Tragic End"
 nda_investigator.3.d:0 "After initial investigations that attracted the unwanted attentions of the Cult, [SCOPE.sCharacter('nda_potential_investigator_scope').GetFullName] has been found dead in the back alleys of the capital.\n\n The Cult obviously had something to do with their unpleasant demise."
-nda_investigator.3.f:0 "...horribly slashed as with many cutlasses, and horribly mangled as by the tread of many cruel boot-heels..."
+nda_investigator.3.f:0 "'...horribly slashed as with many cutlasses, and horribly mangled as by the tread of many cruel boot-heels...'"
 nda_investigator.3.a:0 "A Terrible Thing!"

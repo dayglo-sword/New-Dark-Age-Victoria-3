@@ -60,3 +60,12 @@ nda_eld_illuminati_adj:0 "Illuminated"
 # Cult Cultural Seccession
 nda_generic_worshippers_revolt:0 "Cultist Uprising"
 nda_generic_worshippers_revolt_adj:0 "Cultist"
+
+# Cultist Colonies
+ cultist_zanj: "Cultist East Africa"
+ cultist_ethiopia: "Cultist Abyssinia"
+ cultist_southern_africa: "Cultist South Africa"
+ cultist_congo: "Cultist Congo"
+ cultist_niger: "Cultist Niger"
+ cultist_senegal: "Cultist Senegal"
+

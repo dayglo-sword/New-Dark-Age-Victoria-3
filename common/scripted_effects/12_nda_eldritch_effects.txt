@@ -119,6 +119,9 @@
 			}			
 		}
 
+		# stop the release of Colonial Admin
+		set_variable = nda_anti_colonial_admin
+
 		set_strategy = ai_strategy_nda_eldritch_administrative_agenda
 		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
 		set_strategy = ai_strategy_nda_eldritch_political_agenda

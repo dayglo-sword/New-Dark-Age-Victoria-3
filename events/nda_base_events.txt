@@ -228,7 +228,14 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 		default_option = yes
 		
 		ai_chance = { # will +ve effect conversion rate
-			base = 75				
+			base = 75
+	
+			modifier = {
+				trigger = {
+					has_game_rule = cult_spread_faster					
+				}
+				add = 10
+			}			
 		}
 
 		# annoy the clergy
@@ -256,6 +263,13 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 		ai_chance = { # will -ve effect conversion rate
 			base = 25
 			
+			modifier = {
+				trigger = {
+					has_game_rule = cult_spread_slower					
+				}
+				add = 10
+			}
+
 			modifier = {
 				trigger = {
 					EXISTS = c:RUS # RUS is forming ELD far too frequent - Try Nerf by delaying spread - TODO? base on lit rate not just country?

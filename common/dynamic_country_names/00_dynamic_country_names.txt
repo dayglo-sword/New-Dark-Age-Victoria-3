@@ -515,6 +515,104 @@ DEFAULT = {
 			}
 		}
 	}
+
+	# INDEPENDANT CULTIST COLONIES
+	dynamic_country_name = {
+		name = cultist_zanj
+		adjective = colonial_admin_zanj_adj
+		
+		priority = 110
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = zanj_subject_var
+				is_subject = no
+				country_has_primary_culture = cu:nda_cul_cultist
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = cultist_ethiopia
+		adjective = colonial_admin_ethiopia_adj
+		
+		priority = 110
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = ethiopia_subject_var
+				is_subject = no
+				country_has_primary_culture = cu:nda_cul_cultist
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = cultist_southern_africa
+		adjective = colonial_admin_southern_africa_adj
+		
+		priority = 110
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = southern_africa_subject_var
+				is_subject = no
+				country_has_primary_culture = cu:nda_cul_cultist
+			}
+			NOT = {
+				scope:actor = {
+					c:SAF ?= this
+					c:GBR ?= this.overlord
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = cultist_congo
+		adjective = colonial_admin_congo_adj
+		
+		priority = 110
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = congo_subject_var
+				is_subject = no
+				country_has_primary_culture = cu:nda_cul_cultist
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = cultist_niger
+		adjective = colonial_admin_niger_adj
+		
+		priority = 110
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_variable = niger_subject_var
+				is_subject = no
+				country_has_primary_culture = cu:nda_cul_cultist
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = cultist_senegal
+		adjective = colonial_admin_senegal_adj
+		
+		priority = 110
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {				
+				has_variable = senegal_subject_var
+				is_subject = no
+				country_has_primary_culture = cu:nda_cul_cultist
+			}
+		}
+	}
 }
 
 SWE = {

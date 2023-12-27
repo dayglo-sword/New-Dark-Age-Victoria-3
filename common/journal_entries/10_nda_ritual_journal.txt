@@ -107,7 +107,17 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 	}
 
 	goal_add_value = {
-		add = nda_ritual_goal_value # 20 years? depending on helpers
+		if = {
+			limit = { has_game_rule = cult_spread_faster }
+			add = nda_ritual_goal_value_quick
+		}
+		else_if = {
+			limit = { has_game_rule = cult_spread_slower }
+			add = nda_ritual_goal_value_slow
+		}
+		else = {
+			add = nda_ritual_goal_value # 20 years? depending on helpers and how soon ELD appears
+		}	
 	}
 
     fail = {
@@ -166,7 +176,6 @@ je_nda_ritual_proceeds = {
 	}
 
 	possible = {
-	#	# ? has any state as Eldritch homeland - will convert to Yigian on completion
 		# just ELD as initiator, or enable DGN after a certain date, Other after a later date - others can assist via second journal
 		country_has_primary_culture = cu:nda_cul_cultist # easy check
 
@@ -252,7 +261,17 @@ je_nda_ritual_proceeds = {
 	}
 
 	goal_add_value = {
-		add = nda_ritual_goal_value # 20 years? depending on helpers and how soon ELD appears
+		if = {
+			limit = { has_game_rule = cult_spread_faster }
+			add = nda_ritual_goal_value_quick
+		}
+		else_if = {
+			limit = { has_game_rule = cult_spread_slower }
+			add = nda_ritual_goal_value_slow
+		}
+		else = {
+			add = nda_ritual_goal_value # 20 years? depending on helpers and how soon ELD appears
+		}	
 	}
 
     fail = {

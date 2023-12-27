@@ -85,7 +85,7 @@
 				scope:nda_je_scope = {
 					change_variable = {
 						name = nda_cult_spread_tracker
-						add = 1200 # can send negative despite clamp?
+						add = 1201 # can send negative despite clamp?
 					}					
 				}					
 			}
@@ -170,7 +170,7 @@
 			clamp_variable = {
 				name = nda_cult_spread_tracker
 				min = 0
-				max = 1200			
+				max = 1201			
 			}
 
 		}	
@@ -187,7 +187,17 @@
 	}
 
 	goal_add_value = {
-		add = 1100 #999 # 900 # should be approx 10years -> 12 months x 8 IG + power and govern bonus?
+		if = {
+			limit = { has_game_rule = cult_spread_faster }
+			add = nda_cult_spread_goal_value_quick
+		}
+		else_if = {
+			limit = { has_game_rule = cult_spread_slower }
+			add = nda_cult_spread_goal_value_slow
+		}
+		else = {
+			add = nda_cult_spread_goal_value # should be approx 10 years -> 12 months x 8 IG + power and govern bonus?
+		}		
 	}
 
     fail = {

@@ -4,8 +4,15 @@ nda_small_conversion = 0.005
 nda_medium_conversion = 0.05
 nda_large_conversion = 0.1
 
+# cult spread values
+nda_cult_spread_goal_value = 1100
+nda_cult_spread_goal_value_slow = 1200
+nda_cult_spread_goal_value_quick = 1000
+
 #ritual goal values
 nda_ritual_goal_value = 6000
+nda_ritual_goal_value_slow = 6600
+nda_ritual_goal_value_quick = 5400
 
 # red death duration (max number of months)
 nda_red_death_duration = 16 
