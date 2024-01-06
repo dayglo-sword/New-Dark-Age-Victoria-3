@@ -313,6 +313,24 @@ NEN_Cultist = {
 	}
 } 
 
+NEN_Greater = { # after forming Canada!! Tag is actually CAN
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_thick.dds"
+		color1 = color2
+		color2 = color1	
+	}
+	colored_emblem = {
+		texture = "ce_tree_new_england.dds"
+		color1 = color1
+		color2 = color1
+		instance = { scale = { 0.8 0.8 } } 
+	}
+}
+
 USA_Cultist = {
 	pattern = "pattern_solid.tga"
 	color1 = "white" 

@@ -43,9 +43,11 @@ je_nda_cult_diplo_btn_recognise_dagonic_lands = {
 			add = 5
 		}
 		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
+			trigger = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
 			}
 			add = -1000
 		}	
@@ -131,9 +133,11 @@ je_nda_cult_diplo_btn_release_dagonic_lands = {
 			add = 5
 		}
 		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
+			trigger = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
 			}
 			add = -1000
 		}	
@@ -206,9 +210,11 @@ je_nda_cult_diplo_btn_recognise_yigian_lands = {
 			add = 5
 		}
 		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
+			trigger = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
 			}
 			add = -1000
 		}	
@@ -284,9 +290,11 @@ je_nda_cult_diplo_btn_release_yigian_lands = {
 			add = 5
 		}
 		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
+			trigger = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
 			}
 			add = -1000
 		}	
@@ -386,9 +394,11 @@ je_nda_cult_diplo_btn_nameless_city = {
 			add = 5
 		}
 		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
+			trigger = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
 			}
 			add = -1000
 		}	

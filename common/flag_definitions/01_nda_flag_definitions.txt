@@ -156,6 +156,14 @@ NEN = { # New England Cultist
 			nda_coa_def_cultist_trigger = yes
 		}
 	}
+
+	flag_definition = {
+		coa = NEN_Greater # When NEN forms CAN
+		priority = 500
+		trigger = { 
+			scope:actor = { was_formed_from = NEN }
+		}
+	}	
 }
 
 USA = { # This overrides existing???

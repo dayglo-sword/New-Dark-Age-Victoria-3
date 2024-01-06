@@ -90,6 +90,83 @@ nda_ritual.1 = { # Cthulhu Returns
 	}
 }
 
+nda_ritual.1930 = { # Been 5 years since 1925 and not to the Cults Expectation
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.1930.t
+	desc = nda_ritual.1930.d
+	flavor =  nda_ritual.1930.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+		is_player = yes
+		has_global_variable = nda_cthulhu_arrives	
+		game_date >= 1930.3.23	
+		game_date < 1931.1.1 
+		NOT = {
+			has_variable = nda_cthulhu_mid_point	# run once
+		}
+	}
+
+	immediate = {
+		set_variable = nda_cthulhu_mid_point	
+	}
+
+	option = { 
+		name = nda_ritual.1930.a
+		default_option = yes
+	}
+}
+
+nda_ritual.1900 = { # Been 10 years since 1890 and not to the Cults Expectation
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.1900.t
+	desc = nda_ritual.1900.d
+	flavor =  nda_ritual.1900.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	
+	trigger = { 
+		is_player = yes
+		has_global_variable = nda_cthulhu_arrives	
+		game_date >= 1900.8.20	
+		game_date < 1901.1.1 
+
+		NOT = {
+			has_variable = nda_cthulhu_mid_point	# run once
+		}
+	}
+
+	immediate = {
+		set_variable = nda_cthulhu_mid_point	
+	}
+
+	option = { 
+		name = nda_ritual.1900.a
+		default_option = yes
+	}
+}
+
 nda_ritual.1890 = { # Cthulhu Early Return
 	type = country_event
 	hidden = yes
@@ -97,7 +174,7 @@ nda_ritual.1890 = { # Cthulhu Early Return
 	trigger = { # limit to eldritch cult ELD ? Called Only?
 		has_global_variable = nda_ritual_completed	
 		game_date >= 1890.8.20  # HPL's Birthday
-		game_date < 1891 
+		game_date < 1891.1.1 
 		NOT = {
 			has_global_variable = nda_cthulhu_arrives	# run once
 		 }
@@ -800,7 +877,7 @@ nda_ritual.1907 = {
 		
  		# 1907 
 		game_date >= 1907.11.1 
-		game_date < 1908.2 
+		game_date < 1908.2.1 
 
 		# owner of New Orleans (or St Louis)
 		OR = {
@@ -857,7 +934,7 @@ nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol - best as par
 		
  		# 1860 
 		game_date >= 1860.5.1 
-		game_date < 1861 
+		game_date < 1861.1.1 
 
 		AND = {
 			exists = c:NEN

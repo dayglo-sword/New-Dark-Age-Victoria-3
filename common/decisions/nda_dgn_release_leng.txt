@@ -4,10 +4,13 @@
 		this = c:DGN
 		# no china - presume takeover (DGN or ELD) - could be Heavenly kingdom??
 		NOT = { exists = c:CHI }
-		NOT = { exists = c:TPG }
+		#NOT = { exists = c:TPG } # need inland state check as CHI and TPG can exist side by side
 		
 		exists = c:TIB
 		c:TIB = { is_player = no }
+
+		# TIBET is puppet
+		
 	}
 
 	possible = {

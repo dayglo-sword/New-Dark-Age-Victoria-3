@@ -106,7 +106,7 @@ nda_acd.1884 = { # Lot No. 249 - Mummy in Oxford
 
 #nda_acd.1893 = { # The amnesiac
 
-nda_acd.1908 = { # Proffesor Challenger returns
+nda_acd.1908 = { # Professor Challenger returns
 	type = country_event
 	placement = p:x7543C8
 	title = nda_acd.1908.t
@@ -128,8 +128,8 @@ nda_acd.1908 = { # Proffesor Challenger returns
 	trigger = { 
 		
 		# 1860 
-	   game_date >= 1884.4.1 
-	   game_date < 1885 
+	   game_date >= 1908.4.1 
+	   game_date < 1909 
 
 		# owner of London. or NEN
 		OR = {
@@ -189,7 +189,7 @@ nda_acd.1908 = { # Proffesor Challenger returns
 			empty_agitator_slots >= 1
 		}
 
-		# Recruit Bellingham
+		# Recruit Challenger
 		scope:scope_challenger = { 
 			add_character_role = agitator
 		}						

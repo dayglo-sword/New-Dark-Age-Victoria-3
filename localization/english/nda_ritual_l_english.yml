@@ -54,6 +54,12 @@
  nda_ritual.1860.f:0 "There were certain queer hereditary rituals addressed to a supreme elder devil or tornasuk; and of this Professor Webb had taken a careful phonetic copy from an aged angekok or wizard-priest, expressing the sounds in Roman letters as best he knew how.\n\nOf prime significance was the fetish which this cult had cherished, and around which they danced when the aurora leaped high over the ice cliffs.\n\nIt was, the professor stated, a very crude bas-relief of stone, comprising a hideous picture and some cryptic writing.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  nda_ritual.1860.a:0 "'A Strange Tale'"
  nda_ritual.1860.b:0 "...but an interesting fellow"
+
+ nda_ritual.1900.t:0 "Ten Years Since..."
+ nda_ritual.1900.d:0 "It has been ten years since the event. [concept_nda_cthulhu] still resides on their mountain-top throne in the Pacific, but, other than the dreaful purple miasma that fills the skies, nothing else has changed. Humanity still survives."
+ nda_ritual.1900.f:0 "The cultists themselves appear to be unsure of what the future brings. Their attempts at world domination are using methods not dissimilar to what already existed, and they appear to not to be directly aided by the other powers that were unleashed that day."
+ nda_ritual.1900.a:0 "And the next ten years?"
+
  nda_ritual.1907.t:0 "The Tale of Inspector Legrasse"
  nda_ritual.1907.d:0 "There are strange goings on in the wooded swamps south of New Orleans.\n\nInspector Legrasse has lead a raid of twenty police against an ongoing daemonic orgy that had frightened the local inhabitants.\n\nA number of worshippers were killed in the altercation.\n\nStrange idols of greenish-black stone were recovered from the site, each carved into the likeness of a strange creature with an octopus like head."
  nda_ritual.1907.f:0 "'Animal fury and orgiastic licence here whipped themselves to demoniac heights by howls and squawking ecstasies...\n\n...and from what seemed a well-drilled chorus of hoarse voices would rise in singsong chant that hideous phrase or ritual:\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
@@ -64,10 +70,11 @@
  nda_ritual.1925.f:0 "'...the hideous monolith-crowned citadel whereon great Cthulhu was buried, actually emerged from the waters... Johansen and his men were awed by the cosmic majesty of this dripping Babylon of elder demons, and must have guessed without guidance that it was nothing of this or of any sane planet...\n\n...The Thing of the idols, the green, sticky spawn of the stars, had awaked to claim his own. The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident...\n\nHis accursed city is sunken once more... He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy...\n\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  nda_ritual.1925.a:0 "'A Weird Tale'"
 
- # decisions
-#  nda_ritual_assist_possible_tt:0 "The Cult has commenced the Ritual"
-#  nda_ritual_assist:0 "Assist The Ritual"
-#  nda_ritual_assist_desc:0 "The Eldritch Cult has commenced [concept_nda_ritual]\nWe should assist them in all ways possible to complete this great working.\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ nda_ritual.1930.t:0 "Five Years Since..."
+ nda_ritual.1930.d:0 "It has been five years since the event. [concept_nda_cthulhu] still resides on their mountain-top throne in the Pacific, but, other than the dreaful purple miasma that fills the skies, nothing else has changed. Humanity still survives."
+ nda_ritual.1930.f:0 "The cultists themselves appear to be unsure of what the future brings. Their attempts at world domination are using methods not dissimilar to what already existed, and they appear to not to be directly aided by the other powers that were unleashed that day."
+ nda_ritual.1930.a:0 "And the next five years?"
+
 
  # Journal Entries
  je_nda_ritual_proceeds:0 "The Ritual Commences"
@@ -83,7 +90,7 @@
  je_nda_ritual_proceeds_counts:0 "[SCOPE.sC('nda_je_ritual_proceeds_scope').MakeScope.Var('nda_ritual_count').GetValue] Cultist chapters exist, of which [SCOPE.sC('nda_je_ritual_proceeds_scope').MakeScope.Var('nda_ritual_assist_count').GetValue] are assisting [concept_nda_ritual]."  
 
  je_nda_ritual_assist:0 "Assist The Ritual"
- je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must assist them in all ways possible in this great work.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ je_nda_ritual_assist_reason:0 "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe should assist them in all ways possible in this great work.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  je_nda_ritual_assist_fail_is_eld_tt:0 "The country becomes the Eldritch Cult"
  #je_nda_ritual_assist_goal:0 "Assist in the competion of the Ritual to enable Cthulhu's return when the 'Stars are Right.'"
  
@@ -94,12 +101,12 @@
  je_nda_ritual_assist_halt_status:0 "Ignoring the Ritual"
 
  je_nda_ritual_assist_btn_start:0 "Assist Ritual"
- je_nda_ritual_assist_btn_start_desc:0 "Put our efforts into assisting the Ritual."
+ je_nda_ritual_assist_btn_start_desc:0 "Put our efforts into assisting the Ritual being conducted by our friends, the Eldritch Cult."
  je_nda_ritual_assist_btn_start_possible_tt:0 "It is possible for us to assist in the Ritual"
  je_nda_ritual_assist_btn_start_effect_tt:0 "Assist the Eldritch Cult in executing the Ritual"
 
  je_nda_ritual_assist_btn_halt:0 "Halt Cooperation"
- je_nda_ritual_assist_btn_halt_desc:0 "Halt our efforts in assisting the Ritual."
+ je_nda_ritual_assist_btn_halt_desc:0 "Halt our efforts in assisting the Ritual. Our interests no longer match those of that Cult."
  je_nda_ritual_assist_btn_halt_possible_tt:0 "We can stop assisting our opponents, the Eldritch Cult, in their Ritual."
  je_nda_ritual_assist_btn_halt_effect_tt:0 "Stop assisting the Eldritch Cult in the Ritual"
 

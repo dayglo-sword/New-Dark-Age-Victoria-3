@@ -104,7 +104,7 @@ investigator_professor_webb = { # from the Call of Cthulhu
 
 # Other Investigators
 investigator_professor_challenger = { # from the lost world - A C Doyle
-	first_name = Professor
+	first_name = Professor # actually 'George Edward'
 	last_name = Challenger
 	historical = yes
 	culture = cu:scottish

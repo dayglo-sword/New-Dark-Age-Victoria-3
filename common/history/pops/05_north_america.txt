@@ -819,15 +819,24 @@
 		region_state:NEN = {
 			create_pop = {
 				culture = nda_cul_trueyankee
-				size = 104820
+				size = 90820
 			}
+			create_pop = {
+				culture = yankee
+				size = 14000
+			}			
 		}
+
 	}
 	s:STATE_CONNECTICUT = {
 		region_state:NEN = {
 			create_pop = {
 				culture = nda_cul_trueyankee
-				size = 199228
+				size = 182228
+			}
+			create_pop = {
+				culture = yankee
+				size = 17000
 			}
 		}
 	}
@@ -873,7 +882,11 @@
 		region_state:NEN = {
 			create_pop = {
 				culture = nda_cul_trueyankee
-				size = 282848
+				size = 260848
+			}
+			create_pop = {
+				culture = yankee
+				size = 22000
 			}
 		}
 	}
@@ -885,7 +898,11 @@
 			}
 			create_pop = {
 				culture = nda_cul_trueyankee
-				size = 381228
+				size = 354228
+			}
+			create_pop = {
+				culture = yankee
+				size = 27000
 			}
 		}
 	}

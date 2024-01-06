@@ -33,20 +33,20 @@ nda_monthly_on_action = {
 		nda_astro.1910
 		nda_astro.1921 
 		
-		nda_ritual.1924 # The Return
+		nda_ritual.1860 # The Tale of Professor Webb
 		nda_ritual.1890 # Early Return
+		nda_ritual.1900 # Early Return - mid point		
+		nda_ritual.1907 # The Tale of Inspector Legrasse	
+		nda_ritual.1924 # The Return
+		nda_ritual.1925 # Mystery Derelict Found At Sea	- 'historic' Cthulhu
+		nda_ritual.1930 # The Return - mid point
+
 		nda_ritual.4 
 		nda_ritual.5 # Eldritch add Cult countries
-		nda_ritual.8 # Final War
-		
-		nda_ritual.1860 # The Tale of Professor Webb
-
-		nda_ritual.1907 # The Tale of Inspector Legrasse
-		nda_ritual.1925 # Mystery Derelict Found At Sea
+		nda_ritual.8 # Final War		
 
 		nda_yigian.3 # Yigian Lands Proclaimed
 		nda_dagonic.3 # Dagonic Shores Proclaimed
-
 
 		nda_nen.1842 # Founding of Miskatonic Uni
 		nda_nen.1903 # Plague in Arkham
@@ -111,6 +111,9 @@ nda_monthly_on_action = {
 
 		nda_acd.1884
 		nda_acd.1908
+
+		nda_random.1 # Spiritualism spread
+		nda_random.2 # Theosophy spread
 
 	}
 	random_events = {
@@ -582,8 +585,31 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 
 on_country_formed = {
 	on_actions = {
+		nda_greater_new_england_on_action
 		delay = { days = 7 }
 		nda_create_leng_on_action
+	}
+}
+
+nda_greater_new_england_on_action = {
+	effect = {
+		if = {
+			limit = {
+				c:CAN ?= ROOT
+				was_formed_from = NEN
+			}	
+			
+			change_tag = NEN # rename back to New England (but greater!)
+			set_variable = nda_greater_new_england
+			
+			add_primary_culture = cu:nda_cul_trueyankee # this got removed by formation
+			if = {
+				limit = {
+					has_variable = nda_cultists_in_open
+				}
+				add_primary_culture = cu:nda_cul_cultist
+			}
+		}
 	}
 }
 nda_create_leng_on_action = {

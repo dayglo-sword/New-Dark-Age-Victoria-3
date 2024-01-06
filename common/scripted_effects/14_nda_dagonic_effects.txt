@@ -500,4 +500,10 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 		set_strategy = ai_strategy_nda_eldritch_administrative_agenda
 		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
 		set_strategy = ai_strategy_nda_eldritch_political_agenda
+
+		# set relations with other cultists - ELD is most important
+		IF = {
+			limit = { exists = c:ELD }
+			change_relations = { country = c:ELD value = 200 } # Make friends	
+		}
 }

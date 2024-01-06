@@ -1,0 +1,101 @@
+﻿je_nda_yankee_reconcile = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		c:NEN ?= ROOT
+		exists = c:USA
+
+	}
+
+	possible = {
+		c:NEN ?= ROOT
+	}	
+
+	immediate = {
+		
+		debug_log = "Yankee Reconcile Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+		set_variable = { name = nda_yankee_reconcile_progress_var value = 50 }
+	}
+
+	on_monthly_pulse = {
+	
+		effect = {
+			scope:journal_entry = {
+				if = {
+					limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
+
+					change_variable = {
+						name = nda_yankee_reconcile_progress_var
+						add = 1
+					}					
+				}
+				else_if = {
+					limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
+					change_variable = {
+						name = nda_yankee_reconcile_progress_var
+						add = -1
+					}	
+				}
+				
+				#nda_effect_ritual_assist_counts = yes				
+			}						
+		}				
+	}
+
+	on_yearly_pulse = {
+		effect = {
+			# Have a natural decay as time seperates the cultures
+			scope:journal_entry = {
+				change_variable = {
+					name = nda_yankee_reconcile_progress_var
+					add = -1
+				}
+				
+			}						
+		}		 
+	}
+    complete = {
+
+		custom_tooltip = {
+			text = je_nda_yankee_reconcile_complete_tt
+
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+    }
+
+	on_complete = {
+		set_variable = je_nda_yankee_reconcile_completed
+	}
+
+ 	# Yankee Reconsile decisions
+	#scripted_button = je_nda_yankee_reconcile_btn_new_brunswick
+
+	current_value = {
+		if = {
+			limit = {
+				scope:journal_entry = {
+					goal_value = 0
+				}
+			}
+			value = 0
+		}
+		else = {
+			value = root.var:nda_yankee_reconcile_progress_var 
+		}
+	}
+
+	goal_add_value = {
+		add = 100
+	}
+
+	progressbar = yes
+	weight = 10
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

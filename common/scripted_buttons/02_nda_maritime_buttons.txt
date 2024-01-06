@@ -47,9 +47,11 @@ je_nda_maritimes_btn_new_brunswick = {
 			add = 5
 		}
 		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
+			trigger = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}			
 			}
 			add = -1000
 		}	
@@ -68,6 +70,22 @@ je_nda_maritimes_btn_new_brunswick = {
 				}
 			}
 			change_relations = { country = ROOT value = -50 }
+		}
+
+		# anger USA and local Yankees
+		if = {
+			limit = { exists = c:USA }
+			change_relations = { country = c:USA value = -10 }
+		}
+
+		add_radicals = { value = 0.05 culture = cu:yankee }
+
+		if = {
+			limit = { has_journal_entry = je_nda_yankee_reconcile }
+			change_variable = {
+				name = nda_yankee_reconcile_progress_var
+				add = -10
+			}
 		}
 	}
 }
@@ -120,10 +138,13 @@ je_nda_maritimes_btn_nova_scotia = {
 			add = 5
 		}
 		modifier = {
-			OR = {
-				is_diplomatic_play_committed_participant = yes
-				is_at_war = yes
+			trigger = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}			
 			}
+
 			add = -1000
 		}	
 	}
@@ -131,7 +152,7 @@ je_nda_maritimes_btn_nova_scotia = {
 	effect = {
 		custom_tooltip = je_nda_maritimes_btn_nova_scotia_union_tooltip 
         annex = c:NVS
-		# anger the canadian neighbours = will slow down 2nd integration
+
 		# anger the canadian neighbours = will slow down 2nd integration
 		every_country = {
 			limit = { 
@@ -142,6 +163,22 @@ je_nda_maritimes_btn_nova_scotia = {
 				}
 			}
 			change_relations = { country = ROOT value = -50 }
+		}
+
+		# anger USA and local Yankees
+		if = {
+			limit = { exists = c:USA }
+			change_relations = { country = c:USA value = -10 }
+		}
+
+		add_radicals = { value = 0.05 culture = cu:yankee }
+
+		if = {
+			limit = { has_journal_entry = je_nda_yankee_reconcile }
+			change_variable = {
+				name = nda_yankee_reconcile_progress_var
+				add = -10
+			}
 		}
 	}
 }
@@ -166,6 +203,22 @@ je_nda_maritimes_btn_strange_ways = {
 		# set radicals among true yankee bigots
 		add_radicals = { value = 0.1 culture = cu:nda_cul_trueyankee }
 		add_radicals = { value = 0.2 culture = cu:franco_canadian }
+
+		# anger USA and local Yankees
+		if = {
+			limit = { exists = c:USA }
+			change_relations = { country = c:USA value = -10 }
+		}
+
+		add_radicals = { value = 0.05 culture = cu:yankee }
+
+		if = {
+			limit = { has_journal_entry = je_nda_yankee_reconcile }
+			change_variable = {
+				name = nda_yankee_reconcile_progress_var
+				add = -10
+			}
+		}
 	}
 
 	ai_chance = {

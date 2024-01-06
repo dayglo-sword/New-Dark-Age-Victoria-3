@@ -21,7 +21,7 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 
 	trigger = { 		
 		game_date >= 1838.4.1 
-		game_date < 1839 
+		game_date < 1839.1.1 
 
 		# owner of Syracuse, NY. or NEN
 		OR = {
@@ -66,8 +66,8 @@ nda_historic.1842 = { # Zanoni novel by Edward Bulwer-Lytton
 
 	trigger = {
  		# 1842 year of release 
-		game_date >= 1842.8 
-		game_date < 1844
+		game_date >= 1842.8.1 
+		game_date < 1844.1.1
 
 		# owner of London. or NEN
 		OR = {
@@ -118,7 +118,7 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 	trigger = {
  		# 1848 spiritualist movement founded in Up State New York 
 		game_date >= 1848.4.1 
-		game_date < 1849 
+		game_date < 1849.1.1 
 
 		# owner of Syracuse, NY. or NEN
 		OR = {
@@ -203,7 +203,7 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 	trigger = {
  		# 1849 I
 		game_date >= 1849.10.1 
-		game_date < 1850 
+		game_date < 1850.1.1 
 
 		# owner of Baltimore. or NEN
 		OR = {
@@ -270,8 +270,8 @@ nda_historic.1852 = { # An American Medium in London
 
 	trigger = {
  		# 1852 Mrs Hayden visits London 
-		game_date >= 1852 
-		game_date < 1853
+		game_date >= 1852.1.1 
+		game_date < 1853.1.1
 
 		# owner of London. or NEN
 		OR = {
@@ -364,8 +364,8 @@ nda_historic.1854 = { # Eliphas Levi - Dogme et Rituel de la Haute Magie 'The Do
 
 	trigger = {
  		# 1854 year of release of part 1
-		game_date >= 1854.3 
-		game_date < 1855
+		game_date >= 1854.3.1 
+		game_date < 1855.1.1
 
 		# owner of Paris. or NEN
 		OR = {
@@ -415,8 +415,8 @@ nda_historic.1857 = { # Banner of Light
 
 	trigger = {
  		# 1857 1st published Boston 
-		game_date >= 1857.4 
-		game_date < 1858
+		game_date >= 1857.4.1 
+		game_date < 1858.1.1
 
 		# owner of Boston. or NEN
 		OR = {
@@ -524,8 +524,8 @@ nda_historic.1858 = { # Le Livre des Esprits
 
 	trigger = {
  		# 1857 1st published Lyon? 
-		game_date >= 1857.8 
-		game_date < 1858
+		game_date >= 1857.8.1 
+		game_date < 1858.1.1
 
 		# owner of Lyon. or NEN
 		OR = {
@@ -548,7 +548,7 @@ nda_historic.1858 = { # Le Livre des Esprits
 
 		debug_log = "Le Livre des Esprits : [THIS.GetCountry.GetNameNoFormatting]" 
 
-		IF = { # only owner should not trigger this
+		IF = { # only owner should trigger this
 			limit = {
 				p:xB04060 = { state = { owner = ROOT } }
 			}
@@ -681,8 +681,8 @@ nda_historic.1862 = { # The Ghost Club
 
 	trigger = {
  		# 1862 Ghost Club London 
-		game_date >= 1862 
-		game_date < 1863
+		game_date >= 1862.1.1 
+		game_date < 1863.1.1
 
 		# owner of London. or NEN
 		OR = {
@@ -759,8 +759,8 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe! TODO
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
-		game_date >= 1865.6 
-		game_date < 1866
+		game_date >= 1865.6.1 
+		game_date < 1866.1.1
 
 		# owner of London. or NEN
 		OR = {
@@ -807,8 +807,8 @@ nda_historic.1871 = { # Vril - Power of the coming race : book by Edward Bulwer-
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = { #published anonymously in May 1871, by Blackwood and Sons of Edinburgh and London
-		game_date >= 1871.5 
-		game_date < 1872
+		game_date >= 1871.5.1 
+		game_date < 1872.1.1
 
 		# owner of Edinburgh. or NEN
 		OR = {
@@ -861,7 +861,7 @@ nda_historic.1875 = { # The Theosophical Society
 	trigger = {
  		# 1875 Theosophical Society founded in New York 
 		game_date >= 1875.4.1 
-		game_date < 1876 
+		game_date < 1876.1.1 
 
 		# owner of NY. or NEN
 		OR = {
@@ -928,7 +928,7 @@ nda_historic.1879 = {
 	trigger = {
  		# 1879 Theosophical Society moves to India
 		game_date >= 1879.4.1 
-		game_date < 1880 
+		game_date < 1880.1.1 
 
 		# owner of Madras. or NEN
 		OR = {
@@ -986,8 +986,8 @@ nda_historic.1882 = { # The Society for Psychical Research
 
 	trigger = {
  		# 1882 Society for Psychical Research founded 
-		game_date >= 1882 
-		game_date < 1883
+		game_date >= 1882.1.1 
+		game_date < 1883.1.1
 
 		# owner of London. or NEN
 		OR = {
@@ -1028,7 +1028,7 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 	trigger = {
  		# 1888 book published - presume new york
 		game_date >= 1888.8.1 
-		game_date < 1889 
+		game_date < 1889.1.1 
 
 		# owner of NY. or NEN
 		OR = {
@@ -1094,7 +1094,7 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement
 	trigger = {
  		# 1888 spiritualist movement discredited 
 		game_date >= 1888.4.1 
-		game_date < 1889 
+		game_date < 1889.1.1 
 
 		# owner of Syracuse, NY. or NEN
 		OR = {
@@ -1135,7 +1135,7 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 	trigger = {
  		# 1888 Isis-Urania Temple - London
 		game_date >= 1888.10.1 
-		game_date < 1889 
+		game_date < 1889.1.1 
 
 		# owner of London. or NEN
 		OR = {
@@ -1179,8 +1179,8 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
-		game_date >= 1891.3 
-		game_date < 1892
+		game_date >= 1891.3.1 
+		game_date < 1892.1.1
 
 		# owner of London. or NEN
 		OR = {
@@ -1245,8 +1245,8 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
-		game_date >= 1892.9 
-		game_date < 1893
+		game_date >= 1892.9.1 
+		game_date < 1893.1.1
 
 		# owner of London. or NEN
 		OR = {

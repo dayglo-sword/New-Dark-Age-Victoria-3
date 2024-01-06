@@ -75,3 +75,18 @@ DGN = {
 		}
 	}
 }
+
+CAN = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.75	
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+		NOT = {
+			has_variable = nda_greater_new_england
+		}
+	}
+}

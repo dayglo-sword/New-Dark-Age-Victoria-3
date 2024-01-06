@@ -1,0 +1,192 @@
+﻿namespace = nda_random #  Random events that don't fit into other categories
+
+nda_random.1 = { # Random Spread of Spiritualism to other major country - do after intial historical Spiritualist events
+	type = country_event
+	placement = ROOT
+	title = nda_random.1.t
+	desc = nda_random.1.d
+	flavor =  nda_random.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	duration = 3
+
+	trigger = { 
+
+		# 1854 
+	    game_date >= 1854.4.1 
+	    game_date < 1858.1.1 
+
+		OR = {
+			AND = {
+				NOT = { has_global_variable = nda_spritualism_spread }  # just do the once??		
+				country_rank >= rank_value:unrecognized_major_power	# major countries only
+				is_cultist_country = no
+			}
+
+			AND = { # but also player if they are not NEN (even if cultist!)
+				is_player = yes
+				NOT = { has_variable = nda_spritualism_spread }
+			}
+		}
+	    
+	   # not already has spiritulism present
+		religion_percent_country = {
+			target = rel:nda_rel_spiritualism
+			value < 0.01
+		}
+
+   }
+
+	cooldown = { months = 24 }
+
+	immediate = {
+		debug_log = "Random 1 - Spiritualism Spread"
+	}	
+	
+	option = {
+		name = nda_random.1.a
+		default_option = yes
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 90	
+		}
+
+	    set_global_variable = nda_spritualism_spread
+		set_variable = nda_spritualism_spread
+
+		Capital = {
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism						
+					months = 12
+					value = nda_small_conversion
+				}
+
+				every_neighbouring_state = {
+					set_variable = { # # ongoing conversion of neighbours
+						name = nda_rel_boost_spiritualism							
+						months = 12
+						value = nda_trivial_conversion
+					}					
+				}				
+			
+			}
+		}
+		
+		# if country hop and cult country - add to alarm level
+
+	}
+
+	option = {
+		name = nda_random.1.b
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 10		
+		}
+
+		set_variable = nda_spritualism_spread # stop it reoccuring for country		
+	}
+}
+nda_random.2 = { # Random Spread of Theosophy to other major country - do after intial historical Theosophy events
+	type = country_event
+	placement = ROOT
+	title = nda_random.2.t
+	desc = nda_random.2.d
+	flavor =  nda_random.2.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	duration = 3
+
+	trigger = { 
+
+		# 1854 
+	    game_date >= 1894.4.1 
+	    game_date < 1898.1.1 
+
+		OR = {
+			AND = {
+				NOT = { has_global_variable = nda_theosophic_spread }  # just do the once??		
+				country_rank >= rank_value:unrecognized_major_power	# major countries only
+			}
+
+			AND = { # but also player if they are not NEN
+				is_player = yes
+				NOT = { has_variable = nda_theosophic_spread }
+			}
+		}
+	    
+	   # not already has spiritulism present
+		religion_percent_country = {
+			target = rel:nda_rel_theosophic
+			value < 0.01
+		}
+
+   }
+
+	cooldown = { months = 24 }
+
+	immediate = {
+		debug_log = "Random 1 - Spiritualism Spread"
+	}	
+	
+	option = {
+		name = nda_random.2.a
+		default_option = yes
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 90	
+		}
+
+	    set_global_variable = nda_theosophic_spread
+		set_variable = nda_theosophic_spread
+
+		Capital = {
+			if = {
+				limit = { NOT = { has_variable = nda_rel_boost_theosophic }}					
+
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_theosophic						
+					months = 12
+					value = nda_small_conversion
+				}
+
+				every_neighbouring_state = {
+					set_variable = { # # ongoing conversion of neighbours
+						name = nda_rel_boost_theosophic							
+						months = 12
+						value = nda_trivial_conversion
+					}					
+				}				
+			
+			}
+		}		
+	}
+
+	option = {
+		name = nda_random.2.b
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 10	
+		}
+
+		set_variable = nda_theosophic_spread # stop it reoccuring for country		
+	}
+}
