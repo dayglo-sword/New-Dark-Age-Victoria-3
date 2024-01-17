@@ -10,7 +10,7 @@
 		c:TIB = { is_player = no }
 
 		# TIBET is puppet
-		
+		any_subject_or_below = { c:TIB ?= THIS }
 	}
 
 	possible = {
@@ -172,7 +172,7 @@
 					change_relations = { country = c:TIB value = 200 } # Make friends to assist unification?
 				}			
 			}
-			# transfer inland to tibet
+			# transfer inland to tibet - can create isolated pockets
 			every_scope_state = {
 				IF = {
 					limit = { 

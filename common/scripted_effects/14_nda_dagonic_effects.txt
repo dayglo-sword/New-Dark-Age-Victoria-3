@@ -415,6 +415,7 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 
 		# set state religion
 		set_state_religion = rel:nda_rel_cultist
+		
 		# convert to cultists
 		every_scope_state = {
 			if = { limit = { is_capital = yes }  # boost in capital

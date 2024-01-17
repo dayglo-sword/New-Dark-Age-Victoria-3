@@ -14,17 +14,32 @@
 
 			# Cultists everywhere!
 			if = { limit = { is_capital = yes }  # boost in capital
-				convert_population = { target = rel:nda_rel_cultist value = 0.1 }			
+				convert_population = { target = rel:nda_rel_cultist value = nda_large_conversion }			
 			}
 			else = {
-				convert_population = { target = rel:nda_rel_cultist value = 0.05 }
+				convert_population = { target = rel:nda_rel_cultist value = nda_medium_conversion }
 			}
-					
-			set_variable = { # ongoing conversion
+				
+			if = { limit = { owner = { country_has_primary_culture = cu:nda_cul_yigian }}
+				set_variable = { # ongoing conversion
 				name = nda_rel_boost_eldritch_cult
 				months = 12
-				value = nda_medium_conversion
+				value = nda_small_conversion
 			}
+			else_if = { limit = { owner = { country_has_primary_culture = cu:nda_cul_dagonic }}
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_eldritch_cult
+					months = 12
+					value = nda_small_conversion
+				}	
+			}
+			else ={
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_eldritch_cult
+					months = 12
+					value = nda_small_conversion
+				}
+			}				
 
 			# everyone of Eldritch Culture should follow Rite 
 			every_scope_pop = {

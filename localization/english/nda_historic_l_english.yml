@@ -51,8 +51,8 @@ nda_historic.1858.b:0 "Distribute across the nation!"
 nda_historic.1858.c:0 "Stop this heresy!"
 
 nda_historic.1862.t:0 "The Ghost Club"
-nda_historic.1862.d:1 "A Club has been launched in London to investigate ghosts and other psychic phemomena. It appears their intent is to expose fraudulent claims.\n\nIt is said that [SCOPE.sCharacter('dickens_scope').GetFullName] himself is a founding member!\n\nHe knows a thing or two about phantoms and ghosts!"
-nda_historic.1862.f:1 "'I have not yet met with any Ghost Story that was proved to me, or that had not the noticeable peculiarity in it—that the alteration of some slight circumstance would bring it within the range of common natural probabilities.' - Charles Dickens"
+nda_historic.1862.d:1 "A Club has been launched in London to investigate ghosts and other psychic phemomena. It appears their intent is to expose fraudulent claims.\n\nIt is said that [SCOPE.sCharacter('dickens_scope').GetFullName] himself is a founding member!\n\nHe knows a thing or two about phantoms and spirits!"
+nda_historic.1862.f:1 "'I have not yet met with any Ghost Story that was proved to me, or that had not the noticeable peculiarity in it — that the alteration of some slight circumstance would bring it within the range of common natural probabilities.' - Charles Dickens"
 nda_historic.1862.a:0 "Sane heads at last!"
 
 nda_historic.1865.t:0 "Zetetic Astronomy - 'Earth Not a Globe'"

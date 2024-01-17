@@ -602,16 +602,21 @@ nda_greater_new_england_on_action = {
 			change_tag = NEN # rename back to New England (but greater!)
 			set_variable = nda_greater_new_england
 			
-			add_primary_culture = cu:nda_cul_trueyankee # this got removed by formation
-			if = {
-				limit = {
-					has_variable = nda_cultists_in_open
-				}
-				add_primary_culture = cu:nda_cul_cultist
-			}
+			add_primary_culture = cu:nda_cul_trueyankee # this gets removed by formation - reinstate
+
 		}
+		# do formables retain Cultist culture id cultists in open?
+		if = {
+			limit = {
+				c:CAN ?= ROOT
+				has_variable = nda_cultists_in_open
+			}	
+
+			add_primary_culture = cu:nda_cul_cultist # apply cultist as well
+		}		
 	}
 }
+
 nda_create_leng_on_action = {
 	effect = {
 		if = {

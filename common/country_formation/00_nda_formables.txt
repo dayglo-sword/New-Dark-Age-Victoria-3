@@ -76,6 +76,7 @@ DGN = {
 	}
 }
 
+# Override existing - should only do once while transisitioning to Greater NEN
 CAN = {
 	use_culture_states = yes
 

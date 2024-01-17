@@ -35,11 +35,17 @@
 					limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
 					change_variable = {
 						name = nda_yankee_reconcile_progress_var
-						add = -1
+						subtract = 1
 					}	
 				}
-				
-				#nda_effect_ritual_assist_counts = yes				
+				else_if = {
+					limit = { NOT = { EXISTS = c:USA }}
+					change_variable = {
+						name = nda_yankee_reconcile_progress_var
+						subtract = 1
+					}
+				}
+						
 			}						
 		}				
 	}
@@ -50,12 +56,13 @@
 			scope:journal_entry = {
 				change_variable = {
 					name = nda_yankee_reconcile_progress_var
-					add = -1
+					subtract = 1
 				}
 				
 			}						
 		}		 
 	}
+
     complete = {
 
 		custom_tooltip = {
@@ -71,6 +78,23 @@
 		set_variable = je_nda_yankee_reconcile_completed
 	}
 
+	fail = {
+
+		custom_tooltip = {
+			text = je_nda_yankee_reconcile_fail_tt
+
+			scope:journal_entry = {
+				goal_value < 0
+			}		
+		}
+	}
+
+	on_fail = {
+		hidden_effect = {
+			set_variable = je_nda_yankee_reconcile_failed
+		}
+	}
+	
  	# Yankee Reconsile decisions
 	#scripted_button = je_nda_yankee_reconcile_btn_new_brunswick
 

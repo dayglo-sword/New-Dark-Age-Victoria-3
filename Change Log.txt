@@ -1,3 +1,20 @@
+Version v1.6.0
+
+Major Changes
+Journal for 'Reconciliation' with Yankees
+'Greater New England' possible via Canada expansion.
+
+Minor Changes
+Reduce Excesive Cultist Conversion post arrival
+Spiritualist and Theosophic spread to random countries
+Increase starting normal Yankee population in New England
+
+Bug Fixes
+Leng formation with Heavenly Kingdom
+
+
+-----
+
 Version v1.5.10
 
 Major Changes

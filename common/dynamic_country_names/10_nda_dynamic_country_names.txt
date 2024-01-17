@@ -147,7 +147,7 @@ STY = {
 NEN = { # For when NEN forms Canada
 	dynamic_country_name = { 
 		name = nda_greater_new_england
-		adjective = NEN_adj
+		adjective = NEN_ADJ
 		
 		is_main_tag_only = yes
 		priority = 0
