@@ -30,6 +30,10 @@
  notification_nda_dagonic_shores_proclaimed_name:1 "[SCOPE.sC('originator').GetName ] - Hail The Dagonic Shores"
  notification_nda_dagonic_shores_proclaimed_desc:1 "The Deep Ones have returned to the coasts as their followers proclaim the formation of the Dagonic Shores."
 
+ notification_nda_dagonic_asian_release_tooltip:0 "#header $notification_nda_dagonic_asian_release_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_dagonic_asian_release_desc$"
+ notification_nda_dagonic_asian_release_name:1 "The Dagonic Withdrawl"
+ notification_nda_dagonic_asian_release_desc:1 "The Dagonic Shores have released their non-coastal lands in Asia. But Cultists are still present in these areas."
+
  notification_nda_dagon_attacks_tooltip:0 "#header $notification_nda_dagon_attacks_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_dagon_attacks_desc$"
  notification_nda_dagon_attacks_name:1 "Dagon has Risen"
  notification_nda_dagon_attacks_desc:1 "The Master of the Deep Ones, [concept_nda_dagon], has attacked the coast of [SCOPE.sState('nda_dagon_target').GetName], devastating it."

@@ -1,14 +1,131 @@
 ﻿namespace = nda_authors 
 
-# Bram Stoker - Lair of the White Worm
-# https://en.wikipedia.org/wiki/The_Lair_of_the_White_Worm
-
-nda_authors.10 = { # Lair of the White Worm - Character event
+# http://www.eldritchdark.com/writings/short-stories/91/the-holiness-of-az%C3%A9darac
+nda_authors.10 = { # The Holiness of Azedarac - Character event
 	type = country_event
-	placement = p:xA27EFD #scope:target_state # should be British Midlands
+	placement = p:xA27EFD #scope:target_state
 	title = nda_authors.10.t
 	desc = nda_authors.10.d
 	flavor =  nda_authors.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_christianity.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+ 		# 1842 and owner of Averoigne 
+		game_date >= 1842.3 
+		game_date < 1843
+		p:xA27EFD = { state = { owner = ROOT } }
+
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		# create character - unusual effects if later used for IG leader - jusy use for localisation
+		create_character = {
+			template = protagonist_azedarac 
+			on_created = {
+				set_variable = is_azedarac									
+			}
+		}
+
+		#random_character_in_void = {
+		random_scope_character = {
+			limit = {
+				has_variable = is_azedarac
+			}
+			save_scope_as = scope_azedarac
+		}			
+
+		debug_log = "Azedarac - Start"
+	}	
+	
+	option = { #"Must come to the capital" - set as Devout leader and Master Cultist
+		name = nda_authors.10.a
+		default_option = yes
+
+		debug_log = "Azedarac - IG Leader"
+
+		hidden_effect = {
+			scope:scope_azedarac = { 
+				add_trait = nda_master 
+				set_character_immortal = yes	
+			}			
+		}
+
+		scope:scope_azedarac = { 
+			set_as_interest_group_leader = yes	
+		}
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 80		
+		}
+	}
+
+	option = { #"Must go to the Holy See" - send/exile to Vatican
+		name = nda_authors.10.b
+		hidden_effect = {
+			scope:scope_azedarac = { 
+				add_trait = nda_master 
+				set_character_immortal = yes	
+			}			
+		}
+
+		p:xB040A0 = { # Rome
+			state = { 
+				# add to country
+				owner = {
+					save_scope_as = scope_rome
+				}
+			}
+		}
+
+		scope:scope_azedarac = { 
+			add_character_role = agitator			
+			transfer_character = scope:scope_rome
+		}
+
+		debug_log = "Azedarac - In Rome"
+		ai_chance = { 
+			base = 10		
+		}
+	}
+	option = { #"Should continue their work in Averoigne" - set as cult agitator?
+		name = nda_authors.10.c
+
+		ai_chance = { 
+			base = 10		
+		}
+
+		hidden_effect = {
+			scope:scope_azedarac = { 
+				add_trait = nda_master 
+				add_character_role = agitator
+			}			
+		}
+
+		debug_log = "Azedarac - Roman Agitator"
+	}
+}
+
+# Bram Stoker - Lair of the White Worm
+# https://en.wikipedia.org/wiki/The_Lair_of_the_White_Worm
+nda_authors.20 = { # Lair of the White Worm - Character event
+	type = country_event
+	placement = p:xA27EFD #scope:target_state # should be British Midlands
+	title = nda_authors.20.t
+	desc = nda_authors.20.d
+	flavor =  nda_authors.20.f
 
 	duration = 3
 
@@ -53,7 +170,7 @@ nda_authors.10 = { # Lair of the White Worm - Character event
 	}	
 	
 	option = { #Survived
-		name = nda_authors.10.a
+		name = nda_authors.20.a
 		default_option = yes
 
 		debug_log = "White Worm - Survived"
@@ -75,7 +192,7 @@ nda_authors.10 = { # Lair of the White Worm - Character event
 	}
 
 	option = { #"Demise
-		name = nda_authors.10.b
+		name = nda_authors.20.b
 		hidden_effect = {
 			scope:scope_arabella_march = { 
 				add_trait = nda_yig_master 
@@ -103,7 +220,7 @@ nda_authors.10 = { # Lair of the White Worm - Character event
 		}
 	}
 	option = { #"In Exile
-		name = nda_authors.10.c
+		name = nda_authors.20.c
 
 		ai_chance = { 
 			base = 10		
@@ -117,5 +234,188 @@ nda_authors.10 = { # Lair of the White Worm - Character event
 		}
 
 		debug_log = "White Worm - Exile"
+	}
+}
+
+# M. R. James - Casting the Runes
+# https://www.gutenberg.org/cache/epub/9629/pg9629.html
+
+nda_authors.30 = { # A complaint 
+	type = country_event
+	placement = ROOT
+	title = nda_authors.30.t
+	desc = nda_authors.30.d
+	flavor =  nda_authors.30.f
+
+	duration = 3
+
+	gui_window = event_window_2char
+
+	left_icon = scope:nda_rune_victim_1
+	right_icon = scope:nda_rune_antagonist
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {		
+		is_player = yes		
+		game_date >= 1859.3 # original story has earliest victim in 1889, but that's leaving it late for game.
+		game_date < 1861  		
+		# must have cultist ig!
+		exists = ig:ig_nda_cult_worshippers
+		# must have non-ruler intelligentsia
+		any_scope_character = { 
+			is_ruler = no  
+			interest_group = ig:ig_intelligentsia
+		}
+		# potentially expendable cultist
+		any_scope_character = { 
+				is_ruler = no  
+				interest_group = ig:ig_nda_cult_worshippers
+		}
+	}
+
+	cooldown = { months = 24 }
+
+	immediate = {
+		debug_log = "Runes - Intro"
+
+		# get a random Intellectual as victim
+		ig:ig_intelligentsia = {
+			random_scope_character = {
+				limit = { is_ruler = no  }
+				save_scope_as = nda_rune_victim_1
+				add_trait = psychological_affliction
+			}
+		}
+
+		# get the cultists responsible
+		ig:ig_nda_cult_worshippers = {
+			random_scope_character = {
+				limit = { is_ruler = no  }
+				save_scope_as = nda_rune_antagonist
+			}
+		}
+
+		trigger_event = { id = nda_authors.31 days = 10 } # 3 months as per story
+	}	
+	
+	option = {
+		name = nda_authors.30.a
+		default_option = yes
+	}
+}
+
+nda_authors.31 = { # A Tragic Death
+	type = country_event
+	placement = ROOT
+	title = nda_authors.31.t
+	desc = nda_authors.31.d
+	flavor =  nda_authors.31.f
+
+	duration = 3
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:nda_rune_victim_1
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		debug_log = "Runes - Tragic Death"
+
+		scope:nda_rune_victim_1 = { kill_character = yes }
+		trigger_event = { id = nda_authors.32 days = 21 } # another 3 months for victim? less as event can be held back below
+	}	
+	
+	option = { 
+		name = nda_authors.31.a
+		default_option = yes
+	}
+}	
+
+nda_authors.32 = { #  A Worried Intellectual
+	type = country_event
+	placement = ROOT
+	title = nda_authors.32.t
+	desc = nda_authors.32.d
+	flavor =  nda_authors.32.f
+
+	duration = 3
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:nda_rune_potential_victim
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
+		debug_log = "Runes - The Choice"
+
+		# get another random Intellectual as potential victim - could be ruler?
+		ig:ig_intelligentsia = {
+			random_scope_character = {
+				save_scope_as = nda_rune_potential_victim
+			}
+		}
+		#random_scope_character = { 
+		#	limit = { 
+		#		is_ruler = no  
+		#		interest_group = ig:ig_intelligentsia
+		#	} 
+		#	save_scope_as = nda_rune_potential_victim			
+		#}
+	}	
+	
+	option = { # "Destroy It"
+		name = nda_authors.32.a
+		default_option = yes
+		scope:nda_rune_potential_victim = { save_scope_as = nda_rune_victim_2 }
+		trigger_event = { id = nda_authors.33 days = 14 }
+		debug_log = "Runes - The Choice - Intellectual"
+	}
+
+	option = { #"Hand It Back"
+		name = nda_authors.32.b
+		scope:nda_rune_antagonist = { save_scope_as = nda_rune_victim_2 }
+		trigger_event = { id = nda_authors.33 days = 14 }
+		debug_log = "Runes - The Choice - Cultist"
+	}
+}	
+
+nda_authors.33 = { # Final Victim
+	type = country_event
+	placement = ROOT
+	title = nda_authors.33.t
+	desc = nda_authors.33.d
+	flavor =  nda_authors.33.f
+
+	duration = 3
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:nda_rune_victim_2
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	immediate = {
+		debug_log = "Runes - Final Victim"
+		scope:nda_rune_victim_2 = { kill_character = yes }
+	}	
+	
+	option = { 
+		name = nda_authors.33.a
+		default_option = yes
 	}
 }

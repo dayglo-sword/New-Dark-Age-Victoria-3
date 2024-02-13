@@ -1,184 +1,184 @@
-﻿namespace = nda_mrj #  M. R. James 
+﻿# namespace = nda_mrj #  M. R. James 
 
-# Casting the Runes
-# https://www.gutenberg.org/cache/epub/9629/pg9629.html
+# # Casting the Runes
+# # https://www.gutenberg.org/cache/epub/9629/pg9629.html
 
-nda_mrj.10 = { # A complaint 
-	type = country_event
-	placement = ROOT
-	title = nda_mrj.10.t
-	desc = nda_mrj.10.d
-	flavor =  nda_mrj.10.f
+# nda_mrj.10 = { # A complaint 
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_mrj.10.t
+# 	desc = nda_mrj.10.d
+# 	flavor =  nda_mrj.10.f
 
-	duration = 3
+# 	duration = 3
 
-	gui_window = event_window_2char
+# 	gui_window = event_window_2char
 
-	left_icon = scope:nda_rune_victim_1
-	right_icon = scope:nda_rune_antagonist
+# 	left_icon = scope:nda_rune_victim_1
+# 	right_icon = scope:nda_rune_antagonist
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	trigger = {		
-		is_player = yes		
-		game_date >= 1859.3 # original story has earliest victim in 1889, but that's leaving it late for game.
-		game_date < 1861  		
-		# must have cultist ig!
-		exists = ig:ig_nda_cult_worshippers
-		# must have non-ruler intelligentsia
-		any_scope_character = { 
-			is_ruler = no  
-			interest_group = ig:ig_intelligentsia
-		}
-		# potentially expendable cultist
-		any_scope_character = { 
-				is_ruler = no  
-				interest_group = ig:ig_nda_cult_worshippers
-		}
-	}
+# 	trigger = {		
+# 		is_player = yes		
+# 		game_date >= 1859.3 # original story has earliest victim in 1889, but that's leaving it late for game.
+# 		game_date < 1861  		
+# 		# must have cultist ig!
+# 		exists = ig:ig_nda_cult_worshippers
+# 		# must have non-ruler intelligentsia
+# 		any_scope_character = { 
+# 			is_ruler = no  
+# 			interest_group = ig:ig_intelligentsia
+# 		}
+# 		# potentially expendable cultist
+# 		any_scope_character = { 
+# 				is_ruler = no  
+# 				interest_group = ig:ig_nda_cult_worshippers
+# 		}
+# 	}
 
-	cooldown = { months = 24 }
+# 	cooldown = { months = 24 }
 
-	immediate = {
-		debug_log = "Runes - Intro"
+# 	immediate = {
+# 		debug_log = "Runes - Intro"
 
-		# get a random Intellectual as victim
-		ig:ig_intelligentsia = {
-			random_scope_character = {
-				limit = { is_ruler = no  }
-				save_scope_as = nda_rune_victim_1
-				add_trait = psychological_affliction
-			}
-		}
+# 		# get a random Intellectual as victim
+# 		ig:ig_intelligentsia = {
+# 			random_scope_character = {
+# 				limit = { is_ruler = no  }
+# 				save_scope_as = nda_rune_victim_1
+# 				add_trait = psychological_affliction
+# 			}
+# 		}
 
-		# get the cultists responsible
-		ig:ig_nda_cult_worshippers = {
-			random_scope_character = {
-				limit = { is_ruler = no  }
-				save_scope_as = nda_rune_antagonist
-			}
-		}
+# 		# get the cultists responsible
+# 		ig:ig_nda_cult_worshippers = {
+# 			random_scope_character = {
+# 				limit = { is_ruler = no  }
+# 				save_scope_as = nda_rune_antagonist
+# 			}
+# 		}
 
-		trigger_event = { id = nda_mrj.11 days = 10 } # 3 months as per story
-	}	
+# 		trigger_event = { id = nda_mrj.11 days = 10 } # 3 months as per story
+# 	}	
 	
-	option = {
-		name = nda_mrj.10.a
-		default_option = yes
-	}
-}
+# 	option = {
+# 		name = nda_mrj.10.a
+# 		default_option = yes
+# 	}
+# }
 
-nda_mrj.11 = { # A Tragic Death
-	type = country_event
-	placement = ROOT
-	title = nda_mrj.11.t
-	desc = nda_mrj.11.d
-	flavor =  nda_mrj.11.f
+# nda_mrj.11 = { # A Tragic Death
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_mrj.11.t
+# 	desc = nda_mrj.11.d
+# 	flavor =  nda_mrj.11.f
 
-	duration = 3
+# 	duration = 3
 
-	gui_window = event_window_1char_tabloid
+# 	gui_window = event_window_1char_tabloid
 
-	left_icon = scope:nda_rune_victim_1
+# 	left_icon = scope:nda_rune_victim_1
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	immediate = {
-		debug_log = "Runes - Tragic Death"
+# 	immediate = {
+# 		debug_log = "Runes - Tragic Death"
 
-		scope:nda_rune_victim_1 = { kill_character = yes }
-		trigger_event = { id = nda_mrj.12 days = 21 } # another 3 months for victim? less as event can be held back below
-	}	
+# 		scope:nda_rune_victim_1 = { kill_character = yes }
+# 		trigger_event = { id = nda_mrj.12 days = 21 } # another 3 months for victim? less as event can be held back below
+# 	}	
 	
-	option = { 
-		name = nda_mrj.11.a
-		default_option = yes
-	}
-}	
+# 	option = { 
+# 		name = nda_mrj.11.a
+# 		default_option = yes
+# 	}
+# }	
 
-nda_mrj.12 = { #  A Worried Intellectual
-	type = country_event
-	placement = ROOT
-	title = nda_mrj.12.t
-	desc = nda_mrj.12.d
-	flavor =  nda_mrj.12.f
+# nda_mrj.12 = { #  A Worried Intellectual
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_mrj.12.t
+# 	desc = nda_mrj.12.d
+# 	flavor =  nda_mrj.12.f
 
-	duration = 3
+# 	duration = 3
 
-	gui_window = event_window_1char_tabloid
+# 	gui_window = event_window_1char_tabloid
 
-	left_icon = scope:nda_rune_potential_victim
+# 	left_icon = scope:nda_rune_potential_victim
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	immediate = {
-		debug_log = "Runes - The Choice"
+# 	immediate = {
+# 		debug_log = "Runes - The Choice"
 
-		# get another random Intellectual as potential victim - could be ruler?
-		ig:ig_intelligentsia = {
-			random_scope_character = {
-				save_scope_as = nda_rune_potential_victim
-			}
-		}
-		#random_scope_character = { 
-		#	limit = { 
-		#		is_ruler = no  
-		#		interest_group = ig:ig_intelligentsia
-		#	} 
-		#	save_scope_as = nda_rune_potential_victim			
-		#}
-	}	
+# 		# get another random Intellectual as potential victim - could be ruler?
+# 		ig:ig_intelligentsia = {
+# 			random_scope_character = {
+# 				save_scope_as = nda_rune_potential_victim
+# 			}
+# 		}
+# 		#random_scope_character = { 
+# 		#	limit = { 
+# 		#		is_ruler = no  
+# 		#		interest_group = ig:ig_intelligentsia
+# 		#	} 
+# 		#	save_scope_as = nda_rune_potential_victim			
+# 		#}
+# 	}	
 	
-	option = { # "Destroy It"
-		name = nda_mrj.12.a
-		default_option = yes
-		scope:nda_rune_potential_victim = { save_scope_as = nda_rune_victim_2 }
-		trigger_event = { id = nda_mrj.13 days = 14 }
-		debug_log = "Runes - The Choice - Intellectual"
-	}
+# 	option = { # "Destroy It"
+# 		name = nda_mrj.12.a
+# 		default_option = yes
+# 		scope:nda_rune_potential_victim = { save_scope_as = nda_rune_victim_2 }
+# 		trigger_event = { id = nda_mrj.13 days = 14 }
+# 		debug_log = "Runes - The Choice - Intellectual"
+# 	}
 
-	option = { #"Hand It Back"
-		name = nda_mrj.12.b
-		scope:nda_rune_antagonist = { save_scope_as = nda_rune_victim_2 }
-		trigger_event = { id = nda_mrj.13 days = 14 }
-		debug_log = "Runes - The Choice - Cultist"
-	}
-}	
+# 	option = { #"Hand It Back"
+# 		name = nda_mrj.12.b
+# 		scope:nda_rune_antagonist = { save_scope_as = nda_rune_victim_2 }
+# 		trigger_event = { id = nda_mrj.13 days = 14 }
+# 		debug_log = "Runes - The Choice - Cultist"
+# 	}
+# }	
 
-nda_mrj.13 = { # Final Victim
-	type = country_event
-	placement = ROOT
-	title = nda_mrj.13.t
-	desc = nda_mrj.13.d
-	flavor =  nda_mrj.13.f
+# nda_mrj.13 = { # Final Victim
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_mrj.13.t
+# 	desc = nda_mrj.13.d
+# 	flavor =  nda_mrj.13.f
 
-	duration = 3
+# 	duration = 3
 
-	gui_window = event_window_1char_tabloid
+# 	gui_window = event_window_1char_tabloid
 
-	left_icon = scope:nda_rune_victim_2
+# 	left_icon = scope:nda_rune_victim_2
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	immediate = {
-		debug_log = "Runes - Final Victim"
-		scope:nda_rune_victim_2 = { kill_character = yes }
-	}	
+# 	immediate = {
+# 		debug_log = "Runes - Final Victim"
+# 		scope:nda_rune_victim_2 = { kill_character = yes }
+# 	}	
 	
-	option = { 
-		name = nda_mrj.13.a
-		default_option = yes
-	}
-}
+# 	option = { 
+# 		name = nda_mrj.13.a
+# 		default_option = yes
+# 	}
+# }

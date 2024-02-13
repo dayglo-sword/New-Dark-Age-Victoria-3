@@ -421,6 +421,12 @@ nda_astro.4 = { # 1901 conjunction
 		first_valid = {
 			triggered_desc = {
 				trigger = {
+					has_global_variable = nda_cthulhu_arrives
+				}
+				desc = nda_conclave_cthulhu_here.f
+			}
+			triggered_desc = {
+				trigger = {
 					has_global_variable = nda_ritual_completed
 				}
 				desc = nda_conclave_ritual_complete.f

@@ -81,6 +81,15 @@ nda_dagonic_shores_expand = {
  
 }
 
+nda_dagonic_asian_release = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
+
+	notification_type = toast
+ 
+}
+
 nda_dagon_attacks = {
 	type = country
 

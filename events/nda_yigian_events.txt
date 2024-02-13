@@ -252,12 +252,12 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 	}
 }
 
-nda_yigian.10 = { # Snake Oil Incident
+nda_yigian.11 = { # Snake Oil Incident
 	type = country_event
 	placement = ROOT
-	title = nda_yigian.10.t
-	desc = nda_yigian.10.d
-	flavor =  nda_yigian.10.f
+	title = nda_yigian.11.t
+	desc = nda_yigian.11.d
+	flavor =  nda_yigian.11.f
 
 	duration = 3
 
@@ -285,19 +285,23 @@ nda_yigian.10 = { # Snake Oil Incident
 		NOT = { has_variable = nda_yigian_snake_oil } 
 	}
 
+	cooldown = {
+		months = 12
+	}
+	
 	immediate = {
 		set_variable = nda_yigian_snake_oil
 	}	
 	
 	option = { # No we will not
-		name = nda_yigian.10.a
+		name = nda_yigian.11.a
 		default_option = yes
 
 		change_relations = { country = c:YIG value = -50 } 
 	}
 
 	option = { # If they insist
-		name = nda_yigian.10.b
+		name = nda_yigian.11.b
 
 		change_relations = { country = c:YIG value = 20 } 
 	}

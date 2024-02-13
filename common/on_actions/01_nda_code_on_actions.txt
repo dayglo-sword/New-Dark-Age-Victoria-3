@@ -17,7 +17,7 @@ nda_monthly_on_action = {
 		
 		nda_base.9 # Full Cult Ideology Clean
 		nda_base.10 # Eldritch Realms Proclaimed
-		#nda_base.11 # Eldritch War Buff - replaced with war_start below
+
 		nda_base.14	# Revolt Reset
 		nda_base.15 # Local Cult Ideology Clean
 		nda_base.20 # Request from the Devout
@@ -49,16 +49,16 @@ nda_monthly_on_action = {
 		nda_dagonic.3 # Dagonic Shores Proclaimed
 
 		nda_nen.1842 # Founding of Miskatonic Uni
-		nda_nen.1903 # Plague in Arkham
-		nda_nen.1918 # Dr West - Breakthrough
-		nda_nen.1920 # Dr West - End	
 		nda_nen.1845 # Cult in Innsmouth
 		nda_nen.1846 # Plague in Innsmouth
 		nda_nen.1844 # Church of Starry Wisdom
 		nda_nen.1877 # Starry Wisdom Controversy
 		nda_nen.1882 # Colour - Strange Meteor
 		nda_nen.1883 # Colour - Strange Fruit
+		nda_nen.1903 # Plague in Arkham		
 		nda_nen.1913 # Maine Meteor - The Green Meadow
+		nda_nen.1918 # Dr West - Breakthrough
+		nda_nen.1920 # Dr West - End			
 		nda_nen.1922 # Horror at Martins Beach
 		nda_nen.1935 # New England Outro
 
@@ -101,10 +101,6 @@ nda_monthly_on_action = {
 
 		nda_hgw.10 # The Star
 
-		nda_cas.10 # Holiness of Azedarac
-
-		nda_mrj.10 # Casting the Runes
-
 		nda_eap.11 # The Red Death Spreads
 		nda_eap.13 # The Masque of the Red Death
 		nda_eap.14 # Red Death Redemption
@@ -115,8 +111,9 @@ nda_monthly_on_action = {
 		nda_random.1 # Spiritualism spread
 		nda_random.2 # Theosophy spread
 
-		nda_authors.10 # White Worm
-
+		nda_authors.10 # Holiness of Azedarac
+		nda_authors.20 # White Worm
+		nda_authors.30 # Casting the Runes
 	}
 	random_events = {
 		4 = 0
@@ -369,7 +366,7 @@ nda_half_yearly_on_action = {
 		nda_lostcities.40
 		nda_lostcities.41
 
-		nda_yigian.10 # Snake Oil
+		nda_yigian.11 # Snake Oil
 	}
 }
 

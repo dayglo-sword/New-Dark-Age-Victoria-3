@@ -13,11 +13,11 @@ nda_yigian.3.d:1 "For too long has the Servants of Yig been without a homeland! 
 nda_yigian.3.f:1 "But why stop here when we can reclaim all our lands and the world itself!"
 nda_yigian.3.a:0 "Hurrah!"
 
-nda_yigian.10.t:0 "Snake Oil Protest"
-nda_yigian.10.d:1 "Diplomatic representatives of #BOLD The Yigian Lands#!. have lodged a protest about the apparent sale of 'Snake Oil' for medicinal purposes!\n\nIt's a Tonic apparently good for a number of ailments; including Lumbago, Sciatica, Frostbite, and Hair restoration."
-nda_yigian.10.f:1 "It is unsure what the concoctions sold by the travelling merchants actually contains.\n\nApparently it was originally made from extracts of the Chinese Water Snake, but now it seems to be derived from the Rattlesnake of the Americas.\n\nRegardless of the source, the Yigians are not happy."
-nda_yigian.10.a:0 "No, We will not stop the sales."
-nda_yigian.10.b:0 "If they insist."
+nda_yigian.11.t:0 "Snake Oil Protest"
+nda_yigian.11.d:1 "Diplomatic representatives of #BOLD The Yigian Lands#!. have lodged a protest about the apparent sale of 'Snake Oil' for medicinal purposes!\n\nIt's a Tonic apparently good for a number of ailments; including Lumbago, Sciatica, Frostbite, and Hair restoration."
+nda_yigian.11.f:1 "It is unsure what the concoctions sold by the travelling merchants actually contains.\n\nApparently it was originally made from extracts of the Chinese Water Snake, but now it seems to be derived from the Rattlesnake of the Americas.\n\nRegardless of the source, the Yigians are not happy."
+nda_yigian.11.a:0 "No, We will not stop the sales."
+nda_yigian.11.b:0 "If they insist."
 
 ## triggers
 is_potentially_yigian:0 "The ancestrial lands of the worshipers of [concept_nda_yig]."

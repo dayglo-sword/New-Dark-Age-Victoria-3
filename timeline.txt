@@ -7,7 +7,7 @@ Timeline of events in mod
 1841~       nda_base.5          First Cultist in Country
 
 1842.1      nda_astro.1842      Conjunction 1
-1842.3		nda_cas.10			Holiness of Azedarac
+1842.3		nda_authors.10		Holiness of Azedarac
 1842.6      nda_nen.1842        Founding of Miskatonic Uni
 1842.8		nda_historic.1842	Zanoni by Edward Bulwer-Lytton, a story of love and occult. 
 1844.7      nda_nen.1844        Church of Starry Wisdom.
@@ -21,6 +21,7 @@ Timeline of events in mod
 1857.4		nda_historic.1857	Spiritulism - The Banner of Light
 1857.8		nda_historic.1858	Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritulism
 1858.7      nda_astro.1858      Great Comet 1
+1860.3		nda_authors.20		The White Worm
 1861.10     nda_astro.1861      Conjunction 2
 1862.1      nda_historic.1862   London - The Ghost Club
 1865.6      nda_historic.1865   Zetetic Astronomy - Earth is not a globe!

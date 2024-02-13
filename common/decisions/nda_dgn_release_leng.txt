@@ -215,6 +215,15 @@
 				change_tag = LEN # now change to Leng
 			}
 
+			# send out notification		
+			every_country = {
+				limit = {
+					#is_player = yes
+					NOT = {	c:DGN = ROOT }
+				}
+
+				post_notification = nda_dagonic_asian_release # toast
+			}
 			#c:LEN = {
 				# time delay to let cult ig form
 				# trigger_event = {
@@ -231,7 +240,7 @@
 	}
 
 	ai_chance = {
-		base = 20 # should be quite high to get rid of inland.	
+		base = 40 # should be quite high to get rid of inland.	
 	}
 
 }
@@ -241,8 +250,9 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 		exists = c:DGN
 		this = c:DGN
 		# no china - presume takeover (DGN or ELD)
-		NOT = { exists = c:CHI }		
-		NOT = { exists = c:TIB } # Only do if we can't trigger the Leng release above
+		NOT = { exists = c:CHI }	
+		NOT = { any_subject_or_below = { c:TIB ?= THIS } }
+		#NOT = { exists = c:TIB } # Only do if we can't trigger the Leng release above
 		NOT = { exists = c:LEN } # don't do if Leng exists
 	}
 
@@ -418,12 +428,22 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 				}
 				# transfer lands if not done automatically by creation?
 
-			}					
+			}	
+			
+			# send out notification		
+			every_country = {
+				limit = {
+					#is_player = yes
+					NOT = {	c:DGN = ROOT }
+				}
+
+				post_notification = nda_dagonic_asian_release # toast
+			}
 		}
 	}
 
 	ai_chance = {
-		base = 20 # should be quite high to get rid of inland.	
+		base = 40 # should be quite high to get rid of inland.	
 	}
 
 }

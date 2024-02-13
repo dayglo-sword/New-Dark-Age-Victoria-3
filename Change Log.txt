@@ -9,6 +9,8 @@ Reduce Excesive Cultist Conversion post arrival
 Spiritualist and Theosophic spread to random countries
 Increase starting normal Yankee population in New England
 Dynamic Infamy for Cultist Purge
+Increase Investigator availablity timeframe
+Add 'The White Worm' (B Stoker)
 
 Bug Fixes
 Leng formation with Heavenly Kingdom

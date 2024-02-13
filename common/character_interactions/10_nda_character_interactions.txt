@@ -489,9 +489,13 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 		interest_group.leader = THIS
 		# has_role = politician	 # not needed due to IG leader check
 		scope:actor = {
-			# has cult spread journal
-			has_journal_entry = je_nda_cult_spreads		
-			
+			# has cult spread journal or Ritual in progress, also include completed but nothing for them to do yepast this point yet
+			OR = {
+				has_journal_entry = je_nda_cult_spreads	
+				has_journal_entry = je_nda_ritual_oppose
+				has_global_variable = nda_ritual_completed			
+			}
+				
 			any_scope_character = {
 				has_role = politician			
 				has_any_cultist_trait = yes					
