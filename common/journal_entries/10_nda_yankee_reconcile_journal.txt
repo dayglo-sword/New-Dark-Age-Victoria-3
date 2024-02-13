@@ -5,8 +5,10 @@
 
 	is_shown_when_inactive = {
 		c:NEN ?= ROOT
-		exists = c:USA
-
+		OR = {
+			exists = c:USA	
+			exists = c:FSA		
+		}
 	}
 
 	possible = {
@@ -17,11 +19,37 @@
 		
 		debug_log = "Yankee Reconcile Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
 		set_variable = { name = nda_yankee_reconcile_progress_var value = 50 }
+		set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_nda_yankee_reconcile_inproving_status
+				trigger = {
+					var:nda_yankee_reconcile_original_progress_var < var:nda_yankee_reconcile_progress_var
+				}
+			}
+			triggered_desc = {
+				desc = je_nda_yankee_reconcile_decreasing_status
+				trigger = {
+					var:nda_yankee_reconcile_original_progress_var > var:nda_yankee_reconcile_progress_var
+				}
+			}			
+			
+			triggered_desc = {
+				desc = je_nda_yankee_reconcile_status
+				trigger = {
+					always = yes
+				}
+			}
+		}
 	}
 
 	on_monthly_pulse = {
 	
 		effect = {
+			set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
 			scope:journal_entry = {
 				if = {
 					limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
@@ -45,7 +73,23 @@
 						subtract = 1
 					}
 				}
-						
+
+				# FSA should boost a bit quicker
+				if = {
+					limit = { c:FSA ?= { relations:root >= relations_threshold:amicable } }
+
+					change_variable = {
+						name = nda_yankee_reconcile_progress_var
+						add = 2
+					}					
+				}
+				else_if = {
+					limit = { c:FSA ?= { relations:root <= relations_threshold:cold } }
+					change_variable = {
+						name = nda_yankee_reconcile_progress_var
+						subtract = 1
+					}	
+				}						
 			}						
 		}				
 	}
@@ -53,13 +97,13 @@
 	on_yearly_pulse = {
 		effect = {
 			# Have a natural decay as time seperates the cultures
-			scope:journal_entry = {
+			#scope:journal_entry = {
 				change_variable = {
 					name = nda_yankee_reconcile_progress_var
 					subtract = 1
 				}
 				
-			}						
+			#}						
 		}		 
 	}
 
@@ -84,7 +128,7 @@
 			text = je_nda_yankee_reconcile_fail_tt
 
 			scope:journal_entry = {
-				goal_value < 0
+				nda_yankee_reconcile_progress_var < 0
 			}		
 		}
 	}

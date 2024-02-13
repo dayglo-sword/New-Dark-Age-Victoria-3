@@ -1,0 +1,121 @@
+﻿namespace = nda_authors 
+
+# Bram Stoker - Lair of the White Worm
+# https://en.wikipedia.org/wiki/The_Lair_of_the_White_Worm
+
+nda_authors.10 = { # Lair of the White Worm - Character event
+	type = country_event
+	placement = p:xA27EFD #scope:target_state # should be British Midlands
+	title = nda_authors.10.t
+	desc = nda_authors.10.d
+	flavor =  nda_authors.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_christianity.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+ 		# 1860 and owner of Midlands 
+		game_date >= 1860.3.1 
+		game_date < 1861.1.1
+		p:xA27EFD = { state = { owner = ROOT } }
+
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		# create character - unusual effects if later used for IG leader - just use for localisation
+		create_character = {
+			template = protagonist_arabella_march
+			on_created = {
+				set_variable = is_arabella_march									
+			}
+		}
+
+		#random_character_in_void = {
+		random_scope_character = {
+			limit = {
+				has_variable = is_arabella_march
+			}
+			save_scope_as = scope_arabella_march
+		}			
+
+		debug_log = "White Worm - Start"
+	}	
+	
+	option = { #Survived
+		name = nda_authors.10.a
+		default_option = yes
+
+		debug_log = "White Worm - Survived"
+
+		hidden_effect = {
+			scope:scope_arabella_march = { 
+				add_trait = nda_yig_master 
+				set_character_immortal = yes	
+			}			
+		}
+
+		scope:scope_arabella_march = { 
+			set_as_interest_group_leader = yes	
+		}
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 80		
+		}
+	}
+
+	option = { #"Demise
+		name = nda_authors.10.b
+		hidden_effect = {
+			scope:scope_arabella_march = { 
+				add_trait = nda_yig_master 
+				set_character_immortal = yes	
+			}			
+		}
+
+		p:xB040A0 = { # Rome
+			state = { 
+				# add to country
+				owner = {
+					save_scope_as = scope_rome
+				}
+			}
+		}
+
+		scope:scope_arabella_march = { 
+			add_character_role = agitator			
+			transfer_character = scope:scope_rome
+		}
+
+		debug_log = "White Worm - Demise"
+		ai_chance = { 
+			base = 10		
+		}
+	}
+	option = { #"In Exile
+		name = nda_authors.10.c
+
+		ai_chance = { 
+			base = 10		
+		}
+
+		hidden_effect = {
+			scope:scope_arabella_march = { 
+				add_trait = nda_yig_master 
+				add_character_role = agitator
+			}			
+		}
+
+		debug_log = "White Worm - Exile"
+	}
+}

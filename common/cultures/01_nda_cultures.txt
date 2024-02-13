@@ -58,7 +58,7 @@ nda_cul_yigian={
 	}
 
 	noble_last_names = {
-		yig set the_great_dragon the_father_serpent the_snake the_serpent the_blackadder the_ophidia yidhra ayi'ig k'baa lotan typhaon tulu
+		yig set the_great_dragon the_father_serpent the_snake the_serpent the_blackadder the_ophidia yidhra ayi'ig k'baa lotan typhaon tulu the_white_worm
 	}
 	
 	male_regal_first_names = {
@@ -69,7 +69,7 @@ nda_cul_yigian={
 	}
 	regal_last_names = {
 		# populate with names here
-		yig set the_great_dragon the_father_serpent 
+		yig set the_great_dragon the_father_serpent the_white_worm
 	}	
 	
 	ethnicities = {

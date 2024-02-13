@@ -24,18 +24,18 @@
  nda_astro.1910.b:0 "Thank God we live in such enlightened times!"
 
  nda_astro.10.t:0 "A Long Expected Party"
- nda_astro.10.d:1 "You have been invited, as the leader of a nation of cultists, to take part in the next [concept_nda_conclave], to be held at the time of the upcoming [concept_nda_conjunction]."
+ nda_astro.10.d:1 "You have been invited, as the leader of a nation of cultists, to take part in the next [concept_nda_conclave].\n\nThis is to be held, as tradition dictates, at the time of the upcoming [concept_nda_conjunction]."
  nda_astro.10.f:1 ""
  nda_astro.10.a:0 "We accept the Invite."
  nda_astro.10.b:0 "We are too busy."
 
  nda_astro.11.t:0 "At the Conclave"
  nda_astro.11.d:1 "You had arrived at the [concept_nda_conclave] just before the [concept_nda_conjunction] and were accepted as one of them.\n\nOn your return to your country the Cultists that could not attend were most eager to hear about what had occured and seem satified with your participation."
- nda_astro.11.f:1 ""
+ nda_astro.11.f:1 "'...saw the cloaked throngs forming a semicircle around the blazing pillar...\n\n...and in the Stygian grotto I saw them do the rite, and adore the sick pillar of flame, and throw into the water handfuls gouged out of the viscous vegetation which glittered green in the chlorotic glare. I saw this, and I saw something amorphously squatted far away from the light, piping noisomely on a flute'"
  nda_astro.11.a:0 "An Interesting Conclave."
 
  nda_astro.12.t:0 "Cultist Unrest"
- nda_astro.12.d:1 "The Cultists in the country are showing great concern that you did not attend the [concept_nda_conclave]. They strongly suspect that you do not have the interests of the Cult at heart."
+ nda_astro.12.d:1 "The Cultists in the country are showing great concern that you did not attend the [concept_nda_conclave]. They strongly suspect that you do not truely have the interests of the Cult at heart."
  nda_astro.12.f:1 ""
  nda_astro.12.a:0 "We could not attend!"
 

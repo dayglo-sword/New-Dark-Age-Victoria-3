@@ -115,6 +115,8 @@ nda_monthly_on_action = {
 		nda_random.1 # Spiritualism spread
 		nda_random.2 # Theosophy spread
 
+		nda_authors.10 # White Worm
+
 	}
 	random_events = {
 		4 = 0
@@ -367,6 +369,7 @@ nda_half_yearly_on_action = {
 		nda_lostcities.40
 		nda_lostcities.41
 
+		nda_yigian.10 # Snake Oil
 	}
 }
 

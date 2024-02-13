@@ -527,11 +527,21 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 
 		save_scope_as = nda_potential_investigator_scope
 
-		# 3 possible results at random - gain Investigator trait, join cult, or assasinated
+		# 3 possible results at random - gain Investigator trait, join cult, or assasinated		
 		random_list = {
-			4 = { scope:actor = { trigger_event = { id = nda_investigator.1 popup = yes days = 10 } } }
-			1 = { scope:actor = { trigger_event = { id = nda_investigator.2 popup = yes days = 10 } } }
-			1 = { scope:actor = { trigger_event = { id = nda_investigator.3 popup = yes days = 10 } } }
+			40 = { scope:actor = { trigger_event = { id = nda_investigator.1 popup = yes days = 10 } } }
+			10 = { 
+				modifier = {
+					if = {
+						limit = {
+							nda_cult_potential > 0								
+						}
+						add = 10							
+					}
+				}
+				scope:actor = { trigger_event = { id = nda_investigator.2 popup = yes days = 10 } } 
+			}
+			10 = { scope:actor = { trigger_event = { id = nda_investigator.3 popup = yes days = 10 } } }
 		}
 	}
 

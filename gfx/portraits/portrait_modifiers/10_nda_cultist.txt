@@ -22,6 +22,12 @@
                 template = no_hairstyles # needed for none strange clipping
                 range = { 0 1 } # For the randomness to work correctly
             }
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = no_headgear # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
         }
 
         weight = {
@@ -50,6 +56,12 @@
                 mode = replace
                 gene = hairstyles
                 template = no_hairstyles # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = no_headgear # needed for none strange clipping
                 range = { 0 1 } # For the randomness to work correctly
             }
         }
@@ -91,6 +103,12 @@
                 template = no_hairstyles # needed for none strange clipping
                 range = { 0 1 } # For the randomness to work correctly
             }
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = no_headgear # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
         }
 
         weight = {
@@ -119,6 +137,12 @@
                 mode = replace
                 gene = hairstyles
                 template = no_hairstyles # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = no_headgear # needed for none strange clipping
                 range = { 0 1 } # For the randomness to work correctly
             }
         }

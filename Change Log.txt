@@ -8,6 +8,7 @@ Minor Changes
 Reduce Excesive Cultist Conversion post arrival
 Spiritualist and Theosophic spread to random countries
 Increase starting normal Yankee population in New England
+Dynamic Infamy for Cultist Purge
 
 Bug Fixes
 Leng formation with Heavenly Kingdom

@@ -67,6 +67,56 @@ nda_leader_cult_potential =
 	}
 }
 
+# ROOT scope is Character - used to adjust chance of becoming investigator
+nda_cult_potential =
+{
+	value = 0
+	if = {
+		limit = { has_trait = cruel }
+		add = 5
+	}		
+	if = {
+		limit = { has_trait = bigoted }
+		add = 5
+	}
+	if = {
+		limit = { has_trait = hedonist }
+		add = 3
+	}
+	if = {
+		limit = { has_trait = reckless }
+		add = 2
+	}
+	if = {
+		limit = { has_trait = expensive_tastes }
+		add = 2
+	}	
+	if = {
+		limit = { has_trait = psychological_affliction }
+		add = 2
+	}	
+	if = {
+		limit = { has_trait = syphilis }
+		add = 3
+	}	
+	if = {
+		limit = { has_trait = cancer }
+		add = 2
+	}	
+	if = {
+		limit = { has_trait = sickly }
+		add = 2
+	}
+	if = {
+		limit = { has_trait = brave }
+		add = -2
+	}
+	if = {
+		limit = { has_trait = nda_investigator } # should never be candidate
+		add = -20
+	}
+}
+
 # Cult Conversion- ROOT scope is IG - marginal IG should already be filtered out. Is also used for Investigator deductions
 nda_cult_spread_total =
 {
@@ -78,5 +128,26 @@ nda_cult_spread_total =
 	if = {
 		limit = { is_powerful = yes }
 		add = 1
+	}
+}
+
+nda_purge_infamy = 
+{
+	value = 10	
+	if = {
+		limit = { has_law = law_type:law_protected_speech }
+		add = 10
+	}
+
+	every_scope_character = { # and ruler as well!
+		limit = { 
+			OR = {
+				has_role = politician
+				is_ruler = yes 					
+			}
+
+			has_eldritch_trait = yes
+		}
+		add = 5
 	}
 }

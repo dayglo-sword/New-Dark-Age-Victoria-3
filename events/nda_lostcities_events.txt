@@ -424,7 +424,7 @@ nda_lostcities.32 = {  # False teaching destablise Hindu and Buddhist countries
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"		
+		video = "asia_buddhism"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

@@ -51,7 +51,7 @@
 
 # Cult Diplomacy
 je_nda_cult_diplomacy:0 "Cult Diplomacy"
-je_nda_cult_diplomacy_reason:0 "We should pay attemtion to the needs of the other Cults."
+je_nda_cult_diplomacy_reason:0 "As various Cults spread around the World we should pay greater attention to their needs."
 je_nda_cult_diplo_btn_recognise_dagonic_lands:0 "Recognise the Dagonic Shores"
 je_nda_cult_diplo_btn_recognise_dagonic_lands_desc:0 "Along certain sections of our coasts the worship of Dagon grows strong. May be it is time we recognised them as our potential allies."
 je_nda_cult_diplo_btn_release_dagonic_lands:0 "Release the Dagonic Lands"
@@ -82,13 +82,17 @@ je_nda_maritimes_btn_strange_ways_desc:0 "Maybe we should adopt some of the stra
 je_nda_maritimes_btn_old_ways:0 "Keep the Old Ways"
 je_nda_maritimes_btn_old_ways_desc:0 "Close as we may be to the Anglo-Canadians, there is no reason to promote their ways amongst our population."
 je_nda_maritimes_btn_old_ways_tooltip:0 "Retain and celebrate our proud culture like a True Yankee should."
+je_nda_maritimes_btn_no_decision_tooltip:0 "We have yet to choose a path."
 
 # Yankee Reconciliation
 je_nda_yankee_reconcile:0 "Yankee Reconciliation"
-je_nda_yankee_reconcile_reason:0 "The disputes of the past have put a wedge between those of us who are independently minded True Yankees and the Yankees in the rest of America."
+je_nda_yankee_reconcile_reason:0 "The disputes of the past have put a wedge between those of us who are independently minded True Yankees and the Yankees in the rest of America.\n\nWill we and our brethren seperate further with time or become one again?"
 je_nda_yankee_reconcile_complete_tt:0 "The Yankee question has been resolved in favour of some form of reconciliation."
 je_nda_yankee_reconcile_goal:0 "Reach an understanding with the Yankees."
 je_nda_yankee_reconcile_fail_tt:0 "The Yankee question has been resolved. There can be no reconciliation between us."
+je_nda_yankee_reconcile_inproving_status:0 "Relations are improving"
+je_nda_yankee_reconcile_decreasing_status:0 "Relations are deteriorating"
+je_nda_yankee_reconcile_status:0 "Relations are stable"
 
 # je_nda_maritimes_btn_new_brunswick:0 "Union with New Brunswick"
 # je_nda_maritimes_btn_new_brunswick_desc:0 "Why fight for land when we can just join with friends! New Brunswick has long been our neighbours, it's time we took them under our benevolent wings."

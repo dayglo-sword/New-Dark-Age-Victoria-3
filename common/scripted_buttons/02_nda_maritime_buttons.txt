@@ -196,6 +196,10 @@ je_nda_maritimes_btn_strange_ways = {
 		
 		any_scope_state = { state_region = { is_homeland = cu:anglo_canadian } }
 		#owns_entire_state_region = STATE_NEW_BRUNSWICK
+		custom_tooltip =  {
+			text = je_nda_maritimes_btn_no_decision_tooltip 
+			NOT = { has_variable = nda_maritimes_no_canadians }
+		}
 	}
 
 	effect = {
@@ -222,7 +226,7 @@ je_nda_maritimes_btn_strange_ways = {
 	}
 
 	ai_chance = {
-		base = 5		
+		base = 2		
 	}
 }
 
@@ -236,7 +240,11 @@ je_nda_maritimes_btn_old_ways = {
 
 	possible = {
 		NOT = { country_has_primary_culture = cu:anglo_canadian }
-		NOT = { has_variable = nda_maritimes_no_canadians }
+
+		custom_tooltip =  {
+			text = je_nda_maritimes_btn_no_decision_tooltip 
+			NOT = { has_variable = nda_maritimes_no_canadians }
+		}
 
 		any_scope_state = { state_region = { is_homeland = cu:anglo_canadian } }
 	}

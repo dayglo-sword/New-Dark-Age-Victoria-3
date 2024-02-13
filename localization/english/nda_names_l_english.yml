@@ -64,6 +64,7 @@ lotan:0 "Lotan"
 typhaon:0 "Typhaon"
 tulu:0 "Tulu"
 the_stygian:0 "the Stygian"
+the_white_worm:0 "the White Worm"
 
 #Dagonic Specific
 dagon:0 "Dagon"
@@ -140,3 +141,6 @@ Silence:0 "Silence"
 Professor:0 "Professor"
 Channing_Webb:0 "Channing Webb"
 Challenger:0 "Challenger"
+
+#Arabella:0 "Arabella"
+March:0 "March"

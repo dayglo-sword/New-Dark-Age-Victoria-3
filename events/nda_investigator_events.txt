@@ -67,6 +67,17 @@ nda_investigator.2 = { # Character event - becomes Cultist
 
 	#cooldown = { months = 12 }
 
+	# # this does not seem to work - or is not reflected in on-screen values.
+	# weight_multiplier = {
+	# 	base = 2
+	# 	# modifier = {
+	# 	# 	scope:nda_potential_investigator_scope = {
+	# 	# 		nda_cult_potential > 0
+	# 	# 	}
+	# 	# 	add = 1
+	# 	# }
+	# }
+
 	immediate = {
 		random_scope_character = {
 			limit = {

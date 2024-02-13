@@ -62,18 +62,17 @@
 	}
 }
 
-
 ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territorial_expansion 
 	icon = "gfx/interface/icons/ai_strategy_icons/territorial_expansion.dds"
 	
 	type = diplomatic
 	
 	undesirable_infamy_level = {
-		value = 80
+		value = 100
 	}
 	
 	unacceptable_infamy_level = {
-		value = 150
+		value = 200
 	}
 	
 	ideological_opinion_effect_mult = {
@@ -85,11 +84,11 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	}		
 	
 	diplomatic_play_neutrality = {
-		value = 25
+		value = 5
 	}
 	
 	diplomatic_play_boldness = {
-		value = 25
+		value = 50
 	}
 	
 	recklessness = {
@@ -129,7 +128,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 			limit = {
 				is_cultist_country = no				
 			}
-			add = 1
+			add = 2
 		}	
 
 		# Less aggressive against countries we're just antagonistic against, rather than belligerent/domineering

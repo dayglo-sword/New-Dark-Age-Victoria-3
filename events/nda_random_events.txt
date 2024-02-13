@@ -83,6 +83,14 @@ nda_random.1 = { # Random Spread of Spiritualism to other major country - do aft
 			}
 		}
 		
+		# If State Religion make Devout unhappy
+		if = {
+			limit = { has_law = law_type:law_state_religion }
+			add_modifier = {
+				name =  ig_not_placated
+				months = 24
+			}
+		}
 		# if country hop and cult country - add to alarm level
 
 	}
@@ -177,7 +185,16 @@ nda_random.2 = { # Random Spread of Theosophy to other major country - do after 
 				}				
 			
 			}
-		}		
+		}	
+		
+		# If State Religion make Devout unhappy
+		if = {
+			limit = { has_law = law_type:law_state_religion }
+			add_modifier = {
+				name =  ig_not_placated
+				months = 24
+			}
+		}
 	}
 
 	option = {

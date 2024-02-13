@@ -311,6 +311,9 @@ je_nda_cult_spreads_btn_purge = {
 			set_variable = nda_purge_exile				
 		}
 
+		# Do infamy cal before removing characters
+		change_infamy = nda_purge_infamy
+
 		every_scope_character = { # and ruler as well!
 			limit = { 
 				OR = {
@@ -367,7 +370,11 @@ je_nda_cult_spreads_btn_purge = {
 			months = normal_modifier_time
 		}	
 
+		# set_variable = {
+		# 	name = nda_purge_infamy
+		# 	value = 19
+		# }
 		# infamy, infamy!
-		change_infamy = 20 	
+ #	 var:nda_purge_infamy # 20
 	}	
 }

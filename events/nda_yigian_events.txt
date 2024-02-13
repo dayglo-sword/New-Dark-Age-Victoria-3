@@ -251,3 +251,54 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 		default_option = yes
 	}
 }
+
+nda_yigian.10 = { # Snake Oil Incident
+	type = country_event
+	placement = ROOT
+	title = nda_yigian.10.t
+	desc = nda_yigian.10.d
+	flavor =  nda_yigian.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+
+		AND = {
+			exists = c:YIG
+			game_date >= 1885.1.1 # towards end of century
+			OR = {
+				country_is_in_north_america = yes
+				country_is_in_south_america = yes	
+				country_is_in_central_america = yes				
+			}
+			has_cult_culture = no
+		}
+		NOT = { has_variable = nda_yigian_snake_oil } 
+	}
+
+	immediate = {
+		set_variable = nda_yigian_snake_oil
+	}	
+	
+	option = { # No we will not
+		name = nda_yigian.10.a
+		default_option = yes
+
+		change_relations = { country = c:YIG value = -50 } 
+	}
+
+	option = { # If they insist
+		name = nda_yigian.10.b
+
+		change_relations = { country = c:YIG value = 20 } 
+	}
+}
