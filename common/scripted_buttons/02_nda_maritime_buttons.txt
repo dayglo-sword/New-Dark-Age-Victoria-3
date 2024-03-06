@@ -27,10 +27,14 @@ je_nda_maritimes_btn_new_brunswick = {
 		}
 
 		# NOT = { has_war_with = c:NBS } # don't need this as peace conditions exist
-		NOT = { owes_obligation_to = c:NBS }	
+		AND  = {
+			exists = c:NBS
+			NOT = { owes_obligation_to = c:NBS }	
 
-        # on border
-        is_adjacent_to_country = c:NBS
+			# on border
+			is_adjacent_to_country = c:NBS			
+		}
+
 		has_healthy_economy = yes
 
 		# same as alaska decision

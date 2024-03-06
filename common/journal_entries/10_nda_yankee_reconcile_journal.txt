@@ -27,13 +27,13 @@
 			triggered_desc = {
 				desc = je_nda_yankee_reconcile_inproving_status
 				trigger = {
-					var:nda_yankee_reconcile_original_progress_var < var:nda_yankee_reconcile_progress_var
+					root.var:nda_yankee_reconcile_original_progress_var < root.var:nda_yankee_reconcile_progress_var
 				}
 			}
 			triggered_desc = {
 				desc = je_nda_yankee_reconcile_decreasing_status
 				trigger = {
-					var:nda_yankee_reconcile_original_progress_var > var:nda_yankee_reconcile_progress_var
+					root.var:nda_yankee_reconcile_original_progress_var > root.var:nda_yankee_reconcile_progress_var
 				}
 			}			
 			
@@ -128,7 +128,7 @@
 			text = je_nda_yankee_reconcile_fail_tt
 
 			scope:journal_entry = {
-				nda_yankee_reconcile_progress_var < 0
+				root.var:nda_yankee_reconcile_progress_var < 0
 			}		
 		}
 	}

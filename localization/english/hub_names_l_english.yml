@@ -140,7 +140,7 @@
  HUB_NAME_STATE_HANNOVER_city:0 "Hanover"
  HUB_NAME_STATE_HANNOVER_port:0 "Emden"
  HUB_NAME_STATE_HANNOVER_mine:0 "Bielefeld"
- HUB_NAME_STATE_HANNOVER_farm:1 "Oldenburg"
+ HUB_NAME_STATE_HANNOVER_farm:1 "Osnabrück"
  HUB_NAME_STATE_HANNOVER_wood:0 "Minden"
  HUB_NAME_STATE_WESTPHALIA_city:0 "Dortmund"
  HUB_NAME_STATE_WESTPHALIA_mine:0 "Paderborn"
@@ -290,11 +290,11 @@
  HUB_NAME_STATE_POITOU_mine:1 "Angoulême"
  HUB_NAME_STATE_POITOU_farm:1 "Niort"
  HUB_NAME_STATE_POITOU_wood:0 "Saintes"
+# Averoigne - Clark Ashton Smith
  HUB_NAME_STATE_AUVERGNE_LIMOUSIN_city:0 "Vyones"
  HUB_NAME_STATE_AUVERGNE_LIMOUSIN_mine:1 "Les Hiboux"
  HUB_NAME_STATE_AUVERGNE_LIMOUSIN_farm:1 "Ximes"
  HUB_NAME_STATE_AUVERGNE_LIMOUSIN_wood:0 "Saint-Zenobie"
-# Averoigne - Clark Ashton Smith
  HUB_NAME_STATE_LORRAINE_city:2 "Nancy"
  HUB_NAME_STATE_LORRAINE_mine:1 "Longwy"
  HUB_NAME_STATE_LORRAINE_farm:1 "Verdun"
