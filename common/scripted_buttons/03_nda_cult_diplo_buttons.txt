@@ -188,7 +188,7 @@ je_nda_cult_diplo_btn_recognise_yigian_lands = {
 
 	possible = {
 
-		any_scope_state = { #is in coastal asia/pacific
+		any_scope_state = { #is possibly yigian
 			
 			is_potentially_yigian_lands = yes
 			state_region = {
