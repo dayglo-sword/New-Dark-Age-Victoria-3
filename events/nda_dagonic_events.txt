@@ -45,6 +45,7 @@ nda_dagonic.1 = { # Convert a Cultist to dagonic equivalent - called from journa
 	title = nda_dagonic.1.t
 	desc = nda_dagonic.1.d
 	flavor =  nda_dagonic.1.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -79,6 +80,7 @@ nda_dagonic.2 = { # Cult in country converts to dagonic - called from journal 'j
 	title = nda_dagonic.2.t
 	desc = nda_dagonic.2.d
 	flavor =  nda_dagonic.2.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -195,6 +197,7 @@ nda_dagonic.3 = { # Notifications that the Dagonic Shores has formed
 	title = nda_dagonic.3.t
 	desc = nda_dagonic.3.d
 	flavor =  nda_dagonic.3.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -306,6 +309,7 @@ nda_dagonic.5 = {
 	title = nda_dagonic.5.t
 	desc = nda_dagonic.5.d
 	flavor = nda_dagonic.5.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -386,7 +390,8 @@ nda_dagonic.7 = {
 	title = nda_dagonic.7.t
 	desc = nda_dagonic.7.d
 	flavor = nda_dagonic.7.f
-
+	dlc = dlc_NDA
+	
 	duration = 3
 
 	event_image = {

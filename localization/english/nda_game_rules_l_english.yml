@@ -1,14 +1,14 @@
 ﻿l_english:
 
- rule_cult_spread_speed:0 "Cult Spread Speed"
+dlc_NDA:0 "New Dark Age"
+dlc_NDA_desc:0 "A Victorian Horror Mod."
 
- setting_cult_spread_slower:0 "Slightly Slower"
- setting_cult_spread_slower_desc:0 "Both the Cult Spread and [concept_nda_ritual] Completion trackers will have a slight malus that will tend to drag the #b Return#! towards the 1920's."
- setting_cult_spread_normal:0 "Normal"
- setting_cult_spread_normal_desc:0 "Cult Spread and [concept_nda_ritual] Completion trackers will progress at it's regular pace."
- setting_cult_spread_faster:0 "Slightly Faster"
- setting_cult_spread_faster_desc:0 "Both the Cult Spread and [concept_nda_ritual] Completion trackers will have a slight boost that will tend to trigger the #b Return#! early the 1890's."
- 
+rule_cult_spread_speed:0 "Cult Spread Speed"
 
+setting_cult_spread_slower:0 "Slightly Slower"
+setting_cult_spread_slower_desc:0 "Both the Cult Spread and [concept_nda_ritual] Completion trackers will have a slight malus that will tend to drag the #b Return#! towards the 1920's."
+setting_cult_spread_normal:0 "Normal"
+setting_cult_spread_normal_desc:0 "Cult Spread and [concept_nda_ritual] Completion trackers will progress at it's regular pace."
+setting_cult_spread_faster:0 "Slightly Faster"
+setting_cult_spread_faster_desc:0 "Both the Cult Spread and [concept_nda_ritual] Completion trackers will have a slight boost that will tend to trigger the #b Return#! early the 1890's."
   
- 

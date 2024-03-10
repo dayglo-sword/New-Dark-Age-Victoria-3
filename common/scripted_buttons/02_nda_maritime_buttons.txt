@@ -26,14 +26,18 @@ je_nda_maritimes_btn_new_brunswick = {
 			is_at_war = no
 		}
 
-		# NOT = { has_war_with = c:NBS } # don't need this as peace conditions exist
-		AND  = {
-			exists = c:NBS
-			NOT = { owes_obligation_to = c:NBS }	
+		trigger_if = {
+			limit = { exists = c:NBS }
 
-			# on border
-			is_adjacent_to_country = c:NBS			
+			AND  = {
+				exists = c:NBS
+				NOT = { owes_obligation_to = c:NBS }	
+
+				# on border
+				is_adjacent_to_country = c:NBS			
+			}
 		}
+		# NOT = { has_war_with = c:NBS } # don't need this as peace conditions exist
 
 		has_healthy_economy = yes
 
@@ -121,11 +125,18 @@ je_nda_maritimes_btn_nova_scotia = {
 			is_at_war = no		
 		}
 
-		# NOT = { has_war_with = c:NVS } # don't need this as peace conditions exist
-		NOT = { owes_obligation_to =  c:NVS }
+		trigger_if = {
+			limit = { exists = c:NVS }
 
-        # on border
-        is_adjacent_to_country = c:NVS
+			AND  = {
+				exists = c:NVS
+				NOT = { owes_obligation_to = c:NVS }	
+
+				# on border
+				is_adjacent_to_country = c:NVS			
+			}
+		}
+
 		has_healthy_economy = yes
 		
 		# same as alaska decision

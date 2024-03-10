@@ -399,15 +399,15 @@ nda_effect_eldritch_annex = {
 nda_effect_eldritch_anger
 {
 	# The Cult is angry with the target country not following the rite.
-	
+	debug_log = "Anger Cult Countries : [THIS.GetCountry.GetNameNoFormatting]" 
+
 	every_country = {
 		limit = {
 			is_full_cult_country = { COUNTRY="THIS" } # any full cult country 			
 		}
 
 		change_relations = { country = ROOT value = -100 }
-
-		debug_log = "Angry Cult Country" 
+		
 	}
 	
 	every_country = {
@@ -418,7 +418,7 @@ nda_effect_eldritch_anger
 
 		change_relations = { country = ROOT value = -50 }
 
-		debug_log = "Angry Cult Follower Country" 
+		#debug_log = "Angry Cult Follower Country" 
 	}
 }
 
@@ -476,7 +476,8 @@ nda_effect_boost_unification
 				is_unification_candidate = ELD 
 				NOT = { 
 						this = ROOT 
-				}				
+				}	
+				NOT = { c:IAM ?= this } # don't include Hastur in candidates		
 			}
 			order_by = { subtract = global_country_ranking } #order_by = gdp
 			max = 1

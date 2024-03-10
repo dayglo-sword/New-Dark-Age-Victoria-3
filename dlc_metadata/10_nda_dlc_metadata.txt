@@ -1,0 +1,7 @@
+﻿dlc_NDA = {
+	name = "New Dark Age"
+	type = minor
+	priority = 1000
+}
+
+

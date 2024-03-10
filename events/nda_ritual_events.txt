@@ -67,6 +67,7 @@ nda_ritual.1 = { # Cthulhu Returns
 	title = nda_ritual.1.t
 	desc = nda_ritual.1.d
 	flavor =  nda_ritual.1.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -96,6 +97,7 @@ nda_ritual.1930 = { # Been 5 years since 1925 and not to the Cults Expectation
 	title = nda_ritual.1930.t
 	desc = nda_ritual.1930.d
 	flavor =  nda_ritual.1930.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -134,6 +136,7 @@ nda_ritual.1900 = { # Been 10 years since 1890 and not to the Cults Expectation
 	title = nda_ritual.1900.t
 	desc = nda_ritual.1900.d
 	flavor =  nda_ritual.1900.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -236,6 +239,7 @@ nda_ritual.2 = { # Cthulhu Early Return
 	title = nda_ritual.2.t
 	desc = nda_ritual.2.d
 	flavor =  nda_ritual.2.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -263,6 +267,7 @@ nda_ritual.3 = { # The ritual completed
 	title = nda_ritual.3.t
 	desc = nda_ritual.3.d
 	flavor =  nda_ritual.3.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -298,6 +303,7 @@ nda_ritual.4 = { # Cthulhu Leaves
 	title = nda_ritual.4.t
 	desc = nda_ritual.4.d
 	flavor =  nda_ritual.4.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -342,6 +348,7 @@ nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countri
 	title = nda_ritual.5.t
 	desc = nda_ritual.5.d
 	flavor =  nda_ritual.5.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -408,6 +415,7 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 	title = nda_ritual.6.t
 	desc = nda_ritual.6.d
 	flavor =  nda_ritual.6.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -476,33 +484,6 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 				# cause strife as had to retain cult culture
 				nda_effect_eldritch_strife = yes	
 			}
-
-			# # this does not work staright off??
-			# if = { 
-			# 	limit = { 
-			# 		NOT = { # no non cultist primary culture
-			# 			any_scope_culture = {
-			# 				is_cult_culture = no
-			# 				is_primary_culture_of = ROOT
-			# 			}
-			# 		}
-			# 	}
-
-			# 	# non cult culture so add the largest non cult as primary
-			# 	random_scope_culture = {
-			# 		limit = { 
-			# 			is_cult_culture = no
-			# 			has_homeland = ROOT.capital 
-			# 		}
-			# 		save_scope_as = new_primary_culture
-			# 	}
-
-			# 	if = {
-			# 		limit = { exists = scope:new_primary_culture }
-			# 		add_primary_culture = scope:new_primary_culture
-			# 	}				
-
-			# }
 
 			save_scope_as = nda_eldritch_freedom
 			every_country = {
@@ -628,6 +609,7 @@ nda_ritual.9 = { # Reaction to last war
 	title = nda_ritual.9.t
 	desc = nda_ritual.9.d
 	flavor =  nda_ritual.9.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -713,6 +695,7 @@ nda_ritual.10 = { # Foreshadowing of future story paths
 	title = nda_ritual.10.t
 	desc = nda_ritual.10.d
 	flavor =  nda_ritual.10.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -745,6 +728,7 @@ nda_ritual.11 = { # The world surrenders. - Boost DGN by auto adding Cult countr
 	title = nda_ritual.11.t
 	desc = nda_ritual.11.d
 	flavor =  nda_ritual.11.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -801,6 +785,7 @@ nda_ritual.12 = { # The world surrenders. - Boost ELD by auto adding Cult countr
 	title = nda_ritual.12.t
 	desc = nda_ritual.12.d
 	flavor =  nda_ritual.12.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -861,6 +846,7 @@ nda_ritual.1907 = {
 	title = nda_ritual.1907.t
 	desc = nda_ritual.1907.d # have different description if location is ELD??
 	flavor =  nda_ritual.1907.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -918,6 +904,7 @@ nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol - best as par
 	title = nda_ritual.1860.t
 	desc = nda_ritual.1860.d 
 	flavor =  nda_ritual.1860.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -995,7 +982,8 @@ nda_ritual.1925 = { #April - The Vigilant - only if Ritual fails
 	title = nda_ritual.1925.t
 	desc = nda_ritual.1925.d
 	flavor =  nda_ritual.1925.f
-
+	dlc = dlc_NDA
+	
 	duration = 3
 
 	event_image = {

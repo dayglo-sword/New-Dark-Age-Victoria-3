@@ -46,6 +46,7 @@ nda_yigian.1 = { # Convert a Cultist to Yigian equivalent - called from event ab
 	title = nda_yigian.1.t
 	desc = nda_yigian.1.d
 	flavor =  nda_yigian.1.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -78,6 +79,7 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 	title = nda_yigian.2.t
 	desc = nda_yigian.2.d
 	flavor =  nda_yigian.2.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -193,7 +195,8 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 	title = nda_yigian.3.t
 	desc = nda_yigian.3.d
 	flavor =  nda_yigian.3.f
-
+	dlc = dlc_NDA
+	
 	duration = 3
 
 	event_image = {
@@ -258,6 +261,7 @@ nda_yigian.11 = { # Snake Oil Incident
 	title = nda_yigian.11.t
 	desc = nda_yigian.11.d
 	flavor =  nda_yigian.11.f
+	dlc = dlc_NDA
 
 	duration = 3
 

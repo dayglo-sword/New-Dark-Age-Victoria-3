@@ -31,7 +31,7 @@ Timeline of events in mod
 1881.4      nda_astro.1881      Conjunction 3
 1882.1      nda_historic.1882   London - The Society for Psychical Research
 1882.6      nda_nen.1882        The Colour Out Of Space
-1884.5      nda_acd.1884        Lot No. 249 - Mummy in Oxford
+1884.5      nda_authors.40        Lot No. 249 - Mummy in Oxford
 1888.4      nda_historic.1888   Fox's come clean - Spiritualist Movement
 1888.8      nda_historic.1887   Theosophical Society - The Secret Doctrine
 1888.10     nda_historic.1889   The Golden Dawn

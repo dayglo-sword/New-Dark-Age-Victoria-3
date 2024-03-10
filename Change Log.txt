@@ -11,6 +11,7 @@ Increase starting normal Yankee population in New England
 Dynamic Infamy for Cultist Purge
 Increase Investigator availablity timeframe
 Add 'The White Worm' (B Stoker)
+Increase chance of Hastur if Ritual is late.
 
 Bug Fixes
 Leng formation with Heavenly Kingdom

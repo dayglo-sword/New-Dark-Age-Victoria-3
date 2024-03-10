@@ -14,10 +14,22 @@
 	}
 
     complete = {
-		custom_tooltip = {
-			text = je_nda_cult_spread_complete_tt
-			scope:journal_entry = {
-				is_goal_complete = yes
+		trigger_if = {
+			limit = { has_variable = nda_cultists_in_open }
+			custom_tooltip = {
+				text = je_nda_cult_spread_reinstate_complete_tt
+
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
+			}
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = je_nda_cult_spread_complete_tt
+				scope:journal_entry = {
+					is_goal_complete = yes
+				}
 			}
 		}
 
@@ -163,6 +175,19 @@
 					change_variable = {
 						name = nda_cult_spread_tracker
 						add = 4
+					}					
+				}						
+			}
+
+			# Is re-establishing the cult
+			if = {
+				limit = { 
+					has_variable = nda_cultists_in_open 
+				}
+				scope:nda_je_scope = {
+					change_variable = {
+						name = nda_cult_spread_tracker
+						add = 1
 					}					
 				}						
 			}

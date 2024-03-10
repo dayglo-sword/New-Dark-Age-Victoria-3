@@ -138,7 +138,7 @@
 						has_variable = nda_cultists_in_open
 					}
 				}
-				value = 300 # big weight - want as many cultist to join as possible	
+				value = 400 # big weight - want as many cultist to join as possible	
 			}
 		}
 		add = {
@@ -176,7 +176,7 @@
 				limit = { 
 					is_pop_type = peasants
 				}
-				value = 50
+				value = 100
 			}
 		}								
 		
@@ -200,7 +200,7 @@
 				limit = { 
 					has_global_variable = nda_ritual_cthulhu_leaves
 				}
-				value = -100 # big weight - disheartened cultists
+				value = -200 # big weight - disheartened cultists
 			}
 		}					
 	}

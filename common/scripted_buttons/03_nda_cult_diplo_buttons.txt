@@ -111,7 +111,13 @@ je_nda_cult_diplo_btn_release_dagonic_lands = {
 
 	possible = {
 		exists = c:DGN
-		c:DGN = { relations:root >= relations_threshold:amicable }
+
+		trigger_if = {
+			limit = { exists = c:DGN }
+		
+			c:DGN ?= { relations:root >= relations_threshold:amicable }		
+		}
+
 		any_scope_state = { 
 			state_region = {
 					is_homeland = cu:nda_cul_dagonic
@@ -268,7 +274,12 @@ je_nda_cult_diplo_btn_release_yigian_lands = {
 
 	possible = {
 		exists = c:YIG
-		c:YIG = { relations:root >= relations_threshold:amicable }
+
+		trigger_if = {
+			limit = { exists = c:YIG }
+		
+			c:YIG ?= { relations:root >= relations_threshold:amicable }		
+		}
 
 		any_scope_state = { 
 			state_region = {
