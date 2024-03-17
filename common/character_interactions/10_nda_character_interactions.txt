@@ -486,7 +486,7 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 	potential = {
 		owner = scope:actor	
 		
-		interest_group.leader = THIS
+		interest_group.leader ?= THIS
 		# has_role = politician	 # not needed due to IG leader check
 		scope:actor = {
 			# has cult spread journal or Ritual in progress, also include completed but nothing for them to do yepast this point yet

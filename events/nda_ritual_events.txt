@@ -463,9 +463,18 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 		random_country = {
 			limit = {
 				OR = {
-					is_subject_of = c:ELD	
-					is_subject_of = c:YIG
-					is_subject_of = c:DGN					
+					AND = {
+						exists = c:ELD
+						is_subject_of = c:ELD						
+					}
+					AND = {
+						exists = c:YIG
+						is_subject_of = c:YIG						
+					}
+					AND = {
+						exists = c:DGN
+						is_subject_of = c:DGN						
+					}					
 				}	
 				#NOT = { country_has_primary_culture = cu:nda_cul_cultist }			
 			}

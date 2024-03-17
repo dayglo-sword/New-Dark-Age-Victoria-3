@@ -14,8 +14,10 @@ Add 'The White Worm' (B Stoker)
 Increase chance of Hastur if Ritual is late.
 
 Bug Fixes
-Leng formation with Heavenly Kingdom
-
+Leng formation with Heavenly Kingdom.
+Search for K'n-yan not completing
+Correct Concept for Y'ha-nthlei.
+Fix Character Interaction when no minor cult nations.
 
 -----
 

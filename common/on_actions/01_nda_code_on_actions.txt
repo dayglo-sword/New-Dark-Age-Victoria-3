@@ -152,6 +152,19 @@ nda_monthly_on_action = {
 			#set_variable = nda_cult_leader_debug
 		}
 
+		# missing primary culture on ELD after rebelion
+		if ={
+			limit = {
+				AND = {
+					exists = c:ELD
+					c:ELD ?= THIS 
+				}	
+				NOT = { country_has_primary_culture = cu:nda_cul_cultist }							
+			}
+
+			add_primary_culture = cu:nda_cul_cultist
+		}
+
 		# # Check for missing IG leaders - is there a problem with Hasturian America to cause no leaders and shadow men (id : -1)
 		# 1.5 finds missing and runs char generation, but does not replace leaders
 		# if = {
