@@ -105,8 +105,8 @@ nda_monthly_on_action = {
 		nda_eap.13 # The Masque of the Red Death
 		nda_eap.14 # Red Death Redemption
 
-		nda_acd.1884
-		nda_acd.1908
+		nda_authors.40
+		nda_authors.41
 
 		nda_random.1 # Spiritualism spread
 		nda_random.2 # Theosophy spread
@@ -150,6 +150,19 @@ nda_monthly_on_action = {
 			remove_variable = nda_cult_leaderless
 			remove_variable = nda_cult_leaderless_timer
 			#set_variable = nda_cult_leader_debug
+		}
+
+		# missing primary culture on ELD after rebelion
+		if ={
+			limit = {
+				AND = {
+					exists = c:ELD
+					c:ELD ?= THIS 
+				}	
+				NOT = { country_has_primary_culture = cu:nda_cul_cultist }							
+			}
+
+			add_primary_culture = cu:nda_cul_cultist
 		}
 
 		# # Check for missing IG leaders - is there a problem with Hasturian America to cause no leaders and shadow men (id : -1)

@@ -11,6 +11,8 @@ nda_migo.1 = { #  Migo Intro - In The Night
 	title = nda_migo.1.t
 	desc = nda_migo.1.d
 	flavor =  nda_migo.1.f
+	dlc = dlc_NDA
+
 	#popup = yes
 	duration = 3
 
@@ -56,6 +58,7 @@ nda_migo.2 = { # All A Dream - Migo rejected
 	title = nda_migo.2.t
 	desc = nda_migo.2.d
 	flavor =  nda_migo.2.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -89,6 +92,7 @@ nda_migo.3 = { #  We Will Return
 	title = nda_migo.3.t
 	desc = nda_migo.3.d
 	flavor =  nda_migo.3.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -124,6 +128,7 @@ nda_migo.4 = { #  We Have Returned
 	title = nda_migo.4.t
 	desc = nda_migo.4.d
 	flavor =  nda_migo.4.f
+	dlc = dlc_NDA
 
 	duration = 1 # don't give player too long to resolve things in old country
 
@@ -180,6 +185,7 @@ nda_migo.5 = { #  New Home
 	title = nda_migo.5.t
 	desc = nda_migo.5.d
 	flavor =  nda_migo.5.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -215,6 +221,7 @@ nda_migo.1924 = { #  The End Is Nigh
 	title = nda_migo.1924.t
 	desc = nda_migo.1924.d
 	flavor =  nda_migo.1924.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -269,6 +276,7 @@ nda_migo.1927 = { #  The End Is Nigh
 	title = nda_migo.1927.t
 	desc = nda_migo.1927.d
 	flavor =  nda_migo.1927.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -327,7 +335,8 @@ nda_migo.1935 = { #  The End Of Time
 	title = nda_migo.1935.t
 	desc = nda_migo.1935.d
 	flavor =  nda_migo.1935.f
-
+	dlc = dlc_NDA
+	
 	duration = 3
 
 	event_image = {

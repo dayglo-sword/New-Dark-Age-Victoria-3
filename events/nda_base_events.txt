@@ -6,6 +6,7 @@ nda_base.1 = { # An Introduction to NDA
 	title = nda_base.1.t
 	desc = nda_base.1.d
 	flavor =  nda_base.1.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -34,6 +35,7 @@ nda_base.2 = { # Nameless Cults published
 	title = nda_base.2.t
 	desc = nda_base.2.d
 	flavor =  nda_base.2.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -180,6 +182,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 	title = nda_base.3.t
 	desc = nda_base.3.d
 	flavor =  nda_base.3.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -304,6 +307,7 @@ nda_base.4 = { # The Death of Junzt
 	title = nda_base.4.t
 	desc = nda_base.4.d
 	flavor =  nda_base.4.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -354,6 +358,7 @@ nda_base.5 = { # First Cultist in Country
 		}
 	}
 	flavor =  nda_base.5.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -468,6 +473,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 	title = nda_base.7.t
 	desc = nda_base.7.d
 	flavor =  nda_base.7.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -640,6 +646,7 @@ nda_base.8 = { # Neigbouring country has spread cult to us
 	title = nda_base.8.t
 	desc = nda_base.8.d
 	flavor =  nda_base.8.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -684,6 +691,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	title = nda_base.9.t
 	desc = nda_base.9.d
 	flavor =  nda_base.9.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -756,6 +764,7 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 	title = nda_base.10.t
 	desc = nda_base.10.d
 	flavor =  nda_base.10.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -844,6 +853,7 @@ nda_base.12 = { # Secret Cultists in Country - fired from event nda_base.6 calle
 	}
 
 	flavor =  nda_base.12.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -876,6 +886,7 @@ nda_base.13 = { # The Cult fails to spread
 	title = nda_base.13.t
 	desc = nda_base.13.d
 	flavor =  nda_base.13.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1083,6 +1094,7 @@ nda_base.15 = { # Is there non-conformists leader within the cult
 	title = nda_base.15.t
 	desc = nda_base.15.d
 	flavor =  nda_base.15.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1132,6 +1144,7 @@ nda_base.20 = { # Request from the devout
 	title = nda_base.20.t
 	desc = nda_base.20.d
 	flavor =  nda_base.20.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1268,6 +1281,7 @@ nda_base.22 = { # A Cultist converted
 	title = nda_base.22.t
 	desc = nda_base.22.d
 	flavor =  nda_base.22.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1318,6 +1332,7 @@ nda_base.23 = { # A Cultist refuses
 	title = nda_base.23.t
 	desc = nda_base.23.d
 	flavor =  nda_base.23.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1352,6 +1367,7 @@ nda_base.24 = { # The Inquisition ends
 	title = nda_base.24.t
 	desc = nda_base.24.d
 	flavor =  nda_base.24.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1404,6 +1420,7 @@ nda_base.25 = { # An Innocent condemned
 	title = nda_base.22.t #same descriptions as gulity!
 	desc = nda_base.22.d
 	flavor = nda_base.22.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1466,6 +1483,7 @@ nda_base.26 = { # The Pit and the Pendulum!
 	title = nda_base.26.t 
 	desc = nda_base.26.d
 	flavor =  nda_base.26.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1592,6 +1610,7 @@ nda_base.30 = { # Cult is leaderless
 	title = nda_base.30.t
 	desc = nda_base.30.d
 	flavor =  nda_base.30.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1699,7 +1718,8 @@ nda_base.31 = { # Pandered to cult but failed to add leader - worse than normal 
 	title = nda_base.31.t
 	desc = nda_base.31.d
 	flavor =  nda_base.31.f
-
+	dlc = dlc_NDA
+	
 	duration = 3
 
 	event_image = {

@@ -235,10 +235,13 @@ nda_hasturian.3 = { # The Repairer of Reputations
 
 		ai_chance = { 
 			base = 20	
-			# If Mi-Go in play need to guarantee Hastur
+			# If Mi-Go in play need to guarantee Hastur, if no ELD appeared yet then also guarantee
 			modifier = {
 				trigger = {
-					has_global_variable =  nda_migo_experiment				
+					OR = {
+						has_global_variable =  nda_migo_experiment	
+						NOT = { exists = c:ELD }						
+					}			
 				}
 
 				factor = 0
@@ -295,10 +298,13 @@ nda_hasturian.4 = { # The Repairers Offer
 
 		ai_chance = { 
 			base = 20	
-			# If Mi-Go in play need to guarantee Hastur as opponent
+			# If Mi-Go in play need to guarantee Hastur, if no ELD appeared yet then also guarantee
 			modifier = {
 				trigger = {
-					has_global_variable =  nda_migo_experiment				
+					OR = {
+						has_global_variable =  nda_migo_experiment	
+						NOT = { exists = c:ELD }						
+					}			
 				}
 
 				factor = 0

@@ -75,8 +75,7 @@ ideology_traditionalist = {
 		}
 		NOT = {
 			owner = {
-				exists = c:FRA
-				c:FRA = this
+				c:FRA ?= this
 			}
 		}
 		scope:interest_group = {
@@ -2032,8 +2031,10 @@ ideology_fascist = {
 		if = {
 			limit = {
 				scope:interest_group = {
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = ig_armed_forces
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_armed_forces
+					}
 				}
 			}
 			add = 50
@@ -2042,8 +2043,10 @@ ideology_fascist = {
 		if = {
 			limit = {
 				scope:interest_group = {
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_intelligentsia
+					OR = {
+						is_interest_group_type = ig_trade_unions
+						is_interest_group_type = ig_intelligentsia
+					}
 				}
 			}
 			add = -25
@@ -3861,9 +3864,11 @@ ideology_integralist = {
 		if = {
 			limit = {
 				scope:interest_group = {
-					is_interest_group_type = ig_petty_bourgeoisie
-					is_interest_group_type = ig_devout
-					is_interest_group_type = ig_armed_forces
+					OR = {
+						is_interest_group_type = ig_petty_bourgeoisie
+						is_interest_group_type = ig_devout
+						is_interest_group_type = ig_armed_forces
+					}
 				}
 			}
 			add = 50
@@ -3872,8 +3877,10 @@ ideology_integralist = {
 		if = {
 			limit = {
 				scope:interest_group = {
-					is_interest_group_type = ig_trade_unions
-					is_interest_group_type = ig_intelligentsia
+					OR = {
+						is_interest_group_type = ig_trade_unions
+						is_interest_group_type = ig_intelligentsia
+					}
 				}
 			}
 			add = -25
@@ -4029,7 +4036,7 @@ ideology_corporatist_leader = {
 	
 	lawgroup_education_system = {
 		law_religious_schools = approve
-		law_public_schools = neutral
+		law_public_schools = approve
 		law_private_schools = neutral	
 		law_no_schools = disapprove	
 	}	
@@ -4231,7 +4238,7 @@ ideology_humanitarian_royalist = {
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_humanitarian_royalist
+					has_law = law_type:law_monarchy
 				}
 			}
 			add = 50

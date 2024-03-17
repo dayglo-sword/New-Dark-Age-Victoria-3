@@ -14,6 +14,7 @@ nda_nen.1842 = { # Founding of Library
 	title = nda_nen.1842.t
 	desc = nda_nen.1842.d
 	flavor =  nda_nen.1842.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -107,6 +108,7 @@ nda_nen.1903 = { # Appeal for reinstatement
 	title = nda_nen.1903.t
 	desc = nda_nen.1903.d
 	flavor =  nda_nen.1903.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -170,6 +172,7 @@ nda_nen.12 = { # Plague in Arkham
 	title = nda_nen.12.t
 	desc = nda_nen.12.d
 	flavor =  nda_nen.12.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -211,6 +214,7 @@ nda_nen.1918 = { #
 	title = nda_nen.1918.t
 	desc = nda_nen.1918.d
 	flavor =  nda_nen.1918.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -273,6 +277,7 @@ nda_nen.1920 = { # Disappearence of Dr West
 	title = nda_nen.1920.t
 	desc = nda_nen.1920.d
 	flavor =  nda_nen.1920.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -322,6 +327,7 @@ nda_nen.1934 = { # End Herbert West with warning from the future - Actually a ho
 	title = nda_nen.1934.t
 	desc = nda_nen.1934.d
 	flavor =  nda_nen.1934.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -363,6 +369,7 @@ nda_nen.16 = { # A plague of reanimated - End result of 'tonic for the troops' -
 	title = nda_nen.16.t
 	desc = nda_nen.16.d
 	flavor =  nda_nen.16.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -451,6 +458,7 @@ nda_nen.18 = { # The plague of reanimated spreads
 	title = nda_nen.18.t
 	desc = nda_nen.18.d
 	flavor =  nda_nen.18.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -484,6 +492,7 @@ nda_nen.1845 = { # Devil Worship in Innsmouth
 	title = nda_nen.1845.t
 	desc = nda_nen.1845.d
 	flavor =  nda_nen.1845.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -530,6 +539,7 @@ nda_nen.1846 = { # Plague in Innsmouth
 	title = nda_nen.1846.t
 	desc = nda_nen.1846.d
 	flavor =  nda_nen.1846.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -586,6 +596,7 @@ nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
 	title = nda_nen.1844.t
 	desc = nda_nen.1844.d
 	flavor =  nda_nen.1844.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -631,6 +642,7 @@ nda_nen.1877 = { # Controversy surrounding the Church of Starry Wisdom - Rhode I
 	title = nda_nen.1877.t
 	desc = nda_nen.1877.d
 	flavor =  nda_nen.1877.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -698,6 +710,7 @@ nda_nen.1878 = { # Founding of Church of Starry Wisdom - Rhode Island
 	title = nda_nen.1878.t
 	desc = nda_nen.1878.d
 	flavor =  nda_nen.1878.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -737,6 +750,7 @@ nda_nen.1879 = {
 	title = nda_nen.1879.t
 	desc = nda_nen.1879.d
 	flavor =  nda_nen.1879.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -771,6 +785,7 @@ nda_nen.1880 = {
 	title = nda_nen.1880.t
 	desc = nda_nen.1880.d
 	flavor =  nda_nen.1880.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -817,6 +832,7 @@ nda_nen.1882 = { # The Colour Out Of Space - The Meteor
 	title = nda_nen.1882.t
 	desc = nda_nen.1882.d
 	flavor =  nda_nen.1882.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -855,6 +871,7 @@ nda_nen.1883 = { # The Colour Out Of Space
 	title = nda_nen.1883.t
 	desc = nda_nen.1883.d
 	flavor =  nda_nen.1883.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -893,6 +910,7 @@ nda_nen.1913 = { # Maine Meteor - The Green Meadow
 	title = nda_nen.1913.t
 	desc = nda_nen.1913.d
 	flavor =  nda_nen.1913.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -931,6 +949,7 @@ nda_nen.1922 = { # Horror at Martin's Beach
 	title = nda_nen.1922.t
 	desc = nda_nen.1922.d
 	flavor =  nda_nen.1922.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -974,7 +993,8 @@ nda_nen.1935 = { # The Outro / denouncement
 	title = nda_nen.1935.t
 	desc = nda_nen.1935.d
 	flavor =  nda_nen.1935.f
-
+	dlc = dlc_NDA
+	
 	duration = 3
 
 	event_image = {

@@ -27,13 +27,13 @@
 			triggered_desc = {
 				desc = je_nda_yankee_reconcile_inproving_status
 				trigger = {
-					var:nda_yankee_reconcile_original_progress_var < var:nda_yankee_reconcile_progress_var
+					root.var:nda_yankee_reconcile_original_progress_var < root.var:nda_yankee_reconcile_progress_var
 				}
 			}
 			triggered_desc = {
 				desc = je_nda_yankee_reconcile_decreasing_status
 				trigger = {
-					var:nda_yankee_reconcile_original_progress_var > var:nda_yankee_reconcile_progress_var
+					root.var:nda_yankee_reconcile_original_progress_var > root.var:nda_yankee_reconcile_progress_var
 				}
 			}			
 			
@@ -89,7 +89,25 @@
 						name = nda_yankee_reconcile_progress_var
 						subtract = 1
 					}	
-				}						
+				}
+				
+				# Boost if owns NY or NJ
+				if = {
+					limit = { owns_entire_state_region = STATE_NEW_YORK }
+
+					change_variable = {
+						name = nda_yankee_reconcile_progress_var
+						add = 1
+					}
+				}
+				if = {
+					limit = { owns_entire_state_region = STATE_NEW_JERSEY }
+
+					change_variable = {
+						name = nda_yankee_reconcile_progress_var
+						add = 1
+					}
+				}
 			}						
 		}				
 	}
@@ -120,6 +138,15 @@
 
 	on_complete = {
 		set_variable = je_nda_yankee_reconcile_completed
+
+		s:STATE_NEW_YORK = {
+			add_homeland = cu:nda_cul_trueyankee		
+		}
+
+		s:STATE_NEW_JERSEY = {
+			add_homeland = cu:nda_cul_trueyankee		
+		}
+
 	}
 
 	fail = {
@@ -128,7 +155,7 @@
 			text = je_nda_yankee_reconcile_fail_tt
 
 			scope:journal_entry = {
-				nda_yankee_reconcile_progress_var < 0
+				root.var:nda_yankee_reconcile_progress_var < 0
 			}		
 		}
 	}

@@ -35,6 +35,7 @@ nda_astro.1 = { # 1842 conjunction
 	title = nda_astro.1.t
 	desc = nda_astro.1.d
 	flavor =  nda_astro.1.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -187,6 +188,7 @@ nda_astro.2 = { # 1861 conjunction
 			}
 		}
 	}
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -321,6 +323,7 @@ nda_astro.3 = { # 1881 conjunction
 			}
 		}
 	}
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -465,7 +468,7 @@ nda_astro.4 = { # 1901 conjunction
 			}
 		}
 	}
-
+	dlc = dlc_NDA
 	duration = 3
 
 	event_image = {
@@ -599,6 +602,7 @@ nda_astro.5 = { # 1921 conjunction
 			}
 		}
 	}
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -669,6 +673,7 @@ nda_astro.1858 = { # 1858 great comet 'Donati's comet'
 	title = nda_astro.1858.t
 	desc = nda_astro.1858.d
 	flavor =  nda_astro.1858.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -710,6 +715,7 @@ nda_astro.1910 = { #  Great January Comet of 1910
 	title = nda_astro.1910.t
 	desc = nda_astro.1910.d
 	flavor =  nda_astro.1910.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -752,6 +758,7 @@ nda_astro.10 = {
 	title = nda_astro.10.t
 	desc = nda_astro.10.d
 	flavor = nda_astro.10.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -817,6 +824,7 @@ nda_astro.11 = {
 	title = nda_astro.11.t
 	desc = nda_astro.11.d
 	flavor = nda_astro.11.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -851,7 +859,8 @@ nda_astro.12 = {
 	title = nda_astro.12.t
 	desc = nda_astro.12.d
 	flavor = nda_astro.12.f
-
+	dlc = dlc_NDA
+	
 	duration = 3
 
 	event_image = {
