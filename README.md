@@ -7,7 +7,7 @@ Not limited to Lovecraft - Contains content from other Horror writers from the e
 Paradox Plaza:
 https://mods.paradoxplaza.com/mods/60846/Any
 
-On Stream: 
+On Steam: 
 https://steamcommunity.com/sharedfiles/filedetails/?id=2965633971
 
 Paradox Forum:
