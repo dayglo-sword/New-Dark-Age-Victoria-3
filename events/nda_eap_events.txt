@@ -274,3 +274,73 @@ nda_eap.14 = { # Red Death Redemption - post Red Death Spiritualist boost
 
 	}
 }
+
+nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
+	type = country_event
+	placement = ROOT
+	title = nda_eap.15.t
+	desc = nda_eap.15.d
+	flavor =  nda_eap.15.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+
+		has_variable = nda_inqusition_terror_known
+		has_variable = nda_inqusition_closed
+
+		not = { has_variable = nda_inqusition_aftermath }
+	
+		any_state = {
+			NOT = { has_variable = nda_rel_boost_spiritualism  }
+		}
+	}
+
+	cooldown = { months = 24 }
+
+	immediate = {
+		set_variable = nda_inqusition_aftermath
+	}	
+	
+	option = { # Ignore for minor boost
+		name = nda_eap.15.a
+		default_option = yes
+
+		every_scope_state = {
+			limit = { NOT = { has_variable = nda_rel_boost_spiritualism } }
+					
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_spiritualism						
+				months = 12
+				value = nda_trivial_conversion
+			}					
+		}
+	}
+
+	option = { # Promote for major boost
+		name = nda_eap.15.b
+
+		every_scope_state = {
+			limit = { has_variable = nda_rel_boost_spiritualism }
+				
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_spiritualism						
+				months = 12
+				value = nda_small_conversion
+			}		
+		}
+	}
+
+	option = { # 
+		name = nda_eap.15.c
+
+	}
+}

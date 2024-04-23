@@ -1533,6 +1533,7 @@ nda_base.26 = { # The Pit and the Pendulum!
 			}
 		}
 
+		set_variable = nda_inqusition_terror_known
 		debug_log = "Inquisition - Pit and Pendulum" 
 	}	
 	

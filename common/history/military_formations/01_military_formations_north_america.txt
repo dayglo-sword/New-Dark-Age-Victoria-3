@@ -3,7 +3,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_new_england
-			name = "New Yankee Army"
+			name = nda_grand_yankee_army
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_skirmish_infantry
@@ -15,7 +15,7 @@
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_new_england
-			name = "New Yankee Navy"
+			name = nda_grand_yankee_navy
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_man_o_war

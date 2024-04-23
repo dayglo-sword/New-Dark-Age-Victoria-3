@@ -1,15 +1,15 @@
-Version v1.6.0
+Version v1.6.2
 
 Major Changes
 Journal for 'Reconciliation' with Yankees
 'Greater New England' possible via Canada expansion.
 
 Minor Changes
-Reduce Excesive Cultist Conversion post arrival
+Reduce Excessive Cultist Conversion post arrival
 Spiritualist and Theosophic spread to random countries
 Increase starting normal Yankee population in New England
 Dynamic Infamy for Cultist Purge
-Increase Investigator availablity timeframe
+Increase Investigator availability timeframe
 Add 'The White Worm' (B Stoker)
 Increase chance of Hastur if Ritual is late.
 
@@ -17,7 +17,7 @@ Bug Fixes
 Leng formation with Heavenly Kingdom.
 Search for K'n-yan not completing
 Correct Concept for Y'ha-nthlei.
-Fix Character Interaction when no minor cult nations.
+Fix Character Interaction when no minor cult nations
 
 -----
 

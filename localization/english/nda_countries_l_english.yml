@@ -71,3 +71,7 @@ nda_generic_worshippers_revolt_adj:0 "Cultist"
 
 # Greater New England 
 nda_greater_new_england: "Greater New England"
+
+# New England Military
+nda_grand_yankee_army: "Grand Yankee Army"
+nda_grand_yankee_navy: "Grand Yankee Navy"

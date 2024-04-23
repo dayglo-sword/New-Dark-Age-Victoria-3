@@ -104,6 +104,7 @@ nda_monthly_on_action = {
 		nda_eap.11 # The Red Death Spreads
 		nda_eap.13 # The Masque of the Red Death
 		nda_eap.14 # Red Death Redemption
+		nda_eap.15 # Inquisition Aftermath
 
 		nda_authors.40
 		nda_authors.41
