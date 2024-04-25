@@ -170,7 +170,7 @@
 			add_homeland = cu:nda_cul_trueyankee		
 		}
 
-		s:STATE_NEW_YORK.region_state:NEN = {
+		s:STATE_NEW_JERSEY.region_state:NEN = {
 			# convert yankees to true yankees
 			every_scope_pop = {
 				limit = {

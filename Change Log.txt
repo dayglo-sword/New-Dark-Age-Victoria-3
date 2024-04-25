@@ -1,3 +1,9 @@
+Version v1.6.2.1
+
+Bug Fixes
+Reconciliation Counter Fix
+Minor Spelling Corrections.
+
 Version v1.6.2
 
 Major Changes

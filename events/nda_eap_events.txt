@@ -186,7 +186,7 @@ nda_eap.13 = { # Masque of the Red Death
 			# kill off some wealthy pops
 			kill_population_percent_in_state = { percent = 0.1 strata = rich }	
 			
-			# kill of a powerful leader??			
+			# kill off a powerful leader?? Or make them sickly? Have a seperate event to decide?			
 		}
 	}	
 	

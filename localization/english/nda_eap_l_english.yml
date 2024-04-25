@@ -10,12 +10,12 @@ nda_eap.11.d:0 ""
 nda_eap.11.a:0 ""
 
 nda_eap.12.t:0 "The Red Death in [SCOPE.sState('red_death_state_scope').GetName]"
-nda_eap.12.d:0 "The Red Death has spread to [SCOPE.sState('red_death_state_scope').GetName].\n\nOnce more fear and panic reigns."
+nda_eap.12.d:0 "The Red Death has spread to [SCOPE.sState('red_death_state_scope').GetName].\n\nOnce more fear and panic reigns as people await their fate."
 nda_eap.12.f:0 "'And now was acknowledged the presence of the Red Death. He had come like a thief in the night...'"
 nda_eap.12.a:0 "The is Dreadful!."
 
 nda_eap.13.t:0 "Masque of the Red Death"
-nda_eap.13.d:0 "In what appears to be an arrogant act of contempt, the powerful and wealthy of [SCOPE.sState('red_death_state_scope').GetName] are hosting a Masked Ball in the middle of the epidemic!"
+nda_eap.13.d:0 "In what appears to be an arrogant act of contempt, the powerful and wealthy of [SCOPE.sState('red_death_state_scope').GetName] are hosting a Masked Ball in the middle of the pandemic!"
 nda_eap.13.f:0 "'...it was a gay and magnificent revel. The tastes of the host were peculiar. He had a fine eye for colours and effects. He disregarded the decora of mere fashion. His plans were bold and fiery, and his conceptions glowed with barbaric lustre. There are some who would have thought him mad. His followers felt that he was not. It was necessary to hear and see and touch him to be sure that he was not...\n\nAnd one by one dropped the revellers in the blood-bedewed halls of their revel, and died each in the despairing posture of his fall...\n\nAnd Darkness and Decay and the Red Death held illimitable dominion over all.'"
 nda_eap.13.a:0 "Our Condolences"
 
@@ -27,7 +27,7 @@ nda_eap.14.b:0 "We should encourage this."
 nda_eap.14.c:0 "This heresy must stop!."
 
 nda_eap.15.t:0 "A Questionable Legacy"
-nda_eap.15.d:0 "The after effects of the Inquisition seems to be affecting the religious core of the Nation.\n\nIt looks like the recently found Spiritualist movement may benefit from their disaffection with organised religion."
+nda_eap.15.d:0 "The after effects of the Inquisition seems to be affecting the religious core of the Nation.\n\nIt looks like the recently found Spiritualist movement may benefit from their disaffection with organised religion as the worshippers leave the Church."
 nda_eap.15.f:0 "'I am farther than ever from belief in the genuineness of Spirit manifestations and after twenty-five years of ardent research and endeavor I declare that nothing has been revealed to convince me that intercommunication has been established between the Spirits of the departed and those still in the flesh.' - Harry Houdini, 1924"
 nda_eap.15.a:0 "Let them leave."
 nda_eap.15.b:0 "The Devouts fault."
