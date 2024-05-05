@@ -1,0 +1,175 @@
+﻿nda_oppose_cult_spread = {
+	requires_approval = no
+	show_confirmation_box = no
+
+	potential = {
+		is_player = yes			
+		custom_tooltip = {
+			text = nda_oppose_cult_spread_potential_tt
+			any_country = { has_variable = nda_cult_spread_tracker }	
+			
+		}
+
+		custom_tooltip = {
+			text = nda_oppose_cult_spread_potential2_tt
+			NOT = { has_variable = nda_cultists_in_open }
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = nda_oppose_cult_spread_possible_tt
+			scope:target_country = { has_variable = nda_cult_spread_tracker } # spread has started				
+		}
+
+		custom_tooltip = {
+			text = nda_oppose_cult_spread_possible2_tt
+			NOT = { 
+				scope:target_country = { 
+					OR = { 
+						has_variable = nda_cultists_in_open 
+						has_variable = nda_cult_spread_failed
+					}
+				} 
+			} # has not completed							
+		}
+
+	}	
+
+	accept_effect = {}
+
+	pact = {	
+		cost = 30
+		is_two_sided_pact = no
+
+		monthly_effect = {
+			scope:target_country = { 
+				change_variable = {
+					name = nda_cult_spread_tracker
+					subtract = 2
+				}
+				
+				IF = {
+					limit = {						
+						global_country_ranking > ROOT.global_country_ranking # if ranking greater than target increase effect
+					}
+					change_variable = {
+						name = nda_cult_spread_tracker
+						subtract = 1
+					}
+				}
+				ELSE_IF = {
+					limit = {						
+						country_rank > ROOT.country_rank # # if rank lower than target decrease effect
+					}
+					change_variable = {
+						name = nda_cult_spread_tracker
+						subtract = 1
+					}
+				}
+				clamp_variable = {
+					name = nda_cult_spread_tracker
+					min = 0
+					max = 1201			
+				}
+			 }
+		}
+
+		# target must not become Cult controlled
+		requirement_to_maintain = {
+			trigger = {	
+				custom_tooltip = {	
+					text = nda_oppose_cult_spread_potential2_tt	
+					NOT = { scope:target_country = { has_variable = nda_cultists_in_open } }
+				}
+			}
+		}
+
+		requirement_to_maintain = {
+			trigger = {
+				has_diplomatic_relevance = scope:target_country
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
+					NOT = { has_war_with = scope:target_country }
+				}			
+			}
+		}						
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = DIPLO_ACTION_RELATIONS_AMICABLE_OR_GREATER_NOT
+					scope:target_country.relations:root < relations_threshold:amicable
+				}
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				NOT = { has_diplomats_expelled = scope:target_country }
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {				
+				NOT = { scope:target_country = { has_diplomats_expelled = root } }
+			}
+		}		
+	}
+
+	ai = {
+		propose_score = {
+			value = 0 # never?
+		}		
+	
+		will_propose = { 
+			OR = {
+				AND = {
+					has_attitude = {
+						who = scope:target_country
+						attitude = cooperative
+					}
+					country_rank <= scope:target_country.country_rank				
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = conciliatory
+				}	
+				has_attitude = {
+					who = scope:target_country
+					attitude = genial
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = protective
+				}	
+			}
+		}	
+		
+		will_break = { 
+			NOR = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = genial
+				}	
+				has_attitude = {
+					who = scope:target_country
+					attitude = conciliatory
+				}	
+				has_attitude = {
+					who = scope:target_country
+					attitude = cooperative
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = protective
+				}					
+			}		
+		}
+	}
+}

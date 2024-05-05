@@ -318,4 +318,48 @@ nda_cultist_robe = {
             }
         }
     }
+   
+}
+
+#Based on POD_portrait_eternal_youth
+nda_cultist_eternal_youth = {
+	usage = game
+
+	portrait_eternal_youth = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_age
+				template = no_aging
+				value = 1.0
+            }
+			# morph = {
+			# 	mode = replace
+			# 	gene = gene_eyebrows_shape
+			# 	template = avg_spacing_lower_thickness
+			# 	value = 1.0
+            # }		
+			# morph = {
+			# 	mode = replace
+			# 	gene = gene_eyebrows_fullness
+			# 	template = layer_2_avg_thickness
+			# 	value = 0
+            # }	
+			
+		}
+		
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+
+                scope:character ?= { 
+                    #always = no
+                    has_any_cultist_trait = yes
+					#POD_portrait_eternal_youth_trigger = yes                    
+                }
+			}
+		}
+	}
+
 }

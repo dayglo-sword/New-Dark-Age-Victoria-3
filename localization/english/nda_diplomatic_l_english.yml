@@ -1,0 +1,18 @@
+﻿l_english: 
+ # Diplomatic Actions
+nda_oppose_cult_spread: "Oppose Cult Spread"
+nda_oppose_cult_spread_desc: "Help Oppose the Cult Spread that is occuring in a friendly country."
+nda_oppose_cult_spread_action_name: "Oppose the Cult Spread"
+nda_oppose_cult_spread_action_notification_name: "Oppose Cult Spread"
+nda_oppose_cult_spread_action_notification_desc: "Helping oppose the Cult spreading in [TARGET_COUNTRY.GetName]."
+nda_oppose_cult_spread_action_propose_name: "Oppose Cult Spread"
+nda_oppose_cult_spread_action_break_name: ""
+nda_oppose_cult_spread_pact_desc: "Our Diplomats are covertly helping [TARGET_COUNTRY.GetName] to oppose the Cult Spreading."
+nda_oppose_cult_spread_action_notification_break_name: "Oppose Cult Spread : [TARGET_COUNTRY.GetName]"
+nda_oppose_cult_spread_action_notification_break_desc: "We are no longer opposing the Cult spreading in [TARGET_COUNTRY.GetName]."
+
+nda_oppose_cult_spread_potential_tt: "Cultists are active around the World"
+nda_oppose_cult_spread_potential2_tt: "Cultists have not taken over"
+nda_oppose_cult_spread_possible_tt: "This Country has Cultists infiltrating"
+nda_oppose_cult_spread_possible2_tt: "The Cultist activity has not been stopped"
+
