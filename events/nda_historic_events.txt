@@ -1073,7 +1073,7 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 	}
 }
 
-nda_historic.1888 = { # Fox's come clean - Spiritualist Movement
+nda_historic.1888 = { # Fox's come clean - Spiritualist Movement (https://www.gutenberg.org/cache/epub/66451/pg66451-images.html)
 	type = country_event
 	placement = p:x01D042
 	title = nda_historic.1888.t

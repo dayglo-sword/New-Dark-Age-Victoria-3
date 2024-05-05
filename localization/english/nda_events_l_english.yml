@@ -1,9 +1,12 @@
 ﻿l_english:
   
- nda_base.1.t:0 "A New Dark Age Dawns"
- nda_base.1.d:0 "The world is on the cusp of a great change.\n\nA New Age is dawning, and will probably not end well for many of the inhabitants of the not so lonely planet.\n\nOver the course of the coming century, Eldritch entities will emerge out of the depths of space and time, adding their strength to that of their followers, with the intent to accelerate the corruption of humanity."
- nda_base.1.f:0 "Slowly at first, working in the shadows, but then accelerating their plans towards a final confrontation for the soul of the world.\n\nWill the Hasturians defy Cthulhu and go it alone? Will the Mi-Go and their agents just sit by and passively watch? Will Herbert West pay his Miskatonic Library late fees?\n\nBased on vanilla Victoria 3 for an authentic dystopian experience."
- nda_base.1.a:0 "'So It Begins...'"
+ nda_base.1.t: "A New Dark Age Dawns"
+ nda_base.1.d: "The world is on the cusp of a great change.\n\nA New Age is dawning, and will probably not end well for many of the inhabitants of the not so lonely planet.\n\nOver the course of the coming century, Eldritch entities will emerge out of the depths of space and time, adding their strength to that of their followers, with the intent to accelerate the corruption of humanity."
+ nda_base.1.f: "Slowly at first, working in the shadows, but then accelerating their plans towards a final confrontation for the soul of the world.\n\nWill the Hasturians defy Cthulhu and go it alone? Will the Mi-Go and their agents just sit by and passively watch? Will Herbert West pay his Miskatonic Library late fees?\n\nBased on vanilla Victoria 3 for an authentic dystopian experience."
+ nda_base.1.a: "'So It Begins...'"
+ nda_base.1.a_tt: "Start the journey to destruction..."
+ nda_base.1.b: "'Help Meee...'"
+ nda_base.1.b_tt: "Get some information about the years ahead..."
  nda_base.2.t:0 "Unaussprechlichen Kulten"
  nda_base.2.d:0 "A book on the Occult, going by the name of 'Nameless Cults', is being published in Dusseldorf.\n\nThis work of fantasy appears to be affecting the minds of all those who read it."
  nda_base.2.f:0 "Containing depraved stories of 'lost gods', the product of the obviously deranged imagination of its author, #ITALIC Friedrich von Junzt#!. It is starting to be distributed across the land.\n\nIt is causing much distress amongst religious circles who are calling for it to be banned due to the heresies contained within."
@@ -44,12 +47,12 @@
  nda_base.10.f:0 "But why stop here when we can include the rest of the world in our ambitions!"
  nda_base.10.a:0 "Hurrah!"
 
-#  nda_base.11.t:0 "War Without End"
-#  nda_base.11.d:0 "We must push our troops more. War is serious business and we will make our followers support it!"
-#  nda_base.11.f:0 "But will it be worth the risk of ruining us as the war drags out?"
-#  nda_base.11.a:0 "Try Harder!"
-#  nda_base.11.b:0 "Not a good idea." 
-#  nda_base.11.c:0 "Do not over do it!"   
+# re-used base.11 as Intro help
+ nda_base.11.t: "Strife Without End?"
+ nda_base.11.d: "A brief overview of what may lie ahead...\n\n#yellow Stage 0:#! A small breather in the 1830's while the nation finds its direction.\n\n#yellow Stage 1:#! 1840's -The Cultists appear and spread amoungst the leading countries. They seek control of the Nation, but you have a few tools to stop them. You might even be able to affect the spread abroad.\n\n#yellow Stage 2:#! The Ritual: ~1860's onwards - The Cultists have found their leaders and now looks to complete [concept_nda_ritual] while furthering their spread.\n\n#yellow Stage 3:#! The Return: Possible from 1890's onwards. [concept_nda_cthulhu] has arrived. Attempt to survive the devastation of Cultist rule.\n\n#yellow Stage 4(?):#! Rebuilding: A chance to rebuild the world while suppressing the remnants of the Cult."
+ nda_base.11.f: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn"
+ nda_base.11.a: "Let us begin..."
+ nda_base.11.a_tt: "Continue with the game..."
  
  nda_base.12.t:0 "The Cult Spreads Further"
  nda_base.12.d:0 "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], of the [SCOPE.sCharacter('converted_ig_leader').GetInterestGroup.GetNameNoIcon], has secretly pledged their alligance to the growing cult.\n\nIt is even spreading amongst the bureaucrats and other servants of the government."
@@ -116,3 +119,10 @@
  nda_base.31.d:0 "[SCOPE.sCharacter('nda_warning_leader').GetFullName], the [SCOPE.sCharacter('nda_warning_leader').GetCustom('cultist_rank_loc')] of the coven in [SCOPE.sC('nda_warning_country').GetName] denounces your tardiness in not appointing a Leader for the Cult in your country."
  nda_base.31.f:0 "''"
  nda_base.31.a:0 "Too Late Now!"
+
+
+ nda_base.40.t:0 "Where he go?"
+ nda_base.40.d:0 "[SCOPE.sCharacter('nda_abe_scope').GetFullName], has disappeared while watching a technological demostration by a young scientist by the name of Nikoli Tesla.\n\nAlso gone is the unit of US soldiers acting as his honor guard.\n\nAccording to eye witnesses the machine had exploded soon after the people had disappeared so it looks like the possibility a return is unlikely"
+ nda_base.40.f:0 "'?"
+ nda_base.40.a:0 "Where is Lincoln?"
+ nda_base.40.b:0 "When is Lincoln?"

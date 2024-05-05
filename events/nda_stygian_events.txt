@@ -1,0 +1,92 @@
+﻿namespace = nda_stygian
+
+#
+nda_stygian.10 = { # test of dna
+	type = country_event
+	placement = ROOT
+	title = nda_stygian.10.t
+	desc = nda_stygian.10.d
+	flavor =  nda_stygian.101.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	gui_window = event_window_2char
+
+	left_icon = scope:scope_nephren
+	right_icon = scope:scope_nitocris 
+
+	trigger = { # valled from journal
+		# interest group must exist, else character creation errors
+		any_interest_group = {
+			is_interest_group_type = ig_nda_cult_worshippers
+		}
+	}
+
+	immediate = {
+		create_character = {
+			first_name = Pharaoh
+			last_name = nephren-ka
+			birth_date = 1801.9.18
+			template = nda_nephren_ka_character_template 
+			on_created = {
+				set_variable = is_nephren
+			}
+		}
+
+		#random_character_in_void = {
+		random_scope_character = {
+			limit = {
+				has_variable = is_nephren
+			}
+			save_scope_as = scope_nephren
+			add_trait = nda_master 
+			set_character_immortal = yes
+		}
+
+		create_character = {
+			first_name = Queen
+			last_name = nitocris
+			birth_date = 1801.9.18
+			template = nda_nitocris_character_template 
+			on_created = {
+				set_variable = is_nitocris 									
+			}
+		}
+
+		random_scope_character = {
+			limit = {
+				has_variable = is_nitocris 
+			}
+			save_scope_as = scope_nitocris 
+			add_trait = nda_master 
+			set_character_immortal = yes
+		}
+	}
+
+	option = { 
+		name = nda_stygian.10.a
+		default_option = yes
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 80		
+		}
+	}
+
+	option = { 
+		name = nda_stygian.10.b
+
+		ai_chance = { 
+			base = 10		
+		}
+	}
+	option = { 
+		name = nda_stygian.10.c
+
+		ai_chance = { 
+			base = 10		
+		}
+
+	}
+}
+

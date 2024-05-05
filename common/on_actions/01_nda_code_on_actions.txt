@@ -67,6 +67,7 @@ nda_monthly_on_action = {
 		nda_hasturian.3 # Repairer of Reputations
 
 		nda_hasturian.10 # The Return of the King
+		nda_hasturian.1892 # Trapezohedron
 
 		nda_whh.10 # House on the Borderlands
 		nda_whh.11 # Carnacki Start
@@ -86,15 +87,18 @@ nda_monthly_on_action = {
 		nda_historic.1871
 		nda_historic.1875
 		nda_historic.1879		
-		nda_historic.1882
-		nda_historic.1888
+		nda_historic.1882	
 		nda_historic.1887
+		nda_historic.1888
 		nda_historic.1889
 		nda_historic.1891		
 		nda_historic.1892
 
+		nda_historic_regional.1892
+
 		nda_migo.1
 		nda_migo.4
+		nda_migo.1878 # The Shinning Trapezohedron
 		nda_migo.1924 # The End Is Nigh - Cthulhu
 		nda_migo.1927 # The End Is Nigh - The Star
 		nda_migo.1935 # Migo Outro
@@ -323,7 +327,7 @@ nda_monthly_red_death_effect_on_action = {
 	effect = {
 		if = {
 			limit = { # Red Death in play			
-				game_date < 1857 # should be all over by then
+				game_date < 1857.1.1 # should be all over by then
 				has_global_variable = nda_poe_red_death				
 				has_variable = nda_poe_red_death_state	
 			}
@@ -362,6 +366,7 @@ nda_half_yearly_on_action = {
 		nda_dagonic.4 # Bounty of the Seas
 		nda_dagonic.6 # Fury of Dagon
 		nda_hasturian.8 # The Play Fades
+		nda_hasturian.1894 # Travelling Show
 		nda_nen.1934 # Dr West - Denouncement
 		nda_nen.17 # Reanimated Spreads
 		nda_nen.16 # Reanimated Plague Starts

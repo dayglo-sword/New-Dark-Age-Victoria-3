@@ -210,6 +210,15 @@ nda_hastur_coronation = {
  
 }
 
+nda_hasturian_players = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/character.dds"
+
+	notification_type = toast
+ 
+}
+
 ### Lost Cities
 nda_lostcity_knyan_reveal = {
 	type = country

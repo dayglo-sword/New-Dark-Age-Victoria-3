@@ -214,6 +214,142 @@ nda_migo.5 = { #  New Home
 	}
 }
 
+nda_migo.1878 = { # The Trapezohedron reappears (events nda_nen.1878-1880) - if in same locale then Mi-Go demands it.
+	type = country_event
+	placement = ROOT
+	title = nda_migo.1878.t
+	desc =  {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					p:x1A77EA = { state = { owner = ROOT } }	
+				}
+				desc = nda_migo.1878.d_2
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}				
+				desc = nda_migo.1878.d
+			}
+		}
+	}	
+	flavor =  nda_migo.1878.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger  = {
+		is_player = yes
+		has_global_variable = nda_migo_experiment
+
+		game_date >= 1878.1.1	
+		game_date < 1879.3.1
+
+		has_global_variable = nda_trapezohedron_revealed	
+		p:x1A77EA = { state = { owner = { has_variable = nda_trapezohedron_used } } }
+	}
+
+	cooldown = {
+		months = 16
+	}
+
+	immediate = {
+		p:x1A77EA = { state = { owner = { save_scope_as = trapezo_owner } } }
+	}	
+
+	option = { # "Let them have it."
+		default_option = yes
+		trigger = { p:x1A77EA = { state = { owner = ROOT } } }
+		name = nda_migo.1878.a
+
+	}
+
+	option = { # "We could demand it from them?"
+		name = nda_migo.1878.b
+		trigger = { p:x1A77EA = { state = { NOT = { owner = ROOT } } } }
+
+		# This interaction should be red flag to anyone tracking
+		# random result - either get it or destroy relations - increase if matching cult type and greater rank
+		random_list = {
+			50 = { 
+
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:trapezo_owner = { is_cultist_country = no }							
+						}
+						add = 20							
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:trapezo_owner = { country_rank < root.country_rank }
+						}
+						add = 50							
+					}
+				}
+				custom_tooltip = nda_migo.1878.b_a_tt 
+				set_global_variable = nda_trapezohedron_migo_recovered	
+				scope:trapezo_owner = { 
+					# slightly annoyed at the request
+					change_relations = {
+						country = ROOT
+						value = -10
+					}
+				}			
+			}
+			50 = { 
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:trapezo_owner = { is_cultist_country = yes }							
+						}
+						add = 20							
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:trapezo_owner = { country_rank > root.country_rank }
+						}
+						add = 50							
+					}
+				}
+				custom_tooltip = nda_migo.1878.b_b_tt #"Annoy the country"
+				
+				scope:trapezo_owner = { 
+					# annoyed at the request
+					change_relations = {
+						country = ROOT
+						value = -50
+					}
+				}
+			}
+		}
+	}
+
+	option = { # "I can not help."
+		name = nda_migo.1878.c
+		# annoy migo if you own it
+
+	}
+}
+
 #94176 - The End Is Nigh - Cthulhu
 nda_migo.1924 = { #  The End Is Nigh
 	type = country_event

@@ -1,3 +1,13 @@
+Version v1.7
+
+Major Changes
+Add Diplomatic Action to 'Oppose the Cult'
+Expand 'Trapezohedron' events to Mi-Go and Hasturians.
+Youthfulness for Cult Masters and certain other characters.
+
+Bug Fixes
+Correct King in Yellow notification header
+
 Version v1.6.2.1
 
 Bug Fixes

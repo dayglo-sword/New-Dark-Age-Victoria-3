@@ -21,6 +21,17 @@ nda_migo.5.t:0 "A New Place"
 nda_migo.5.d:1 "After what seems like an eternity your brain is transplanted into a new human receptacle.\n\nA new body and a new country awaits...\n\nWill anyone notice the change in the behaviour of their leader?\n\nWill they accept a new direction?"
 nda_migo.5.f:1 ""
 nda_migo.5.a:0 "Home Sweet Home..."
+
+nda_migo.1878.t: "Something found..."
+nda_migo.1878.d: "The Mi-Go have contacted you again.\n\nThey seem deeply concerned about events in LOCATION, as it appears an ancient lost artifact has been uncovered in an old church, and is now in the hands of the government.\n\nThey are wondering if there is anything that you can do in your current position to aquire the relic.\n\n #ITALIC We must have it so we can return it to the point of its supposed creation so that we can have it again! #!"
+nda_migo.1878.d_2: "The Mi-Go have contacted you again.\n\nThey seem deeply concerned about recent events as it appears an ancient lost artifact has been uncovered in an old church, and is now being held by you.\n\nThey are dmanding it's return. \n\n #ITALIC We must have it so we can return it to the point of its supposed creation so that we can have it again! #!"
+nda_migo.1878.f: "'Of the Shining Trapezohedron... a window on all time and space, and tracing its history from the days it was fashioned on dark Yuggoth, before ever the Old Ones brought it to earth.\n\nIt was treasured and placed in its curious box by the crinoid things of Antarctica, salvaged from their ruins by the serpent-men of Valusia, and peered at aeons later in Lemuria by the first human beings.\n\nIt crossed strange lands and stranger seas, and sank with Atlantis, only to be later recovered from the deep.\n\nThe Pharaoh Nephren-Ka built around it a temple with a windowless crypt, and did that which caused his name to be stricken from all monuments and records.\n\n...a kaleidoscopic range of phantasmal images played, all of them dissolving at intervals into the picture of a vast, unplumbed abyss of night wherein whirled suns and worlds of an even profounder blackness.\n\n...the ancient legends of Ultimate Chaos, at whose centre sprawls the blind idiot god Azathoth, Lord of All Things, encircled by his flopping horde of mindless and amorphous dancers, and lulled by the thin monotonous piping of a demoniac flute held in nameless paws.'" # same as nda_nen.80
+nda_migo.1878.a: "Let them have it."
+nda_migo.1878.b: "We could demand it from them?"
+nda_migo.1878.b_a_tt: "Recieve the Trapezohedron"
+nda_migo.1878.b_b_tt: "Annoy them"
+nda_migo.1878.c: "I can not help."
+
 nda_migo.1924.t:0 "The Crux of the Experiment"
 nda_migo.1924.d:1 "Once more in the night the thing has returned! As the world plunges towards it's final reckoning it speaks...\n\n'This is the exact point we were hoping to position you.\n\nThe return of [concept_nda_cthulhu] is imminent.\n\nNo more brain transfers from now on, the experiment will succeed or fail based on your actions here.'"
 nda_migo.1924.f:1 "'We will return at the end and reward you should you complete your role.'"

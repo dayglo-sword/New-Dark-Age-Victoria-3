@@ -20,12 +20,21 @@ nda_base.1 = { # An Introduction to NDA
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
 	trigger = {
+		NDA_is_active_trigger = yes
+
 		has_global_variable = nda_is_loaded # use this here to stop error log entry - event is direct call, not on_action, so no harm done
 	}
 
 	option = { #So it begins
 		name = nda_base.1.a
+		custom_tooltip = nda_base.1.a_tt
 		default_option = yes
+	}
+
+	option = { #Help Me...
+		name = nda_base.1.b
+		custom_tooltip = nda_base.1.b_tt
+		trigger_event = { id = nda_base.11 }	# help
 	}
 }
 
@@ -818,6 +827,32 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 	
 	option = { # #Hurrah!
 		name = nda_base.10.a
+		default_option = yes
+	}
+}
+
+nda_base.11 = { # Intro help - triggered from nda_base.1
+	type = country_event
+	placement = ROOT
+	title = nda_base.11.t
+	desc = nda_base.11.d
+	flavor =  nda_base.11.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
+
+	option = { #So it begins
+		name = nda_base.11.a
+		custom_tooltip = nda_base.11.a_tt
 		default_option = yes
 	}
 }
@@ -1808,5 +1843,50 @@ nda_base.31 = { # Pandered to cult but failed to add leader - worse than normal 
 		name = nda_base.31.a
 		default_option = yes
 	}
+}
 
+nda_base.40 = { # ModCon3 Ref - Abe disappears
+	type = country_event
+	placement = ROOT
+	title = nda_base.40.t
+	desc = nda_base.40.d
+	flavor =  nda_base.40.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
+
+	trigger = {
+		exists = c:USA
+		c:USA = ROOT
+		has_variable = fords_theatre # After assasination attempy
+		any_scope_character = {
+			has_variable = abraham_lincoln # they're still around in USA - doesn't need to be ruler
+		}
+		any_scope_character = {
+			has_variable = is_tesla # they're around somewhere in USA 
+		}
+	}
+
+	immediate = {
+		every_scope_character = {
+			limit = { has_variable = abraham_lincoln } 
+			save_scope_as = nda_abe_scope
+
+			kill_character = { hidden = yes } # Not coming back from this!
+		}
+
+	}
+	option = { #So it begins
+		name = nda_base.1.a
+		default_option = yes
+	}
 }
