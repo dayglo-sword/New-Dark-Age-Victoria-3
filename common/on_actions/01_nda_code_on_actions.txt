@@ -99,6 +99,8 @@ nda_monthly_on_action = {
 		nda_migo.1
 		nda_migo.4
 		nda_migo.1878 # The Shinning Trapezohedron
+		nda_migo.1890 # The 'King in Yellow' Play spooks Mi-Go
+		nda_migo.1892 # 'Hasturian America' spooks Mi-Go
 		nda_migo.1924 # The End Is Nigh - Cthulhu
 		nda_migo.1927 # The End Is Nigh - The Star
 		nda_migo.1935 # Migo Outro

@@ -438,10 +438,13 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 		}	
 		is_player = no # only for AI
 
-		# has subject that is not a cultist stronghold
+		# Limit to subject that is not a cultist stronghold? Or allow Cultists schisms?
 		any_country = {
-			is_subject_of = c:ELD
-			#NOT = { country_has_primary_culture = cu:nda_cul_cultist }
+			OR = {
+				is_subject_of = c:ELD	
+				is_subject_of = c:YIG
+				is_subject_of = c:DGN					
+			}
 		}
 	}
 
@@ -487,7 +490,7 @@ nda_ritual.6 = { # Dismantle Empire - don't think this is really working well - 
 					any_primary_culture = { is_cult_culture = no } # do not remove if no immediate alternative
 				}
 
-				remove_primary_culture = cu:nda_cul_cultist # this can lead to countries having no culture!		
+				remove_primary_culture = cu:nda_cul_cultist # can lead to countries having no culture? Or did above fix it?
 			}	
 			else = {
 				# cause strife as had to retain cult culture

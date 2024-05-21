@@ -367,7 +367,39 @@
 					value = "num_alliances"
 					multiply = -10
 				}					
-			}			
+			}	
+			
+
+			if = { # Cultist Countries stick together
+				limit = {
+					AND = {
+						is_cultist_country = yes		
+						scope:actor = {
+							is_cultist_country = yes
+						}
+					}					
+				}
+				add = {
+					desc = "NDA_CULTIST_ACCEPTANCE_RANK"
+					value = 100 # too much?						
+				}
+
+			}
+			else_if = { # Cultist Countries should not be friends with non-cult
+				limit = {
+					AND = {
+						is_cultist_country = yes		
+						scope:actor = {
+							is_cultist_country = no
+						}
+					}					
+				}
+				add = {
+					desc = "NDA_CULTIST_ACCEPTANCE_RANK"
+					value = -100 # too much?						
+				}
+			}
+			
 		}
 
 		propose_score = {

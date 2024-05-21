@@ -24,8 +24,8 @@ nda_hgw.10 = { # The Star - Intro
 	trigger = {
  		# 1928, no Cthulhu
 		is_player = yes	# need alternate dodge for observers?	
-		game_date >= 1928  
-		game_date < 1929  
+		game_date >= 1928.1.1  
+		game_date < 1929.1.1  
 		has_global_variable = nda_ritual_cthulhu_visits
 		NOT = { has_global_variable = nda_the_star_intro }	
 	}

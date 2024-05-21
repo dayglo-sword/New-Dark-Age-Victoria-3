@@ -32,6 +32,16 @@ nda_migo.1878.b_a_tt: "Recieve the Trapezohedron"
 nda_migo.1878.b_b_tt: "Annoy them"
 nda_migo.1878.c: "I can not help."
 
+nda_migo.1890.t: "The Yellow Play"
+nda_migo.1890.d: "The Mi-Go have contacted you again.\n\nThey seem deeply concerned about events in LOCATION, as it appears an ancient lost artifact has been uncovered in an old church, and is now in the hands of the government.\n\nThey are wondering if there is anything that you can do in your current position to aquire the relic.\n\n #ITALIC We must have it so we can return it to the point of its supposed creation so that we can have it again! #!"
+nda_migo.1890.f: "''" 
+nda_migo.1890.a: "Let them have it."
+
+nda_migo.1892.t: "The Yellow King"
+nda_migo.1892.d: "The Mi-Go have contacted you again.\n\nThey seem deeply concerned about events in LOCATION, as it appears an ancient lost artifact has been uncovered in an old church, and is now in the hands of the government.\n\nThey are wondering if there is anything that you can do in your current position to aquire the relic.\n\n #ITALIC We must have it so we can return it to the point of its supposed creation so that we can have it again! #!"
+nda_migo.1892.f: "''" 
+nda_migo.1892.a: "Let them have it."
+
 nda_migo.1924.t:0 "The Crux of the Experiment"
 nda_migo.1924.d:1 "Once more in the night the thing has returned! As the world plunges towards it's final reckoning it speaks...\n\n'This is the exact point we were hoping to position you.\n\nThe return of [concept_nda_cthulhu] is imminent.\n\nNo more brain transfers from now on, the experiment will succeed or fail based on your actions here.'"
 nda_migo.1924.f:1 "'We will return at the end and reward you should you complete your role.'"

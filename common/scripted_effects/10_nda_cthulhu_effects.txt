@@ -22,14 +22,14 @@
 				
 			if = { limit = { owner = { country_has_primary_culture = cu:nda_cul_yigian }}
 				set_variable = { # ongoing conversion
-					name = nda_rel_boost_eldritch_cult
+					name = nda_rel_boost_yigian_cult
 					months = 12
 					value = nda_small_conversion
 				}
 			}
 			else_if = { limit = { owner = { country_has_primary_culture = cu:nda_cul_dagonic }}
 				set_variable = { # ongoing conversion
-					name = nda_rel_boost_eldritch_cult
+					name = nda_rel_boost_dagonic_cult
 					months = 12
 					value = nda_small_conversion
 				}	

@@ -125,6 +125,23 @@
 		set_strategy = ai_strategy_nda_eldritch_administrative_agenda
 		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
 		set_strategy = ai_strategy_nda_eldritch_political_agenda
+
+		# do conversion across states
+		every_scope_state = {
+
+			if = { limit = { is_capital = yes }  # boost in capital
+				convert_population = { target = rel:nda_rel_cultist value = 0.05 }			
+			}
+			else = {
+				convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+			}
+				
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_eldritch_cult
+				months = 12
+				value = nda_small_conversion
+			}
+		}
 }
 
 nda_effect_eldritch_annex = {

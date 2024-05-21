@@ -21,7 +21,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 
 	trigger = {
  		# 1890 and owner of Paris
-		game_date >= 1890 
+		game_date >= 1890.1.1 
 		p:x906000 = { state = { owner = ROOT } }
 
 		NOT = { has_global_variable = nda_king_in_yellow_play_exists }
@@ -103,7 +103,7 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 
 	trigger = {
  		# 1891 and not original country
-		game_date >= 1891
+		game_date >= 1891.1.1
 		has_global_variable = nda_king_in_yellow_play_exists
 
 		NOT = { has_variable = nda_king_in_yellow_decision } # don't rerun while decision in progress
@@ -213,7 +213,7 @@ nda_hasturian.3 = { # The Repairer of Reputations
 	#icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	trigger = { # owns new york - is not full cultist country
-		game_date >= 1892
+		game_date >= 1892.1.1
 		p:xE217B5 = { state = { owner = ROOT } } # New York
 		#has_global_variable = nda_king_in_yellow_play_exists
 		has_variable = nda_king_in_yellow # is not suppressed
@@ -563,8 +563,8 @@ nda_hasturian.8 = { #  King in Yellow fades.
 
 	trigger = { 
 		is_player = yes
-		game_date >= 1899.6
-		game_date < 1900
+		game_date >= 1899.6.1
+		game_date < 1900.12.1
 		has_global_variable = nda_king_in_yellow_play_exists
 		NOT = { 
 			has_global_variable = nda_king_in_yellow 
@@ -927,8 +927,7 @@ nda_hasturian.1895 = { # The Travelling Players
 	option = { # "Steal back the Trapezohedron?"
 		name = nda_hasturian.1895.b
 		trigger = {
-			is_player = yes
-			
+			owner = { is_player = yes }			
 		}
 	}
 }
