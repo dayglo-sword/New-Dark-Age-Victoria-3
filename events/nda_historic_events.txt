@@ -1223,7 +1223,7 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 	option = { # Playing while the world burns!
 	name = nda_historic.1891.e	
 	trigger = { has_global_variable = nda_cthulhu_arrives }
-}
+	}
 }
 
 nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc

@@ -1,0 +1,130 @@
+﻿je_nda_nile_expedition = { # Dark Pharaoh - Miskatonic Expedition to the Nile Valley - ties into Nephren-Ka events
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_expeditions
+
+	is_shown_when_inactive = {
+		c:NEN ?= ROOT
+		#is_cultist_country = no
+		NOT = { has_variable = je_nda_nile_expedition_completed }
+	}
+
+	possible = {
+		c:NEN ?= ROOT
+
+	}	
+
+	immediate = {
+		
+		debug_log = "Nile Expedition Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+
+		random_scope_character = {
+			limit = {
+				has_variable = nda_nile_expedition_leader_var # select via kick-off event
+			}
+			save_scope_as = nda_nile_expedition_leader_var
+		}
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = expedition_low_peril_loc
+				trigger = {
+					var:expedition_peril < 4
+				}
+			}
+			triggered_desc = {
+				desc = expedition_medium_peril_loc
+				trigger = {
+					var:expedition_peril <= 5
+				}
+			}
+			triggered_desc = {
+				desc = expedition_high_peril_loc
+				trigger = {
+					var:expedition_peril >= 6
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = nda_nephrenka.23
+			10 = nda_nephrenka.25
+			10 = nda_nephrenka.26
+			10 = nda_nephrenka.27
+			10 = nda_nephrenka.28
+			10 = nda_nephrenka.30
+			10 = nda_nephrenka.40
+		}
+	}
+
+    fail = {
+		custom_tooltip = {
+			text = je_expedition_fail
+			var:expedition_peril >= 8
+		}
+    }
+	
+	on_fail = {
+		trigger_event = { id = nda_nephrenka.50 }
+		remove_variable = on_expedition
+		remove_modifier = modifier_large_expedition_cost
+		random_scope_character = {
+			limit = {
+				has_variable = nda_nile_expedition_leader_var
+			}
+			remove_variable = nda_nile_expedition_leader_var
+		}
+	}
+
+	current_value = {
+		value = var:expedition_progress
+	}
+
+	goal_add_value = {
+		add = 8
+	}
+
+    complete = {
+
+		custom_tooltip = {
+			text = je_nda_nile_expedition_complete_tt
+			# NOT = { exists = c:NBS }
+			# NOT = {	exists = c:NVS }
+
+			# # also if culture adoption flagged
+			# OR = {
+			# 	country_has_primary_culture = cu:anglo_canadian	
+			# 	has_variable = nda_maritimes_no_canadians	
+			# 	NOT = { any_scope_state = { state_region = { is_homeland = cu:anglo_canadian } } }	
+			# }
+		}
+    }
+
+	on_complete = {
+		set_variable = je_nda_nile_expedition_completed
+	}
+
+	
+ 	# Decisions
+	# Stop Expedition
+	# Send Mirror Back
+	# Continue Search
+	# Send Book Back
+
+	#scripted_button = je_nda_nile_expedition_btn_new_brunswick
+	#scripted_button = je_nda_nile_expedition_btn_nova_scotia
+	#scripted_button = je_nda_nile_expedition_btn_strange_ways
+	#scripted_button = je_nda_nile_expedition_btn_old_ways
+
+	progressbar = yes
+	weight = 10
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

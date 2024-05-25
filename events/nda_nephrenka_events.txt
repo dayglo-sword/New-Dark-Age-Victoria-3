@@ -91,6 +91,66 @@ nda_nephrenka.10 = { # test of dna
 	}
 }
 
+# Cultists start in Nile region due to previous uncovering of tomb by Prof Bowen
+nda_nephrenka.15 = {
+	type = country_event
+	placement = p:x44702D # Luxor
+	
+	title = nda_nephrenka.15.t
+	desc = nda_nephrenka.15.d
+	flavor = nda_nephrenka.15.f
+	
+	duration = 3
+	
+    event_image = {
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	trigger = {		
+		# regional
+		game_date >=  1845.3.23
+		game_date <  1846.1.1 
+
+		can_cult_infiltrate = yes
+
+		# owner of Luxor
+		OR = {
+			p:x44702D = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x44702D.region			
+		}
+	}
+
+	cooldown = { months = 12 }
+
+	option = {
+		name = nda_nephrenka.15.a # Accept the cultists - set up conditions to allow nda_base.5 to run
+		default_option = yes
+
+		trigger = {
+			p:x44702D = { state = { owner = ROOT } }
+		}
+		set_variable = nda_nameless_cults
+	}
+
+	option = {
+		name = nda_nephrenka.15.b # supress the cultists - but will fail anyway
+		trigger = {
+			p:x44702D = { state = { owner = ROOT } }
+		}
+
+		set_variable = nda_nameless_cults_supressed 	
+	}
+
+	option = { # Default for non-owner 'news'
+		name = nda_nephrenka.15.c # 
+		trigger = {
+			NOT = { p:x44702D = { state = { owner = ROOT } } }
+		}
+	}
+}
+
 # Expedition Kick-Off events - based on Antartic Expedition
 
 nda_nephrenka.20 = { # Start Event
@@ -109,10 +169,10 @@ nda_nephrenka.20 = { # Start Event
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	
-	trigger = {
-		# should be after starry wisdom end.
+	trigger = {		
 		c:NEN ?= ROOT
 		NOT= { has_variable = nda_nile_expedition_refused }
+		game_date >= 1880.3.23	# random date after nda_nen.1878 - starry wisdom end.
 	}
 
 	option = {
@@ -313,7 +373,7 @@ nda_nephrenka.21 = { #Choose commander
 
 nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with country visited.
 	type = country_event
-	placement = ROOT # location of port
+	placement = p:xA0D020 # location of Alexandria
 	
 	title = nda_nephrenka.23.t
 	desc = {
@@ -360,7 +420,7 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 		# should also take if cultists or not.
 
 		if = {
-			limit = { p:x7543C8.owner = { relations:root >= relations_threshold:amicable  }  }
+			limit = { p:xA0D020.owner = { relations:root >= relations_threshold:amicable  }  }
 			set_local_variable = nda_nephrenka_friendly
 			# expediate expedition	
 			change_variable = {
@@ -369,7 +429,7 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 			}		
 		}
 		else_if = {
-			limit = { p:x7543C8.owner = { relations:root <= relations_threshold:cold  }  }
+			limit = { p:xA0D020.owner = { relations:root <= relations_threshold:cold  }  }
 			set_local_variable = nda_nephrenka_hostile
 			# delay expedition
 			change_variable = {

@@ -226,6 +226,11 @@ nda_hasturian.3 = { # The Repairer of Reputations
 			is_at_war = no
 		}
 		# capital should be in americas?
+		OR = {
+			country_is_in_north_america = yes
+			country_is_in_central_america = yes
+			country_is_in_south_america = yes
+		}
 	}
 
 	immediate = {

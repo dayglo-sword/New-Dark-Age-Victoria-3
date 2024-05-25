@@ -23,7 +23,7 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 		game_date >= 1892.10.1 # 1892.10.1 # trial run
 		game_date < 1894.1.1 
 
-		has_global_variable = nda_is_loaded
+		#has_global_variable = nda_is_loaded
 		# owner of Amsterdam
 		OR = {
 			p:x777732 = { state = { owner = ROOT } }
