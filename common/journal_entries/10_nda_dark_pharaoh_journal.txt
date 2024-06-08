@@ -50,9 +50,10 @@
 	}
 
 	on_monthly_pulse = {
-		random_events = {
+		random_events = { # need to do appropritae weights to get into a rough sequence
 			100 = 0
 			10 = nda_nephrenka.23
+			10 = nda_nephrenka.24
 			10 = nda_nephrenka.25
 			10 = nda_nephrenka.26
 			10 = nda_nephrenka.27

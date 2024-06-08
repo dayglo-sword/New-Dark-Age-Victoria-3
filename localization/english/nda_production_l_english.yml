@@ -1,44 +1,46 @@
 ﻿l_english:
   
- pmg_nda_esoteric_academia:0 "Academia"
- pm_nda_esoteric_academia:0 "Esoteric"
- pm_nda_conventional_academia:0 "Conventional"
+ pmg_nda_esoteric_academia: "Academia"
+ pm_nda_esoteric_academia: "Esoteric"
+ pm_nda_conventional_academia: "Conventional"
 
 #lost/hidden cities
-pmg_nda_esoteric_lostcity:0 "Hidden Masters"
-pmg_nda_esoteric_lostcity_goods:0 "Hidden Lore"
-pm_nda_esoteric_lost_city:0 "Ancient Texts of the Masters"
-pm_nda_esoteric_vril:0 "Vril Generation"
-pm_nda_esoteric_blacklotus:0 "Black Lotus Preparation" 
-pm_nda_esoteric_goods:0 "Esoteric Goods" 
+pmg_nda_esoteric_lostcity: "Hidden Masters"
+pmg_nda_esoteric_lostcity_goods: "Hidden Lore"
+pm_nda_esoteric_lost_city: "Ancient Texts of the Masters"
+pm_nda_esoteric_vril: "Vril Generation"
+pm_nda_esoteric_blacklotus: "Black Lotus Preparation" 
+pm_nda_esoteric_goods: "Esoteric Goods" 
 
 # occult goods
-black_lotus:0 "Black Lotus Powder"
+black_lotus: "Black Lotus Powder"
 
-trade_route_import_lens_option_black_lotus_tooltip:0 "Establish a Black Lotus Powder import trade route"
-trade_route_export_lens_option_black_lotus_tooltip:0 "Establish a Black Lotus Powder export trade roure"
+trade_route_import_lens_option_black_lotus_tooltip: "Establish a Black Lotus Powder import trade route"
+trade_route_export_lens_option_black_lotus_tooltip: "Establish a Black Lotus Powder export trade roure"
 
-modifier_goods_output_black_lotus_add:0 "Black Lotus Powder output"
-modifier_goods_output_black_lotus_add_desc:0 "Black Lotus Powder production output"
-modifier_goods_input_black_lotus_add:0 "Black Lotus Powder input"
-modifier_goods_input_black_lotus_add_desc:0 "The amount of Black Lotus Powder consumed"
+modifier_goods_output_black_lotus_add: "Black Lotus Powder output"
+modifier_goods_output_black_lotus_add_desc: "Black Lotus Powder production output"
+modifier_goods_input_black_lotus_add: "Black Lotus Powder input"
+modifier_goods_input_black_lotus_add_desc: "The amount of Black Lotus Powder consumed"
 
-vril:0 "Vril Energy Rods"
+vril: "Vril Energy Rods"
 
-trade_route_import_lens_option_vril_tooltip:0 "Establish a Vril Energy Rod import trade route"
-trade_route_export_lens_option_vril_tooltip:0 "Establish a Vril Energy Rod export trade route"
+trade_route_import_lens_option_vril_tooltip: "Establish a Vril Energy Rod import trade route"
+trade_route_export_lens_option_vril_tooltip: "Establish a Vril Energy Rod export trade route"
 
-modifier_goods_output_vril_add:0 "Vril Rod output"
-modifier_goods_output_vril_add_desc:0 "Vril Energy Rod output"
+modifier_goods_output_vril_add: "Vril Rod output"
+modifier_goods_output_vril_add_desc: "Vril Energy Rod output"
 
-modifier_goods_input_vril_add:0 "Vril Energy input"
-modifier_goods_input_vril_add_desc:0 "The amount of Vril Energy Rods consumed"
+modifier_goods_input_vril_add: "Vril Energy input"
+modifier_goods_input_vril_add_desc: "The amount of Vril Energy Rods consumed"
 
 # company names
-company_nda_bovril:0 "Bovine Vril Company"
+company_nda_bovril: "Bovine Vril Company"
+company_nda_marsh_fishing: "Marsh Fisheries"
+company_nda_curwen_forestry: "Curwen Forestries"
 
 #combat unit type
-combat_unit_type_leviathan:0 "Leviathan"
-combat_unit_type_leviathan_desc:0 "Summoned from the unfathomable depths, the Leviathan rises."
-combat_unit_type_cultist_infantry:0 "Horde"
-combat_unit_type_cultist_infantry_desc:0 "A host of Cultists."
+combat_unit_type_leviathan: "Leviathan"
+combat_unit_type_leviathan_desc: "Summoned from the unfathomable depths, the Leviathan rises."
+combat_unit_type_cultist_infantry: "Horde"
+combat_unit_type_cultist_infantry_desc: "A host of Cultists."

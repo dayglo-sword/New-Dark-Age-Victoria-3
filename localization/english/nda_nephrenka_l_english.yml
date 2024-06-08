@@ -118,6 +118,26 @@ nda_nephrenka.40.a: "What can we do?"
 nda_nephrenka.40.b: "What can we do?"
 nda_nephrenka.40.c: "What can we do?"
 
+#Allow expedition continue
+nda_nephrenka.41.t: "Stygian Test"
+nda_nephrenka.41.d: "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance to [concept_nda_yig]."
+nda_nephrenka.41.f: "The power of Yig continues to grow."
+nda_nephrenka.41.a: "What can we do?"
+nda_nephrenka.41.b: "What can we do?"
+
+#Notification of approval
+nda_nephrenka.42.t: "Stygian Test"
+nda_nephrenka.42.d: "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance to [concept_nda_yig]."
+nda_nephrenka.42.f: "The power of Yig continues to grow."
+nda_nephrenka.42.a: "What can we do?"
+
+# Ignore diapproval??
+nda_nephrenka.43.t: "Stygian Test"
+nda_nephrenka.43.d: "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance to [concept_nda_yig]."
+nda_nephrenka.43.f: "The power of Yig continues to grow."
+nda_nephrenka.43.a: "What can we do?"
+nda_nephrenka.43.b: "What can we do?"
+
 # Expedition Fail
 nda_nephrenka.50.t: "Failure"
 nda_nephrenka.50.d: "The expedition has been beset with failure. The must return back to University having achieved only a fraction of what could have been."

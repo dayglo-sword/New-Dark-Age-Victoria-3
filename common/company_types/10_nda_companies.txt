@@ -51,3 +51,75 @@ company_nda_bovril = {
 		value = 5 # Higher base value for mod companies!!
 	}
 }
+
+company_nda_marsh_fishing = {
+	icon = "gfx/interface/icons/company_icons/basic_fishing.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_fishing_wharf
+		building_whaling_station
+	}
+
+	potential = {
+			country_has_primary_culture = cu:nda_cul_trueyankee
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_fishing_wharf
+					is_building_type = building_whaling_station
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.2
+		building_shipyards_throughput_add = 0.05
+	}	
+
+	ai_weight = {
+		value = 5 # Higher base value for mod companies!!
+	}
+}
+
+company_nda_curwen_forestry = {
+	icon = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_logging_camp
+	}
+
+	potential = {
+		country_has_primary_culture = cu:nda_cul_trueyankee
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_logging_camp
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 2
+		state_infrastructure_from_population_max_add = 20
+	}
+
+	ai_weight = {
+		value = 5 # Higher base value for mod companies!!
+	}
+}

@@ -94,7 +94,11 @@ nda_monthly_on_action = {
 		nda_historic.1891		
 		nda_historic.1892
 
+		nda_historic_regional.1848
+		nda_historic_regional.1864
+		nda_historic_regional.1890
 		nda_historic_regional.1892
+		nda_historic_regional.1901
 
 		nda_migo.1
 		nda_migo.4
@@ -151,12 +155,10 @@ nda_monthly_on_action = {
 				months = 3
 				value = yes
 			}
-			#remove_variable = nda_cult_leader_debug
 		}
 		else = {
 			remove_variable = nda_cult_leaderless
 			remove_variable = nda_cult_leaderless_timer
-			#set_variable = nda_cult_leader_debug
 		}
 
 		# missing primary culture on ELD after rebelion
@@ -388,6 +390,10 @@ nda_half_yearly_on_action = {
 		nda_lostcities.41
 
 		nda_yigian.11 # Snake Oil
+
+		nda_nephrenka.15 # Cultists on the Nile
+
+		nda_base.40 # Abe Lincoln - Time Traveller
 	}
 }
 

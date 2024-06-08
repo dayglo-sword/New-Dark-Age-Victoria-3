@@ -1,6 +1,153 @@
 ﻿namespace = nda_historic_regional # Series of Historic 'Colour' events around Spiritualism and the Occult - show to source country and any with interest in region
 # use cooldown to stop refires to reduce variable bloat
 
+nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Edwin Davis - 
+	type = country_event
+	placement = p:x0E3435 # Baltimore - needs to be serpent location, east of cinn
+	title = nda_historic_regional.1848.t
+	desc = nda_historic_regional.1848.d
+	flavor = nda_historic_regional.1848.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { 		
+		game_date >= 1848.3.1 
+		game_date < 1849.3.1 
+
+		# owner of Amsterdam
+		OR = {
+			p:x0E3435 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x0E3435.region			
+		}
+	}
+
+	cooldown = { months = 16 }	
+
+	immediate = {
+
+	}
+
+	option = { #"Interesting"
+		name = nda_historic_regional.1848.a
+		default_option = yes
+	}
+}
+
+nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoologist and biogeographer Philip Sclater appeared in The Quarterly Journal of Science. Ernst Haeckel, supported by Russel Wallace (what about Mu - Augustus Le Plongeon + James Churchward
+	type = country_event
+	placement = p:x0E3435 # Baltimore - 
+	title = nda_historic_regional.1864.t
+	desc = nda_historic_regional.1864.d
+	flavor = nda_historic_regional.1864.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { 		
+		game_date >= 1864.3.1 
+		game_date < 1865.3.1 
+
+		OR = {
+			p:x0E3435 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x0E3435.region			
+		}
+	}
+
+	cooldown = { months = 16 }	
+
+	immediate = {
+
+	}
+
+	option = { #"Interesting"
+		name = nda_historic_regional.1864.a
+		default_option = yes
+	}
+}
+
+# nda_historic_regional.1870 = { # Uluru - Western discovery - name after Australian premier - tell story of Dreamtime battle between carpet-snake people and venomous snake-people.
+
+# nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Donnelly
+
+# nda_historic_regional.1885 = { # Great Serpent Mound, Ohio - F W Putnam of Peabody Museum excavated and rasied money to buy the mound.
+
+# nda_historic_regional.1912 = { # Atlantis: Paul Schliemann, New York American
+
+# nda_historic_regional.1925 = { # The Old Straight Track - Alfred Watkins, Leylines
+
+nda_historic_regional.1890 = { # december - first advert for ouija boards "The Ouija: The Wonder of the 19th Century" FT413 p37 1886 was first instance in Ohio
+
+	type = country_event
+	placement = p:x0E3435 # Baltimore
+	title = nda_historic_regional.1890.t
+	desc = nda_historic_regional.1890.d
+	flavor = nda_historic_regional.1890.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { 		
+		game_date >= 1890.12.1 
+		game_date < 1892.1.1 
+
+		# owner of Amsterdam
+		OR = {
+			p:x0E3435 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x0E3435.region			
+		}
+	}
+
+	cooldown = { months = 24 }	
+
+	immediate = {
+
+	}
+
+	option = { #"Silly Toy"
+		name = nda_historic_regional.1890.a
+		default_option = yes
+	}
+
+	option = { #"Spiritualists will love it"
+		name = nda_historic_regional.1890.b
+
+		# Boost to Spiritulism - should not do in cult countries?
+		if = {
+			limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_spiritualism						
+				months = 6
+				value = nda_trivial_conversion
+			}				
+		}
+	}
+}
+
 nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Cornelius Oudemans ( Fortean Times 355 p55 )
 	type = country_event
 	placement = p:x777732 # Amsterdam
@@ -23,7 +170,6 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 		game_date >= 1892.10.1 # 1892.10.1 # trial run
 		game_date < 1894.1.1 
 
-		#has_global_variable = nda_is_loaded
 		# owner of Amsterdam
 		OR = {
 			p:x777732 = { state = { owner = ROOT } }
@@ -58,8 +204,66 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 	}
 }
 
-#nda_historic_regional.1890 # december - first advert for ouija boards "The Ouija: The Wonder of the 19th Century" FT413 p37 1886 was first instance in Ohio
+#nda_historic_regional.1897 = { # Golden Dawn in America
+# The Order of the Golden Dawn establishes two Temples in the United States of America.&nbsp; Thmê Temple #8 is chartered in Chicago, Illinois, under G.W. Wiggs as Imperator, and Thoth-Hermes Temple #9 is chartered in New York City, under C. Lockwood as Imperator.&nbsp; (Paul Foster Case was a member of Thoth-Hermes.)
 
-#nda_historic_regional.1901 # Horus Trial - fake Golden Dawn. Real GD splits into three factions? Alpha et Omega, The Independant and Rectified Rite, The Order of the Stalle Matutina (Morning Star)
+#nda_historic_regional.1889 = { # Golden Dawn in America - Crowley
+# <p>On November 26, 1989, a young 23-year-old man named Aleister Crowley was initiated into the 0=0 Grade of Neophyte in the Temple of Isis-Urania #3, taking the motto <em>Perdurabo</em>.&nbsp; He advanced through the Outer Order Grades in a little over a year, but rumors of his misconduct and depravity were well-known.&nbsp; Because of this, Florence Farr refused to initiate Crowley into the 5=6 Grade of Adeptus Minor and into the Inner Order.</p>
+
+nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits into three factions? Alpha et Omega, The Independant and Rectified Rite, The Order of the Stalle Matutina (Morning Star)
+
+	type = country_event
+	placement = p:x0E3435 # Baltimore
+	title = nda_historic_regional.1901.t
+	desc = nda_historic_regional.1901.d
+	flavor = nda_historic_regional.1901.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { 		
+		game_date >= 1901.12.1 
+		game_date < 1903.1.1 
+
+		# owner of Amsterdam
+		OR = {
+			p:x0E3435 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x0E3435.region			
+		}
+	}
+
+	cooldown = { months = 24 }	
+
+	immediate = {
+
+	}
+
+	option = { #"Good ridence to them"
+		name = nda_historic_regional.1901.a
+		default_option = yes
+	}
+
+	option = { #"Great, now there's three of theme"
+		name = nda_historic_regional.1901.b
+
+		# Boost to Spiritulism - should not do in cult countries?
+		if = {
+			limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_spiritualism						
+				months = 6
+				value = nda_trivial_conversion
+			}				
+		}
+	}
+}
 
 #nda_historic_regional.1913 # - House of the Sun Golden Dawn spin-off in Havelock North, New Zealand - Is Anglican-Theosopic hybrid? Exagerate effects to increase spread.

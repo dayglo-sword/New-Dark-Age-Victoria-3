@@ -15,7 +15,7 @@
 			custom_tooltip = {
 				text = nda_yig_mission_to_stygia_possible_tt
 
-				can_cult_infiltrate = yes 
+				#can_cult_infiltrate = yes 
 				owns_entire_state_region = STATE_MIDDLE_EGYPT
 				country_has_primary_culture = cu:nda_cul_cultist
 				# Needs to exclude ELD!

@@ -499,13 +499,13 @@ nda_nephrenka.30 = {
 		NOT = { has_global_variable = nda_tomb_nitocris_found }
 	}
 
-	# weight_multiplier = {
-	# 	base = 0
-	# 	modifier = {
-	# 		has_variable = nda_innocent_condemmed
-	# 		add = 10
-	# 	}
-	# }
+	weight_multiplier = { # should only be found the once
+		base = 1
+		modifier = {
+			has_global_variable = nda_tomb_nitocris_found
+			subtract = 1
+		}
+	}
 
 	immediate = { 
 		set_global_variable = nda_tomb_nitocris_found 
@@ -735,7 +735,7 @@ nda_nephrenka.40 = {
 	}
 
 	immediate = { 
-
+		# set expedition as delayed
 	}
 
 	option = { # Request Continuation
@@ -743,7 +743,7 @@ nda_nephrenka.40 = {
 		default_option = yes
 
 		# trigger nda_nephrenka.41
-		p:x7543C8.owner = { trigger_event = { id=nda_nephrenka.41 days=3 }  }
+		p:x7543C8.owner = { trigger_event = { id = nda_nephrenka.41 days=3 } }
 
 		# ai_chance = { # will +ve effect conversion rate
 		# 	base = 80		
@@ -763,14 +763,16 @@ nda_nephrenka.40 = {
 		# 	base = 80		
 		# }
 	}
+
+	# Need option for if expedition is from same country!!
 }
 
-nda_nephrenka.41 = { # Contries Response
+nda_nephrenka.41 = { # Allow the Expedition to continue
 	type = country_event
 	placement = ROOT
-	title = nda_nephrenka.40.t
-	desc = nda_nephrenka.40.d
-	flavor =  nda_nephrenka.40.f
+	title = nda_nephrenka.41.t
+	desc = nda_nephrenka.41.d
+	flavor =  nda_nephrenka.41.f
 	dlc = dlc_NDA
 
 	duration =3 
@@ -779,24 +781,95 @@ nda_nephrenka.41 = { # Contries Response
 
 	}
 
-	option = { 
-		name = nda_nephrenka.40.a
+	option = { # Allow
+		name = nda_nephrenka.41.a
 		default_option = yes
 
-		# ai_chance = { # will +ve effect conversion rate
-		# 	base = 80		
-		# }
+		ai_chance = { # change based on country relations
+			base = 50		
+		}
+
+		# notify of permission - should target expedition owner
+		p:x7543C8.owner = { trigger_event = { id = nda_nephrenka.42 days=3 } }
 	}
 
-	option = { 
-		name = nda_nephrenka.40.b
+	option = { # Decline.
+		name = nda_nephrenka.41.b
 		default_option = yes
 
-		# ai_chance = { # will +ve effect conversion rate
-		# 	base = 80		
-		# }
+		ai_chance = { # change based on country relations
+			base = 50	
+				
+		}
+
+		# notify of decline - should target expedition owner
+		p:x7543C8.owner = { trigger_event = { id = nda_nephrenka.43 days=3 } }
 	}
 }
+
+nda_nephrenka.42 = { # Notification of approval
+	type = country_event
+	placement = ROOT
+	title = nda_nephrenka.42.t
+	desc = nda_nephrenka.42.d
+	flavor =  nda_nephrenka.42.f
+	dlc = dlc_NDA
+
+	duration =3 
+
+	immediate = { 
+		# boost progress
+	}
+
+	option = { # Hurrah!
+		name = nda_nephrenka.42.a
+		default_option = yes
+
+		ai_chance = { 
+			base = 50		
+		}
+
+		# decrease approval 
+	}
+
+}
+
+nda_nephrenka.43 = { # Ignore Disapproval
+	type = country_event
+	placement = ROOT
+	title = nda_nephrenka.43.t
+	desc = nda_nephrenka.43.d
+	flavor =  nda_nephrenka.43.f
+	dlc = dlc_NDA
+
+	duration =3 
+
+	immediate = { 
+
+	}
+
+	option = { # Ignore Disapproval
+		name = nda_nephrenka.43.a
+		default_option = yes
+
+		ai_chance = { 
+			base = 50		
+		}
+
+		# decrease approval 
+	}
+
+	option = { # Quit Expedition.
+		name = nda_nephrenka.43.b
+		default_option = yes
+
+		ai_chance = {
+			base = 50					
+		}
+	}
+}
+
+
 # #Local disproval
 # country_event = {
 # 	id = 94056 

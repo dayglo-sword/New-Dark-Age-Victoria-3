@@ -1867,13 +1867,13 @@ nda_base.40 = { # ModCon3 Ref - Abe disappears
 	trigger = {
 		exists = c:USA
 		c:USA = ROOT
-		has_variable = fords_theatre # After assasination attempy
+		has_variable = fords_theatre # After assasination attempt
 		any_scope_character = {
 			has_variable = abraham_lincoln # they're still around in USA - doesn't need to be ruler
 		}
-		any_scope_character = {
-			has_variable = is_tesla # they're around somewhere in USA 
-		}
+		# any_scope_character = {
+		# 	has_variable = is_tesla # they're around somewhere in USA - not yet exists
+		# }
 	}
 
 	immediate = {
