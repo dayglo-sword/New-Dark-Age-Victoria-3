@@ -390,6 +390,8 @@ nda_half_yearly_on_action = {
 		nda_lostcities.41
 
 		nda_yigian.11 # Snake Oil
+		nda_yigian.1892 # Request Mirror
+		nda_yigian.1894 # Return of Nicrotis
 
 		nda_nephrenka.15 # Cultists on the Nile
 

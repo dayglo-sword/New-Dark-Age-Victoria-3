@@ -291,3 +291,13 @@ nda_lostcity_nameless_city_hidden = {
 	notification_type = toast
  
 }
+
+# Stygian/Yigian
+nda_nitocris_coronation = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/character.dds"
+
+	notification_type = toast
+ 
+}

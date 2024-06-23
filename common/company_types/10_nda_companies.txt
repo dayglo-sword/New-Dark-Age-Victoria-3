@@ -67,6 +67,12 @@ company_nda_marsh_fishing = {
 			country_has_primary_culture = cu:nda_cul_trueyankee
 	}
 
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			country_has_primary_culture = cu:nda_cul_trueyankee
+		}
+	}
+
 	possible = { 
 		any_scope_state = {
 			any_scope_building = {
@@ -103,6 +109,12 @@ company_nda_curwen_forestry = {
 		country_has_primary_culture = cu:nda_cul_trueyankee
 	}
 
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			country_has_primary_culture = cu:nda_cul_trueyankee
+		}
+	}
+	
 	possible = { 
 		any_scope_state = {
 			any_scope_building = {

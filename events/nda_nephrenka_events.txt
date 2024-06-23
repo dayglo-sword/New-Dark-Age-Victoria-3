@@ -108,6 +108,8 @@ nda_nephrenka.15 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
 	trigger = {		
 		# regional
 		game_date >=  1845.3.23
@@ -122,7 +124,12 @@ nda_nephrenka.15 = {
 		}
 	}
 
+
 	cooldown = { months = 12 }
+
+	immediate = {
+		p:x44702D = { state = { save_scope_as = target_country } }
+	}	
 
 	option = {
 		name = nda_nephrenka.15.a # Accept the cultists - set up conditions to allow nda_base.5 to run
@@ -169,10 +176,23 @@ nda_nephrenka.20 = { # Start Event
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
 	trigger = {		
 		c:NEN ?= ROOT
-		NOT= { has_variable = nda_nile_expedition_refused }
+		NOT= { 
+			has_variable = nda_nile_expedition_start
+		}
 		game_date >= 1880.3.23	# random date after nda_nen.1878 - starry wisdom end.
+
+		NOT = { has_modifier = 	modifier_large_expedition_cost } # no existing expedition
+
+		# Only if Miskatonic Uni exists ??
+	}
+
+	immediate = {
+		# Check if Miskatonic Uni is around - change text if it is.	
+		set_variable = nda_nile_expedition_start
 	}
 
 	option = {
@@ -209,6 +229,8 @@ nda_nephrenka.21 = { #Choose commander
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
 	trigger = {
 		any_scope_character = {
 			has_role = admiral
@@ -221,11 +243,12 @@ nda_nephrenka.21 = { #Choose commander
 			limit = {
 				is_busy = no
 				#has_role = admiral
-				has_variable = polar_explorer
+				has_trait = nda_investigator
 				is_ruler = no
 			}
 			save_scope_as = expedition_leader_1
 		}
+
 		if = {
 			random_scope_character = {
 				limit = {
@@ -299,17 +322,13 @@ nda_nephrenka.21 = { #Choose commander
 		}
 		default_option = yes
 		highlighted_option = yes
-		add_modifier = {
-			name = modifier_large_expedition_cost
-			multiplier = money_amount_multiplier_medium
-		}
+
 		scope:expedition_leader_1 = {
 			set_variable = nda_nile_expedition_leader_var
 			set_character_busy_and_immortal = yes
 		}
-		add_journal_entry = {
-			type = je_nda_nile_expedition
-		}
+
+		trigger_event = { id = nda_nephrenka.22 days = 1 popup = yes }
 	}
 
 	option = {
@@ -318,17 +337,13 @@ nda_nephrenka.21 = { #Choose commander
 		trigger = {
 			exists = scope:expedition_leader_2
 		}
-		add_modifier = {
-			name = modifier_large_expedition_cost
-			multiplier = money_amount_multiplier_medium
-		}
+
 		scope:expedition_leader_2 = {
 			set_variable = nda_nile_expedition_leader_var
 			set_character_busy_and_immortal = yes
 		}
-		add_journal_entry = {
-			type = je_nda_nile_expedition
-		}
+
+		trigger_event = { id = nda_nephrenka.22 days = 1 popup = yes }
 	}
 
 	option = {
@@ -337,17 +352,13 @@ nda_nephrenka.21 = { #Choose commander
 		trigger = {
 			exists = scope:expedition_leader_3
 		}
-		add_modifier = {
-			name = modifier_large_expedition_cost
-			multiplier = money_amount_multiplier_medium
-		}
+
 		scope:expedition_leader_3 = {
 			set_variable = nda_nile_expedition_leader_var
 			set_character_busy_and_immortal = yes
 		}
-		add_journal_entry = {
-			type = je_nda_nile_expedition
-		}
+
+		trigger_event = { id = nda_nephrenka.22 days = 1 popup = yes }
 	}
 	
 	option = {
@@ -357,14 +368,86 @@ nda_nephrenka.21 = { #Choose commander
 			NOT = { exists = scope:expedition_leader_1 }
 			exists = scope:expedition_leader_4
 		}
-		add_modifier = {
-			name = modifier_large_expedition_cost
-			multiplier = money_amount_multiplier_medium
-		}
+
 		scope:expedition_leader_4 = {
 			set_variable = nda_nile_expedition_leader_var
 			set_character_busy_and_immortal = yes
 		}
+
+		trigger_event = { id = nda_nephrenka.22 days = 1 popup = yes }
+
+	}
+}
+
+nda_nephrenka.22 = { # expedition costs / funding
+	type = country_event
+	placement = ROOT
+
+	title = nda_nephrenka.22.t
+	desc = nda_nephrenka.22.d
+	flavor = nda_nephrenka.22.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	option = {
+		name = nda_nephrenka.22.a # Poorly Funded
+
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_small
+		}
+
+		add_journal_entry = {
+			type = je_nda_nile_expedition
+		}
+
+		set_variable = nda_nile_expedition_cheap
+		default_option = yes
+	}
+
+	option = {
+		name = nda_nephrenka.22.b # Normal Funds
+
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_medium
+		}
+
+		set_variable = nda_nile_expedition_funded
+
+		change_variable = {
+			name = nda_nile_expedition_peril
+			add = 1 
+		}
+
+		add_journal_entry = {
+			type = je_nda_nile_expedition
+		}
+	}
+
+	option = {
+		name = nda_nephrenka.22.c # Well funded
+		
+		add_modifier = {
+			name = modifier_large_expedition_cost
+			multiplier = money_amount_multiplier_large
+		}
+
+		set_variable = nda_nile_expedition_well_funded
+
+		change_variable = {
+			name = nda_nile_expedition_progress
+			add = 1 
+		}	
+
 		add_journal_entry = {
 			type = je_nda_nile_expedition
 		}
@@ -404,16 +487,16 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 	duration = 3
 	
     event_image = {
-		video = "unspecific_steam_ship"
+		video = "africa_city_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	
-	# trigger = {
-	# 	# should be after starry wisdom end.
-	# 	c:NEN ?= ROOT
-	# 	NOT= { has_variable = nda_nile_expedition_refused }
-	# }
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	trigger = {
+		NOT= { has_variable = nda_nile_expedition_in_progress }
+	}
 
 	immediate = {
 		# do check and set appropriate attitude	- what will be the effect? will delay stop other events, such as attack
@@ -426,7 +509,13 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 			change_variable = {
 				name = nda_nile_expedition_progress
 				add = 1 
-			}		
+			}	
+			set_variable = nda_nile_expedition_in_progress	
+
+			change_variable = {
+				name = nda_nile_expedition_progress
+				add = 1
+			}
 		}
 		else_if = {
 			limit = { p:xA0D020.owner = { relations:root <= relations_threshold:cold  }  }
@@ -435,21 +524,45 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 			change_variable = {
 				name = nda_nile_expedition_peril
 				add = 1 
-			}			
+			}	
+
+			set_variable = { # ongoing conversion
+				name = nda_nephrenka_delay	months = 1
+			}	
+			
+			change_variable = {
+				name = nda_nile_expedition_peril
+				add = 1
+			}
 		}
 		else = {
 			# normal transit
+			set_variable = nda_nile_expedition_in_progress
 		}
+
+		# get expedition leader
+		random_scope_character = {
+			limit = {
+				has_variable = nda_nile_expedition_leader_var
+			}
+
+			save_scope_as = nda_nile_expedition_leader
+		}
+
 	}
 
 	option = {
 		name = nda_nephrenka.23.a # Most Welcome
-		#trigger_event = { id = nda_nephrenka.21 days = 0 popup = yes }
+		trigger = {
+			has_local_variable = nda_nephrenka_friendly
+		}
 	}
 
 	option = {
 		name = nda_nephrenka.23.b # Delayed - have protest option?
-		#trigger_event = { id = nda_nephrenka.20 days = 24 popup = yes }
+		trigger = {
+			has_variable = nda_nephrenka_delay
+		}
 	}
 
 	option = {
@@ -459,28 +572,381 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 	}
 }
 
+# africa_desert_expedition
+# middleeast_middleclass_cafe
+
 nda_nephrenka.24 = { # Along the Nile
+	type = country_event
+	placement = p:x08B43B # Beni Suef
+	title = nda_nephrenka.24.t
+	desc = nda_nephrenka.24.d
+	flavor =  nda_nephrenka.24.f
+
+	dlc = dlc_NDA
+
+	duration =3 
+	
+    event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	# called event? Occurs once it is shipped out.
+	trigger = {
+		has_variable = nda_nile_expedition_in_progress	
+		NOT = { has_variable =  nda_nephrenka_delay }
+	}
+
+	# weight_multiplier = { # should only be found the once
+	# 	base = 1
+	# 	modifier = {
+	# 		has_global_variable = nda_nephrenka_delay
+	# 		add = -1
+	# 	}
+	# }
+
+	immediate = { 
+		# increase progress
+		change_variable = {
+			name = nda_nile_expedition_progress
+			add = 1
+		}	
+	}
+
+	option = { 
+		name = nda_nephrenka.24.a
+		default_option = yes
+
+		# ai_chance = { # will +ve effect conversion rate
+		# 	base = 80		
+		# }
+	}
 }
 
 nda_nephrenka.25 = { # A fortunate find  - can happen if delayed
+	type = country_event
+	placement = ROOT
+	title = nda_nephrenka.25.t
+	desc = nda_nephrenka.25.d
+	flavor =  nda_nephrenka.25.f
 
+	dlc = dlc_NDA
+
+	duration = 3 
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	# called event? Occurs once it is shipped out.
+	trigger = {
+		has_variable = nda_nile_expedition_in_progress	
+	}
+
+		# weight_multiplier = { # should only be found the once
+	# 	base = 1
+	# 	modifier = {
+	# 		has_global_variable = nda_nephrenka_tomb_nitocris
+	# 		subtract = 1
+	# 	}
+	# }
+
+	immediate = { 
+		change_variable = {
+			name = nda_nile_expedition_progress
+			add = 1
+		}	
+	}
+
+	option = { 
+		name = nda_nephrenka.25.a
+		default_option = yes
+
+		# ai_chance = { # will +ve effect conversion rate
+		# 	base = 80		
+		# }
+	}
 #	weight_multiplier = {
 #		base = 1
 #	}
 }
 
-nda_nephrenka.26 = { # dancing desease
+nda_nephrenka.26 = { # dancing disease
+	type = country_event
+	placement = ROOT
+	title = nda_nephrenka.26.t
+	desc = nda_nephrenka.26.d
+	flavor =  nda_nephrenka.26.f
+
+	dlc = dlc_NDA
+
+	duration = 3 
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	# called event? Occurs once it is shipped out.
+	trigger = {
+		has_variable = nda_nile_expedition_in_progress	
+		NOT = { has_variable = nda_nile_expedition_disease }
+		NOT = { has_variable =  nda_nephrenka_delay }
+	}
+
+	# weight_multiplier = { # should only be found the once
+	# 	base = 1
+	# 	modifier = {
+	# 		has_global_variable = nda_nephrenka_delay
+	# 		add = -1
+	# 	}
+	# }
+
+	immediate = { 
+		# add to peril
+		change_variable = {
+			name = nda_nile_expedition_peril
+			add = 1
+		}
+		
+		set_variable = nda_nile_expedition_disease
+	}
+
+	option = { 
+		name = nda_nephrenka.26.a
+		default_option = yes
+
+		# ai_chance = { # will +ve effect conversion rate
+		# 	base = 80		
+		# }
+	}
 }
 
 nda_nephrenka.27 = { # The wrong site
+	type = country_event
+	placement = ROOT
+	title = nda_nephrenka.27.t
+	desc = nda_nephrenka.27.d
+	flavor =  nda_nephrenka.27.f
 
+	dlc = dlc_NDA
+
+	duration = 3 
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	# called event? Occurs once it is shipped out.
+	trigger = {
+		has_variable = nda_nile_expedition_in_progress	
+		NOT = { has_variable =  nda_nephrenka_delay }
+	}
+
+	# weight_multiplier = { # should only be found the once
+	# 	base = 1
+	# 	modifier = {
+	# 		has_global_variable = nda_nephrenka_delay
+	# 		add = -1
+	# 	}
+	# }
+
+	immediate = { 
+		# add to peril
+		change_variable = {
+			name = nda_nile_expedition_peril
+			add = 1
+		}
+	}
+
+	option = { 
+		name = nda_nephrenka.27.a
+		default_option = yes
+
+		# ai_chance = { # will +ve effect conversion rate
+		# 	base = 80		
+		# }
+	}
 }
 
 nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can happen if delayed
+	type = country_event
+	placement = ROOT
+	title = nda_nephrenka.28.t
+	desc = nda_nephrenka.28.d
+	flavor =  nda_nephrenka.28.f
 
-#	weight_multiplier = {
-#		base = 1
-#	}
+	dlc = dlc_NDA
+
+	duration = 3 
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	# called event? Occurs once it is shipped out.
+	trigger = {
+		has_variable = nda_nile_expedition_in_progress	
+	}
+
+	# weight_multiplier = { # should only be found the once
+	# 	base = 1
+	# 	modifier = {
+	# 		has_global_variable = nda_nephrenka_tomb_nitocris
+	# 		subtract = 1
+	# 	}
+	# }
+
+	immediate = { 
+		# add peril ??
+	}
+
+	option = { 
+		name = nda_nephrenka.28.a
+		default_option = yes
+
+		random_list = {
+			50 = {
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								age >= 50
+							}
+						}
+						add = -10
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								age >= 60
+							}
+						}
+						add = -5
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								age >= 70
+							}
+						}
+						add = -10
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = nda_investigator # plot armour
+							}
+						}
+						add = 20
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = bandit
+							}
+						}
+						add = 10
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = wounded
+							}
+						}
+						add = -10
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = beetle_ear
+							}
+						}
+						add = -5
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = kidney_stones
+							}
+						}
+						add = -5
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = shellshocked
+							}
+						}
+						add = -5
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_role = general
+							}
+						}
+						add = -5
+					}
+				}
+				scope:nda_nile_expedition_leader = {
+					kill_character = yes
+				}
+			}
+			30 = {
+				
+				# Character Wounded - Assailant is killed - show event
+				if = {
+					limit = {
+						scope:nda_nile_expedition_leader = {
+							NOT = { has_trait = wounded }
+						}
+					}
+					scope:nda_nile_expedition_leader = {
+						add_trait = wounded
+					}
+				}
+			}
+			30 = {
+				# Assailant is killed - show event
+			}
+			# should be option for wounded
+		}
+	}
 }
 
 #Tomb of Nitocris Found
@@ -494,22 +960,39 @@ nda_nephrenka.30 = {
 
 	duration =3 
 
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
 	trigger = {
 		#has_country_modifier = egyptian_excavations
-		NOT = { has_global_variable = nda_tomb_nitocris_found }
+		has_variable = nda_nile_expedition_in_progress	
+		NOT = { has_global_variable = nda_nephrenka_tomb_nitocris }
+		NOT = { has_variable =  nda_nephrenka_delay }
+		# has progress level
 	}
 
-	weight_multiplier = { # should only be found the once
-		base = 1
-		modifier = {
-			has_global_variable = nda_tomb_nitocris_found
-			subtract = 1
-		}
-	}
+	# weight_multiplier = { # should only be found the once
+	# 	base = 1
+	# 	modifier = {
+	# 		has_global_variable = nda_nephrenka_tomb_nitocris
+	# 		add = -1
+	# 	}
+	# }
 
 	immediate = { 
-		set_global_variable = nda_tomb_nitocris_found 
-		set_variable = nda_tomb_nitocris_found 
+		set_global_variable = nda_nephrenka_tomb_nitocris 
+		set_variable = nda_nephrenka_tomb_nitocris 
+
+		# add to progress
+		change_variable = {
+			name = nda_nile_expedition_progress
+			add = 1
+		}
 
 		# get prestige boost
 
@@ -538,16 +1021,30 @@ nda_nephrenka.31 = {
 
 	duration =3 
 
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
 	trigger = {
 		#has_country_modifier = egyptian_excavations
-		has_variable = nda_tomb_nitocris_found
+		has_variable = nda_nile_expedition_in_progress	
+		has_variable = nda_nephrenka_tomb_nitocris
 		# 		NOT = { has_country_modifier = artifact_nitocris_mirror }
 	}
 
 	immediate = { 
-		set_global_variable = nda_tomb_nitocris_found 
-		set_variable = nda_tomb_nitocris_found 
+		set_global_variable = nda_nephrenka_mirror_nitocris 
+		set_variable = nda_nephrenka_mirror_nitocris 
 
+		# add to progress
+		change_variable = {
+			name = nda_nile_expedition_progress
+			add = 1
+		}
 		# get artifact modifier
 
 		# should notify YIG/STY  that it is found. - Have event for that Country.
@@ -593,10 +1090,18 @@ nda_nephrenka.32 = {
 
 	duration =3 
 
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
 	# called event? Occurs once it is shipped out.
 	trigger = {
 		#has_country_modifier = egyptian_excavations
-		#has_variable = nda_tomb_nitocris_found
+		#has_variable = nda_nephrenka_tomb_nitocris
 		# 		NOT = { has_country_modifier = artifact_nitocris_mirror }
 	}
 
@@ -617,39 +1122,7 @@ nda_nephrenka.32 = {
 }
 
 
-# Expedition Fail
-nda_nephrenka.50 = { 
-	type = country_event
-	placement = ROOT
-	title = nda_nephrenka.50.t
-	desc = nda_nephrenka.50.d
-	flavor =  nda_nephrenka.50.f
-	dlc = dlc_NDA
 
-	duration =3 
-
-	# called event? Occurs once it is shipped out.
-	trigger = {
-		#has_country_modifier = egyptian_excavations
-		#has_variable = nda_tomb_nitocris_found
-		# 		NOT = { has_country_modifier = artifact_nitocris_mirror }
-	}
-
-	immediate = { 
-		# set up country as Cultist if not already
-
-		# start Yigian conversion if it is.  (and not main Cult country)
-	}
-
-	option = { 
-		name = nda_nephrenka.50.a
-		default_option = yes
-
-		# ai_chance = { # will +ve effect conversion rate
-		# 	base = 80		
-		# }
-	}
-}
 
 # country_event = {
 # 	id = 94052 
@@ -724,11 +1197,23 @@ nda_nephrenka.40 = {
 
 	duration =3 
 
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	trigger = {
+		has_variable = nda_nile_expedition_in_progress	
+		NOT = { has_variable =  nda_nephrenka_delay }
+	}
 
 	weight_multiplier = {
 		base = 0
 		modifier = {
-			has_global_variable = nda_tomb_nitocris_found
+			has_global_variable = nda_nephrenka_tomb_nitocris
 			NOT = { has_global_variable = nda_dark_pyramid_found }
 			add = 2
 		}
@@ -742,8 +1227,8 @@ nda_nephrenka.40 = {
 		name = nda_nephrenka.40.a
 		default_option = yes
 
-		# trigger nda_nephrenka.41
-		p:x7543C8.owner = { trigger_event = { id = nda_nephrenka.41 days=3 } }
+		# trigger nda_nephrenka.41 - owner of a place near Luxor
+		p:xD0D060.owner = { trigger_event = { id = nda_nephrenka.41 days=3 } }
 
 		# ai_chance = { # will +ve effect conversion rate
 		# 	base = 80		
@@ -759,6 +1244,7 @@ nda_nephrenka.40 = {
 			name = nda_nile_expedition_progress
 			value = 8
 		}
+
 		# ai_chance = { # will +ve effect conversion rate
 		# 	base = 80		
 		# }
@@ -777,6 +1263,14 @@ nda_nephrenka.41 = { # Allow the Expedition to continue
 
 	duration =3 
 
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
 	immediate = { 
 
 	}
@@ -790,7 +1284,7 @@ nda_nephrenka.41 = { # Allow the Expedition to continue
 		}
 
 		# notify of permission - should target expedition owner
-		p:x7543C8.owner = { trigger_event = { id = nda_nephrenka.42 days=3 } }
+		c:NEN ?= { trigger_event = { id = nda_nephrenka.42 days=3 } }
 	}
 
 	option = { # Decline.
@@ -803,7 +1297,7 @@ nda_nephrenka.41 = { # Allow the Expedition to continue
 		}
 
 		# notify of decline - should target expedition owner
-		p:x7543C8.owner = { trigger_event = { id = nda_nephrenka.43 days=3 } }
+		c:NEN ?= { trigger_event = { id = nda_nephrenka.43 days=3 } }
 	}
 }
 
@@ -817,8 +1311,22 @@ nda_nephrenka.42 = { # Notification of approval
 
 	duration =3 
 
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
 	immediate = { 
 		# boost progress
+		change_variable = {
+			name = nda_nile_expedition_progress
+			add = 1
+		}
+		# remove delay
+		remove_variable = nda_nephrenka_delay
 	}
 
 	option = { # Hurrah!
@@ -844,6 +1352,14 @@ nda_nephrenka.43 = { # Ignore Disapproval
 
 	duration =3 
 
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+	
 	immediate = { 
 
 	}
@@ -857,14 +1373,29 @@ nda_nephrenka.43 = { # Ignore Disapproval
 		}
 
 		# decrease approval 
+
+		# add to peril
+		change_variable = {
+			name = nda_nile_expedition_peril
+			add = 1
+		}
+
+		# remove delay?
+		remove_variable = nda_nephrenka_delay
+
 	}
 
 	option = { # Quit Expedition.
 		name = nda_nephrenka.43.b
-		default_option = yes
 
 		ai_chance = {
 			base = 50					
+		}
+
+		# close off journal
+		change_variable = {
+			name = nda_nile_expedition_peril
+			add = 8
 		}
 	}
 }
@@ -919,6 +1450,62 @@ nda_nephrenka.43 = { # Ignore Disapproval
 # }
 
 # #Dark Pyramid Found
+nda_nephrenka.50 = { 
+	type = country_event
+	placement = ROOT # need to choose location for Pyramid
+	title = nda_nephrenka.50.t
+	desc = nda_nephrenka.50.d
+	flavor =  nda_nephrenka.50.f
+	dlc = dlc_NDA
+
+	duration =3 
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	trigger = {
+		#has_country_modifier = egyptian_excavations
+		has_variable = nda_nile_expedition_in_progress	
+		NOT = { has_global_variable = nda_nephrenka_tomb_nitocris }
+		NOT = { has_variable = nda_nephrenka_delay }
+	}
+
+	weight_multiplier = { # should only be found the once
+		base = 1
+		modifier = {
+			NOT = { has_global_variable = nda_nephrenka_tomb_nitocris }
+			add = -1
+		}
+		modifier = {
+			has_global_variable = nda_nephrenka_pyramid_found
+			add = -1
+		}
+	}
+
+	immediate = { 
+		set_global_variable = nda_nephrenka_pyramid_found 
+		set_variable = nda_nephrenka_pyramid_found 
+
+		# get prestige boost
+
+		# should start path to YIG/STY in country it is found in. - Have event for that Country.
+	}
+
+	option = { 
+		name = nda_nephrenka.50.a
+		default_option = yes
+
+		# ai_chance = { # will +ve effect conversion rate
+		# 	base = 80		
+		# }
+	}
+}
+
 # country_event = {
 # 	id = 94058 
 # 	title = "EVTNAME94058"
@@ -950,6 +1537,60 @@ nda_nephrenka.43 = { # Ignore Disapproval
 # }
 
 # #Book of Thoth Found
+nda_nephrenka.51 = { 
+	type = country_event
+	placement = ROOT # need to choose location for Pyramid
+	title = nda_nephrenka.51.t
+	desc = nda_nephrenka.51.d
+	flavor =  nda_nephrenka.51.f
+	dlc = dlc_NDA
+
+	duration =3 
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	trigger = {
+		#has_country_modifier = egyptian_excavations
+		has_variable = nda_nile_expedition_in_progress	
+		has_variable = nda_nephrenka_pyramid_found 
+		NOT = { has_global_variable = nda_nephrenka_tomb_nitocris }
+		NOT = { has_variable =  nda_nephrenka_delay }
+	}
+
+	# weight_multiplier = { # should only be found the once
+	# 	base = 1
+	# 	modifier = {
+	# 		NOT = { has_global_variable = nda_nephrenka_tomb_nitocris }
+	# 		add = -1
+	# 	}
+	# 	modifier = {
+	# 		NOT = { has_global_variable = nda_nephrenka_pyramid_found }
+	# 		add = -1
+	# 	}
+	# }
+
+	immediate = { 
+		set_global_variable = nda_nephrenka_tomb_nitocris 
+		set_variable = nda_nephrenka_tomb_nitocris 
+
+	}
+
+	option = { 
+		name = nda_nephrenka.51.a
+		default_option = yes
+
+		# ai_chance = { # will +ve effect conversion rate
+		# 	base = 80		
+		# }
+	}
+}
+
 # country_event = {
 # 	id = 94059 
 # 	title = "EVTNAME94059"
@@ -993,3 +1634,41 @@ nda_nephrenka.43 = { # Ignore Disapproval
 # 		} # Mut
 # 	}
 # }
+
+# Expedition Fail
+nda_nephrenka.60 = { 
+	type = country_event
+	placement = ROOT
+	title = nda_nephrenka.60.t
+	desc = nda_nephrenka.60.d
+	flavor =  nda_nephrenka.60.f
+	dlc = dlc_NDA
+
+	duration =3 
+
+	event_image = {
+		video = "africa_desert_expedition"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	# called event? Occurs once it is shipped out.
+	trigger = {
+
+	}
+
+	immediate = { 
+
+	}
+
+	option = { 
+		name = nda_nephrenka.60.a
+		default_option = yes
+
+		# ai_chance = { # will +ve effect conversion rate
+		# 	base = 80		
+		# }
+	}
+}
