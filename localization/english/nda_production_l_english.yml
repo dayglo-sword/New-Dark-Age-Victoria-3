@@ -18,26 +18,27 @@ black_lotus: "Black Lotus Powder"
 trade_route_import_lens_option_black_lotus_tooltip: "Establish a Black Lotus Powder import trade route"
 trade_route_export_lens_option_black_lotus_tooltip: "Establish a Black Lotus Powder export trade roure"
 
-modifier_goods_output_black_lotus_add: "Black Lotus Powder output"
-modifier_goods_output_black_lotus_add_desc: "Black Lotus Powder production output"
-modifier_goods_input_black_lotus_add: "Black Lotus Powder input"
-modifier_goods_input_black_lotus_add_desc: "The amount of Black Lotus Powder consumed"
+goods_output_black_lotus_add: "Black Lotus Powder output"
+goods_output_black_lotus_add_desc: "Black Lotus Powder production output"
+goods_input_black_lotus_add: "Black Lotus Powder input"
+goods_input_black_lotus_add_desc: "The amount of Black Lotus Powder consumed"
 
 vril: "Vril Energy Rods"
 
 trade_route_import_lens_option_vril_tooltip: "Establish a Vril Energy Rod import trade route"
 trade_route_export_lens_option_vril_tooltip: "Establish a Vril Energy Rod export trade route"
 
-modifier_goods_output_vril_add: "Vril Rod output"
-modifier_goods_output_vril_add_desc: "Vril Energy Rod output"
+goods_output_vril_add: "Vril Rod output"
+goods_output_vril_add_desc: "Vril Energy Rod output"
 
-modifier_goods_input_vril_add: "Vril Energy input"
-modifier_goods_input_vril_add_desc: "The amount of Vril Energy Rods consumed"
+goods_input_vril_add: "Vril Energy input"
+goods_input_vril_add_desc: "The amount of Vril Energy Rods consumed"
 
 # company names
 company_nda_bovril: "Bovine Vril Company"
 company_nda_marsh_fishing: "Marsh Fisheries"
 company_nda_curwen_forestry: "Curwen Forestries"
+company_nda_west_chemicals: "West Chemicals"
 
 #combat unit type
 combat_unit_type_leviathan: "Leviathan"

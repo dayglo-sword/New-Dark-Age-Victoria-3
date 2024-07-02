@@ -94,3 +94,8 @@
  notification_nda_lostcity_nameless_city_hidden_tooltip:0 "#header $notification_nda_lostcity_nameless_city_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_nameless_city_hidden_desc$"
  notification_nda_lostcity_nameless_city_hidden_name:1 "Nameless City Disappears"
  notification_nda_lostcity_nameless_city_hidden_desc:1 "The desert has once more swallowed up the [concept_nda_nameless_city]. When will it be uncovered again!"
+
+# Stygian/Yigian
+ notification_nda_nitocris_coronation_tooltip:0 "#header $notification_nda_nitocris_coronation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_nitocris_coronation_desc$"
+ notification_nda_nitocris_coronation_name:1 "From A Mirror"
+ notification_nda_nitocris_coronation_desc:1 "After the ritual sacrifice of [SCOPE.sCharacter('sacrificial_ruler').GetFullName] enabled the Mirror Gate, [SCOPE.sCharacter('scope_nitocris').GetFullName], has returned from the beyond to rule [SCOPE.sC('originator').GetName]"

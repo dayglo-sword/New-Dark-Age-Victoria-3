@@ -1,9 +1,10 @@
-﻿# need to overwrite existing je, as RUS forming ELD causes mass of errors if je already running
+﻿# # need to overwrite existing je, as RUS forming ELD causes mass of errors if je already running
 je_the_eastern_border = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	group = je_group_historical_content
 
+    scripted_button = je_the_eastern_border_treaty_of_aigun
     scripted_button = je_the_eastern_border_treaty_of_beijing
     scripted_button = je_the_eastern_border_russia_chuguchak_protocol
     
@@ -13,8 +14,7 @@ je_the_eastern_border = {
         is_subject = no
     }
       possible = {
-        exists = c:RUS
-        THIS = c:RUS
+		exists = c:RUS
         has_technology_researched = nationalism
         NAND = {
             owns_entire_state_region = STATE_OUTER_MANCHURIA 
@@ -24,18 +24,11 @@ je_the_eastern_border = {
         }
     }
     immediate = {
-        # do not stop journal just because China no longer exists       
         c:CHI ?= {
             save_scope_as = china_scope
         }
-        if = {
-             limit = { 
-                NOT = { exists = scope:china_scope } 
-                exists = c:DGN # most probable power in region (possibly Leng as well?)
-            }
-            c:DGN = {
-                save_scope_as = china_scope
-            }
+        s:STATE_AMUR = {
+            add_claim = c:RUS
         }
         s:STATE_OUTER_MANCHURIA = {
             add_claim = c:RUS
@@ -43,7 +36,7 @@ je_the_eastern_border = {
         s:STATE_JETISY = {
             add_claim = c:RUS
         }
-        s:STATE_TOMSK = {
+        s:STATE_ALTAI = {
             add_claim = c:RUS
         }
         s:STATE_KIRGHIZIA = {
@@ -51,9 +44,10 @@ je_the_eastern_border = {
         }
     }
     complete = {
+        owns_entire_state_region = STATE_AMUR
         owns_entire_state_region = STATE_OUTER_MANCHURIA 
         owns_entire_state_region = STATE_JETISY 
-        owns_entire_state_region = STATE_TOMSK
+        owns_entire_state_region = STATE_ALTAI
         OR = {
             owns_entire_state_region = STATE_KIRGHIZIA
             any_country = {
@@ -66,8 +60,8 @@ je_the_eastern_border = {
         trigger_event = { id = russo_chinese.3 } # The Ruler of the East
     }
 
-    fail = {
-	  NOT = { exists = c:RUS }
+	fail = {
+	  	NOT = { exists = c:RUS }
     }
 
     weight = 1000

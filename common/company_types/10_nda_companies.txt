@@ -75,6 +75,7 @@ company_nda_marsh_fishing = {
 
 	possible = { 
 		any_scope_state = {
+			state_region = s:STATE_NEW_HAMPSHIRE
 			any_scope_building = {
 				OR = {
 					is_building_type = building_fishing_wharf
@@ -117,6 +118,7 @@ company_nda_curwen_forestry = {
 	
 	possible = { 
 		any_scope_state = {
+			state_region = s:STATE_NEW_HAMPSHIRE
 			any_scope_building = {
 				OR = {
 					is_building_type = building_logging_camp
@@ -129,6 +131,46 @@ company_nda_curwen_forestry = {
 	prosperity_modifier = {
 		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 20
+	}
+
+	ai_weight = {
+		value = 5 # Higher base value for mod companies!!
+	}
+}
+
+company_nda_west_chemicals = {
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_chemical_plants
+		building_synthetics_plants
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			country_has_primary_culture = cu:nda_cul_trueyankee
+		}
+	}
+
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_NEW_HAMPSHIRE
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_chemical_plants
+					is_building_type = building_synthetics_plants
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_supply_consumption_mult = -0.10
 	}
 
 	ai_weight = {

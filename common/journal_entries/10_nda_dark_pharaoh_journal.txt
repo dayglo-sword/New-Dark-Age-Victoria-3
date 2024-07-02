@@ -3,16 +3,18 @@
 
 	group = je_group_expeditions
 
-	is_shown_when_inactive = {
-		c:NEN ?= ROOT
-		#is_cultist_country = no
-		NOT = { has_variable = je_nda_nile_expedition_completed }
-	}
+	# is_shown_when_inactive = {
+	# 	c:NEN ?= ROOT
+	# 	#is_cultist_country = no
+	# 	NOT = { has_variable = je_nda_nile_expedition_completed }
+	# 	has_variable = nda_trapezohedron_revealed # after Starry Wisdom
+	# 	game_date >= 1879.3 
+	# }
 
-	possible = {
-		c:NEN ?= ROOT
+	# possible = {
+	# 	c:NEN ?= ROOT
 
-	}	
+	# }	
 
 	immediate = {
 		
@@ -83,6 +85,10 @@
 			}
 			remove_variable = nda_nile_expedition_leader_var
 		}
+
+		remove_variable = nda_nile_expedition_cheap
+		remove_variable = nda_nile_expedition_funded
+		remove_variable = nda_nile_expedition_well_funded
 	}
 
 	current_value = {
@@ -105,7 +111,17 @@
 	on_complete = {
 		set_variable = je_nda_nile_expedition_completed
 
+		random_scope_character = {
+			limit = {
+				has_variable = nda_nile_expedition_leader_var
+			}
+			remove_variable = nda_nile_expedition_leader_var
+		}
 
+		
+		remove_variable = nda_nile_expedition_cheap
+		remove_variable = nda_nile_expedition_funded
+		remove_variable = nda_nile_expedition_well_funded
 	}
 
 	

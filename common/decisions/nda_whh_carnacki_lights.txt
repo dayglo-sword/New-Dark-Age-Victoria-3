@@ -1,6 +1,6 @@
 ﻿nda_whh_carnacki_lights = { # The pay-off of Carnacki's research!
 	is_shown = {
- 		has_global_variable = nda_carnacki_successful
+ 		has_variable = nda_carnacki_successful
 		NOT = { has_variable = nda_carnacki_lights }
 	}
 

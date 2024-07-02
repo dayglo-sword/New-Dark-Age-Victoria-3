@@ -2,24 +2,15 @@
 building_nda_miskatonic_university = {
 	building_group = bg_technology
 	texture = "gfx/interface/icons/building_icons/building_university.dds"
-	#expandable = no
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
 	buildable = no
 	downsizeable = no
 	unique = yes
-	#locator = "forbidden_city_locator"
 
 	city_type = city
 
 	levels_per_mesh = 5
-	
-	#entity_not_constructed = { }
-	#entity_under_construction = { "building_construction_3x3_entity" }
-	#entity_constructed = { "wonder_forbidden_city_01_entity"}
-	
-	#city_gfx_interactions = {
-	#	clear_size_area = yes
-	#	size = 4
-	#}
 
 	unlocking_technologies = {
 		academia
@@ -28,29 +19,14 @@ building_nda_miskatonic_university = {
 	production_method_groups = {
 		pmg_base_building_university
 		pmg_university_academia
+		pmg_principle_freedom_of_movement_3
 		pmg_nda_esoteric_academia
 		# special occult one?
 	}
 
-
-	#can_build = {
-	#	error_check = {
-	#		severity = fail
-	#		this = {
-	#			state_region = s:STATE_NEW_HAMPSHIRE
-	#		}
-	#	}
-	#}
-
 	possible = {
-		error_check = {
-			severity = invalid
-			this = {
-				state_region = s:STATE_NEW_HAMPSHIRE
-				#owner = {
-				#	has_global_variable = nda_miskatonic_library				
-				#}				
-			}
+		this = {
+			state_region = s:STATE_NEW_HAMPSHIRE			
 		}
 	}
 
@@ -62,6 +38,8 @@ building_nda_miskatonic_university = {
 building_nda_lostcity_rlyeh = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
 	expandable = no
 	buildable = no
 	downsizeable = no
@@ -86,6 +64,8 @@ building_nda_lostcity_rlyeh = {
 building_nda_lostcity_knyan = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
 	expandable = no
 	buildable = no
 	downsizeable = no
@@ -111,6 +91,8 @@ building_nda_lostcity_knyan = {
 building_nda_lostcity_yhanthlei = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
 	expandable = no
 	buildable = no
 	downsizeable = no
@@ -136,6 +118,8 @@ building_nda_lostcity_yhanthlei = {
 building_nda_lostcity_shamballa = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
 	expandable = no
 	buildable = no
 	downsizeable = no
@@ -161,6 +145,8 @@ building_nda_lostcity_shamballa = {
 building_nda_lostcity_nameless_city = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+	
 	expandable = no
 	buildable = no
 	downsizeable = no

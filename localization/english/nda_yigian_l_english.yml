@@ -20,7 +20,7 @@ nda_yigian.11.a: "No, We will not stop the sales."
 nda_yigian.11.b: "If they insist."
 
 nda_yigian.1892.t: "The Mirror Found"
-nda_yigian.1892.d: "The ancient artifact, the Mirror of Nitocris, has been found and is in the possesion of XXX.\n\nHaving this artifact in their possesion is an insult to our cause."
+nda_yigian.1892.d: "The ancient artifact, the Mirror of Nitocris, has been found and is in the possesion of [SCOPE.sC('mirror_owner').GetName ].\n\nHaving this great artifact of [Concept('concept_nda_stygia','$STY_ADJ$')] power in their possesion is an insult to our cause."
 nda_yigian.1892.f: ""
 nda_yigian.1892.a: "It is lost to us."
 nda_yigian.1892.b: "Demand its return!"
@@ -29,15 +29,15 @@ nda_yigian.1892.b_b_tt: ""
 nda_yigian.1892.c: "Demand its return!"
 
 nda_yigian.1893.t: "A demand for the Mirror"
-nda_yigian.1893.d: "Diplomats from Yigian Lands have asked for the recently discovered Mirror of Nitocris be tranfered into their keeping.\n\nThey clain that it is a long lost artifact of their culture dating back into prehistory and the land of [concept_nda_stygia] itself."
+nda_yigian.1893.d: "Diplomats from Yigian Lands have asked for the recently discovered Mirror of Nitocris be tranfered into their keeping.\n\nThey claim that it is a long lost artifact of their culture dating back into prehistory and the mythic land of [concept_nda_stygia] itself."
 nda_yigian.1893.f: ""
 nda_yigian.1893.a: "Accept the demand."
 nda_yigian.1893.b: "The impertinence!"
 
 nda_yigian.1894.t: "Return of the Queen"
-nda_yigian.1894.d: "In an elaborate cerimony held in front of thousands in the capital,  the recently aquired Mirror of Nitocris was displayed for all to see.\n\nWhat was unexpected was the surface of the mirror seeminly becoming fluid and a silver tendril appearing to drag xx in to it.\n\nThen from the shimmer of the mirror out stepped a female attired in the clothing and regalia of ancient [concept_nda_stygia].\n\nQueen Nitocris has returned to lead the snake peoples to glory!"
+nda_yigian.1894.d: "In an elaborate cerimony held in front of thousands in the capital, the recently aquired Mirror of Nitocris was displayed for all to see.\n\nWhat was unexpected was the surface of the mirror seeminly becoming fluid and a silver tendril appearing to drag [SCOPE.sCharacter('sacrificial_ruler').GetFullName] in to it.\n\nThen from the shimmer of the mirror out stepped a female attired in the clothing and regalia of ancient [concept_nda_stygia].\n\nQueen Nitocris has returned to lead the snake peoples to glory!"
 nda_yigian.1894.f: ""
-nda_yigian.1894.a: "Hail  Nitocris!"
+nda_yigian.1894.a: "Hail Nitocris!"
 
 ## triggers
 is_potentially_yigian: "The ancestrial lands of the worshipers of [concept_nda_yig]."

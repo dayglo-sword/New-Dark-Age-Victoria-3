@@ -1,0 +1,40 @@
+﻿goods_output_vril_add = {
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_output_black_lotus_add = {
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_vril_add = {
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}	
+}
+
+goods_input_black_lotus_add = {
+	decimals=1
+	color=bad
+	game_data={
+		ai_value=0
+	}
+}
+
+interest_group_ig_nda_cult_worshippers_pol_str_mult = {
+	decimals=0
+	color=neutral
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

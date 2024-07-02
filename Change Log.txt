@@ -13,7 +13,8 @@ New New England companies 'Marsh Fisheries', 'Curwen Forestries'
 
 Bug Fixes
 Correct King in Yellow notification header.
-
+Add tooltip for 'Tonic' mobilisation option.
+Fix the Carnacki Lights decision.
 
 ------
 

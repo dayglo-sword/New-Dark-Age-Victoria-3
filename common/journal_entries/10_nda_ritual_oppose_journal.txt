@@ -8,11 +8,12 @@
 		OR = {
 			is_player = yes
 			c:NEN ?= THIS
-		}
+		}		
+		has_global_variable = je_nda_ritual_proceeds_tracker # ritual has started
 		has_cult_culture = no
 		exists = c:ELD
 		NOT = { has_global_variable = nda_ritual_completed  }
-		has_global_variable = je_nda_ritual_proceeds_tracker # ritual has started
+
 	}
 
 	possible = {

@@ -1,10 +1,46 @@
-﻿special_genes = {
+﻿# override existing eye accessories
+
+# accessory_genes = {
+# 	eye_accessory = {
+# 		inheritable = no
+
+# 		serpent_eyes = {
+# 			index = 0
+# 			# male = {	1 = "male_eyes_normal"		}
+# 			female = {	1 = "female_eyes_normal"	}
+# 			male = {	1 = "nda_serpent_eyes_male"		}
+# 			#female = {	1 = "nda_serpent_eyes_female"	}
+# 			boy = male
+# 			girl = female			
+# 		}		
+
+# 		normal_normal_eyes = {
+# 			index = 2
+# 			male = {	1 = "male_eyes_normal"		}
+# 			female = {	1 = "female_eyes_normal"	}
+# 			boy = male
+# 			girl = female
+# 		}
+
+# 		no_eyes = {
+# 			index = 1
+# 			male = {}
+# 			female = {}
+# 			boy = male
+# 			girl = female
+# 		}
+
+
+# 	}
+# }
+
+special_genes = {
 	accessory_genes = {
-	#####################################
-	#									#
-	# 		   CULTIST TOP LAYER		#
-	#									#
-	#####################################
+		#####################################
+		#									#
+		# 		   CULTIST TOP LAYER		#
+		#									#
+		#####################################
 
 		nda_top_layer = {
 			inheritable = no
@@ -81,14 +117,14 @@
 			} 
 		}
 
-	#####################################
-	#									#
-	# 			CULTIST HEADGEAR		#
-	#									#
-	#####################################
+		#####################################
+		#									#
+		# 			CULTIST HEADGEAR		#
+		#									#
+		#####################################
 
 		nda_headgear = {
-			inheritable = no		
+			#inheritable = no		
 
 			no_headgear = {
 				index = 1
@@ -101,7 +137,7 @@
 			}
 
 			cultist_mask_headgear = {
-				index = 110
+				index = 2
 				male = {
 					1 = cultist_headgear_mask
 				}
@@ -114,7 +150,7 @@
 			}
 
 			cultist_mask_headgear_eldritch = {
-				index = 100
+				index = 3 
 				male = {
 					1 = cultist_headgear_mask_eldritch
 				}
@@ -127,7 +163,7 @@
 			}
 
 			cultist_mask_headgear_yigian = {
-				index = 101
+				index = 4
 				male = {
 					1 = cultist_headgear_mask_yigian
 				}
@@ -140,7 +176,7 @@
 			}
 
 			cultist_mask_headgear_dagonic = {
-				index = 102
+				index = 5
 				male = {
 					1 = cultist_headgear_mask_dagonic
 				}
@@ -152,7 +188,299 @@
 				girl = female
 			}
 
+			egyptian_headgear_high = {
+				index = 6
+				male = {
+					1 = male_headgear_egyptian_nemes_high
+					
+				}
+				female = {
+					1 = female_headgear_egyptian_nemes_high
+					
+				}
+				boy = male
+				girl = female
+			}
 		}
 
+
+		#####################################
+		#									#
+		# 			  STYGIAN 			    #
+		#									#
+		#####################################
+	
+		nda_headgear_2 = {
+			no_headgear = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			stygian_pharaoh = {
+				index = 1
+				male = {
+					10 = male_headgear_egyptian_false_beard
+				}
+				female = {
+					10 = female_headgear_egyptian_false_beard
+				}
+				boy = male
+				girl = female
+			}
+		}
+		
+		nda_headgear_3 = {
+			no_headgear = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			stygian_pharaoh = {
+				index = 1
+				male = {
+					10 = male_headgear_egyptian_uraeus
+				}
+				female = {
+					10 = male_headgear_egyptian_uraeus
+				}
+				boy = male
+				girl = female
+			}
+		}
+		
+		nda_jewelery = {
+			no_jewelery = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			stygian_pharaoh = {
+				index = 1
+				male = {
+					10 = egyptian_bracelets
+				}
+				female = {
+					10 = egyptian_bracelets_female
+				}
+				boy = male
+				girl = female
+			}
+		}
+
+		nda_collar = {
+			no_collar = {
+				index = 0
+				male = {
+					1 = empty
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			stygian_pharaoh = {
+				index = 1
+				male = {
+					10 = male_clothes_egyptian_usekh_high
+				}
+				female = {
+					10 = empty
+				}
+				boy = male
+				girl = female
+			}			
+		}
+
+		# nda_clothes = {
+		# 	no_clothes = {
+		# 		index = 0
+		# 		male = {
+		# 			1 = empty
+		# 		}		   
+		# 		female = male
+		# 		boy = male
+		# 		girl = male
+		# 	}
+		# 	stygian_shirt_common = {
+		# 		index = 1
+		# 		male = {
+		# 			10 = male_clothes_egyptian_shirt_common
+		# 		}
+		# 		female = {
+		# 			10 = empty
+		# 		}
+		# 		boy = male
+		# 		girl = female
+		# 	}	
+		# 	stygian_shirt_high = {
+		# 		index = 2
+		# 		male = {
+		# 			10 = male_clothes_egyptian_shirt_high
+		# 		}
+		# 		female = {
+		# 			10 = empty
+		# 		}
+		# 		boy = male
+		# 		girl = female
+		# 	}			
+		# }
+		# # eyes
+		# nda_eye_types = {
+		# 	normal = {
+		# 		index = 0
+		# 		male = {
+		# 			1 = empty
+		# 		}		   
+		# 		female = male
+		# 		boy = male
+		# 		girl = male				
+		# 	}
+
+		# 	serpentine = { # Yigian and Stygian
+		# 		index = 1
+		# 		male = {
+		# 			1 = nda_serpent_eyes_male
+		# 		}		   
+		# 		female = {
+		# 			1 = nda_serpent_eyes_female
+		# 		}
+		# 		boy = male
+		# 		girl = female	
+					
+		# 	}
+		# }
 	}
+
+	morph_genes = {
+		
+		#####################################
+		#									#
+		# 	 	STYGIAN MAKEUP 			    #
+		#									#
+		#####################################
+		nda_cosmetics_eyeliner = {
+			no_cosmetics = {
+				index = 0
+				male = {
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			stygian = {
+				index = 1
+				male = {
+					decal = {											
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cosmetics/decal_eyeliner_stygian_diffuse.dds"
+							properties = "gfx/models/portraits/decals/cosmetics/decal_eyeliner_stygian_properties.dds"
+							
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = replace
+							# normal = overlay
+							properties = replace
+						}
+						priority = 2
+					}
+
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+		}
+			
+		nda_cosmetics_eyeshadow = {
+			no_cosmetics = {
+				index = 0
+				male = {
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			stygian = {
+				index = 1
+				male = {
+					decal = {											
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cosmetics/decal_eyeshadow_stygian_diffuse.dds"
+							properties = "gfx/models/portraits/decals/cosmetics/decal_eyeshadow_stygian_properties.dds"
+							#diffuse = "gfx/models/portraits/decals/cosmetics/decal_eyes_stygian_diffuse.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = replace
+							# normal = overlay
+							properties = replace
+						}
+						priority = 3
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+		}
+			
+		nda_cosmetics_lipcolor = {
+			no_cosmetics = {
+				index = 0
+				male = {
+				}		   
+				female = male
+				boy = male
+				girl = male
+			}
+
+			stygian = {
+				index = 1
+				male = {
+					decal = {											
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/cosmetics/decal_lipcolor_stygian_diffuse.dds"
+							properties = "gfx/models/portraits/decals/cosmetics/decal_lipcolor_stygian_properties.dds"
+							
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = replace
+							# normal = overlay
+							properties = replace
+						}
+						priority = 4
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+		}
+
+
+	}
+	
 }
+

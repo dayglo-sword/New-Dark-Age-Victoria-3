@@ -23,7 +23,7 @@ nda_first_yig_cult = {
 
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
-	notification_type = feed #toast
+	notification_type = toast
  
 }
 

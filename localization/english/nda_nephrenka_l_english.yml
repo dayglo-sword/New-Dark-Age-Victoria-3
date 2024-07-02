@@ -18,9 +18,9 @@ nda_nephrenka.10.c: "What can we do?"
 
 nda_nephrenka.15.t: "Cultist on the Nile?!"
 nda_nephrenka.15.d: "It would appear that all the recent excavations in this area has uncovered evidence of ancient religions that predate even the Pharaohs.\n\nRumours have it that some people within [SCOPE.sC('target_country').GetName] have started following 'the old ways' of lost [concept_nda_stygia] again."
-nda_nephrenka.15.f: ""
+nda_nephrenka.15.f: "...this was a black land of sorcery and nameless horror. [Concept('concept_nda_yig','$concept_nda_yig_set$')] the Old Serpent, men said, banished long ago from the Hyborian races, yet lurked in the shadows of the cryptic temples, and awful and mysterious were the deeds done in the nighted shrines..."
 nda_nephrenka.15.a: "No need to stop this."
-nda_nephrenka.15.b: "We must surpress it!"
+nda_nephrenka.15.b: "We must suppress it!"
 nda_nephrenka.15.c: "Nothing we can we do?"
 
 nda_nephrenka.20.t: "A Proposed Expedition!"

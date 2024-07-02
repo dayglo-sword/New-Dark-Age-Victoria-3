@@ -1,0 +1,44 @@
+﻿#####################################
+#									#
+# 			Male					#
+#									#
+#####################################
+
+male_eyes_normal = {
+	entity = { entity = "male_eyes_entity"  	shared_pose_entity = head } 
+}	
+
+male_eyelashes = {
+	entity = { entity = "male_eyelashes_entity"		shared_pose_entity = head }
+}
+
+male_teeth = {
+	entity = { entity = "male_teeth_entity"		shared_pose_entity = head }
+}
+
+#####################################
+#									#
+# 			Female					#
+#									#
+#####################################
+
+female_eyes_normal = {
+	entity = { entity = "female_eyes_entity" 	shared_pose_entity = head }
+}
+
+female_eyelashes = {
+	entity = { entity = "female_eyelashes_entity"		shared_pose_entity = head }
+}
+
+female_teeth = {
+	entity = { entity = "female_teeth_entity"		shared_pose_entity = head }
+}
+
+# # Serpent Eyes - Stygian and Yigian
+# nda_serpent_eyes_female = {
+# 	entity = { entity =  "female_eyes_entity" shared_pose_entity = head 	} # "nda_serpent_eyes_female_entity"
+# }
+
+# nda_serpent_eyes_male = {
+# 	entity = { entity = "male_eyes_entity"  shared_pose_entity = head } #"nda_serpent_eyes_male_entity" "male_eyes_entity"
+# }

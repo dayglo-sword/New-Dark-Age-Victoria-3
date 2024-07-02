@@ -1,4 +1,8 @@
 ﻿nda_oppose_cult_spread = {
+	groups= {
+		general
+	}
+	
 	requires_approval = no
 	show_confirmation_box = no
 

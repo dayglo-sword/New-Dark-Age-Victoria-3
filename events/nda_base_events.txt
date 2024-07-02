@@ -287,7 +287,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 					EXISTS = c:RUS # RUS is forming ELD far too frequent - Try Nerf by delaying spread - TODO? base on lit rate not just country?
 					c:RUS = THIS					
 				}
-				add = 65
+				add = 195
 			}
 		}
 
@@ -513,8 +513,9 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 			add_primary_culture = cu:nda_cul_cultist # Adding Culture allows for Leaders of Culture despite no pop present!
 			# set country states as homeland, convert % of pops to religion?
 			every_scope_state = {
-				state_region = {
-					add_homeland = cu:nda_cul_cultist
+				limit = { NOT = { has_state_trait = state_trait_siberian_terrain } } # do for non-arctic trait states only to try and throttle back Russia cult domination		
+				state_region = {					
+					add_homeland = cu:nda_cul_cultist				
 				}
 
 				if = { limit = { is_capital = yes }  # boost in capital
@@ -787,11 +788,11 @@ nda_base.10 = { # Notifications that the Eldritch Realms hs formed
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger = {
+		NOT = { has_global_variable = nda_eldritch_realm_founded } 		
 		AND = {
 				exists = c:ELD
 				c:ELD = ROOT
 		}
-		NOT = { has_global_variable = nda_eldritch_realm_founded} 
 	}
 
 	immediate = {
@@ -955,10 +956,11 @@ nda_base.13 = { # The Cult fails to spread
 					limit = { has_trait = nda_master }
 					add = 3
 				}
-				if = {
+				else_if = {
 					limit = { has_trait = nda_acolyte }
 					add = 1
 				}
+
 				if = {
 					limit = {
 						interest_group = { is_powerful = yes }							
@@ -1213,7 +1215,7 @@ nda_base.20 = { # Request from the devout
 
 		AND = {
 			has_journal_entry = je_nda_cult_spreads
-			var:nda_cult_spread_tracker > 5 # Don't do immediate pop-up			
+			var:nda_cult_spread_tracker > 10 # Don't do immediate pop-up			
 		}
 
 		any_interest_group = { # from devout only

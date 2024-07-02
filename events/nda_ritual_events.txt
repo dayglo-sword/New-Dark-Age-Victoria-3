@@ -52,6 +52,7 @@ nda_ritual.1924 = { # Cthulhu Return - 1925 already used below
 					# state level
 					create_building={
 						building="building_nda_lostcity_rlyeh" 
+						level=1
 					}	
 
 					set_global_variable = nda_lostcity_rlyeh_exists								
@@ -224,6 +225,7 @@ nda_ritual.1890 = { # Cthulhu Early Return
 					# state level
 					create_building={
 						building="building_nda_lostcity_rlyeh" 
+						level = 1
 					}	
 
 					set_global_variable = nda_lostcity_rlyeh_exists								

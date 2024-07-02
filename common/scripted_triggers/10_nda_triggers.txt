@@ -270,3 +270,15 @@ nda_coa_def_dagonic_trigger = {
     # 	has_discrimination_trait = eldritch_culture_group
     # }
 }
+
+
+# OVERWRITE - Power Bloc conditions
+country_can_form_power_bloc = {
+	AND = {
+		is_revolutionary = no
+		OR = {
+			country_rank >= rank_value:major_power	
+			is_full_cult_country = { COUNTRY="THIS" }						
+		}
+	}	
+}

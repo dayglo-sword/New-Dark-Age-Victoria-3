@@ -1,0 +1,163 @@
+﻿###################
+#	Texture sets  #
+##################
+
+pattern_textures = {
+	name = "egyptian_jewelry"
+	colormask	= "gfx/portraits/accessory_variations/textures/patterns/jewelry/egyptian_jewelry_masks.dds"
+	normal		= "gfx/portraits/accessory_variations/textures/patterns/jewelry/egyptian_jewelry_normal.dds"
+	properties	= "gfx/portraits/accessory_variations/textures/patterns/jewelry/egyptian_jewelry_properties.dds"
+}
+
+
+pattern_textures = {
+	name = "egyptian_linen_plain_01" # same  as 'generic_wool_standard_plain_01'
+	colormask	= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_cotton_standard_fine_01_masks.dds"
+	normal		= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_cotton_standard_fine_01_normal.dds"
+	properties	= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_cotton_standard_fine_01_properties.dds"
+}
+
+pattern_textures = {
+	name = "egyptian_linen_fine_plain_01" # same as 'generic_cotton_standard_fine_01'
+	colormask	= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_cotton_standard_fine_01_masks.dds"
+	normal		= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_cotton_standard_fine_01_normal.dds"
+	properties	= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_cotton_standard_fine_01_properties.dds"
+}
+
+pattern_textures = {
+	name = "egyptian_silk_plain_01" # same as  'generic_silk_standard_plain_01'
+	colormask	= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_silk_standard_plain_01_masks.dds"
+	normal		= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_silk_standard_plain_01_normal.dds"
+	properties	= "gfx/portraits/accessory_variations/textures/patterns/generic/generic_silk_standard_plain_01_properties.dds"
+}
+
+###################
+#	Variations		#
+##################
+
+variation = {
+	name = "egyptian_nemes_high"
+	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_fine_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "generic_silk_standard_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_fine_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	pattern = { 
+		weight = 1
+		r = { textures = "generic_silk_standard_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_fine_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_egyptian_pharaoh_nemes.dds" }	
+}
+
+
+variation = {
+	name = "egyptian_jewelry_high"
+	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_jewelry" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_jewelry" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_jewelry" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_jewelry"	layout = "plain_fabric_layout" }
+	}	
+	
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_egyptian_pharaoh_jewelry.dds" }	
+}
+
+variation = {
+	name = "egyptian_clothing_common"
+	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_linen_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_plain_01"	layout = "plain_fabric_layout" }
+	}
+	
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_egyptian_clothes_common.dds" }	
+}
+
+variation = {
+	name = "egyptian_clothing_low"
+	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_fine_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_silk_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_fine_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_silk_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_silk_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_fine_plain_01"	layout = "plain_fabric_layout" }
+	}
+	
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_egyptian_pharaoh_shendyt.dds" }	
+}
+
+variation = {
+	name = "egyptian_clothing_high"
+	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_linen_fine_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_silk_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_silk_plain_01"	layout = "plain_fabric_layout" }
+	}	
+	pattern = { 
+		weight = 1
+		r = { textures = "egyptian_linen_fine_plain_01" layout = "plain_fabric_layout" }
+		g = { textures = "egyptian_silk_plain_01" layout = "plain_fabric_layout" }
+		b = { textures = "egyptian_silk_plain_01" layout = "plain_fabric_layout" }
+		a = { textures = "egyptian_silk_plain_01"	layout = "plain_fabric_layout" }
+	}
+	
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_egyptian_pharaoh_shendyt.dds" }	
+}
