@@ -1,0 +1,68 @@
+﻿
+#ecchi_gbr_conan_doyle_character_template = {
+#    first_name = Arthur
+#    last_name = ecchi_Conan_Doyle
+#    culture = cu:scottish
+#    female = no
+#    religion = protestant
+#    ideology = ideology_royalist
+#    interest_group = ig_intelligentsia
+#	dna = ecchi_dna_arthur_conan_doyle
+#    birth_date = 1859.5.22
+#    traits = { meticulous persistent cautious }
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            OR = {
+#                AND = {
+#                    exists = c:GBR
+#                    this = c:GBR
+#                    NOT = { exists = c:SCO }
+#                }
+#                AND = {
+#                    exists = c:SCO
+#                    this = c:SCO
+#                }
+#            }
+#        }
+#        interest_group_trigger = {
+#            is_interest_group_type = ig_intelligentsia
+#        }
+#        earliest_usage_date = 1890.1.1
+#        latest_usage_date = 1930.7.7
+#        chance = 90
+#    }
+#}
+
+nda_nephren_ka_character_template = {
+	first_name = Pharaoh
+	last_name = nephren-ka
+    culture = cu:nda_cul_yigian
+    female = no
+    religion = yigian
+    ideology = ideology_reformer
+    interest_group = ig:ig_nda_cult_worshippers
+	dna = nda_dna_nephren_ka
+    #birth_date = 1812.2.7
+    traits = { 
+		literary
+		inspirational_orator
+	}
+	#is_agitator = yes # add only if available
+}
+
+nda_nitocris_character_template = {
+	first_name = Queen
+	last_name = nitocris
+    culture = cu:nda_cul_yigian
+    female = yes
+    religion = yigian
+    ideology = ideology_reformer
+    interest_group = ig:ig_nda_cult_worshippers
+	dna = nda_dna_nephren_ka
+    #birth_date = 1812.2.7
+    traits = { 
+		literary
+		inspirational_orator
+	}
+	#is_agitator = yes # add only if available
+}

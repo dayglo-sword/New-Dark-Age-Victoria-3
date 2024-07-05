@@ -1,8 +1,31 @@
+Version v1.7
+
+Major Changes
+v1.7 and SOI compatability
+Add Diplomatic Action to 'Oppose the Cult'
+Change Diplomatic Actions so Cultist support each other.
+Expand 'Trapezohedron' events to Mi-Go and Hasturians.
+Youthfulness for Cult Masters and certain other characters.
+Archeological Expedition to Nile.
+
+Minor Changes
+Hasturian America must have capital in Americas.
+New New England companies 'Marsh Fisheries', 'Curwen Forestries', 'West Chemicals'
+
+Bug Fixes
+Correct King in Yellow notification header.
+Add tooltip for 'Tonic' mobilisation option.
+Fix the Carnacki Lights decision.
+
+------
+
 Version v1.6.2.1
 
 Bug Fixes
 Reconciliation Counter Fix
 Minor Spelling Corrections.
+
+------
 
 Version v1.6.2
 

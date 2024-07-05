@@ -207,8 +207,16 @@ popneed_intoxicants = {
 	
 	entry = {
 		goods = opium
+		 
+		weight = 1.5
+		max_supply_share = 0.75
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		goods = wine
 		
-		weight = 1
+		weight = 0.5
 		max_supply_share = 0.75
 		min_supply_share = 0.0
 	}
@@ -221,8 +229,6 @@ popneed_intoxicants = {
 		min_supply_share = 0.0
 	}
 }
-
-
 
 #CHANGED
 popneed_luxury_drinks = {
@@ -388,7 +394,7 @@ popneed_luxury_items = {
 		weight = 3
 		max_supply_share = 0.5
 		min_supply_share = 0.0
-	}
+	}	
 }
 
 # CHANGED
@@ -477,6 +483,14 @@ popneed_leisure = {
 
 	entry = {
 		goods = vril
+		
+		weight = 1.5
+		max_supply_share = 0.5
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = black_lotus
 		
 		weight = 1.5
 		max_supply_share = 0.5

@@ -37,6 +37,7 @@ je_nda_eldritch_colonial_administration = {
 	group = je_group_foreign_affairs
 
 	is_shown_when_inactive = {
+		has_global_variable = nda_ritual_cthulhu_leaves
 		country_is_in_africa = no
 		OR = {
 			has_interest_marker_in_region = sr:region_senegal
@@ -48,7 +49,7 @@ je_nda_eldritch_colonial_administration = {
 		}
 		# is cultist break up effect - normally ELD has base colonial_admin je disabled or removed
 		is_full_cult_country = { COUNTRY="ROOT" }	
-		has_global_variable = nda_ritual_cthulhu_leaves
+
 	}
 
 	possible = {

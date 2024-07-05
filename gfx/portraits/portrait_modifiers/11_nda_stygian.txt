@@ -1,0 +1,312 @@
+﻿nda_stygian_clothes = { # do we need this separate to other cultist headgear???
+	usage = game
+	selection_behavior = weighted_random
+	fallback = no_stygian_clothes
+
+    no_stygian_clothes = {
+        # no stuff needed
+    }
+
+    nda_stygian_pharaoh = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = nda_headgear
+				template = egyptian_headgear_high
+				range = { 0 1 } # For the randomness to work correctly
+			}
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = no_headgear # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            # can add other stuff here
+            accessory = {
+                mode = replace
+                gene = outfits
+                template = no_outfit # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            # # remove any cult robes
+            # accessory = {
+            #     mode = replace
+            #     gene = nda_cultist_robe
+            #     template = no_cultist_robe # needed for none strange clipping
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
+
+            accessory = {
+				mode = add
+				gene = nda_jewelery
+				template = stygian_pharaoh
+				range = { 0 1 } # For the randomness to work correctly
+			}
+            
+			accessory = {
+				mode = add
+				gene = nda_headgear_2
+				template = stygian_pharaoh
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = nda_headgear_3
+				template = stygian_pharaoh
+				range = { 0 1 } # For the randomness to work correctly
+			}
+
+            # Cosmetics
+            morph = {
+				mode = add
+				gene = nda_cosmetics_eyeliner
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			morph = {
+				mode = add
+				gene = nda_cosmetics_eyeshadow
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			morph = {
+				mode = add
+				gene = nda_cosmetics_lipcolor
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+                scope:character ?= {
+                    has_variable = is_nephren
+                }
+
+			}
+		}
+	}
+
+    nda_stygian_queen = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = nda_headgear
+				template = egyptian_headgear_high
+				range = { 0 1 } # For the randomness to work correctly
+			}
+            accessory = {
+                mode = replace
+                gene = hairstyles
+                template = no_hairstyles # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = replace
+                gene = headgear
+                template = no_headgear # needed for none strange clipping
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+            # can add other stuff here
+            # accessory = {
+            #     mode = replace
+            #     gene = outfits
+            #     template = no_outfit # needed for none strange clipping
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
+
+            # # remove any cult robes
+            # accessory = {
+            #     mode = replace
+            #     gene = nda_cultist_robe
+            #     template = no_cultist_robe # needed for none strange clipping
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
+
+            accessory = {
+				mode = add
+				gene = nda_jewelery
+				template = stygian_pharaoh
+				range = { 0 1 } # For the randomness to work correctly
+			}
+            
+			accessory = {
+				mode = add
+				gene = nda_headgear_2
+				template = stygian_pharaoh
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = nda_headgear_3
+				template = stygian_pharaoh
+				range = { 0 1 } # For the randomness to work correctly
+			}
+
+            # Cosmetics
+            morph = {
+				mode = add
+				gene = nda_cosmetics_eyeliner
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			morph = {
+				mode = add
+				gene = nda_cosmetics_eyeshadow
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			morph = {
+				mode = add
+				gene = nda_cosmetics_lipcolor
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+                scope:character ?= {
+                    has_variable = is_nitocris
+                }
+
+			}
+		}
+	}
+
+	nda_stygian_cultist = {
+
+		dna_modifiers = {
+			# accessory = {
+			# 	mode = add
+			# 	gene = nda_headgear
+			# 	template = egyptian_headgear_high
+			# 	range = { 0 1 } # For the randomness to work correctly
+			# }
+            # accessory = {
+            #     mode = replace
+            #     gene = hairstyles
+            #     template = no_hairstyles # needed for none strange clipping
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
+            # accessory = {
+            #     mode = replace
+            #     gene = headgear
+            #     template = no_headgear # needed for none strange clipping
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
+
+            # can add other stuff here
+            # accessory = {
+            #     mode = replace
+            #     gene = outfits
+            #     template = no_outfit # needed for none strange clipping
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
+
+            # # remove any cult robes
+            # accessory = {
+            #     mode = replace
+            #     gene = nda_cultist_robe
+            #     template = no_cultist_robe # needed for none strange clipping
+            #     range = { 0 1 } # For the randomness to work correctly
+            # }
+
+            accessory = {
+				mode = add
+				gene = nda_jewelery
+				template = stygian_pharaoh
+				range = { 0 1 } # For the randomness to work correctly
+			}
+            
+			# accessory = {
+			# 	mode = add
+			# 	gene = nda_headgear_2
+			# 	template = stygian_pharaoh
+			# 	range = { 0 1 } # For the randomness to work correctly
+			# }
+			# accessory = {
+			# 	mode = add
+			# 	gene = nda_headgear_3
+			# 	template = stygian_pharaoh
+			# 	range = { 0 1 } # For the randomness to work correctly
+			# }
+
+            # Cosmetics
+            morph = {
+				mode = add
+				gene = nda_cosmetics_eyeliner
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			morph = {
+				mode = add
+				gene = nda_cosmetics_eyeshadow
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			morph = {
+				mode = add
+				gene = nda_cosmetics_lipcolor
+				template = stygian
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+                scope:character ?= {
+                    NOT = { has_variable = is_nitocris }
+					NOT = { has_variable = is_nephren }
+					religion = rel:nda_rel_yigian
+                }
+			}
+		}
+	}
+}
+
+# nda_eyes = {
+# 	usage = game
+# 	selection_behavior = weighted_random
+# 	fallback = nda_normal_eyes
+
+# 	nda_normal_eyes = {
+
+# 	}
+
+# 	nda_serpentine_eyes = {
+
+# 		dna_modifiers = {
+# 			accessory = {
+# 				mode = modify				
+# 				gene = eye_accessory
+# 				template = serpent_eyes
+# 				value = 1.0
+# 			}			
+# 		}
+		
+# 		weight = {
+# 			base = 0
+# 			modifier = {
+# 				add = 1000
+# 				scope:character ?= {
+# 					has_variable = is_nephren
+# 				}
+# 			}
+# 		}
+# 	}
+# }

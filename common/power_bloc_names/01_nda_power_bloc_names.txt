@@ -1,0 +1,24 @@
+﻿
+nda_dark_pact = {
+	trigger = {
+		c:ELD ?= this
+	}
+}
+
+nda_union_of_the_snake = {
+	trigger = {
+		c:YIG ?= this
+	}
+}
+
+nda_cetacean_leagues = {
+	trigger = {
+		c:DGN ?= this
+	}
+}
+
+nda_stygian_empire = {
+	trigger = {
+		c:DGN ?= this
+	}
+}

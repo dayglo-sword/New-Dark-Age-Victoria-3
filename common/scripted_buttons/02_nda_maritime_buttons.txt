@@ -74,7 +74,7 @@ je_nda_maritimes_btn_new_brunswick = {
 				country_has_primary_culture = cu:anglo_canadian 
 				NOT = { 
 					THIS = ROOT 
-					THIS = c:NBS
+					c:NBS ?= THIS
 				}
 			}
 			change_relations = { country = ROOT value = -50 }
@@ -174,7 +174,7 @@ je_nda_maritimes_btn_nova_scotia = {
 				country_has_primary_culture = cu:anglo_canadian 
 				NOT = { 
 					THIS = ROOT 
-					THIS = c:NVS
+					c:NVS ?= THIS
 				}
 			}
 			change_relations = { country = ROOT value = -50 }

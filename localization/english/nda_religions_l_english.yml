@@ -2,7 +2,7 @@
   
  nda_rel_cultist:0 "Esoteric Rite"
  nda_yigian:0 "Yigian"
- nda_rel_yigian:0 "Yigian Sect"
+ nda_rel_yigian:0 "Ophiolatry"
  nda_rel_dagonic:0 "Dagonic Sect"
 
  nda_rel_spiritualism:0 "Spiritualist"
@@ -23,8 +23,8 @@
 
 ig_variant_nda_cult_worshippers:0 "[GetInterestGroupVariant('ig_nda_cult_worshippers',GetPlayer).GetNameWithCountryVariant]"
 
-modifier_interest_group_ig_nda_cult_worshippers_pol_str_mult:0 "$ig_variant_nda_cult_worshippers$ [concept_political_strength]"
-modifier_interest_group_ig_nda_cult_worshippers_pol_str_mult_desc:0 "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_nda_cult_worshippers$ [concept_interest_group]"
+interest_group_ig_nda_cult_worshippers_pol_str_mult:0 "$ig_variant_nda_cult_worshippers$ [concept_political_strength]"
+interest_group_ig_nda_cult_worshippers_pol_str_mult_desc:0 "A bonus or penalty to the total [concept_political_strength] of the $ig_variant_nda_cult_worshippers$ [concept_interest_group]"
 
 #alternate names
  ig_nda_cultist_church:0 "High Coven of Cthulhu"

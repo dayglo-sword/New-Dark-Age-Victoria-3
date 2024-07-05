@@ -6,6 +6,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 	title = nda_hasturian.1.t
 	desc = nda_hasturian.1.d
 	flavor =  nda_hasturian.1.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -20,7 +21,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 
 	trigger = {
  		# 1890 and owner of Paris
-		game_date >= 1890 
+		game_date >= 1890.1.1 
 		p:x906000 = { state = { owner = ROOT } }
 
 		NOT = { has_global_variable = nda_king_in_yellow_play_exists }
@@ -87,6 +88,7 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 	title = nda_hasturian.2.t
 	desc = nda_hasturian.2.d
 	flavor =  nda_hasturian.2.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -101,7 +103,7 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 
 	trigger = {
  		# 1891 and not original country
-		game_date >= 1891
+		game_date >= 1891.1.1
 		has_global_variable = nda_king_in_yellow_play_exists
 
 		NOT = { has_variable = nda_king_in_yellow_decision } # don't rerun while decision in progress
@@ -194,6 +196,7 @@ nda_hasturian.3 = { # The Repairer of Reputations
 	title = nda_hasturian.3.t
 	desc = nda_hasturian.3.d
 	flavor =  nda_hasturian.3.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -210,7 +213,7 @@ nda_hasturian.3 = { # The Repairer of Reputations
 	#icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	trigger = { # owns new york - is not full cultist country
-		game_date >= 1892
+		game_date >= 1892.1.1
 		p:xE217B5 = { state = { owner = ROOT } } # New York
 		#has_global_variable = nda_king_in_yellow_play_exists
 		has_variable = nda_king_in_yellow # is not suppressed
@@ -223,6 +226,11 @@ nda_hasturian.3 = { # The Repairer of Reputations
 			is_at_war = no
 		}
 		# capital should be in americas?
+		OR = {
+			country_is_in_north_america = yes
+			country_is_in_central_america = yes
+			country_is_in_south_america = yes
+		}
 	}
 
 	immediate = {
@@ -270,6 +278,7 @@ nda_hasturian.4 = { # The Repairers Offer
 	title = nda_hasturian.4.t
 	desc = nda_hasturian.4.d
 	flavor =  nda_hasturian.4.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -333,6 +342,7 @@ nda_hasturian.5 = { # Create Imperial America
 	title = nda_hasturian.5.t
 	desc = nda_hasturian.5.d
 	flavor =  nda_hasturian.5.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -438,6 +448,7 @@ nda_hasturian.6 = { # Ruination
 	title = nda_hasturian.6.t
 	desc = nda_hasturian.6.d
 	flavor =  nda_hasturian.6.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -506,6 +517,7 @@ nda_hasturian.7 = { #  Death of Mr Wilde.
 	title = nda_hasturian.7.t
 	desc = nda_hasturian.7.d
 	flavor =  nda_hasturian.7.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -540,6 +552,7 @@ nda_hasturian.8 = { #  King in Yellow fades.
 	title = nda_hasturian.8.t
 	desc = nda_hasturian.8.d
 	flavor =  nda_hasturian.8.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -555,8 +568,8 @@ nda_hasturian.8 = { #  King in Yellow fades.
 
 	trigger = { 
 		is_player = yes
-		game_date >= 1899.6
-		game_date < 1900
+		game_date >= 1899.6.1
+		game_date < 1900.12.1
 		has_global_variable = nda_king_in_yellow_play_exists
 		NOT = { 
 			has_global_variable = nda_king_in_yellow 
@@ -584,6 +597,7 @@ nda_hasturian.10 = { # If he dies bring him back.
 	title = nda_hasturian.10.t
 	desc = nda_hasturian.10.d
 	flavor =  nda_hasturian.10.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -657,5 +671,268 @@ nda_hasturian.10 = { # If he dies bring him back.
 	option = { # Bravo!
 		name = nda_hasturian.10.a
 		default_option = yes
+	}
+}
+
+# Knowledge of the Trapezohedron - if Migo not already grabbed it then demand it from owner
+nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) - if in same locale then Mi-Go demands it.
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.1892.t
+	desc =  nda_hasturian.1892.d 	
+	flavor =  nda_hasturian.1892.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger  = {
+		c:IAM ?= ROOT # Hasturian America only
+		game_date >= 1892.1.1	
+		game_date < 1893.3.1
+
+		has_global_variable = nda_trapezohedron_revealed	
+		any_country = { 
+			has_variable = nda_trapezohedron_used 
+			NOT = { c:IAM = THIS }
+		}
+	}
+
+	cooldown = {
+		months = 16
+	}
+
+	immediate = {
+		random_country = { 
+			limit = { has_variable = nda_trapezohedron_used } 
+			save_scope_as = trapezo_owner
+	 	}
+	}	
+
+	option = { # "Ignore"		
+		name = nda_hasturian.1892.a
+	}
+
+	option = { # "We could demand it from them?"
+		name = nda_hasturian.1892.b
+		default_option = yes
+		trigger = { scope:trapezo_owner = { is_player = no } } # only for AI
+
+		# This interaction should be red flag to anyone tracking
+		# random result - either get it or destroy relations - increase if matching cult type and greater rank
+		random_list = {
+			50 = { 
+
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:trapezo_owner = { is_cultist_country = no }							
+						}
+						add = 20							
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:trapezo_owner = { country_rank < root.country_rank }
+						}
+						add = 50							
+					}
+				}
+				custom_tooltip = nda_hasturian.1892.b_a_tt #"Get the Trap"
+				set_global_variable = nda_trapezohedron_hastur_recovered	
+				scope:trapezo_owner = { 
+					# slightly annoyed at the request
+					change_relations = {
+						country = ROOT
+						value = -10
+					}
+				}			
+			}
+			50 = { 
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:trapezo_owner = { is_cultist_country = yes }							
+						}
+						add = 20							
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:trapezo_owner = { country_rank > root.country_rank }
+						}
+						add = 50							
+					}
+				}
+				custom_tooltip = nda_hasturian.1892.b_b_tt #"Annoy the country"
+				
+				scope:trapezo_owner = { 
+					# annoyed at the request
+					change_relations = {
+						country = ROOT
+						value = -50
+					}
+				}
+			}
+		}
+	}
+
+	option = { # "Demand from player"
+		name = nda_hasturian.1892.c
+		trigger = { scope:trapezo_owner = { is_player = yes } } # only for AI
+		# annoy migo if you own it
+		scope:trapezo_owner = { 
+			trigger_event = { id = nda_hasturian.1893 popup=yes days=1 } 
+		}
+	}
+}
+
+nda_hasturian.1893 = { # Demand Trapezohedron from player.
+	type = country_event
+	placement = ROOT
+	title = nda_hasturian.1893.t
+	desc =  nda_hasturian.1893.d 	
+	flavor =  nda_hasturian.1893.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
+
+	}	
+
+	option = { # "Accept Demand"
+
+		name = nda_hasturian.1893.a
+		set_global_variable = nda_trapezohedron_hastur_recovered
+		c:IAM ?= {
+			change_relations = {
+				country = ROOT
+				value = 10
+			}
+		}
+	}
+
+	option = { # "Reject"
+		default_option = yes	
+		name = nda_hasturian.1893.b
+		# annoyed at the rejection
+		c:IAM ?= {
+			change_relations = {
+				country = ROOT
+				value = -50
+			}
+		}
+	}
+}
+
+nda_hasturian.1894 = { # shouldn't use year as just random
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		owner = {
+			AND = {
+				exists = c:IAM
+				c:IAM = ROOT
+			}
+		}
+
+		# Cthulhu is still here
+		has_global_variable = nda_trapezohedron_hastur_recovered
+
+		# has at least one qualifying state
+		any_state = {
+			owner = { NOT = { is_full_cult_country = { COUNTRY="THIS" } } }
+		}
+	}
+
+	immediate = {
+		debug_log = "Travelling Play"
+		# selected state
+		random_state = {
+			limit = {			
+				owner = { NOT = { is_full_cult_country = { COUNTRY="THIS" } } }
+			}
+			trigger_event = { id = nda_hasturian.1895 }			
+		}
+	}
+}
+
+nda_hasturian.1895 = { # The Travelling Players
+	type = state_event
+	placement = ROOT
+	title = nda_hasturian.1895.t
+	desc =  nda_hasturian.1895.d 	
+	flavor =  nda_hasturian.1895.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
+
+		save_scope_as = nda_play_target
+
+		state_region = {
+			add_devastation = 10
+
+		}					
+		
+		add_radicals_in_state = { value = 0.05 }
+
+		every_country = { # just within the region or interest
+			limit = {
+				has_interest_marker_in_region = root.region
+			}
+
+			post_notification = nda_hasturian_players 
+
+		}
+
+	}	
+
+	option = { # "Send them on their way"
+		name = nda_hasturian.1895.a
+		default_option = yes
+
+	}
+
+	option = { # "Steal back the Trapezohedron?"
+		name = nda_hasturian.1895.b
+		trigger = {
+			owner = { is_player = yes }			
+		}
 	}
 }

@@ -1,0 +1,145 @@
+﻿je_nda_nile_expedition = { # Dark Pharaoh - Miskatonic Expedition to the Nile Valley - ties into Nephren-Ka events
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_expeditions
+
+	# is_shown_when_inactive = {
+	# 	c:NEN ?= ROOT
+	# 	#is_cultist_country = no
+	# 	NOT = { has_variable = je_nda_nile_expedition_completed }
+	# 	has_variable = nda_trapezohedron_revealed # after Starry Wisdom
+	# 	game_date >= 1879.3 
+	# }
+
+	# possible = {
+	# 	c:NEN ?= ROOT
+
+	# }	
+
+	immediate = {
+		
+		debug_log = "Nile Expedition Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+
+		random_scope_character = {
+			limit = {
+				has_variable = nda_nile_expedition_leader_var # select via kick-off event
+			}
+			save_scope_as = nda_nile_expedition_leader
+		}
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = expedition_low_peril_loc
+				trigger = {
+					var:nda_nile_expedition_peril < 4
+				}
+			}
+			triggered_desc = {
+				desc = expedition_medium_peril_loc
+				trigger = {
+					var:nda_nile_expedition_peril <= 5
+				}
+			}
+			triggered_desc = {
+				desc = expedition_high_peril_loc
+				trigger = {
+					var:nda_nile_expedition_peril >= 6
+				}
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		random_events = { # need to do appropritae weights to get into a rough sequence
+			50 = 0
+			10 = nda_nephrenka.23
+			10 = nda_nephrenka.24
+			10 = nda_nephrenka.25
+			10 = nda_nephrenka.26
+			10 = nda_nephrenka.27
+			10 = nda_nephrenka.28
+			10 = nda_nephrenka.30
+			10 = nda_nephrenka.31
+			10 = nda_nephrenka.40
+			10 = nda_nephrenka.50
+			10 = nda_nephrenka.51
+		}
+	}
+
+    fail = {
+		custom_tooltip = {
+			text = je_expedition_fail
+			var:nda_nile_expedition_peril >= 8
+		}
+    }
+	
+	on_fail = {
+		trigger_event = { id = nda_nephrenka.60 }
+		remove_variable = on_expedition
+		remove_modifier = modifier_large_expedition_cost
+		random_scope_character = {
+			limit = {
+				has_variable = nda_nile_expedition_leader_var
+			}
+			remove_variable = nda_nile_expedition_leader_var
+		}
+
+		remove_variable = nda_nile_expedition_cheap
+		remove_variable = nda_nile_expedition_funded
+		remove_variable = nda_nile_expedition_well_funded
+	}
+
+	current_value = {
+		value = var:nda_nile_expedition_progress
+	}
+
+	goal_add_value = {
+		add = 8
+	}
+
+    complete = {
+		custom_tooltip = {
+			text = je_nda_nile_expedition_complete_tt
+			scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+    }
+
+	on_complete = {
+		set_variable = je_nda_nile_expedition_completed
+
+		random_scope_character = {
+			limit = {
+				has_variable = nda_nile_expedition_leader_var
+			}
+			remove_variable = nda_nile_expedition_leader_var
+		}
+
+		
+		remove_variable = nda_nile_expedition_cheap
+		remove_variable = nda_nile_expedition_funded
+		remove_variable = nda_nile_expedition_well_funded
+	}
+
+	
+ 	# Decisions
+	# Stop Expedition
+	# Send Mirror Back
+	# Continue Search
+	# Send Book Back
+
+	#scripted_button = je_nda_nile_expedition_btn_new_brunswick
+	#scripted_button = je_nda_nile_expedition_btn_nova_scotia
+	#scripted_button = je_nda_nile_expedition_btn_strange_ways
+	#scripted_button = je_nda_nile_expedition_btn_old_ways
+
+	progressbar = yes
+	weight = 10
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

@@ -22,12 +22,12 @@
 				has_technology_researched = nitroglycerin
 			}			
 		}	
-		fertilizer = { # Explosives byproduct
-			stance = wants_export   
-			trigger = {
-				has_technology_researched = nitroglycerin
-			}				
-		}
+		# fertilizer = { # Explosives byproduct
+		# 	stance = wants_export   
+		# 	trigger = {
+		# 		has_technology_researched = nitroglycerin
+		# 	}				
+		# }
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_export }
 		iron = { stance = wants_export }
@@ -67,6 +67,11 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	
 	type = diplomatic
 	
+	will_form_power_bloc = {
+		# for primary cult countries only?
+		is_full_cult_country = { COUNTRY="THIS" }	
+	}
+
 	undesirable_infamy_level = {
 		value = 100
 	}
@@ -184,12 +189,8 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 							}
 						}
 						owner = {
-							NOR = { 
-								is_subject_of = root
-								has_diplomatic_pact = {
-									who = scope:target_country
-									type = customs_union
-								}							
+							NOT = { 
+								is_subject_of = root							
 							}						
 						}						
 					}	
@@ -209,12 +210,8 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 							}
 						}
 						owner = {
-							NOR = { 
-								is_subject_of = root
-								has_diplomatic_pact = {
-									who = scope:target_country
-									type = customs_union
-								}							
+							NOT = { 
+								is_subject_of = root							
 							}						
 						}						
 					}	
@@ -234,12 +231,8 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 							}
 						}
 						owner = {
-							NOR = { 
-								is_subject_of = root
-								has_diplomatic_pact = {
-									who = scope:target_country
-									type = customs_union
-								}							
+							NOT = { 
+								is_subject_of = root							
 							}						
 						}						
 					}	
@@ -412,13 +405,22 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 		if = {
 			limit = { any_interest_group = { is_insurrectionary = yes } }
 			add = 7.5
-		}		
+		}
+		
+		if = {
+			limit = { 
+				OR = {
+					has_journal_entry = je_government_petition  
+					has_journal_entry = je_law_imposition
+				}
+			}
+			add = 25
+		}
 	}		
 	
 	pro_interest_groups = {
 		ig_nda_cult_worshippers
 		ig_rural_folk
-
 		ig_landowners
 		ig_armed_forces
 		ig_petty_bourgeoisie

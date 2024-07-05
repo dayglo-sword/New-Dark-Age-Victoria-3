@@ -67,6 +67,7 @@ nda_monthly_on_action = {
 		nda_hasturian.3 # Repairer of Reputations
 
 		nda_hasturian.10 # The Return of the King
+		nda_hasturian.1892 # Trapezohedron
 
 		nda_whh.10 # House on the Borderlands
 		nda_whh.11 # Carnacki Start
@@ -86,15 +87,24 @@ nda_monthly_on_action = {
 		nda_historic.1871
 		nda_historic.1875
 		nda_historic.1879		
-		nda_historic.1882
-		nda_historic.1888
+		nda_historic.1882	
 		nda_historic.1887
+		nda_historic.1888
 		nda_historic.1889
 		nda_historic.1891		
 		nda_historic.1892
 
+		nda_historic_regional.1848
+		nda_historic_regional.1864
+		nda_historic_regional.1890
+		nda_historic_regional.1892
+		nda_historic_regional.1901
+
 		nda_migo.1
 		nda_migo.4
+		nda_migo.1878 # The Shinning Trapezohedron
+		nda_migo.1890 # The 'King in Yellow' Play spooks Mi-Go
+		nda_migo.1892 # 'Hasturian America' spooks Mi-Go
 		nda_migo.1924 # The End Is Nigh - Cthulhu
 		nda_migo.1927 # The End Is Nigh - The Star
 		nda_migo.1935 # Migo Outro
@@ -145,12 +155,10 @@ nda_monthly_on_action = {
 				months = 3
 				value = yes
 			}
-			#remove_variable = nda_cult_leader_debug
 		}
 		else = {
 			remove_variable = nda_cult_leaderless
 			remove_variable = nda_cult_leaderless_timer
-			#set_variable = nda_cult_leader_debug
 		}
 
 		# missing primary culture on ELD after rebelion
@@ -323,7 +331,7 @@ nda_monthly_red_death_effect_on_action = {
 	effect = {
 		if = {
 			limit = { # Red Death in play			
-				game_date < 1857 # should be all over by then
+				game_date < 1857.1.1 # should be all over by then
 				has_global_variable = nda_poe_red_death				
 				has_variable = nda_poe_red_death_state	
 			}
@@ -362,6 +370,7 @@ nda_half_yearly_on_action = {
 		nda_dagonic.4 # Bounty of the Seas
 		nda_dagonic.6 # Fury of Dagon
 		nda_hasturian.8 # The Play Fades
+		nda_hasturian.1894 # Travelling Show
 		nda_nen.1934 # Dr West - Denouncement
 		nda_nen.17 # Reanimated Spreads
 		nda_nen.16 # Reanimated Plague Starts
@@ -381,6 +390,12 @@ nda_half_yearly_on_action = {
 		nda_lostcities.41
 
 		nda_yigian.11 # Snake Oil
+		nda_yigian.1892 # Request Mirror
+		nda_yigian.1894 # Return of Nicrotis
+
+		nda_nephrenka.15 # Cultists on the Nile
+
+		nda_base.40 # Abe Lincoln - Time Traveller
 	}
 }
 
@@ -600,7 +615,7 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 on_country_formed = {
 	on_actions = {
 		nda_greater_new_england_on_action
-		delay = { days = 7 }
+		#delay = { days = 7 }
 		nda_create_leng_on_action
 	}
 }
@@ -659,43 +674,43 @@ nda_create_leng_on_action = {
 #	}	
 #}
 
-# Root = attacker or defender country
-# scope:battle = battle
-# scope:attacker = attacking commander
-# scope:defender = defending commander
-# scope:state = location state
-on_battle_started = {
-    on_actions = {
-        nda_on_battle_started
-    }
-}
+# # Root = attacker or defender country
+# # scope:battle = battle
+# # scope:attacker = attacking commander
+# # scope:defender = defending commander
+# # scope:state = location state
+# on_battle_started = {
+#     on_actions = {
+#         nda_on_battle_started
+#     }
+# }
 
-nda_on_battle_started = {
-    effect = {
-        # if = {
-		# 	limit = {
-		# 		exists = scope:state
-        #         scope:state = {
-		# 			has_lost_city = yes
+# nda_on_battle_started = {
+#     effect = {
+#         # if = {
+# 		# 	limit = {
+# 		# 		exists = scope:state
+#         #         scope:state = {
+# 		# 			has_lost_city = yes
                     
-        #             OR = {
-        #                 owner = scope:defender.owner
-        #                 owner = {
-        #                     is_in_war_together = scope:defender.owner
-        #                 }
-        #             }
-        #         }
+#         #             OR = {
+#         #                 owner = scope:defender.owner
+#         #                 owner = {
+#         #                     is_in_war_together = scope:defender.owner
+#         #                 }
+#         #             }
+#         #         }
 				
-		# 		scope:defender = {
-		# 			NOT = {
-		# 				has_modifier = nda_lostcity_defense_modifier
-		# 			}
-		# 		}
-		# 	}
-		# 	debug_log = "City Boost to Defenders"			
-		# 	scope:defender = {
-		# 		add_modifier = { name = nda_lostcity_defense_modifier }
-		# 	}
-		# }
-	}
-}
+# 		# 		scope:defender = {
+# 		# 			NOT = {
+# 		# 				has_modifier = nda_lostcity_defense_modifier
+# 		# 			}
+# 		# 		}
+# 		# 	}
+# 		# 	debug_log = "City Boost to Defenders"			
+# 		# 	scope:defender = {
+# 		# 		add_modifier = { name = nda_lostcity_defense_modifier }
+# 		# 	}
+# 		# }
+# 	}
+# }

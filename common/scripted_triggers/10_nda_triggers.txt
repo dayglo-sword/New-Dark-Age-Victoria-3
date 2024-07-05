@@ -1,4 +1,9 @@
-﻿### Character triggers
+﻿### Loading Trigger
+NDA_is_active_trigger = { # New Dark Age
+        has_global_variable = nda_is_loaded
+}
+
+### Character triggers
 has_eldritch_trait =
 {
 	OR = { 
@@ -264,4 +269,16 @@ nda_coa_def_dagonic_trigger = {
 	# any_primary_culture = {
     # 	has_discrimination_trait = eldritch_culture_group
     # }
+}
+
+
+# OVERWRITE - Power Bloc conditions
+country_can_form_power_bloc = {
+	AND = {
+		is_revolutionary = no
+		OR = {
+			country_rank >= rank_value:major_power	
+			is_full_cult_country = { COUNTRY="THIS" }						
+		}
+	}	
 }

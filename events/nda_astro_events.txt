@@ -253,7 +253,7 @@ nda_astro.1881 = { # 1881 conjunction
 		NOT = { has_global_variable = nda_conjunction_3 }		
 
 		game_date >= 1881.4.22		
-		game_date < 1882 # stop late forming countries getting event
+		game_date < 1882.1.1 # stop late forming countries getting event
 	}
 
 	immediate = {
@@ -388,7 +388,7 @@ nda_astro.1901 = {  # 1901 conjunction
 		NOT = { has_global_variable = nda_conjunction_4 }		
 
 		game_date >= 1901.11.28		
-		game_date < 1902 # stop late forming countries getting event
+		game_date < 1902.2.1 # stop late forming countries getting event
 	}
 
 	immediate = {
@@ -531,7 +531,7 @@ nda_astro.1921 = { # 1921 conjunction
 		NOT = { has_global_variable = nda_conjunction_5 }		
 		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	} # They've gone so no Cult rational	
 		game_date >= 1921.9.14	
-		game_date < 1922 # stop late forming countries getting event	
+		game_date < 1922.1.1 # stop late forming countries getting event	
 	}
 
 	immediate = {
@@ -619,7 +619,7 @@ nda_astro.5 = { # 1921 conjunction
 		NOT = { has_variable = nda_conjunction_5 }		
 		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	} # They've gone so no Cult rational	
 		game_date >= 1921.9.14	
-		game_date < 1922 # stop late forming countries getting event	
+		game_date < 1922.1.1 # stop late forming countries getting event	
 	}
 
 	immediate = {
@@ -688,8 +688,8 @@ nda_astro.1858 = { # 1858 great comet 'Donati's comet'
 	
 	trigger = { 
 		is_player = yes
-		game_date >= 1858.7	
-		game_date < 1859
+		game_date >= 1858.7.1	
+		game_date < 1859.1.1
 	}
 
 	cooldown = { months = 6 }
@@ -730,8 +730,8 @@ nda_astro.1910 = { #  Great January Comet of 1910
 	
 	trigger = { 
 		is_player = yes
-		game_date >= 1910.1	
-		game_date < 1911
+		game_date >= 1910.1.1	
+		game_date < 1911.1.1
 	}
 
 	cooldown = { months = 12 }

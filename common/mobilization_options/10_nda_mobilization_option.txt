@@ -98,9 +98,13 @@ mobilization_option_nda_west_tonic = {
 		modern_nursing
 		# already requires chemical warefare for Dr West to finish research - no need to include here
 	}
-	is_shown = {	
-		has_global_variable = herbert_west_successful	
-		has_variable = nda_tonic_for_the_troops		
+	is_shown = {
+		custom_tooltip = {
+			text = mobilization_option_nda_west_tonic_tooltip	
+			has_global_variable = herbert_west_successful	
+			has_variable = nda_tonic_for_the_troops	
+		}
+	
 	}
 	possible = {
 		has_global_variable = herbert_west_successful	

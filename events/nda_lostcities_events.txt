@@ -55,7 +55,7 @@ nda_lostcities.10 = {  # K'N-Yan revealed ? Do trigger but should be decision fo
 				# state level
 				create_building={
 					building="building_nda_lostcity_knyan" 
-					#level=1
+					level=1
 					#reserves=1
 				}	
 				# Notify world
@@ -203,7 +203,7 @@ nda_lostcities.20 = {  # y'han-thlei revealed ?
 				# state level
 				create_building={
 					building="building_nda_lostcity_yhanthlei" 
-					#level=1
+					level=1
 					#reserves=1
 				}
 				
@@ -329,7 +329,7 @@ nda_lostcities.30 = {  # Shamballa revealed - unlike other cities ELD can not re
 				# state level
 				create_building={
 					building="building_nda_lostcity_shamballa" 
-					#level=1
+					level=1
 					#reserves=1
 				}
 								
@@ -583,7 +583,7 @@ nda_lostcities.40 = {  # Nameless City revealed - For ELD or STY (original owner
 				# state level
 				create_building={
 					building="building_nda_lostcity_nameless_city" 
-					#level=1
+					level=1
 					#reserves=1
 				}
 				

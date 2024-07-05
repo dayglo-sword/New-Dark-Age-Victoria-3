@@ -1,0 +1,39 @@
+﻿nda_cul_cultist_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_nda_cul_cultist_standard_of_living_add = 1
+}
+
+nda_cul_cultist_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_nda_cul_cultist_standard_of_living_add = 1
+}
+
+nda_cul_yigian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_nda_cul_yigian_standard_of_living_add = 1
+}
+
+nda_cul_yigian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_nda_cul_yigian_standard_of_living_add = 1
+}
+
+nda_cul_dagonic_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_nda_cul_dagonic_standard_of_living_add = 1
+}
+
+nda_cul_dagonic_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_nda_cul_dagonic_standard_of_living_add = 1
+}
+
+nda_cul_trueyankee_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_nda_cul_trueyankee_standard_of_living_add = 1
+}
+
+nda_cul_trueyankee_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_nda_cul_trueyankee_standard_of_living_add = 1
+}

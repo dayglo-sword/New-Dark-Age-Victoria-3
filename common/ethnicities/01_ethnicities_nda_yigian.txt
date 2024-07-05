@@ -70,6 +70,15 @@ yigian_hybrid = {
 	    10 = { name = mouth_open    range = { 0.15 0.25 }    }
     }
 
+    
+    gene_neck_length = { 
+        10 = { name = neck_length range = { 0.55 1.0 } }
+    }
+
+    gene_neck_width = { 
+        10 = { name = neck_width range = { 0.05 0.45 } } 
+    }
+
     beards = {
         15 = { name = no_beard                      range = { 0.0 1.0 } }
 	}

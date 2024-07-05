@@ -23,7 +23,7 @@ nda_first_yig_cult = {
 
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
-	notification_type = feed #toast
+	notification_type = toast
  
 }
 
@@ -210,6 +210,15 @@ nda_hastur_coronation = {
  
 }
 
+nda_hasturian_players = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/character.dds"
+
+	notification_type = toast
+ 
+}
+
 ### Lost Cities
 nda_lostcity_knyan_reveal = {
 	type = country
@@ -278,6 +287,16 @@ nda_lostcity_nameless_city_hidden = {
 	type = country
 
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+# Stygian/Yigian
+nda_nitocris_coronation = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/character.dds"
 
 	notification_type = toast
  

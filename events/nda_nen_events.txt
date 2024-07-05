@@ -704,7 +704,7 @@ nda_nen.1877 = { # Controversy surrounding the Church of Starry Wisdom - Rhode I
 }
 
 # If Church Shut down by Gov get Trapezoid event - Looking into this triggers country to become cultist as leader goes mad.
-nda_nen.1878 = { # Founding of Church of Starry Wisdom - Rhode Island
+nda_nen.1878 = { # "Goverment Shutdown!"
 	type = country_event
 	placement = p:x1A77EA 
 	title = nda_nen.1878.t
@@ -729,7 +729,7 @@ nda_nen.1878 = { # Founding of Church of Starry Wisdom - Rhode Island
 	cooldown = { months = 12 }
 
 	immediate = {
-
+		set_global_variable = nda_trapezohedron_revealed
 	}	
 
 	option = { #"What's in the Box?"
@@ -740,6 +740,9 @@ nda_nen.1878 = { # Founding of Church of Starry Wisdom - Rhode Island
 	}
 	option = { #"Put it somewhere safe"
 		name = nda_nen.1878.b
+
+		# if Miskatonic Uni available have them do research?
+
 	}	
 }
 
@@ -804,7 +807,7 @@ nda_nen.1880 = {
 	cooldown = { months = 12 }
 
 	immediate = {
-
+		set_variable = nda_trapezohedron_used # since used by the unwary it's reappearence is known - migo event
 	}	
 
 	option = { #"What's that behind me?"
@@ -820,9 +823,7 @@ nda_nen.1880 = {
 				limit = {not = { has_trait = nda_master }}
 			   add_trait = nda_master
 		   }
-		}
-		
-		
+		}				
 	}
 }
 
@@ -1007,12 +1008,13 @@ nda_nen.1935 = { # The Outro / denouncement
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	trigger = {
-		game_date >= 1935.10 
+		game_date >= 1935.10.1 
 		is_player = yes
 		p:x2B5499 = { state = { owner = ROOT } }
 
 		NOT = { has_global_variable = nda_outro }
 		has_global_variable = nda_ritual_cthulhu_leaves
+		NOT = { has_global_variable =  nda_migo_experiment } # Migo Path has it's own outro
 	}
 
 	immediate = {

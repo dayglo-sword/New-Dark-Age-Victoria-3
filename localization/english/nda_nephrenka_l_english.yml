@@ -1,0 +1,153 @@
+﻿l_english:
+
+# Put JE localisation here
+ je_nda_nile_expedition: "Archeological Expedition to the Nile"
+ je_nda_nile_expedition_reason: "There is obviously great prestige to be had in uncovering the ancient past of the civilisations along the Nile."
+ je_nda_nile_expedition_goal: "To find evidence of cultures predating even the Pharaohs.'"
+ je_nda_nile_expedition_possible_tt: "Has a University."
+ je_nda_nile_expedition_complete_tt: "We have uncovered everything we belive can be found."
+ je_nda_nile_expedition_complete: "We have uncovered everything we belive can be found."
+
+
+nda_nephrenka.10.t: "Stygian Test"
+nda_nephrenka.10.d: "Another senior political leader, [SCOPE.sCharacter('converted_ig_leader').GetFullName], has secretly pledged their alligance to [concept_nda_yig]."
+nda_nephrenka.10.f: "The power of Yig continues to grow."
+nda_nephrenka.10.a: "What can we do?"
+nda_nephrenka.10.b: "What can we do?"
+nda_nephrenka.10.c: "What can we do?"
+
+nda_nephrenka.15.t: "Cultist on the Nile?!"
+nda_nephrenka.15.d: "It would appear that all the recent excavations in this area has uncovered evidence of ancient religions that predate even the Pharaohs.\n\nRumours have it that some people within [SCOPE.sC('target_country').GetName] have started following 'the old ways' of lost [concept_nda_stygia] again."
+nda_nephrenka.15.f: "...this was a black land of sorcery and nameless horror. [Concept('concept_nda_yig','$concept_nda_yig_set$')] the Old Serpent, men said, banished long ago from the Hyborian races, yet lurked in the shadows of the cryptic temples, and awful and mysterious were the deeds done in the nighted shrines..."
+nda_nephrenka.15.a: "No need to stop this."
+nda_nephrenka.15.b: "We must suppress it!"
+nda_nephrenka.15.c: "Nothing we can we do?"
+
+nda_nephrenka.20.t: "A Proposed Expedition!"
+nda_nephrenka.20.d: "The Miskatonic University is requesting funding to launch an archeological expedition to the Nile Valley.\n\nAfter researching the documents left behind by Dr Bowen, of the Starry Wisdon Cult, they believe they can retrace his steps back to his discovery of the tomb of Nephren-Ka.\n\nIt they are sucessful it could lead to a revolution in archeology - Proof of a lost dynasty of pharoahs that predates the currently known 1st Dynasty!"
+nda_nephrenka.20.f: ""
+nda_nephrenka.20.a: "We must start at once!"
+nda_nephrenka.20.b: "Come back in a couple of years."
+nda_nephrenka.20.c: "A foolish idea."
+
+
+nda_nephrenka.21.t: "Who is to lead?"
+nda_nephrenka.21.d: "A number of experts in different fields has been gathered to take part in the expedition to the very heart of the sands. Their youthful enthusiasm is quietly blended with the prudent fear that our most veteran explorers feel."
+nda_nephrenka.21.f: ""
+nda_nephrenka.21.a: "[SCOPE.sCharacter('expedition_leader_1').GetPrimaryRoleTitle] [SCOPE.sCharacter('expedition_leader_1').GetFullName]"
+nda_nephrenka.21.b: "[SCOPE.sCharacter('expedition_leader_2').GetPrimaryRoleTitle] [SCOPE.sCharacter('expedition_leader_2').GetFullName]"
+nda_nephrenka.21.c: "[SCOPE.sCharacter('expedition_leader_3').GetPrimaryRoleTitle] [SCOPE.sCharacter('expedition_leader_3').GetFullName]"
+nda_nephrenka.21.e: "[SCOPE.sCharacter('expedition_leader_4').GetPrimaryRoleTitle] [SCOPE.sCharacter('expedition_leader_4').GetFullName]"
+
+nda_nephrenka.22.t: "Financing the Expedition"
+nda_nephrenka.22.d: "The expedition to the Nile will require a certain amount of funding to be viable."
+nda_nephrenka.22.f: ""
+nda_nephrenka.22.a: "The minimum possible."
+nda_nephrenka.22.b: "The usual funding."
+nda_nephrenka.22.c: "As much as it takes."
+
+nda_nephrenka.23.t: "Arrival"
+nda_nephrenka.23.d_1: "After a few weeks of preparations and travel, the expedition led by [SCOPE.sCharacter('nda_nile_expedition_leader').GetFullName] has arrived in the port of Alexandria.\n\nThe expedition has received a warm welcome from the officials in the port, who have assisted in securing provisions for the weeks ahead.\n\nFrom here they will begin their journey to Cairo and beyond."
+nda_nephrenka.23.d_2: "After a few weeks of preparations and travel, the expedition led by [SCOPE.sCharacter('nda_nile_expedition_leader').GetFullName] has arrived in the port of Alexandria.\n\nThe local authorities, with which we have strained relations, seem extremely unhappy at its presence. It looks likes the journey to Cairo will be delayed some time."
+nda_nephrenka.23.d_3: "After a few weeks of preparations and travel, the expedition led by [SCOPE.sCharacter('nda_nile_expedition_leader').GetFullName] has arrived in the port of Alexandria. From here they will begin their journey to Cairo and beyond."
+nda_nephrenka.23.f: "''...splendid views of the Western Harbour and the sea; a Temple of Neptune once stood here, and there are ruins of tombs all along the northern shore. A modern lighthouse stands in the Hospital enclosure, and marks the entrance to the harbour.\n\nThe Breakwater starts below, makes towards the isolated rock of Abou Bakr, then bends to the left. Over the water are the island of Marabout and the headland of Agame, which are part of the same limestone chain as Ras-el-Tin, and connected with it by submarine reefs.\n\nThe sea west and north of the point is full of remains of the Prehistoric Harbour.'\n\nAlexandria: A History and a Guide - E. M. Forster"
+nda_nephrenka.23.a: "A most pleasant welcome."
+nda_nephrenka.23.b: "These needless delays!"
+nda_nephrenka.23.c: "Onwards!"
+
+nda_nephrenka.24.t: "Along the Nile"
+nda_nephrenka.24.d: "The expedition is now traversing up the Nile from Cairo heading to a proposed dig site."
+nda_nephrenka.24.f: ""
+nda_nephrenka.24.a: "Good News!"
+#nda_nephrenka.24.b: "What can we do?"
+#nda_nephrenka.24.c: "What can we do?"
+
+nda_nephrenka.25.t: "A fortunate find"
+nda_nephrenka.25.d: "."
+nda_nephrenka.25.f: "The power of Yig continues to grow."
+nda_nephrenka.25.a: "What can we do?"
+nda_nephrenka.25.b: "What can we do?"
+nda_nephrenka.25.c: "What can we do?"
+
+nda_nephrenka.26.t: "A dancing disease?"
+nda_nephrenka.26.d: "Professors Wilson and Keppel, and their assistant Betty, have stuck down with a most pecular disease. They seem to be possesed, wearing clothing which is a mockery of the local garb, and dancing across the sands in strange jerky movements.\n\nThis mania makes their continued participation in the expedition impossible."
+nda_nephrenka.26.f: ""
+nda_nephrenka.26.a: "Maybe they can make a career of it?"
+nda_nephrenka.26.b: "What can we do?"
+nda_nephrenka.26.c: "What can we do?"
+
+nda_nephrenka.27.t: "The wrong site"
+nda_nephrenka.27.d: "It looks like the initial dig site is from the wrong era and has a much later date than any locations expected for either the reigns of Nitocris or Nephren-Ka."
+nda_nephrenka.27.f: ""
+nda_nephrenka.27.a: "What can we do?"
+
+nda_nephrenka.28.t: "Knife in the dark"
+nda_nephrenka.28.d: "An intruder has entered the sleeping quarters of [SCOPE.sCharacter('nda_nile_expedition_leader').GetFullName].\n\nThis looks like it is a real life and death situation for the expedition leader."
+nda_nephrenka.28.f: ""
+nda_nephrenka.28.a: "We must hope for the best."
+
+nda_nephrenka.30.t: "Tomb of Nitocris Found"
+nda_nephrenka.30.d: "The Tomb of Nitocris Found! Resting place of the forgotten Queen uncovered."
+nda_nephrenka.30.f: "'Nitocris, who was the second wife of the pharaoh, but now the greatest lady in Egypt. The gods were not mistaken when they called her to be the mother of a pharaoh. She was a tall person, of rather full habit, and in spite of forty years was still beautiful. There was in her eyes, face, and whole form such majesty that even when she went unattended, in the modest garb of a priestess, people bowed their heads to her.'"
+nda_nephrenka.30.a: "An Interesting Find..."
+
+#Gain Mirror as Artifact
+nda_nephrenka.31.t: "A Truly Interesting Find..."
+nda_nephrenka.31.d: "The Tomb of Nitocris may not be packed with treasures, but a most exquisite piece of furniture has been found. An ancient Mirror of intricate design. The finders have requested that it should be given, as a symbol of gratitude for the aid provided, to the leader of their country...You."
+nda_nephrenka.31.f: "The power of Yig continues to grow."
+nda_nephrenka.31.a: "A Most Welcome Gift."
+nda_nephrenka.31.b: "It Belongs In A Museum."
+nda_nephrenka.31.c: "It Belongs to the locals."
+
+nda_nephrenka.32.t: "A Baleful Influence."
+nda_nephrenka.32.d: "Every day you stare into the Mirror of Nitocris, and every day the world seems a bit different. A bit more mundane. You can't understand why people would continue along that path while there is greater glory to be had in worshiping other entities."
+nda_nephrenka.32.f: "The power of Yig continues to grow."
+nda_nephrenka.32.a: "Cultists Are Just Misunderstood..."
+
+# Start of Dark Pyramid
+nda_nephrenka.40.t: "Trail of the Dark Pyramid"
+nda_nephrenka.40.d: "There is now enough new evidence from the Tomb of Nitocris, when combined with our existing knowledge, that suggests the real posibility of finding the legendary Dark Pyramid of Nephren-Ka.\n\nGiven some of the latest local disturbances caused by our recent discoveries it appears the local authorities might need pursuading to let us continue."
+nda_nephrenka.40.f: ""
+nda_nephrenka.40.a: "We must request a continuation."
+nda_nephrenka.40.b: "We have uncovered enough."
+
+#Allow expedition continue
+nda_nephrenka.41.t: "Annoying Archaeologists"
+nda_nephrenka.41.d: "The local inhabitants are getting distressed by the activities of the foreigners digging around their country. They seem afraid that old curses will be reawakened and turn the region into the home of evil beings."
+nda_nephrenka.41.f: ""
+nda_nephrenka.41.a: "They Must Continue..."
+nda_nephrenka.41.b: "They Must Stop..."
+
+#Notification of approval
+nda_nephrenka.42.t: "Approval granted!"
+nda_nephrenka.42.d: "The local authorities have granted us permission to continue the expedition."
+nda_nephrenka.42.f: ""
+nda_nephrenka.42.a: "Time to search again."
+
+# Ignore diapproval??
+nda_nephrenka.43.t: "Local Disapproval"
+nda_nephrenka.43.d: "The have rejected our request to expand our searches in the area. Should we allow them to order us around, or should we get our archaeologists to cease the search?"
+nda_nephrenka.43.f: ""
+nda_nephrenka.43.a: "Can Not Stop Now..."
+nda_nephrenka.43.b: "Get Them To Stop"
+
+# Dark Pyramid found
+nda_nephrenka.50.t: "Dark Pyramid Found!"
+nda_nephrenka.50.d: "The Legendary Dark Pyramid has been found! Tomb of forgotten Pharaoh uncovered."
+nda_nephrenka.50.f: ""
+nda_nephrenka.50.a: "Hurrah!"
+nda_nephrenka.50.b: "What can we do?"
+
+# Book of Thoth found
+nda_nephrenka.51.t: "Book of Thoth"
+nda_nephrenka.51.d: "Book of Thoth"
+nda_nephrenka.51.f: ""
+nda_nephrenka.51.a: "A Great Treasure For Our Country!"
+nda_nephrenka.51.b: "It Belongs To The Locals"
+
+# Expedition Fail
+nda_nephrenka.60.t: "Failure"
+nda_nephrenka.60.d: "The expedition has been beset with failure. They are travelling back having achieved only a fraction of what could have been. With the Cultists now alerted to our efforts there will be no chance of a safe resumption of the expedition."
+nda_nephrenka.60.f: "."
+nda_nephrenka.60.a: "Unfortunate"
+

@@ -310,3 +310,271 @@ nda_yigian.11 = { # Snake Oil Incident
 		change_relations = { country = c:YIG value = 20 } 
 	}
 }
+
+#  The Mirror of Nicrotis - Yig demands it
+nda_yigian.1892 = { # The Mirror reappears
+	type = country_event
+	placement = ROOT
+	title = nda_yigian.1892.t
+	desc =  nda_yigian.1892.d 	
+	flavor =  nda_yigian.1892.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger  = {
+		c:YIG ?= ROOT # Hasturian America only
+		game_date >= 1892.1.1	
+		game_date < 1893.3.1
+
+		has_global_variable = nda_nephrenka_mirror_nitocris	
+		any_country = { 
+			has_variable = nda_nephrenka_mirror_nitocris 
+			NOT = { c:YIG = THIS }
+		}
+	}
+
+	cooldown = {
+		months = 16
+	}
+
+	immediate = {
+		random_country = { 
+			limit = { has_variable = nda_nephrenka_mirror_nitocris } 
+			save_scope_as = mirror_owner
+	 	}
+	}	
+
+	option = { # "Ignore"		
+		name = nda_yigian.1892.a
+	}
+
+	option = { # "We could demand it from them?"
+		name = nda_yigian.1892.b
+		default_option = yes
+		trigger = { scope:mirror_owner = { is_player = no } } # only for AI
+
+		# random result - either get it or destroy relations - increase if matching cult type and greater rank
+		random_list = {
+			50 = { 
+
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:mirror_owner = { is_cultist_country = no }							
+						}
+						add = 20							
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:mirror_owner = { country_rank < root.country_rank }
+						}
+						add = 50							
+					}
+				}
+				custom_tooltip = nda_yigian.1892.b_a_tt #"Get the Mirror"
+				#set_global_variable = nda_trapezohedron_hastur_recovered	
+				scope:mirror_owner = { 
+					# slightly annoyed at the request
+					change_relations = {
+						country = ROOT
+						value = -10
+					}
+					# remove mirror
+					remove_variable = nda_nephrenka_mirror_nitocris 
+				}	
+				# complete transfer
+				set_variable = 	nda_nephrenka_mirror_nitocris	
+			}
+			50 = { 
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:mirror_owner = { is_cultist_country = yes }							
+						}
+						add = 20							
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+								is_cultist_country = no
+								scope:mirror_owner = { country_rank > root.country_rank }
+						}
+						add = 50							
+					}
+				}
+				custom_tooltip = nda_yigian.1892.b_b_tt #"Annoy the country"
+				
+				scope:trapezo_owner = { 
+					# annoyed at the request
+					change_relations = {
+						country = ROOT
+						value = -50
+					}
+				}
+			}
+		}
+	}
+
+	option = { # "Demand from player"
+		name = nda_yigian.1892.c
+		trigger = { scope:mirror_owner = { is_player = yes } } # only for AI
+		# annoy migo if you own it
+		scope:mirror_owner = { 
+			trigger_event = { id = nda_yigian.1893 popup=yes days=1 } 
+		}
+	}
+}
+
+nda_yigian.1893 = { # Demand Mirror from player.
+	type = country_event
+	placement = ROOT
+	title = nda_yigian.1893.t
+	desc =  nda_yigian.1893.d 	
+	flavor =  nda_yigian.1893.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	immediate = {
+
+	}	
+
+	option = { # "Accept Demand"
+
+		name = nda_yigian.1893.a
+		#set_global_variable = nda_trapezohedron_hastur_recovered
+		# remove mirror
+		remove_variable = nda_nephrenka_mirror_nitocris 
+	
+
+		c:YIG ?= {						
+			# complete transfer
+			set_variable = 	nda_nephrenka_mirror_nitocris
+			
+			change_relations = {
+				country = ROOT
+				value = 50
+			}
+		}
+	}
+
+	option = { # "Reject"
+		default_option = yes	
+		name = nda_yigian.1893.b
+		# annoyed at the rejection
+		c:YIG ?= {
+			change_relations = {
+				country = ROOT
+				value = -50
+			}
+		}
+	}
+}
+
+# The Return of Nicrotis
+nda_yigian.1894 = {
+	type = country_event
+	placement = ROOT
+	title = nda_yigian.1894.t
+	desc =  nda_yigian.1894.d 	
+	flavor =  nda_yigian.1894.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	trigger = {
+		AND = {
+				exists = c:YIG
+				c:YIG = ROOT
+		}
+		has_variable = nda_nephrenka_mirror_nitocris
+		# Nitocris should not already exist
+		NOT = {
+			any_character = {
+				has_variable = is_nitocris
+			}
+		}
+	}
+
+	immediate = {
+		# remove/sacrifice current leader - replace with Nitocris
+		# scope current leader
+		every_scope_character = {
+			limit = { is_ruler = yes }
+			save_scope_as = sacrificial_ruler
+		}
+		# add Nitocris - same method as Castiagne
+		ROOT = { 
+			create_character = {
+				first_name = Queen
+				last_name = nitocris
+				age = 30
+				ruler = yes
+				template = nda_nitocris_character_template 
+				on_created = {
+					set_variable = is_nitocris 									
+				}
+			}
+	
+			random_scope_character = {
+				limit = {
+					has_variable = is_nitocris 
+				}
+				save_scope_as = scope_nitocris 
+				add_trait = nda_master 
+				set_character_immortal = yes
+			}
+
+			#  The national delusion is strong. Make everyone happy
+			add_radicals = { value = -1 }
+			add_loyalists = { value = 1 }
+
+			save_scope_as = originator
+		}
+
+		# Notify the world		
+		every_country = {
+			post_notification = nda_nitocris_coronation
+		}
+	}	
+
+	option = { # "Hail  Nitocris"
+
+		name = nda_yigian.1894.a
+	}
+
+}
