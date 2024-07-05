@@ -37,7 +37,7 @@ goods_input_vril_add_desc: "The amount of Vril Energy Rods consumed"
 # company names
 company_nda_bovril: "Bovine Vril Company"
 company_nda_marsh_fishing: "Marsh Fisheries"
-company_nda_curwen_forestry: "Curwen Forestries"
+company_nda_curwen_forestry: "Curwen Lumber"
 company_nda_west_chemicals: "West Chemicals"
 
 #combat unit type
