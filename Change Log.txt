@@ -1,6 +1,7 @@
 Version v1.7
 
 Major Changes
+v1.7 and SOI compatability
 Add Diplomatic Action to 'Oppose the Cult'
 Change Diplomatic Actions so Cultist support each other.
 Expand 'Trapezohedron' events to Mi-Go and Hasturians.
@@ -9,7 +10,7 @@ Archeological Expedition to Nile.
 
 Minor Changes
 Hasturian America must have capital in Americas.
-New New England companies 'Marsh Fisheries', 'Curwen Forestries'
+New New England companies 'Marsh Fisheries', 'Curwen Forestries', 'West Chemicals'
 
 Bug Fixes
 Correct King in Yellow notification header.

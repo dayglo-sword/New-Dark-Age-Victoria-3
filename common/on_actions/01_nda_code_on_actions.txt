@@ -615,7 +615,7 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 on_country_formed = {
 	on_actions = {
 		nda_greater_new_england_on_action
-		delay = { days = 7 }
+		#delay = { days = 7 }
 		nda_create_leng_on_action
 	}
 }
@@ -674,43 +674,43 @@ nda_create_leng_on_action = {
 #	}	
 #}
 
-# Root = attacker or defender country
-# scope:battle = battle
-# scope:attacker = attacking commander
-# scope:defender = defending commander
-# scope:state = location state
-on_battle_started = {
-    on_actions = {
-        nda_on_battle_started
-    }
-}
+# # Root = attacker or defender country
+# # scope:battle = battle
+# # scope:attacker = attacking commander
+# # scope:defender = defending commander
+# # scope:state = location state
+# on_battle_started = {
+#     on_actions = {
+#         nda_on_battle_started
+#     }
+# }
 
-nda_on_battle_started = {
-    effect = {
-        # if = {
-		# 	limit = {
-		# 		exists = scope:state
-        #         scope:state = {
-		# 			has_lost_city = yes
+# nda_on_battle_started = {
+#     effect = {
+#         # if = {
+# 		# 	limit = {
+# 		# 		exists = scope:state
+#         #         scope:state = {
+# 		# 			has_lost_city = yes
                     
-        #             OR = {
-        #                 owner = scope:defender.owner
-        #                 owner = {
-        #                     is_in_war_together = scope:defender.owner
-        #                 }
-        #             }
-        #         }
+#         #             OR = {
+#         #                 owner = scope:defender.owner
+#         #                 owner = {
+#         #                     is_in_war_together = scope:defender.owner
+#         #                 }
+#         #             }
+#         #         }
 				
-		# 		scope:defender = {
-		# 			NOT = {
-		# 				has_modifier = nda_lostcity_defense_modifier
-		# 			}
-		# 		}
-		# 	}
-		# 	debug_log = "City Boost to Defenders"			
-		# 	scope:defender = {
-		# 		add_modifier = { name = nda_lostcity_defense_modifier }
-		# 	}
-		# }
-	}
-}
+# 		# 		scope:defender = {
+# 		# 			NOT = {
+# 		# 				has_modifier = nda_lostcity_defense_modifier
+# 		# 			}
+# 		# 		}
+# 		# 	}
+# 		# 	debug_log = "City Boost to Defenders"			
+# 		# 	scope:defender = {
+# 		# 		add_modifier = { name = nda_lostcity_defense_modifier }
+# 		# 	}
+# 		# }
+# 	}
+# }
