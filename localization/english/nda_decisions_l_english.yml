@@ -53,6 +53,10 @@ nda_revoke_cult_desc:0 "Since their failure to take over the world it is time to
 nda_revoke_cult_tooltip:0 "Remove the Cult as a Primary Culture."
 nda_revoke_cult_failure_tooltip:0 "Great Cthulhu and their Cult is no longer relevant."
 
+nda_revoke_cultist_homelands:0 "Remove the Cultist Homelands"
+nda_revoke_cultist_homelands_desc:0 "It is ridculous that the Cultists, regardless of their past influence, claim any of our lands as their homelands. We must make it clear our lands are not."
+nda_revoke_cultist_homelands_tooltip:0 "Remove the Cultist Homelands."
+
 nda_yig_overlordship:0 "Union of the Snake"
 nda_yig_overlordship_desc:0 "The Yigian Influence on us is so great that we should accept them as our overlords."
 nda_yig_overlordship_tooltip:0 "Become a puppet of the Yigians."

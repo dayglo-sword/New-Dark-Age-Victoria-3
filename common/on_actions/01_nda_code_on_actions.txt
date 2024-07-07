@@ -218,7 +218,7 @@ nda_monthly_cult_rejection_on_action = {
 			IF = { # remove condition as action selection done in on_action
 				limit = {
 		 			exists = THIS
-		 			is_full_cult_country = { COUNTRY="THIS" }  			
+					is_full_cult = yes			
 		 		}
 				# needs to be random chance to stop spaming??
 				random = {
@@ -476,7 +476,7 @@ nda_on_revolution_start_on_action = {
 	effect = {
 		if = {
 			limit = {
-				is_full_cult_country = { COUNTRY="THIS" }
+				is_full_cult = yes
 			}
 
 			scope:target = {

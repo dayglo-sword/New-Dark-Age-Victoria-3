@@ -1,0 +1,82 @@
+﻿nda_yankee_reconcile_progress_bar = {
+ 	name = "nda_yankee_reconcile_progress_bar_name"
+ 	desc = "nda_yankee_reconcile_progress_bar_desc"
+
+	default = yes 
+
+ 	monthly_progress = {
+
+		c:NEN ?= {
+			if = {
+				limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
+
+				add = {
+					desc = "nda_yankee_reconcile_force_cult_tt"
+					value = 1 
+				}		
+			}
+			else_if = {
+				limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
+
+				subtract = {
+					desc = "nda_yankee_reconcile_force_cult_tt"
+					value = 1 
+				}	
+
+			}
+			else_if = {
+				limit = { NOT = { EXISTS = c:USA }}
+
+				subtract = {
+					desc = "nda_yankee_reconcile_force_cult_tt"
+					value = 1 
+				}				
+			}	
+			
+			# FSA should boost a bit quicker
+			if = {
+				limit = { c:FSA ?= { relations:root >= relations_threshold:amicable } }
+
+				add = {
+					desc = "nda_yankee_reconcile_force_cult_tt"
+					value = 2
+				}
+				
+			}
+			else_if = {
+				limit = { c:FSA ?= { relations:root <= relations_threshold:cold } }
+
+				subtract = {
+					desc = "nda_yankee_reconcile_force_cult_tt"
+					value = 1 
+				}
+
+			}				
+
+			# Boost if owns NY or NJ
+			if = {
+				limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_YORK } }
+				
+				add = {
+					desc = "nda_yankee_reconcile_force_cult_tt"
+					value = 2
+				}
+
+			}
+			if = {
+				limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_JERSEY } }
+
+				add = {
+					desc = "nda_yankee_reconcile_force_cult_tt"
+					value = 2
+				}
+
+			}				
+		}
+
+ 	}
+
+ 	start_value = 50
+ 	min_value = 0
+ 	max_value = 100
+}

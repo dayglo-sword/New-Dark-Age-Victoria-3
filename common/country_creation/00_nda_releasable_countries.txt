@@ -55,6 +55,7 @@ STY = { # Stygia
 		STATE_PALESTINE
 		STATE_TRANSJORDAN
 		STATE_DEIR_EZ_ZOR
+		STATE_HAIL
 	}
 
 	required_num_states = 9

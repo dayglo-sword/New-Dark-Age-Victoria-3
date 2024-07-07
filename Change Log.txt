@@ -4,11 +4,14 @@ Major Changes
 Progress Bars for Journals
 
 Minor Changes
-Extend Dagonic Chinese Land release
+Extend Dagonic Chinese Land release, removing most Cultist homelands.
 Add New Cult IG name 'Grand Lodges'
-Try and force Power Bloc names for Cult Countries
+Try and force Power Bloc names for Cult Countries.
+Add decision to remove Cultist Homelands in post revolution/ pre Eldritch countries
+Change Yigian Religion Colour to Green for map contrast.
 
 Bug Fixes
+Remove Cultist Flag symbols after Cult removal due to revolutions.
 
 ------
 

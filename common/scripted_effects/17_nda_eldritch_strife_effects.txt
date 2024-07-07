@@ -1,113 +1,108 @@
 ﻿nda_effect_eldritch_strife
 {
 	# The Cult is falling apart after Cthulhu leaves. Cultures are re-asserting themselves
-	#IF = { # remove condition as action selection done in on_action
-		# limit = {
-		# 	exists = THIS
-		# 	is_full_cult_country = { COUNTRY="THIS" }  			
-		# }
 
-		random_scope_state = { # select an homeland state to get culture
-			limit = {
-				any_scope_culture = {
-					is_cult_culture = no
-				}
-			}
-			save_scope_as = culture_state
-			random_scope_culture = {
-				limit = { is_cult_culture = no }
-				save_scope_as = nda_eldritch_rebels
-				#debug_log_scopes = yes
+	random_scope_state = { # select an homeland state to get culture
+		limit = {
+			any_scope_culture = {
+				is_cult_culture = no
 			}
 		}
+		save_scope_as = culture_state
+		random_scope_culture = {
+			limit = { is_cult_culture = no }
+			save_scope_as = nda_eldritch_rebels
+			#debug_log_scopes = yes
+		}
+	}
 
-		THIS = {
-			# convert cultists back to culture in homeland
-			every_scope_state = {
-				limit = {
-					state_region = { is_homeland = scope:nda_eldritch_rebels }
+	THIS = {
+		# convert cultists back to culture in homeland
+		every_scope_state = {
+			limit = {
+				state_region = { is_homeland = scope:nda_eldritch_rebels }
+			}
+			save_scope_as = nda_rebel_homeland # use to see if anything worth notifiing occured
+
+			every_scope_pop = {
+				limit ={
+					OR = {
+						has_pop_culture = nda_cul_cultist	
+						has_pop_culture = nda_cul_dagonic	
+						has_pop_culture = nda_cul_yigian				
+					}
 				}
-				save_scope_as = nda_rebel_homeland # use to see if anything worth notifiing occured
+				
+				change_pop_culture = { target = scope:nda_eldritch_rebels value = 0.33 }
+				#scope:nda_eldritch_rebels.Religion
+			
+			}	
+			random_scope_pop = {
+				limit = {
+					NOT =  {
+						OR = {
+							religion = rel:nda_rel_cultist
+							religion = rel:nda_rel_yigian									
+						}							
+					}							
+				}
 
-				every_scope_pop = {
-					limit ={
+				save_scope_as = nda_rebel_religion				
+			}
+			debug_log_scopes = yes
+			every_scope_pop = {
+				limit ={
+					NOT = {
 						OR = {
 							has_pop_culture = nda_cul_cultist	
 							has_pop_culture = nda_cul_dagonic	
 							has_pop_culture = nda_cul_yigian				
-						}
-					}
-					
-					change_pop_culture = { target = scope:nda_eldritch_rebels value = 0.33 }
-					#scope:nda_eldritch_rebels.Religion
-				
-				}	
-				random_scope_pop = {
-					limit = {
-						NOT =  {
-							OR = {
-								religion = rel:nda_rel_cultist
-								religion = rel:nda_rel_yigian									
-							}							
 						}							
 					}
-
-					save_scope_as = nda_rebel_religion				
 				}
-				debug_log_scopes = yes
-				every_scope_pop = {
-					limit ={
-						NOT = {
-							OR = {
-								has_pop_culture = nda_cul_cultist	
-								has_pop_culture = nda_cul_dagonic	
-								has_pop_culture = nda_cul_yigian				
-							}							
-						}
-					}
-					if = {
-						limit = {
-							OR = {
-								religion = rel:nda_rel_cultist
-								religion = rel:nda_rel_yigian									
-							}							
-						}
-						#change_pop_religion = { target = rel:nda_eldritch_rebels.religion value = 0.10 }
-						if = {
-							limit = { exists = scope:nda_rebel_religion }
-							change_pop_religion = { target = scope:nda_rebel_religion.religion value = 0.20 }								
-						}
-			
-					}
-									
-				}			
-			}
-
-			add_loyalists = { value = -0.8 culture = scope:nda_eldritch_rebels }	
-
-			add_radicals = {
-				value = 0.8
-				culture = scope:nda_eldritch_rebels
-			}	
-			#debug_log_scopes = yes
-			debug_log = "Ritual - Eldritch Cult Rebels : [THIS.GetCountry.GetNameNoFormatting]"		
-
-			# notification to world of unrest - only for major cultists or player if running minor
-			if = {
-				limit = {
-					exists = scope:nda_rebel_homeland # at least one home land affected
-				}
-				every_country = {
+				if = {
 					limit = {
 						OR = {
-							is_full_cult_country = { COUNTRY="ROOT" } 	
-							ROOT = { is_player = yes }					
-						}
+							religion = rel:nda_rel_cultist
+							religion = rel:nda_rel_yigian									
+						}							
 					}
-					post_notification = nda_ritual_post_cthulhu_strife
-				}				
-			}
-					
+					#change_pop_religion = { target = rel:nda_eldritch_rebels.religion value = 0.10 }
+					if = {
+						limit = { exists = scope:nda_rebel_religion }
+						change_pop_religion = { target = scope:nda_rebel_religion.religion value = 0.20 }								
+					}
+		
+				}
+								
+			}			
 		}
-	#}
+
+		add_loyalists = { value = -0.8 culture = scope:nda_eldritch_rebels }	
+
+		add_radicals = {
+			value = 0.8
+			culture = scope:nda_eldritch_rebels
+		}	
+		#debug_log_scopes = yes
+		debug_log = "Ritual - Eldritch Cult Rebels : [THIS.GetCountry.GetNameNoFormatting]"		
+
+		# notification to world of unrest - only for major cultists or player if running minor
+		if = {
+			limit = {
+				exists = scope:nda_rebel_homeland # at least one home land affected
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_full_cult_country = { COUNTRY="ROOT" } 	
+						ROOT = { is_player = yes }					
+					}
+				}
+				post_notification = nda_ritual_post_cthulhu_strife
+			}				
+		}
+				
+	}
+
 }

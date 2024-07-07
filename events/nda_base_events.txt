@@ -1053,7 +1053,7 @@ nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them -
 	hidden = yes 
 
 	trigger = {
-		is_full_cult_country = { COUNTRY="THIS" } # any full cult country
+		is_full_cult = yes # any full cult country
 		#NOT = { has_variable = nda_cultists_in_open }
 		any_interest_group = {
 			has_ideology = ideology:ideology_anti_slavery # ideologies have been reset by revolt

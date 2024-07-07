@@ -109,9 +109,7 @@ nda_effect_yigian_annex = {
 		limit = {
 			any_country = { 			
 				is_player = no		
-				NOT = { 
-					is_full_cult_country = { COUNTRY="THIS" }				
-				}
+				is_full_cult = no
 				has_variable = nda_yig_in_open		
 			}
 		} 
@@ -119,9 +117,7 @@ nda_effect_yigian_annex = {
 		ordered_country = {
 			limit = {
 				is_player = no		
-				NOT = { 
-					is_full_cult_country = { COUNTRY="THIS" }				
-				}
+				is_full_cult = no
 				has_variable = nda_yig_in_open			
 			}
 			order_by = { subtract = global_country_ranking }
@@ -318,6 +314,12 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 			# always change relationship
 			change_relations = { country = c:YIG value = 50 }
 			debug_log = "Improved Relations with YIG " 
+
+			# Diplo Catalyst - should be a second chance - does the relations boost trigger a catalyst?
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = c:YIG
+			}
 		}	
 	}
 
@@ -335,6 +337,12 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 
 		change_relations = { country = c:YIG value = -50 }
 		debug_log = "Decrease Relations with YIG " 
+
+		# Diplo Catalyst - should be a second chance - does the relations boost trigger a catalyst?
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_negative
+			target = c:YIG
+		}
 	}
 }
 

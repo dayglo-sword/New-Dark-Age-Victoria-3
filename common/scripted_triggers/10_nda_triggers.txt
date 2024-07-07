@@ -256,7 +256,8 @@ nda_coa_def_cthulhu_trigger = {
 
 nda_coa_def_cultist_trigger = {
 	scope:actor = {
-		has_variable = nda_cultists_in_open
+		#has_variable = nda_cultists_in_open
+		country_has_primary_culture = cu:nda_cul_cultist
 	}
 	# any_primary_culture = {
     # 	has_discrimination_trait = eldritch_culture_group
@@ -288,7 +289,7 @@ country_can_form_power_bloc = {
 		is_revolutionary = no
 		OR = {
 			country_rank >= rank_value:major_power	
-			is_full_cult_country = { COUNTRY="THIS" }						
+			is_full_cult = yes						
 		}
 	}	
 }

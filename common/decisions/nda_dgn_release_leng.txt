@@ -37,7 +37,13 @@
 							}
 							debug_log = "Make HNA Cultist"
 							#trigger_event = { id = nda_base.7 days= 2 }	
-							add_journal_entry = { type = je_nda_cult_spreads }		
+							add_journal_entry = { type = je_nda_cult_spreads }	
+							
+							every_scope_state = {
+								state_region = {
+									remove_homeland = cu:nda_cul_cultist
+								}
+							}
 						}
 					}
 				}
@@ -56,6 +62,12 @@
 							debug_log = "Make GNG Cultist"
 							#trigger_event = { id = nda_base.7 days = 4 }	
 							add_journal_entry = { type = je_nda_cult_spreads }		
+
+							every_scope_state = {
+								state_region = {
+									remove_homeland = cu:nda_cul_cultist
+								}
+							}
 						}
 					}
 				}
@@ -74,7 +86,13 @@
 							}
 							debug_log = "Make YUN Cultist"
 							#trigger_event = { id = nda_base.7 days = 6 }	
-							add_journal_entry = { type = je_nda_cult_spreads }		
+							add_journal_entry = { type = je_nda_cult_spreads }	
+							
+							every_scope_state = {
+								state_region = {
+									remove_homeland = cu:nda_cul_cultist
+								}
+							}
 						}
 					}
 				}
@@ -93,7 +111,13 @@
 							}
 							debug_log = "Make SHN Cultist"
 							#trigger_event = { id = nda_base.7 days = 8 }
-							add_journal_entry = { type = je_nda_cult_spreads }			
+							add_journal_entry = { type = je_nda_cult_spreads }	
+							
+							every_scope_state = {
+								state_region = {
+									remove_homeland = cu:nda_cul_cultist
+								}
+							}
 						}
 					}
 				}
@@ -112,7 +136,13 @@
 							}
 							debug_log = "Make GUI Cultist"
 							#trigger_event = { id = nda_base.7 days = 10 }
-							add_journal_entry = { type = je_nda_cult_spreads }			
+							add_journal_entry = { type = je_nda_cult_spreads }		
+							
+							every_scope_state = {
+								state_region = {
+									remove_homeland = cu:nda_cul_cultist
+								}
+							}
 						}
 					}
 				}
@@ -133,6 +163,12 @@
 							debug_log = "Make TUV Cultist"
 							#trigger_event = { id = nda_base.7 days = 12 }	
 							add_journal_entry = { type = je_nda_cult_spreads }		
+
+							every_scope_state = {
+								state_region = {
+									remove_homeland = cu:nda_cul_cultist
+								}
+							}
 						}
 					}
 				}
@@ -293,10 +329,16 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								is_cultist_country = no
 							}
 							debug_log = "Make HNA Cultist"
-							trigger_event = { id = nda_base.7 days = 1 }		
+							add_journal_entry = { type = je_nda_cult_spreads }			
+						}	
+						
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
-				}
+				}				
 			}
 			if = {
 				limit = { exists = s:STATE_GUANGXI.region_state:DGN }
@@ -305,12 +347,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					origin = this
 					state = s:STATE_GUANGXI.region_state:DGN
 					on_created = {
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make GNG Cultist"
-							trigger_event = { id = nda_base.7 days = 2 }		
+							add_journal_entry = { type = je_nda_cult_spreads }		
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -322,13 +371,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					origin = this
 					state = s:STATE_YUNNAN.region_state:DGN
 					on_created = {
-						# make cultists
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make YUN Cultist"
-							trigger_event = { id = nda_base.7 days = 3 }		
+							add_journal_entry = { type = je_nda_cult_spreads }			
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -341,13 +396,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_SHANXI.region_state:DGN
 					state = s:STATE_XIAN.region_state:DGN
 					on_created = {
-						# make cultists
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make SHN Cultist"
-							trigger_event = { id = nda_base.7 days = 4 }		
+							add_journal_entry = { type = je_nda_cult_spreads }			
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -360,12 +421,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_GUIZHOU.region_state:DGN
 	
 					on_created = {
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make GUI Cultist"
-							trigger_event = { id = nda_base.7 days = 5 }		
+							add_journal_entry = { type = je_nda_cult_spreads }													
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -378,13 +446,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_TUVA.region_state:DGN
 	
 					on_created = {
-						# make cultists
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make TUV Cultist"
-							trigger_event = { id = nda_base.7 days = 6 }		
+							add_journal_entry = { type = je_nda_cult_spreads }			
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -402,13 +476,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_ULIASTAI.region_state:DGN
 					state = s:STATE_ALXA.region_state:DGN
 					on_created = {
-						# make cultists
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make MGL Cultist"
-							trigger_event = { id = nda_base.7 days = 7 }		
+							add_journal_entry = { type = je_nda_cult_spreads }			
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -427,13 +507,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_DZUNGARIA.region_state:DGN
 					state = s:STATE_JETISY.region_state:DGN #ILI
 					on_created = {
-						# make cultists
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make MGL Cultist"
-							trigger_event = { id = nda_base.7 days = 8 }		
+							add_journal_entry = { type = je_nda_cult_spreads }		
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -453,13 +539,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_NORTHERN_MANCHURIA.region_state:DGN
 					state = s:STATE_SOUTHERN_MANCHURIA.region_state:DGN
 					on_created = {
-						# make cultists
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make MAN Cultist"
-							trigger_event = { id = nda_base.7 days = 8 }		
+							add_journal_entry = { type = je_nda_cult_spreads }			
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -480,13 +572,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_CHONGQING.region_state:DGN
 
 					on_created = {
-						# make cultists
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make SIC Cultist"
-							trigger_event = { id = nda_base.7 days = 8 }		
+							add_journal_entry = { type = je_nda_cult_spreads }			
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}
@@ -505,13 +603,19 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_SOUTHERN_ANHUI.region_state:DGN
 					state = s:STATE_NORTHERN_ANHUI.region_state:DGN
 					on_created = {
-						# make cultists
+						# make potential cultists
 						IF = {
 							limit = {
 								is_cultist_country = no
 							}
 							debug_log = "Make ANU Cultist"
-							trigger_event = { id = nda_base.7 days = 8 }		
+							add_journal_entry = { type = je_nda_cult_spreads }		
+						}
+
+						every_scope_state = {
+							state_region = {
+								remove_homeland = cu:nda_cul_cultist
+							}
 						}
 					}
 				}

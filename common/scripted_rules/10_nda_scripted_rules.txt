@@ -3,6 +3,6 @@
 can_lead_power_bloc = {
 	OR = {
 		country_rank >= rank_value:major_power	
-		is_full_cult_country = { COUNTRY="THIS" }	
+		is_full_cult = yes
 	}
 }

@@ -909,6 +909,7 @@ paris_convention = {
 	    		any_scope_state = { state_region = s:STATE_ILE_DE_FRANCE }
 	    	}
 	    }
+		is_full_cult = no
 	}
 }
 
@@ -939,6 +940,7 @@ amazon_pact = {
 	    		any_scope_state = { state_region = s:STATE_GUAYANA }
 	    	}
 	    }
+		is_full_cult = no
 	}
 }
 

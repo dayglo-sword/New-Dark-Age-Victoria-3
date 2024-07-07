@@ -90,9 +90,17 @@ je_nda_maritimes_btn_new_brunswick = {
 
 		if = {
 			limit = { has_journal_entry = je_nda_yankee_reconcile }
-			change_variable = {
-				name = nda_yankee_reconcile_progress_var
-				add = -10
+
+			custom_tooltip = 
+			{
+				text = nda_yankee_reconcile
+
+				je:je_nda_yankee_reconcile = {
+					add_progress = {
+						value = -10
+						name = nda_yankee_reconcile_progress_bar
+					}					
+				}				
 			}
 		}
 	}
@@ -190,9 +198,17 @@ je_nda_maritimes_btn_nova_scotia = {
 
 		if = {
 			limit = { has_journal_entry = je_nda_yankee_reconcile }
-			change_variable = {
-				name = nda_yankee_reconcile_progress_var
-				add = -10
+
+			custom_tooltip = 
+			{
+				text = nda_yankee_reconcile
+
+				je:je_nda_yankee_reconcile = {
+					add_progress = {
+						value = -10
+						name = nda_yankee_reconcile_progress_bar
+					}					
+				}				
 			}
 		}
 	}
@@ -233,9 +249,17 @@ je_nda_maritimes_btn_strange_ways = {
 
 		if = {
 			limit = { has_journal_entry = je_nda_yankee_reconcile }
-			change_variable = {
-				name = nda_yankee_reconcile_progress_var
-				add = -10
+
+			custom_tooltip = 
+			{
+				text = nda_yankee_reconcile
+
+				je:je_nda_yankee_reconcile = {
+					add_progress = {
+						value = -10
+						name = nda_yankee_reconcile_progress_bar
+					}					
+				}				
 			}
 		}
 	}

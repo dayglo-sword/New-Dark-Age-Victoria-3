@@ -153,7 +153,7 @@ nda_effect_eldritch_annex = {
 				is_player = no				
 				NOT = {
 					OR = {
-						is_full_cult_country = { COUNTRY="THIS" }						
+						is_full_cult = yes					
 						any_scope_state = { 
 							OR = {
 								is_potentially_dagonic = yes
@@ -175,7 +175,7 @@ nda_effect_eldritch_annex = {
 				is_player = no	
 				NOT = {
 					OR = {
-						is_full_cult_country = { COUNTRY="THIS" }						
+						is_full_cult = yes						
 						any_scope_state = { 
 							OR = {
 								is_potentially_dagonic = yes
@@ -428,7 +428,7 @@ nda_effect_eldritch_anger
 
 	every_country = {
 		limit = {
-			is_full_cult_country = { COUNTRY="THIS" } # any full cult country 			
+			is_full_cult = yes # any full cult country 			
 		}
 
 		change_relations = { country = ROOT value = -100 }
@@ -438,12 +438,18 @@ nda_effect_eldritch_anger
 	every_country = {
 		limit = { # leading cult follower counties
 			has_variable = nda_cultists_in_open
-			NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+			is_full_cult = no
 		}
 
 		change_relations = { country = ROOT value = -50 }
 
 		#debug_log = "Angry Cult Follower Country" 
+
+		# Diplo Catalyst - should be a second chance - does the relations boost trigger a catalyst?
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_negative
+			target = ROOT
+		}
 	}
 }
 

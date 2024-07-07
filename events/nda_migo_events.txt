@@ -161,7 +161,7 @@ nda_migo.4 = { #  We Have Returned
 		# select a new country
 		random_country = {
 			limit = {
-				NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+				is_full_cult = no
 				NOT = { has_variable = nda_migo_visited }
 				country_rank >= rank_value:unrecognized_regional_power					
 			}
@@ -528,7 +528,7 @@ nda_migo.1927 = { #  The End Is Nigh
 			# select a new country
 			random_country = {
 				limit = {
-					NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+					is_full_cult = no
 					NOT = { has_variable = nda_migo_visited }
 					country_rank >= rank_value:unrecognized_regional_power					
 				}

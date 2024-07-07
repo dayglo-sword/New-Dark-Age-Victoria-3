@@ -259,7 +259,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 			}
 			add = -30
 
-			if = { limit = { owner = { is_full_cult_country = { COUNTRY="THIS" } }}
+			if = { limit = { owner = { is_full_cult = yes }}
 				add = -50 # 'Free Worshippers' shouldn't have cultist leading
 			}
 		}	

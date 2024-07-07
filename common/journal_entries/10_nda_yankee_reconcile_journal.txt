@@ -3,6 +3,8 @@
 
 	group = je_group_foreign_affairs
 
+	scripted_progress_bar = nda_yankee_reconcile_progress_bar 
+
 	is_shown_when_inactive = {
 		c:NEN ?= ROOT
 		OR = {
@@ -48,80 +50,80 @@
 
 	on_monthly_pulse = {
 	
-		effect = {
-			set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
+		# effect = {
+		# 	set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
 		
-			c:NEN ?= {
-				if = {
-					limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
+		# 	c:NEN ?= {
+		# 		if = {
+		# 			limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
 
-						change_variable = {
-							name = nda_yankee_reconcile_progress_var
-							add = 1
-						}	
+		# 				change_variable = {
+		# 					name = nda_yankee_reconcile_progress_var
+		# 					add = 1
+		# 				}	
 				
-				}
-				else_if = {
-					limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
+		# 		}
+		# 		else_if = {
+		# 			limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
 
-						change_variable = {
-							name = nda_yankee_reconcile_progress_var
-							subtract = 1
-						}	
+		# 				change_variable = {
+		# 					name = nda_yankee_reconcile_progress_var
+		# 					subtract = 1
+		# 				}	
 
-				}
-				else_if = {
-					limit = { NOT = { EXISTS = c:USA }}
+		# 		}
+		# 		else_if = {
+		# 			limit = { NOT = { EXISTS = c:USA }}
 
-						change_variable = {
-							name = nda_yankee_reconcile_progress_var
-							subtract = 1
-						}
+		# 				change_variable = {
+		# 					name = nda_yankee_reconcile_progress_var
+		# 					subtract = 1
+		# 				}
 
-				}	
+		# 		}	
 				
-				# FSA should boost a bit quicker
-				if = {
-					limit = { c:FSA ?= { relations:root >= relations_threshold:amicable } }
+		# 		# FSA should boost a bit quicker
+		# 		if = {
+		# 			limit = { c:FSA ?= { relations:root >= relations_threshold:amicable } }
 
-						change_variable = {
-							name = nda_yankee_reconcile_progress_var
-							add = 2
-						}
+		# 				change_variable = {
+		# 					name = nda_yankee_reconcile_progress_var
+		# 					add = 2
+		# 				}
 					
-				}
-				else_if = {
-					limit = { c:FSA ?= { relations:root <= relations_threshold:cold } }
+		# 		}
+		# 		else_if = {
+		# 			limit = { c:FSA ?= { relations:root <= relations_threshold:cold } }
 
-						change_variable = {
-							name = nda_yankee_reconcile_progress_var
-							subtract = 1
-						}	
+		# 				change_variable = {
+		# 					name = nda_yankee_reconcile_progress_var
+		# 					subtract = 1
+		# 				}	
 
-				}				
+		# 		}				
 
-				# Boost if owns NY or NJ
-				if = {
-					limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_YORK } }
+		# 		# Boost if owns NY or NJ
+		# 		if = {
+		# 			limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_YORK } }
 					
-						change_variable = {
-							name = nda_yankee_reconcile_progress_var
-							add = 1
-						}
+		# 				change_variable = {
+		# 					name = nda_yankee_reconcile_progress_var
+		# 					add = 1
+		# 				}
 
-				}
-				if = {
-					limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_JERSEY } }
+		# 		}
+		# 		if = {
+		# 			limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_JERSEY } }
 
-						change_variable = {
-							name = nda_yankee_reconcile_progress_var
-							add = 1
-						}
+		# 				change_variable = {
+		# 					name = nda_yankee_reconcile_progress_var
+		# 					add = 1
+		# 				}
 
-				}				
-			}
+		# 		}				
+		# 	}
 		
-		}						
+		# }						
 	}				
 
 
@@ -144,7 +146,7 @@
 			text = je_nda_yankee_reconcile_complete_tt
 
 			scope:journal_entry = {
-				is_goal_complete = yes
+				"scripted_bar_progress(nda_yankee_reconcile_progress_bar)" >= 100 # absolute value not percentage
 			}
 		}
     }
@@ -187,8 +189,8 @@
 			text = je_nda_yankee_reconcile_fail_tt
 
 			scope:journal_entry = {
-				root.var:nda_yankee_reconcile_progress_var < 0
-			}		
+				"scripted_bar_progress(nda_yankee_reconcile_progress_bar)" <= 0 # absolute value not percentage
+			}	
 		}
 	}
 
@@ -197,32 +199,8 @@
 			set_variable = je_nda_yankee_reconcile_failed
 		}
 	}
-	
- 	# Yankee Reconsile decisions
-	#scripted_button = je_nda_yankee_reconcile_btn_new_brunswick
 
-	current_value = {
-		if = {
-			limit = {
-				scope:journal_entry = {
-					goal_value = 0
-				}
-			}
-			value = 0
-		}
-		else = {
-			value = root.var:nda_yankee_reconcile_progress_var 
-		}
-	}
-
-	goal_add_value = {
-		add = 100
-	}
-
-	progressbar = yes
 	weight = 10
-
-	#inheritable = yes
 
 	should_be_pinned_by_default = yes
 }

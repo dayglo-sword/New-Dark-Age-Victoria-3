@@ -1,9 +1,13 @@
 ﻿nda_yig_overlordship = { # Union of the Snake
 	is_shown = {
 		#is_player = no
-		exists = c:YIG
+		OR = {
+			exists = c:YIG	
+			exists = c:STY		
+		}
+
 		NOT = { 
-			is_full_cult_country = { COUNTRY="THIS" } 
+			is_full_cult = yes
 			has_global_variable = nda_ritual_cthulhu_leaves
 			has_variable = nda_yig_overlordship_cooldown
 		}
@@ -11,34 +15,73 @@
 	}
 
 	possible = {
-		# when cult is in strong political postion and friends with YIG
+		# when cult is in strong political postion and friends with YIG or STY
 		is_subject = no
-		is_player = no
-		country_rank < c:YIG.country_rank
+		#is_player = no
+
 		any_interest_group = {	
 			has_ideology = ideology:ideology_nda_cabalistic
 			is_in_government = yes	
 			is_powerful = yes		# should use clout 50%+	instead? how to?
 		}	
+		# need to sort out text for possibilities as confusing.
+		OR = {
+			AND = {
+				exists = c:YIG 
+				country_rank < c:YIG.country_rank
+			}
+			AND = {
+				exists = c:STY 
+				is_adjacent_to_country = c:STY	
+				country_rank < c:STY.country_rank
+			}			
+		}
 	}
 	
 	when_taken = {
-		# Accepts YIG as overlord - becomes puppet
-		c:YIG = {
-			create_diplomatic_pact = {
-				country = ROOT
-				type = puppet
-			}			
+
+		if = {
+			limit = {
+				exists = c:STY 
+				is_adjacent_to_country = c:STY	
+				country_rank < c:STY.country_rank				
+			}
+
+			c:STY = {
+				create_diplomatic_pact = {
+					country = ROOT
+					type = puppet
+				}			
+			}	
+			
+			hidden_effect = {
+				set_variable = {
+					name = nda_yig_overlordship_cooldown
+					days = 182
+				}			
+			}
+
+			debug_log = "Become STY puppet : [THIS.GetCountry.GetNameNoFormatting]"		
+		}
+		else = {
+			# Accepts YIG as overlord - becomes puppet
+			c:YIG = {
+				create_diplomatic_pact = {
+					country = ROOT
+					type = puppet
+				}			
+			}
+
+			hidden_effect = {
+				set_variable = {
+					name = nda_yig_overlordship_cooldown
+					days = 182
+				}			
+			}
+
+			debug_log = "Become YIG puppet : [THIS.GetCountry.GetNameNoFormatting]"			
 		}
 
-		hidden_effect = {
-			set_variable = {
-				name = nda_yig_overlordship_cooldown
-				days = 182
-			}			
-		}
-
-		debug_log = "Become YIG puppet : [THIS.GetCountry.GetNameNoFormatting]"
 		#debug_log_scopes = no
 		#custom_tooltip = nda_yig_overlordship_tooltip
 	}

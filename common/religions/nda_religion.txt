@@ -15,7 +15,7 @@ nda_rel_yigian = {
 	traits = {
 		abomination occult
 	}
-	color =  { 205 220 57 } #{0.23 0.45 0.01 }
+	color =  { 50 220 57 } #{0.23 0.45 0.01 }
 }
 
 # Spiritualist

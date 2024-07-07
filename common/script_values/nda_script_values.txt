@@ -132,7 +132,7 @@ nda_cult_spread_total =
 }
 
 # now actually only used for Investigator resistance
-nda_country_cult_spread_total =
+nda_active_investigator_IGs =
 {
 	value = 0
 
@@ -140,7 +140,7 @@ nda_country_cult_spread_total =
 		limit = { 
 			is_marginal = no 
 			leader = { 
-				has_eldritch_trait = yes
+				has_trait = nda_investigator
 			}
 		}
 

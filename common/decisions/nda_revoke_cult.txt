@@ -4,7 +4,7 @@
 		has_global_variable = nda_ritual_cthulhu_leaves	
 		has_variable = nda_cultists_in_open
 		country_has_primary_culture = cu:nda_cul_cultist
-		NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+		is_full_cult = no
 	}
 
 	possible = {

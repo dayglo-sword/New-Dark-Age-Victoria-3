@@ -3,7 +3,7 @@
 		#is_player = no
 		exists = c:DGN
 		NOT = { 
-			is_full_cult_country = { COUNTRY="THIS" } 
+			is_full_cult = yes
 			has_global_variable = nda_ritual_cthulhu_leaves
 			has_variable = nda_dgn_overlordship_cooldown
 		}

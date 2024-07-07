@@ -2,7 +2,7 @@
 	is_shown = {
 		# but not openly
 		has_cult_culture = no # does not have but should have	
-		NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+		is_full_cult = no
 		any_interest_group = {	
 			has_ideology = ideology:ideology_nda_cabalistic				
 		}

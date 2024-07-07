@@ -17,7 +17,7 @@ nda_ritual.1924 = { # Cthulhu Return - 1925 already used below
 		every_country = {
 			limit = {
 				OR = { 
-					is_full_cult_country = { COUNTRY="THIS" }	
+					is_full_cult = yes	
 					is_player = yes
 				}
 			}
@@ -189,7 +189,7 @@ nda_ritual.1890 = { # Cthulhu Early Return
 		every_country = {
 			limit = {
 				OR = { 
-					is_full_cult_country = { COUNTRY="THIS" }	
+					is_full_cult = yes	
 					is_player = yes
 				}
 			}
@@ -381,7 +381,7 @@ nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countri
 			is_country_alive = yes
 			NOT = {
 				OR = {
-					is_full_cult_country = { COUNTRY="THIS" }						
+					is_full_cult = yes						
 					any_scope_state = { 
 						OR = {
 							is_potentially_dagonic = yes
@@ -680,7 +680,7 @@ nda_ritual.9 = { # Reaction to last war
 		# cop out of war!
 		random_country = {
 			limit = {
-				NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+				is_full_cult = no
 				NOT = { THIS = c:NEN }
 				country_rank >= rank_value:unrecognized_regional_power					
 			}
@@ -772,7 +772,7 @@ nda_ritual.11 = { # The world surrenders. - Boost DGN by auto adding Cult countr
 			is_player = no
 			is_country_alive = yes
 			country_has_primary_culture = cu:nda_cul_dagonic
-			NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+			is_full_cult = no
 			NOT = { # Hastur does not surrender to a giant cat with squid on its head
 				has_variable = nda_king_in_yellow_rules						
 			}
@@ -829,7 +829,7 @@ nda_ritual.12 = { # The world surrenders. - Boost ELD by auto adding Cult countr
 			is_player = no
 			is_country_alive = yes
 			country_has_primary_culture = cu:nda_cul_yigian
-			NOT = { is_full_cult_country = { COUNTRY="THIS" } }
+			is_full_cult = no
 			NOT = { # Hastur does not surrender to a giant cat with squid on its head
 				has_variable = nda_king_in_yellow_rules						
 			}

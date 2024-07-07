@@ -866,7 +866,7 @@ nda_hasturian.1894 = { # shouldn't use year as just random
 
 		# has at least one qualifying state
 		any_state = {
-			owner = { NOT = { is_full_cult_country = { COUNTRY="THIS" } } }
+			owner = { is_full_cult = no }
 		}
 	}
 
@@ -875,7 +875,7 @@ nda_hasturian.1894 = { # shouldn't use year as just random
 		# selected state
 		random_state = {
 			limit = {			
-				owner = { NOT = { is_full_cult_country = { COUNTRY="THIS" } } }
+				owner = { is_full_cult = no }
 			}
 			trigger_event = { id = nda_hasturian.1895 }			
 		}

@@ -64,9 +64,7 @@
 
 		if = { # cultists outside cult country
 			limit = {
-				NOT = {
-					is_full_cult_country = { COUNTRY="THIS" }				
-				}
+				is_full_cult = no
 			}
 
 			every_scope_culture = {
@@ -91,7 +89,7 @@
 
 		if = { # cultists in cult country
 			limit = {
-					is_full_cult_country = { COUNTRY="THIS" }				
+				is_full_cult = yes			
 			}
 
 			# Add Country Modifiers - Buff
@@ -169,7 +167,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 
 		if = {
 			limit = {
-				is_full_cult_country = { COUNTRY="THIS" }					
+				is_full_cult = yes					
 			}
 
 			every_scope_culture = {

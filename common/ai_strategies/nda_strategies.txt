@@ -41,7 +41,7 @@
 
 	possible = {
 		# for primary cult countries only? - should be default
-		is_full_cult_country = { COUNTRY="THIS" }	
+		is_full_cult = yes
 	}
 	
 	weight = {
@@ -69,7 +69,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	
 	will_form_power_bloc = {
 		# for primary cult countries only?
-		is_full_cult_country = { COUNTRY="THIS" }	
+		is_full_cult = yes
 	}
 
 	undesirable_infamy_level = {
@@ -297,7 +297,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		dominate = {
 			if = {
 				limit = {
-					scope:target_country = { is_full_cult_country = { COUNTRY="THIS" } } 
+					scope:target_country = { is_full_cult = yes } 
 					NOT = { has_global_variable = nda_ritual_cthulhu_leaves }
 				}
 				multiply = 0.00 # never dominate full cultists (until cthulhu has gone)
@@ -321,7 +321,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		conquer = {
 			if = {
 				limit = {
-					scope:target_country = { is_full_cult_country = { COUNTRY="THIS" } } 
+					scope:target_country = { is_full_cult = yes } 
 					NOT = { has_global_variable = nda_ritual_cthulhu_leaves }
 				}
 				multiply = 0.00 # never conquer full cultists
@@ -356,7 +356,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		
 	possible = {
 		# for primary cult countries only? - should be default
-		is_full_cult_country = { COUNTRY="THIS" }	
+		is_full_cult = yes
 	}
 
 	weight = {
@@ -458,7 +458,7 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 
 	possible = {
 		# for primary cult countries only? - should be default
-		is_full_cult_country = { COUNTRY="THIS" }	
+		is_full_cult = yes
 	}
 	
 	weight = {

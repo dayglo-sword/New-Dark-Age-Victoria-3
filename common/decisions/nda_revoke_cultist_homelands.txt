@@ -1,0 +1,76 @@
+﻿nda_revoke_cultist_homelands = { # there is problem with sucessful revolutions removing cultist culture, making ELD creation more difficult, 
+	is_shown = {
+		has_variable = nda_cultists_in_open # was a cult country
+		NOT = { country_has_primary_culture = cu:nda_cul_cultist } # but no longer
+		is_full_cult = no
+
+		any_scope_state = {
+			is_split_state = no
+			state_region = {				
+				is_homeland = cu:nda_cul_cultist
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = nda_revoke_cultist_homelands_tooltip
+			has_variable = nda_cultists_in_open			
+		}
+
+		NOT = { country_has_primary_culture = cu:nda_cul_cultist } 
+
+		any_interest_group = {	# If Cultist still powerful then act as block
+			has_ideology = ideology:ideology_nda_cabalistic
+
+			is_in_government = no	
+			is_powerful = no								
+		}	
+	}
+    	
+	when_taken = {
+
+		debug_log = "Revoke Cult Homelands"
+		#debug_log_scopes = yes
+
+		every_scope_state = {
+			limit = {
+				is_split_state = no
+				state_region = { is_homeland = cu:nda_cul_cultist }
+			}
+			state_region = {
+				remove_homeland = cu:nda_cul_cultist
+			}
+		}	
+
+		## angry cultists!
+		add_loyalists = { value = -0.7 culture = cu:nda_cul_cultist }
+		add_loyalists = { value = -0.7 culture = cu:nda_cul_yigian }
+		add_loyalists = { value = -0.7 culture = cu:nda_cul_dagonic }
+
+		add_radicals =  { value = 0.7 culture = cu:nda_cul_cultist }
+		add_radicals =  { value = 0.7 culture = cu:nda_cul_yigian }
+		add_radicals =  { value = 0.7 culture = cu:nda_cul_dagonic }
+
+		# infamy, infamy!
+		change_infamy = 10
+
+		# anger neighbouring cult countries
+		every_country = {
+			limit = { 
+				is_adjacent_to_country = prev 
+				is_cultist_country = yes
+			}
+
+			change_relations = {
+				country = prev
+				value = -50
+			}
+		}
+	}
+
+	ai_chance = { 
+		base = 5 # up chance to speed up breakdown	
+	}
+
+}

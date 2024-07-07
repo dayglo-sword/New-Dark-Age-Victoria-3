@@ -129,9 +129,7 @@ nda_effect_dagonic_annex = {
 		limit = {
 			any_country = { 	
 				is_player = no			
-				NOT = {		
-					is_full_cult_country = { COUNTRY="THIS" }	
-				}
+				is_full_cult = no
 				has_variable = nda_dagon_in_open
 			}
 		} 
@@ -139,9 +137,7 @@ nda_effect_dagonic_annex = {
 		ordered_country = {
 			limit = {
 				is_player = no			
-				NOT = {		
-					is_full_cult_country = { COUNTRY="THIS" }	
-				}
+				is_full_cult = no
 				has_variable = nda_dagon_in_open		
 			}
 			order_by = { subtract = global_country_ranking }
@@ -337,6 +333,12 @@ nda_effect_dagonic_influence = { # boost to dagonic influence in area
 			# always change relationship
 			change_relations = { country = c:DGN value = 50 }
 			debug_log = "Improved Relations with DGN " 
+
+			# Diplo Catalyst - should be a second chance - does the relations boost trigger a catalyst?
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = c:DGN
+			}
 		}		
 	}
 
@@ -354,6 +356,12 @@ nda_effect_dagonic_influence = { # boost to dagonic influence in area
 
 		change_relations = { country = c:DGN value = -50 }
 		debug_log = "Decrease Relations with DGN " 
+
+		# Diplo Catalyst - should be a second chance - does the relations boost trigger a catalyst?
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_negative
+			target = c:DGN
+		}
 	}
 }
 

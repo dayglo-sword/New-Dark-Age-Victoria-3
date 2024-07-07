@@ -57,6 +57,13 @@
 
 			# always change relationship
 			change_relations = { country = c:ELD value = 100 } # is this too much ?
+
+			# Diplo Catalyst - should be a second chance - does the relations boost trigger a catalyst?
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = c:ELD
+			}
+
 			debug_log = "Improved Relations with ELD : [THIS.GetCountry.GetNameNoFormatting]" 
 		}
 	}
