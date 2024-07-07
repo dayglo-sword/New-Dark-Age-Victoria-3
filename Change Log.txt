@@ -1,3 +1,17 @@
+Version v1.7.3
+
+Major Changes
+Progress Bars for Journals
+
+Minor Changes
+Extend Dagonic Chinese Land release
+Add New Cult IG name 'Grand Lodges'
+Try and force Power Bloc names for Cult Countries
+
+Bug Fixes
+
+------
+
 Version v1.7
 
 Major Changes
@@ -6,7 +20,7 @@ Add Diplomatic Action to 'Oppose the Cult'
 Change Diplomatic Actions so Cultist support each other.
 Expand 'Trapezohedron' events to Mi-Go and Hasturians.
 Youthfulness for Cult Masters and certain other characters.
-Archeological Expedition to Nile.
+Archaeological Expedition to Nile.
 
 Minor Changes
 Hasturian America must have capital in Americas.

@@ -1,0 +1,185 @@
+﻿nda_cult_spread_progress_bar = {
+ 	name = "nda_cult_spread_progress_bar_name"
+ 	desc = "nda_cult_spread_progress_bar_desc"
+
+	default = yes #double_sided_gold = yes
+
+ 	monthly_progress = {
+
+		# fix bug where this reruns when ELD revolts
+		IF = {
+			limit = { c:ELD ?= THIS }
+
+			add = {
+				desc = "nda_cult_spread_force_cult_tt"
+				value = 1200 
+			}					
+		}
+		
+		# use ban on 'nameless Cults' to throtle back
+		IF = {
+			limit = { has_variable = nda_nameless_cults_supressed}
+			
+			subtract = {
+				desc = "nda_cult_spread_nameless_cults_supressed_tt"
+				add = 1
+			}					
+		}
+
+		# Every non marginal 
+		IF = {
+			limit = { 
+				any_interest_group = {
+					is_marginal = no 
+					leader = { 
+						has_eldritch_trait = yes
+					}			
+				} 
+			}
+			add = {
+				desc = "nda_cult_spread_interest_group_tt"				
+				add = {
+					every_interest_group = {
+						limit = { 
+							is_marginal = no 
+							leader = { 
+								has_eldritch_trait = yes
+							}
+						}				
+						add = 1		
+					}					
+				}		
+			}			
+		}
+
+		# Every in government
+		IF = {
+			limit = { 
+				any_interest_group = {
+					is_in_government = yes
+					leader = { 
+						has_eldritch_trait = yes
+					}			
+				} 
+			}		
+			add = {
+				desc = "nda_cult_spread_interest_group_government_tt"
+				add = {
+					every_interest_group = {
+						limit = { 
+							is_in_government = yes 
+							leader = { 
+								has_eldritch_trait = yes
+							}
+						}				
+						add = 1		
+					}	
+				}
+			}			
+		}	
+
+		# Every powerful
+		IF = {
+			limit = { 
+				any_interest_group = {
+					is_powerful = yes
+					leader = { 
+						has_eldritch_trait = yes
+					}			
+				} 
+			}
+			add = {
+				desc = "nda_cult_spread_interest_group_powerful_tt"
+				add = {
+					every_interest_group = {
+						limit = { 
+							is_powerful = yes
+							leader = { 
+								has_eldritch_trait = yes
+							}
+						}
+						add = 1		
+					}					
+				}	
+			}			
+		}
+
+		# reduce if Investigators are around 
+		IF = {
+			limit = { 
+				any_scope_character = {
+					has_trait = nda_investigator
+					OR = {
+						has_role = politician
+						has_role = agitator
+					}
+					is_busy = no		
+				} 
+			}
+
+			subtract = {
+				desc = "nda_cult_spread_investigator_tt"
+				add = nda_active_investigators
+			}		
+		}		
+
+
+		# # reduce based on power of investigators IG
+		# every_interest_group = {
+		# 	limit = { 
+		# 		is_marginal = no 
+		# 		leader = { 
+		# 			has_trait = nda_investigator
+		# 		}
+		# 	}
+			
+		# 	subtract = {
+		# 		desc = "nda_cult_spread_interest_group_oppose_tt"
+		# 		value = nda_cult_spread_total
+		# 	}				
+		# }	
+				# Every non marginal 
+		IF = {
+			limit = { 
+				any_interest_group = {
+					is_marginal = no 
+					leader = { 
+						has_trait = nda_investigator
+					}			
+				} 
+			}
+
+			subtract = {
+				desc = "nda_cult_spread_interest_group_tt"
+				value = nda_country_cult_spread_total 
+			}			
+		}
+
+		# Old Ones are here
+		if = {
+			limit = { 
+				has_global_variable = nda_cthulhu_arrives 
+				NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+			}
+			add = {
+				desc = "nda_cult_spread_cthulhu_arrives_tt"
+				value = 4 
+			}							
+		}
+		
+		# Is re-establishing the cult
+		if = {
+			limit = { 
+				has_variable = nda_cultists_in_open 
+			}
+			add = {
+				desc = "nda_cult_spread_reestablising_cult_tt"
+				value = 1 
+			}						
+		}
+ 	}
+
+ 	start_value = 0
+ 	min_value = 0
+ 	max_value = 1200
+}

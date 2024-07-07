@@ -268,6 +268,8 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 			exists = s:STATE_TUVA.region_state:DGN
 			exists = s:STATE_URGA.region_state:DGN
 			exists = s:STATE_TIANSHAN.region_state:DGN
+			exists = s:STATE_QINGHAI.region_state:DGN
+			exists = s:STATE_NORTHERN_MANCHURIA.region_state:DGN 
 		}
 	}
 	
@@ -276,13 +278,14 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 		custom_tooltip = {
 			text = nda_dgn_release_chinese_lands_tooltip	
 
-			# release smaller states as per warlord breakup but without warlords
+			# release smaller states as per warlord breakup but without warlords, give extra lands to make viable?
 			if = {
 				limit = { exists = s:STATE_HUNAN.region_state:DGN }
 				create_country = {
 					tag = HNA
 					origin = this
 					state = s:STATE_HUNAN.region_state:DGN
+					state = s:STATE_JIANGXI.region_state:DGN
 					on_created = {
 						# make cultists
 						IF = {
@@ -336,6 +339,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					tag = SHN
 					origin = this
 					state = s:STATE_SHANXI.region_state:DGN
+					state = s:STATE_XIAN.region_state:DGN
 					on_created = {
 						# make cultists
 						IF = {
@@ -387,7 +391,10 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 			}	
 			# Mongolia
 			if = {
-				limit = { exists = s:STATE_URGA.region_state:DGN }
+				limit = { 
+					exists = s:STATE_URGA.region_state:DGN 
+					NOT = { exists = c:MGL }
+				}
 				create_country = {
 					tag = MGL
 					origin = this
@@ -406,9 +413,13 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					}
 				}
 			}
+
 			# Ugyhurstan
 			if = {
-				limit = { exists = s:STATE_TIANSHAN.region_state:DGN }
+				limit = { 
+					exists = s:STATE_TIANSHAN.region_state:DGN 
+					NOT = { exists = c:XIN }
+				}
 				create_country = {
 					tag = XIN
 					origin = this
@@ -430,6 +441,111 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 
 			}	
 			
+			# Manchuria
+			if = {
+				limit = { 
+					exists = s:STATE_NORTHERN_MANCHURIA.region_state:DGN 
+					NOT = { exists = c:MCH }
+				}
+				create_country = {
+					tag = MCH
+					origin = this
+					state = s:STATE_NORTHERN_MANCHURIA.region_state:DGN
+					state = s:STATE_SOUTHERN_MANCHURIA.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make MAN Cultist"
+							trigger_event = { id = nda_base.7 days = 8 }		
+						}
+					}
+				}
+				# transfer lands if not done automatically by creation?
+
+			}	
+
+			# Sichuan
+			if = {
+				limit = { 
+					exists = s:STATE_SICHUAN.region_state:DGN 
+					NOT = { exists = c:SHN }
+				}
+				create_country = {
+					tag = SHN
+					origin = this
+					state = s:STATE_SICHUAN.region_state:DGN
+					state = s:STATE_CHONGQING.region_state:DGN
+
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make SIC Cultist"
+							trigger_event = { id = nda_base.7 days = 8 }		
+						}
+					}
+				}
+				# transfer lands if not done automatically by creation?
+			}	
+
+			# Anhui
+			if = {
+				limit = { 
+					exists = s:STATE_SOUTHERN_ANHUI.region_state:DGN 
+					NOT = { exists = c:AHU }
+				}
+				create_country = {
+					tag = AHU
+					origin = this
+					state = s:STATE_SOUTHERN_ANHUI.region_state:DGN
+					state = s:STATE_NORTHERN_ANHUI.region_state:DGN
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make ANU Cultist"
+							trigger_event = { id = nda_base.7 days = 8 }		
+						}
+					}
+				}
+				# transfer lands if not done automatically by creation?
+			}	
+
+			# Make rest of inland LENG
+			if = {
+				limit = { 
+					exists = s:STATE_QINGHAI.region_state:DGN 
+					NOT = { exists = c:LEN }
+				}
+				create_country = {
+					tag = LEN
+					origin = this
+					state = s:STATE_QINGHAI.region_state:DGN
+					state = s:STATE_GANSU.region_state:DGN
+					state = s:STATE_NINGXIA.region_state:DGN
+
+					on_created = {
+						# make cultists
+						IF = {
+							limit = {
+								is_cultist_country = no
+							}
+							debug_log = "Make SIC Cultist"
+							trigger_event = { id = nda_base.7 days = 8 }		
+						}
+					}
+				}
+				# transfer lands if not done automatically by creation?
+			}
+
+						
 			# send out notification		
 			every_country = {
 				limit = {

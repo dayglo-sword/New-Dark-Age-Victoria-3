@@ -852,7 +852,7 @@ nda_ritual.12 = { # The world surrenders. - Boost ELD by auto adding Cult countr
 
 # Call of Cthulhu story events
 # The Tale of Inspector Legrasse - November 1907 New Orleans
-# the American Archeological Society held its annual meeting in St. Louis.
+# the American Archaeological Society held its annual meeting in St. Louis.
 
 nda_ritual.1907 = { 
 	type = country_event

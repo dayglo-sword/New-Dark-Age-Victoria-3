@@ -98,6 +98,18 @@
 				}
 				set_interest_group_name = ig_nda_illuminati_cult
 			}
+			if = {
+				limit = {
+					OR = {
+						c:GBR ?= owner
+						c:USA ?= owner
+						c:SCO ?= owner
+						c:CAN ?= owner
+					}			
+				}
+				set_interest_group_name = ig_nda_grand_lodges
+			}
+			
 		}
 	}
 

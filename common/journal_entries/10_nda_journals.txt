@@ -3,13 +3,15 @@
 
 	group = je_group_nda_eldritch
 
-	immediate = {
-		set_variable = {
-				name = nda_cult_spread_tracker
-				value = 0
-			}
+	scripted_progress_bar = nda_cult_spread_progress_bar # great_game_core_progress_bar
 
-		save_scope_as = nda_je_scope
+	immediate = {
+		# set_variable = {
+		# 		name = nda_cult_spread_tracker
+		# 		value = 0
+		# 	}
+
+		# save_scope_as = nda_je_scope
 		debug_log = "Cult Spread Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
@@ -20,7 +22,7 @@
 				text = je_nda_cult_spread_reinstate_complete_tt
 
 				scope:journal_entry = {
-					is_goal_complete = yes
+					"scripted_bar_progress(nda_cult_spread_progress_bar)" >= 1200 # absolute value not percentage
 				}
 			}
 		}
@@ -28,7 +30,7 @@
 			custom_tooltip = {
 				text = je_nda_cult_spread_complete_tt
 				scope:journal_entry = {
-					is_goal_complete = yes
+					"scripted_bar_progress(nda_cult_spread_progress_bar)" >= 1200 # absolute value not percentage
 				}
 			}
 		}
@@ -86,142 +88,10 @@
 	}
 
 	on_monthly_pulse = {
-	
-		# check count of cultists in government. add to counter
-		effect = {
-
-			# fix bug where this reruns when ELD revolts
-			IF = {
-				limit = { c:ELD ?= THIS }
-
-				scope:nda_je_scope = {
-					change_variable = {
-						name = nda_cult_spread_tracker
-						add = 1201 # can send negative despite clamp?
-					}					
-				}					
-			}
-
-			# use ban on 'nameless Cults' to throtle back
-			IF = {
-				limit = { has_variable = nda_nameless_cults_supressed}
-
-				scope:nda_je_scope = {
-					change_variable = {
-						name = nda_cult_spread_tracker
-						subtract = 1 # can send negative despite clamp?
-					}					
-				}					
-			}
-			# Every non marginal 
-			every_interest_group = {
-				limit = { 
-					is_marginal = no 
-					leader = { 
-						has_eldritch_trait = yes
-					}
-				}
-				
-				scope:nda_je_scope = {
-					change_variable = {
-						name = nda_cult_spread_tracker
-						add = prev.nda_cult_spread_total
-					}					
-				}				
-			}	
-
-			# reduce if Investigators are around
-			every_scope_character = {
-				limit = {
-					has_trait = nda_investigator
-					OR = {
-						has_role = politician
-						has_role = agitator
-					}
-					is_busy = no
-				}
-
-				scope:nda_je_scope = {
-					change_variable = {
-						name = nda_cult_spread_tracker
-						subtract = 1
-					}					
-				}	
-			}
-			# reduce based on power of investigators IG
-			every_interest_group = {
-				limit = { 
-					is_marginal = no 
-					leader = { 
-						has_trait = nda_investigator
-					}
-				}
-				
-				scope:nda_je_scope = {
-					change_variable = {
-						name = nda_cult_spread_tracker
-						subtract = prev.nda_cult_spread_total
-					}					
-				}				
-			}	
-
-			# Old Ones are here
-			if = {
-				limit = { 
-					has_global_variable = nda_cthulhu_arrives 
-					NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
-				}
-				scope:nda_je_scope = {
-					change_variable = {
-						name = nda_cult_spread_tracker
-						add = 4
-					}					
-				}						
-			}
-
-			# Is re-establishing the cult
-			if = {
-				limit = { 
-					has_variable = nda_cultists_in_open 
-				}
-				scope:nda_je_scope = {
-					change_variable = {
-						name = nda_cult_spread_tracker
-						add = 1
-					}					
-				}						
-			}
-
-			clamp_variable = {
-				name = nda_cult_spread_tracker
-				min = 0
-				max = 1201			
-			}
-
-		}	
-
 		# Chance that another character will become cultist
 		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
 			10 = 0
 			1 = nda_base.6 
-		}		
-	}
-
-	current_value = {
-		value = root.var:nda_cult_spread_tracker
-	}
-
-	goal_add_value = {
-		if = {
-			limit = { has_game_rule = cult_spread_faster }
-			add = nda_cult_spread_goal_value_quick
-		}
-		else_if = {
-			limit = { has_game_rule = cult_spread_slower }
-			add = nda_cult_spread_goal_value_slow
-		}
-		else = {
-			add = nda_cult_spread_goal_value # should be approx 10 years -> 12 months x 8 IG + power and govern bonus?
 		}		
 	}
 
@@ -245,7 +115,7 @@
 		trigger_event = { id = nda_base.13 }	
 	}
 
-	progressbar = yes
+	#progressbar = yes
 	weight = 100
 
 	#inheritable = yes

@@ -67,6 +67,16 @@ has_non_cultist_ideology = {
 }
 ### Geography triggers
 
+is_full_cult = {
+	OR = {
+		c:ELD ?= THIS	
+		c:YIG ?= THIS
+		c:DGN ?= THIS
+		c:LEN ?= THIS
+		c:STY ?= THIS	
+	}
+}
+
 is_full_cult_country = {
 	OR ={
 		AND = {

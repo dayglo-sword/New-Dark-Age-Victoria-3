@@ -2,31 +2,36 @@
 
 great_alliance = {
 	trigger = {
-		always = yes
+		#always = yes
+		is_full_cult = no
 	}
 }
 
 grand_coalition = {
 	trigger = {
 		always = yes
+		is_full_cult = no
 	}
 }
 
 united_front = {
 	trigger = {
 		NOT = { scope:selected_identity = identity:identity_religious }
+		is_full_cult = no
 	}
 }
 
 joint_front = {
 	trigger = {
 		NOT = { scope:selected_identity = identity:identity_religious }
+		is_full_cult = no
 	}
 }
 
 imperial_circle = {
 	trigger = {
 		coa_monarchy_trigger = yes
+		is_full_cult = no
 	}
 }
 

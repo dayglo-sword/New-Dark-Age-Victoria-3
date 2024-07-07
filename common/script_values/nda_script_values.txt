@@ -131,6 +131,52 @@ nda_cult_spread_total =
 	}
 }
 
+# now actually only used for Investigator resistance
+nda_country_cult_spread_total =
+{
+	value = 0
+
+	every_interest_group = {
+		limit = { 
+			is_marginal = no 
+			leader = { 
+				has_eldritch_trait = yes
+			}
+		}
+
+			add = {
+				add = 1
+			}
+
+			if = {
+				limit = { is_in_government = yes }
+				add = 1
+			}
+			if = {
+				limit = { is_powerful = yes }
+				add = 1
+			}			
+	}	
+}
+
+nda_active_investigators =
+{
+	value = 0
+
+	every_scope_character = {
+		limit = {
+			has_trait = nda_investigator
+			OR = {
+				has_role = politician
+				has_role = agitator
+			}
+			is_busy = no
+		}
+
+		add = 1 
+	}
+}
+
 nda_purge_infamy = 
 {
 	value = 10	
