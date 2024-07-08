@@ -1,5 +1,5 @@
 ﻿# For custom on_actions launched by the code itself.
-# have used seperate on_actions in case we ever need to use 'effects'
+# have used separate on_actions in case we ever need to use 'effects'
 
 # Root = Country
 on_monthly_pulse_country = {
@@ -659,7 +659,7 @@ nda_create_leng_on_action = {
 }
 
 
-#nda_diplo_play_do_stuff_on_action = { # it does do stuff! so no clash of effects from seperate on_actions
+#nda_diplo_play_do_stuff_on_action = { # it does do stuff! so no clash of effects from separate on_actions
 #	effect = {
 #		war = {
 #			IF = { 

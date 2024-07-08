@@ -80,20 +80,11 @@ je_nda_maritimes_btn_new_brunswick = {
 			change_relations = { country = ROOT value = -50 }
 		}
 
-		# anger USA and local Yankees
-		if = {
-			limit = { exists = c:USA }
-			change_relations = { country = c:USA value = -10 }
-		}
-
-		add_radicals = { value = 0.05 culture = cu:yankee }
-
 		if = {
 			limit = { has_journal_entry = je_nda_yankee_reconcile }
 
-			custom_tooltip = 
-			{
-				text = nda_yankee_reconcile
+			custom_tooltip = {
+				text = nda_yankee_reconcile_negative_tt
 
 				je:je_nda_yankee_reconcile = {
 					add_progress = {
@@ -102,7 +93,22 @@ je_nda_maritimes_btn_new_brunswick = {
 					}					
 				}				
 			}
+		}		
+
+		# anger USA and local Yankees - should be any country with Yankee culture
+		every_country = {
+			limit = { 
+				country_has_primary_culture = cu:yankee 
+				NOT = { country_has_primary_culture = cu:anglo_canadian } # already dealt with above
+				NOT = { 
+					THIS = ROOT 
+				}
+			}
+			change_relations = { country = ROOT value = -20 }
 		}
+
+		add_radicals = { value = 0.05 culture = cu:yankee }
+
 	}
 }
 
@@ -188,20 +194,11 @@ je_nda_maritimes_btn_nova_scotia = {
 			change_relations = { country = ROOT value = -50 }
 		}
 
-		# anger USA and local Yankees
-		if = {
-			limit = { exists = c:USA }
-			change_relations = { country = c:USA value = -10 }
-		}
-
-		add_radicals = { value = 0.05 culture = cu:yankee }
-
 		if = {
 			limit = { has_journal_entry = je_nda_yankee_reconcile }
 
-			custom_tooltip = 
-			{
-				text = nda_yankee_reconcile
+			custom_tooltip = {
+				text = nda_yankee_reconcile_negative_tt
 
 				je:je_nda_yankee_reconcile = {
 					add_progress = {
@@ -210,7 +207,22 @@ je_nda_maritimes_btn_nova_scotia = {
 					}					
 				}				
 			}
+		}		
+
+		# anger USA and local Yankees - should be any country with Yankee culture
+		every_country = {
+			limit = { 
+				country_has_primary_culture = cu:yankee 
+				NOT = { country_has_primary_culture = cu:anglo_canadian } # already dealt with above
+				NOT = { 
+					THIS = ROOT 
+				}
+			}
+			change_relations = { country = ROOT value = -20 }
 		}
+
+		add_radicals = { value = 0.05 culture = cu:yankee }
+
 	}
 }
 
@@ -239,20 +251,11 @@ je_nda_maritimes_btn_strange_ways = {
 		add_radicals = { value = 0.1 culture = cu:nda_cul_trueyankee }
 		add_radicals = { value = 0.2 culture = cu:franco_canadian }
 
-		# anger USA and local Yankees
-		if = {
-			limit = { exists = c:USA }
-			change_relations = { country = c:USA value = -10 }
-		}
-
-		add_radicals = { value = 0.05 culture = cu:yankee }
-
 		if = {
 			limit = { has_journal_entry = je_nda_yankee_reconcile }
 
-			custom_tooltip = 
-			{
-				text = nda_yankee_reconcile
+			custom_tooltip = {
+				text = nda_yankee_reconcile_negative_tt
 
 				je:je_nda_yankee_reconcile = {
 					add_progress = {
@@ -261,7 +264,20 @@ je_nda_maritimes_btn_strange_ways = {
 					}					
 				}				
 			}
+		}		
+
+		# anger USA and local Yankees - should be any country with Yankee culture
+		every_country = {
+			limit = { 
+				country_has_primary_culture = cu:yankee 
+				NOT = { 
+					THIS = ROOT 
+				}
+			}
+			change_relations = { country = ROOT value = -20 }
 		}
+
+		add_radicals = { value = 0.05 culture = cu:yankee }
 	}
 
 	ai_chance = {

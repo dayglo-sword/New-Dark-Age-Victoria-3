@@ -6,12 +6,13 @@
 	scripted_progress_bar = nda_cult_spread_progress_bar # great_game_core_progress_bar
 
 	immediate = {
-		# set_variable = {
-		# 		name = nda_cult_spread_tracker
-		# 		value = 0
-		# 	}
+		# je:je_nda_cult_spreads = {
+		# 	add_progress = {
+		# 		value = -100
+		# 		name = nda_cult_spread_progress_bar
+		# 	}					
+		# }
 
-		# save_scope_as = nda_je_scope
 		debug_log = "Cult Spread Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 

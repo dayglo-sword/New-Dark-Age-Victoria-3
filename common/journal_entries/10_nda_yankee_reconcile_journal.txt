@@ -49,96 +49,104 @@
 	}
 
 	on_monthly_pulse = {
-	
-		# effect = {
-		# 	set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
-		
-		# 	c:NEN ?= {
-		# 		if = {
-		# 			limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
-
-		# 				change_variable = {
-		# 					name = nda_yankee_reconcile_progress_var
-		# 					add = 1
-		# 				}	
-				
-		# 		}
-		# 		else_if = {
-		# 			limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
-
-		# 				change_variable = {
-		# 					name = nda_yankee_reconcile_progress_var
-		# 					subtract = 1
-		# 				}	
-
-		# 		}
-		# 		else_if = {
-		# 			limit = { NOT = { EXISTS = c:USA }}
-
-		# 				change_variable = {
-		# 					name = nda_yankee_reconcile_progress_var
-		# 					subtract = 1
-		# 				}
-
-		# 		}	
-				
-		# 		# FSA should boost a bit quicker
-		# 		if = {
-		# 			limit = { c:FSA ?= { relations:root >= relations_threshold:amicable } }
-
-		# 				change_variable = {
-		# 					name = nda_yankee_reconcile_progress_var
-		# 					add = 2
-		# 				}
-					
-		# 		}
-		# 		else_if = {
-		# 			limit = { c:FSA ?= { relations:root <= relations_threshold:cold } }
-
-		# 				change_variable = {
-		# 					name = nda_yankee_reconcile_progress_var
-		# 					subtract = 1
-		# 				}	
-
-		# 		}				
-
-		# 		# Boost if owns NY or NJ
-		# 		if = {
-		# 			limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_YORK } }
-					
-		# 				change_variable = {
-		# 					name = nda_yankee_reconcile_progress_var
-		# 					add = 1
-		# 				}
-
-		# 		}
-		# 		if = {
-		# 			limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_JERSEY } }
-
-		# 				change_variable = {
-		# 					name = nda_yankee_reconcile_progress_var
-		# 					add = 1
-		# 				}
-
-		# 		}				
-		# 	}
-		
-		# }						
-	}				
-
-
-	on_yearly_pulse = {
 		effect = {
-			# Have a natural decay as time seperates the cultures
-			#scope:journal_entry = {
-				change_variable = {
-					name = nda_yankee_reconcile_progress_var
-					subtract = 1
-				}
-				
-			#}						
-		}		 
+			set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }			
+			scope:journal_entry = {
+				set_variable = { name = nda_yankee_reconcile_progress_var value = "scripted_bar_progress(nda_yankee_reconcile_progress_bar)" }
+			}			
+		}
 	}
+	# on_monthly_pulse = {
+	
+	# 	# effect = {
+	# 	# 	set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
+		
+	# 	# 	c:NEN ?= {
+	# 	# 		if = {
+	# 	# 			limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
+
+	# 	# 				change_variable = {
+	# 	# 					name = nda_yankee_reconcile_progress_var
+	# 	# 					add = 1
+	# 	# 				}	
+				
+	# 	# 		}
+	# 	# 		else_if = {
+	# 	# 			limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
+
+	# 	# 				change_variable = {
+	# 	# 					name = nda_yankee_reconcile_progress_var
+	# 	# 					subtract = 1
+	# 	# 				}	
+
+	# 	# 		}
+	# 	# 		else_if = {
+	# 	# 			limit = { NOT = { EXISTS = c:USA }}
+
+	# 	# 				change_variable = {
+	# 	# 					name = nda_yankee_reconcile_progress_var
+	# 	# 					subtract = 1
+	# 	# 				}
+
+	# 	# 		}	
+				
+	# 	# 		# FSA should boost a bit quicker
+	# 	# 		if = {
+	# 	# 			limit = { c:FSA ?= { relations:root >= relations_threshold:amicable } }
+
+	# 	# 				change_variable = {
+	# 	# 					name = nda_yankee_reconcile_progress_var
+	# 	# 					add = 2
+	# 	# 				}
+					
+	# 	# 		}
+	# 	# 		else_if = {
+	# 	# 			limit = { c:FSA ?= { relations:root <= relations_threshold:cold } }
+
+	# 	# 				change_variable = {
+	# 	# 					name = nda_yankee_reconcile_progress_var
+	# 	# 					subtract = 1
+	# 	# 				}	
+
+	# 	# 		}				
+
+	# 	# 		# Boost if owns NY or NJ
+	# 	# 		if = {
+	# 	# 			limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_YORK } }
+					
+	# 	# 				change_variable = {
+	# 	# 					name = nda_yankee_reconcile_progress_var
+	# 	# 					add = 1
+	# 	# 				}
+
+	# 	# 		}
+	# 	# 		if = {
+	# 	# 			limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_JERSEY } }
+
+	# 	# 				change_variable = {
+	# 	# 					name = nda_yankee_reconcile_progress_var
+	# 	# 					add = 1
+	# 	# 				}
+
+	# 	# 		}				
+	# 	# 	}
+		
+	# 	# }						
+	# }				
+
+
+	# on_yearly_pulse = {
+	# 	effect = {
+	# 		# Have a natural decay as time separates the cultures
+	# 		#scope:journal_entry = {
+	# 			change_variable = {
+	# 				name = nda_yankee_reconcile_progress_var
+	# 				subtract = 1
+	# 			}
+				
+	# 		#}						
+	# 	}		 
+	# }
 
     complete = {
 
@@ -180,6 +188,13 @@
 				}
 				change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
 			}
+		}
+
+		if = {
+			limit = {
+				NOT = { country_has_primary_culture = cu:yankee }
+			}
+			add_primary_culture = cu:yankee
 		}
 	}
 

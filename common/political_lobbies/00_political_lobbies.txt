@@ -856,49 +856,47 @@
 				owner = {
 					country_has_primary_culture = cu:nda_cul_yigian
 				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							c:YIG ?= THIS
-						}						
-					}
-					add = 25						
-				}
-				else_if = {
-					limit = {
-						scope:target_country = {
-							country_has_primary_culture = cu:nda_cul_yigian
-						}	
-					}
-					add = 10
-				}
 			}
-		
+
+			if = {
+				limit = {
+					scope:target_country = {
+						c:YIG ?= THIS
+					}						
+				}
+				add = 50						
+			}
+			else_if = {
+				limit = {
+					scope:target_country = {
+						country_has_primary_culture = cu:nda_cul_yigian
+					}	
+				}
+				add = 25
+			}
 		}	
 		else_if = {
 			limit = {
 				owner = {
 					country_has_primary_culture = cu:nda_cul_dagonic
 				}
-				if {
-					limit = {
-						scope:target_country = {
-							c:DGN ?= THIS
-						}						
-					}
-					add = 25
-				}
-				else_if = {
-					limit = {
-						scope:target_country = {
-							country_has_primary_culture = cu:nda_cul_dagonic
-						}	
-					}
-					add = 10
-				}
 			}
-			
+			if = {
+				limit = {
+					scope:target_country = {
+						c:DGN ?= THIS
+					}						
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					scope:target_country = {
+						country_has_primary_culture = cu:nda_cul_dagonic
+					}	
+				}
+				add = 25
+			}		
 		}	
 		else_if = {
 			limit = {
@@ -908,26 +906,23 @@
 						country_has_primary_culture = cu:nda_cul_cultist
 					}
 				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							c:ELD ?= THIS
-						}						
-					}
-					add = 25
-				}
-				else_if = {
-					limit = {
-						scope:target_country = {
-							country_has_primary_culture = cu:nda_cul_cultist
-						}	
-					}
-					add = 10
-				}
-
 			}
-
+			if = {
+				limit = {
+					scope:target_country = {
+						c:ELD ?= THIS
+					}						
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					scope:target_country = {
+						country_has_primary_culture = cu:nda_cul_cultist
+					}	
+				}
+				add = 25
+			}
 		}
 	}
 }
@@ -2075,50 +2070,47 @@ lobby_pro_overlord = {
 				owner = {
 					country_has_primary_culture = cu:nda_cul_yigian
 				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							c:YIG ?= THIS
-						}						
-					}
-					
-					add = 25						
-				}
-				else_if = {
-					limit = {
-						scope:target_country = {
-							country_has_primary_culture = cu:nda_cul_yigian
-						}	
-					}
-					add = 10
-				}
 			}
-		
+
+			if = {
+				limit = {
+					scope:target_country = {
+						c:YIG ?= THIS
+					}						
+				}
+				add = 50						
+			}
+			else_if = {
+				limit = {
+					scope:target_country = {
+						country_has_primary_culture = cu:nda_cul_yigian
+					}	
+				}
+				add = 25
+			}
 		}	
 		else_if = {
 			limit = {
 				owner = {
 					country_has_primary_culture = cu:nda_cul_dagonic
 				}
-				if {
-					limit = {
-						scope:target_country = {
-							c:DGN ?= THIS
-						}						
-					}
-					add = 25
-				}
-				else_if = {
-					limit = {
-						scope:target_country = {
-							country_has_primary_culture = cu:nda_cul_dagonic
-						}	
-					}
-					add = 10
-				}
 			}
-			
+			if = {
+				limit = {
+					scope:target_country = {
+						c:DGN ?= THIS
+					}						
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					scope:target_country = {
+						country_has_primary_culture = cu:nda_cul_dagonic
+					}	
+				}
+				add = 25
+			}		
 		}	
 		else_if = {
 			limit = {
@@ -2128,26 +2120,23 @@ lobby_pro_overlord = {
 						country_has_primary_culture = cu:nda_cul_cultist
 					}
 				}
-
-				if = {
-					limit = {
-						scope:target_country = {
-							c:ELD ?= THIS
-						}						
-					}
-					add = 25
-				}
-				else_if = {
-					limit = {
-						scope:target_country = {
-							country_has_primary_culture = cu:nda_cul_cultist
-						}	
-					}
-					add = 10
-				}
-
 			}
-
+			if = {
+				limit = {
+					scope:target_country = {
+						c:ELD ?= THIS
+					}						
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					scope:target_country = {
+						country_has_primary_culture = cu:nda_cul_cultist
+					}	
+				}
+				add = 25
+			}
 		}
 	}
 }

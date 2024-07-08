@@ -1215,7 +1215,10 @@ nda_base.20 = { # Request from the devout
 
 		AND = {
 			has_journal_entry = je_nda_cult_spreads
-			var:nda_cult_spread_tracker > 10 # Don't do immediate pop-up			
+			je:je_nda_cult_spreads = {
+				"scripted_bar_progress(nda_cult_spread_progress_bar)" > 10 # Don't do immediate pop-up	
+			}
+					
 		}
 
 		any_interest_group = { # from devout only
