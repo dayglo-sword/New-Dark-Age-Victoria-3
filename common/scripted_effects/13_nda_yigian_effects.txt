@@ -386,5 +386,22 @@ nda_effect_yigian_buff = { # boost to yig
 
 		# reduce infamy
 		change_infamy = -10
+
+		# if bloc leader do increased leverage on minor Cult countries
+		if = {
+			limit = { is_power_bloc_leader = yes }
+			power_bloc = { save_temporary_scope_as = target_bloc }
+
+			every_country = {
+				limit = {
+					NOT = { ROOT = THIS }
+					country_has_primary_culture = cu:nda_cul_yigian
+				}
+
+				scope:target_bloc = {
+					add_leverage = { target = PREV value = nda_cult_leverage_boost }  
+				}
+			}
+		}
 	}	
 }

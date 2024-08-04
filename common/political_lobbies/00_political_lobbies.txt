@@ -864,15 +864,21 @@
 						c:YIG ?= THIS
 					}						
 				}
-				add = 50						
+				add = 25						
 			}
-			else_if = {
+			
+			if = {
 				limit = {
 					scope:target_country = {
 						country_has_primary_culture = cu:nda_cul_yigian
 					}	
 				}
 				add = 25
+
+				if = {
+					limit = { is_interest_group_type = ig_nda_cult_worshippers }
+					add = 25
+				}
 			}
 		}	
 		else_if = {
@@ -887,15 +893,21 @@
 						c:DGN ?= THIS
 					}						
 				}
-				add = 50
+				add = 25
 			}
-			else_if = {
+			
+			if = {
 				limit = {
 					scope:target_country = {
 						country_has_primary_culture = cu:nda_cul_dagonic
 					}	
 				}
 				add = 25
+
+				if = {
+					limit = { is_interest_group_type = ig_nda_cult_worshippers }
+					add = 25
+				}				
 			}		
 		}	
 		else_if = {
@@ -2078,15 +2090,21 @@ lobby_pro_overlord = {
 						c:YIG ?= THIS
 					}						
 				}
-				add = 50						
+				add = 25						
 			}
-			else_if = {
+			
+			if = {
 				limit = {
 					scope:target_country = {
 						country_has_primary_culture = cu:nda_cul_yigian
 					}	
 				}
 				add = 25
+
+				if = {
+					limit = { is_interest_group_type = ig_nda_cult_worshippers }
+					add = 25
+				}
 			}
 		}	
 		else_if = {
@@ -2101,15 +2119,21 @@ lobby_pro_overlord = {
 						c:DGN ?= THIS
 					}						
 				}
-				add = 50
+				add = 25
 			}
-			else_if = {
+			
+			if = {
 				limit = {
 					scope:target_country = {
 						country_has_primary_culture = cu:nda_cul_dagonic
 					}	
 				}
 				add = 25
+
+				if = {
+					limit = { is_interest_group_type = ig_nda_cult_worshippers }
+					add = 25
+				}				
 			}		
 		}	
 		else_if = {

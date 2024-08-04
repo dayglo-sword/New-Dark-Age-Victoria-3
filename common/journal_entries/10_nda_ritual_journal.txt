@@ -9,18 +9,33 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 		has_global_variable = je_nda_ritual_proceeds_tracker # ritual has started
 		has_cult_culture = yes
 		exists = c:ELD
-		NOT = { THIS = c:ELD }
-		NOT = { has_global_variable = nda_ritual_completed  }
+		# NOT = { THIS = c:ELD }
+		# NOT = { has_global_variable = nda_ritual_completed  }
+
+		custom_tooltip = {
+			text = je_nda_ritual_assist_is_not_completed_tt
+			NOT = { THIS = c:ELD }
+			NOT = { has_global_variable = nda_ritual_completed  } 
+		}
 	}
 
 	possible = {
-		has_global_variable = je_nda_ritual_proceeds_tracker		
-		has_cult_culture = yes
-
+		
+		custom_tooltip = {
+			text = trigger_has_cult_culture
+			has_cult_culture = yes
+		}
 		exists = c:ELD
-		NOT = { THIS ?= c:ELD }
+		# NOT = { THIS ?= c:ELD }
 
-		NOT = { has_global_variable = nda_ritual_completed  }
+		# NOT = { has_global_variable = nda_ritual_completed  }
+
+		custom_tooltip = {
+			text = je_nda_ritual_assist_is_not_completed_tt
+			NOT = { THIS = c:ELD }
+			NOT = { has_global_variable = nda_ritual_completed  } 
+			has_global_variable = je_nda_ritual_proceeds_tracker
+		}
 	}
 
 	immediate = {
@@ -55,6 +70,12 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 	on_complete = {
 		debug_log =  "Ritual Assist Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"	
 		remove_variable = je_nda_ritual_assist_started	
+
+		# Diplo Catalyst - completed so positive
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_positive
+			target = c:ELD
+		}
 	}
 
 	scripted_button = je_nda_ritual_assist_btn_start
@@ -133,6 +154,10 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 				has_global_variable = nda_ritual_cthulhu_visits # Ritual is too late
 			}
 			#c:ELD = { relations:root <= relations_threshold:cold }
+			custom_tooltip = {
+				text = trigger_has_cult_culture_not
+				has_cult_culture = no
+			}
 		}
     }
 	
@@ -172,12 +197,17 @@ je_nda_ritual_proceeds = {
 		country_has_primary_culture = cu:nda_cul_cultist  
 		exists = c:ELD
 		c:ELD = ROOT
-
+		NOT = { has_variable = nda_eldritch_cult_ritual_delay }
 	}
 
 	possible = {
 		# just ELD as initiator, or enable DGN after a certain date, Other after a later date - others can assist via second journal
-		country_has_primary_culture = cu:nda_cul_cultist # easy check
+		custom_tooltip = {
+			text = trigger_has_cult_culture
+			country_has_primary_culture = cu:nda_cul_cultist # easy check
+			#has_cult_culture = yes
+		}
+		
 
 		custom_tooltip = {
 				text = je_nda_ritual_proceeds_possible_tt
@@ -185,6 +215,7 @@ je_nda_ritual_proceeds = {
 				NOT = { has_global_variable = nda_ritual_completed  }
 				exists = c:ELD
 				c:ELD = ROOT
+				NOT = { has_variable = nda_eldritch_cult_ritual_delay }
 		}
 	}
 

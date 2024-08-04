@@ -20,42 +20,44 @@
 	immediate = {
 		
 		debug_log = "Yankee Reconcile Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
-		set_variable = { name = nda_yankee_reconcile_progress_var value = 50 }
-		set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
+		# set_variable = { name = nda_yankee_reconcile_progress_var value = 50 }
+		# set_variable = { name = nda_yankee_reconcile_intermediate_progress_var value = 50 }
+		# set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
 	}
 
-	status_desc = {
-		first_valid = {
-			triggered_desc = {
-				desc = je_nda_yankee_reconcile_inproving_status
-				trigger = {
-					root.var:nda_yankee_reconcile_original_progress_var < root.var:nda_yankee_reconcile_progress_var
-				}
-			}
-			triggered_desc = {
-				desc = je_nda_yankee_reconcile_decreasing_status
-				trigger = {
-					root.var:nda_yankee_reconcile_original_progress_var > root.var:nda_yankee_reconcile_progress_var
-				}
-			}			
+	# status_desc = {
+	# 	first_valid = {
+	# 		triggered_desc = {
+	# 			desc = je_nda_yankee_reconcile_inproving_status
+	# 			trigger = {
+	# 				root.var:nda_yankee_reconcile_original_progress_var < root.var:nda_yankee_reconcile_progress_var
+	# 			}
+	# 		}
+	# 		triggered_desc = {
+	# 			desc = je_nda_yankee_reconcile_decreasing_status
+	# 			trigger = {
+	# 				root.var:nda_yankee_reconcile_original_progress_var > root.var:nda_yankee_reconcile_progress_var
+	# 			}
+	# 		}			
 			
-			triggered_desc = {
-				desc = je_nda_yankee_reconcile_status
-				trigger = {
-					always = yes
-				}
-			}
-		}
-	}
+	# 		triggered_desc = {
+	# 			desc = je_nda_yankee_reconcile_status
+	# 			trigger = {
+	# 				always = yes
+	# 			}
+	# 		}
+	# 	}
+	# }
 
-	on_monthly_pulse = {
-		effect = {
-			set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }			
-			scope:journal_entry = {
-				set_variable = { name = nda_yankee_reconcile_progress_var value = "scripted_bar_progress(nda_yankee_reconcile_progress_bar)" }
-			}			
-		}
-	}
+	# on_monthly_pulse = {
+	# 	effect = {
+	# 		set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_intermediate_progress_var }
+	# 		set_variable = { name = nda_yankee_reconcile_intermediate_progress_var value = var:nda_yankee_reconcile_progress_var }			
+	# 		scope:journal_entry = {
+	# 			set_variable = { name = nda_yankee_reconcile_progress_var value = "scripted_bar_progress(nda_yankee_reconcile_progress_bar)" }
+	# 		}			
+	# 	}
+	# }
 	# on_monthly_pulse = {
 	
 	# 	# effect = {

@@ -106,6 +106,22 @@
 		# reduce infamy
 		change_infamy = -10
 
+		# if bloc leader do increased leverage on minor Cult countries
+		if = {
+			limit = { is_power_bloc_leader = yes }
+			power_bloc = { save_temporary_scope_as = target_bloc }
+
+			every_country = {
+				limit = {
+					NOT = { c:ELD = THIS }
+					country_has_primary_culture = cu:nda_cul_cultist
+				}
+
+				scope:target_bloc = {
+					add_leverage = { target = PREV value = nda_cult_leverage_boost }  
+				}
+			}
+		}
 	}	
 	#debug_log = "Extra YIG DGN effects" 
 

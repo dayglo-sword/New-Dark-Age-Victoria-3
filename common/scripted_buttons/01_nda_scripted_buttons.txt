@@ -12,9 +12,11 @@
 			NOT = { has_variable = je_nda_ritual_assist_started }
 			NOT = { has_variable = je_nda_ritual_assist_started_cooldown }
 			
-			c:ELD ?= { relations:root >= relations_threshold:amicable }
-			
-		}		
+		}
+		
+		#c:ELD ?= { relations:root >= relations_threshold:amicable }
+		c:ELD ?= { relations:root >= relations_threshold:cordial }
+		#c:ELD ?= { relations:root >= relations_threshold:friendly }
 	}
 
 	ai_chance = {
@@ -30,6 +32,20 @@
 				has_global_variable = nda_conjunction_5 # really need to speed things up
 			}
 			add = 20
+		}
+
+		modifier = {
+			trigger = { 
+				c:ELD ?= { relations:root >= relations_threshold:amicable }
+			}
+			add = 5
+		}
+
+		modifier = {
+			trigger = { 
+				c:ELD ?= { relations:root >= relations_threshold:friendly }
+			}
+			add = 5
 		}
 	}
 
@@ -61,8 +77,9 @@ je_nda_ritual_assist_btn_halt = {
 			text = je_nda_ritual_assist_btn_halt_possible_tt
 			has_variable = je_nda_ritual_assist_started
 			NOT = { has_variable = je_nda_ritual_assist_started_cooldown }			
-			c:ELD = { relations:root <= relations_threshold:cold }
+			
 		}
+		c:ELD = { relations:root <= relations_threshold:cold }
 	}
 
 	ai_chance = {

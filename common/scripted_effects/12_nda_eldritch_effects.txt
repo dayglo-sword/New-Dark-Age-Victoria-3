@@ -25,6 +25,23 @@
 			activate_law = law_type:law_debt_slavery
 		}
 
+		# do conversion across states
+		every_scope_state = {
+
+			if = { limit = { is_capital = yes }  # boost in capital
+				convert_population = { target = rel:nda_rel_cultist value = 0.05 }			
+			}
+			else = {
+				convert_population = { target = rel:nda_rel_cultist value = 0.02 }
+			}
+				
+			set_variable = { # ongoing conversion
+				name = nda_rel_boost_eldritch_cult
+				months = 12
+				value = nda_small_conversion
+			}
+		}
+
 		# set devout to be cultists and to be power brokers
 		ig:ig_nda_cult_worshippers = {
 			set_interest_group_name = ig_nda_cultist_church
@@ -126,22 +143,12 @@
 		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
 		set_strategy = ai_strategy_nda_eldritch_political_agenda
 
-		# do conversion across states
-		every_scope_state = {
-
-			if = { limit = { is_capital = yes }  # boost in capital
-				convert_population = { target = rel:nda_rel_cultist value = 0.05 }			
-			}
-			else = {
-				convert_population = { target = rel:nda_rel_cultist value = 0.02 }
-			}
-				
-			set_variable = { # ongoing conversion
-				name = nda_rel_boost_eldritch_cult
-				months = 12
-				value = nda_small_conversion
-			}
+		# delay ritual for a bit
+		set_variable = { # ongoing conversion
+			name = nda_eldritch_cult_ritual_delay
+			months = 3
 		}
+
 }
 
 nda_effect_eldritch_annex = {

@@ -108,9 +108,9 @@ je_nda_yankee_reconcile_reason: "The disputes of the past have put a wedge betwe
 je_nda_yankee_reconcile_complete_tt: "The Yankee question has been resolved in favour of some form of reconciliation."
 #je_nda_yankee_reconcile_goal: "Reach an understanding with the Yankees."
 je_nda_yankee_reconcile_fail_tt: "The Yankee question has been resolved. There can be no reconciliation between us."
-je_nda_yankee_reconcile_inproving_status: "Culturally Converging"
-je_nda_yankee_reconcile_decreasing_status: "Culturally Diverging"
-je_nda_yankee_reconcile_status: "Culturally Stable"
+#je_nda_yankee_reconcile_inproving_status: "Culturally Converging"
+#je_nda_yankee_reconcile_decreasing_status: "Culturally Diverging"
+#je_nda_yankee_reconcile_status: "Culturally Stable"
 # progress bar
 nda_yankee_reconcile_good_relations_tt: "Good relations"
 nda_yankee_reconcile_bad_relations_tt: "Bad relations"

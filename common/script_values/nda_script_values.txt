@@ -14,6 +14,9 @@ nda_ritual_goal_value = 6000
 nda_ritual_goal_value_slow = 6600
 nda_ritual_goal_value_quick = 5400
 
+# Power Bloc boost
+nda_cult_leverage_boost = 50
+
 # red death duration (max number of months)
 nda_red_death_duration = 16 
 

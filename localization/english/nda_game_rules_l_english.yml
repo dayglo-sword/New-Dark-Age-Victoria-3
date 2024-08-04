@@ -12,3 +12,6 @@ setting_cult_spread_normal_desc:0 "Cult Spread and [concept_nda_ritual] Completi
 setting_cult_spread_faster:0 "Slightly Faster"
 setting_cult_spread_faster_desc:0 "Both the Cult Spread and [concept_nda_ritual] Completion trackers will have a slight boost that will tend to trigger the #b Return#! early the 1890's."
   
+trigger_has_cult_culture: "Has an Eldritch Primary Culture"
+  
+trigger_has_cult_culture_not: "Not has an Eldritch Primary Culture"

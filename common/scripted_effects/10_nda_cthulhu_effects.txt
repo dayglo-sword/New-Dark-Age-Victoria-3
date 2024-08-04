@@ -139,6 +139,19 @@
 			}	
 
 		}
+
+		# Diplo Catalyst - has returned so positive
+		if = {
+			limit = { 
+				NOT = { c:ELD ?= THIS } 
+				is_cultist_country = yes
+			}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = c:ELD
+			}					
+		}
+
 	}	
 }
 
