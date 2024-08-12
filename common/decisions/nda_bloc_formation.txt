@@ -1,0 +1,161 @@
+﻿nda_eld_form_dark_pact = {
+	is_shown = {
+		exists = c:ELD
+		this = c:ELD
+		country_can_form_power_bloc = yes
+	}
+
+	possible = {
+		this = c:ELD
+		authority  > 0
+		OR = {
+			is_in_power_bloc = no # no in power bloc
+			# is in power bloc with wrong identity
+			NOT = { power_bloc ?= { has_identity = identity:identity_sovereign_empire} }
+
+		}
+	}
+	
+	when_taken = {
+		debug_log = "form dark pact" 
+
+		# no current method to force leaving existing Pact - does work if manually leaving
+		create_power_bloc = {
+			name = nda_dark_pact
+			map_color = hsv{ 0.8  0.7  0.8 }
+
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_1
+			member = PREV
+			# subjects are automatically part of the bloc
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_colonial_offices_2
+			}
+		}
+
+		# add leverage to existing Cult countries
+		every_country = {
+			limit = {
+				NOT = { c:ELD = THIS }
+				country_has_primary_culture = cu:nda_cul_cultist
+			}
+
+			c:ELD.power_bloc ?= {
+				add_leverage = { target = PREV value = nda_cult_leverage_boost }  
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { authority  > 0 } # need 100 for the loss from losing the Vatican
+			add = 10
+		}	
+	}
+}
+
+nda_yig_form_union_of_the_snake = {
+	is_shown = {
+		exists = c:YIG
+		this = c:YIG
+		country_can_form_power_bloc = yes		
+	}
+
+	possible = {
+		this = c:YIG
+		authority  > 0
+
+		OR = {
+			is_in_power_bloc = no # no in power bloc
+			# is in power bloc with wrong identity
+			power_bloc ?= { has_identity = identity:identity_sovereign_empire}
+
+		}
+	}
+	
+	when_taken = {
+		debug_log = "form union of the snake" 
+
+		create_power_bloc = {
+			name = nda_union_of_the_snake
+			map_color = hsv{ 0.99  0.7  0.9 }
+
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_1
+
+			# subjects are automatically part of the bloc
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_colonial_offices_2
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { authority  > 0 } 
+			add = 10
+		}	
+	}
+}
+
+nda_dgn_form_cetacean_leagues = {
+	is_shown = {
+		exists = c:DGN
+		this = c:DGN
+		country_can_form_power_bloc = yes		
+	}
+
+	possible = {
+		this = c:DGN
+		authority  > 0
+
+		OR = {
+			is_in_power_bloc = no # no in power bloc
+			# is in power bloc with wrong identity
+			power_bloc ?= { has_identity = identity:identity_sovereign_empire}
+
+		}
+	}
+	
+	when_taken = {
+		debug_log = "form cetacean leagues" 
+
+		create_power_bloc = {
+			name = nda_cetacean_leagues
+			map_color = hsv{ 0.99  0.7  0.9 }
+
+			identity = identity_sovereign_empire
+			principle = principle_vassalization_1
+
+			# subjects are automatically part of the bloc
+		}
+		if = {
+			limit = {
+				has_dlc_feature = power_bloc_features
+			}
+			power_bloc = {
+				add_principle = principle_colonial_offices_2
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { authority  > 0 } 
+			add = 10
+		}	
+	}
+}

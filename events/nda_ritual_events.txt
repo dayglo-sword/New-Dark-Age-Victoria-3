@@ -237,7 +237,10 @@ nda_ritual.1890 = { # Cthulhu Early Return
 			# if bloc leader do increased leverage on minor Cult countries
 			if = {
 				limit = { is_power_bloc_leader = yes }
-				power_bloc = { save_temporary_scope_as = target_bloc }
+				power_bloc = { 
+					save_temporary_scope_as = target_bloc 
+					add_cohesion_number = 100 # Keep happy
+				}
 
 				every_country = {
 					limit = {

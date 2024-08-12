@@ -1,0 +1,4 @@
+﻿l_english:
+# load order means this needs to be aa_ to get loaded first - looks like first come, first served, in localisations.
+# Use Novanglican for New English as suggested by 'Automne des Forêts'
+NEN_ADJ: "Novanglian"
