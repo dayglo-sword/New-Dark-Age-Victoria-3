@@ -1,6 +1,51 @@
 ﻿namespace = nda_historic # Series of Historic 'Colour' events around spiritlism and the Occult - show to source country and to NEN as colour
 # use cooldown to stop refires to reduce variable bloat
 
+nda_historic.1837 = { # Masonic Meeting
+	type = country_event
+	placement = p:xA0E080 # Edinburgh??
+	title = nda_historic.1837.t
+	desc = nda_historic.1837.d
+	flavor = nda_historic.1837.f
+
+	duration = 3
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { 		
+		game_date >= 1837.4.1 
+		game_date < 1838.1.1 
+
+		#is_player = yes
+				
+		# owner of Edinburgh. or NEN
+		OR = {
+			p:xA0E080 = { state = { owner = ROOT } }
+			c:NEN ?= ROOT
+			# should be multiple other locations			
+		}
+	}
+
+	cooldown = { months = 24 }	
+	
+	immediate = {
+		debug_log = "Masonic Meeting"
+		#debug_log_scopes = yes		
+	}
+
+	option = { #"Any more pending?"
+		name = nda_historic.1837.a
+		default_option = yes	
+	}
+}
+
 nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	type = country_event
 	placement = p:x01D042

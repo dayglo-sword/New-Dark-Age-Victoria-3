@@ -11,7 +11,7 @@
 		OR = {
 			is_in_power_bloc = no # no in power bloc
 			# is in power bloc with wrong identity
-			NOT = { power_bloc ?= { has_identity = identity:identity_sovereign_empire} }
+			#NOT = { power_bloc ?= { has_identity = identity:identity_sovereign_empire} }
 
 		}
 	}
@@ -26,15 +26,22 @@
 
 			identity = identity_sovereign_empire
 			principle = principle_vassalization_1
+			# identity = identity_nda_cultist
+			# principle = principle_internal_trade_1
 			member = PREV
 			# subjects are automatically part of the bloc
 		}
+
 		if = {
 			limit = {
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_colonial_offices_2
+				if = {
+					limit = { not = { has_principle = principle:principle_colonial_offices_2 }}
+					add_principle = principle_colonial_offices_2					
+				}
+
 			}
 		}
 
@@ -52,11 +59,11 @@
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { authority  > 0 } # need 100 for the loss from losing the Vatican
-			add = 10
-		}	
+		base = 10
+		# modifier = {
+		# 	trigger = { authority  > 0 } # need 100 for the loss from losing the Vatican
+		# 	add = 10
+		# }	
 	}
 }
 
@@ -74,7 +81,7 @@ nda_yig_form_union_of_the_snake = {
 		OR = {
 			is_in_power_bloc = no # no in power bloc
 			# is in power bloc with wrong identity
-			power_bloc ?= { has_identity = identity:identity_sovereign_empire}
+			#power_bloc ?= { has_identity = identity:identity_sovereign_empire}
 
 		}
 	}
@@ -88,6 +95,8 @@ nda_yig_form_union_of_the_snake = {
 
 			identity = identity_sovereign_empire
 			principle = principle_vassalization_1
+			# identity = identity_nda_cultist
+			# principle = principle_internal_trade_1 #principle_vassalization_1
 
 			# subjects are automatically part of the bloc
 		}
@@ -96,17 +105,21 @@ nda_yig_form_union_of_the_snake = {
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_colonial_offices_2
+				if = {
+					limit = { not = { has_principle = principle:principle_colonial_offices_2}}
+					add_principle = principle_colonial_offices_2					
+				}
+
 			}
 		}
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { authority  > 0 } 
-			add = 10
-		}	
+		base = 10
+		# modifier = {
+		# 	trigger = { authority  > 0 } 
+		# 	add = 10
+		# }	
 	}
 }
 
@@ -124,7 +137,7 @@ nda_dgn_form_cetacean_leagues = {
 		OR = {
 			is_in_power_bloc = no # no in power bloc
 			# is in power bloc with wrong identity
-			power_bloc ?= { has_identity = identity:identity_sovereign_empire}
+			#power_bloc ?= { has_identity = identity:identity_sovereign_empire}
 
 		}
 	}
@@ -138,6 +151,8 @@ nda_dgn_form_cetacean_leagues = {
 
 			identity = identity_sovereign_empire
 			principle = principle_vassalization_1
+			#identity = identity_nda_cultist
+			#principle = principle_internal_trade_1 #principle_vassalization_1
 
 			# subjects are automatically part of the bloc
 		}
@@ -146,16 +161,20 @@ nda_dgn_form_cetacean_leagues = {
 				has_dlc_feature = power_bloc_features
 			}
 			power_bloc = {
-				add_principle = principle_colonial_offices_2
+				if = {
+					limit = { not = { has_principle = principle:principle_colonial_offices_2 }}
+					add_principle = principle_colonial_offices_2					
+				}
+
 			}
 		}
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { authority  > 0 } 
-			add = 10
-		}	
+		base = 10
+		# modifier = {
+		# 	trigger = { authority  > 0 } 
+		# 	add = 10
+		# }	
 	}
 }

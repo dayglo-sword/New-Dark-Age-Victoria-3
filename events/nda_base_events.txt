@@ -34,7 +34,7 @@ nda_base.1 = { # An Introduction to NDA
 	option = { #Help Me...
 		name = nda_base.1.b
 		custom_tooltip = nda_base.1.b_tt
-		trigger_event = { id = nda_base.11 }	# help
+		trigger_event = { id = nda_base.11 popup = yes }	# help
 	}
 }
 
@@ -225,9 +225,10 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 		}
 
 		# redundant to spread to cult country
-		NOT = {
-			is_full_cult_country = { COUNTRY="ROOT" }				
-		}
+		is_full_cult = no
+		# NOT = {			
+		# 	is_full_cult_country = { COUNTRY="ROOT" }				
+		# }
 	}
 	
 	immediate = {
@@ -418,8 +419,8 @@ nda_base.5 = { # First Cultist in Country
 		if = {
 			limit = {
 				can_cult_infiltrate = yes
-
-				NOT = {is_full_cult_country = { COUNTRY="ROOT"}} # don't do for existing bad guys
+				is_full_cult = no
+				#NOT = {is_full_cult_country = { COUNTRY="ROOT"}} # don't do for existing bad guys
 			}
 			add_journal_entry = { type = je_nda_cult_spreads }		
 		}
@@ -710,7 +711,8 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	left_icon = scope:targeted_ig_leader # converted_ig.leader
 
 	trigger = {
-		is_full_cult_country = { COUNTRY="ROOT" }
+		is_full_cult = yes
+		#is_full_cult_country = { COUNTRY="ROOT" }
 
 		any_interest_group = {
 			leader = { 
@@ -1208,9 +1210,10 @@ nda_base.20 = { # Request from the devout
 		}
 
 		# redundant to spread to cult country
-		NOT = {
-			is_full_cult_country = { COUNTRY="ROOT" }				
-		}	
+		is_full_cult = no
+		# NOT = {
+		# 	is_full_cult_country = { COUNTRY="ROOT" }				
+		# }	
 		NOT = { has_variable = nda_devout_offer }
 
 		AND = {

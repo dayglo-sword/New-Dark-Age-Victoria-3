@@ -3,7 +3,7 @@
 
 nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Edwin Davis - 
 	type = country_event
-	placement = p:x0E3435 # Baltimore - needs to be serpent location, east of cinn
+	placement = p:xB0C080 # Sw of Columbus - needs to be serpent location, east of cinn
 	title = nda_historic_regional.1848.t
 	desc = nda_historic_regional.1848.d
 	flavor = nda_historic_regional.1848.f
@@ -23,10 +23,10 @@ nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Ed
 		game_date >= 1848.3.1 
 		game_date < 1849.3.1 
 
-		# owner of Amsterdam
+		# owner of Ohio
 		OR = {
-			p:x0E3435 = { state = { owner = ROOT } }
-			has_interest_marker_in_region = p:x0E3435.region			
+			p:xB0C080 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:xB0C080.region			
 		}
 	}
 
@@ -81,6 +81,48 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 		default_option = yes
 	}
 }
+
+nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers time span 1869 - 1900's. Have as single event?
+	type = country_event
+	placement = p:xB0C080 # Sw of Columbus - needs to be serpent location, east of cinn
+	title = nda_historic_regional.1870.t
+	desc = nda_historic_regional.1870.d
+	flavor = nda_historic_regional.1870.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { 		
+		game_date >= 1870.3.1 
+		game_date < 1871.3.1 
+
+		# owner of Ohio
+		OR = {
+			p:xB0C080 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:xB0C080.region			
+		}
+	}
+
+	cooldown = { months = 16 }	
+
+	immediate = {
+
+	}
+
+	option = { 
+		name = nda_historic_regional.1869.a
+		default_option = yes
+	}
+}
+
 
 # nda_historic_regional.1870 = { # Uluru - Western discovery - name after Australian premier - tell story of Dreamtime battle between carpet-snake people and venomous snake-people.
 

@@ -1,4 +1,4 @@
-﻿
+﻿# Cultist Blocs
 nda_dark_pact = {
 	trigger = {
 		c:ELD ?= this

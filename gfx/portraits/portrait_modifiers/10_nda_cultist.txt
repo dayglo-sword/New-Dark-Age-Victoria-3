@@ -345,20 +345,7 @@ nda_cultist_eternal_youth = {
 				gene = gene_age
 				template = no_aging
 				value = 1.0
-            }
-			# morph = {
-			# 	mode = replace
-			# 	gene = gene_eyebrows_shape
-			# 	template = avg_spacing_lower_thickness
-			# 	value = 1.0
-            # }		
-			# morph = {
-			# 	mode = replace
-			# 	gene = gene_eyebrows_fullness
-			# 	template = layer_2_avg_thickness
-			# 	value = 0
-            # }	
-			
+            }		
 		}
 		
 		weight = {
@@ -373,5 +360,4 @@ nda_cultist_eternal_youth = {
 			}
 		}
 	}
-
 }

@@ -74,6 +74,7 @@ nda_monthly_on_action = {
 		nda_whh.12 # Carnacki Exile
 		nda_whh.13 # Electric Pentangle
 
+		nda_historic.1837
 		nda_historic.1838
 		nda_historic.1842
 		nda_historic.1848
@@ -96,6 +97,7 @@ nda_monthly_on_action = {
 
 		nda_historic_regional.1848
 		nda_historic_regional.1864
+		nda_historic_regional.1870
 		nda_historic_regional.1890
 		nda_historic_regional.1892
 		nda_historic_regional.1901

@@ -1,0 +1,67 @@
+﻿pedestal_01 = {
+	entity = "powerbloc_pedestal_01_entity"
+
+	default_choice_for_identities = {
+		identity_trade_league
+	}
+
+	hero_locator = "loc_hero"
+}
+pedestal_02 = {
+	entity = "powerbloc_pedestal_02_entity"
+
+	default_choice_for_identities = {
+		identity_trade_league
+	}
+
+	hero_locator = "loc_hero"
+}
+pedestal_03 = {
+	entity = "powerbloc_pedestal_03_entity"
+
+	default_choice_for_identities = {
+		identity_sovereign_empire
+		identity_military_treaty_organization
+	}
+
+	hero_locator = "loc_hero"
+}
+pedestal_04 = {
+	entity = "powerbloc_pedestal_04_entity"
+
+	default_choice_for_identities = {
+		identity_military_treaty_organization
+	}
+
+	hero_locator = "loc_hero"
+}
+pedestal_05 = {
+	entity = "powerbloc_pedestal_05_entity"
+
+	default_choice_for_identities = {
+		identity_sovereign_empire
+		identity_ideological_union
+	}
+
+	hero_locator = "loc_hero"
+}
+pedestal_06 = {
+	entity = "powerbloc_pedestal_06_entity"
+
+	default_choice_for_identities = {
+		identity_ideological_union
+		identity_religious
+		identity_nda_cultist
+	}
+
+	hero_locator = "loc_hero"
+}
+pedestal_07 = {
+	entity = "powerbloc_pedestal_07_entity"
+
+	default_choice_for_identities = {
+		identity_religious
+	}
+
+	hero_locator = "loc_hero"
+}
