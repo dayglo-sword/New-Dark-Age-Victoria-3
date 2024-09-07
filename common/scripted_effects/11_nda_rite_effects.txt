@@ -133,6 +133,19 @@
 			}
 		}
 	}	
+
+	# boost Nationalism and/or pan-nationalism to speed up formation
+	if = {
+		limit = { NOT = { has_technology_researched = nationalism } }
+
+		add_technology_progress = { progress = 2000 technology = nationalism }
+	}
+	else_if = {
+		limit = { NOT = { has_technology_researched = pan-nationalism } }
+
+		add_technology_progress = { progress = 2000 technology = pan-nationalism }		
+	}
+
 	#debug_log = "Extra YIG DGN effects" 
 
 	nda_effect_yigian_influence = yes

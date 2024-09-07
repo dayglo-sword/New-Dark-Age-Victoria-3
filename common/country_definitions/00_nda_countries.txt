@@ -1,5 +1,5 @@
 ﻿ELD = {
-	color ={ 142 36 170 }
+	color = { 142 36 170 }
 	
 	country_type = recognized
 

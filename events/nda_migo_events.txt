@@ -257,6 +257,7 @@ nda_migo.1878 = { # The Trapezohedron reappears (events nda_nen.1878-1880) - if 
 
 		has_global_variable = nda_trapezohedron_revealed	
 		p:x1A77EA = { state = { owner = { has_variable = nda_trapezohedron_used } } }
+		not = { has_global_variable = nda_trapezohedron_migo_recovered }
 	}
 
 	cooldown = {

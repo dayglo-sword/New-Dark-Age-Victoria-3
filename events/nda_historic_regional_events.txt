@@ -118,7 +118,7 @@ nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers tim
 	}
 
 	option = { 
-		name = nda_historic_regional.1869.a
+		name = nda_historic_regional.1870.a
 		default_option = yes
 	}
 }

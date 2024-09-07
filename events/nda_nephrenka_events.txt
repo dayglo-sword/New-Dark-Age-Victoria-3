@@ -1,95 +1,95 @@
 ﻿namespace = nda_nephrenka # The Dark Pharaoh 'Pyramids' path
 
-#
-nda_nephrenka.10 = { # test of dna
-	type = country_event
-	placement = ROOT
-	title = nda_nephrenka.10.t
-	desc = nda_nephrenka.10.d
-	flavor =  nda_nephrenka.10.f
-	dlc = dlc_NDA
+# # Test Event
+# nda_nephrenka.10 = { # test of dna
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_nephrenka.10.t
+# 	desc = nda_nephrenka.10.d
+# 	flavor =  nda_nephrenka.10.f
+# 	dlc = dlc_NDA
 
-	duration = 3
+# 	duration = 3
 
-	gui_window = event_window_2char
+# 	gui_window = event_window_2char
 
-	left_icon = scope:scope_nephren
-	right_icon = scope:scope_nitocris 
+# 	left_icon = scope:scope_nephren
+# 	right_icon = scope:scope_nitocris 
 
-	trigger = { # valled from journal
-		# interest group must exist, else character creation errors
-		any_interest_group = {
-			is_interest_group_type = ig_nda_cult_worshippers
-		}
-	}
+# 	trigger = { # called from journal
+# 		# interest group must exist, else character creation errors
+# 		any_interest_group = {
+# 			is_interest_group_type = ig_nda_cult_worshippers
+# 		}
+# 	}
 
-	immediate = {
-		create_character = {
-			first_name = Pharaoh
-			last_name = nephren-ka
-			birth_date = 1831.9.18
-			template = nda_nephren_ka_character_template 
-			on_created = {
-				set_variable = is_nephren
-				#set_variable = is_shadow
-			}
-		}
+# 	immediate = {
+# 		create_character = {
+# 			first_name = Pharaoh
+# 			last_name = nephren-ka
+# 			birth_date = 1831.9.18
+# 			template = nda_nephren_ka_character_template 
+# 			on_created = {
+# 				set_variable = is_nephren
+# 				#set_variable = is_shadow
+# 			}
+# 		}
 
-		#random_character_in_void = {
-		random_scope_character = {
-			limit = {
-				has_variable = is_nephren
-			}
-			save_scope_as = scope_nephren
-			add_trait = nda_master 
-			set_character_immortal = yes
-		}
+# 		#random_character_in_void = {
+# 		random_scope_character = {
+# 			limit = {
+# 				has_variable = is_nephren
+# 			}
+# 			save_scope_as = scope_nephren
+# 			add_trait = nda_master 
+# 			set_character_immortal = yes
+# 		}
 
-		create_character = {
-			first_name = Queen
-			last_name = nitocris
-			birth_date = 1831.9.18
-			template = nda_nitocris_character_template 
-			on_created = {
-				set_variable = is_nitocris 									
-			}
-		}
+# 		create_character = {
+# 			first_name = Queen
+# 			last_name = nitocris
+# 			birth_date = 1831.9.18
+# 			template = nda_nitocris_character_template 
+# 			on_created = {
+# 				set_variable = is_nitocris 									
+# 			}
+# 		}
 
-		random_scope_character = {
-			limit = {
-				has_variable = is_nitocris 
-			}
-			save_scope_as = scope_nitocris 
-			add_trait = nda_master 
-			set_character_immortal = yes
-		}
-	}
+# 		random_scope_character = {
+# 			limit = {
+# 				has_variable = is_nitocris 
+# 			}
+# 			save_scope_as = scope_nitocris 
+# 			add_trait = nda_master 
+# 			set_character_immortal = yes
+# 		}
+# 	}
 
-	option = { 
-		name = nda_nephrenka.10.a
-		default_option = yes
+# 	option = { 
+# 		name = nda_nephrenka.10.a
+# 		default_option = yes
 
-		ai_chance = { # will +ve effect conversion rate
-			base = 80		
-		}
-	}
+# 		ai_chance = { # will +ve effect conversion rate
+# 			base = 80		
+# 		}
+# 	}
 
-	option = { 
-		name = nda_nephrenka.10.b
+# 	option = { 
+# 		name = nda_nephrenka.10.b
 
-		ai_chance = { 
-			base = 10		
-		}
-	}
-	option = { 
-		name = nda_nephrenka.10.c
+# 		ai_chance = { 
+# 			base = 10		
+# 		}
+# 	}
+# 	option = { 
+# 		name = nda_nephrenka.10.c
 
-		ai_chance = { 
-			base = 10		
-		}
+# 		ai_chance = { 
+# 			base = 10		
+# 		}
 
-	}
-}
+# 	}
+# }
 
 # Cultists start in Nile region due to previous uncovering of tomb by Prof Bowen
 nda_nephrenka.15 = {
@@ -180,9 +180,12 @@ nda_nephrenka.20 = { # Start Event
 
 	trigger = {		
 		c:NEN ?= ROOT
-		NOT= { 
-			has_variable = nda_nile_expedition_start
-		}
+		NOT= { has_variable = nda_nile_expedition_start	}
+		# not really needed but hides unwanted warnings in startup log
+		NOT = { has_variable = je_nda_nile_expedition_completed }	
+		NOT = { has_variable = nda_nile_expedition_refused }	
+		NOT = { has_global_variable = nda_nephrenka_pyramid_found }	
+
 		game_date >= 1880.3.23	# random date after nda_nen.1878 - starry wisdom end.
 
 		NOT = { has_modifier = 	modifier_large_expedition_cost } # no existing expedition
@@ -1214,7 +1217,7 @@ nda_nephrenka.40 = {
 		base = 0
 		modifier = {
 			has_global_variable = nda_nephrenka_tomb_nitocris
-			NOT = { has_global_variable = nda_dark_pyramid_found }
+			NOT = { has_global_variable = nda_nephrenka_pyramid_found }
 			add = 2
 		}
 	}

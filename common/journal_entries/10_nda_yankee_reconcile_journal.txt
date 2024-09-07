@@ -11,6 +11,10 @@
 			exists = c:USA	
 			exists = c:FSA		
 		}
+
+		# not really needed but hides unwanted warnings in startup log
+		NOT = { has_variable = je_nda_yankee_reconcile_completed }	
+		NOT = { has_variable = je_nda_yankee_reconcile_failed }	
 	}
 
 	possible = {
@@ -20,135 +24,8 @@
 	immediate = {
 		
 		debug_log = "Yankee Reconcile Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
-		# set_variable = { name = nda_yankee_reconcile_progress_var value = 50 }
-		# set_variable = { name = nda_yankee_reconcile_intermediate_progress_var value = 50 }
-		# set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
+
 	}
-
-	# status_desc = {
-	# 	first_valid = {
-	# 		triggered_desc = {
-	# 			desc = je_nda_yankee_reconcile_inproving_status
-	# 			trigger = {
-	# 				root.var:nda_yankee_reconcile_original_progress_var < root.var:nda_yankee_reconcile_progress_var
-	# 			}
-	# 		}
-	# 		triggered_desc = {
-	# 			desc = je_nda_yankee_reconcile_decreasing_status
-	# 			trigger = {
-	# 				root.var:nda_yankee_reconcile_original_progress_var > root.var:nda_yankee_reconcile_progress_var
-	# 			}
-	# 		}			
-			
-	# 		triggered_desc = {
-	# 			desc = je_nda_yankee_reconcile_status
-	# 			trigger = {
-	# 				always = yes
-	# 			}
-	# 		}
-	# 	}
-	# }
-
-	# on_monthly_pulse = {
-	# 	effect = {
-	# 		set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_intermediate_progress_var }
-	# 		set_variable = { name = nda_yankee_reconcile_intermediate_progress_var value = var:nda_yankee_reconcile_progress_var }			
-	# 		scope:journal_entry = {
-	# 			set_variable = { name = nda_yankee_reconcile_progress_var value = "scripted_bar_progress(nda_yankee_reconcile_progress_bar)" }
-	# 		}			
-	# 	}
-	# }
-	# on_monthly_pulse = {
-	
-	# 	# effect = {
-	# 	# 	set_variable = { name = nda_yankee_reconcile_original_progress_var value = var:nda_yankee_reconcile_progress_var }
-		
-	# 	# 	c:NEN ?= {
-	# 	# 		if = {
-	# 	# 			limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
-
-	# 	# 				change_variable = {
-	# 	# 					name = nda_yankee_reconcile_progress_var
-	# 	# 					add = 1
-	# 	# 				}	
-				
-	# 	# 		}
-	# 	# 		else_if = {
-	# 	# 			limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
-
-	# 	# 				change_variable = {
-	# 	# 					name = nda_yankee_reconcile_progress_var
-	# 	# 					subtract = 1
-	# 	# 				}	
-
-	# 	# 		}
-	# 	# 		else_if = {
-	# 	# 			limit = { NOT = { EXISTS = c:USA }}
-
-	# 	# 				change_variable = {
-	# 	# 					name = nda_yankee_reconcile_progress_var
-	# 	# 					subtract = 1
-	# 	# 				}
-
-	# 	# 		}	
-				
-	# 	# 		# FSA should boost a bit quicker
-	# 	# 		if = {
-	# 	# 			limit = { c:FSA ?= { relations:root >= relations_threshold:amicable } }
-
-	# 	# 				change_variable = {
-	# 	# 					name = nda_yankee_reconcile_progress_var
-	# 	# 					add = 2
-	# 	# 				}
-					
-	# 	# 		}
-	# 	# 		else_if = {
-	# 	# 			limit = { c:FSA ?= { relations:root <= relations_threshold:cold } }
-
-	# 	# 				change_variable = {
-	# 	# 					name = nda_yankee_reconcile_progress_var
-	# 	# 					subtract = 1
-	# 	# 				}	
-
-	# 	# 		}				
-
-	# 	# 		# Boost if owns NY or NJ
-	# 	# 		if = {
-	# 	# 			limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_YORK } }
-					
-	# 	# 				change_variable = {
-	# 	# 					name = nda_yankee_reconcile_progress_var
-	# 	# 					add = 1
-	# 	# 				}
-
-	# 	# 		}
-	# 	# 		if = {
-	# 	# 			limit = { c:NEN ?= { owns_entire_state_region = STATE_NEW_JERSEY } }
-
-	# 	# 				change_variable = {
-	# 	# 					name = nda_yankee_reconcile_progress_var
-	# 	# 					add = 1
-	# 	# 				}
-
-	# 	# 		}				
-	# 	# 	}
-		
-	# 	# }						
-	# }				
-
-
-	# on_yearly_pulse = {
-	# 	effect = {
-	# 		# Have a natural decay as time separates the cultures
-	# 		#scope:journal_entry = {
-	# 			change_variable = {
-	# 				name = nda_yankee_reconcile_progress_var
-	# 				subtract = 1
-	# 			}
-				
-	# 		#}						
-	# 	}		 
-	# }
 
     complete = {
 
@@ -171,60 +48,66 @@
 		s:STATE_NEW_JERSEY = {
 			add_homeland = cu:nda_cul_trueyankee		
 		}		
-
-		if = {
-			limit = { exists = c:USA }
-
-			s:STATE_NEW_YORK.region_state:USA = {
-				# convert yankees to true yankees
-				every_scope_pop = {
-					limit = {
-						culture = cu:yankee
-					}
-					change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
-				}
-			}
-
-			s:STATE_NEW_JERSEY.region_state:USA = {
-				# convert yankees to true yankees
-				every_scope_pop = {
-					limit = {
-						culture = cu:yankee
-					}
-					change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
-				}
-			}			
-		}
-		if = {
-			limit = { exists = c:FSA }
-
-			s:STATE_NEW_YORK.region_state:FSA = {
-				# convert yankees to true yankees
-				every_scope_pop = {
-					limit = {
-						culture = cu:yankee
-					}
-					change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
-				}
-			}
-
-			s:STATE_NEW_JERSEY.region_state:FSA = {
-				# convert yankees to true yankees
-				every_scope_pop = {
-					limit = {
-						culture = cu:yankee
-					}
-					change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
-				}
-			}				
-		}
-
+		
 		if = {
 			limit = {
 				NOT = { country_has_primary_culture = cu:yankee }
 			}
 			add_primary_culture = cu:yankee
 		}
+
+		custom_tooltip = {
+			text = je_nda_yankee_reconcile_pop_convert_tt
+
+			if = {
+				limit = { exists = c:USA }
+
+				s:STATE_NEW_YORK.region_state:USA = {
+					# convert yankees to true yankees
+					every_scope_pop = {
+						limit = {
+							culture = cu:yankee
+						}
+						change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
+					}
+				}
+
+				s:STATE_NEW_JERSEY.region_state:USA = {
+					# convert yankees to true yankees
+					every_scope_pop = {
+						limit = {
+							culture = cu:yankee
+						}
+						change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
+					}
+				}			
+			}
+			if = {
+				limit = { exists = c:FSA }
+
+				s:STATE_NEW_YORK.region_state:FSA = {
+					# convert yankees to true yankees
+					every_scope_pop = {
+						limit = {
+							culture = cu:yankee
+						}
+						change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
+					}
+				}
+
+				s:STATE_NEW_JERSEY.region_state:FSA = {
+					# convert yankees to true yankees
+					every_scope_pop = {
+						limit = {
+							culture = cu:yankee
+						}
+						change_pop_culture = { target = cu:nda_cul_trueyankee value = 0.2 }			
+					}
+				}				
+			}
+
+		}
+
 	}
 
 	fail = {

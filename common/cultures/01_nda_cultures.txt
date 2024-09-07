@@ -176,7 +176,7 @@ nda_cul_trueyankee={
 		Hannah Henriette Helen Harriette Hephzibah Huldah
 		Isabella Ida
 		Jane Julia Judith Josephine
-		Lucy Louisa Lavilla Lydia Lilian Lucretia Luetta Leonora
+		Lucy Louisa Lavinia Lydia Lilian Lucretia Luetta Leonora
 		Mabel Mary Mildred Melissa Minerva Martha Matilda Marjorie Malvina Mahala
 		Nancy Nellie
 		Olive

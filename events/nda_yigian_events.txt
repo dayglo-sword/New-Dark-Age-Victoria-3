@@ -4,7 +4,7 @@ nda_yigian.10 = { # need to check if a leader is available to convert
 	type = country_event
 	hidden = yes
 
-	trigger = { # valled from journal
+	trigger = { # called from journal
 
 	}
 

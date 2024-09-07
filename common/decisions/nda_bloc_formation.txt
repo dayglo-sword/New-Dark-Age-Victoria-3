@@ -22,7 +22,8 @@
 		# no current method to force leaving existing Pact - does work if manually leaving
 		create_power_bloc = {
 			name = nda_dark_pact
-			map_color = hsv{ 0.8  0.7  0.8 }
+
+			map_color = { 142 36 170 }
 
 			identity = identity_sovereign_empire
 			principle = principle_vassalization_1
@@ -59,7 +60,7 @@
 	}
 
 	ai_chance = {
-		base = 10
+		base = 20
 		# modifier = {
 		# 	trigger = { authority  > 0 } # need 100 for the loss from losing the Vatican
 		# 	add = 10
@@ -91,7 +92,8 @@ nda_yig_form_union_of_the_snake = {
 
 		create_power_bloc = {
 			name = nda_union_of_the_snake
-			map_color = hsv{ 0.99  0.7  0.9 }
+
+			map_color =  { 21 191 16 }
 
 			identity = identity_sovereign_empire
 			principle = principle_vassalization_1
@@ -115,7 +117,7 @@ nda_yig_form_union_of_the_snake = {
 	}
 
 	ai_chance = {
-		base = 10
+		base = 20
 		# modifier = {
 		# 	trigger = { authority  > 0 } 
 		# 	add = 10
@@ -147,7 +149,10 @@ nda_dgn_form_cetacean_leagues = {
 
 		create_power_bloc = {
 			name = nda_cetacean_leagues
-			map_color = hsv{ 0.99  0.7  0.9 }
+
+			map_color = { 38 198 218 }
+
+
 
 			identity = identity_sovereign_empire
 			principle = principle_vassalization_1
@@ -171,7 +176,7 @@ nda_dgn_form_cetacean_leagues = {
 	}
 
 	ai_chance = {
-		base = 10
+		base = 20
 		# modifier = {
 		# 	trigger = { authority  > 0 } 
 		# 	add = 10
