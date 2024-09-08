@@ -19,6 +19,6 @@ nda_cetacean_leagues = {
 
 nda_stygian_empire = {
 	trigger = {
-		c:DGN ?= this
+		c:STY ?= this
 	}
 }

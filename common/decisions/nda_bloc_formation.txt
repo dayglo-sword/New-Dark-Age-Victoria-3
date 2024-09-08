@@ -8,6 +8,7 @@
 	possible = {
 		this = c:ELD
 		authority  > 0
+		influence > 200 # Bloc requires 500 but allow deficit
 		OR = {
 			is_in_power_bloc = no # no in power bloc
 			# is in power bloc with wrong identity
@@ -19,30 +20,31 @@
 	when_taken = {
 		debug_log = "form dark pact" 
 
-		# no current method to force leaving existing Pact - does work if manually leaving
-		create_power_bloc = {
-			name = nda_dark_pact
+		hidden_effect = { # stop error log spam
+			# no current method to force leaving existing Pact - does work if manually leaving
+			create_power_bloc = {
+				name = nda_dark_pact
 
-			map_color = { 142 36 170 }
+				map_color = { 142 36 170 }
 
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
-			# identity = identity_nda_cultist
-			# principle = principle_internal_trade_1
-			member = PREV
-			# subjects are automatically part of the bloc
-		}
+				identity = identity_nda_cultist # identity_sovereign_empire
+				principle = principle_vassalization_1
 
-		if = {
-			limit = {
-				has_dlc_feature = power_bloc_features
+				member = PREV
+				# subjects are automatically part of the bloc
 			}
-			power_bloc = {
-				if = {
-					limit = { not = { has_principle = principle:principle_colonial_offices_2 }}
-					add_principle = principle_colonial_offices_2					
-				}
 
+			if = {
+				limit = {
+					has_dlc_feature = power_bloc_features
+				}
+				power_bloc ?= {
+					if = {
+						limit = { not = { has_principle = principle:principle_colonial_offices_2 }}
+						add_principle = principle_colonial_offices_2					
+					}
+
+				}
 			}
 		}
 
@@ -60,11 +62,11 @@
 	}
 
 	ai_chance = {
-		base = 20
-		# modifier = {
-		# 	trigger = { authority  > 0 } # need 100 for the loss from losing the Vatican
-		# 	add = 10
-		# }	
+		base = 10
+		modifier = {
+			trigger = { influence  > 500 }
+			add = 10
+		}	
 	}
 }
 
@@ -78,7 +80,7 @@ nda_yig_form_union_of_the_snake = {
 	possible = {
 		this = c:YIG
 		authority  > 0
-
+		influence > 200 # Bloc requires 500 but allow deficit
 		OR = {
 			is_in_power_bloc = no # no in power bloc
 			# is in power bloc with wrong identity
@@ -89,39 +91,38 @@ nda_yig_form_union_of_the_snake = {
 	
 	when_taken = {
 		debug_log = "form union of the snake" 
+		hidden_effect = { # stop error log spam
+			create_power_bloc = {
+				name = nda_union_of_the_snake
 
-		create_power_bloc = {
-			name = nda_union_of_the_snake
+				map_color =  { 21 191 16 }
 
-			map_color =  { 21 191 16 }
+				identity = identity_nda_cultist # identity_sovereign_empire
+				principle = principle_vassalization_1
 
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
-			# identity = identity_nda_cultist
-			# principle = principle_internal_trade_1 #principle_vassalization_1
-
-			# subjects are automatically part of the bloc
-		}
-		if = {
-			limit = {
-				has_dlc_feature = power_bloc_features
+				# subjects are automatically part of the bloc
 			}
-			power_bloc = {
-				if = {
-					limit = { not = { has_principle = principle:principle_colonial_offices_2}}
-					add_principle = principle_colonial_offices_2					
+			if = {
+				limit = {
+					has_dlc_feature = power_bloc_features
 				}
+				power_bloc ?= {
+					if = {
+						limit = { not = { has_principle = principle:principle_colonial_offices_2}}
+						add_principle = principle_colonial_offices_2					
+					}
 
+				}
 			}
 		}
 	}
 
 	ai_chance = {
-		base = 20
-		# modifier = {
-		# 	trigger = { authority  > 0 } 
-		# 	add = 10
-		# }	
+		base = 10
+		modifier = {
+			trigger = { influence  > 500 }
+			add = 10
+		}	
 	}
 }
 
@@ -135,7 +136,7 @@ nda_dgn_form_cetacean_leagues = {
 	possible = {
 		this = c:DGN
 		authority  > 0
-
+		influence > 200 # Bloc requires 500 but allow deficit
 		OR = {
 			is_in_power_bloc = no # no in power bloc
 			# is in power bloc with wrong identity
@@ -147,39 +148,38 @@ nda_dgn_form_cetacean_leagues = {
 	when_taken = {
 		debug_log = "form cetacean leagues" 
 
-		create_power_bloc = {
-			name = nda_cetacean_leagues
+		hidden_effect = { # stop error log spam
+			create_power_bloc = {
+				name = nda_cetacean_leagues
 
-			map_color = { 38 198 218 }
+				map_color = { 38 198 218 }
 
+				identity = identity_nda_cultist # identity_sovereign_empire
+				principle = principle_vassalization_1
 
-
-			identity = identity_sovereign_empire
-			principle = principle_vassalization_1
-			#identity = identity_nda_cultist
-			#principle = principle_internal_trade_1 #principle_vassalization_1
-
-			# subjects are automatically part of the bloc
-		}
-		if = {
-			limit = {
-				has_dlc_feature = power_bloc_features
+				# subjects are automatically part of the bloc
 			}
-			power_bloc = {
-				if = {
-					limit = { not = { has_principle = principle:principle_colonial_offices_2 }}
-					add_principle = principle_colonial_offices_2					
+			if = {
+				limit = {
+					has_dlc_feature = power_bloc_features
 				}
+				power_bloc ?= {
+					if = {
+						limit = { not = { has_principle = principle:principle_colonial_offices_2 }}
+						add_principle = principle_colonial_offices_2					
+					}
 
-			}
+				}
+			}						
 		}
+
 	}
 
 	ai_chance = {
-		base = 20
-		# modifier = {
-		# 	trigger = { authority  > 0 } 
-		# 	add = 10
-		# }	
+		base = 10
+		modifier = {
+			trigger = { influence  > 500 }
+			add = 10
+		}	
 	}
 }

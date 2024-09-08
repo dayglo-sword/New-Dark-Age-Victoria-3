@@ -1,7 +1,9 @@
-Version v1.7.3
+Version v1.7.6
 
 Major Changes
 Progress Bars for Journals
+Add Cultist Power Bloc Identity - available to the major cult countries.
+Lobby boost between cultists on Cult Conjunctions/Major Events.
 
 Minor Changes
 Extend Dagonic Chinese Land release, removing most Cultist homelands.
@@ -9,9 +11,13 @@ Add New Cult IG name 'Grand Lodges'
 Try and force Power Bloc names for Cult Countries.
 Add decision to remove Cultist Homelands in post revolution/ pre Eldritch countries
 Change Yigian Religion Colour to Green for map contrast.
+Improved event text.
+Use Novanglian instead of New English for adjective.
+Add warning to Mi-Go path.
 
 Bug Fixes
 Remove Cultist Flag symbols after Cult removal due to revolutions.
+Correct conditions for new companies.
 
 ------
 
