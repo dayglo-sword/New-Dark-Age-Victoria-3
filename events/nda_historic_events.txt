@@ -719,7 +719,6 @@ nda_historic.1862 = { # The Ghost Club
 			}
 		}
 	} 
-	desc = nda_historic.1862.d
 	flavor =  nda_historic.1862.f
 
 	duration = 3

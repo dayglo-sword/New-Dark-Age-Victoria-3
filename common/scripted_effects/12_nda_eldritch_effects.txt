@@ -173,7 +173,7 @@ nda_effect_eldritch_annex = {
 					has_variable = nda_king_in_yellow_rules				
 				}
 				has_variable = nda_cultists_in_open
-				#is_diplomatic_play_committed_participant = no		
+				country_has_primary_culture = cu:nda_cul_cultist # needed to stop strange results after revolutions remove culture	
 			}
 		} 
 		debug_log = "nda_effect_eldritch_annex find country"	
@@ -195,7 +195,7 @@ nda_effect_eldritch_annex = {
 					has_variable = nda_king_in_yellow_rules						
 				}
 				has_variable = nda_cultists_in_open		
-				#is_diplomatic_play_committed_participant = no			
+				country_has_primary_culture = cu:nda_cul_cultist # needed to stop strange results after revolutions remove culture		
 			}
 			order_by = { 
 				subtract = global_country_ranking 

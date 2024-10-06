@@ -111,6 +111,7 @@ nda_effect_yigian_annex = {
 				is_player = no		
 				is_full_cult = no
 				has_variable = nda_yig_in_open		
+				country_has_primary_culture = cu:nda_cul_yigian # needed to stop strange results after revolutions remove culture
 			}
 		} 
 
@@ -118,7 +119,8 @@ nda_effect_yigian_annex = {
 			limit = {
 				is_player = no		
 				is_full_cult = no
-				has_variable = nda_yig_in_open			
+				has_variable = nda_yig_in_open	
+				country_has_primary_culture = cu:nda_cul_yigian # needed to stop strange results after revolutions remove culture		
 			}
 			order_by = { subtract = global_country_ranking }
 			position = 1

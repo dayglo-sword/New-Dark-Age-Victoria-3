@@ -1,3 +1,20 @@
+Version v1.7.7
+
+Major Changes
+
+Minor Changes
+Increase rate of Spread for previous Cult countries
+Add 'In the Abyss' events (H G Wells)
+Add extra Historic events. Added more effects to existing ones.
+Negative trait spread in post 'Return' events.
+Improved event text.
+
+Bug Fixes
+Fix Annex Bug - was annexing non-Cultists
+Fix Dagonic Subject Release
+
+------
+
 Version v1.7.6
 
 Major Changes
