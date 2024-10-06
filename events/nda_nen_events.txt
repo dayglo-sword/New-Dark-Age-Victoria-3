@@ -896,6 +896,10 @@ nda_nen.1883 = { # The Colour Out Of Space
 
 	immediate = {
 		set_global_variable = nda_colour_out_of_space_fruit	
+
+		p:xBB7965 = { state = { 
+			add_modifier = { name = nda_colour_out_of_space_legacy_modifier }
+		} }
 	}	
 	
 	option = { #"Pollution?"
@@ -973,6 +977,9 @@ nda_nen.1922 = { # Horror at Martin's Beach
 
 	immediate = {
 		set_global_variable = nda_martins_beach	
+
+		# give affliction to random char
+
 	}	
 	
 	option = { #"A Bizarre Tale..."

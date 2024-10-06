@@ -94,10 +94,12 @@ nda_monthly_on_action = {
 		nda_historic.1889
 		nda_historic.1891		
 		nda_historic.1892
+		nda_historic.1893
 
 		nda_historic_regional.1848
 		nda_historic_regional.1864
 		nda_historic_regional.1870
+		nda_historic_regional.1882
 		nda_historic_regional.1890
 		nda_historic_regional.1892
 		nda_historic_regional.1901
@@ -112,6 +114,8 @@ nda_monthly_on_action = {
 		nda_migo.1935 # Migo Outro
 
 		nda_hgw.10 # The Star
+		nda_hgw.20 # In The Abyss
+		nda_hgw.25 # Sea Raiders
 
 		nda_eap.11 # The Red Death Spreads
 		nda_eap.13 # The Masque of the Red Death

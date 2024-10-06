@@ -84,7 +84,7 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 
 nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers time span 1869 - 1900's. Have as single event?
 	type = country_event
-	placement = p:xB0C080 # Sw of Columbus - needs to be serpent location, east of cinn
+	placement = p:x01D042 # NY State
 	title = nda_historic_regional.1870.t
 	desc = nda_historic_regional.1870.d
 	flavor = nda_historic_regional.1870.f
@@ -104,10 +104,10 @@ nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers tim
 		game_date >= 1870.3.1 
 		game_date < 1871.3.1 
 
-		# owner of Ohio
+		# owner of NY state
 		OR = {
-			p:xB0C080 = { state = { owner = ROOT } }
-			has_interest_marker_in_region = p:xB0C080.region			
+			p:x01D042 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x01D042.region			
 		}
 	}
 
@@ -126,7 +126,46 @@ nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers tim
 
 # nda_historic_regional.1870 = { # Uluru - Western discovery - name after Australian premier - tell story of Dreamtime battle between carpet-snake people and venomous snake-people.
 
-# nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Donnelly
+nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Donnelly
+	type = country_event
+	placement = p:x9A9297 # Minnisota?
+	title = nda_historic_regional.1882.t
+	desc = nda_historic_regional.1882.d
+	flavor = nda_historic_regional.1882.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = { 		
+		game_date >= 1882.3.1 
+		game_date < 1883.3.1 
+
+		# owner of Minnisota
+		OR = {
+			p:x9A9297 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x9A9297.region			
+		}
+	}
+
+	cooldown = { months = 16 }	
+
+	immediate = {
+
+	}
+
+	option = { 
+		name = nda_historic_regional.1882.a
+		default_option = yes
+	}
+}
 
 # nda_historic_regional.1885 = { # Great Serpent Mound, Ohio - F W Putnam of Peabody Museum excavated and rasied money to buy the mound.
 

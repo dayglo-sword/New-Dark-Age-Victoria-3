@@ -178,3 +178,19 @@ nda_investigation_cost_modifier = {
 	country_influence_add = -20
 	country_bureaucracy_add = -20
 }
+
+nda_colour_out_of_space_legacy_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	building_group_bg_agriculture_throughput_add = -0.1
+	building_group_bg_ranching_throughput_add = -0.1
+	building_group_bg_plantations_throughput_add = -0.1
+	building_group_bg_logging_throughput_add = -0.1
+}
+
+nda_sea_creatures_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_skull_negative.dds
+	building_whaling_station_throughput_add = -0.20
+	building_fishing_wharf_throughput_add = -0.20
+	state_standard_of_living_add = -1
+	state_mortality_mult = 0.05
+}

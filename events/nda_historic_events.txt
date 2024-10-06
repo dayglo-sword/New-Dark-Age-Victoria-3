@@ -1,4 +1,4 @@
-﻿namespace = nda_historic # Series of Historic 'Colour' events around spiritlism and the Occult - show to source country and to NEN as colour
+﻿namespace = nda_historic # Series of Historic 'Colour' events around spiritulism and the Occult - show to source country and to NEN as colour
 # use cooldown to stop refires to reduce variable bloat
 
 nda_historic.1837 = { # Masonic Meeting
@@ -40,7 +40,7 @@ nda_historic.1837 = { # Masonic Meeting
 		#debug_log_scopes = yes		
 	}
 
-	option = { #"Any more pending?"
+	option = {
 		name = nda_historic.1837.a
 		default_option = yes	
 	}
@@ -706,6 +706,19 @@ nda_historic.1862 = { # The Ghost Club
 	type = country_event
 	placement = p:x7543C8 
 	title = nda_historic.1862.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					EXISTS = scope:dickens_scope 				
+				}
+				desc = nda_historic.1862.d1
+			}
+			triggered_desc = { # Generic text for when no viable Dickens
+				desc = nda_historic.1862.d2
+			}
+		}
+	} 
 	desc = nda_historic.1862.d
 	flavor =  nda_historic.1862.f
 
@@ -737,6 +750,8 @@ nda_historic.1862 = { # The Ghost Club
 				c:NEN = ROOT
 			}			
 		}
+
+		# dickens should not be dead???
 	}
 
 	cooldown = { months = 24 }	
@@ -785,7 +800,7 @@ nda_historic.1862 = { # The Ghost Club
 	}
 }
 
-nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe! TODO
+nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe! 
 	type = country_event
 	placement = p:x7543C8 
 	title = nda_historic.1865.t
@@ -830,6 +845,46 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe! TODO
 
 	option = { 
 		name = nda_historic.1865.c
+	}
+}
+
+nda_historic.1867 = { # Societas Rosicruciana in Anglia TODO (should be regional??)
+	type = country_event
+	placement = p:x7543C8 
+	title = nda_historic.1867.t
+	desc = nda_historic.1867.d
+	flavor =  nda_historic.1867.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+		game_date >= 1867.6.1 
+		game_date < 1868.1.1
+
+		# owner of London. or NEN
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}
+	}
+
+	cooldown = { months = 24 }
+	
+	option = { 
+		name = nda_historic.1867.a
+		default_option = yes
 	}
 }
 
@@ -951,6 +1006,8 @@ nda_historic.1875 = { # The Theosophical Society
 	}
 }
 
+#nda_historic.1878 = { }# 1879 Church of Christ, Scientist  - REGIONAL??
+
 #1879 - Theosophical Society moves to Madras!
 nda_historic.1879 = {
 	type = country_event
@@ -1011,6 +1068,8 @@ nda_historic.1879 = {
 	}
 }
 
+#1879 - Church of Christ, Scientist 
+
 nda_historic.1882 = { # The Society for Psychical Research
 	type = country_event
 	placement = p:x7543C8 
@@ -1051,6 +1110,11 @@ nda_historic.1882 = { # The Society for Psychical Research
 		default_option = yes
 	}
 }
+
+#nda_historic.1884 = { } # Brazilian Spiritist Federation - REGIONAL??
+
+#nda_historic.1886 = { } # The Martinist Order ''Ordre Martiniste' founded in 1886 by Augustin Chaboseau and Gérard Encausse
+# the rituals themselves do not bear any resemblance to the symbolic degrees of Freemasonry. The rituals have their own milieu of dramatic and esoteric content. It has been claimed however that some of the rituals derived from the Egyptian Freemasonry of Cagliostro, and the Scottish Rectified Rite of Willermoz.
 
 nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 	type = country_event
@@ -1159,6 +1223,9 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement (https://www.gu
 	}
 }
 
+#nda_historic.1888* = { } # PARIS Kabbalistic Order of the Rose-Cross - REGIONAL??
+
+
 nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 	type = country_event
 	placement = p:x7543C8
@@ -1204,6 +1271,8 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 
 	# }
 }
+
+#nda_historic.1890s = { } # PARIS Salon de la Rose + Croix breakaway from O.K.R.C - REGIONAL??
 
 nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 	type = country_event
@@ -1314,3 +1383,70 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc
 		name = nda_historic.1892.b
 	}
 }
+
+nda_historic.1893 = {  # National Spiritualist Association of Churches
+
+	type = country_event
+	placement = p:xF68D89 # Chicago 
+	title = nda_historic.1893.t
+	desc = nda_historic.1893.d
+	flavor =  nda_historic.1893.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	trigger = {
+ 		# 1857 1st published Boston 
+		game_date >= 1893.9.1 
+		game_date < 1894.3.1
+
+		# owner of Chicago. or NEN
+		OR = {
+			is_full_cult_country = { COUNTRY="ROOT" }
+			p:xF68D89 = { state = { owner = ROOT } }
+			AND = {
+				exists = c:NEN
+				c:NEN = ROOT
+			}			
+		}	
+	}
+
+	cooldown = { months = 24 }	
+	
+	immediate = {
+		debug_log = "National Spiritualist Association : [THIS.GetCountry.GetNameNoFormatting]" 		
+	}
+
+	option = { 
+		name = nda_historic.1893.a
+
+		every_scope_state = {
+			if = {
+				limit = { 
+					NOT = { has_variable = nda_rel_boost_spiritualism }
+				}					
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism						
+					months = 12
+					value = nda_small_conversion
+				}		
+			
+			}
+		}
+	}
+
+	option = { 
+		name = nda_historic.1893.b
+		default_option = yes
+	}
+}
+
+#nda_historic.1918 = { } # Thule Society

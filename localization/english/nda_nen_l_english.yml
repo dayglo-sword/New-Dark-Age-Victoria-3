@@ -124,12 +124,12 @@ nda_nen.1880.a:0 "What's that behind me?"
 
 nda_nen.1882.t:0 "Meteor near Arkham"
 nda_nen.1882.d:0 "Three professors from Miskatonic University have hastened out to the west of Arkham to investigate tales of a 'great rock' falling from the sky\n\nAfter finding the remains in a crater, the professors found the meteorite to consist of an 'oddly soft' material.\n\nThe sample that they took faded away during experiments, which appears to also be the fate of the main body of the stellar object."
-nda_nen.1882.f:0 "#ITALIC 'The stone, magnetic as it had been, must have had some peculiar electrical property; for it had “drawn the lightning”...\n\nSix times within an hour the farmer saw the lightning strike the furrow in the front yard, and when the storm was over nothing remained but a ragged pit...\n\nAs was natural, the Arkham papers made much of the incident!#!'"
+nda_nen.1882.f:0 'The stone, magnetic as it had been, must have had some peculiar electrical property; for it had “drawn the lightning”...\n\nSix times within an hour the farmer saw the lightning strike the furrow in the front yard, and when the storm was over nothing remained but a ragged pit...\n\nAs was natural, the Arkham papers made much of the incident!'\n\n...nothing was left to do but go back to the laboratory and test again the disappearing fragment left carefully cased in lead. That fragment lasted a week, at the end of which nothing of value had been learned of it. When it had gone, no residue was left behind..."
 nda_nen.1882.a:0 "Disappeared?"
 
 nda_nen.1883.t:0 "Strange Fruit"
 nda_nen.1883.d:0 "There are reports of possible pollution of the soil west of Arkham, near where last years meteor landed."
-nda_nen.1883.f:0 "#ITALIC 'Never were things of such size seen before, and they held strange colours that could not be put into any words. Their shapes were monstrous, and the horse had snorted at an odour which struck as wholly unprecedented.\n\nThat afternoon several persons drove past to see the abnormal growth, and all agreed that plants of that kind ought never to sprout in a healthy world.#!'"
+nda_nen.1883.f:0 "'Never were things of such size seen before, and they held strange colours that could not be put into any words. Their shapes were monstrous, and the horse had snorted at an odour which struck as wholly unprecedented.\n\nThat afternoon several persons drove past to see the abnormal growth, and all agreed that plants of that kind ought never to sprout in a healthy world.'\n\n“It spreads on everything organic that’s been around here,” muttered the medical examiner. No one replied, but the man who had been in the well gave a hint that his long pole must have stirred up something intangible.\n\n “It was awful,” he added. “There was no bottom at all. Just ooze and bubbles and the feeling of something lurking under there.”"
 nda_nen.1883.a:0 "Polluted?"
 
 nda_nen.1913.t:0 "Meteor in Maine"

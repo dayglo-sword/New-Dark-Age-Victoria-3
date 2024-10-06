@@ -241,7 +241,7 @@
 				multiply = 2
 			}	
 
-			if = { # Cultist Countries use it against non-Cult (need to reciprocate?)
+			if = { # Cultist Countries use it against non-Cult 
 				limit = {
 					AND = {
 						is_cultist_country = yes		
@@ -252,6 +252,30 @@
 				}
 				multiply = 3
 			}	
+
+			if = { # Cultist Countries should be sort of friends
+				limit = {
+					AND = {
+						is_cultist_country = yes		
+						scope:target_country = {
+							is_cultist_country = yes
+						}
+					}					
+				}
+				divide = 2
+			}
+
+			if = { # Non-Cultist Countries use it against Cult 
+				limit = {
+					AND = {
+						is_cultist_country = no		
+						scope:target_country = {
+							is_cultist_country = yes
+						}
+					}					
+				}
+				multiply = 2
+			}
 		}
 	
 		will_propose = { 

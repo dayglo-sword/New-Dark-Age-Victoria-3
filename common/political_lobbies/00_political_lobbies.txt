@@ -877,7 +877,7 @@
 
 				if = {
 					limit = { is_interest_group_type = ig_nda_cult_worshippers }
-					add = 25
+					add = 50
 				}
 			}
 		}	
@@ -906,7 +906,7 @@
 
 				if = {
 					limit = { is_interest_group_type = ig_nda_cult_worshippers }
-					add = 25
+					add = 50
 				}				
 			}		
 		}	
@@ -2137,7 +2137,7 @@ lobby_pro_overlord = {
 
 				if = {
 					limit = { is_interest_group_type = ig_nda_cult_worshippers }
-					add = 25
+					add = 50
 				}
 			}
 		}	
@@ -2166,7 +2166,7 @@ lobby_pro_overlord = {
 
 				if = {
 					limit = { is_interest_group_type = ig_nda_cult_worshippers }
-					add = 25
+					add = 50
 				}				
 			}		
 		}	

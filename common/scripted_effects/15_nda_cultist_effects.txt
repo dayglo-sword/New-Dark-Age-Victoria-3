@@ -55,3 +55,14 @@ nda_effect_cult_perks = {
 	}	
 }
 
+nda_effect_add_negative_trait = {
+	if = {
+		limit = { has_negative_trait = no }
+		random_list = {
+			50 = { add_trait = psychological_affliction }
+			20 = { add_trait = alcoholic }
+			10 = { add_trait = cocaine_addiction }
+			10 = { add_trait = opium_addiction }
+		}	
+	}
+}

@@ -872,6 +872,84 @@ nda_ritual.12 = { # The world surrenders. - Boost ELD by auto adding Cult countr
 	}
 }
 
+# spreading Madness
+nda_ritual.20 = {
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.20.t
+	desc = nda_ritual.20.d
+	flavor =  nda_ritual.20.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
+		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+		
+	}
+
+	immediate = {
+		debug_log = "Ritual - Madness."	
+
+		random_scope_character = {
+			limit = {
+				is_ruler = no
+				has_negative_trait = no
+			}
+			# should use weighting based on existing afflictions.
+			save_scope_as = nda_ritual_victim
+
+			kill_character = yes
+		}
+
+		random_scope_character = {
+			limit = {
+				is_ruler = no
+				has_role = politician
+				has_negative_trait = no
+			}
+
+			nda_effect_add_negative_trait = yes
+		}
+
+		random_scope_character = {
+			limit = {
+				is_ruler = no
+				has_role = general
+				has_negative_trait = no
+			}
+
+			nda_effect_add_negative_trait = yes
+		}
+
+		random_scope_character = {
+			limit = {
+				is_ruler = no
+				has_role = admiral
+				has_negative_trait = no
+			}
+
+			nda_effect_add_negative_trait = yes
+		}
+	}	
+	
+	option = { # A Tragedy.
+		name = nda_ritual.20.a
+		default_option = yes
+	}
+
+}
+
 # Call of Cthulhu story events
 # The Tale of Inspector Legrasse - November 1907 New Orleans
 # the American Archaeological Society held its annual meeting in St. Louis.

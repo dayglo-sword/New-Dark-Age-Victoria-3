@@ -1,5 +1,6 @@
 Timeline of events in mod
 
+1837.4		nda_historic.1837 	Masonic Meeting - Scottish Rite
 1838        nda_historic.1838   2nd Great Awakening
 1839        nda_base.2          Nameless Cults published
 1840        nda_base.3          Imprint of Nameless Cults
@@ -13,6 +14,7 @@ Timeline of events in mod
 1844.7      nda_nen.1844        Church of Starry Wisdom.
 1845.9      nda_nen.1845        Devil Worship in Innsmouth, Captain Marsh
 1846.3      nda_nen.1846        Plague in Innsmouth
+1848.3		nda_ regional		Great Serpent Mound
 1848.4      nda_historic.1848   Founding of Spiritualist Movement
 1849.10     nda_historic.1849   Death of Poe
 
@@ -24,24 +26,29 @@ Timeline of events in mod
 1860.3		nda_authors.20		The White Worm
 1861.10     nda_astro.1861      Conjunction 2
 1862.1      nda_historic.1862   London - The Ghost Club
+1864.3		nda_ regional		Lemuria - 'The Mammals of Madagascar"
 1865.6      nda_historic.1865   Zetetic Astronomy - Earth is not a globe!
+1867.6		nda_historic.1867 	Societas Rosicruciana in Anglia
+1870.3		nda_ regional		Cyrus Teed - Hollow Earth
 1871.5		nda_historic.1871	Vril - Power of the coming race : book by Edward Bulwer-Lytton
 1875.4      nda_historic.1875   NY - The Theosophical Society
 1877.3      nda_nen.1877        Starry Wisdom - Close Down
 1881.4      nda_astro.1881      Conjunction 3
 1882.1      nda_historic.1882   London - The Society for Psychical Research
 1882.6      nda_nen.1882        The Colour Out Of Space
-1884.5      nda_authors.40        Lot No. 249 - Mummy in Oxford
+1884.5      nda_authors.40      Lot No. 249 - Mummy in Oxford
 1888.4      nda_historic.1888   Fox's come clean - Spiritualist Movement
 1888.8      nda_historic.1887   Theosophical Society - The Secret Doctrine
 1888.10     nda_historic.1889   The Golden Dawn
 1890.1      nda_hasturian.1     Paris - The King in Yellow
 1890.8      nda_ritual.2        Cthulhu Early Return
+1890.12		nda_ regional		First advert for ouija boards
 1891.1      nda_hasturian.2     The King in Yellow Spreads
 1891.6							Eltdown Shards
 1892.1      nda_hasturian.3     The King in Yellow - The Repairer of Reputations
 1892.7~     nda_hasturian.5     The King in Yellow - Imperial America
-1892.9      nda_historic.1892   Zetetic Astronomy - Universal Zetetic Society TODO
+1892.9      nda_historic.1892   Zetetic Astronomy - Universal Zetetic Society
+1893.9      nda_historic.1893   National Spiritualist Association
 1896							Eliphas Levi - Waite Translation
 1901        nda_whh.1           House on the Borderlands
 1901.11     nda_astro.1901      Conjunction 4

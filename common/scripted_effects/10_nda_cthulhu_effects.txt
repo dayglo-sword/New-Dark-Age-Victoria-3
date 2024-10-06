@@ -152,6 +152,8 @@
 			}					
 		}
 
+		# Drive certain characters crazy
+		trigger_event = { id = nda_ritual.20 days = 3 } 
 	}	
 }
 

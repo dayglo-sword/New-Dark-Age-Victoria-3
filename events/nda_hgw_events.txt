@@ -138,3 +138,199 @@ nda_hgw.13 = { # Aftermath
 		default_option = yes
 	}
 }
+
+# In the Abyss
+# https://gutenberg.org/cache/epub/42989/pg42989-images.html
+
+nda_hgw.20 = { # In the Abyss - Intro
+	type = country_event
+	placement = ROOT
+	title = nda_hgw.20.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					EXISTS = scope:nda_abyss_leader 				
+				}
+				desc = nda_hgw.20.d1
+			}
+			triggered_desc = { # Generic text for when no viable leader
+				desc = nda_hgw.20.d2
+			}
+		}
+	} 
+	flavor =  nda_hgw.20.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_steam_ship.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		is_player = yes	# need alternate dodge for observers?	
+		# has started research into submarines
+		is_researching_technology = submarine
+		NOT = { has_global_variable = nda_in_the_abyss_intro }	
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		set_global_variable = nda_in_the_abyss_intro
+		set_global_variable = { name = nda_in_the_abyss_timer days = 180 } # needed to delay after effect of nda_hgw.20 
+
+		debug_log = "In The Abyss - Intro"
+
+		random_scope_character = {
+			limit = {
+				is_busy = no
+				is_ruler = no
+				has_role = admiral
+				has_negative_trait = no
+				#has_trait = explorer
+			}
+			save_scope_as = nda_abyss_leader
+
+			set_character_busy_and_immortal = yes
+		}
+
+		trigger_event = { id = nda_hgw.21 months = 3 } 
+	}	
+	
+	option = { #"Interesting"
+		name = nda_hgw.20.a
+		default_option = yes
+	}
+
+	option = { #"Interesting"
+		name = nda_hgw.20.b
+
+		# free character up again - should not be tooltiped
+		hidden_effect = {
+			scope:nda_abyss_leader = {
+				set_character_busy_and_immortal = no
+			}			
+		}
+
+	}
+}
+
+nda_hgw.21 = { # In the Abyss - Expedition
+	type = country_event
+	placement = ROOT
+	title = nda_hgw.21.t
+	desc = nda_hgw.21.d
+	flavor =  nda_hgw.21.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_steam_ship.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	immediate = {
+
+		trigger_event = { id = nda_hgw.22 days = 40 }
+
+		# give boost to submarine research
+		add_technology_progress = { progress = 1000 technology = submarine }
+	}	
+	
+	option = { #"Interesting"
+		name = nda_hgw.21.a
+		default_option = yes
+	}
+}
+
+nda_hgw.22 = { # In the Abyss - Expedition
+	type = country_event
+	placement = ROOT
+	title = nda_hgw.22.t
+	desc = nda_hgw.22.d
+	flavor =  nda_hgw.22.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_steam_ship.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	immediate = {
+
+		# give negative trait to the admiral
+		scope:nda_abyss_leader = {
+			nda_effect_add_negative_trait = yes
+			set_character_busy_and_immortal = no
+		}
+	}	
+	
+	option = { #"Interesting"
+		name = nda_hgw.22.a
+		default_option = yes
+	}
+}
+
+nda_hgw.25 = { # THE SEA RAIDERS - from same collection of short stories as Abyss
+	type = country_event
+	placement = p:xC900EF 
+	title = nda_hgw.25.t #  Extraordinary affair at Sidmouth
+	desc = nda_hgw.25.d
+	flavor =  nda_hgw.25.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_steam_ship.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	
+	trigger = {
+		# owner of Devon coast or NEN
+		OR = {
+			p:xC900EF = { state = { owner = ROOT } }
+			c:NEN ?= ROOT
+			# should be multiple other locations			
+		}
+
+		has_global_variable = nda_in_the_abyss_intro	
+		NOT = { has_global_variable = nda_in_the_abyss_timer }
+
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				p:xC900EF = { state = { owner = ROOT } }
+			}
+
+			p:xC900EF = { state = {  add_modifier = { name = nda_sea_creatures_modifier months = 3 } } }
+		}
+
+	}	
+	
+	option = { #"Interesting"
+		name = nda_hgw.25.a
+		default_option = yes
+	}
+}

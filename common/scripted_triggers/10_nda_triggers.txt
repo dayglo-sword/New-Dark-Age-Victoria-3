@@ -65,6 +65,16 @@ has_non_cultist_ideology = {
 		has_ideology = ideology:ideology_positivist	
 	}
 }
+
+has_negative_trait = {
+	OR = {
+		has_trait = psychological_affliction
+		has_trait = opium_addiction
+		has_trait = cocaine_addiction
+		has_trait = alcoholic
+	}
+}
+
 ### Geography triggers
 
 is_full_cult = {

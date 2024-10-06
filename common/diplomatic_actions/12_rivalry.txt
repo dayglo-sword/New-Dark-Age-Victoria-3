@@ -211,6 +211,18 @@
 				}
 				divide = 2
 			}
+
+			if = { # Non-Cultist Countries use it against Cult 
+				limit = {
+					AND = {
+						is_cultist_country = no		
+						scope:target_country = {
+							is_cultist_country = yes
+						}
+					}					
+				}
+				multiply = 2
+			}
 		}
 	
 		will_propose = { 

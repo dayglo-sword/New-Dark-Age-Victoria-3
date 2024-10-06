@@ -597,7 +597,9 @@
 						}
 					}					
 				}
-				multiply = 2 # too much?
+				add = {
+					value = 50
+				}
 			}
 
 			if = { # Cultist Countries should not be friends with non-cult
@@ -647,6 +649,20 @@
 					value = 50
 				}
 			}
+
+			if = { # Cultist Countries stick together
+				limit = {
+					AND = {
+						is_cultist_country = yes		
+						scope:target_country = {
+							is_cultist_country = yes
+						}
+					}					
+				}
+				add = {
+					value = 50
+				}
+			}
 		}
 		
 		owe_obligation_chance = {
@@ -678,7 +694,20 @@
 				add = {
 					value = 25
 				}
-			}		
+			}	
+			if = { # Cultist Countries stick together
+				limit = {
+					AND = {
+						is_cultist_country = yes		
+						scope:target_country = {
+							is_cultist_country = yes
+						}
+					}					
+				}
+				add = {
+					value = 25
+				}
+			}	
 		}	
 	}
 }
