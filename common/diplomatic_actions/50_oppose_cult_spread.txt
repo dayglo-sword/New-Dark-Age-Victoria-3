@@ -130,7 +130,11 @@
 		propose_score = {
 			value = 0 # never?
 		}		
-	
+
+		evaluation_chance = {
+			value = 0		
+		}	
+
 		will_propose = { 
 			OR = {
 				AND = {

@@ -8,6 +8,7 @@ Add 'In the Abyss' events (H G Wells)
 Add extra Historic events. Added more effects to existing ones.
 Negative trait spread in post 'Return' events.
 Improved event text.
+Cultist Ideology opposes Atheism
 
 Bug Fixes
 Fix Annex Bug - was annexing non-Cultists

@@ -106,6 +106,32 @@
 			}							
 		}
 		
+		# Has existing cultist POPS
+		IF = {
+			limit = { 
+				religion_percent_country = {
+					target = rel:nda_rel_cultist
+					value > 0.2
+				  }		
+			}
+			add = {
+				desc = "nda_cult_spread_existing_cultists_tt"
+				add = 2							
+			}			
+		}	
+		IF = {
+			limit = { 
+				religion_percent_country = {
+					target = rel:nda_rel_yigian
+					value > 0.2
+				  }		
+			}
+			add = {
+				desc = "nda_cult_spread_existing_yigians_tt"
+				add = 2							
+			}			
+		}	
+
 		# Is re-establishing the cult
 		if = {
 			limit = { 
@@ -113,7 +139,7 @@
 			}
 			add = {
 				desc = "nda_cult_spread_reestablising_cult_tt"
-				value = 3 
+				value = 2 
 			}						
 		}
 

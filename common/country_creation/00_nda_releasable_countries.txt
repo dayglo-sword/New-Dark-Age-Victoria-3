@@ -94,6 +94,9 @@ DLM = { # Dagonic Lemuria - This is different to standard Lemuria as Cultist
 		STATE_WEST_BORNEO
 		STATE_WESTERN_NEW_GUINEA
 		STATE_WEST_JAVA
+		STATE_CEYLON
+		STATE_NORTH_MADAGASCAR
+		STATE_SOUTH_MADAGASCAR
 	}
 
 	required_num_states = 9

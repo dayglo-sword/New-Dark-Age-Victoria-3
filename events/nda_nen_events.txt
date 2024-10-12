@@ -56,27 +56,15 @@ nda_nen.1842 = { # Founding of Library
 		default_option = yes
 		
 		ai_chance = { # should be most likely
-			base = 80		
+			base = 90		
 		}
 
 		scope:university_state = {
 			# build uni if not existing
-			if = {	
-				limit = {
-					#NOT = {
-					#	has_building = building_university
-					#}
-				}
-				create_building={
-					building="building_nda_miskatonic_university" #"building_university"
-					level=1
-					reserves=1
-				}
-				
-			}
-			else = {
-				# add level to any university??	
-				#start_building_construction = building_university
+			create_building={
+				building="building_nda_miskatonic_university" 
+				level=1
+				reserves=1
 			}
 
 			add_modifier = { # should this be applied via special building for library
@@ -93,7 +81,7 @@ nda_nen.1842 = { # Founding of Library
 		name = nda_nen.1842.b
 
 		ai_chance = { # could always do something daft
-			base = 20		
+			base = 10		
 		}
 
 		debug_log = "Build Arnold Statue"
@@ -158,9 +146,7 @@ nda_nen.1903 = { # Appeal for reinstatement
 
 	option = { #"no we will not"
 		name = nda_nen.1903.b
-		debug_log = "Herbert West Expelled" # End of Story? NO of cource not!
-
-		#trigger_event = { id = nda_nen.12 days = 150} # Plague in Arkham
+		debug_log = "Herbert West Expelled" # End of Story? NO of course not!
 	}
 
 }
@@ -207,6 +193,7 @@ nda_nen.12 = { # Plague in Arkham
 
 
 }
+
 #94142 - Research breakthrough
 nda_nen.1918 = { # 
 	type = country_event

@@ -35,6 +35,7 @@
 		law_state_religion = approve
 		law_freedom_of_conscience = disapprove
 		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove	
 	}
 
 	lawgroup_governance_principles = {

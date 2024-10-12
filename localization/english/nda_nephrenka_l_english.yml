@@ -40,7 +40,7 @@ nda_nephrenka.21.c: "[SCOPE.sCharacter('expedition_leader_3').GetPrimaryRoleTitl
 nda_nephrenka.21.e: "[SCOPE.sCharacter('expedition_leader_4').GetPrimaryRoleTitle] [SCOPE.sCharacter('expedition_leader_4').GetFullName]"
 
 nda_nephrenka.22.t: "Financing the Expedition"
-nda_nephrenka.22.d: "The expedition to the Nile will require a certain amount of funding to be viable."
+nda_nephrenka.22.d: "The expedition to the Nile will require a certain amount of funding to be viable.\n\nOf course it will be us who have to pick up the tab."
 nda_nephrenka.22.f: ""
 nda_nephrenka.22.a: "The minimum possible."
 nda_nephrenka.22.b: "The usual funding."
@@ -57,14 +57,14 @@ nda_nephrenka.23.c: "Onwards!"
 
 nda_nephrenka.24.t: "Along the Nile"
 nda_nephrenka.24.d: "The expedition is now traversing up the Nile from Cairo heading to a proposed dig site."
-nda_nephrenka.24.f: ""
+nda_nephrenka.24.f: "'The Nile tourist season has opened well. Messrs Cook's tourist steamer Rameses left Cairo on Tuesday with 53 first-class passengers for Luxor and the First Cataract, and a large number of berths are already engaged for the whole of the season.\n\nThe same firm have let most of their first-class deck berths. Rooms have been reserved during the season for guests at the hotels at Cairo and Luxor.'\n - South Wales Echo, November 1891."
 nda_nephrenka.24.a: "Good News!"
 #nda_nephrenka.24.b: "What can we do?"
 #nda_nephrenka.24.c: "What can we do?"
 
 nda_nephrenka.25.t: "A fortunate find"
 nda_nephrenka.25.d: "."
-nda_nephrenka.25.f: "The power of Yig continues to grow."
+nda_nephrenka.25.f: "."
 nda_nephrenka.25.a: "What can we do?"
 nda_nephrenka.25.b: "What can we do?"
 nda_nephrenka.25.c: "What can we do?"
@@ -78,8 +78,8 @@ nda_nephrenka.26.c: "What can we do?"
 
 nda_nephrenka.27.t: "The wrong site"
 nda_nephrenka.27.d: "It looks like the initial dig site is from the wrong era and has a much later date than any locations expected for either the reigns of Nitocris or Nephren-Ka."
-nda_nephrenka.27.f: ""
-nda_nephrenka.27.a: "What can we do?"
+nda_nephrenka.27.f: "'An antiquarian discovery of great interest to Egyptologists has been made at Luxor, where, after twelve months spent in excavating the tomb of Queen Hatasoo, who flourished about 1500 B.C. —that is to say, some 3,400 years ago- her sarcophagus has been discovered.It is in perfect preservation.\n\n It was Queen Hatasoo, or, more correctly, Hatshepeut Maat Ka-Ra, who raised two obelisks at Karnak, and who built the temple of Der el Bahri, near Thebes.'\n- Weekly Mail, May 1904"
+nda_nephrenka.27.a: "Not what we expected!"
 
 nda_nephrenka.28.t: "Knife in the dark"
 nda_nephrenka.28.d: "An intruder has entered the sleeping quarters of [SCOPE.sCharacter('nda_nile_expedition_leader').GetFullName].\n\nThis looks like it is a real life and death situation for the expedition leader."
@@ -94,14 +94,14 @@ nda_nephrenka.30.a: "An Interesting Find..."
 #Gain Mirror as Artifact
 nda_nephrenka.31.t: "A Truly Interesting Find..."
 nda_nephrenka.31.d: "The Tomb of Nitocris may not be packed with treasures, but a most exquisite piece of furniture has been found. An ancient Mirror of intricate design. The finders have requested that it should be given, as a symbol of gratitude for the aid provided, to the leader of their country...You."
-nda_nephrenka.31.f: "The power of Yig continues to grow."
+nda_nephrenka.31.f: ""
 nda_nephrenka.31.a: "A Most Welcome Gift."
 nda_nephrenka.31.b: "It Belongs In A Museum."
 nda_nephrenka.31.c: "It Belongs to the locals."
 
 nda_nephrenka.32.t: "A Baleful Influence."
-nda_nephrenka.32.d: "Every day you stare into the Mirror of Nitocris, and every day the world seems a bit different. A bit more mundane. You can't understand why people would continue along that path while there is greater glory to be had in worshiping other entities."
-nda_nephrenka.32.f: "The power of Yig continues to grow."
+nda_nephrenka.32.d: "Every day you stare into the Mirror of Nitocris, and every day the world seems a bit different.\n\nA bit more mundane.\n\nYou can't understand why people would continue along that path while there is greater glory to be had in worshiping other entities."
+nda_nephrenka.32.f: ""
 nda_nephrenka.32.a: "Cultists Are Just Misunderstood..."
 
 # Start of Dark Pyramid
@@ -134,14 +134,14 @@ nda_nephrenka.43.b: "Get Them To Stop"
 # Dark Pyramid found
 nda_nephrenka.50.t: "Dark Pyramid Found!"
 nda_nephrenka.50.d: "The Legendary Dark Pyramid has been found! Tomb of forgotten Pharaoh uncovered."
-nda_nephrenka.50.f: ""
+nda_nephrenka.50.f: "He came out of the tent into the moonlight, and looked up at the pyramid. The entrance was a good way above his head, of course, and quite fifty or sixty yards from the point where he was standing, but the moonbeams bathed that side of the building in dazzling light so that he was enabled to see a perfect crowd of bats whirling out of the pyramid.\n\nThat indescribable smell, as of a decay begun in remote ages, that rises with the impalpable dust in these mysterious labyrinths of Ancient Egypt which never know the light of day, rose stiflingly; until, at some forty or fifty feet below the level of the sand outside, respiration became difficult "
 nda_nephrenka.50.a: "Hurrah!"
 nda_nephrenka.50.b: "What can we do?"
 
 # Book of Thoth found
 nda_nephrenka.51.t: "Book of Thoth"
-nda_nephrenka.51.d: "Book of Thoth"
-nda_nephrenka.51.f: ""
+nda_nephrenka.51.d: "The True Book of Thoth"
+nda_nephrenka.51.f: "a wizard of Ancient Egypt, armed with the lost lore of that magical land, walks amongst us! What that lore is worth, it would be profitless for us to discuss, but that he possesses it—all of it—I know, beyond doubt. The most ancient and most powerful magical book which has ever existed was the Book of Thoth."
 nda_nephrenka.51.a: "A Great Treasure For Our Country!"
 nda_nephrenka.51.b: "It Belongs To The Locals"
 

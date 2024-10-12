@@ -123,7 +123,7 @@ nda_effect_yigian_annex = {
 				country_has_primary_culture = cu:nda_cul_yigian # needed to stop strange results after revolutions remove culture		
 			}
 			order_by = { subtract = global_country_ranking }
-			position = 1
+			#position = 1 # just annex most powerful
 
 			save_scope_as = nda_yigian_annex			
 		}
@@ -131,12 +131,14 @@ nda_effect_yigian_annex = {
 		debug_log = "Yigian - Country surrenders."	
 		#debug_log_scopes = yes	
 
-		# send notification - does country still exist after annex?
-		every_country = {
-				post_notification = nda_yigian_lands_expand
-		}
-		scope:nda_yigian_annex = {
+		scope:nda_yigian_annex = {			
 			debug_log = "YIG - Country surrenders : [THIS.GetCountry.GetNameNoFormatting]"
+
+			# send notification - does country still exist after annex?
+			every_country = {
+					post_notification = nda_yigian_lands_expand
+			}		
+			
 			# release puppets and dominions - needs constraint to check if themselves not cultists
 			every_country = {
 				limit = {

@@ -1,6 +1,6 @@
 ﻿namespace = titanic
 
-titanic.2 = { #the titanic gets attacked - homage to CAS White Worm
+titanic.2 = { #the titanic gets attacked - homage to CAS 'Coming of the White Worm'
 	type = country_event
 	placement = scope:titanic_state
 	
@@ -13,12 +13,14 @@ titanic.2 = { #the titanic gets attacked - homage to CAS White Worm
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	title = nda_titanic.2.t
+	# should only happen during/after reign of Cthulhu?
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					exists = c:GBR
 					c:GBR = ROOT
+					has_global_variable = nda_cthulhu_arrives
 				}
 				desc = nda_titanic.2.d
 			}
@@ -27,13 +29,46 @@ titanic.2 = { #the titanic gets attacked - homage to CAS White Worm
 					OR = {
 						NOT = { exists = c:GBR }
 						NOT = { c:GBR = ROOT }
+						has_global_variable = nda_cthulhu_arrives
 					}
 				}
 				desc = nda_titanic.2.d2
 			}
+			# normal sinking
+			triggered_desc = {
+				trigger = {
+					exists = c:GBR
+					c:GBR = ROOT
+				}
+				desc = titanic.2.d
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						NOT = { exists = c:GBR }
+						NOT = { c:GBR = ROOT }
+					}
+				}
+				desc = titanic.2.d2
+			}
 		}
 	}
-	flavor = nda_titanic.2.f
+
+	#flavor = nda_titanic.2.f
+	flavor = { 
+		triggered_desc = {
+			trigger = {
+				has_global_variable = nda_cthulhu_arrives
+			}
+			desc = nda_titanic.2.f
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_global_variable = nda_cthulhu_arrives }
+			}
+			desc = titanic.2.f
+		}		
+	}
 
 	immediate = {	
 		random_scope_state = {

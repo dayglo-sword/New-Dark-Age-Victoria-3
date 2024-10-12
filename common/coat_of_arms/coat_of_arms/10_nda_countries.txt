@@ -261,15 +261,15 @@ STY = {
 
 DLM = { # Dagonic Lemuria
 	pattern = "pattern_solid.tga"
-	color1 = "light_blue"
+	color1 = "blue"
 	color2 = ""
 
-	colored_emblem = {
-		texture = "ce_waves.dds"
-		color1 = "blue"
-		color2 = "light_blue"
-		instance = { scale = { 1 2 } position = { 0.5 0.3 } }			
-	}
+	# colored_emblem = {
+	# 	texture = "ce_waves.dds"
+	# 	color1 = "blue"
+	# 	color2 = "light_blue"
+	# 	instance = { scale = { 1 2 } position = { 0.5 0. } }			
+	# }
 
 	colored_emblem = {
 		texture = "ce_nda_cthulhu.dds"

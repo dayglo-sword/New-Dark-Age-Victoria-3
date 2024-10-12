@@ -257,6 +257,22 @@ je_nda_cult_to_yigian = {
 				}				
 			}
 
+			# Already Cultists in country
+			IF = {
+				limit = { 
+					religion_percent_country = {
+						target = rel:nda_rel_cultist
+						value > 0.2
+					}		
+				}
+				scope:nda_je_cult_to_dagonic_scope = {
+					change_variable = {
+						name = nda_cult_to_dagonic_tracker
+						add = 2
+					}					
+				}			
+			}
+
 			# Old Ones are here
 			if = {
 				limit = { 
@@ -438,6 +454,22 @@ je_nda_cult_to_dagonic = {
 						add = 2
 					}					
 				}				
+			}
+
+			# Already Cultists in country
+			IF = {
+				limit = { 
+					religion_percent_country = {
+						target = rel:nda_rel_cultist
+						value > 0.2
+					  }		
+				}
+				scope:nda_je_cult_to_dagonic_scope = {
+					change_variable = {
+						name = nda_cult_to_dagonic_tracker
+						add = 2
+					}					
+				}			
 			}
 
 			# Old Ones are here
