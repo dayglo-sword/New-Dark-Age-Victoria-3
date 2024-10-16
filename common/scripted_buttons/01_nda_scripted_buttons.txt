@@ -15,7 +15,7 @@
 		}
 		
 		#c:ELD ?= { relations:root >= relations_threshold:amicable }
-		c:ELD ?= { relations:root >= relations_threshold:cordial }
+		c:ELD ?= { relations:root >= relations_threshold:neutral }
 		#c:ELD ?= { relations:root >= relations_threshold:friendly }
 	}
 

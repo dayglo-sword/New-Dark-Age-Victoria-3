@@ -332,7 +332,7 @@ nda_yigian.1892 = { # The Mirror reappears
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger  = {
-		c:YIG ?= ROOT # Hasturian America only
+		c:YIG ?= ROOT # Yigian only
 		game_date >= 1892.1.1	
 		game_date < 1893.3.1
 
@@ -490,7 +490,7 @@ nda_yigian.1893 = { # Demand Mirror from player.
 		c:YIG ?= {
 			change_relations = {
 				country = ROOT
-				value = -50
+				value = -100
 			}
 		}
 	}

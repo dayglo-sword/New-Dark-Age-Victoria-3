@@ -10,8 +10,8 @@
 		child_of daughter_of slave_of servant_of beloved_of follower_of acolyte_of minion_of consort_of offspring_of 
 	}
 	common_last_names={
-		the_blood the_dark the_chaos hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog nephren-ka gobogeg khal'kru chaugnar_faugn 
-		bokrug juk-shabb shaurash-ho ghoth
+		the_blood the_dark the_chaos hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog gobogeg khal'kru chaugnar_faugn 
+		bokrug juk-shabb shaurash-ho ghoth rhan-tegoth
 	}
 
 	noble_last_names = {
@@ -52,13 +52,13 @@ nda_cul_yigian={
 	}
 	common_last_names={
 		yig the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha ghatanothoa zoth-ommog
-		lotan typhaon tulu the_stygian
+		lotan typhaon tulu the_stygian nephren-ka 
 		# Hyperborian version of names from CAS - Yigians are ancient race
 		yok-zothoth kthulhut zhothaqquah ubbo-satha
 	}
 
 	noble_last_names = {
-		yig set the_great_dragon the_father_serpent the_snake the_serpent the_blackadder the_ophidia yidhra ayi'ig k'baa lotan typhaon tulu the_white_worm
+		yig set the_great_dragon the_father_serpent the_snake the_serpent the_blackadder the_ophidia yidhra ayi'ig k'baa lotan typhaon tulu the_white_worm nephren-ka
 	}
 	
 	male_regal_first_names = {
@@ -69,7 +69,7 @@ nda_cul_yigian={
 	}
 	regal_last_names = {
 		# populate with names here
-		yig set the_great_dragon the_father_serpent the_white_worm
+		yig set the_great_dragon the_father_serpent the_white_worm nephren-ka
 	}	
 	
 	ethnicities = {

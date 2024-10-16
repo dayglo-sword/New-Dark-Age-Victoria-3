@@ -58,6 +58,16 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 					value = 0
 			}		
 		}
+
+		hidden_effect = {
+			# set variable for cult spread if missing.
+			if = {
+				limit = { NOT = { has_variable = nda_cultists_in_open  } }
+
+				set_variable = nda_cultists_in_open # contry with cult culture is 'in open' by default	
+			}				
+		}
+
 	}
 
     complete = {
@@ -114,6 +124,17 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 				}				
 			}
 			
+			IF = {
+				limit = { is_full_cult = yes }
+
+				scope:nda_je_ritual_proceeds_scope = {
+					change_global_variable = {
+						name = je_nda_ritual_proceeds_tracker
+						add = 1
+					}					
+				}				
+			}
+
 			set_variable = {
 				name = je_nda_ritual_proceeds_tracker
 				value = global_var:je_nda_ritual_proceeds_tracker

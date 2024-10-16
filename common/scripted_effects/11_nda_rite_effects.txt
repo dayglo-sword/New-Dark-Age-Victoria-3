@@ -50,9 +50,7 @@
 					exists = c:ELD
 					c:ELD = { country_rank > root.country_rank }					
 				}	
-				NOT = {
-					is_full_cult_country = { COUNTRY="ROOT" }				
-				}
+				is_full_cult = no
 			}
 
 			# always change relationship
@@ -218,6 +216,7 @@ nda_effect_conclave_refused = {
 	
 }
 
+# Counts used when showing total num of cultists and ritual participants
 nda_effect_ritual_assist_counts = {
 
 	set_variable = { name = nda_ritual_count value = 0 }

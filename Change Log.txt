@@ -8,11 +8,14 @@ Add 'In the Abyss' events (H G Wells)
 Add extra Historic events. Added more effects to existing ones.
 Negative trait spread in post 'Return' events.
 Improved event text.
-Cultist Ideology opposes Atheism
+Cultist Ideology opposes Atheism.
+Reference to C A Smith 'White Worm'
 
 Bug Fixes
 Fix Annex Bug - was annexing non-Cultists
 Fix Dagonic Subject Release
+Nephren-Ka Character Attack - invert probabilities
+Reinstated Game Rule effects on progress bars
 
 ------
 

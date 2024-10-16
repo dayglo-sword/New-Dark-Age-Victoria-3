@@ -258,6 +258,14 @@ nda_effect_dagonic_annex = {
 				}			
 			}
 			
+			# # if at war - end it
+			# if = {
+			# 	limit = { is_at_war = yes}
+
+			# 	every_scope_war = { 
+					
+			# 	}
+			# }
 		
 		}
 		annex = scope:nda_dagonic_annex
@@ -325,11 +333,8 @@ nda_effect_dagonic_influence = { # boost to dagonic influence in area
 		if = {
 			limit = {
 				AND = {
-					exists = c:DGN
-					#c:DGN = { country_rank > root.country_rank }				
-					NOT = {
-						is_full_cult_country = { COUNTRY="ROOT" }				
-					}					
+					exists = c:DGN			
+					is_full_cult = no								
 				}
 			}
 

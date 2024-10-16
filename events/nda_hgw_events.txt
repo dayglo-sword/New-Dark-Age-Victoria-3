@@ -244,7 +244,7 @@ nda_hgw.21 = { # In the Abyss - Expedition
 		trigger_event = { id = nda_hgw.22 days = 40 }
 
 		# give boost to submarine research
-		add_technology_progress = { progress = 1000 technology = submarine }
+		add_technology_progress = { progress = 5000 technology = submarine }
 	}	
 	
 	option = { #"Interesting"

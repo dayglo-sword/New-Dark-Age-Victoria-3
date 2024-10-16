@@ -22,7 +22,10 @@
 		custom_tooltip = {
 			text = nda_dgn_release_leng_tooltip	
 
-			# release smaller states as per warlord breakup but without warlords
+			# try and go down China Warlord route
+			set_global_variable = china_shatters
+
+			# release smaller states as per warlord breakup 
 			if = {
 				limit = { exists = s:STATE_HUNAN.region_state:DGN }
 				create_country = {
@@ -30,6 +33,7 @@
 					origin = this
 					state = s:STATE_HUNAN.region_state:DGN
 					state = s:STATE_JIANGXI.region_state:DGN
+					state = s:STATE_EASTERN_HUBEI.region_state:DGN
 					on_created = {
 						# make cultists
 						IF = {
@@ -43,6 +47,17 @@
 							every_scope_state = {
 								state_region = {
 									remove_homeland = cu:nda_cul_cultist
+								}
+							}
+
+							warlord_setup_effect = yes
+							set_variable = warlord_state
+							random_list = {
+								4 = {
+		
+								}
+								1 = {
+									set_strategy = ai_strategy_unify_china
 								}
 							}
 						}
@@ -67,6 +82,17 @@
 							every_scope_state = {
 								state_region = {
 									remove_homeland = cu:nda_cul_cultist
+								}
+							}
+							
+							warlord_setup_effect = yes
+							set_variable = warlord_state
+							random_list = {
+								4 = {
+		
+								}
+								1 = {
+									set_strategy = ai_strategy_unify_china
 								}
 							}
 						}
@@ -94,6 +120,17 @@
 									remove_homeland = cu:nda_cul_cultist
 								}
 							}
+							
+							warlord_setup_effect = yes
+							set_variable = warlord_state
+							random_list = {
+								4 = {
+		
+								}
+								1 = {
+									set_strategy = ai_strategy_unify_china
+								}
+							}
 						}
 					}
 				}
@@ -105,6 +142,8 @@
 					origin = this
 					state = s:STATE_SHANXI.region_state:DGN
 					state = s:STATE_XIAN.region_state:DGN
+					state = s:STATE_WESTERN_HUBEI.region_state:DGN
+										
 					on_created = {
 						# make cultists
 						IF = {
@@ -118,6 +157,17 @@
 							every_scope_state = {
 								state_region = {
 									remove_homeland = cu:nda_cul_cultist
+								}
+							}
+							
+							warlord_setup_effect = yes
+							set_variable = warlord_state
+							random_list = {
+								4 = {
+		
+								}
+								1 = {
+									set_strategy = ai_strategy_unify_china
 								}
 							}
 						}
@@ -155,7 +205,7 @@
 					tag = TUV
 					origin = this
 					state = s:STATE_TUVA.region_state:DGN
-	
+					state = s:STATE_ALTAI.region_state:DGN
 					on_created = {
 						# make cultists
 						IF = {
@@ -188,6 +238,7 @@
 					state = s:STATE_URGA.region_state:DGN
 					state = s:STATE_ULIASTAI.region_state:DGN
 					state = s:STATE_ALXA.region_state:DGN
+					state = s:STATE_HINGGAN.region_state:DGN
 					on_created = {
 						# make potential cultists
 						IF = {
@@ -203,6 +254,9 @@
 								remove_homeland = cu:nda_cul_cultist
 							}
 						}
+
+						warlord_setup_effect = yes
+						set_variable = warlord_state
 					}
 				}
 			}
@@ -219,6 +273,8 @@
 					state = s:STATE_TIANSHAN.region_state:DGN
 					state = s:STATE_DZUNGARIA.region_state:DGN
 					state = s:STATE_JETISY.region_state:DGN #ILI
+					state = s:STATE_KIRGHIZIA.region_state:DGN 
+
 					on_created = {
 						# make potential cultists
 						IF = {
@@ -232,6 +288,17 @@
 						every_scope_state = {
 							state_region = {
 								remove_homeland = cu:nda_cul_cultist
+							}
+						}
+
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
 							}
 						}
 					}
@@ -266,6 +333,17 @@
 								remove_homeland = cu:nda_cul_cultist
 							}
 						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
+							}
+						}
 					}
 				}
 				# transfer lands if not done automatically by creation?
@@ -276,10 +354,10 @@
 			if = {
 				limit = { 
 					exists = s:STATE_SICHUAN.region_state:DGN 
-					NOT = { exists = c:SHN }
+					NOT = { exists = c:SIH }
 				}
 				create_country = {
-					tag = SHN
+					tag = SIH
 					origin = this
 					state = s:STATE_SICHUAN.region_state:DGN
 					state = s:STATE_CHONGQING.region_state:DGN
@@ -297,6 +375,17 @@
 						every_scope_state = {
 							state_region = {
 								remove_homeland = cu:nda_cul_cultist
+							}
+						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
 							}
 						}
 					}
@@ -329,6 +418,17 @@
 						every_scope_state = {
 							state_region = {
 								remove_homeland = cu:nda_cul_cultist
+							}
+						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
 							}
 						}
 					}
@@ -486,6 +586,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					origin = this
 					state = s:STATE_HUNAN.region_state:DGN
 					state = s:STATE_JIANGXI.region_state:DGN
+					state = s:STATE_EASTERN_HUBEI.region_state:DGN
 					on_created = {
 						# make cultists
 						IF = {
@@ -499,6 +600,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 						every_scope_state = {
 							state_region = {
 								remove_homeland = cu:nda_cul_cultist
+							}
+						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
 							}
 						}
 					}
@@ -525,6 +637,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								remove_homeland = cu:nda_cul_cultist
 							}
 						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
+							}
+						}
 					}
 				}
 			}
@@ -549,6 +672,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								remove_homeland = cu:nda_cul_cultist
 							}
 						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
+							}
+						}
 					}
 				}
 			}
@@ -559,6 +693,8 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					origin = this
 					state = s:STATE_SHANXI.region_state:DGN
 					state = s:STATE_XIAN.region_state:DGN
+					state = s:STATE_WESTERN_HUBEI.region_state:DGN
+
 					on_created = {
 						# make potential cultists
 						IF = {
@@ -572,6 +708,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 						every_scope_state = {
 							state_region = {
 								remove_homeland = cu:nda_cul_cultist
+							}
+						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
 							}
 						}
 					}
@@ -599,6 +746,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								remove_homeland = cu:nda_cul_cultist
 							}
 						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
+							}
+						}
 					}
 				}
 			}
@@ -608,7 +766,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					tag = TUV
 					origin = this
 					state = s:STATE_TUVA.region_state:DGN
-	
+					state = s:STATE_ALTAI.region_state:DGN
 					on_created = {
 						# make potential cultists
 						IF = {
@@ -639,6 +797,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_URGA.region_state:DGN
 					state = s:STATE_ULIASTAI.region_state:DGN
 					state = s:STATE_ALXA.region_state:DGN
+					state = s:STATE_HINGGAN.region_state:DGN
 					on_created = {
 						# make potential cultists
 						IF = {
@@ -654,6 +813,9 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								remove_homeland = cu:nda_cul_cultist
 							}
 						}
+
+						warlord_setup_effect = yes
+						set_variable = warlord_state
 					}
 				}
 			}
@@ -669,7 +831,8 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					origin = this
 					state = s:STATE_TIANSHAN.region_state:DGN
 					state = s:STATE_DZUNGARIA.region_state:DGN
-					state = s:STATE_JETISY.region_state:DGN #ILI
+					state = s:STATE_JETISY.region_state:DGN 
+					state = s:STATE_KIRGHIZIA.region_state:DGN 
 					on_created = {
 						# make potential cultists
 						IF = {
@@ -683,6 +846,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 						every_scope_state = {
 							state_region = {
 								remove_homeland = cu:nda_cul_cultist
+							}
+						}
+
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
 							}
 						}
 					}
@@ -717,6 +891,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								remove_homeland = cu:nda_cul_cultist
 							}
 						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
+							}
+						}
 					}
 				}
 				# transfer lands if not done automatically by creation?
@@ -727,10 +912,10 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 			if = {
 				limit = { 
 					exists = s:STATE_SICHUAN.region_state:DGN 
-					NOT = { exists = c:SHN }
+					NOT = { exists = c:SIH }
 				}
 				create_country = {
-					tag = SHN
+					tag = SIH
 					origin = this
 					state = s:STATE_SICHUAN.region_state:DGN
 					state = s:STATE_CHONGQING.region_state:DGN
@@ -750,6 +935,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 								remove_homeland = cu:nda_cul_cultist
 							}
 						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
+							}
+						}
 					}
 				}
 				# transfer lands if not done automatically by creation?
@@ -767,6 +963,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 					state = s:STATE_SOUTHERN_ANHUI.region_state:DGN
 					state = s:STATE_NORTHERN_ANHUI.region_state:DGN
 					state = s:STATE_NANJING.region_state:DGN
+					state = s:STATE_HENAN.region_state:DGN
 					on_created = {
 						# make potential cultists
 						IF = {
@@ -780,6 +977,17 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 						every_scope_state = {
 							state_region = {
 								remove_homeland = cu:nda_cul_cultist
+							}
+						}
+						
+						warlord_setup_effect = yes
+						set_variable = warlord_state
+						random_list = {
+							4 = {
+	
+							}
+							1 = {
+								set_strategy = ai_strategy_unify_china
 							}
 						}
 					}
@@ -806,7 +1014,7 @@ nda_dgn_release_chinese_lands = { # Strange instance where Qing becomes DGN givi
 							limit = {
 								is_cultist_country = no
 							}
-							debug_log = "Make SIC Cultist"
+							debug_log = "Make LENG Cultist"
 							trigger_event = { id = nda_base.7 days = 8 }		
 						}
 					}

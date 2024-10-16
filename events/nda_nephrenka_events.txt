@@ -529,7 +529,7 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 				add = 1 
 			}	
 
-			set_variable = { # ongoing conversion
+			set_variable = { # ongoing delay
 				name = nda_nephrenka_delay	months = 1
 			}	
 			
@@ -833,7 +833,7 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 								age >= 50
 							}
 						}
-						add = -10
+						add = 10
 					}
 				}
 				modifier = {
@@ -843,7 +843,7 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 								age >= 60
 							}
 						}
-						add = -5
+						add = 5
 					}
 				}
 				modifier = {
@@ -853,7 +853,7 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 								age >= 70
 							}
 						}
-						add = -10
+						add = 10
 					}
 				}
 				modifier = {
@@ -863,7 +863,7 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 								has_trait = nda_investigator # plot armour
 							}
 						}
-						add = 20
+						add = -20
 					}
 				}
 				modifier = {
@@ -873,9 +873,71 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 								has_trait = bandit
 							}
 						}
+						add = -10
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = wounded
+							}
+						}
 						add = 10
 					}
 				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = beetle_ear
+							}
+						}
+						add = 5
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = kidney_stones
+							}
+						}
+						add = 5
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_trait = shellshocked
+							}
+						}
+						add = 5
+					}
+				}
+				modifier = {
+					if = {
+						limit = {
+							scope:nda_nile_expedition_leader = {
+								has_role = general
+							}
+						}
+						add = -10
+					}
+				}
+
+				scope:nda_nile_expedition_leader = {
+					kill_character = yes
+				}
+
+				# add to peril - end expedition
+				change_variable = {
+					name = nda_nile_expedition_peril
+					add = 8
+				}
+			}
+			30 = {
 				modifier = {
 					if = {
 						limit = {
@@ -886,52 +948,6 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 						add = -10
 					}
 				}
-				modifier = {
-					if = {
-						limit = {
-							scope:nda_nile_expedition_leader = {
-								has_trait = beetle_ear
-							}
-						}
-						add = -5
-					}
-				}
-				modifier = {
-					if = {
-						limit = {
-							scope:nda_nile_expedition_leader = {
-								has_trait = kidney_stones
-							}
-						}
-						add = -5
-					}
-				}
-				modifier = {
-					if = {
-						limit = {
-							scope:nda_nile_expedition_leader = {
-								has_trait = shellshocked
-							}
-						}
-						add = -5
-					}
-				}
-				modifier = {
-					if = {
-						limit = {
-							scope:nda_nile_expedition_leader = {
-								has_role = general
-							}
-						}
-						add = -5
-					}
-				}
-				scope:nda_nile_expedition_leader = {
-					kill_character = yes
-				}
-			}
-			30 = {
-				
 				# Character Wounded - Assailant is killed - show event
 				if = {
 					limit = {
@@ -941,16 +957,70 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 					}
 					scope:nda_nile_expedition_leader = {
 						add_trait = wounded
-					}
+						set_variable = nda_nephrenka_wound
+					}										
 				}
+
+			    trigger_event = { id = 	nda_nephrenka.29}
 			}
 			30 = {
 				# Assailant is killed - show event
+				trigger_event = { id = 	nda_nephrenka.29}
 			}
-			# should be option for wounded
 		}
 	}
 }
+
+# Attack Aftermath
+nda_nephrenka.29 = { # The wrong site
+	type = country_event
+	placement = ROOT
+	title = nda_nephrenka.29.t
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+
+				desc = nda_nephrenka.29.d1
+
+				trigger = {
+					scope:nda_nile_expedition_leader = {
+						has_variable = nda_nephrenka_wound
+					}
+				}
+			}
+
+			desc = nda_nephrenka.29.d2
+		}
+	}
+	flavor =  nda_nephrenka.29.f
+
+	dlc = dlc_NDA
+
+	duration = 3 
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds" 
+
+	immediate = { 
+
+		change_variable = {
+			name = nda_nile_expedition_progress
+			add = 1
+		}	
+	}
+
+	option = { 
+		name = nda_nephrenka.29.a
+		default_option = yes
+	}
+}
+
 
 #Tomb of Nitocris Found
 nda_nephrenka.30 = { 
@@ -964,7 +1034,7 @@ nda_nephrenka.30 = {
 	duration =3 
 
 	event_image = {
-		video = "middleeast_middleclass_cafe"
+		video = "africa_desert_expedition"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -1025,7 +1095,7 @@ nda_nephrenka.31 = {
 	duration =3 
 
 	event_image = {
-		video = "middleeast_middleclass_cafe"
+		video = "africa_desert_expedition"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -1058,20 +1128,11 @@ nda_nephrenka.31 = {
 		default_option = yes
 
 		trigger_event = { id = nda_nephrenka.32 months = 3 popup = yes }
- 		# if country not already cultist then compel making cultists acceptable.
-		# ai_chance = { # will +ve effect conversion rate
-		# 	base = 80		
-		# }
+
 	}
 
 	option = {  # it belongs in a museum
 		name = nda_nephrenka.31.b
-
-		# 		name = "EVTOPT94051B"
-		# 		# acknowledge ownership but with no effect
-		# ai_chance = { # will +ve effect conversion rate
-		# 	base = 80		
-		# }
 	}
 
 	option = {  # it belongs to the locals - will start conversion via event - gives country this event but without this option
@@ -1094,24 +1155,51 @@ nda_nephrenka.32 = {
 	duration =3 
 
 	event_image = {
-		video = "middleeast_middleclass_cafe"
+		video = "africa_desert_expedition"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds" 
 
-	# called event? Occurs once it is shipped out.
-	trigger = {
-		#has_country_modifier = egyptian_excavations
-		#has_variable = nda_nephrenka_tomb_nitocris
-		# 		NOT = { has_country_modifier = artifact_nitocris_mirror }
-	}
-
 	immediate = { 
 		# set up country as Cultist if not already
+		if = {
+			limit = { is_full_cult = no } # don't do for proper cult country - should never happen
 
-		# start Yigian conversion if it is.  (and not main Cult country)
+			if = {
+				limit = { has_cult_culture = no }
+				if = {
+					limit= { NOT = { has_journal_entry = je_nda_cult_spreads } }
+
+					add_journal_entry = { type = je_nda_cult_spreads } 
+				}
+				else = {
+					# do nothing as progress modifier for artifact is enough??
+				}
+			}
+			# start Yigian conversion if it is.  (and not main Cult country)
+			else_if = {
+				limit = {
+					country_has_primary_culture = cu:nda_cul_cultist
+				}
+				if = {
+					limit = { has_journal_entry = je_nda_cult_to_yigian }
+					# add boost to journal - make leader yigian if not already
+					je:je_nda_cult_to_yigian = {
+						change_variable = {
+							name = nda_cult_to_yigian_tracker
+							add = 300 # should result in completion
+						}	
+					}
+				}
+				else = {
+					# mass conversion to YIG
+					trigger_event = { id = nda_yigian.2 }
+				}
+
+			}			
+		}
 	}
 
 	option = { 
@@ -1267,7 +1355,7 @@ nda_nephrenka.41 = { # Allow the Expedition to continue
 	duration =3 
 
 	event_image = {
-		video = "middleeast_middleclass_cafe"
+		video = "middleeast_courtroom_upheaval"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

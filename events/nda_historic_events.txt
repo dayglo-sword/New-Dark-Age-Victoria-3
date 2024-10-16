@@ -1409,7 +1409,6 @@ nda_historic.1893 = {  # National Spiritualist Association of Churches
 
 		# owner of Chicago. or NEN
 		OR = {
-			is_full_cult_country = { COUNTRY="ROOT" }
 			p:xF68D89 = { state = { owner = ROOT } }
 			AND = {
 				exists = c:NEN

@@ -32,6 +32,8 @@ nda_cult_spread_interest_group_powerful_tt: "[concept_powerful] Interest Groups 
 nda_cult_spread_interest_group_government_tt: "Interest Groups [concept_in_government] controlled by Cultists"
 nda_cult_spread_investigator_tt: "[Concept('concept_nda_investigator','$concept_nda_investigator_short$')] opposing the spread"
 nda_cult_spread_interest_group_oppose_tt: "[Concept('concept_interest_group','$concept_interest_groups$')]  opposing the Cultists"
+nda_cult_spread_game_rule_fast_tt: "An unnaturally fast spread"
+nda_cult_spread_game_rule_slow_tt: "An unnaturally slow Spread"
 nda_cult_spread_cthulhu_arrives_tt: "[concept_nda_cthulhu] has returned!"
 nda_cult_spread_reestablising_cult_tt: "The Cult is re-establising itself."
 nda_cult_spread_existing_cultists_tt: "Existing Cult Worshippers"
@@ -79,6 +81,9 @@ je_nda_cult_diplo_btn_release_yigian_lands: "Release the Yigian Lands"
 je_nda_cult_diplo_btn_release_yigian_lands_desc: "It is in our power to release to the Yigians their homelands which we currently occupy."
 je_nda_cult_diplo_btn_nameless_city: "Quest for the Nameless City"
 je_nda_cult_diplo_btn_nameless_city_desc: "A traveller, from an antique land, has suggested to us that the [concept_nda_nameless_city] is somewhere within the lands of Arabia near Hail. We should conquer this realm to make our search for this lost city easier."
+je_nda_cult_diplo_btn_cult_missionaries: "Cult Missionaries"
+je_nda_cult_diplo_btn_cult_missionaries_desc: "We should spread the teachings of our glorious cult to one of our subject countries."
+je_nda_cult_diplo_spread_to_puppet_possible_tt: "Has no current major Cult presence."
 
 # Eldritch Colonial
 je_nda_eldritch_colonial_administration: "Colonial Administration"

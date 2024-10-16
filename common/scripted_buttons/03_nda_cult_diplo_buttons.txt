@@ -446,3 +446,60 @@ je_nda_cult_diplo_btn_nameless_city = {
 		} 
 	}
 }
+
+je_nda_cult_diplo_btn_cult_missionaries = {
+	name = "je_nda_cult_diplo_btn_cult_missionaries"
+	desc = "je_nda_cult_diplo_btn_cult_missionaries_desc"
+
+	visible = { 
+		exists = c:ELD
+		this = c:ELD
+		c:ELD = { 
+			#NOT = { has_variable = nda_eld_spread_to_puppet_cooldown  }					
+			any_subject_or_below = { 
+				can_cult_infiltrate = yes
+			} 
+		}		
+	}
+
+	possible = {
+		any_subject_or_below = { 		
+			custom_tooltip = {
+				text = je_nda_cult_diplo_spread_to_puppet_possible_tt
+
+				can_cult_infiltrate = yes 
+			}
+		} 
+	}
+
+	ai_chance = {
+		base = 5
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		# modifier based on relationship ?
+	
+	}
+
+	effect = {
+		ordered_subject_or_below = {
+			limit = {
+				can_cult_infiltrate = yes  			
+			}
+			order_by = { subtract = global_country_ranking }
+			position = 1
+
+			add_journal_entry = { type = je_nda_cult_spreads }  # or do original infiltration, or neighbour spread event
+			debug_log = "Spread Cult to Subjects"
+			#debug_log_scopes = no
+		}
+
+		hidden_effect = {
+			set_variable = {
+				name = nda_eld_spread_to_puppet_cooldown # slow down spread
+				days = 90
+			}			
+		}
+	}
+}

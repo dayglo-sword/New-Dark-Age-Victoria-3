@@ -118,9 +118,8 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 		}
 
 		# redundant to spread to cult country
-		NOT = {
-			is_full_cult_country = { COUNTRY="ROOT" }				
-		}
+		is_full_cult = no			
+
 	}
 
 	immediate = {
@@ -221,7 +220,7 @@ nda_hasturian.3 = { # The Repairer of Reputations
 		NOT = { 
 			exists = c:IAM 
 			has_variable = nda_king_in_yellow_meeting
-			is_full_cult_country = { COUNTRY="ROOT" }
+			is_full_cult = yes
 			is_revolutionary = no # exclude revolution as can cause ELD to flip IAM if revolt succesful
 			is_at_war = no
 		}
@@ -861,7 +860,7 @@ nda_hasturian.1894 = { # shouldn't use year as just random
 			}
 		}
 
-		# Cthulhu is still here
+		# Hastur has the Trapezohedron
 		has_global_variable = nda_trapezohedron_hastur_recovered
 
 		# has at least one qualifying state

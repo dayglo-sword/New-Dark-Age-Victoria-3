@@ -32,7 +32,7 @@ nda_nephrenka.20.c: "A foolish idea."
 
 
 nda_nephrenka.21.t: "Who is to lead?"
-nda_nephrenka.21.d: "A number of experts in different fields has been gathered to take part in the expedition to the very heart of the sands. Their youthful enthusiasm is quietly blended with the prudent fear that our most veteran explorers feel."
+nda_nephrenka.21.d: "A number of experts in different fields has been gathered to take part in the expedition to the very heart of the sands. Their youthful enthusiasm is quietly blended with the prudent fear that our most veteran explorers feel.\n\nThe question is who will lead this expedition?"
 nda_nephrenka.21.f: ""
 nda_nephrenka.21.a: "[SCOPE.sCharacter('expedition_leader_1').GetPrimaryRoleTitle] [SCOPE.sCharacter('expedition_leader_1').GetFullName]"
 nda_nephrenka.21.b: "[SCOPE.sCharacter('expedition_leader_2').GetPrimaryRoleTitle] [SCOPE.sCharacter('expedition_leader_2').GetFullName]"
@@ -59,22 +59,16 @@ nda_nephrenka.24.t: "Along the Nile"
 nda_nephrenka.24.d: "The expedition is now traversing up the Nile from Cairo heading to a proposed dig site."
 nda_nephrenka.24.f: "'The Nile tourist season has opened well. Messrs Cook's tourist steamer Rameses left Cairo on Tuesday with 53 first-class passengers for Luxor and the First Cataract, and a large number of berths are already engaged for the whole of the season.\n\nThe same firm have let most of their first-class deck berths. Rooms have been reserved during the season for guests at the hotels at Cairo and Luxor.'\n - South Wales Echo, November 1891."
 nda_nephrenka.24.a: "Good News!"
-#nda_nephrenka.24.b: "What can we do?"
-#nda_nephrenka.24.c: "What can we do?"
 
 nda_nephrenka.25.t: "A fortunate find"
-nda_nephrenka.25.d: "."
-nda_nephrenka.25.f: "."
-nda_nephrenka.25.a: "What can we do?"
-nda_nephrenka.25.b: "What can we do?"
-nda_nephrenka.25.c: "What can we do?"
+nda_nephrenka.25.d: "It was purely by accident that [SCOPE.sCharacter('nda_nile_expedition_leader').GetFullName] came across the artifact in the local bazaar.\n\nAlthough small in nature the inscriptions upon it seem to imply a link to the tombs that the expedition is looking for."
+nda_nephrenka.25.f: "'The roofed, quieter bazaars were... alluring. Spice, perfume, incense, beads, rugs, silks, and brass—old Mahmoud Suleiman squats cross-legged amidst his gummy bottles while chattering youths pulverise mustard in the hollowed-out capital of an ancient classic column...\n\nAntiquity begins to mingle with exoticism. And then the mosques and the museum — we saw them all, and tried not to let our Arabian revel succumb to the darker charm of Pharaonic Egypt'."
+nda_nephrenka.25.a: "Fortunate indeed!"
 
 nda_nephrenka.26.t: "A dancing disease?"
 nda_nephrenka.26.d: "Professors Wilson and Keppel, and their assistant Betty, have stuck down with a most pecular disease. They seem to be possesed, wearing clothing which is a mockery of the local garb, and dancing across the sands in strange jerky movements.\n\nThis mania makes their continued participation in the expedition impossible."
-nda_nephrenka.26.f: ""
+nda_nephrenka.26.f: "'...generally opened with Betty performing a voluptuous dance with finger cymbals while the two men played whistle and tambourine and watched, before dancing in some obscure form of homage or imitation of her in long night-shirts and Fezzes. This would be followed by the sand dance, with the sand often supplied from a Grecian urn...'\n- The Wilson, Keppel and Betty Story."
 nda_nephrenka.26.a: "Maybe they can make a career of it?"
-nda_nephrenka.26.b: "What can we do?"
-nda_nephrenka.26.c: "What can we do?"
 
 nda_nephrenka.27.t: "The wrong site"
 nda_nephrenka.27.d: "It looks like the initial dig site is from the wrong era and has a much later date than any locations expected for either the reigns of Nitocris or Nephren-Ka."
@@ -86,14 +80,20 @@ nda_nephrenka.28.d: "An intruder has entered the sleeping quarters of [SCOPE.sCh
 nda_nephrenka.28.f: ""
 nda_nephrenka.28.a: "We must hope for the best."
 
+nda_nephrenka.29.t: "Assailant defeated"
+nda_nephrenka.29.d1: "[SCOPE.sCharacter('nda_nile_expedition_leader').GetFullName] has defeated the intruder.\n\nIt would appear from items found on the body that they were members of the Cult of [Concept('concept_nda_yig','$concept_nda_yig_set$')]."
+nda_nephrenka.29.d2: "[SCOPE.sCharacter('nda_nile_expedition_leader').GetFullName], despite being wounded themselves, has defeated the intruder.\n\nIt would appear from items found on the body that they were members of the Cult of [Concept('concept_nda_yig','$concept_nda_yig_set$')]."
+nda_nephrenka.29.f: ""
+nda_nephrenka.29.a: "We must hope for the best."
+
 nda_nephrenka.30.t: "Tomb of Nitocris Found"
-nda_nephrenka.30.d: "The Tomb of Nitocris Found! Resting place of the forgotten Queen uncovered."
+nda_nephrenka.30.d: "The Tomb of Nitocris Found! Resting place of the forgotten Queen uncovered.\n\nWhat artifacts may lie within this underground mausoleum of the legendary queen!"
 nda_nephrenka.30.f: "'Nitocris, who was the second wife of the pharaoh, but now the greatest lady in Egypt. The gods were not mistaken when they called her to be the mother of a pharaoh. She was a tall person, of rather full habit, and in spite of forty years was still beautiful. There was in her eyes, face, and whole form such majesty that even when she went unattended, in the modest garb of a priestess, people bowed their heads to her.'"
 nda_nephrenka.30.a: "An Interesting Find..."
 
 #Gain Mirror as Artifact
 nda_nephrenka.31.t: "A Truly Interesting Find..."
-nda_nephrenka.31.d: "The Tomb of Nitocris may not be packed with treasures, but a most exquisite piece of furniture has been found. An ancient Mirror of intricate design. The finders have requested that it should be given, as a symbol of gratitude for the aid provided, to the leader of their country...You."
+nda_nephrenka.31.d: "The Tomb of Nitocris may not be packed with treasures, but a most exquisite piece of furniture has been found. An ancient Mirror of intricate design. The finders have requested that it should be given, as a symbol of gratitude for the aid provided, to the leader of their country... You."
 nda_nephrenka.31.f: ""
 nda_nephrenka.31.a: "A Most Welcome Gift."
 nda_nephrenka.31.b: "It Belongs In A Museum."
@@ -101,20 +101,20 @@ nda_nephrenka.31.c: "It Belongs to the locals."
 
 nda_nephrenka.32.t: "A Baleful Influence."
 nda_nephrenka.32.d: "Every day you stare into the Mirror of Nitocris, and every day the world seems a bit different.\n\nA bit more mundane.\n\nYou can't understand why people would continue along that path while there is greater glory to be had in worshiping other entities."
-nda_nephrenka.32.f: ""
+nda_nephrenka.32.f: "'the cult... had always existed and always would exist...'"
 nda_nephrenka.32.a: "Cultists Are Just Misunderstood..."
 
 # Start of Dark Pyramid
 nda_nephrenka.40.t: "Trail of the Dark Pyramid"
 nda_nephrenka.40.d: "There is now enough new evidence from the Tomb of Nitocris, when combined with our existing knowledge, that suggests the real posibility of finding the legendary Dark Pyramid of Nephren-Ka.\n\nGiven some of the latest local disturbances caused by our recent discoveries it appears the local authorities might need pursuading to let us continue."
-nda_nephrenka.40.f: ""
+nda_nephrenka.40.f: "'...phantom processions marching interminably through subterraneous labyrinths and avenues of titanic propylaea beside which a man is as a fly, and offering unnamable sacrifices to indescribable gods.\n\nStone colossi marched in endless night and drove herds of grinning androsphinxes down to the shores of illimitable stagnant rivers of pitch. And behind it all I saw the ineffable malignity of primordial necromancy, black and amorphous...'"
 nda_nephrenka.40.a: "We must request a continuation."
 nda_nephrenka.40.b: "We have uncovered enough."
 
 #Allow expedition continue
 nda_nephrenka.41.t: "Annoying Archaeologists"
 nda_nephrenka.41.d: "The local inhabitants are getting distressed by the activities of the foreigners digging around their country. They seem afraid that old curses will be reawakened and turn the region into the home of evil beings."
-nda_nephrenka.41.f: ""
+nda_nephrenka.41.f: "'...the exchange of ancestrally opprobrious language became very brisk... the stranger began to pull violently at Abdul’s robe, an action quickly reciprocated, and leading to a spirited scuffle in which both combatants lost their sacredly cherished headgear and would have reached an even direr condition had I not intervened and separated them by main force.'"
 nda_nephrenka.41.a: "They Must Continue..."
 nda_nephrenka.41.b: "They Must Stop..."
 
@@ -126,10 +126,10 @@ nda_nephrenka.42.a: "Time to search again."
 
 # Ignore diapproval??
 nda_nephrenka.43.t: "Local Disapproval"
-nda_nephrenka.43.d: "The have rejected our request to expand our searches in the area. Should we allow them to order us around, or should we get our archaeologists to cease the search?"
+nda_nephrenka.43.d: "The government of have rejected our request to expand our searches in the area.\n\nShould we allow them to order us around, or should we get our archaeologists to cease the search?"
 nda_nephrenka.43.f: ""
 nda_nephrenka.43.a: "Can Not Stop Now..."
-nda_nephrenka.43.b: "Get Them To Stop"
+nda_nephrenka.43.b: "Recall the Expedition."
 
 # Dark Pyramid found
 nda_nephrenka.50.t: "Dark Pyramid Found!"
@@ -141,7 +141,7 @@ nda_nephrenka.50.b: "What can we do?"
 # Book of Thoth found
 nda_nephrenka.51.t: "Book of Thoth"
 nda_nephrenka.51.d: "The True Book of Thoth"
-nda_nephrenka.51.f: "a wizard of Ancient Egypt, armed with the lost lore of that magical land, walks amongst us! What that lore is worth, it would be profitless for us to discuss, but that he possesses it—all of it—I know, beyond doubt. The most ancient and most powerful magical book which has ever existed was the Book of Thoth."
+nda_nephrenka.51.f: "...a wizard of Ancient Egypt, armed with the lost lore of that magical land, walks amongst us! What that lore is worth, it would be profitless for us to discuss, but that he possesses it — all of it — I know, beyond doubt. The most ancient and most powerful magical book which has ever existed was the Book of Thoth."
 nda_nephrenka.51.a: "A Great Treasure For Our Country!"
 nda_nephrenka.51.b: "It Belongs To The Locals"
 

@@ -114,7 +114,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		# not aggressive towards main cultists
 		if = {
 			limit = {
-				is_full_cult_country = { COUNTRY=scope:target_country }				
+				scope:target_country = { is_full_cult = yes } 		
 			}
 			multiply = 0
 		}	

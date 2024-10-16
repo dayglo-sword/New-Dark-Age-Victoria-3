@@ -308,10 +308,7 @@ nda_effect_yigian_influence = { # boost to yigian influence in area
 				AND = {
 					exists = ROOT
 					exists = c:YIG
-					#c:YIG = { country_rank > root.country_rank }				
-					NOT = {
-						is_full_cult_country = { COUNTRY="ROOT" }				
-					}					
+					is_full_cult = no					
 				}
 			}
 

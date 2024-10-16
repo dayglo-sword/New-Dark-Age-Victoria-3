@@ -52,7 +52,7 @@
 	}
 
 	on_monthly_pulse = {
-		random_events = { # need to do appropritae weights to get into a rough sequence
+		random_events = { # need to do appropriate weights to get into a rough sequence
 			50 = 0
 			10 = nda_nephrenka.23
 			10 = nda_nephrenka.24

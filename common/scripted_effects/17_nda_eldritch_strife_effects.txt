@@ -94,10 +94,11 @@
 			}
 			every_country = {
 				limit = {
-					OR = {
-						is_full_cult_country = { COUNTRY="ROOT" } 	
-						ROOT = { is_player = yes }					
-					}
+					is_player = yes
+					# OR = {
+					# 	is_full_cult_country = { COUNTRY="ROOT" } 	
+					# 	ROOT = { is_player = yes }					
+					# }
 				}
 				post_notification = nda_ritual_post_cthulhu_strife
 			}				

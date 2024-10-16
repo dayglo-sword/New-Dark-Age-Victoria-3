@@ -1,12 +1,13 @@
 ﻿ELD = {
 	use_culture_states = yes
 	
-	required_num_states = 6
+	required_num_states = 10
 
 	ai_will_do = { always = yes }
 	
 	possible = {
 		has_technology_researched = pan-nationalism
+		has_cult_culture = yes
 	}
 }
 
@@ -19,6 +20,7 @@ YIG = {
 	
 	possible = {
 		has_technology_researched = pan-nationalism
+		has_cult_culture = yes
 	}
 }
 
@@ -31,6 +33,7 @@ DGN = {
 	
 	possible = {
 		has_technology_researched = pan-nationalism
+		has_cult_culture = yes
 	}
 }
 

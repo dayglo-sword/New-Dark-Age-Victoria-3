@@ -24,6 +24,7 @@
 	scripted_button = je_nda_cult_diplo_btn_release_dagonic_lands
 	scripted_button = je_nda_cult_diplo_btn_recognise_yigian_lands
 	scripted_button = je_nda_cult_diplo_btn_release_yigian_lands
+	scripted_button = je_nda_cult_diplo_btn_cult_missionaries
 	scripted_button = je_nda_cult_diplo_btn_nameless_city
 
 	weight = 100
@@ -48,7 +49,8 @@ je_nda_eldritch_colonial_administration = {
 			has_interest_marker_in_region = sr:region_congo
 		}
 		# is cultist break up effect - normally ELD has base colonial_admin je disabled or removed
-		is_full_cult_country = { COUNTRY="ROOT" }	
+		#is_full_cult_country = { COUNTRY="ROOT" }	
+		is_full_cult = yes
 
 	}
 

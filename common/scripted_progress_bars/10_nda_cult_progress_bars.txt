@@ -95,7 +95,7 @@
 		}
 
 		# Old Ones are here
-		if = {
+		IF = {
 			limit = { 
 				has_global_variable = nda_cthulhu_arrives 
 				NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
@@ -190,6 +190,20 @@
 			}			
 		}
 
+		IF = {
+			limit = { has_game_rule = cult_spread_faster }
+			add = { 
+				desc = "nda_cult_spread_game_rule_fast_tt"
+				value = 1 
+			}
+		}
+		ELSE_IF = {
+			limit = { has_game_rule = cult_spread_slower }
+			subtract = { 
+				desc = "nda_cult_spread_game_rule_slow_tt"
+				value = 1 
+			}
+		}
  	}
 
  	start_value = 0
