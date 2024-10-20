@@ -555,7 +555,7 @@ nda_yigian.1894 = {
 					has_variable = is_nitocris 
 				}
 				save_scope_as = scope_nitocris 
-				add_trait = nda_master 
+				add_trait = nda_yig_master 
 				set_character_immortal = yes
 			}
 
@@ -578,3 +578,86 @@ nda_yigian.1894 = {
 	}
 
 }
+
+# # Nephrena-Ka - Same as The Return of Nicrotis but Stygia - needs better story
+# nda_yigian.1894 = {
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_yigian.1894.t
+# 	desc =  nda_yigian.1894.d 	
+# 	flavor =  nda_yigian.1894.f
+# 	dlc = dlc_NDA
+
+# 	duration = 3
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+# 	}
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+# 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+# 	trigger = {
+# 		AND = {
+# 				exists = c:STY
+# 				c:STY = ROOT
+# 		}
+# 		has_variable = nda_nephrenka_mirror_nitocris
+# 		# Nitocris should not already exist
+# 		NOT = {
+# 			any_character = {
+# 				has_variable = is_nephren
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+# 		# remove/sacrifice current leader - replace with Nitocris
+# 		# scope current leader
+# 		every_scope_character = {
+# 			limit = { is_ruler = yes }
+# 			save_scope_as = sacrificial_ruler
+# 		}
+# 		# add Nitocris - same method as Castiagne
+# 		ROOT = { 
+# 			create_character = {
+# 				first_name = Queen
+# 				last_name = nitocris
+# 				age = 30
+# 				ruler = yes
+# 				template = nda_nephren_ka_character_template 
+# 				on_created = {
+# 					set_variable = is_nephren 									
+# 				}
+# 			}
+	
+# 			random_scope_character = {
+# 				limit = {
+# 					has_variable = is_nephren 
+# 				}
+# 				save_scope_as = scope_nephren 
+# 				add_trait = nda_yig_master 
+# 				set_character_immortal = yes
+# 			}
+
+# 			#  The national delusion is strong. Make everyone happy
+# 			add_radicals = { value = -1 }
+# 			add_loyalists = { value = 1 }
+
+# 			save_scope_as = originator
+# 		}
+
+# 		# # Notify the world		
+# 		# every_country = {
+# 		# 	post_notification = nda_nitocris_coronation
+# 		# }
+# 	}	
+
+# 	option = { # "Hail  Nitocris"
+
+# 		name = nda_yigian.1894.a
+# 	}
+
+# }

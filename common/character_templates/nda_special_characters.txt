@@ -44,8 +44,9 @@ nda_nephren_ka_character_template = {
 	dna = nda_dna_nephren_ka
     #birth_date = 1812.2.7
     traits = { 
-		literary
-		inspirational_orator
+		nda_yig_master
+		ambitious
+		wrathful
 	}
 	#is_agitator = yes # add only if available
 }
@@ -61,8 +62,9 @@ nda_nitocris_character_template = {
 	dna = nda_dna_nephren_ka
     #birth_date = 1812.2.7
     traits = { 
-		literary
-		inspirational_orator
+		nda_yig_master
+		ambitious
+		wrathful
 	}
 	#is_agitator = yes # add only if available
 }

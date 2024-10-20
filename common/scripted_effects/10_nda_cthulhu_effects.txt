@@ -119,6 +119,18 @@
 					}				
 				}
 			}
+
+			# immune to revolutions
+			set_immune_to_revolutions = yes
+
+			# Cultist do not want to be free - awaiting absorbsion
+			every_subject_or_below = {
+				limit = { 
+					is_cultist_country = yes
+				}
+				
+				add_liberty_desire = -50			
+			}
 		}
 
 		# remove 'secret masters' as not appropriate
@@ -228,6 +240,10 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				limit = { has_modifier = nda_cult_renaissance_country_modifier }
 				remove_modifier = nda_cult_renaissance_country_modifier
 			}
+
+			# remove immunity to revolutions
+			set_immune_to_revolutions = no
+
 			# Add Country Modifiers - Buff
 			add_modifier = {
 				name = nda_cult_decline_country_modifier 

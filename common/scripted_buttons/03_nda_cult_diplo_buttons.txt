@@ -455,7 +455,7 @@ je_nda_cult_diplo_btn_cult_missionaries = {
 		exists = c:ELD
 		this = c:ELD
 		c:ELD = { 
-			#NOT = { has_variable = nda_eld_spread_to_puppet_cooldown  }					
+			NOT = { has_variable = nda_eld_spread_to_puppet_cooldown  }					
 			any_subject_or_below = { 
 				can_cult_infiltrate = yes
 			} 

@@ -151,9 +151,9 @@
 		
 		if = {
 			limit = {
-				has_law = law_type:law_state_religion
+				is_cultist_country = yes
 			}
-			multiply = 1.5
+			add = 1000
 		}
 		
 		if = {

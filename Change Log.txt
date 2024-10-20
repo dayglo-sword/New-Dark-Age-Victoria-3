@@ -1,15 +1,17 @@
-Version v1.7.7
+Version v1.7.6.1
 
 Major Changes
+Increase rate of Spread for previous Cult countries
+Negative trait spread in post 'Return' events.
+Reduced Liberty desirce for ELD puppets on the Return.
 
 Minor Changes
-Increase rate of Spread for previous Cult countries
 Add 'In the Abyss' events (H G Wells)
 Add extra Historic events. Added more effects to existing ones.
-Negative trait spread in post 'Return' events.
 Improved event text.
 Cultist Ideology opposes Atheism.
 Reference to C A Smith 'White Worm'
+Converted 'Cult Missionaries' decision to journal button
 
 Bug Fixes
 Fix Annex Bug - was annexing non-Cultists
