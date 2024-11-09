@@ -4,7 +4,7 @@ nda_dagonic.10 = { # need to check if a leader is available to convert
 	type = country_event
 	hidden = yes
 
-	trigger = { # valled from journal
+	trigger = { # called from journal
 
 	}
 
@@ -32,10 +32,11 @@ nda_dagonic.10 = { # need to check if a leader is available to convert
 				}
 				save_scope_as = converted_ig_leader
 			}
-			trigger_event = { id = nda_dagonic.1 }			
+			owner = {
+				trigger_event = { id = nda_dagonic.1 }			
+			}		
 		}
 	}
-
 }
 
 nda_dagonic.1 = { # Convert a Cultist to dagonic equivalent - called from journal 'je_nda_cult_to_dagonic' on completion

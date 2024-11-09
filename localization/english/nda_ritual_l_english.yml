@@ -171,6 +171,3 @@
  notification_nda_ritual_halt_notice_desc: "[SCOPE.sC('nda_je_ritual_proceeds_scope').GetName ] has stopped in assisting [concept_nda_ritual]."
 # diplo
  nda_cult_liberation: "War of Liberation from the Cult"
-
- dp_final_war:0 "Apocalypse War"
- dp_final_war_tooltip:0 "The Final War with the Cultists"

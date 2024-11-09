@@ -33,7 +33,10 @@ nda_yigian.10 = { # need to check if a leader is available to convert
 				save_scope_as = converted_ig_leader
 			}
 			# now call display
-			trigger_event = { id = nda_yigian.1 }							
+			owner = {
+				trigger_event = { id = nda_yigian.1 }					
+			}
+						
 		}
 	}
 

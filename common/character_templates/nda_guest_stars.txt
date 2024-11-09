@@ -83,6 +83,23 @@ protagonist_bellingham = { # exile from Lot No. 249
 	}
 }
 
+protagonist_arabella_march = { # from Lair of the White Worm
+	first_name = Arabella
+	last_name = March
+	historical = yes # not really!
+	female = yes
+	birth_date = 1833.3.1 
+	interest_group = ig_intelligentsia
+	dna = ecchi_dna_charles_dickens
+	ideology = ideology_nda_cultist
+	religion = rel:nda_rel_cultist 
+	traits = {
+		nda_master	
+		cruel	
+		charismatic		
+	}
+}
+
 # Lovecraft Investigators
 investigator_professor_webb = { # from the Call of Cthulhu
 	first_name = Professor

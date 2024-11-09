@@ -62,9 +62,9 @@ nda_eld_destroy_hagia_sophia: "Destroy the Hagia Sophia"
 nda_eld_destroy_hagia_sophia_desc: "The Hagia Sophia is still a focus point for the Sunni Religion. We should erase it from the planet to erode the Churches power."
 nda_eld_destroy_hagia_sophia_tooltip: "Destroy the Hagia Sophia."
 
-nda_eld_destroy_saint_basils: "Destroy Saint Basils Cathedral"
-nda_eld_destroy_saint_basils_desc: "Saint Basils Cathedral is still a focus point for the Orthodox Religion. We should erase it from the planet to erode the Churches power."
-nda_eld_destroy_saint_basils_tooltip: "Destroy Saint Basils Cathedral."
+nda_eld_destroy_st_basils: "Destroy Saint Basils Cathedral"
+nda_eld_destroy_st_basils_desc: "Saint Basils Cathedral is still a focus point for the Orthodox Religion. We should erase it from the planet to erode the Churches power."
+nda_eld_destroy_st_basils_tooltip: "Destroy Saint Basils Cathedral."
 
 nda_adopt_spiritualism: "Adopt Spiritualism as State Religion"
 nda_adopt_spiritualism_desc: "The number of people following Spiritualism is becoming so great that it should be adopted as the religion of the country."

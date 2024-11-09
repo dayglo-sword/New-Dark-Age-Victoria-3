@@ -17,6 +17,43 @@ nda_oppose_cult_spread_potential2_tt: "Cultists have not taken over."
 nda_oppose_cult_spread_possible_tt: "This Country has Cultists infiltrating."
 nda_oppose_cult_spread_possible2_tt: "The Cultist activity has not been stopped."
 
+# Cultist Actions
+dp_unify_eldritch_cult: "Unify the Eldritch Cult"
+dp_unify_eldritch_cult_desc: "Sets the initiating [concept_war_goal] to annex all Eldritch homeland states held by other nations."
+dp_unify_eldritch_cult_tooltip: "#header Start a $dp_unify_eldritch_cult$ [concept_diplomatic_play]#!\n$TOOLTIP_DELIMITER$\n$dp_unify_eldritch_cult_desc$"
+
+dp_leadership_eldritch_cult: "Eldritch Leadership"
+dp_leadership_eldritch_cult_desc: "Start a $dp_leadership_eldritch_cult$ [concept_diplomatic_play]\n$TOOLTIP_DELIMITER$\n$dp_leadership_eldritch_cult_tooltip$"
+dp_leadership_eldritch_cult_tooltip: "Sets the initiating [concept_war_goal] to kick out the targeted [concept_country] as a [concept_unification_candidate] of the Eldritchj [Concept('concept_unification', '$concept_major_unification$')]."
+
+dp_unify_yigian_cult: "Unify the Yigian States"
+dp_unify_yigian_cult_desc: "Sets the initiating [concept_war_goal] to annex all Yigian homeland states held by other nations."
+dp_unify_yigian_cult_tooltip: "#header Start a $dp_unify_yigian_cult$ [concept_diplomatic_play]#!\n$TOOLTIP_DELIMITER$\n$dp_unify_yigian_cult_desc$"
+
+dp_leadership_yigian_cult: "Yigian Leadership"
+dp_leadership_yigian_cult_desc: "Start a $dp_leadership_yigian_cult$ [concept_diplomatic_play]\n$TOOLTIP_DELIMITER$\n$dp_leadership_yigian_cult_tooltip$"
+dp_leadership_yigian_cult_tooltip: "Sets the initiating [concept_war_goal] to kick out the targeted [concept_country] as a [concept_unification_candidate] of the Yigian [Concept('concept_unification', '$concept_major_unification$')]."
+
+dp_unify_dagonic_cult: "Unify the Dagonic Shores"
+dp_unify_dagonic_cult_desc: "Sets the initiating [concept_war_goal] to annex all Dagonic homeland states held by other nations."
+dp_unify_dagonic_cult_tooltip: "#header Start a $dp_unify_dagonic_cult$ [concept_diplomatic_play]#!\n$TOOLTIP_DELIMITER$\n$dp_unify_dagonic_cult_desc$"
+
+dp_leadership_dagonic_cult: "Dagonic Leadership"
+dp_leadership_dagonic_cult_desc: "Start a $dp_leadership_dagonic_cult$ [concept_diplomatic_play]\n$TOOLTIP_DELIMITER$\n$dp_leadership_dagonic_cult_tooltip$"
+dp_leadership_dagonic_cult_tooltip: "Sets the initiating [concept_war_goal] to kick out the targeted [concept_country] as a [concept_unification_candidate] of the Dagonic [Concept('concept_unification', '$concept_major_unification$')]."
+
+dp_final_war: "Apocalypse War"
+dp_final_war_desc: "The Final War with the Cultists"
+dp_final_war_tooltip: "The Final War with the Cultists"
+
+nda_dp_final_war: "Apocalypse War"
+nda_dp_final_war_desc: "The Final War with the Cultists"
+nda_dp_final_war_tooltip: "The Final War with the Cultists"
+
+nda_dp_nameless_city_war: "War of the Nameless City"
+nda_dp_nameless_city_war_desc: "War for control of the Nameless City"
+nda_dp_nameless_city_war_tooltip: "War for control of the Nameless City"
+
 # Power Bloc
 identity_nda_cultist: "Cultist Pact"
 identity_nda_cultist_desc: "This $concept_power_bloc_identity_extra_short$ focuses on the expansion of the Cult, growing its power and increasing its spread."

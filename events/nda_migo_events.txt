@@ -515,6 +515,8 @@ nda_migo.1927 = { #  The End Is Nigh
 		NOT = { has_global_variable = nda_the_star_intro }	# Star events have not started
 	}
 
+	cooldown = { months = 24 }
+
 	immediate = {
 		# Final Destination till end of game
 		set_global_variable = nda_migo_final_country

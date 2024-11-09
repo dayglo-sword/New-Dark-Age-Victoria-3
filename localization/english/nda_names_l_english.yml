@@ -90,7 +90,8 @@ Angell: "Angell"
 Armitage: "Armitage" 
 Atwood: "Atwood"
 Ashton_Smith: "Ashton Smith" # not strictly new englander!
-Asenath: "Asenath"
+#Blackwood: "Blackwood" # tribute to Alganon
+
 Corey: "Corey" 
 Curwen: "Curwen"
 Danforth: "Danforth"
@@ -100,6 +101,7 @@ Halsey: "Halsey"
 Gilman: "Gilman" 
 Goodenough: "Goodenough"
 Lovecraft: "Lovecraft" 
+Machen: "Machen"
 Manton: "Manton"
 Olney: "Olney" 
 Orne: "Orne" 
@@ -118,7 +120,13 @@ Keziah: "Keziah"
 Edgar_Allen: "Edgar Allen" 
 Howard_Phillips: "Howard Phillips" 
 Richard_Upton: "Richard Upton"
+Asenath: "Asenath"
 Lavinia: "Lavinia"
+
+# Atlantian - get additional from Crowley story
+Kathulos: "Kathulos"
+Thulsa: "Thulsa"
+of_atlantis: "of Atlantis"
 
 #Character Names 
 ecchi_Dickens: "Dickens"

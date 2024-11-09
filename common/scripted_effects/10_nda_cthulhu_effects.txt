@@ -80,7 +80,7 @@
 					ROOT = {
 						add_radicals = {
 							value = 0.5
-							culture = THIS
+							culture = PREV #THIS
 						}						
 					}				
 				}
@@ -110,11 +110,11 @@
 					ROOT = {
 						add_loyalists = {
 							value = 1
-							culture = THIS
+							culture =  PREV #THIS
 						}
 						add_radicals = {
 							value = -1
-							culture = THIS
+							culture =  PREV #THIS
 						}
 					}				
 				}
@@ -210,11 +210,11 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					scope:target_scope = {
 						add_loyalists = {
 							value = -0.7
-							culture = THIS
+							culture =  PREV #THIS
 						}
 						add_radicals = {
 							value = 0.7
-							culture = THIS
+							culture =  PREV #THIS
 						}					
 					}				
 				}
@@ -230,7 +230,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					scope:target_scope = {
 						add_radicals = {
 							value =  very_large_radicals
-							culture = THIS
+							culture =  PREV #THIS
 						}						
 					}				
 				}
@@ -275,7 +275,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					scope:target_scope = {
 						add_radicals = {
 							value = 0.6
-							culture = THIS
+							culture =  PREV #THIS
 						}					
 					}				
 				}
@@ -291,7 +291,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					scope:target_scope = {
 						add_radicals = {
 							value =  very_large_radicals
-							culture = THIS
+							culture =  PREV #THIS
 						}						
 					}				
 				}
@@ -341,11 +341,11 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					scope:target_scope = {
 						add_radicals = {
 							value = -0.5
-							culture = THIS
+							culture =  PREV #THIS
 						}	
 						add_loyalists = {
 							value = 0.5
-							culture = THIS
+							culture =  PREV #THIS
 						}				
 					}				
 				}					

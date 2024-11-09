@@ -62,7 +62,7 @@ nda_eld_nameless_city_desc:0 "A traveller, from an antique land, has suggested t
 nda_eld_nameless_city_possible_tt:0 "Target is not at War."
 
 nda_eld_transfer_yhanthlei:0 "Transfer Y'ha-nthlei"
-nda_eld_transfer_yhanthlei_desc:0 "The shores near the undersea city of [concept_nda_yhanthlei] should by right belong the [concept_nda_deeps_ones]. We should transfer this stretch of coast to them."
+nda_eld_transfer_yhanthlei_desc:0 "The shores near the undersea city of [concept_nda_yhanthlei] should by right belong the [concept_nda_deep_ones]. We should transfer this stretch of coast to them."
 
 #triggers
 nda_has_lost_city_tt:0 "Has a Lost City Revealed"

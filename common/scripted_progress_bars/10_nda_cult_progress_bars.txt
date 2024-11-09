@@ -7,7 +7,7 @@
  	monthly_progress = {
 
 		# fix bug where this reruns when ELD revolts
-		IF = {
+		if = {
 			limit = { c:ELD ?= THIS }
 
 			add = {
@@ -17,7 +17,7 @@
 		}
 
 		# Every non marginal 
-		IF = {
+		if = {
 			limit = { 
 				any_interest_group = {
 					is_marginal = no 
@@ -43,7 +43,7 @@
 		}
 
 		# Every in government
-		IF = {
+		if = {
 			limit = { 
 				any_interest_group = {
 					is_in_government = yes
@@ -69,7 +69,7 @@
 		}	
 
 		# Every powerful
-		IF = {
+		if = {
 			limit = { 
 				any_interest_group = {
 					is_powerful = yes
@@ -95,7 +95,7 @@
 		}
 
 		# Old Ones are here
-		IF = {
+		if = {
 			limit = { 
 				has_global_variable = nda_cthulhu_arrives 
 				NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
@@ -107,7 +107,7 @@
 		}
 		
 		# Has existing cultist POPS
-		IF = {
+		if = {
 			limit = { 
 				religion_percent_country = {
 					target = rel:nda_rel_cultist
@@ -119,7 +119,7 @@
 				add = 2							
 			}			
 		}	
-		IF = {
+		if = {
 			limit = { 
 				religion_percent_country = {
 					target = rel:nda_rel_yigian
@@ -144,7 +144,7 @@
 		}
 
 		# use ban on 'nameless Cults' to throtle back
-		IF = {
+		if = {
 			limit = { has_variable = nda_nameless_cults_supressed}
 			
 			subtract = {
@@ -154,7 +154,7 @@
 		}
 
 		# reduce if Investigators are around 
-		IF = {
+		if = {
 			limit = { 
 				any_scope_character = {
 					has_trait = nda_investigator
@@ -174,7 +174,7 @@
 
 
 		# reduce based on power of investigators IG
-		IF = {
+		if = {
 			limit = { 
 				any_interest_group = {
 					is_marginal = no 
@@ -190,14 +190,14 @@
 			}			
 		}
 
-		IF = {
+		if = {
 			limit = { has_game_rule = cult_spread_faster }
 			add = { 
 				desc = "nda_cult_spread_game_rule_fast_tt"
 				value = 1 
 			}
 		}
-		ELSE_IF = {
+		else_if = {
 			limit = { has_game_rule = cult_spread_slower }
 			subtract = { 
 				desc = "nda_cult_spread_game_rule_slow_tt"

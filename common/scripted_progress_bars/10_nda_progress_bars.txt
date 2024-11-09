@@ -11,7 +11,7 @@
 			limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
 
 			add = {
-				desc = "nda_yankee_reconcile_force_cult_tt"
+				desc = "nda_yankee_reconcile_good_relations_tt"
 				value = 1 
 			}		
 		}
@@ -19,19 +19,21 @@
 			limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
 
 			subtract = {
-				desc = "nda_yankee_reconcile_good_relations_tt"
+				desc = "nda_yankee_reconcile_bad_relations_tt"
 				value = 1 
 			}	
 
 		}
-		else_if = {
-			limit = { NOT = { EXISTS = c:USA }}
 
-			subtract = {
-				desc = "nda_yankee_reconcile_bad_relations_tt"
-				value = 1 
-			}				
-		}	
+		# if they don't exist is that a plus or minus??
+		# else_if = {
+		# 	limit = { NOT = { EXISTS = c:USA }}
+
+		# 	subtract = {
+		# 		desc = "nda_yankee_reconcile_bad_relations_tt"
+		# 		value = 1 
+		# 	}				
+		# }	
 		
 		# FSA should boost a bit quicker
 		if = {

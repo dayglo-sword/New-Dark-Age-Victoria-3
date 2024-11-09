@@ -1,4 +1,4 @@
-﻿nda_effect_eldritch_strife
+﻿nda_effect_eldritch_strife =
 {
 	# The Cult is falling apart after Cthulhu leaves. Cultures are re-asserting themselves
 

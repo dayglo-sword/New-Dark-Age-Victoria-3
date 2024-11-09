@@ -252,33 +252,19 @@ nda_nephrenka.21 = { #Choose commander
 			save_scope_as = expedition_leader_1
 		}
 
-		if = {
-			random_scope_character = {
-				limit = {
-					is_busy = no
-					is_ruler = no
-					#has_role = admiral
-					has_trait = explorer
-					NOT = {
-						this = scope:expedition_leader_1
-					}
+		random_scope_character = {
+			limit = {
+				is_busy = no
+				is_ruler = no
+				#has_role = admiral
+				has_trait = explorer
+				NOT = {
+					this = scope:expedition_leader_1
 				}
-				save_scope_as = expedition_leader_2
 			}
-		}
-		else = {
-			random_scope_character = {
-				limit = {
-					is_busy = no
-					is_ruler = no
-					#has_role = admiral
-					NOT = {
-						this = scope:expedition_leader_1
-					}
-				}
-				save_scope_as = expedition_leader_2
-			}
-		}
+			save_scope_as = expedition_leader_2
+		}		
+
 		random_scope_character = {
 			limit = {
 				is_busy = no
@@ -291,6 +277,7 @@ nda_nephrenka.21 = { #Choose commander
 			}
 			save_scope_as = expedition_leader_3
 		}
+
 		random_scope_character = {
 			limit = {
 				is_busy = no
@@ -304,6 +291,7 @@ nda_nephrenka.21 = { #Choose commander
 			}
 			save_scope_as = expedition_leader_4
 		}
+		
 		set_variable = {
 			name = nda_nile_expedition_progress
 			value = 1

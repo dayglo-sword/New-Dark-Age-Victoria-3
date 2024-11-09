@@ -192,7 +192,7 @@ nda_cul_trueyankee={
 
 	}
 	common_last_names = {
-		Akeley Allan Angell Armitage Atwood Ashton_Smith Carter Corey Curwen Danforth Derby Dexter_Ward Gilman Goodenough Halsey Lovecraft Manton Mason Morgan Noyes Olney Orne Pabodie Pickman Pickman_Derby Poe Sawyer Warren Whateley Willett Wilmarth
+		Akeley Allan Angell Armitage Atwood Ashton_Smith Blackwood Carter Corey Curwen Danforth Derby Dexter_Ward Gilman Goodenough Halsey Lovecraft Machen Manton Mason Morgan Noyes Olney Orne Pabodie Pickman Pickman_Derby Poe Sawyer Warren Whateley Willett Wilmarth
 		Phillips Fowler Marsh Rice West Wilcox Wayland_Thurston
 	
 	}
@@ -210,3 +210,38 @@ nda_cul_trueyankee={
 	}
 }
 
+nda_cul_atlantian={
+	color=  { 36 142 170 } # rgb{ 117 127 174 }
+	religion = nda_rel_cultist
+	traits = { eldritch_culture_group }
+	
+	male_common_first_names={
+		Kathulos Thulsa 
+	}
+	female_common_first_names = {
+		Kathulos Thulsa 
+	}
+	common_last_names={
+		of_atlantis 
+	}
+
+	noble_last_names = {
+		of_atlantis
+	}
+	
+	male_regal_first_names = {
+		# populate with names here
+	}
+	female_regal_first_names = {
+		# populate with names here
+	}
+	regal_last_names = {
+		# populate with names here
+	}	
+	
+	ethnicities = { # have a bit of a mix
+		1 = dagonic_hybrid
+		1 = yigian_hybrid
+	}
+	graphics = european
+}

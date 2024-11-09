@@ -244,11 +244,11 @@ nda_effect_eldritch_annex = {
 						scope:nda_eldritch_annex = {
 							add_radicals = {
 								value = -1
-								culture = THIS
+								culture = PREV
 							}	
 							add_loyalists = {
 								value = 1
-								culture = THIS
+								culture = PREV
 							}				
 						}				
 					}					
@@ -428,8 +428,7 @@ nda_effect_eldritch_annex = {
 	}	
 }
 
-nda_effect_eldritch_anger
-{
+nda_effect_eldritch_anger = {
 	# The Cult is angry with the target country not following the rite.
 	debug_log = "Anger Cult Countries : [THIS.GetCountry.GetNameNoFormatting]" 
 
@@ -440,6 +439,11 @@ nda_effect_eldritch_anger
 
 		change_relations = { country = ROOT value = -100 }
 		
+		# Diplo Catalyst - should be a second chance - does the relations hit trigger a catalyst?
+		create_diplomatic_catalyst = {  
+			type = catalyst_event_negative
+			target = ROOT
+		}
 	}
 	
 	every_country = {
@@ -452,7 +456,7 @@ nda_effect_eldritch_anger
 
 		#debug_log = "Angry Cult Follower Country" 
 
-		# Diplo Catalyst - should be a second chance - does the relations boost trigger a catalyst?
+		# Diplo Catalyst - should be a second chance - does the relations hit trigger a catalyst?
 		create_diplomatic_catalyst = {  
 			type = catalyst_event_negative
 			target = ROOT
@@ -460,8 +464,7 @@ nda_effect_eldritch_anger
 	}
 }
 
-nda_effect_boost_unification
-{
+nda_effect_boost_unification = {
 
 	# try and force DAG creation if not existing
 	IF = {

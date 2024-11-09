@@ -14,27 +14,22 @@
 	}
 }
 
+# IG level effect
 nda_effect_failing_cult_ideology = { # character should have an appropriate ideology
 		# remove 'secret masters' as not appropriate
-		every_interest_group = {
-			limit = { 
-				has_ideology = ideology:ideology_nda_cabalistic				
-			}
-
-			if = {
-				limit = { has_modifier = nda_ig_secret_masters_modifier }
-				# remove any secret masters modifier
-				remove_modifier = nda_ig_secret_masters_modifier				
-			}
-			if = {
-				limit = { has_modifier = nda_ig_cult_justified_modifier }
-				# remove any 'cult justified' modifier
-				remove_modifier = nda_ig_cult_justified_modifier				
-			}	
-			# replace with 'cult crisis'
-			add_modifier = {
-				name = nda_ig_cult_crisis_modifier
-			}
+		if = {
+			limit = { has_modifier = nda_ig_secret_masters_modifier }
+			# remove any secret masters modifier
+			remove_modifier = nda_ig_secret_masters_modifier				
+		}
+		if = {
+			limit = { has_modifier = nda_ig_cult_justified_modifier }
+			# remove any 'cult justified' modifier
+			remove_modifier = nda_ig_cult_justified_modifier				
+		}	
+		# replace with 'cult crisis'
+		add_modifier = {
+			name = nda_ig_cult_crisis_modifier
 		}
 }
 

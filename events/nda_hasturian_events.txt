@@ -499,7 +499,6 @@ nda_hasturian.6 = { # Ruination
 		# unrest in populace
 		add_radicals = {
 			value = medium_radicals
-			culture = THIS
 		}	
 	}	
 	

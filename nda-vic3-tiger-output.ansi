@@ -1,0 +1,1819 @@
+[1;31merror(missing-item)[0m: [1mstate region STATE_HEBEI not defined in map_data/state_regions/[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\dynamic_country_names\00_dynamic_country_names.txt[0m
+[1;34m3557[0m [1;34m|[0m                 state_region = s:STATE_HEBEI
+     [1;34m|[0m                                  [1;31m^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m38[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m191[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m326[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m471[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m605[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m676[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m718[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m761[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m827[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_astro_events.txt[0m
+[1;34m862[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m10[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m130[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m251[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m320[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m352[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m405[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m437[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m543[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m650[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m763[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m9[0m [1;34m|[0m     dlc = dlc_NDA
+  [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m47[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m194[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m319[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m370[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m485[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m659[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m704[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m778[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m842[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m893[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m926[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1135[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1185[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1326[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1377[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1412[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1465[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1528[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1656[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1764[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1861[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_dagonic_events.txt[0m
+[1;34m48[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_dagonic_events.txt[0m
+[1;34m83[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_dagonic_events.txt[0m
+[1;34m200[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_dagonic_events.txt[0m
+[1;34m312[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_dagonic_events.txt[0m
+[1;34m393[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m9[0m [1;34m|[0m     dlc = dlc_NDA
+  [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m91[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m198[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m280[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m344[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m450[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m519[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m554[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m599[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m683[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m809[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m890[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m14[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m61[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m95[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m131[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m188[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m238[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m360[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m400[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m442[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m497[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_migo_events.txt[0m
+[1;34m558[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m17[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m99[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m161[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m204[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m267[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m317[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m359[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m448[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m482[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m529[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m586[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m632[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m700[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m743[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m778[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m823[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m862[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m912[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m951[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m998[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m1039[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m1078[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m588[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m637[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m689[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m743[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m794[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m998[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1032[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1093[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1153[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1287[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1353[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1401[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1442[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1501[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1558[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1613[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m71[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m101[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m140[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m266[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m294[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m330[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m375[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m442[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m648[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m734[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m767[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m824[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m882[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m963[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m1021[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m1099[0m [1;34m|[0m     dlc = dlc_NDA
+     [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_yigian_events.txt[0m
+[1;34m52[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_yigian_events.txt[0m
+[1;34m85[0m [1;34m|[0m     dlc = dlc_NDA
+   [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_yigian_events.txt[0m
+[1;34m201[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_yigian_events.txt[0m
+[1;34m267[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_yigian_events.txt[0m
+[1;34m324[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_yigian_events.txt[0m
+[1;34m453[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(missing-item)[0m: [1munknown dlc dlc_NDA[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_yigian_events.txt[0m
+[1;34m509[0m [1;34m|[0m     dlc = dlc_NDA
+    [1;34m|[0m           [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(range)[0m: [1mexpected number from 0.0 to 1.0[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\genes\01_genes_morph.txt[0m
+[1;34m3546[0m [1;34m|[0m                 { -1 -1 }
+     [1;34m|[0m                   [1;31m^^[0m [1;31m[0m
+
+[1;31merror(range)[0m: [1mexpected number from 0.0 to 1.0[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\genes\01_genes_morph.txt[0m
+[1;34m3710[0m [1;34m|[0m                 { -1 -1 }
+     [1;34m|[0m                   [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m10[0m [1;34m|[0m         IF = {
+   [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m20[0m [1;34m|[0m         IF = {
+   [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m46[0m [1;34m|[0m         IF = {
+   [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m72[0m [1;34m|[0m         IF = {
+   [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m98[0m [1;34m|[0m         IF = {
+   [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m110[0m [1;34m|[0m         IF = {
+    [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m122[0m [1;34m|[0m         IF = {
+    [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m147[0m [1;34m|[0m         IF = {
+    [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m157[0m [1;34m|[0m         IF = {
+    [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m177[0m [1;34m|[0m         IF = {
+    [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `IF`[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m193[0m [1;34m|[0m         IF = {
+    [1;34m|[0m         [1;31m^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown token `ELSE_IF`[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_cult_progress_bars.txt[0m
+[1;34m200[0m [1;34m|[0m         ELSE_IF = {
+    [1;34m|[0m         [1;31m^^^^^^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown field `can_build`[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\combat_unit_types\10_nda_combat_unit_types.txt[0m
+[1;34m24[0m [1;34m|[0m     can_build = {
+   [1;34m|[0m     [1;31m^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown field `can_build`[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\combat_unit_types\10_nda_combat_unit_types.txt[0m
+[1;34m56[0m [1;34m|[0m     can_build = {
+   [1;34m|[0m     [1;31m^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(strict-scopes)[0m: [1mscope:initiator might not be available here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\on_actions\00_code_on_actions.txt[0m
+[1;34m1480[0m [1;34m|[0m                 scope:initiator = {
+     [1;34m|[0m                 [1;31m^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(strict-scopes)[0m: [1mscope:target might not be available here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\on_actions\00_code_on_actions.txt[0m
+[1;34m1483[0m [1;34m|[0m                 scope:target = {
+     [1;34m|[0m                 [1;31m^^^^^^^^^^^^[0m [1;31m[0m
+     [1;34m=[0m [1mInfo:[0m available names are initiator
+
+[1;31merror(strict-scopes)[0m: [1mscope:notification_target might not be available here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\on_actions\00_code_on_actions.txt[0m
+[1;34m2126[0m [1;34m|[0m                 scope:notification_target = {
+     [1;34m|[0m                 [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(strict-scopes)[0m: [1mscope:actor might not be available here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\on_actions\00_code_on_actions.txt[0m
+[1;34m2129[0m [1;34m|[0m                 scope:actor = {
+     [1;34m|[0m                 [1;31m^^^^^^^^^^^[0m [1;31m[0m
+     [1;34m=[0m [1mInfo:[0m available names are notification_target
+
+[1;31merror(strict-scopes)[0m: [1mscope:target_country might not be available here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\on_actions\00_code_on_actions.txt[0m
+[1;34m4276[0m [1;34m|[0m         scope:target_country = {
+     [1;34m|[0m         [1;31m^^^^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(strict-scopes)[0m: [1mscope:target_country might not be available here[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m89[0m [1;34m|[0m                 target = scope:target_country
+   [1;34m|[0m                          [1;31m^^^^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(strict-scopes)[0m: [1mscope:target_country might not be available here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1042[0m [1;34m|[0m                 target = scope:target_country
+     [1;34m|[0m                          [1;31m^^^^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(strict-scopes)[0m: [1mscope:target_country might not be available here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1808[0m [1;34m|[0m                 target = scope:target_country
+     [1;34m|[0m                          [1;31m^^^^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(logic)[0m: [1mthis `if` does not change the script value[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2100[0m [1;34m|[0m                 if = {
+     [1;34m|[0m                 [1;31m^^[0m [1;31m[0m
+
+[1;31merror(strict-scopes)[0m: [1mscope:target_country might not be available here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2268[0m [1;34m|[0m                 target = scope:target_country
+     [1;34m|[0m                          [1;31m^^^^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown field `weight_multiplier`[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m1546[0m [1;34m|[0m     weight_multiplier = {
+     [1;34m|[0m     [1;31m^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown field `weight_multiplier`[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1304[0m [1;34m|[0m     weight_multiplier = {
+     [1;34m|[0m     [1;31m^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown field `weight_multiplier`[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m1520[0m [1;34m|[0m     weight_multiplier = { # should only be found the once
+     [1;34m|[0m     [1;31m^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;31merror(unknown-field)[0m: [1munknown field `weight_multiplier`[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m475[0m [1;34m|[0m     weight_multiplier = {
+    [1;34m|[0m     [1;31m^^^^^^^^^^^^^^^^^[0m [1;31m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1mculture saxon not defined in common/cultures/[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\ethnicities\01_ethnicities_nda_dagonic.txt[0m
+[1;34m3[0m [1;34m|[0m     using = "saxon"
+  [1;34m|[0m              [1;33m^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1mculture saxon not defined in common/cultures/[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\ethnicities\01_ethnicities_nda_yigian.txt[0m
+[1;34m3[0m [1;34m|[0m     using = "saxon"
+  [1;34m|[0m              [1;33m^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1mcoa BRZ_dictatorship not defined in common/coat_of_arms/coat_of_arms/[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\flag_definitions\01_nda_flag_definitions.txt[0m
+[1;34m271[0m [1;34m|[0m         coa = BRZ_dictatorship
+    [1;34m|[0m               [1;33m^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1mcoa BRZ_dictatorship not defined in common/coat_of_arms/coat_of_arms/[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\flag_definitions\01_nda_flag_definitions.txt[0m
+[1;34m272[0m [1;34m|[0m         subject_canton = BRZ_dictatorship			
+    [1;34m|[0m                          [1;33m^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory variation egyptian_jewelry_common not defined in gfx/portraits/accessory_variations/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\models\portraits\attachments\female_clothes\egyptian\usekh\female_clothes_egyptian_usekh.asset[0m
+[1;34m45[0m [1;34m|[0m                 variation = "egyptian_jewelry_common"
+   [1;34m|[0m                              [1;33m^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory variation egyptian_jewelry_low not defined in gfx/portraits/accessory_variations/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\models\portraits\attachments\female_clothes\egyptian\usekh\female_clothes_egyptian_usekh.asset[0m
+[1;34m69[0m [1;34m|[0m                 variation = "egyptian_jewelry_low"
+   [1;34m|[0m                              [1;33m^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory variation egyptian_nemes_common not defined in gfx/portraits/accessory_variations/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\models\portraits\attachments\female_headgears\egyptian\nemes\female_headgear_egyptian_nemes.asset[0m
+[1;34m28[0m [1;34m|[0m             variation = "egyptian_nemes_common"
+   [1;34m|[0m                          [1;33m^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory variation egyptian_nemes_low not defined in gfx/portraits/accessory_variations/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\models\portraits\attachments\female_headgears\egyptian\nemes\female_headgear_egyptian_nemes.asset[0m
+[1;34m44[0m [1;34m|[0m             variation = "egyptian_nemes_low"
+   [1;34m|[0m                          [1;33m^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory variation egyptian_jewelry_common not defined in gfx/portraits/accessory_variations/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\models\portraits\attachments\male_clothes\egyptian\usekh\male_clothes_egyptian_usekh.asset[0m
+[1;34m37[0m [1;34m|[0m                 variation = "egyptian_jewelry_common"
+   [1;34m|[0m                              [1;33m^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory variation egyptian_jewelry_low not defined in gfx/portraits/accessory_variations/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\models\portraits\attachments\male_clothes\egyptian\usekh\male_clothes_egyptian_usekh.asset[0m
+[1;34m57[0m [1;34m|[0m                 variation = "egyptian_jewelry_low"
+   [1;34m|[0m                              [1;33m^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory variation egyptian_nemes_common not defined in gfx/portraits/accessory_variations/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\models\portraits\attachments\male_headgears\egyptian\nemes\male_headgear_egyptian_nemes.asset[0m
+[1;34m36[0m [1;34m|[0m                 variation = "egyptian_nemes_common"
+   [1;34m|[0m                              [1;33m^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory variation egyptian_nemes_low not defined in gfx/portraits/accessory_variations/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\models\portraits\attachments\male_headgears\egyptian\nemes\male_headgear_egyptian_nemes.asset[0m
+[1;34m56[0m [1;34m|[0m                 variation = "egyptian_nemes_low"
+   [1;34m|[0m                              [1;33m^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1mgame concept concept_nda_deeps_ones not defined in common/game_concepts/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mlocalization\english\nda_lostcities_l_english.yml[0m
+[1;34m65[0m [1;34m|[0m nda_eld_transfer_yhanthlei_desc:0 "The shores near the undersea city of [concept_nda_yhanthlei] should by right belong the [concept_nda_deeps_ones]. We should transfer this stretch of coast to them."
+   [1;34m|[0m                                                                                                                             [1;33m^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(validation)[0m: [1mthere should be a `combat_unit_image` with no trigger as a fallback[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\combat_unit_types\10_nda_combat_unit_types.txt[0m
+[1;34m43[0m [1;34m|[0m combat_unit_type_leviathan = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key NDA_ARES[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\country_definitions\00_nda_countries.txt[0m
+[1;34m104[0m [1;34m|[0m NDA_ARES = {
+    [1;34m|[0m [1;33m^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key NDA_ARES_ADJ[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\country_definitions\00_nda_countries.txt[0m
+[1;34m104[0m [1;34m|[0m NDA_ARES = {
+    [1;34m|[0m [1;33m^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_eld_destroy_st_basils[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\decisions\nda_eld_monuments.txt[0m
+[1;34m92[0m [1;34m|[0m nda_eld_destroy_st_basils = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_eld_destroy_st_basils_desc[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\decisions\nda_eld_monuments.txt[0m
+[1;34m92[0m [1;34m|[0m nda_eld_destroy_st_basils = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_dp_final_war[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\decisions\nda_eld_nameless_city.txt[0m
+[1;34m66[0m [1;34m|[0m             name = nda_dp_final_war
+   [1;34m|[0m                    [1;33m^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key russia_treaty_of_beijing[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\decisions\russia_decisions.txt[0m
+[1;34m1[0m [1;34m|[0m russia_treaty_of_beijing = {
+  [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key russia_treaty_of_beijing_desc[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\decisions\russia_decisions.txt[0m
+[1;34m1[0m [1;34m|[0m russia_treaty_of_beijing = {
+  [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key russia_chuguchak_protocol[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\decisions\russia_decisions.txt[0m
+[1;34m99[0m [1;34m|[0m russia_chuguchak_protocol = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key russia_chuguchak_protocol_desc[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\decisions\russia_decisions.txt[0m
+[1;34m99[0m [1;34m|[0m russia_chuguchak_protocol = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(brace-placement)[0m: [1mpossible brace error[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\dna_data\10_nda_dna.txt[0m
+[1;34m122[0m [1;34m|[0m }
+    [1;34m|[0m [1;33m^[0m [1;33m[0m
+    [1;34m=[0m [1mInfo:[0m This closing brace is at the start of a line but does not end a top-level item.
+
+[1;33mwarning[0m[33m(brace-placement)[0m: [1mpossible brace error[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\dna_data\10_nda_dna.txt[0m
+[1;34m248[0m [1;34m|[0m }
+    [1;34m|[0m [1;33m^[0m [1;33m[0m
+    [1;34m=[0m [1mInfo:[0m This closing brace is at the start of a line but does not end a top-level item.
+
+[1;33mwarning[0m[33m(brace-placement)[0m: [1mpossible brace error[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\dna_data\ecchi_gbr_dickens.txt[0m
+[1;34m113[0m [1;34m|[0m }
+    [1;34m|[0m [1;33m^[0m [1;33m[0m
+    [1;34m=[0m [1mInfo:[0m This closing brace is at the start of a line but does not end a top-level item.
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key dyn_c_gotland_revolt[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\dynamic_country_names\00_dynamic_country_names.txt[0m
+[1;34m523[0m [1;34m|[0m         name = dyn_c_gotland_revolt
+    [1;34m|[0m                [1;33m^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key dyn_c_gotland_revolt_adj[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\dynamic_country_names\00_dynamic_country_names.txt[0m
+[1;34m524[0m [1;34m|[0m         adjective = dyn_c_gotland_revolt_adj
+    [1;34m|[0m                     [1;33m^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(duplicate-item)[0m: [1mdynamic country name is redefined by another dynamic country name[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\dynamic_country_names\00_dynamic_country_names.txt[0m
+[1;34m 657[0m [1;34m|[0m AZB = { # Azerbaijan
+     [1;34m|[0m [1;33m^^^[0m [1;33m[0m
+[1;34m3306[0m [1;34m|[0m AZB = {
+     [1;34m|[0m [1;33m^^^[0m [1;33m<-- the other dynamic country name is here[0m
+
+[1;33mwarning[0m[33m(brace-placement)[0m: [1mpossible brace error[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\genes\01_genes_morph.txt[0m
+[1;34m5499[0m [1;34m|[0m }
+     [1;34m|[0m [1;33m^[0m [1;33m[0m
+     [1;34m=[0m [1mInfo:[0m This closing brace is at the start of a line but does not end a top-level item.
+
+[1;33mwarning[0m[33m(duplicate-field)[0m: [1m`state_type` is redefined in a following line[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\history\states\00_states.txt[0m
+[1;34m6348[0m [1;34m|[0m             state_type = unincorporated
+     [1;34m|[0m             [1;33m^[0m [1;33m[0m
+[1;34m6349[0m [1;34m|[0m             state_type = treaty_port
+     [1;34m|[0m             [1;33m^[0m [1;33m<-- the other one is here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`is_country_type` is for country but scope seems to be interest group[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m7[0m [1;34m|[0m         NOT = { is_country_type = decentralized }
+  [1;34m|[0m                 [1;33m^^^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m6[0m [1;34m|[0m     can_create = {
+  [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`country_rank` is for country but scope seems to be interest group[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m10[0m [1;34m|[0m         scope:target_country = { country_rank >= root.country_rank }
+   [1;34m|[0m                                                       [1;33m^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m 6[0m [1;34m|[0m     can_create = {
+   [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`pro_country_lobby_starting_appeasement` expects scope:lobby_country to be country but scope:lobby_country seems to be interest group[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m17[0m [1;34m|[0m                amount = pro_country_lobby_starting_appeasement
+   [1;34m|[0m                         [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+  [1;34m-->[0m [1;34m[Vic3][0m [1;34mcommon\script_values\lobby_values.txt[0m
+[1;34m 7[0m [1;34m|[0m                 "relations(scope:target_country)" >= relations_threshold:friendly		
+   [1;34m|[0m                  [1;33m^^^^^^^^^[0m [1;33m<-- expected scope:lobby_country was deduced from `relations` here[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m13[0m [1;34m|[0m     on_created = {
+   [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- actual scope:lobby_country was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(duplicate-field)[0m: [1m`requirement_to_maintain` is redefined in a following line[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m25[0m [1;34m|[0m     requirement_to_maintain = {
+   [1;34m|[0m     [1;33m^[0m [1;33m[0m
+[1;34m31[0m [1;34m|[0m     requirement_to_maintain = {
+   [1;34m|[0m     [1;33m^[0m [1;33m<-- the other one is here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`has_diplomatic_relevance` is for country but scope seems to be interest group[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m26[0m [1;34m|[0m         trigger = { has_diplomatic_relevance = scope:target_country }
+   [1;34m|[0m                     [1;33m^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m26[0m [1;34m|[0m         trigger = { has_diplomatic_relevance = scope:target_country }
+   [1;34m|[0m         [1;33m^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(duplicate-field)[0m: [1m`requirement_to_maintain` is redefined in a following line[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m31[0m [1;34m|[0m     requirement_to_maintain = {
+   [1;34m|[0m     [1;33m^[0m [1;33m[0m
+[1;34m44[0m [1;34m|[0m     requirement_to_maintain = {
+   [1;34m|[0m     [1;33m^[0m [1;33m<-- the other one is here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`is_subject_of` is for country but scope seems to be interest group[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m45[0m [1;34m|[0m         trigger = { NOT = { is_subject_of = scope:target_country } }
+   [1;34m|[0m                             [1;33m^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m45[0m [1;34m|[0m         trigger = { NOT = { is_subject_of = scope:target_country } }
+   [1;34m|[0m         [1;33m^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`root` produces interest group but expected country[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m728[0m [1;34m|[0m                 relations:root < relations_threshold:cordial
+    [1;34m|[0m                           [1;33m^^^^[0m [1;33m[0m
+[1;34m 94[0m [1;34m|[0m     join_weight = {
+    [1;34m|[0m     [1;33m^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`is_country_type` is for country but scope seems to be interest group[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m965[0m [1;34m|[0m         NOT = { is_country_type = decentralized }
+    [1;34m|[0m                 [1;33m^^^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m964[0m [1;34m|[0m     can_create = {
+    [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`country_rank` is for country but scope seems to be interest group[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m968[0m [1;34m|[0m         scope:target_country = { country_rank >= root.country_rank }
+    [1;34m|[0m                                                       [1;33m^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m964[0m [1;34m|[0m     can_create = {
+    [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`anti_country_lobby_starting_appeasement` expects scope:lobby_country to be country but scope:lobby_country seems to be interest group[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m975[0m [1;34m|[0m                amount = anti_country_lobby_starting_appeasement
+    [1;34m|[0m                         [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+   [1;34m-->[0m [1;34m[Vic3][0m [1;34mcommon\script_values\lobby_values.txt[0m
+[1;34m 90[0m [1;34m|[0m                 "relations(scope:target_country)" >= relations_threshold:friendly		
+    [1;34m|[0m                  [1;33m^^^^^^^^^[0m [1;33m<-- expected scope:lobby_country was deduced from `relations` here[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m971[0m [1;34m|[0m     on_created = {
+    [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- actual scope:lobby_country was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(duplicate-field)[0m: [1m`requirement_to_maintain` is redefined in a following line[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m983[0m [1;34m|[0m     requirement_to_maintain = {
+    [1;34m|[0m     [1;33m^[0m [1;33m[0m
+[1;34m989[0m [1;34m|[0m     requirement_to_maintain = {
+    [1;34m|[0m     [1;33m^[0m [1;33m<-- the other one is here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`has_diplomatic_relevance` is for country but scope seems to be interest group[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m984[0m [1;34m|[0m         trigger = { has_diplomatic_relevance = scope:target_country }
+    [1;34m|[0m                     [1;33m^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m984[0m [1;34m|[0m         trigger = { has_diplomatic_relevance = scope:target_country }
+    [1;34m|[0m         [1;33m^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(duplicate-field)[0m: [1m`requirement_to_maintain` is redefined in a following line[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m 989[0m [1;34m|[0m     requirement_to_maintain = {
+     [1;34m|[0m     [1;33m^[0m [1;33m[0m
+[1;34m1002[0m [1;34m|[0m     requirement_to_maintain = {
+     [1;34m|[0m     [1;33m^[0m [1;33m<-- the other one is here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`is_subject_of` is for country but scope seems to be interest group[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1003[0m [1;34m|[0m         trigger = { NOT = { is_subject_of = scope:target_country } }
+     [1;34m|[0m                             [1;33m^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m1003[0m [1;34m|[0m         trigger = { NOT = { is_subject_of = scope:target_country } }
+     [1;34m|[0m         [1;33m^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`root` produces interest group but expected country[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1612[0m [1;34m|[0m                 relations:root < relations_threshold:cordial
+     [1;34m|[0m                           [1;33m^^^^[0m [1;33m[0m
+[1;34m1047[0m [1;34m|[0m     join_weight = {
+     [1;34m|[0m     [1;33m^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`is_country_type` is for country but scope seems to be interest group[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1748[0m [1;34m|[0m         NOT = { is_country_type = decentralized }
+     [1;34m|[0m                 [1;33m^^^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m1747[0m [1;34m|[0m     can_create = {
+     [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(duplicate-field)[0m: [1m`requirement_to_maintain` is redefined in a following line[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1753[0m [1;34m|[0m     requirement_to_maintain = {
+     [1;34m|[0m     [1;33m^[0m [1;33m[0m
+[1;34m1763[0m [1;34m|[0m     requirement_to_maintain = {
+     [1;34m|[0m     [1;33m^[0m [1;33m<-- the other one is here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`is_subject_of` is for country but scope seems to be interest group[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1754[0m [1;34m|[0m         trigger = { is_subject_of = scope:target_country }
+     [1;34m|[0m                     [1;33m^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m1754[0m [1;34m|[0m         trigger = { is_subject_of = scope:target_country }
+     [1;34m|[0m         [1;33m^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`pro_overlord_lobby_starting_appeasement` expects scope:lobby_country to be country but scope:lobby_country seems to be interest group[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1780[0m [1;34m|[0m                amount = pro_overlord_lobby_starting_appeasement
+     [1;34m|[0m                         [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+    [1;34m-->[0m [1;34m[Vic3][0m [1;34mcommon\script_values\lobby_values.txt[0m
+[1;34m 173[0m [1;34m|[0m                 "relations(scope:target_country)" >= relations_threshold:friendly		
+     [1;34m|[0m                  [1;33m^^^^^^^^^[0m [1;33m<-- expected scope:lobby_country was deduced from `relations` here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m1776[0m [1;34m|[0m     on_created = {
+     [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- actual scope:lobby_country was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`root` produces interest group but expected country[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2089[0m [1;34m|[0m                 relations:root < 0
+     [1;34m|[0m                           [1;33m^^^^[0m [1;33m[0m
+[1;34m1813[0m [1;34m|[0m     join_weight = {
+     [1;34m|[0m     [1;33m^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`is_country_type` is for country but scope seems to be interest group[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2208[0m [1;34m|[0m         NOT = { is_country_type = decentralized }
+     [1;34m|[0m                 [1;33m^^^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m2207[0m [1;34m|[0m     can_create = {
+     [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(duplicate-field)[0m: [1m`requirement_to_maintain` is redefined in a following line[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2213[0m [1;34m|[0m     requirement_to_maintain = {
+     [1;34m|[0m     [1;33m^[0m [1;33m[0m
+[1;34m2223[0m [1;34m|[0m     requirement_to_maintain = {
+     [1;34m|[0m     [1;33m^[0m [1;33m<-- the other one is here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`is_subject_of` is for country but scope seems to be interest group[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2214[0m [1;34m|[0m         trigger = { is_subject_of = scope:target_country }
+     [1;34m|[0m                     [1;33m^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m2214[0m [1;34m|[0m         trigger = { is_subject_of = scope:target_country }
+     [1;34m|[0m         [1;33m^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`anti_overlord_lobby_starting_appeasement` expects scope:lobby_country to be country but scope:lobby_country seems to be interest group[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2240[0m [1;34m|[0m                amount = anti_overlord_lobby_starting_appeasement
+     [1;34m|[0m                         [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+    [1;34m-->[0m [1;34m[Vic3][0m [1;34mcommon\script_values\lobby_values.txt[0m
+[1;34m 226[0m [1;34m|[0m                 "relations(scope:target_country)" >= relations_threshold:friendly		
+     [1;34m|[0m                  [1;33m^^^^^^^^^[0m [1;33m<-- expected scope:lobby_country was deduced from `relations` here[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2236[0m [1;34m|[0m     on_created = {
+     [1;34m|[0m     [1;33m^^^^^^^^^^[0m [1;33m<-- actual scope:lobby_country was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`root` produces interest group but expected country[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\political_lobbies\00_political_lobbies.txt[0m
+[1;34m2565[0m [1;34m|[0m                 relations:root < 0
+     [1;34m|[0m                           [1;33m^^^^[0m [1;33m[0m
+[1;34m2273[0m [1;34m|[0m     join_weight = {
+     [1;34m|[0m     [1;33m^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_dp_final_war[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_buttons\03_nda_cult_diplo_buttons.txt[0m
+[1;34m438[0m [1;34m|[0m             name = nda_dp_final_war
+    [1;34m|[0m                    [1;33m^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`nda_effect_failing_cult_ideology` expects scope to be country but scope seems to be interest group[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_effects\12_nda_eldritch_effects.txt[0m
+[1;34m53[0m [1;34m|[0m                 nda_effect_failing_cult_ideology = yes
+   [1;34m|[0m                 [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_effects\15_nda_cultist_effects.txt[0m
+[1;34m19[0m [1;34m|[0m         every_interest_group = {
+   [1;34m|[0m         [1;33m^^^^^^^^^^^^^^^^^^^^[0m [1;33m<-- expected scope was deduced from `every_interest_group` here[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_effects\12_nda_eldritch_effects.txt[0m
+[1;34m46[0m [1;34m|[0m         ig:ig_nda_cult_worshippers = {
+   [1;34m|[0m         [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m<-- actual scope was deduced from `ig:ig_nda_cult_worshippers` here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`THIS` produces country but expected culture[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_effects\12_nda_eldritch_effects.txt[0m
+[1;34m247[0m [1;34m|[0m                 culture = THIS
+    [1;34m|[0m                           [1;33m^^^^[0m [1;33m[0m
+[1;34m180[0m [1;34m|[0m         ordered_country = {
+    [1;34m|[0m         [1;33m^^^^^^^^^^^^^^^[0m [1;33m<-- scope was deduced from `ordered_country` here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`THIS` produces country but expected culture[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_effects\12_nda_eldritch_effects.txt[0m
+[1;34m251[0m [1;34m|[0m                 culture = THIS
+    [1;34m|[0m                           [1;33m^^^^[0m [1;33m[0m
+[1;34m180[0m [1;34m|[0m         ordered_country = {
+    [1;34m|[0m         [1;33m^^^^^^^^^^^^^^^[0m [1;33m<-- scope was deduced from `ordered_country` here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`root` produces journalentry but expected country[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_progress_bars.txt[0m
+[1;34m11[0m [1;34m|[0m             limit = { c:USA ?= { relations:root >= relations_threshold:amicable } }
+   [1;34m|[0m                                            [1;33m^^^^[0m [1;33m[0m
+[1;34m 7[0m [1;34m|[0m      monthly_progress = {
+   [1;34m|[0m      [1;33m^^^^^^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`root` produces journalentry but expected country[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_progress_bars.txt[0m
+[1;34m19[0m [1;34m|[0m             limit = { c:USA ?= { relations:root <= relations_threshold:cold } }
+   [1;34m|[0m                                            [1;33m^^^^[0m [1;33m[0m
+[1;34m 7[0m [1;34m|[0m      monthly_progress = {
+   [1;34m|[0m      [1;33m^^^^^^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`root` produces journalentry but expected country[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_progress_bars.txt[0m
+[1;34m40[0m [1;34m|[0m             limit = { c:FSA ?= { relations:root >= relations_threshold:amicable } }
+   [1;34m|[0m                                            [1;33m^^^^[0m [1;33m[0m
+[1;34m 7[0m [1;34m|[0m      monthly_progress = {
+   [1;34m|[0m      [1;33m^^^^^^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`root` produces journalentry but expected country[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\scripted_progress_bars\10_nda_progress_bars.txt[0m
+[1;34m49[0m [1;34m|[0m             limit = { c:FSA ?= { relations:root <= relations_threshold:cold } }
+   [1;34m|[0m                                            [1;33m^^^^[0m [1;33m[0m
+[1;34m 7[0m [1;34m|[0m      monthly_progress = {
+   [1;34m|[0m      [1;33m^^^^^^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_cultist_standard_of_living_modifier_positive[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m1[0m [1;34m|[0m nda_cul_cultist_standard_of_living_modifier_positive = {
+  [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_cultist_standard_of_living_modifier_negative[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m6[0m [1;34m|[0m nda_cul_cultist_standard_of_living_modifier_negative = {
+  [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_yigian_standard_of_living_modifier_positive[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m11[0m [1;34m|[0m nda_cul_yigian_standard_of_living_modifier_positive = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_yigian_standard_of_living_modifier_negative[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m16[0m [1;34m|[0m nda_cul_yigian_standard_of_living_modifier_negative = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_dagonic_standard_of_living_modifier_positive[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m21[0m [1;34m|[0m nda_cul_dagonic_standard_of_living_modifier_positive = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_dagonic_standard_of_living_modifier_negative[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m26[0m [1;34m|[0m nda_cul_dagonic_standard_of_living_modifier_negative = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_trueyankee_standard_of_living_modifier_positive[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m31[0m [1;34m|[0m nda_cul_trueyankee_standard_of_living_modifier_positive = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_trueyankee_standard_of_living_modifier_negative[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m36[0m [1;34m|[0m nda_cul_trueyankee_standard_of_living_modifier_negative = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_atlantian_standard_of_living_modifier_positive[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m41[0m [1;34m|[0m nda_cul_atlantian_standard_of_living_modifier_positive = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_cul_atlantian_standard_of_living_modifier_negative[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_culture_standard_of_living.txt[0m
+[1;34m46[0m [1;34m|[0m nda_cul_atlantian_standard_of_living_modifier_negative = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_rel_cultist_standard_of_living_modifier_positive[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_religion_standard_of_living.txt[0m
+[1;34m1[0m [1;34m|[0m nda_rel_cultist_standard_of_living_modifier_positive = {
+  [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_rel_cultist_standard_of_living_modifier_negative[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_religion_standard_of_living.txt[0m
+[1;34m6[0m [1;34m|[0m nda_rel_cultist_standard_of_living_modifier_negative = {
+  [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_rel_yigian_standard_of_living_modifier_positive[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_religion_standard_of_living.txt[0m
+[1;34m11[0m [1;34m|[0m nda_rel_yigian_standard_of_living_modifier_positive = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_rel_yigian_standard_of_living_modifier_negative[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_religion_standard_of_living.txt[0m
+[1;34m16[0m [1;34m|[0m nda_rel_yigian_standard_of_living_modifier_negative = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_rel_spiritualism_standard_of_living_modifier_positive[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_religion_standard_of_living.txt[0m
+[1;34m21[0m [1;34m|[0m nda_rel_spiritualism_standard_of_living_modifier_positive = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_rel_spiritualism_standard_of_living_modifier_negative[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_religion_standard_of_living.txt[0m
+[1;34m26[0m [1;34m|[0m nda_rel_spiritualism_standard_of_living_modifier_negative = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_rel_theosophic_standard_of_living_modifier_positive[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_religion_standard_of_living.txt[0m
+[1;34m31[0m [1;34m|[0m nda_rel_theosophic_standard_of_living_modifier_positive = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_rel_theosophic_standard_of_living_modifier_negative[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mcommon\static_modifiers\nda_religion_standard_of_living.txt[0m
+[1;34m36[0m [1;34m|[0m nda_rel_theosophic_standard_of_living_modifier_negative = {
+   [1;34m|[0m [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xA27EFD` produces province but expected country, state or state region[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m6[0m [1;34m|[0m     placement = p:xA27EFD #scope:target_state
+  [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xA27EFD` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m126[0m [1;34m|[0m     placement = p:xA27EFD #scope:target_state # should be British Midlands
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`ig` is for country but scope seems to be character[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m274[0m [1;34m|[0m             interest_group = ig:ig_intelligentsia
+    [1;34m|[0m                              [1;33m^^[0m [1;33m[0m
+[1;34m272[0m [1;34m|[0m         any_scope_character = { 
+    [1;34m|[0m         [1;33m^^^^^^^^^^^^^^^^^^^[0m [1;33m<-- scope was deduced from `any_scope_character` here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`ig` is for country but scope seems to be character[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m279[0m [1;34m|[0m                 interest_group = ig:ig_nda_cult_worshippers
+    [1;34m|[0m                                  [1;33m^^[0m [1;33m[0m
+[1;34m277[0m [1;34m|[0m         any_scope_character = { 
+    [1;34m|[0m         [1;33m^^^^^^^^^^^^^^^^^^^[0m [1;33m<-- scope was deduced from `any_scope_character` here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x60E0C0` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m433[0m [1;34m|[0m     placement = p:x60E0C0
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m539[0m [1;34m|[0m     placement = p:x7543C8
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x60E0C0` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m646[0m [1;34m|[0m     placement = p:x60E0C0 # this needs to be Bern
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x60E0C0` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m759[0m [1;34m|[0m     placement = p:x60E0C0 # this needs to be Arkham based on location
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xD06161` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_authors_events.txt[0m
+[1;34m812[0m [1;34m|[0m     placement = p:xD06161 # this needs to be Danube
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2101E0` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m43[0m [1;34m|[0m     placement = p:x2101E0 #ROOT
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2101E0` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_base_events.txt[0m
+[1;34m315[0m [1;34m|[0m     placement = p:x2101E0 #ROOT
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`nda_dagonic.1` is for country but scope seems to be interest group[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_dagonic_events.txt[0m
+[1;34m35[0m [1;34m|[0m             trigger_event = { id = nda_dagonic.1 }			
+   [1;34m|[0m                                    [1;33m^^^^^^^^^^^^^[0m [1;33m[0m
+[1;34m14[0m [1;34m|[0m         random_interest_group = {
+   [1;34m|[0m         [1;33m^^^^^^^^^^^^^^^^^^^^^[0m [1;33m<-- scope was deduced from `random_interest_group` here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x0E3435` produces province but expected country, state or state region[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_eap_events.txt[0m
+[1;34m8[0m [1;34m|[0m     placement = p:x0E3435
+  [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x906000` produces province but expected country, state or state region[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m5[0m [1;34m|[0m     placement = p:x906000 
+  [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xE217B5` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m194[0m [1;34m|[0m     placement = p:xE217B5
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`THIS` produces country but expected culture[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m502[0m [1;34m|[0m             culture = THIS
+    [1;34m|[0m                       [1;33m^^^^[0m [1;33m[0m
+[1;34m445[0m [1;34m|[0m     type = country_event
+    [1;34m|[0m            [1;33m^^^^^^^^^^^^^[0m [1;33m<-- scope was supplied by the game engine[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xE217B5` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hasturian_events.txt[0m
+[1;34m515[0m [1;34m|[0m     placement = p:xE217B5
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xC900EF` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_hgw_events.txt[0m
+[1;34m291[0m [1;34m|[0m     placement = p:xC900EF 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xA0E080` produces province but expected country, state or state region[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m6[0m [1;34m|[0m     placement = p:xA0E080 # Edinburgh??
+  [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x01D042` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m51[0m [1;34m|[0m     placement = p:x01D042
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m96[0m [1;34m|[0m     placement = p:x7543C8 
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x01D042` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m147[0m [1;34m|[0m     placement = p:x01D042
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x0E3435` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m232[0m [1;34m|[0m     placement = p:x0E3435
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m300[0m [1;34m|[0m     placement = p:x7543C8 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x71DA2E` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m394[0m [1;34m|[0m     placement = p:x71DA2E # paris or work out where character is if we implement him?
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x211ECF` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m445[0m [1;34m|[0m     placement = p:x211ECF 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xB04060` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m554[0m [1;34m|[0m     placement = p:xB04060 # Lyon - Kardecs home town
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m707[0m [1;34m|[0m     placement = p:x7543C8 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m804[0m [1;34m|[0m     placement = p:x7543C8 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m852[0m [1;34m|[0m     placement = p:x7543C8 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m892[0m [1;34m|[0m     placement = p:x7543C8 # put in Edinburgh for a change
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xE217B5` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m944[0m [1;34m|[0m     placement = p:xE217B5 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x07104C` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m1013[0m [1;34m|[0m     placement = p:x07104C # Madras 
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m1074[0m [1;34m|[0m     placement = p:x7543C8 
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xE217B5` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m1120[0m [1;34m|[0m     placement = p:xE217B5
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x01D042` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m1186[0m [1;34m|[0m     placement = p:x01D042
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m1230[0m [1;34m|[0m     placement = p:x7543C8
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m1278[0m [1;34m|[0m     placement = p:x7543C8
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m1344[0m [1;34m|[0m     placement = p:x7543C8
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xF68D89` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_events.txt[0m
+[1;34m1389[0m [1;34m|[0m     placement = p:xF68D89 # Chicago 
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xB0C080` produces province but expected country, state or state region[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_regional_events.txt[0m
+[1;34m6[0m [1;34m|[0m     placement = p:xB0C080 # Sw of Columbus - needs to be serpent location, east of cinn
+  [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x0E3435` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_regional_events.txt[0m
+[1;34m47[0m [1;34m|[0m     placement = p:x0E3435 # Baltimore - 
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x01D042` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_regional_events.txt[0m
+[1;34m87[0m [1;34m|[0m     placement = p:x01D042 # NY State
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x9A9297` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_regional_events.txt[0m
+[1;34m131[0m [1;34m|[0m     placement = p:x9A9297 # Minnisota?
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x0E3435` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_regional_events.txt[0m
+[1;34m179[0m [1;34m|[0m     placement = p:x0E3435 # Baltimore
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x777732` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_regional_events.txt[0m
+[1;34m234[0m [1;34m|[0m     placement = p:x777732 # Amsterdam
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x0E3435` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_historic_regional_events.txt[0m
+[1;34m297[0m [1;34m|[0m     placement = p:x0E3435 # Baltimore
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xA07F85` produces province but expected country, state or state region[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m6[0m [1;34m|[0m     placement = p:xA07F85 #xEB66DA #
+  [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xA07F85` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m100[0m [1;34m|[0m     placement = p:xA07F85 #xEB66DA #
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`THIS` produces state but expected country[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m123[0m [1;34m|[0m                 NOT = { c:ELD ?= THIS } # can lose cultist tag somehow
+    [1;34m|[0m                                  [1;33m^^^^[0m [1;33m[0m
+[1;34m121[0m [1;34m|[0m             state = {
+    [1;34m|[0m             [1;33m^^^^^[0m [1;33m<-- scope was deduced from `state` here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x30C040` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m158[0m [1;34m|[0m     placement = p:x30C040
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x30C040` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m239[0m [1;34m|[0m     placement = p:x30C040 #xA07F85 #
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xB9B797` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m295[0m [1;34m|[0m     placement = p:xB9B797 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xB9B797` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m364[0m [1;34m|[0m     placement = p:xB9B797
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xB9B797` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m419[0m [1;34m|[0m     placement = p:xB9B797
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x68A578` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m537[0m [1;34m|[0m     placement = p:x68A578 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x68A578` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_lostcities_events.txt[0m
+[1;34m631[0m [1;34m|[0m     placement = p:x68A578
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xB040A0` produces province but expected country, state or state region[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_monument_events.txt[0m
+[1;34m7[0m [1;34m|[0m     placement = p:xB040A0
+  [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xF0A020` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_monument_events.txt[0m
+[1;34m36[0m [1;34m|[0m     placement = p:xF0A020
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x43F336` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_monument_events.txt[0m
+[1;34m64[0m [1;34m|[0m     placement = p:x43F336
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_monument_events.txt[0m
+[1;34m93[0m [1;34m|[0m     placement = p:x2B5499
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m13[0m [1;34m|[0m     placement = p:x2B5499 #scope:university_state
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m95[0m [1;34m|[0m     placement = p:x2B5499
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m157[0m [1;34m|[0m     placement = p:x2B5499
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m200[0m [1;34m|[0m     placement = p:x2B5499
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m355[0m [1;34m|[0m     placement = p:x2B5499
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x30C040` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m478[0m [1;34m|[0m     placement = p:x30C040 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x30C040` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m525[0m [1;34m|[0m     placement = p:x30C040 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x1A77EA` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m582[0m [1;34m|[0m     placement = p:x1A77EA 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x1A77EA` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m628[0m [1;34m|[0m     placement = p:x1A77EA 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x1A77EA` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m696[0m [1;34m|[0m     placement = p:x1A77EA 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x1A77EA` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m739[0m [1;34m|[0m     placement = p:x1A77EA 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xBB7965` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m819[0m [1;34m|[0m     placement = p:xBB7965 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xBB7965` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m858[0m [1;34m|[0m     placement = p:xBB7965 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xD64964` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m908[0m [1;34m|[0m     placement = p:xD64964 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xB04040` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m947[0m [1;34m|[0m     placement = p:xB04040 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m994[0m [1;34m|[0m     placement = p:x2B5499 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m1035[0m [1;34m|[0m     placement = p:x2B5499
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x2B5499` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nen_events.txt[0m
+[1;34m1074[0m [1;34m|[0m     placement = p:x2B5499 
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x44702D` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m97[0m [1;34m|[0m     placement = p:x44702D # Luxor
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(field-missing)[0m: [1mrequired field `limit` missing[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m255[0m [1;34m|[0m         if = {
+    [1;34m|[0m              [1;33m^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xA0D020` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m462[0m [1;34m|[0m     placement = p:xA0D020 # location of Alexandria
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x08B43B` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_nephrenka_events.txt[0m
+[1;34m583[0m [1;34m|[0m     placement = p:x08B43B # Beni Suef
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-localization)[0m: [1mmissing english localization key nda_dp_final_war[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m561[0m [1;34m|[0m             name = nda_dp_final_war
+    [1;34m|[0m                    [1;33m^^^^^^^^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x9A7554` produces province but expected country, state or state region[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m959[0m [1;34m|[0m     placement = p:x9A7554 
+    [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x8391B2` produces province but expected country, state or state region[0m
+    [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_ritual_events.txt[0m
+[1;34m1017[0m [1;34m|[0m     placement = p:x8391B2 
+     [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(duplicate-item)[0m: [1mevent is redefined by another event[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_titanic_events.txt[0m
+[1;34m  3[0m [1;34m|[0m titanic.2 = { #the titanic gets attacked - homage to CAS 'Coming of the White Worm'
+    [1;34m|[0m [1;33m^^^^^^^^^[0m [1;33m[0m
+   [1;34m-->[0m [1;34m[Vic3][0m [1;34mevents\titanic_events.txt[0m
+[1;34m267[0m [1;34m|[0m titanic.2 = { #the titanic sinks
+    [1;34m|[0m [1;33m^^^^^^^^^[0m [1;33m<-- the other event is here[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:xC7847D` produces province but expected country, state or state region[0m
+ [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_whh_events.txt[0m
+[1;34m7[0m [1;34m|[0m     placement = p:xC7847D #scope:target_state
+  [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(scopes)[0m: [1m`p:x7543C8` produces province but expected country, state or state region[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mevents\nda_whh_events.txt[0m
+[1;34m54[0m [1;34m|[0m     placement = p:x7543C8 #scope:target_state
+   [1;34m|[0m                 [1;33m^^^^^^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory tag mask not defined in gfx/portraits/accessories/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\portraits\accessories\nda_accessories.txt[0m
+[1;34m69[0m [1;34m|[0m     entity = { required_tags = "mask"		shared_pose_entity = head	 }
+   [1;34m|[0m                                 [1;33m^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory tag mask not defined in gfx/portraits/accessories/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\portraits\accessories\nda_accessories.txt[0m
+[1;34m80[0m [1;34m|[0m     entity = { required_tags = "mask"		shared_pose_entity = head	 }
+   [1;34m|[0m                                 [1;33m^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory tag mask not defined in gfx/portraits/accessories/[0m
+  [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\portraits\accessories\nda_accessories.txt[0m
+[1;34m91[0m [1;34m|[0m     entity = { required_tags = "mask"		shared_pose_entity = head	 }
+   [1;34m|[0m                                 [1;33m^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory tag mask not defined in gfx/portraits/accessories/[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\portraits\accessories\nda_accessories.txt[0m
+[1;34m102[0m [1;34m|[0m     entity = { required_tags = "mask"		shared_pose_entity = head	 }
+    [1;34m|[0m                                 [1;33m^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory tag mask not defined in gfx/portraits/accessories/[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\portraits\accessories\nda_accessories.txt[0m
+[1;34m113[0m [1;34m|[0m     entity = { required_tags = "mask"		shared_pose_entity = head	 }
+    [1;34m|[0m                                 [1;33m^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory tag mask not defined in gfx/portraits/accessories/[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\portraits\accessories\nda_accessories.txt[0m
+[1;34m124[0m [1;34m|[0m     entity = { required_tags = "mask"		shared_pose_entity = head	 }
+    [1;34m|[0m                                 [1;33m^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory tag mask not defined in gfx/portraits/accessories/[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\portraits\accessories\nda_accessories.txt[0m
+[1;34m135[0m [1;34m|[0m     entity = { required_tags = "mask"		shared_pose_entity = head	 }
+    [1;34m|[0m                                 [1;33m^^^^[0m [1;33m[0m
+
+[1;33mwarning[0m[33m(missing-item)[0m: [1maccessory tag mask not defined in gfx/portraits/accessories/[0m
+   [1;34m-->[0m [1;34m[MOD][0m [1;34mgfx\portraits\accessories\nda_accessories.txt[0m
+[1;34m146[0m [1;34m|[0m     entity = { required_tags = "mask"		shared_pose_entity = head	 }
+    [1;34m|[0m                                 [1;33m^^^^[0m [1;33m[0m
+

@@ -2,17 +2,17 @@
 
 concept_nda_cthulhu = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-	#is_loading_tip = yes
+	is_loading_tip = yes
 }
 
 concept_nda_dagon = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-	#is_loading_tip = yes
+	is_loading_tip = yes
 }
 
 concept_nda_deep_ones = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-	#is_loading_tip = yes
+	is_loading_tip = yes
 }
 
 concept_nda_hastur = {
@@ -22,7 +22,7 @@ concept_nda_hastur = {
 
 concept_nda_yig = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-	#is_loading_tip = yes
+	is_loading_tip = yes
 }
 
 concept_nda_migo = {
@@ -37,7 +37,7 @@ concept_nda_old_ones = {
 
 concept_nda_ritual = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-	#is_loading_tip = yes
+	is_loading_tip = yes
 }
 
 concept_nda_conclave = {
@@ -47,7 +47,7 @@ concept_nda_conclave = {
 
 concept_nda_conjunction = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
-	#is_loading_tip = yes
+	is_loading_tip = yes
 }
 
 concept_nda_yuggoth = {
@@ -115,4 +115,5 @@ concept_nda_nameless_city = {
 
 concept_nda_investigator = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+	is_loading_tip = yes
 }

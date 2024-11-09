@@ -12,6 +12,9 @@ pm_nda_esoteric_vril: "Vril Generation"
 pm_nda_esoteric_blacklotus: "Black Lotus Preparation" 
 pm_nda_esoteric_goods: "Esoteric Goods" 
 
+# Carnacki lights
+pm_nda_esoteric_streetlights: "Carnacki Street Lighting"
+
 # occult goods
 black_lotus: "Black Lotus Powder"
 

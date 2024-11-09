@@ -7,6 +7,7 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 	title = nda_authors.10.t
 	desc = nda_authors.10.d
 	flavor =  nda_authors.10.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -126,6 +127,7 @@ nda_authors.20 = { # Lair of the White Worm - Character event
 	title = nda_authors.20.t
 	desc = nda_authors.20.d
 	flavor =  nda_authors.20.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -246,6 +248,7 @@ nda_authors.30 = { # A complaint
 	title = nda_authors.30.t
 	desc = nda_authors.30.d
 	flavor =  nda_authors.30.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -261,13 +264,13 @@ nda_authors.30 = { # A complaint
 
 	trigger = {		
 		is_player = yes		
-		game_date >= 1859.3 # original story has earliest victim in 1889, but that's leaving it late for game.
-		game_date < 1861  		
+		game_date >= 1859.3.1 # original story has earliest victim in 1889, but that's leaving it late for game.
+		game_date < 1861.1.1  		
 		# must have cultist ig!
 		exists = ig:ig_nda_cult_worshippers
 		# must have non-ruler intelligentsia
 		any_scope_character = { 
-			is_ruler = no  
+			is_ruler = no  			
 			interest_group = ig:ig_intelligentsia
 		}
 		# potentially expendable cultist
@@ -314,6 +317,7 @@ nda_authors.31 = { # A Tragic Death
 	title = nda_authors.31.t
 	desc = nda_authors.31.d
 	flavor =  nda_authors.31.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -345,6 +349,7 @@ nda_authors.32 = { #  A Worried Intellectual
 	title = nda_authors.32.t
 	desc = nda_authors.32.d
 	flavor =  nda_authors.32.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -397,6 +402,7 @@ nda_authors.33 = { # Final Victim
 	title = nda_authors.33.t
 	desc = nda_authors.33.d
 	flavor =  nda_authors.33.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -428,6 +434,7 @@ nda_authors.40 = {
 	title = nda_authors.40.t
 	desc = nda_authors.40.d
 	flavor =  nda_authors.40.f
+	dlc = dlc_NDA
 
 	event_image = {
 		video = "unspecific_sick_in_hospital"
@@ -443,7 +450,7 @@ nda_authors.40 = {
 		
 		# 1860 
 	   game_date >= 1884.4.1 
-	   game_date < 1885 
+	   game_date < 1885.1.1 
 
 		# owner of Oxford. or NEN
 		OR = {
@@ -526,7 +533,6 @@ nda_authors.40 = {
 	}
 }
 
-#nda_acd.1893 = { # The amnesiac
 
 nda_authors.41 = { # Professor Challenger returns
 	type = country_event
@@ -534,6 +540,7 @@ nda_authors.41 = { # Professor Challenger returns
 	title = nda_authors.41.t
 	desc = nda_authors.41.d
 	flavor =  nda_authors.41.f
+	dlc = dlc_NDA
 
 	event_image = {
 		video = "unspecific_sick_in_hospital"
@@ -551,7 +558,7 @@ nda_authors.41 = { # Professor Challenger returns
 		
 		# 1860 
 	   game_date >= 1908.4.1 
-	   game_date < 1909 
+	   game_date < 1909.1.1 
 
 		# owner of London. or NEN
 		OR = {
@@ -631,5 +638,215 @@ nda_authors.41 = { # Professor Challenger returns
 			exile_character_with_martyrdom = yes
 		}				
 
+	}
+}
+
+nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but will end up split across files??
+	type = country_event
+	placement = p:x60E0C0 # this needs to be Bern
+	title = nda_authors.42.t
+	desc = nda_authors.42.d
+	flavor =  nda_authors.42.f
+	dlc = dlc_NDA
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = { 
+		
+		# after 1891 
+	   game_date >= 1892.4.1 
+	   game_date < 1895.1.1 
+
+		# owner of Bern
+		OR = {
+			p:x60E0C0 = { state = { owner = ROOT } }			
+		}			
+   }
+
+	cooldown = { months = 48 }
+
+	immediate = {
+		debug_log = "Prof. James Mor...rison"
+
+		IF = {
+			limit = {
+				p:x60E0C0 = { state = { owner = ROOT } }
+			 }
+
+			# create_character = {
+			# 	template = protagonist_bellingham 
+			# 	on_created = {
+			# 		set_variable = is_bellingham						
+			# 	}
+			# }
+						
+			# random_scope_character = {
+			# 	limit = {
+			# 		has_variable = is_bellingham
+			# 	}
+			# 	save_scope_as = scope_bellingham
+			# }	
+		}
+	}	
+	
+	option = {
+		name = nda_authors.42.a
+		default_option = yes
+
+		# Gets granted a position
+
+		# add crime wave
+
+		# send event to owner of Miskatonic Uni in 12 months
+		if = {
+			limit = {
+				p:x2B5499  = { 
+					state = { 
+						owner = ROOT
+						has_building = building_nda_miskatonic_university	
+					}					
+				}				
+			}
+
+			p:x2B5499  = { 
+				state = { 
+					owner = {
+						trigger_event = { id = nda_nen.1893 months = 6 }						
+					}
+				}					
+			}
+		}
+
+
+		# IF = {
+		# 	limit = { p:x60E0C0 = { state = { owner = ROOT } } }
+
+		# 		# Send Bellingham into exile
+		# 		scope:scope_bellingham = { 
+		# 			add_character_role = agitator
+		# 			exile_character_with_martyrdom = yes
+		# 		}				
+		# 	}
+	
+	}
+	option = {
+		name = nda_authors.42.b
+
+		# Is sent on way - random assign to country or leave out of game??
+		# trigger = {
+		# 	p:x60E0C0 = { state = { owner = ROOT } }
+		# 	is_cultist_country = yes
+		# 	empty_agitator_slots >= 1
+		# }
+
+		# # Recruit Bellingham
+		# scope:scope_bellingham = { 
+		# 	add_character_role = agitator
+		# }						
+	}
+}
+
+nda_authors.43 = { # The Dynamics of a Star
+	type = country_event
+	placement = p:x60E0C0 # this needs to be Arkham based on location
+	title = nda_authors.43.t
+	desc = nda_authors.43.d
+	flavor =  nda_authors.43.f
+	dlc = dlc_NDA
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = { 
+		
+ 		# 1927, no Cthulhu
+		 is_player = yes	
+		 game_date >=  1927.4.2  
+		 game_date < 1929.1.1  
+		 has_global_variable = nda_ritual_cthulhu_visits
+		 NOT = { has_global_variable = nda_the_star_intro }	
+
+		# owner of Bern
+		OR = {
+			p:x60E0C0 = { state = { owner = ROOT } }			
+		}			
+   }
+
+	cooldown = { months = 24 }
+
+	immediate = {
+		debug_log = "The Star is on its way"
+
+		IF = {
+			limit = {
+				p:x60E0C0 = { state = { owner = ROOT } }
+			 }
+		}
+	}
+	
+	option = {
+		name = nda_authors.43.a
+		default_option = yes	
+	}
+}
+
+
+# Algernon Blackwood
+nda_authors.50 = { # The Willows - written in 1907 push to earlier date? > 1887
+	type = country_event
+	placement = p:xD06161 # this needs to be Danube
+	title = nda_authors.50.t
+	desc = nda_authors.50.d
+	flavor =  nda_authors.50.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		 is_player = yes	
+		 game_date >=  1887.4.2  
+		 game_date < 1889.1.1  
+
+		# should not be a war zone
+		OR = {
+			p:xD06161 = { state = { owner =  { is_at_war = no } } }		
+		}		
+   }
+
+	cooldown = { months = 24 }
+
+	immediate = {
+		debug_log = "The Willows"
+	}
+	
+	option = {
+		name = nda_authors.50.a
+		default_option = yes	
+	}
+
+	option = {
+		name = nda_authors.50.b
 	}
 }

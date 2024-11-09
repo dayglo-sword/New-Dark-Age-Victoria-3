@@ -54,7 +54,6 @@
 
 	lawgroup_labor_rights = {
 		law_no_workers_rights = approve
-		law_serfdom = approve
 		law_regulatory_bodies = disapprove
 		law_worker_protections = strongly_disapprove
 	}
@@ -62,7 +61,7 @@
 	lawgroup_slavery = {
 		law_slave_trade = strongly_approve
 		law_debt_slavery = approve
-		law_legacy_slavery = neutral
+		law_legacy_slavery = approve
 		law_slavery_banned = strongly_disapprove
 	}
 }

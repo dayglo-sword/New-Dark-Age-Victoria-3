@@ -85,7 +85,7 @@
 
  notification_nda_lostcity_shamballa_hidden_tooltip:0 "#header $notification_nda_lostcity_shamballa_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_shamballa_hidden_desc$"
  notification_nda_lostcity_shamballa_hidden_name:1 "Shamballa Disappears"
- notification_nda_lostcity_shamballa_hidden_desc:1 "The entrance to [concept_nda_shamballa] has disappeared! No one can find the route to the fabled realm any more.
+ notification_nda_lostcity_shamballa_hidden_desc:1 "The entrance to [concept_nda_shamballa] has disappeared! No one can find the route to the fabled realm any more."
 
  notification_nda_lostcity_nameless_city_reveal_tooltip:0 "#header $notification_nda_lostcity_nameless_city_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_nameless_city_reveal_desc$"
  notification_nda_lostcity_nameless_city_reveal_name:1 "Nameless City Discovered"

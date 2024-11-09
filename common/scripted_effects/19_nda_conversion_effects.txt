@@ -1,5 +1,4 @@
-﻿nda_effect_conversion_back
-{
+﻿nda_effect_conversion_back = {
 	# The Cult is falling apart after Cthulhu leaves. Cultures are re-asserting themselves
 	# This is for non-cult countries - so no strife needed
 

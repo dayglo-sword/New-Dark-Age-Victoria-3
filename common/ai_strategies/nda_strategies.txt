@@ -351,7 +351,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	wargoal_weights = {
 		conquer_state = 1.5
 		return_state = 1.5
-		make_dominion = 1.5
+		reduce_autonomy = 1.5
 	}	
 		
 	possible = {

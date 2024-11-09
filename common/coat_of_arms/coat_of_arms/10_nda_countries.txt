@@ -97,7 +97,7 @@ YIG_WAR = {
 DGN = {
 	pattern = "pattern_solid.tga"
 	color1 = "light_blue"
-	color2 = ""
+	color2 = "light_blue"
 
 	colored_emblem = {
 		texture = "ce_waves.dds"
@@ -116,12 +116,8 @@ DGN = {
 
 DGN_CTH = { # Cthuhlu is here
 	pattern = "pattern_solid.tga"
-	color1 = "white"
-	color2 = "white"
-
-	pattern = "pattern_solid.tga"
 	color1 = "light_blue"
-	color2 = ""
+	color2 = "light_blue"
 
 	colored_emblem = {
 		texture = "ce_waves.dds"
@@ -262,14 +258,7 @@ STY = {
 DLM = { # Dagonic Lemuria
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
-	color2 = ""
-
-	# colored_emblem = {
-	# 	texture = "ce_waves.dds"
-	# 	color1 = "blue"
-	# 	color2 = "light_blue"
-	# 	instance = { scale = { 1 2 } position = { 0.5 0. } }			
-	# }
+	color2 = "blue"
 
 	colored_emblem = {
 		texture = "ce_nda_cthulhu.dds"
@@ -283,7 +272,7 @@ DLM = { # Dagonic Lemuria
 LEM = { # Free Lemuria
 	pattern = "pattern_solid.tga"
 	color1 = "light_blue"
-	color2 = ""
+	color2 = "light_blue"
 
 	colored_emblem = {
 		texture = "ce_waves.dds"
@@ -351,8 +340,7 @@ USA_Cultist = {
 
 	colored_emblem = {
 		texture = "ce_star_pentagram.dds"
-		color1 = color1
-		color2 = color2
+		color1 = color1		
 		instance = { scale = { 0.5 0.5 } position = { 0.26 0.25 } rotation = 180 }			
 	}
 } 
@@ -417,7 +405,6 @@ MEX_Cultist = {
 	colored_emblem = {
 		texture = "ce_star_pentagram.dds"
 		color1 = color1
-		color2 = color2
 		instance = { scale = { 0.5 0.5 } position = { 0.5 0.3 } rotation = 180 }			
 	}
 } 

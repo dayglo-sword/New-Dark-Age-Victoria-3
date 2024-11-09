@@ -7,7 +7,7 @@ concept_nda_cthulhu_desc:0 "The prime Great Old One on the planet.\n\nThey await
 concept_nda_yig:0 "Yig, the Serpent God"
 concept_nda_yig_short:0 "Yig"
 concept_nda_yig_set:0 "Set"
-concept_nda_yig_desc:0 "Known by many names through the ages of the Earth, Yig is the master of the serpents. Worshipped as Set in the lost realm of [concept_nda_stygia], Yig is the form of the god as it appears in the Americas."
+concept_nda_yig_desc:0 "Known by many names through the ages of the Earth, Yig is the master of the serpents. Worshipped as Set in the lost realm of [concept_nda_stygia], Yig is the form of the god as it appears in the Americas.\n\n#ITALIC men in their luxury and might had by then lost faith in the old religions and worships, the snake-men, in the guise of teachers of a new and truer cult, built a monstrous religion about the worship of the serpent god.#!"
 
 concept_nda_dagon:0 "Dagon, the Lord of the Seas"
 concept_nda_dagon_short:0 "Dagon"

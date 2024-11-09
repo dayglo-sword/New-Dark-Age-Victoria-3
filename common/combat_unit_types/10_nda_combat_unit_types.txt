@@ -62,7 +62,6 @@ combat_unit_type_leviathan = {
 
     # Fallback if nothing else matches
     combat_unit_image = {
-        trigger = { always = yes }
         texture = "gfx/unit_illustrations/nda_leviathan.dds"
     }
 }

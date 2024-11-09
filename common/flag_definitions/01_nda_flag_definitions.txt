@@ -268,13 +268,20 @@ BRZ = {
 		}
 	}	
 	flag_definition = {
-		coa = BRZ_dictatorship
-		subject_canton = BRZ_dictatorship			
+		coa = BRZ_oligarchic_republic
+		subject_canton = BRZ_oligarchic_republic			
 		priority = 20
 		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
+			scope:actor ?= {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_landed_voting
+				OR = {
+					has_law = law_type:law_tenant_farmers
+					has_law = law_type:law_serfdom
+				}
+			}
 		}
-	}	
+	}
 	flag_definition = {
 		coa = BRZ_communist
 		priority = 1500

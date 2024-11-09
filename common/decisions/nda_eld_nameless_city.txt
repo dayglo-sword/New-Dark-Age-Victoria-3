@@ -63,7 +63,7 @@
 		}
 
 		create_diplomatic_play = {
-			name = nda_dp_final_war
+			name = nda_dp_nameless_city_war
 		
 			target_country = scope:conquest_target_country
 			

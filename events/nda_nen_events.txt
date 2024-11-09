@@ -900,6 +900,9 @@ nda_nen.1883 = { # The Colour Out Of Space
 	}
 }
 
+
+
+
 nda_nen.1913 = { # Maine Meteor - The Green Meadow
 	type = country_event
 	placement = p:xD64964 
@@ -1025,3 +1028,79 @@ nda_nen.1935 = { # The Outro / denouncement
 
 	}
 }
+
+# A handful of non-Mythos events for the Uni
+nda_nen.1893 = { # An Offer of a Chair
+	type = country_event
+	placement = p:x2B5499
+	title = nda_nen.1922.t
+	desc = nda_nen.1922.d
+	flavor =  nda_nen.1922.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	# called from nda_authors.42 
+	trigger = {
+	}
+
+	immediate = {
+
+	}	
+	
+	option = { #"A Welcome Addition."
+		name = nda_nen.1922.a
+		default_option = yes
+
+		# remove crime wave from Bern (hidden effect)
+
+	}
+	option = { #"An Unwanted Person."
+
+		name = nda_nen.1922.b
+	}
+}
+
+nda_nen.1894 = { # A crime wave in Arkham
+	type = country_event
+	placement = p:x2B5499 
+	title = nda_nen.1922.t
+	desc = nda_nen.1922.d
+	flavor =  nda_nen.1922.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_vandalized_storefront"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	# called from nda_nen.1893
+	trigger = {
+	}
+
+	immediate = {
+		# add crime wave
+	}	
+	
+	option = { #"Do we not have detectives?"
+		name = nda_nen.1922.a
+		default_option = yes
+
+	}
+}
+
+# other events to fortelling future astronomical events - including 'The Star'

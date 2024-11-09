@@ -28,7 +28,7 @@ nda_yig_grand_master: "Archon"
 nda_dagon_grand_master: "Archon"
 
 
-# Idealogies
+# Ideologies
 ideology_nda_cabalistic: "Cabalistic"
 ideology_nda_cabalistic_desc: "This group seeks to impose their Cabalistic Ideology upon the country."
 ideology_nda_cultist: "Cult Supremacist"
@@ -111,3 +111,25 @@ initiate_into_coven: "Initiate into Coven"
 convert_to_dagon: "Reveal Dagonic Mysteries"
 convert_to_yig: "Reveal Yigian Mysteries"
 adopt_cult_culture: "Fully Adopt Cult Ways"
+
+# Culture SOL modifiers - not actually needed but vic3-tiger shows error?
+nda_cul_cultist_standard_of_living_modifier_positive: ""
+nda_cul_cultist_standard_of_living_modifier_negative: ""
+nda_cul_yigian_standard_of_living_modifier_positive: ""
+nda_cul_yigian_standard_of_living_modifier_negative: ""
+nda_cul_dagonic_standard_of_living_modifier_positive: ""
+nda_cul_dagonic_standard_of_living_modifier_negative: ""
+nda_cul_trueyankee_standard_of_living_modifier_positive: ""
+nda_cul_trueyankee_standard_of_living_modifier_negative: ""
+nda_cul_atlantian_standard_of_living_modifier_positive: ""
+nda_cul_atlantian_standard_of_living_modifier_negative: ""
+
+# Religion SOL modifiers - not actually needed but vic3-tiger shows error?
+nda_rel_cultist_standard_of_living_modifier_positive: ""
+nda_rel_cultist_standard_of_living_modifier_negative: ""
+nda_rel_yigian_standard_of_living_modifier_positive: ""
+nda_rel_yigian_standard_of_living_modifier_negative: ""
+nda_rel_spiritualism_standard_of_living_modifier_positive: ""
+nda_rel_spiritualism_standard_of_living_modifier_negative: ""
+nda_rel_theosophic_standard_of_living_modifier_positive: ""
+nda_rel_theosophic_standard_of_living_modifier_negative: ""

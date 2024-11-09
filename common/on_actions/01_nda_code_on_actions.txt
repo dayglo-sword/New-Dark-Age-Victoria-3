@@ -367,6 +367,7 @@ nda_monthly_red_death_effect_on_action = {
 on_half_yearly_pulse_country = {
 	on_actions = {
 		nda_half_yearly_on_action	
+		nda_half_yearly_heirs_on_action
 	}
 }
 
@@ -404,6 +405,58 @@ nda_half_yearly_on_action = {
 
 		nda_base.40 # Abe Lincoln - Time Traveller
 	}
+}
+
+nda_half_yearly_heirs_on_action = {
+	# work out reincarnated heirs to the various Yigian/Stygian countries - this will reduce chance of both sitting on thrones of Yig or Stygia - have a third to act as intermediate??
+	effect = {
+		if = {
+			limit = { 
+				any_character = {
+					has_variable = is_nitocris
+					is_ruler = yes
+				}	
+				NOT = {
+					any_character = {
+						has_variable = is_nephren
+					}	
+				}	
+			}
+			# Nephren-Ka is not anywhere else so make heir of Nitocris
+			create_character = {
+				template = nda_nephren_ka_character_template
+				age = 0
+				heir = yes
+				on_created = {
+					set_variable = is_nephren 									
+				}
+			}
+
+		}
+		else_if = {
+			limit = { 
+				any_character = {
+					has_variable = is_nephren 
+					is_ruler = yes
+				}	
+				NOT = {
+					any_character = {
+						has_variable = is_nitocris
+					}	
+				}	
+			}
+			# Nitocris is not anywhere else so make heir of Nephren-Ka
+			create_character = {
+				template = nda_nitocris_character_template	
+				age = 0		
+				heir = yes	
+				on_created = {
+					set_variable = is_nitocris 									
+				}
+			}
+		}	
+	}
+
 }
 
 # assign Cultist properties to all members of that culture

@@ -53,8 +53,6 @@ nda_investigator.2 = { # Character event - becomes Cultist
 	desc = nda_investigator.2.d
 	flavor =  nda_investigator.2.f
 
-	duration = 3
-
 	gui_window = event_window_1char_tabloid
 
 	left_icon = scope:nda_potential_investigator_scope
@@ -111,8 +109,6 @@ nda_investigator.3 = { # Character event - Assasinated
 	title = nda_investigator.3.t
 	desc = nda_investigator.3.d
 	flavor =  nda_investigator.3.f
-
-	duration = 3
 
 	gui_window = event_window_1char_tabloid
 
