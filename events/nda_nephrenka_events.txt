@@ -1099,7 +1099,6 @@ nda_nephrenka.31 = {
 
 	immediate = { 
 		set_global_variable = nda_nephrenka_mirror_nitocris 
-		set_variable = nda_nephrenka_mirror_nitocris 
 
 		# add to progress
 		change_variable = {
@@ -1114,19 +1113,23 @@ nda_nephrenka.31 = {
 	option = { # a most welcome addition
 		name = nda_nephrenka.31.a
 		default_option = yes
-
+		set_variable = nda_nephrenka_mirror_nitocris 
 		trigger_event = { id = nda_nephrenka.32 months = 3 popup = yes }
 
 	}
 
 	option = {  # it belongs in a museum
 		name = nda_nephrenka.31.b
+		set_variable = nda_nephrenka_mirror_nitocris 
 	}
 
 	option = {  # it belongs to the locals - will start conversion via event - gives country this event but without this option
 		name = nda_nephrenka.31.c
-
-		p:x7543C8.owner = { trigger_event = { id = nda_nephrenka.31 days = 7 popup = yes } }
+	# This needs sorting out - should transfer ownership - and potential return AI weighting??
+		p:x7543C8.owner = { 
+			set_variable = nda_nephrenka_mirror_nitocris 
+			trigger_event = { id = nda_nephrenka.31 days = 7 popup = yes } 
+		}
 
 	}
 }

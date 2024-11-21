@@ -74,6 +74,8 @@ nda_monthly_on_action = {
 		nda_whh.12 # Carnacki Exile
 		nda_whh.13 # Electric Pentangle
 
+		nda_nephrenka.20 # Pyramid Expedition Start
+
 		nda_historic.1837
 		nda_historic.1838
 		nda_historic.1842

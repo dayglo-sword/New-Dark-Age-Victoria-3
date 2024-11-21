@@ -1,0 +1,453 @@
+﻿namespace = nda_pan # Arthur Machen - The Great God Pan and the Three Imposters (aka The Golden Tiberius)
+# https://gutenberg.org/ebooks/35517
+# https://gutenberg.org/ebooks/389
+
+nda_pan.1 = { # Great God Pan- The Experiment - warm up event
+	type = country_event
+	placement = p:xC7847D # Wales/Severn valley - Does not matter if Cultist  
+	title = nda_pan.1.t
+	desc = nda_pan.1.d
+	flavor =  nda_pan.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+ 		
+		game_date >= 1865.5.5  # 1882 - 17
+		# is info event so ok to just show to player
+		is_player = yes		
+		#p:xC7847D = { state = { owner = ROOT } } # Wales/Severn valley?? Or 
+		
+		NOT = { has_global_variable = nda_pan_the_experiment }	
+
+	}
+
+	immediate = {
+		set_global_variable = nda_pan_the_experiment
+
+		#p:x20E0C0 = { # Galway - could use x20E0C0 - wood - Loughrea
+		#	save_scope_as = target_state
+		#}
+
+		debug_log = "Great God Pan- The Experiment"
+
+		# send toast notification to players as chrome - or just put NEN in as possible?
+	}	
+	
+	option = { #"Tragic"
+		name = nda_pan.1.a
+		default_option = yes
+	}
+}
+
+nda_pan.2 = { # Great God Pan- MR. CLARKE’S MEMOIRS
+	type = country_event
+	placement = p:xC7847D # Wales/Severn valley?? 
+	title = nda_pan.2.t
+	desc = nda_pan.2.d
+	flavor =  nda_pan.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2" # medical
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+ 		# should it be part of the Tiberius investigation ?? In which case wait till journal is running?
+		# could be local investigator in country - if so then no need to allocate the players investigator as busy.
+		game_date >= 1888  # 1882 + 6
+		# is info event so ok to just show to player
+		p:xC7847D = { state = { owner = ROOT } } # Wales/Severn valley?? Or 
+		
+		has_global_variable = nda_pan_the_experiment
+
+	}
+
+	cooldown = { months = 24 }
+
+	immediate = {
+		#set_global_variable = nda_pan_the_experiment
+
+		#p:x20E0C0 = { # Galway - could use x20E0C0 - wood - Loughrea
+		#	save_scope_as = target_state
+		#}
+
+		debug_log = "Great God Pan- MR. CLARKE’S MEMOIRS"
+
+		# send toast notification to players as chrome - or just put NEN in as possible?
+	}	
+	
+	option = { #"Tragic"
+		name = nda_pan.2.a
+		default_option = yes
+	}
+}
+
+nda_pan.3 = { # Great God Pan- Number 20 Paul Street
+	type = country_event
+	placement = p:xC7847D # London
+	title = nda_pan.2.t
+	desc = nda_pan.2.d
+	flavor =  nda_pan.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2" # medical
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+ 		# should it be part of the Tiberius investigation ?? In which case wait till journal is running?
+		# could be local investigator in country - if so then no need to allocate the players investigator as busy.
+		game_date >= 1895  # 1882 + 6
+		# is info event so ok to just show to player
+		p:xC7847D = { state = { owner = ROOT } } # Wales/Severn valley?? Or 
+		
+		#NOT = { has_global_variable = nda_pan_the_experiment }	
+
+	}
+
+	cooldown = { months = 24 }
+
+	immediate = {
+	
+		# Death of an IG leader or agitator - don't reveal too much
+
+		debug_log = "Great God Pan- MR. CLARKE’S MEMOIRS"
+
+		# send toast notification to players as chrome - or just put NEN in as possible?
+	}	
+	
+	option = { #"Tragic"
+		name = nda_pan.3.a
+		default_option = yes
+
+		# have follow on event during Tiberius Search
+	}
+}
+
+nda_pan.10 = { # The Golden Tiberius Journal Start - Three Imposters was published 1895 but push it earlier into 1880s (1890-1910 is potentially busy with Cthulhu)
+	type = country_event
+	placement = scope:nda_pan_location
+	title = nda_pan.10.t
+	desc = nda_pan.10.d
+	flavor =  nda_pan.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+ 		# owner of London or Boston if LOndon is cultist
+		game_date >= 1885  
+		p:xC7847D = { state = { owner = ROOT } }
+		
+		NOT = { has_global_variable = nda_pan_setup }	
+
+	}
+
+	immediate = {
+		set_global_variable = nda_pan_setup
+
+		if = { # London
+			limit = { p:x7543C8 = { state = { owner = { is_cultist_country = no } } } }
+			p:x7543C8 = { save_scope_as = nda_pan_location }
+		}
+		else_if = { # Boston - even if cultist
+			limit = { p:xC7847D = { state = { owner = { is_cultist_country = no } } }}
+			p:xC7847D = { save_scope_as = nda_pan_location }
+		}
+
+		debug_log = " Golden Tiberius Start Event"
+	}	
+	
+	option = { #"We should keep a look out for this"
+		name = nda_pan.10.a
+		add_journal_entry = { type = je_nda_pan_golden_tiberius }	
+
+	}
+
+	option = { #"A trivial thing"
+		name = nda_pan.10.b
+		default_option = yes
+	}
+}
+
+# Start Event Chain
+nda_pan.11 = { # 
+	type = country_event
+	placement = scope:nda_pan_location
+	title = nda_pan.11.t
+	desc = nda_pan.11.d
+	flavor =  nda_pan.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+ 		# 1904 and owner of London\Boston 
+		game_date >= 1904  
+		scope:nda_pan_location = { state = { owner = ROOT } }
+		
+		NOT = { has_global_variable = nda_carnacki_ghostfinder }	
+		NOT = { has_global_variable = nda_carnacki_dead }	
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		set_global_variable = nda_carnacki_ghostfinder
+
+		debug_log = "Carnacki the Ghost Finder"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"A dinner party"
+		name = nda_pan.11.a
+		default_option = yes
+	}
+}
+
+# 
+nda_pan.12 = { # 
+	type = country_event
+	placement = ROOT
+	title = nda_pan.12.t
+	desc = nda_pan.12.d
+	flavor =  nda_pan.12.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+ 		# 1906 and non-cultist country 
+		game_date >= 1906  
+		is_player = yes  # no hope if not
+		
+		# cultist on loose in London
+		p:x7543C8 = { state = { owner = { has_variable = nda_cultists_in_open } } }
+
+		has_global_variable = nda_carnacki_ghostfinder	
+		NOT = { has_global_variable = nda_carnacki_dead }	
+		NOT = { has_global_variable = nda_carnacki_in_exile }
+		NOT = { has_variable = nda_cultists_in_open	} # He's not going to run to a cultist country
+	}
+
+	cooldown = { months = 12 }
+	
+	immediate = {
+		#set_global_variable = nda_carnacki_ghostfinder
+
+		debug_log = "Carnacki request asylum"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"Accept"
+		name = nda_pan.12.a
+		set_variable = nda_carnacki_in_exile
+		set_global_variable = nda_carnacki_in_exile # Is this enough to stop multiple Carnacki ?
+	}
+
+	option = { #"Reject"
+		name = nda_pan.12.b
+		default_option = yes
+
+		# Carnacki is doomed
+		trigger_event = { id = nda_pan.15 days = 100 }
+	}
+}
+
+nda_pan.13 = { # 'Electric Pentagram' - should this really be a decision?
+	type = country_event
+	placement = ROOT
+	title = nda_pan.13.t
+	desc = nda_pan.13.d
+	flavor =  nda_pan.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+ 		# 1907 and non-cultist country 
+		game_date >= 1907  
+		is_player = yes  # no hope if not
+		
+		has_global_variable = nda_carnacki_ghostfinder
+		NOT = { has_global_variable = nda_carnacki_research_request }	
+		OR = {
+			has_variable = nda_carnacki_in_exile # is in exile
+			AND = { 
+				NOT = { has_global_variable = nda_carnacki_in_exile }
+				p:x7543C8 = { state = { owner = { NOT = { has_variable = nda_cultists_in_open } } }	} # still in safe London		
+			}
+		}
+		# requires electrical_generation or electrical_capacitors ? ? 
+		has_technology_researched = electrical_capacitors
+	}
+	
+	cooldown = { months = 12 }
+
+	immediate = {
+		set_global_variable = nda_carnacki_research_request
+
+		debug_log = "Carnacki researches pentagram"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"Accept"
+		name = nda_pan.13.a
+		
+		# warm up for other Carnacki events
+		#set_variable = nda_carnacki_pentangle # reinstate when needed
+		#treasury = -10000 
+		trigger_event = { id = nda_pan.14 days = 300 }	# research complete			
+	}
+
+	option = { #"Reject"
+		name = nda_pan.13.b
+		default_option = yes
+
+		# Carnacki is doomed
+		trigger_event = { id = nda_pan.15 days = 100 }
+	}
+}
+
+nda_pan.14 = { # Carnacki Succeeds
+	type = country_event
+	placement = ROOT
+	title = nda_pan.14.t
+	desc = nda_pan.14.d
+	flavor =  nda_pan.14.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+		# is called from event nda_pan.13
+	}
+
+	immediate = {
+		#set_global_variable = nda_carnacki_ghostfinder
+
+		debug_log = "Carnacki succeeds"
+
+		# send toast notification to players as chrome?
+	}	
+	
+	option = { #"Accept"
+		name = nda_pan.14.a
+		
+		# warm up for Carnacki decision
+		set_variable = nda_carnacki_successful # reinstate when needed
+
+	}
+
+	option = { #"Reject"
+		name = nda_pan.14.b
+		default_option = yes
+
+		# Carnacki is doomed
+		trigger_event = { id = nda_pan.15 days = 100 }
+	}
+}
+
+nda_pan.15 = { # Death of Carnacki 
+	type = country_event
+	placement = ROOT
+	title = nda_pan.15.t
+	desc = nda_pan.15.d
+	flavor =  nda_pan.15.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_police_breaking_door.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	trigger = {
+		# is called from events above
+	}
+
+	immediate = {
+		set_global_variable = nda_carnacki_dead 
+
+		debug_log = "Carnacki Death"
+
+		# send toast notification to players as chrome
+	}	
+	
+	option = { #"A tragic event"
+		name = nda_pan.15.a
+		default_option = yes		
+	}
+}

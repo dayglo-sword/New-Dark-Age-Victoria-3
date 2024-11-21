@@ -166,6 +166,35 @@
 
 		# Drive certain characters crazy
 		trigger_event = { id = nda_ritual.20 days = 3 } 
+
+		# Do cult spread to other countries not previously affected?
+		random_country = {
+			limit = {
+				country_rank >= rank_value:unrecognized_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				country_rank >= rank_value:unrecognized_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
+		random_country = {
+			limit = {
+				country_rank >= rank_value:unrecognized_power	
+
+				NOT = { has_variable = nda_nameless_cults_selected }
+			}
+
+			set_variable = nda_nameless_cults_selected
+		}
 	}	
 }
 

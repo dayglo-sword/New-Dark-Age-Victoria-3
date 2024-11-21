@@ -61,7 +61,7 @@ STY = { # Stygia
 		STATE_HAIL
 	}
 
-	required_num_states = 9
+	required_num_states = 10
 	
 	ai_will_do = { always = yes }
 

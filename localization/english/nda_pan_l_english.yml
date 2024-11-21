@@ -1,0 +1,53 @@
+﻿l_english:
+
+nda_pan.1.t: "An Experiment"
+nda_pan.1.d: "News has reached us, via our agents, of a rather disturbing experiment. It was conducted by a Dr. Raymond, who has devoted themselves to transcendental medicine for the last twenty years.\n\nIt was conducted upon a poor young lady, Mary, who Dr Raymond had adopted as their own just for the purpose of the experiment!\n\nThey obviously thought conducting it in a remote location would keep it a secret; though it is probably best left undisclosed to the public."
+nda_pan.1.f: "'There is a real world, but it is beyond this glamour and this vision,... you and I shall see it lifted this very night from before another’s eyes. You may think this all strange nonsense; it may be strange, but it is true, and the ancients knew what lifting the veil means. They called it seeing the god Pan.'\n\n'a slight lesion in the grey matter, that is all; a trifling rearrangement of certain cells, a microscopical alteration that would escape the attention of ninety-nine brain specialists out of a hundred'\n\n'She was lying wide-awake, rolling her head from side to side, and grinning vacantly. “Yes,” said the doctor, still quite cool, “it is a great pity; she is a hopeless idiot. However, it could not be helped; and, after all, she has seen the Great God Pan.'"
+nda_pan.1.a: "Most Horrific!"
+
+
+
+nda_pan.10.t: "The Golden Tiberius"
+nda_pan.10.d: "A legendary ancient coin with historical associations with the occult has both reappeared and disappered within a short space of time.\n\nIt had been aquired by Mr. James Headley, F.S.A., from his agent in Armenia. He has since disappeared on a visit to London to display the coin.\n\nThe coin in question is The Golden Tiberius, with the Emporer on the front, and a depiction of a faun on the reverse."
+nda_pan.10.f: "'A whole cycle of legend has gathered round the thing; the tale goes that it formed part of an issue struck by Tiberius to commemorate an infamous excess. You see the legend on the reverse: 'Victoria.' It is said that by an extraordinary accident the whole issue was thrown into the melting pot, and that only this one coin escaped. It glints through history and legend, appearing and disappearing, with intervals of a hundred years in time and continents in place. It was discovered by an Italian humanist, and lost and rediscovered. It has not been heard of since 1727, when Sir Joshua Byrde, a Turkey merchant, brought it home from Aleppo, and vanished with it a month after he had shown it to the virtuosi, no man knew or knows where.'"
+nda_pan.10.a: "Worth investigating further!"
+nda_pan.10.a: "A trifle of a thing."
+
+nda_pan.11.t: ""
+nda_pan.11.d: "."
+nda_pan.11.f: "'.'"
+nda_pan.11.a: "!"
+
+
+nda_pan.12.t: ""
+nda_pan.12.d: "."
+nda_pan.12.f: ""
+nda_pan.12.a: "."
+nda_pan.12.b: "!"
+
+nda_pan.13.t: ""
+nda_pan.13.d: ""
+nda_pan.13.f: ""
+nda_pan.13.a: ""
+nda_pan.13.b: "!"
+
+nda_pan.14.t: "!"
+nda_pan.14.d: "!"
+nda_pan.14.f: "'.'"
+nda_pan.14.a: "!"
+nda_pan.14.b: "!"
+
+nda_pan.15.t: ""
+nda_pan.15.d: "."
+nda_pan.15.f: "."
+nda_pan.15.a: "!"
+
+# Journal
+je_nda_pan_golden_tiberius: "The Golden Tiberius"
+
+je_nda_pan_golden_tiberius_reason: "This coin has a legendary reputation amoungst those who follow the occult.\n\nIt would be best if we knew the current location of the object, and the fate of its previous owners."
+je_nda_pan_golden_tiberius_complete_tt: "."
+je_nda_pan_golden_tiberius_complete: "."
+je_nda_pan_golden_tiberius_fail_tt: ""We have lost all trace of the coin."
+je_nda_pan_golden_tiberius_tt: "We continue to search for information"
+je_nda_pan_golden_tiberius_cancel_tt: "We cancel the search for information"
