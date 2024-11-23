@@ -4,7 +4,10 @@
 # Root = Country
 on_monthly_pulse_country = {
 	on_actions = {
-		nda_monthly_on_action	
+		nda_monthly_on_action
+		delay = { days = 4 }
+		nda_monthly_historical_on_action	
+		delay = { days = 8 }
 		nda_monthly_cult_rejection_on_action
 	}
 }
@@ -75,37 +78,6 @@ nda_monthly_on_action = {
 		nda_whh.13 # Electric Pentangle
 
 		nda_nephrenka.20 # Pyramid Expedition Start
-
-		nda_historic.1837
-		nda_historic.1838
-		nda_historic.1842
-		nda_historic.1848
-		nda_historic.1849
-		nda_historic.1852
-		nda_historic.1854
-		nda_historic.1857 
-		nda_historic.1858
-		nda_historic.1862
-		nda_historic.1865
-		nda_historic.1867
-		nda_historic.1871
-		nda_historic.1875
-		nda_historic.1879		
-		nda_historic.1882	
-		nda_historic.1887
-		nda_historic.1888
-		nda_historic.1889
-		nda_historic.1891		
-		nda_historic.1892
-		nda_historic.1893
-
-		nda_historic_regional.1848
-		nda_historic_regional.1864
-		nda_historic_regional.1870
-		nda_historic_regional.1882
-		nda_historic_regional.1890
-		nda_historic_regional.1892
-		nda_historic_regional.1901
 
 		nda_migo.1
 		nda_migo.4
@@ -216,6 +188,41 @@ nda_monthly_on_action = {
 	}
 }
 
+nda_monthly_historical_on_action = {
+	events = {		
+		nda_historic.1837
+		nda_historic.1838
+		nda_historic.1842
+		nda_historic.1848
+		nda_historic.1849
+		nda_historic.1852
+		nda_historic.1854
+		nda_historic.1857 
+		nda_historic.1858
+		nda_historic.1862
+		nda_historic.1865
+		nda_historic.1867
+		nda_historic.1871
+		nda_historic.1875
+		nda_historic.1879		
+		nda_historic.1882	
+		nda_historic.1887
+		nda_historic.1888
+		nda_historic.1889
+		nda_historic.1891		
+		nda_historic.1892
+		nda_historic.1893
+
+		nda_historic_regional.1848
+		nda_historic_regional.1864
+		nda_historic_regional.1870
+		nda_historic_regional.1882
+		nda_historic_regional.1890
+		nda_historic_regional.1892
+		nda_historic_regional.1901
+	}
+}
+
 nda_monthly_cult_rejection_on_action = {
 	# after Cthulhu leaves we need to cause reversion back to normal cultures 
 	# - was done via event 'nda_ritual.7' and effect but needs to be expanded to released colonies etc.
@@ -267,6 +274,7 @@ nda_monthly_cult_rejection_on_action = {
 on_monthly_pulse_state = {
 	on_actions = {
 		nda_monthly_state_conversion_on_action	
+		delay = { days = 4 }
 		nda_monthly_red_death_effect_on_action
 	}
 }
@@ -369,6 +377,7 @@ nda_monthly_red_death_effect_on_action = {
 on_half_yearly_pulse_country = {
 	on_actions = {
 		nda_half_yearly_on_action	
+		delay = { days = 4 }
 		nda_half_yearly_heirs_on_action
 	}
 }

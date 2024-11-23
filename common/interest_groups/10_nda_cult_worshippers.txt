@@ -114,6 +114,18 @@
 	}
 
 	on_disable = {}
+
+	priority_cultures = { #Country scope
+		rule = {
+			trigger = {
+				has_cult_culture = yes
+			}
+			cultures = {
+				nda_cul_cultist nda_cul_yigian nda_cul_dagonic
+			}
+		}
+	}
+
 	on_character_ig_membership = {
 		#change_character_religion = scope:interest_group.owner.religion
 		IF = {
@@ -333,16 +345,7 @@
 	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {
 		value = 0.25
-		if = {
-			limit = {
-				exists = scope:character
-			}
-			multiply = {
-				value = 1
-				add = scope:character.popularity
-				min = 0
-			}
-			# also mod by cult traits? or is their effect on popularity enough? - do commanders ever get these traits
-		}
+		multiply = ig_commander_leader_chance_mult
+		# also mod by cult traits? or is their effect on popularity enough? - do commanders ever get these traits
 	}
 }

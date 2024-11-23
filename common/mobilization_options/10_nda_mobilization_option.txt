@@ -124,5 +124,11 @@ mobilization_option_nda_west_tonic = {
 		value = 1
 	}
 
+	on_activate = {
+		hidden_effect = {
+			set_variable = nda_tonic_for_the_troops_used
+		}
+	}
+
     group = medic_support
 }

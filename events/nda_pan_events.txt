@@ -102,9 +102,9 @@ nda_pan.2 = { # Great God Pan- MR. CLARKE’S MEMOIRS
 nda_pan.3 = { # Great God Pan- Number 20 Paul Street
 	type = country_event
 	placement = p:xC7847D # London
-	title = nda_pan.2.t
-	desc = nda_pan.2.d
-	flavor =  nda_pan.2.f
+	title = nda_pan.3.t
+	desc = nda_pan.3.d
+	flavor =  nda_pan.3.f
 
 	duration = 3
 

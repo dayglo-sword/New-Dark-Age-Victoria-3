@@ -19,7 +19,7 @@ nda_dagonic_state_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	building_whaling_station_throughput_add = 0.33
 	building_fishing_wharf_throughput_add = 0.33
-	state_poor_standard_of_living_add = 2
+	state_standard_of_living_add = 2
 }
 
 nda_dagonic_country_modifier = {

@@ -1,7 +1,7 @@
 ﻿
 building_nda_miskatonic_university = {
 	building_group = bg_technology
-	texture = "gfx/interface/icons/building_icons/building_university.dds"
+	icon = "gfx/interface/icons/building_icons/building_university.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
 	buildable = no
@@ -37,7 +37,7 @@ building_nda_miskatonic_university = {
 # R-lyeh - 
 building_nda_lostcity_rlyeh = {
 	building_group = bg_monuments
-	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	icon = "gfx/interface/icons/building_icons/machu_picchu.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
 	expandable = no
@@ -63,7 +63,7 @@ building_nda_lostcity_rlyeh = {
 # K'n-yan - https://www.lovecraft-stories.com/story/the-mound - tie it in to YIG as serpent people memntioned
 building_nda_lostcity_knyan = {
 	building_group = bg_monuments
-	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	icon = "gfx/interface/icons/building_icons/machu_picchu.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
 	expandable = no
@@ -90,7 +90,7 @@ building_nda_lostcity_knyan = {
 # Y'ha-nthlei - tie it in to DGN 
 building_nda_lostcity_yhanthlei = {
 	building_group = bg_monuments
-	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	icon = "gfx/interface/icons/building_icons/machu_picchu.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
 	expandable = no
@@ -117,7 +117,7 @@ building_nda_lostcity_yhanthlei = {
 # Shamballa - The Theosophic version
 building_nda_lostcity_shamballa = {
 	building_group = bg_monuments
-	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	icon = "gfx/interface/icons/building_icons/machu_picchu.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
 	expandable = no
@@ -144,7 +144,7 @@ building_nda_lostcity_shamballa = {
 # The Nameless City
 building_nda_lostcity_nameless_city = {
 	building_group = bg_monuments
-	texture = "gfx/interface/icons/building_icons/machu_picchu.dds"
+	icon = "gfx/interface/icons/building_icons/machu_picchu.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	
 	expandable = no

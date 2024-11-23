@@ -160,7 +160,7 @@ is_potentially_dagonic = {
 		region = sr:region_south_china
 		region = sr:region_japan
 		region = sr:region_oceania
-		region = sr:region_south_india
+		#region = sr:region_south_india
 	}
 }
 
@@ -198,7 +198,7 @@ is_potentially_dagonic_lands = {
 		region = sr:region_south_china
 		region = sr:region_japan
 		region = sr:region_oceania
-		region = sr:region_south_india
+		#region = sr:region_south_india
 	}
 }
 

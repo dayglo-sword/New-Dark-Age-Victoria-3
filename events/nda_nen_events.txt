@@ -375,7 +375,8 @@ nda_nen.16 = { # A plague of reanimated - End result of 'tonic for the troops' -
 		exists = c:NEN
 		c:NEN = ROOT
 		has_global_variable = herbert_west_successful
-		has_global_variable = herbert_west_end 
+		#has_global_variable = herbert_west_end 
+		has_variable = nda_tonic_for_the_troops_used
 	}
 
 	immediate = {

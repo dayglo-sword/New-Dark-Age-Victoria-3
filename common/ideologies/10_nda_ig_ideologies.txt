@@ -6,6 +6,7 @@
 		law_theocracy = strongly_approve			
 		law_presidential_republic = neutral
 		law_parliamentary_republic = strongly_disapprove
+		law_corporate_state = approve
 		law_council_republic = strongly_disapprove
 	}
 	
@@ -43,6 +44,7 @@
 		law_command_economy = approve		
 		law_interventionism = neutral
 		law_laissez_faire = disapprove
+		law_extraction_economy = neutral
 	}
 	
 	lawgroup_trade_policy = {		
