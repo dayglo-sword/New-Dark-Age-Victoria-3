@@ -223,6 +223,24 @@ nda_monthly_historical_on_action = {
 	}
 }
 
+# British Folk-ish Horror
+nda_monthly_pan_on_action = {
+	events = {	
+		nda_authors.42 # A C Doyle Character
+		nda_authors.43
+		nda_authors.50
+		nda_nen.1894 # Mor-rison Warning
+
+		nda_pan.1 
+		nda_pan.2 
+		nda_pan.3 
+		nda_pan.10 
+		nda_pan.11
+		nda_pan.12
+		nda_pan.13
+	}
+}
+
 nda_monthly_cult_rejection_on_action = {
 	# after Cthulhu leaves we need to cause reversion back to normal cultures 
 	# - was done via event 'nda_ritual.7' and effect but needs to be expanded to released colonies etc.

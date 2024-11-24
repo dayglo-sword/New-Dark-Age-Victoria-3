@@ -98,7 +98,7 @@ nda_yig_form_union_of_the_snake = {
 				map_color =  { 21 191 16 }
 
 				identity = identity_nda_cultist # identity_sovereign_empire
-				principle = principle_vassalization_1
+				principle = principle_divine_economics_1 #principle_vassalization_1 - is only available in SOI DLC
 
 				# subjects are automatically part of the bloc
 			}
@@ -108,8 +108,8 @@ nda_yig_form_union_of_the_snake = {
 				}
 				power_bloc ?= {
 					if = {
-						limit = { not = { has_principle = principle:principle_colonial_offices_2}}
-						add_principle = principle_colonial_offices_2					
+						limit = { not = { has_principle = principle:principle_vassalization_1}}
+						add_principle = principle_vassalization_1					
 					}
 
 				}

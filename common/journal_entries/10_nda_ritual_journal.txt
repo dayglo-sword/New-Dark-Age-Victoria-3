@@ -26,6 +26,8 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 			has_cult_culture = yes
 		}
 		exists = c:ELD
+
+		is_revolutionary = no
 		# NOT = { THIS ?= c:ELD }
 
 		# NOT = { has_global_variable = nda_ritual_completed  }

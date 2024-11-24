@@ -1,3 +1,22 @@
+Version v1.8.0
+
+Major Changes
+
+
+Minor Changes
+Add 'Pan' Journal and Events (A Machen)
+Add 'Major Character' of AC Doyle
+Dynamic State/Hub names for countries
+Use Cult Comcepts on Loading Screens
+
+Bug Fixes
+Cultist Power Bloc formable without SOI DLC
+Revolting Cultist can not add to Ritual
+Greater New England requires 10+ states
+YIG annexes limited to the Americas
+
+------
+
 Version v1.7.6.1
 
 Major Changes

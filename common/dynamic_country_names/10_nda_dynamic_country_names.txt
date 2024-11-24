@@ -156,7 +156,9 @@ NEN = { # For when NEN forms Canada
 			exists = scope:actor
 			scope:actor = {
 				was_formed_from = NEN
+				num_incorporated_states > 10
 			}
+
 		}
 	}
 }

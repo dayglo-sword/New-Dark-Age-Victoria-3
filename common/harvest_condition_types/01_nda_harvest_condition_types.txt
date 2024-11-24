@@ -1,0 +1,180 @@
+﻿# Negative
+nda_putrid_skies = {
+	trigger = {
+		has_global_variable = nda_cthulhu_arrives
+	}
+
+	# No Incompatibility
+
+	range = {
+		integer_range = {
+			min = 2
+			max = 5
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 52
+			max = 260
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.05
+
+		#Infrastructure
+		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
+		building_group_bg_plantations_infrastructure_usage_mult = 0.1
+		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+
+		#Subsistence
+		state_peasants_consumption_multiplier_add= 0.025
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 4
+			max = 8
+		}
+	}
+
+	chance = {
+		value = 0.01
+	}
+
+	color = { 142 36 170 }
+	icon = "gfx/interface/icons/harvest_condition_icons/drought.dds"
+	graphics = drought
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+nda_fury_of_dagon = {
+	trigger = {
+		has_global_variable = nda_cthulhu_arrives
+		any_scope_state = {
+			is_coastal = yes			
+		}
+	}
+
+	range = {
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 12
+			max = 120
+		}
+	}
+
+	modifier = {
+		#Infrastructure
+		state_infrastructure_mult = -0.05
+
+		#MAPI
+		state_market_access_price_impact = -0.05
+
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.10
+		building_group_bg_plantations_throughput_add = -0.10
+		building_group_bg_ranching_throughput_add = -0.10
+		building_group_bg_extraction_throughput_add = -0.10
+
+		#Subsistence
+		state_peasants_consumption_multiplier_add = 0.010
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 1
+			max = 6
+		}
+	}
+
+	chance = {
+		value = 0.01
+		# if = {
+		# 	limit = {
+		# 		OR = {
+		# 			has_harvest_condition = moderate_rainfall
+		# 			has_harvest_condition = heatwave
+		# 		}
+		# 	}
+		# 	multiply = 1.2
+		# }
+		# if = {
+		# 	limit = {
+		# 		has_harvest_condition = hailstorm
+		# 	}
+		# 	multiply = 1.1
+		# }
+		# if = {
+		# 	limit = {
+		# 		has_harvest_condition = torrential_rains
+		# 	}
+		# 	multiply = 1.5
+		# }
+	}
+
+	color = { 38 198 218 }
+	icon = "gfx/interface/icons/harvest_condition_icons/flood.dds"
+	graphics = flood
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+nda_red_death = {
+	trigger = {
+		has_global_variable = nda_poe_red_death
+	}
+
+	# Incompatible with Disease Outbreak: pollinators
+	# Replaces pollinators
+
+	range = {
+		integer_range = {
+			min = 1
+			max = 1
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 96
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.05
+		building_group_bg_plantations_throughput_add = -0.05
+		building_group_bg_ranching_throughput_add = -0.05
+
+		#Subsistence
+		state_peasants_consumption_multiplier_add= 0.03
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 3
+			max = 7
+		}
+	}
+
+	chance = {
+		value = 0.01
+	}
+
+	color = { 78 70 57 }
+	icon = "gfx/interface/icons/harvest_condition_icons/disease_outbreak.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	graphics = drought
+}
+

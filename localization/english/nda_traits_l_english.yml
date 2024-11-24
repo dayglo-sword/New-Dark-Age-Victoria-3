@@ -133,3 +133,9 @@ nda_rel_spiritualism_standard_of_living_modifier_positive: ""
 nda_rel_spiritualism_standard_of_living_modifier_negative: ""
 nda_rel_theosophic_standard_of_living_modifier_positive: ""
 nda_rel_theosophic_standard_of_living_modifier_negative: ""
+
+# Harvest Conditions
+nda_putrid_skies: "Putrid Skies"
+nda_putrid_skies_desc: "The Skies are darkened with billowing clouds."
+nda_fury_of_dagon: "Fury of Dagon"
+nda_fury_of_dagon_desc: "An attack from the Sea by the undersea God! Devasting and flooding the land."

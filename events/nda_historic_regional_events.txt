@@ -278,7 +278,7 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 	option = { #"And they are ours"
 		name = nda_historic_regional.1892.c
 		trigger = { 
-			c:DAG = ROOT
+			c:DAG ?= ROOT
 		}
 		# have event to cause panic around North Sea?? - effect fishing?
 

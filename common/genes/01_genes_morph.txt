@@ -5227,7 +5227,7 @@ morph_genes = {
 
     }
 
-gene_face_dacals = {
+    gene_face_dacals = {
         face_dacal_01 = {
             index = 0
             male = { 
@@ -5496,6 +5496,10 @@ gene_face_dacals = {
     #        boy = male
     #        girl = female
     }
+    
+    no_decal = {
+            index = 5         
+    }  
 }
 
     gene_frown = {

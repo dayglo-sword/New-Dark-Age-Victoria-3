@@ -1,0 +1,47 @@
+﻿nda_effect_map_name_miskaton = { # Rename New Hampshire to Miskaton	
+	s:STATE_NEW_HAMPSHIRE = {
+		random_scope_state = {
+
+			set_state_name = nda_MISKATON
+
+			set_hub_name = { type = city name = nda_MISKATON_city }
+
+			set_hub_name = { type = port name = nda_MISKATON_port }
+
+			set_hub_name = { type = mine name = nda_MISKATON_mine }
+
+			set_hub_name = { type = farm name = nda_MISKATON_farm }
+
+			set_hub_name = { type = wood name = nda_MISKATON_wood }
+		}
+	}	
+}
+
+nda_effect_map_name_averoigne = { # Averoigne - Clark Ashton Smith
+	s:STATE_AUVERGNE_LIMOUSIN = {
+		random_scope_state = {
+			set_state_name = nda_AVEROIGNE
+
+			set_hub_name = { type = city name = nda_AVEROIGNE_city }
+
+			set_hub_name = { type = port name = nda_AVEROIGNE_port }
+
+			set_hub_name = { type = mine name = nda_AVEROIGNE_mine }
+
+			set_hub_name = { type = farm name = nda_AVEROIGNE_farm }
+
+			set_hub_name = { type = wood name = nda_AVEROIGNE_wood }
+		}
+	}
+}
+
+nda_effect_map_name_new_carcosa= { # King in Yellow - Hasturian America
+	s:STATE_NEW_YORK = {
+		random_scope_state = {
+
+			set_state_name = nda_NEW_CARCOSA
+
+			set_hub_name = { type = city name = nda_NEW_CARCOSA_city }
+		}
+	}
+}

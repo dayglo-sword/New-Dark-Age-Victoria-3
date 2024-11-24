@@ -412,7 +412,7 @@ nda_hasturian.5 = { # Create Imperial America
 			add_loyalists = { value = 1 }
 
 			# change cultists IG to Hasturian
-			ig:ig_nda_cult_worshippers = {
+			ig:ig_nda_cult_worshippers ?= {
 				set_interest_group_name = ig_nda_hasturian_cult
 			}
 
@@ -432,7 +432,8 @@ nda_hasturian.5 = { # Create Imperial America
 				}
 			}
 		}
-
+		# Rename New York
+		nda_effect_map_name_new_carcosa = yes
 		# Notify the world		
 		every_country = {
 			post_notification = nda_hastur_coronation

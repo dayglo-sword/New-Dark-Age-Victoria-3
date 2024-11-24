@@ -19,4 +19,8 @@ GLOBAL = {
 
 	}
 	
+	# Remane New Hampshire to Miskaton - Change Hub Names
+	nda_effect_map_name_miskaton = yes
+	# Averoigne - Clark Ashton Smith
+	nda_effect_map_name_averoigne = yes
 }
