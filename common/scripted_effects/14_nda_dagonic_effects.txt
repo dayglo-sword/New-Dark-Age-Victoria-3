@@ -456,6 +456,9 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 			nda_effect_ensure_cult_ideology = yes
 		}
 
+		# rename capital to Yian
+		nda_effect_map_name_leng_yian = yes
+
 		# set state religion
 		set_state_religion = rel:nda_rel_cultist
 		
@@ -548,6 +551,11 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 		# set relations with other cultists - ELD is most important
 		IF = {
 			limit = { exists = c:ELD }
+			change_relations = { country = c:ELD value = 200 } # Make friends	
+		}
+
+		IF = {
+			limit = { exists = c:IAM } # Yian is Robert Chambers creation so has links to Hastur
 			change_relations = { country = c:ELD value = 200 } # Make friends	
 		}
 }

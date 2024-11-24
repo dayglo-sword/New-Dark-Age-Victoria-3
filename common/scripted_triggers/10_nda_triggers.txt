@@ -231,7 +231,7 @@ has_non_cult_culture = {
 			OR = {
 				THIS = cu:nda_cul_cultist 
 				THIS = cu:nda_cul_dagonic
-				THIS =cu:nda_cul_yigian				
+				THIS = cu:nda_cul_yigian				
 			}
 		}
 	}

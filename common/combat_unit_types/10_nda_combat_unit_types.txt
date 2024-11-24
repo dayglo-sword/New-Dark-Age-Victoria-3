@@ -56,8 +56,7 @@ combat_unit_type_leviathan = {
     can_build = {
        c:DGN ?= THIS
         #has_technology_researched = battleship_tech
-        has_global_variable = nda_cthulhu_arrives
-        NOT = { has_global_variable = nda_ritual_cthulhu_leaves }
+        nda_coa_def_cthulhu_trigger = yes
     }
 
     # Fallback if nothing else matches

@@ -17,3 +17,11 @@ nda_AVEROIGNE_wood: "Saint-Zenobie"
 # Hasturian America
 nda_NEW_CARCOSA: "New Carcosa"
 nda_NEW_CARCOSA_city: "New Carcosa"
+
+# Leng
+nda_LENG_YIAN_city: "Yian"
+
+# Stygia
+nda_STYGIA_LUXUR_city: "Luxur"
+nda_STYGIA_KHEMI_city: "Khemi"
+nda_STYGIA_KHESHATTA_city: "Khesatta"

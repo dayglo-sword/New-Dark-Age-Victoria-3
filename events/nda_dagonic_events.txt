@@ -347,100 +347,100 @@ nda_dagonic.5 = {
 
 }
 
-# Fury of the Sea! Attack non-Dagonic Coasts
-nda_dagonic.6 = {
-	type = country_event
-	hidden = yes
+# # Fury of the Sea! Attack non-Dagonic Coasts
+# nda_dagonic.6 = {
+# 	type = country_event
+# 	hidden = yes
 
-	trigger = {
-		owner = {
-			AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-			}
-		}
+# 	trigger = {
+# 		owner = {
+# 			AND = {
+# 				exists = c:DGN
+# 				c:DGN = ROOT
+# 			}
+# 		}
 
-		# Cthulhu is still here
-		has_global_variable = nda_cthulhu_arrives
-		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}	
+# 		# Cthulhu is still here
+# 		has_global_variable = nda_cthulhu_arrives
+# 		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}	
 
-		# has at least one qualifying state
-		any_state = {
-			is_coastal = yes				
-			NOT = { owner = ROOT }
-		}
-	}
+# 		# has at least one qualifying state
+# 		any_state = {
+# 			is_coastal = yes				
+# 			NOT = { owner = ROOT }
+# 		}
+# 	}
 
-	immediate = {
-		debug_log = "Fury of DGN"
-		# selected state
-		random_state = {
-			limit = {
-				is_coastal = yes				
-				NOT = { owner = ROOT }
-			}
-			trigger_event = { id = nda_dagonic.7 }			
-		}
-	}
-}
+# 	immediate = {
+# 		debug_log = "Fury of DGN"
+# 		# selected state
+# 		random_state = {
+# 			limit = {
+# 				is_coastal = yes				
+# 				NOT = { owner = ROOT }
+# 			}
+# 			trigger_event = { id = nda_dagonic.7 }			
+# 		}
+# 	}
+# }
 
-# Fury of the Sea!
-nda_dagonic.7 = {
-	type = state_event
-	placement = ROOT
-	title = nda_dagonic.7.t
-	desc = nda_dagonic.7.d
-	flavor = nda_dagonic.7.f
-	dlc = dlc_NDA
+# # Fury of the Sea!
+# nda_dagonic.7 = {
+# 	type = state_event
+# 	placement = ROOT
+# 	title = nda_dagonic.7.t
+# 	desc = nda_dagonic.7.d
+# 	flavor = nda_dagonic.7.f
+# 	dlc = dlc_NDA
 	
-	duration = 3
+# 	duration = 3
 
-	event_image = {
-		video = "gfx/event_pictures/unspecific_whaling.bk2"
-	}
+# 	event_image = {
+# 		video = "gfx/event_pictures/unspecific_whaling.bk2"
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/oil_derricks"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_opened_soundeffect = "event:/SFX/Events/middleeast/oil_derricks"
 
-	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
-	immediate = {
-		#debug_log_scopes = no
+# 	immediate = {
+# 		#debug_log_scopes = no
 
-		save_scope_as = nda_dagon_target
+# 		save_scope_as = nda_dagon_target
 
-		# trash the place
-		state_region = {
-			# Cause devestation
-			add_devastation = 80
-			# and polution
-			add_pollution = 80				
-		}
+# 		# trash the place
+# 		state_region = {
+# 			# Cause devestation
+# 			add_devastation = 80
+# 			# and polution
+# 			add_pollution = 80				
+# 		}
 
-		kill_population_percent_in_state = { percent = 0.02 } # big sea monster kills things
+# 		kill_population_percent_in_state = { percent = 0.02 } # big sea monster kills things
 
-		every_scope_building = {
-			# reduce in size or remove?
-		}
+# 		every_scope_building = {
+# 			# reduce in size or remove?
+# 		}
 
-		add_modifier = {
-			name = nda_dagonic_state_ruin_modifier
-			months = normal_modifier_time
-			is_decaying = yes
-		}
+# 		add_modifier = {
+# 			name = nda_dagonic_state_ruin_modifier
+# 			months = normal_modifier_time
+# 			is_decaying = yes
+# 		}
 
-		every_country = {
-			#limit = {
-			#	is_player = yes
-			#	NOT = { has_variable = nda_dagon_in_open}
-			#}
+# 		every_country = {
+# 			#limit = {
+# 			#	is_player = yes
+# 			#	NOT = { has_variable = nda_dagon_in_open}
+# 			#}
 
-			post_notification = nda_dagon_attacks 
+# 			post_notification = nda_dagon_attacks 
 
-		}
-	}
-	option = {
-		name = nda_dagonic.7.a
-		default_option = yes
-	}
-}
+# 		}
+# 	}
+# 	option = {
+# 		name = nda_dagonic.7.a
+# 		default_option = yes
+# 	}
+# }

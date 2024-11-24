@@ -272,7 +272,7 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 	option = { #"Sea Monsters Everywhere"
 		name = nda_historic_regional.1892.b
 		trigger = { 
-			has_global_variable = nda_cthulhu_arrives
+			nda_coa_def_cthulhu_trigger = yes
 		}
 	}
 	option = { #"And they are ours"

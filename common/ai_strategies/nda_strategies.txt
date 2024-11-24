@@ -52,7 +52,7 @@
 			multiply = 1.5
 		}	
 		if = {
-			limit = { has_global_variable = nda_cthulhu_arrives }
+			limit = { nda_coa_def_cthulhu_trigger = yes }
 			multiply = 1.5
 		}	
 		if = {
@@ -377,7 +377,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 			multiply = 1.5
 		}			
 				if = {
-			limit = { has_global_variable = nda_cthulhu_arrives }
+			limit = { nda_coa_def_cthulhu_trigger = yes }
 			multiply = 1.5
 		}	
 				if = {
@@ -506,7 +506,7 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 			multiply = 1.5
 		}	
 		if = {
-			limit = { has_global_variable = nda_cthulhu_arrives }
+			limit = { nda_coa_def_cthulhu_trigger = yes }
 			multiply = 1.5
 		}	
 		if = {

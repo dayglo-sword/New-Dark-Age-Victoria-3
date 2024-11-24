@@ -23,7 +23,9 @@
 				NOT = { c:ELD ?= this }
 				NOT = { c:YIG = this }
 			}
-		}		 
+		}	
+		# Number of states so small YIG can't do it
+		num_incorporated_states > 12	 
 	}
 	
 	when_taken = {
@@ -43,11 +45,11 @@
 	}
 
 	ai_chance = {
-		base = 10	
+		base = 5 # Was 10 - need to reduce further?	
 		# boost if cthuhlu in town
 		modifier = {
 			trigger = { 
-				has_global_variable = nda_cthulhu_arrives
+				nda_coa_def_cthulhu_trigger = yes
 			}
 			add = 20
 		}	

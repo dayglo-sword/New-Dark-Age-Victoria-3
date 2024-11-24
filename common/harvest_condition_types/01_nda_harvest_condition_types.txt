@@ -1,7 +1,7 @@
 ﻿# Negative
 nda_putrid_skies = {
 	trigger = {
-		has_global_variable = nda_cthulhu_arrives
+		nda_coa_def_cthulhu_trigger = yes
 	}
 
 	# No Incompatibility
@@ -25,6 +25,8 @@ nda_putrid_skies = {
 		building_group_bg_agriculture_throughput_add = -0.05
 		building_group_bg_plantations_throughput_add = -0.05
 		building_group_bg_ranching_throughput_add = -0.05
+		building_group_bg_logging_throughput_add = -0.02
+		building_group_bg_rubber_throughput_add = -0.02
 
 		#Infrastructure
 		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
@@ -33,6 +35,9 @@ nda_putrid_skies = {
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add= 0.025
+
+		state_mortality_mult = 0.1 # 0.30
+		#state_standard_of_living_add = -2
 	}
 
 	intensity = {
@@ -54,7 +59,7 @@ nda_putrid_skies = {
 
 nda_fury_of_dagon = {
 	trigger = {
-		has_global_variable = nda_cthulhu_arrives
+		nda_coa_def_cthulhu_trigger = yes
 		any_scope_state = {
 			is_coastal = yes			
 		}
@@ -132,6 +137,7 @@ nda_fury_of_dagon = {
 nda_red_death = {
 	trigger = {
 		has_global_variable = nda_poe_red_death
+		game_date <= 1853.10.1
 	}
 
 	# Incompatible with Disease Outbreak: pollinators
@@ -159,6 +165,10 @@ nda_red_death = {
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add= 0.03
+
+		# From original modifier
+		state_mortality_mult = 0.4 #1.7 # needs to be more? or scaled like plague?
+		state_migration_pull_mult = -0.1 # -0.3
 	}
 
 	intensity = {

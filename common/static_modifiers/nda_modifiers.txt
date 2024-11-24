@@ -4,16 +4,17 @@
 	building_arts_academy_throughput_add = 0.15
 }
 
-nda_dark_skies_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	building_group_bg_agriculture_throughput_add = -0.4
-	building_group_bg_ranching_throughput_add = -0.4
-	building_group_bg_plantations_throughput_add = -0.4
-	building_group_bg_logging_throughput_add = -0.2
-	building_group_bg_rubber_throughput_add = -0.2
-	state_mortality_mult = 0.30
-	state_standard_of_living_add = -2
-}
+# replaced by weather effect
+# nda_dark_skies_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+# 	building_group_bg_agriculture_throughput_add = -0.4
+# 	building_group_bg_ranching_throughput_add = -0.4
+# 	building_group_bg_plantations_throughput_add = -0.4
+# 	building_group_bg_logging_throughput_add = -0.2
+# 	building_group_bg_rubber_throughput_add = -0.2
+# 	state_mortality_mult = 0.30
+# 	state_standard_of_living_add = -2
+# }
 
 nda_dagonic_state_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds

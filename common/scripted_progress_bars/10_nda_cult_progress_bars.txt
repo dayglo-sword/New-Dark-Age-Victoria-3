@@ -97,8 +97,7 @@
 		# Old Ones are here
 		if = {
 			limit = { 
-				has_global_variable = nda_cthulhu_arrives 
-				NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+				nda_coa_def_cthulhu_trigger = yes
 			}
 			add = {
 				desc = "nda_cult_spread_cthulhu_arrives_tt"
