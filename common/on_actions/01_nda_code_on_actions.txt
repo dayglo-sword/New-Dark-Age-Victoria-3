@@ -805,3 +805,34 @@ nda_create_leng_on_action = {
 # 		# }
 # 	}
 # }
+
+##### This overides base on_actions else would get duplicate notifications
+# Root = country
+# scope:area = harvest condition area
+# scope:state = affected state with the highest intensity
+# scope:duration = duration of the harvest condition in days
+# scope:num_states = the number of affected states in the country
+# scope:intensity = the highest intensity of the affected states
+on_harvest_condition_started_in_country = {
+	effect = {
+		if = {
+			limit = {
+				scope:area = ""
+			}
+			# Standard Harvest Condition
+			if = {
+				limit = {
+					scope:intensity > 3
+				}
+				post_notification = harvest_condition_started_in_country_important
+			}
+			else = {
+				post_notification = harvest_condition_started_in_country
+			}
+
+		}
+		else = {
+			post_notification = nda_disaster_condition_started_in_country
+		}
+	}
+}

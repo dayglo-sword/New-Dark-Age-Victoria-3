@@ -22,28 +22,28 @@ nda_putrid_skies = {
 
 	modifier = {
 		#Throughput
-		building_group_bg_agriculture_throughput_add = -0.05
-		building_group_bg_plantations_throughput_add = -0.05
-		building_group_bg_ranching_throughput_add = -0.05
-		building_group_bg_logging_throughput_add = -0.02
-		building_group_bg_rubber_throughput_add = -0.02
+		building_group_bg_agriculture_throughput_add = -0.1
+		building_group_bg_plantations_throughput_add = -0.1
+		building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_logging_throughput_add = -0.04
+		building_group_bg_rubber_throughput_add = -0.04
 
 		#Infrastructure
-		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
-		building_group_bg_plantations_infrastructure_usage_mult = 0.1
-		building_group_bg_ranching_infrastructure_usage_mult = 0.1
+		building_group_bg_agriculture_infrastructure_usage_mult = 0.2
+		building_group_bg_plantations_infrastructure_usage_mult = 0.2
+		building_group_bg_ranching_infrastructure_usage_mult = 0.2
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add= 0.025
 
-		state_mortality_mult = 0.1 # 0.30
+		state_mortality_mult = 0.2 # 0.30
 		#state_standard_of_living_add = -2
 	}
 
 	intensity = {
 		fixed_range = {
-			min = 4
-			max = 8
+			min = 1
+			max = 4
 		}
 	}
 
@@ -74,8 +74,8 @@ nda_fury_of_dagon = {
 
 	duration = {
 		fixed_range = {
-			min = 12
-			max = 120
+			min = 26
+			max = 78
 		}
 	}
 
@@ -87,10 +87,10 @@ nda_fury_of_dagon = {
 		state_market_access_price_impact = -0.05
 
 		#Throughput
-		building_group_bg_agriculture_throughput_add = -0.10
-		building_group_bg_plantations_throughput_add = -0.10
-		building_group_bg_ranching_throughput_add = -0.10
-		building_group_bg_extraction_throughput_add = -0.10
+		building_group_bg_agriculture_throughput_add = -0.15
+		building_group_bg_plantations_throughput_add = -0.15
+		building_group_bg_ranching_throughput_add = -0.15
+		building_group_bg_extraction_throughput_add = -0.15
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add = 0.010
@@ -99,7 +99,7 @@ nda_fury_of_dagon = {
 	intensity = {
 		fixed_range = {
 			min = 1
-			max = 6
+			max = 4
 		}
 	}
 
@@ -159,22 +159,22 @@ nda_red_death = {
 
 	modifier = {
 		# Throughput
-		building_group_bg_agriculture_throughput_add = -0.05
-		building_group_bg_plantations_throughput_add = -0.05
-		building_group_bg_ranching_throughput_add = -0.05
+		building_group_bg_agriculture_throughput_add = -0.1
+		building_group_bg_plantations_throughput_add = -0.1
+		building_group_bg_ranching_throughput_add = -0.1
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add= 0.03
 
 		# From original modifier
-		state_mortality_mult = 0.4 #1.7 # needs to be more? or scaled like plague?
-		state_migration_pull_mult = -0.1 # -0.3
+		state_mortality_mult = 0.6 #1.7 # needs to be more? or scaled like plague?
+		state_migration_pull_mult = -0.2 # -0.3
 	}
 
 	intensity = {
 		fixed_range = {
-			min = 3
-			max = 7
+			min = 1
+			max = 4
 		}
 	}
 

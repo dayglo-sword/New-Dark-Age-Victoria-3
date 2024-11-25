@@ -33,8 +33,9 @@ nda_eap.10 = { # The initial outbreak - (Baltimore) direct from Poe Death event.
 					name = nda_poe_red_death_state
 					value = nda_red_death_duration
 				} 
-
-				start_harvest_condition = nda_red_death
+				state_region = {
+					start_harvest_condition = nda_red_death						
+				}
 				
 				# # action effect - pop death and mortality increase modifier
 				# IF = {
@@ -133,7 +134,9 @@ nda_eap.12 = { # The plague spreads
 			value = nda_red_death_duration
 		} 
 		
-		start_harvest_condition = nda_red_death
+		state_region = {
+			start_harvest_condition = nda_red_death						
+		}
 
 		# add_modifier = {
 		# 	name = nda_red_death_modifier			

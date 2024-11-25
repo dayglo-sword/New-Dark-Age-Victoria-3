@@ -1,93 +1,98 @@
 ﻿l_english: 
  # Concepts
-concept_nda_cthulhu:0 "Great Cthulhu"
-concept_nda_cthulhu_short:0 "Cthulhu"
-concept_nda_cthulhu_desc:0 "The prime Great Old One on the planet.\n\nThey await the day when the Stars are Right so they can arise from their deathless slumber.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+concept_nda_cthulhu: "Great Cthulhu"
+concept_nda_cthulhu_short: "Cthulhu"
+concept_nda_cthulhu_desc: "The prime Great Old One on the planet.\n\nThey await the day when the Stars are Right so they can arise from their deathless slumber.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
 
-concept_nda_yig:0 "Yig, the Serpent God"
-concept_nda_yig_short:0 "Yig"
-concept_nda_yig_set:0 "Set"
-concept_nda_yig_desc:0 "Known by many names through the ages of the Earth, Yig is the master of the serpents. Worshipped as Set in the lost realm of [concept_nda_stygia], Yig is the form of the god as it appears in the Americas.\n\n#ITALIC men in their luxury and might had by then lost faith in the old religions and worships, the snake-men, in the guise of teachers of a new and truer cult, built a monstrous religion about the worship of the serpent god.#!"
+concept_nda_yig: "Yig, the Serpent God"
+concept_nda_yig_short: "Yig"
+concept_nda_yig_set: "Set"
+concept_nda_yig_desc: "Known by many names through the ages of the Earth, Yig is the master of the serpents. Worshipped as Set in the lost realm of [concept_nda_stygia], Yig is the form of the god as it appears in the Americas.\n\n#ITALIC men in their luxury and might had by then lost faith in the old religions and worships, the snake-men, in the guise of teachers of a new and truer cult, built a monstrous religion about the worship of the serpent god.#!"
 
-concept_nda_dagon:0 "Dagon, the Lord of the Seas"
-concept_nda_dagon_short:0 "Dagon"
-concept_nda_dagon_desc:0 "Son of the [concept_nda_cthulhu] itself. Sibling of Hydra.\n\nDagon resides in his realm beneath the waves, awaiting the day when he and his followers, the [concept_nda_deep_ones], can once more rule the Shores as well as the Seas.\n\n#ITALIC ...the thing slid into view above the dark waters. Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares...\n\n...it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds.#!"
+concept_nda_dagon: "Dagon, the Lord of the Seas"
+concept_nda_dagon_short: "Dagon"
+concept_nda_dagon_desc: "Son of the [concept_nda_cthulhu] itself. Sibling of Hydra.\n\nDagon resides in his realm beneath the waves, awaiting the day when he and his followers, the [concept_nda_deep_ones], can once more rule the Shores as well as the Seas.\n\n#ITALIC ...the thing slid into view above the dark waters. Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares...\n\n...it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds.#!"
 
-concept_nda_deep_ones:0 "Deep Ones"
-concept_nda_deep_ones_short:0 "Deep Ones"
-concept_nda_deep_ones_desc:0 "Inhabitants of the Seas who occasionally make their home on land, but always near the shores.\n\n#ITALIC ...they were damnably human in general outline despite webbed hands and feet, shockingly wide and flabby lips, glassy, bulging eyes, and other features less pleasant to recall...#!"
+concept_nda_deep_ones: "Deep Ones"
+concept_nda_deep_ones_short: "Deep Ones"
+concept_nda_deep_ones_desc: "Inhabitants of the Seas who occasionally make their home on land, but always near the shores.\n\n#ITALIC ...they were damnably human in general outline despite webbed hands and feet, shockingly wide and flabby lips, glassy, bulging eyes, and other features less pleasant to recall...#!"
 
-concept_nda_hastur:0 "Hastur, the King in Yellow"
-concept_nda_hastur_short:0 "Hastur"
-concept_nda_hastur_desc:0 "Living in the realm of dreams but with the capability to distort reality, Lord Hastur of Carcosa can alter the very perception of reality for his followers/victims.\n\n#ITALIC ...a whole secret cult of evil men... ...linked with Hastur and the Yellow Sign... ...devoted to the purpose of tracking them down and injuring them on behalf of the monstrous powers from other dimensions #!"
+concept_nda_hastur: "Hastur, the King in Yellow"
+concept_nda_hastur_short: "Hastur"
+concept_nda_hastur_desc: "Living in the realm of dreams but with the capability to distort reality, Lord Hastur of Carcosa can alter the very perception of reality for his followers/victims.\n\n#ITALIC ...a whole secret cult of evil men... ...linked with Hastur and the Yellow Sign... ...devoted to the purpose of tracking them down and injuring them on behalf of the monstrous powers from other dimensions #!"
 
-concept_nda_migo:0 "Mi-Go, the Fungi from Yuggoth"
-concept_nda_migo_short:0 "Mi-Go"
-concept_nda_migo_desc:0 "Based on the planet [concept_nda_yuggoth] in the depths of space. These creatures take over the minds of their victims so they can better observe events.\n\n#ITALIC ...pinkish things about five feet long; with crustaceous bodies bearing vast pairs of dorsal fins or membranous wings and several sets of articulated limbs, and with a sort of convoluted ellipsoid, covered with multitudes of very short antennae, where a head would ordinarily be...#!"
+concept_nda_migo: "Mi-Go, the Fungi from Yuggoth"
+concept_nda_migo_short: "Mi-Go"
+concept_nda_migo_desc: "Based on the planet [concept_nda_yuggoth] in the depths of space. These creatures take over the minds of their victims so they can better observe events.\n\n#ITALIC ...pinkish things about five feet long; with crustaceous bodies bearing vast pairs of dorsal fins or membranous wings and several sets of articulated limbs, and with a sort of convoluted ellipsoid, covered with multitudes of very short antennae, where a head would ordinarily be...#!"
 
-concept_nda_yuggoth:0 "Yuggoth"
-concept_nda_yuggoth_short:0 "Yuggoth"
-concept_nda_yuggoth_desc:0 "The supposed planet Yuggoth exists in the depths of space beyond the orbit of Neptune. According to the #ITALIC Book of Eibon#! it is the current outpost of the Mi-Go in the solar system.\n\n#ITALIC ...almost lightless at the very edge of our solar system - beyond Neptune, and the ninth in distance from the sun. It is, as we have inferred, the object mystically hinted at as "Yuggoth" in certain ancient and forbidden writings;#!"
+concept_nda_yuggoth: "Yuggoth"
+concept_nda_yuggoth_short: "Yuggoth"
+concept_nda_yuggoth_desc: "The supposed planet Yuggoth exists in the depths of space beyond the orbit of Neptune. According to the #ITALIC Book of Eibon#! it is the current outpost of the Mi-Go in the solar system.\n\n#ITALIC ...almost lightless at the very edge of our solar system - beyond Neptune, and the ninth in distance from the sun. It is, as we have inferred, the object mystically hinted at as "Yuggoth" in certain ancient and forbidden writings;#!"
 
-concept_nda_old_ones:0 "Great Old Ones"
-concept_nda_old_ones_short:0 "Old Ones"
-concept_nda_old_ones_desc:0 "Creatures from beyond this planet that many peoples throughout the ages of the world have worship as Gods due to their vast unfathomable power.\n\n It is believed their powers include the ability to change reality itself."
-
-
-concept_nda_chaugnar_faugn:0 "Chaugnar Faugn, the elephantine god"
-concept_nda_chaugnar_faugn_short:0 "Chaugnar Faugn"
-concept_nda_chaugnar_faugn_desc:0 "Twice exiled, first from their home planet and then from Earth into the Dreamlands.\n\n Chaugnar Faugn is the sole remaining survivor of the Elephantine race. With the last of his former companions, who later turned prison wardens, being killed by a Barbarian towards the end of the [concept_nda_hyborian_age] there is nothing to temper this gods cruelty.\n\n"
+concept_nda_old_ones: "Great Old Ones"
+concept_nda_old_ones_short: "Old Ones"
+concept_nda_old_ones_desc: "Creatures from beyond this planet that many peoples throughout the ages of the world have worship as Gods due to their vast unfathomable power.\n\n It is believed their powers include the ability to change reality itself."
 
 
-concept_nda_ritual:0 "The Ritual"
-concept_nda_ritual_short:0 "The Ritual"
-concept_nda_ritual_desc:0 "There are many spells, incantations, and rites for the worship of the [concept_nda_old_ones], but only one worthy of the title #BOLD The Ritual#!.\n\nIt is the rite to release [concept_nda_cthulhu] himself from his deathless slumber when the 'Stars are Right'.\n\nOccult Astrologers believe there are two upcoming windows of opportunity; First in 1890, and then in 1925.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+concept_nda_chaugnar_faugn: "Chaugnar Faugn, the elephantine god"
+concept_nda_chaugnar_faugn_short: "Chaugnar Faugn"
+concept_nda_chaugnar_faugn_desc: "Twice exiled, first from their home planet and then from Earth into the Dreamlands.\n\n Chaugnar Faugn is the sole remaining survivor of the Elephantine race. With the last of his former companions, who later turned prison wardens, being killed by a Barbarian towards the end of the [concept_nda_hyborian_age] there is nothing to temper this gods cruelty.\n\n"
 
-concept_nda_conclave:0 "Grand Conclave"
-concept_nda_conclave_short:0 "Conclave"
-concept_nda_conclave_desc:0 "A great meeting of Cultists of all persuasions held at the time of the [concept_nda_conjunction].\n\n Matters of importance and the future course of the worship of the [concept_nda_old_ones] are decided behind closed doors by the elders of the Cults."
 
-concept_nda_conjunction:0 "Great Conjunction"
-concept_nda_conjunction_short:0 "Conjunction"
-concept_nda_conjunction_desc:0 "The Great Conjunction is a conjunction of the planets Jupiter and Saturn and is visible to the naked eye.\n\nIn more primitive times it was widely supposed to herald apocalyptic changes.\n\nOccuring to schedule approximately every 20 years, it can cluster, such as what will occur in the early 1940's where three conjunctions will happen in quick succession.\n\nThe Cultists are known to hold their [concept_nda_conclave] to coincide with the conjunction."
+concept_nda_ritual: "The Ritual"
+concept_nda_ritual_short: "The Ritual"
+concept_nda_ritual_desc: "There are many spells, incantations, and rites for the worship of the [concept_nda_old_ones], but only one worthy of the title #BOLD The Ritual#!.\n\nIt is the rite to release [concept_nda_cthulhu] himself from his deathless slumber when the 'Stars are Right'.\n\nOccult Astrologers believe there are two upcoming windows of opportunity; First in 1890, and then in 1925.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+
+concept_nda_conclave: "Grand Conclave"
+concept_nda_conclave_short: "Conclave"
+concept_nda_conclave_desc: "A great meeting of Cultists of all persuasions held at the time of the [concept_nda_conjunction].\n\n Matters of importance and the future course of the worship of the [concept_nda_old_ones] are decided behind closed doors by the elders of the Cults."
+
+concept_nda_conjunction: "Great Conjunction"
+concept_nda_conjunction_short: "Conjunction"
+concept_nda_conjunction_desc: "The Great Conjunction is a conjunction of the planets Jupiter and Saturn and is visible to the naked eye.\n\nIn more primitive times it was widely supposed to herald apocalyptic changes.\n\nOccuring to schedule approximately every 20 years, it can cluster, such as what will occur in the early 1940's where three conjunctions will happen in quick succession.\n\nThe Cultists are known to hold their [concept_nda_conclave] to coincide with the conjunction."
 
 
 # migo experiment help
-concept_nda_migo_status_1:0 "Cultist Country"
-concept_nda_migo_status_1_desc:0 "The Eldritch Cult has taken control of this country.\n\nThe members of the government do their bidding and furthers the ultimate goal of the cultists... the completion of [concept_nda_ritual]"
-concept_nda_migo_status_2:0 "Cultists Active"
-concept_nda_migo_status_2_desc:0 "The Eldritch Cult is attempting to take control of this country.\n\nThe members of the government are being covertly influenced to do the cults bidding."
-concept_nda_migo_status_3:0 "Cultists Repulsed"
-concept_nda_migo_status_3_desc:0 "The Cultists prolonged attempt to take control of this country has failed.\n\nThey may attempt to 'convert' the country by more physical means in the future."
-concept_nda_migo_status_4:0 "No Active Cultists"
-concept_nda_migo_status_4_desc:0 "The Eldritch Cult has not yet attempted to take control of this country.\n\nThe teachings of the Cultists may still be spreading among the population but not to the extent that it threatens control of the political sphere."
+concept_nda_migo_status_1: "Cultist Country"
+concept_nda_migo_status_1_desc: "The Eldritch Cult has taken control of this country.\n\nThe members of the government do their bidding and furthers the ultimate goal of the cultists... the completion of [concept_nda_ritual]"
+concept_nda_migo_status_2: "Cultists Active"
+concept_nda_migo_status_2_desc: "The Eldritch Cult is attempting to take control of this country.\n\nThe members of the government are being covertly influenced to do the cults bidding."
+concept_nda_migo_status_3: "Cultists Repulsed"
+concept_nda_migo_status_3_desc: "The Cultists prolonged attempt to take control of this country has failed.\n\nThey may attempt to 'convert' the country by more physical means in the future."
+concept_nda_migo_status_4: "No Active Cultists"
+concept_nda_migo_status_4_desc: "The Eldritch Cult has not yet attempted to take control of this country.\n\nThe teachings of the Cultists may still be spreading among the population but not to the extent that it threatens control of the political sphere."
 
 # lost lands
-concept_nda_hyborian_age:0 "Hyborian Age"
-concept_nda_hyborian_age_short:0 "Hyborian"
-concept_nda_hyborian_age_desc:0 "The age of the Earth immediately prior to our own. It is after the Great Cataclysm that sank [concept_nda_atlantis] and [concept_nda_lemuria], but before the Great Flood and upheaval that sees the current form of the continents.\n\nDespite them being the direct ancestors of all the Earths inhabitants little is know the peoples of this time."
+concept_nda_hyborian_age: "Hyborian Age"
+concept_nda_hyborian_age_short: "Hyborian"
+concept_nda_hyborian_age_desc: "The age of the Earth immediately prior to our own. It is after the Great Cataclysm that sank [concept_nda_atlantis] and [concept_nda_lemuria], but before the Great Flood and upheaval that sees the current form of the continents.\n\nDespite them being the direct ancestors of all the Earths inhabitants little is know the peoples of this time."
 
-concept_nda_stygia:0 "Stygia"
-concept_nda_stygia_desc:0 "The lost home of the Snake-Peoples after the age of #BOLD [concept_nda_atlantis]#! and the sinking of [concept_nda_lemuria]. Worshippers of [Concept('concept_nda_yig','$concept_nda_yig_set$')], they ruled their land of slaves with terror, before fading from history. Their legacy being maintained by human priests using occult powers derived from their serpent worship.\n\n The land was devastated at the end of the #BOLD [concept_nda_hyborian_age]#! as what is now the Mediterranean flooded."
+concept_nda_stygia: "Stygia"
+concept_nda_stygia_desc: "The lost home of the Snake-Peoples after the age of #BOLD [concept_nda_atlantis]#! and the sinking of [concept_nda_lemuria]. Worshippers of [Concept('concept_nda_yig','$concept_nda_yig_set$')], they ruled their land of slaves with terror, before fading from history. Their legacy being maintained by human priests using occult powers derived from their serpent worship.\n\n The land was devastated at the end of the #BOLD [concept_nda_hyborian_age]#! as what is now the Mediterranean flooded."
 
-concept_nda_lemuria:0 "Lemuria"
-concept_nda_lemuria_desc:0 "Lemuria was the companion continent of [concept_nda_atlantis] before the oceans swallowed the bulk of the land in the Great Cataclysm.\n\nThe surviviors scattered across the world as it headed into the [concept_nda_hyborian_age], where they became enslaved by the followers of [Concept('concept_nda_yig','$concept_nda_yig_set$')]. Their descendants would eventually rebel, driving the snake worshippers westwards to [concept_nda_stygia].\n\n The only remaining remnants of the continent are islands scattered across the Pacific."
+concept_nda_lemuria: "Lemuria"
+concept_nda_lemuria_desc: "Lemuria was the companion continent of [concept_nda_atlantis] before the oceans swallowed the bulk of the land in the Great Cataclysm.\n\nThe surviviors scattered across the world as it headed into the [concept_nda_hyborian_age], where they became enslaved by the followers of [Concept('concept_nda_yig','$concept_nda_yig_set$')]. Their descendants would eventually rebel, driving the snake worshippers westwards to [concept_nda_stygia].\n\n The only remaining remnants of the continent are islands scattered across the Pacific."
 
-concept_nda_atlantis:0 "Atlantis"
-concept_nda_atlantis_desc:0 "Atlantis, the companion continent of [concept_nda_lemuria], before the oceans swallowed the bulk of the land in the Great Cataclysm. The surviviors scattered across the world as it headed into the [concept_nda_hyborian_age]\n\nThe true history of the land is lost, but the legends remain."
+concept_nda_atlantis: "Atlantis"
+concept_nda_atlantis_desc: "Atlantis, the companion continent of [concept_nda_lemuria], before the oceans swallowed the bulk of the land in the Great Cataclysm. The surviviors scattered across the world as it headed into the [concept_nda_hyborian_age]\n\nThe true history of the land is lost, but the legends remain."
 
-concept_nda_knyan:0 "K'N-Yan"
-concept_nda_knyan_desc:0 "The hidden land of K'N-Yan - A vast land underground, only a few are permitted to enter, and only those who pass homage to Yig and Tulu.\n\n'The people of K’n-yan all dwelt in the great, tall city of Tsath beyond the mountains. Formerly several races of them had inhabited the entire underground world, which stretched down to unfathomable abysses and which included besides the blue-litten region a red-litten region called Yoth, where relics of a still older and non-human race were found by archaeologists.'\n\n'Temples to Great Tulu, a spirit of universal harmony anciently symbolised as the octopus-headed god who had brought all men down from the stars, were the most richly constructed objects in all K’n-yan; while the cryptic shrines of Yig, the principle of life symbolised as the Father of all Serpents, were almost as lavish and remarkable.'"
+concept_nda_knyan: "K'N-Yan"
+concept_nda_knyan_desc: "The hidden land of K'N-Yan - A vast land underground, only a few are permitted to enter, and only those who pass homage to Yig and Tulu.\n\n'The people of K’n-yan all dwelt in the great, tall city of Tsath beyond the mountains. Formerly several races of them had inhabited the entire underground world, which stretched down to unfathomable abysses and which included besides the blue-litten region a red-litten region called Yoth, where relics of a still older and non-human race were found by archaeologists.'\n\n'Temples to Great Tulu, a spirit of universal harmony anciently symbolised as the octopus-headed god who had brought all men down from the stars, were the most richly constructed objects in all K’n-yan; while the cryptic shrines of Yig, the principle of life symbolised as the Father of all Serpents, were almost as lavish and remarkable.'"
 
-concept_nda_yhanthlei:0 "Y'han-thlei"
-concept_nda_yhanthlei_desc:0 "The hidden underwater city of the [concept_nda_deep_ones], Y'han-thlei, has risen, pushing numerous entrances above the surface of the sea it lay under.\n\nUnlike the vast number of Depp One outposts, this city resides off the coast of North East America."
+concept_nda_yhanthlei: "Y'han-thlei"
+concept_nda_yhanthlei_desc: "The hidden underwater city of the [concept_nda_deep_ones], Y'han-thlei, has risen, pushing numerous entrances above the surface of the sea it lay under.\n\nUnlike the vast number of Depp One outposts, this city resides off the coast of North East America."
 
-concept_nda_shamballa:0 "Shamballa"
-concept_nda_shamballa_desc:0 "'Who will come forth from Shamballa, the “City of Gods,” which is in the West for some nations, in the East for others, in the North or South for yet others."
+concept_nda_shamballa: "Shamballa"
+concept_nda_shamballa_desc: "'Who will come forth from Shamballa, the “City of Gods,” which is in the West for some nations, in the East for others, in the North or South for yet others."
 
-concept_nda_nameless_city:0 "Nameless City"
-concept_nda_nameless_city_desc:0 "A City of legend, lost to the world for so long no record of it's name exists.\n\n'Remote in the desert of Araby lies the nameless city, crumbling and inarticulate, its low walls nearly hidden by the sands of uncounted ages. It must have been thus before the first stones of Memphis were laid, and while the bricks of Babylon were yet unbaked.'\n\n'It was of this place that Abdul Alhazred the mad poet dreamed on the night before he sang his unexplainable couplet - \n “That is not dead which can eternal lie, And with strange aeons even death may die.”'\n\n'...the tale of a mighty sea-coast metropolis that ruled the world before Africa rose out of the waves, and of its struggles as the sea shrank away, and the desert crept into the fertile valley that held it...'"
+concept_nda_nameless_city: "Nameless City"
+concept_nda_nameless_city_desc: "A City of legend, lost to the world for so long no record of it's name exists.\n\n'Remote in the desert of Araby lies the nameless city, crumbling and inarticulate, its low walls nearly hidden by the sands of uncounted ages. It must have been thus before the first stones of Memphis were laid, and while the bricks of Babylon were yet unbaked.'\n\n'It was of this place that Abdul Alhazred the mad poet dreamed on the night before he sang his unexplainable couplet - \n “That is not dead which can eternal lie, And with strange aeons even death may die.”'\n\n'...the tale of a mighty sea-coast metropolis that ruled the world before Africa rose out of the waves, and of its struggles as the sea shrank away, and the desert crept into the fertile valley that held it...'"
 
-concept_nda_investigator:0 "Occult Investigators"
-concept_nda_investigator_short:0 "Investigators"
-concept_nda_investigator_desc:0 "Occult Investigators have the habit of poking their nose where it doesn't belong and working against the machinations of the Cults that worship the [concept_nda_old_ones].\n\nOften they have taken it upon themselves to initiate their investigations, sometimes it's due to personal tragedy or being a victim of the Cult's political maneuvers.\n\nGetting a disbelieving world to listen is difficult, and not without its own dangers."
+concept_nda_investigator: "Occult Investigators"
+concept_nda_investigator_short: "Investigators"
+concept_nda_investigator_desc: "Occult Investigators have the habit of poking their nose where it doesn't belong and working against the machinations of the Cults that worship the [concept_nda_old_ones].\n\nOften they have taken it upon themselves to initiate their investigations, sometimes it's due to personal tragedy or being a victim of the Cult's political maneuvers.\n\nGetting a disbelieving world to listen is difficult, and not without its own dangers."
+
+
+concept_disaster_condition: "Disaster Condition"
+concept_disaster_conditions: "Disaster Conditions"
+concept_disaster_condition_desc: "A $concept_disaster_condition$ is an occurrence that primarily affects a [Concept('concept_country','$concept_country_possessive$')] rural sector with a variable [Concept('concept_harvest_condition_intensity','$concept_harvest_condition_intensity_short$')], duration, and range. It is generally a natural phenomenon and always has a #r negative#! effect on the [Concept('concept_state','$concept_states$')] it affects. $concept_disaster_conditions$ will mostly affect the [concept_throughput] of agricultural [Concept('concept_building','$concept_buildings$')], but they can also have an effect on your [Concept('concept_pop','$concept_population$')] and $concept_states$ in other ways, such as reducing available [concept_infrastructure].\n\n$concept_disaster_conditions$ will often affect $concept_states$ surrounding their #b epicenter#!. In such cases, the [concept_harvest_condition_intensity] will generally decrease as the distance to the #b epicenter#! increases."
