@@ -102,7 +102,6 @@
 
 # Disaster 'Harvest Conditions'
  notification_nda_disaster_condition_started_in_country_tooltip: "#header $notification_nda_disaster_condition_started_in_country_name$#!\n$notification_nda_disaster_condition_started_in_country_desc$;"
- notification_nda_disaster_condition_started_in_country_name: "[concept_disaster_condition: "Disaster Condition"
-] Started in [SCOPE.GetRootScope.GetCountry.GetName]"
+ notification_nda_disaster_condition_started_in_country_name: "[concept_disaster_condition]: [SCOPE.sHCA('area').GetType.GetName] Started in [SCOPE.GetRootScope.GetCountry.GetName]"
  notification_nda_disaster_condition_started_in_country_desc: "[SCOPE.sHCA('area').GetRemainingDurationLabel] [SCOPE.sHCA('area').GetType.GetName] started in [SCOPE.sS('state').GetCountry.GetFlagTextIcon] [SCOPE.sS('state').GetName] affecting [SCOPE.GetValue('num_states')|0v] of your [Concept('concept_state', '$concept_states$')] with an [Concept('concept_harvest_condition_intensity', '$concept_harvest_condition_intensity_short$')] of [SCOPE.GetValue('intensity')|1v]."
 

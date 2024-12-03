@@ -13,7 +13,7 @@
 		# 	}					
 		# }
 
-		debug_log = "Cult Spread Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+		debug_log = "Golden Tiberius Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
     complete = {
@@ -58,11 +58,11 @@
     }
 
 	on_complete = {
-		debug_log =  "Cult Spread Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
-		trigger_event = { id = nda_base.7 }				
+		debug_log =  "Golden Tiberius Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
+		trigger_event = { id = nda_pan.20 }				
 	}
 
-	scripted_button = je_nda_cult_spreads_btn_purge
+	#scripted_button = je_nda_cult_spreads_btn_purge
 	
 	status_desc = {
 		first_valid = {
@@ -92,7 +92,11 @@
 		# Chance that another character will become cultist
 		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
 			10 = 0
-			1 = nda_base.6 
+			# Great God Pan Events
+			1 = nda_pan.2 # Pan Info 1
+			1 = nda_pan.3 # Pan Info 2
+			# Actual Golden Tiberius Events
+			1 = nda_pan.11
 		}		
 	}
 
@@ -109,15 +113,15 @@
 		trigger_event = { id = nda_base.13 }	
 	}
 
-	timeout = 7500 # Hold off cult for 20 years - too difficult?
+	# timeout = 7500 # Hold off cult for 20 years - too difficult?
 
-	on_timeout = {
-		# set variable so it does not rerun for country
-		trigger_event = { id = nda_base.13 }	
-	}
+	# on_timeout = {
+	# 	# set variable so it does not rerun for country
+	# 	trigger_event = { id = nda_base.13 }	
+	# }
 
 	#progressbar = yes
-	weight = 100
+	weight = 50
 
 	#inheritable = yes
 	#progress_desc = "journal_entry_goal_progress_integer"

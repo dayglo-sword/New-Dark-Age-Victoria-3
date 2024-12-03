@@ -5,10 +5,9 @@ nda_putrid_skies = {
 	}
 
 	# No Incompatibility
-
 	range = {
 		integer_range = {
-			min = 2
+			min = 3
 			max = 5
 		}
 	}
@@ -52,7 +51,7 @@ nda_putrid_skies = {
 	}
 
 	color = { 142 36 170 }
-	icon = "gfx/interface/icons/harvest_condition_icons/drought.dds"
+	icon = "gfx/interface/icons/harvest_condition_icons/nda_disaster_putrid_skies.dds"
 	graphics = drought
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
 }
@@ -129,7 +128,7 @@ nda_fury_of_dagon = {
 	}
 
 	color = { 38 198 218 }
-	icon = "gfx/interface/icons/harvest_condition_icons/flood.dds"
+	icon = "gfx/interface/icons/harvest_condition_icons/nda_disaster_fury_of_dagon.dds"
 	graphics = flood
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
 }
@@ -182,8 +181,8 @@ nda_red_death = {
 		value = 0.01
 	}
 
-	color = { 78 70 57 }
-	icon = "gfx/interface/icons/harvest_condition_icons/disease_outbreak.dds"
+	color = { 58 10 17 }
+	icon = "gfx/interface/icons/harvest_condition_icons/nda_disaster_red_death.dds"
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
 	graphics = drought
 }

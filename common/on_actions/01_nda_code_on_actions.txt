@@ -815,9 +815,13 @@ nda_create_leng_on_action = {
 # scope:intensity = the highest intensity of the affected states
 on_harvest_condition_started_in_country = {
 	effect = {
+		debug_log_scopes = yes
 		if = {
 			limit = {
-				scope:area = ""
+				OR = {
+					scope:area = { type = harvest_condition_type:pollinator_surge }
+					scope:area = { type = harvest_condition_type:optimal_sunlight }
+				}				
 			}
 			# Standard Harvest Condition
 			if = {

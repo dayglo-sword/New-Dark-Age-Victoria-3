@@ -19,6 +19,8 @@ nda_historic.1837 = { # Masonic Meeting
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1837.4.1 
 		game_date < 1838.1.1 
@@ -37,7 +39,7 @@ nda_historic.1837 = { # Masonic Meeting
 	
 	immediate = {
 		debug_log = "Masonic Meeting"
-		#debug_log_scopes = yes		
+		p:xA0E080 = { state = { owner = { save_scope_as = location_country } } }	
 	}
 
 	option = {
@@ -64,6 +66,8 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1838.4.1 
 		game_date < 1839.1.1 
@@ -82,7 +86,7 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	
 	immediate = {
 		debug_log = "Great Awakening"
-		#debug_log_scopes = yes		
+		p:x01D042 = { state = { owner = { save_scope_as = location_country } } }	
 	}
 
 	option = { #"Any more pending?"
@@ -109,6 +113,8 @@ nda_historic.1842 = { # Zanoni novel by Edward Bulwer-Lytton
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		# 1842 year of release 
 		game_date >= 1842.8.1 
@@ -128,6 +134,7 @@ nda_historic.1842 = { # Zanoni novel by Edward Bulwer-Lytton
 	
 	immediate = {
 		debug_log = "Zanoni : [THIS.GetCountry.GetNameNoFormatting]" 
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
 		# nothing special
 	}
 
@@ -159,6 +166,8 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	minor_left_icon = scope:location_country
 
 	trigger = {
  		# 1848 spiritualist movement founded in Up State New York 
@@ -201,7 +210,9 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 						}					
 					}							
 				}
-			} 				
+
+				owner = { save_scope_as = location_country }
+			} 
 		}
 	}
 
@@ -245,6 +256,8 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds" 
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		# 1849 I
 		game_date >= 1849.10.1 
@@ -265,7 +278,9 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 	immediate = {
 		#set_global_variable = nda_poe_death # not used
 		debug_log = "Death of Poe" 
+		p:x0E3435 = { state = { owner = { save_scope_as = location_country } } }
 	}
+
 	option = { #"Nevermore"
 		name = nda_historic.1849.a
 		default_option = yes
@@ -313,6 +328,8 @@ nda_historic.1852 = { # An American Medium in London
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		# 1852 Mrs Hayden visits London 
 		game_date >= 1852.1.1 
@@ -352,7 +369,7 @@ nda_historic.1852 = { # An American Medium in London
 					}				
 				
 				}
-
+				owner = { save_scope_as = location_country }
 			} 				
 		}
 	}
@@ -407,6 +424,8 @@ nda_historic.1854 = { # Eliphas Levi - Dogme et Rituel de la Haute Magie 'The Do
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		# 1854 year of release of part 1
 		game_date >= 1854.3.1 
@@ -427,6 +446,7 @@ nda_historic.1854 = { # Eliphas Levi - Dogme et Rituel de la Haute Magie 'The Do
 	immediate = {
 		debug_log = "Eliphas Levi - Dogme et Rituel : [THIS.GetCountry.GetNameNoFormatting]" 
 		# nothing special
+		p:x71DA2E = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { 
@@ -458,6 +478,8 @@ nda_historic.1857 = { # Banner of Light
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		# 1857 1st published Boston 
 		game_date >= 1857.4.1 
@@ -476,6 +498,7 @@ nda_historic.1857 = { # Banner of Light
 	cooldown = { months = 24 }	
 	
 	immediate = {
+		p:x211ECF = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { 
@@ -567,6 +590,8 @@ nda_historic.1858 = { # Le Livre des Esprits
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		# 1857 1st published Lyon? 
 		game_date >= 1857.8.1 
@@ -585,6 +610,7 @@ nda_historic.1858 = { # Le Livre des Esprits
 	cooldown = { months = 24 }	
 	
 	immediate = {
+		p:xB04060 = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { 
@@ -816,6 +842,8 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe!
 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+	
+	minor_left_icon = scope:location_country
 
 	trigger = {
 		game_date >= 1865.6.1 
@@ -832,6 +860,10 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe!
 	}
 
 	cooldown = { months = 24 }
+
+	immediate = {
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
+	}
 	
 	option = { 
 		name = nda_historic.1865.a
@@ -865,6 +897,8 @@ nda_historic.1867 = { # Societas Rosicruciana in Anglia TODO (should be regional
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
 		game_date >= 1867.6.1 
 		game_date < 1868.1.1
@@ -881,6 +915,10 @@ nda_historic.1867 = { # Societas Rosicruciana in Anglia TODO (should be regional
 
 	cooldown = { months = 24 }
 	
+	immediate = {
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
 	option = { 
 		name = nda_historic.1867.a
 		default_option = yes
@@ -905,6 +943,8 @@ nda_historic.1871 = { # Vril - Power of the coming race : book by Edward Bulwer-
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { #published anonymously in May 1871, by Blackwood and Sons of Edinburgh and London
 		game_date >= 1871.5.1 
 		game_date < 1872.1.1
@@ -921,6 +961,10 @@ nda_historic.1871 = { # Vril - Power of the coming race : book by Edward Bulwer-
 
 	cooldown = { months = 24 }
 	
+	immediate = {
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
 	option = { 
 		name = nda_historic.1871.a
 		default_option = yes
@@ -956,6 +1000,8 @@ nda_historic.1875 = { # The Theosophical Society
 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	minor_left_icon = scope:location_country
 
 	trigger = {
  		# 1875 Theosophical Society founded in New York 
@@ -995,6 +1041,8 @@ nda_historic.1875 = { # The Theosophical Society
 						}					
 					}
 				}
+
+				owner = { save_scope_as = location_country }
 			} 				
 		}
 	}
@@ -1025,6 +1073,8 @@ nda_historic.1879 = {
 	#on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	minor_left_icon = scope:location_country
 
 	trigger = {
  		# 1879 Theosophical Society moves to India
@@ -1057,6 +1107,7 @@ nda_historic.1879 = {
 						value = nda_small_conversion
 					}
 				}
+				owner = { save_scope_as = location_country }
 			} 				
 		}
 	}
@@ -1087,6 +1138,8 @@ nda_historic.1882 = { # The Society for Psychical Research
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		# 1882 Society for Psychical Research founded 
 		game_date >= 1882.1.1 
@@ -1104,6 +1157,10 @@ nda_historic.1882 = { # The Society for Psychical Research
 
 	cooldown = { months = 24 }	
 	
+	immediate = {
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
 	option = { 
 		name = nda_historic.1882.a
 		default_option = yes
@@ -1132,6 +1189,7 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+	minor_left_icon = scope:location_country
 
 	trigger = {
  		# 1888 book published - presume new york
@@ -1171,6 +1229,7 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 						}					
 					}
 				}
+				owner = { save_scope_as = location_country }
 			} 				
 		}		
 	}
@@ -1198,6 +1257,7 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement (https://www.gu
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+	minor_left_icon = scope:location_country
 
 	trigger = {
  		# 1888 spiritualist movement discredited 
@@ -1216,6 +1276,10 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement (https://www.gu
 
 	cooldown = { months = 24 }	
 	
+	immediate = {
+		p:x01D042 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
 	option = { 
 		name = nda_historic.1888.a
 		default_option = yes		
@@ -1242,6 +1306,7 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+	minor_left_icon = scope:location_country
 
 	trigger = {
  		# 1888 Isis-Urania Temple - London
@@ -1260,6 +1325,10 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 
 	cooldown = { months = 24 }	
 	
+	immediate = {
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
 	option = { 
 		name = nda_historic.1889.a
 		default_option = yes
@@ -1290,6 +1359,7 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+	minor_left_icon = scope:location_country
 
 	trigger = {
 		game_date >= 1891.3.1 
@@ -1307,6 +1377,10 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 
 	cooldown = { months = 24 }	
 	
+	immediate = {
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
 	option = { # It'll never catch on
 		name = nda_historic.1891.a
 		default_option = yes		
@@ -1356,6 +1430,7 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc
 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+	minor_left_icon = scope:location_country
 
 	trigger = {
 		game_date >= 1892.9.1 
@@ -1373,6 +1448,10 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc
 
 	cooldown = { months = 24 }	
 	
+	immediate = {
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
 	option = { 
 		name = nda_historic.1892.a
 		default_option = yes
@@ -1401,6 +1480,7 @@ nda_historic.1893 = {  # National Spiritualist Association of Churches
 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+	minor_left_icon = scope:location_country
 
 	trigger = {
  		# 1857 1st published Boston 
@@ -1420,7 +1500,9 @@ nda_historic.1893 = {  # National Spiritualist Association of Churches
 	cooldown = { months = 24 }	
 	
 	immediate = {
-		debug_log = "National Spiritualist Association : [THIS.GetCountry.GetNameNoFormatting]" 		
+		debug_log = "National Spiritualist Association : [THIS.GetCountry.GetNameNoFormatting]" 	
+
+		p:xF68D89 = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { 

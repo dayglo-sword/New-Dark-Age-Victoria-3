@@ -10,12 +10,14 @@ Add 'Major Character' of AC Doyle
 Dynamic State/Hub names for countries
 Use Cult Comcepts on Loading Screens
 Slow down Stygia formation
+Add country flag icon to Historical Events
 
 Bug Fixes
 Cultist Power Bloc formable without SOI DLC
 Revolting Cultist can not add to Ritual
 Greater New England requires 10+ states
 YIG annexes limited to the Americas
+YIG missionaries to Upper not Middle Egypt
 
 ------
 

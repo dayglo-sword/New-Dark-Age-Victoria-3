@@ -38,7 +38,7 @@ texticon = {
 texticon = {
 	icon = nda_putrid_skies
 	iconsize = {
-		texture = "gfx/interface/icons/harvest_condition_icons/disease_outbreak.dds"
+		texture = "gfx/interface/icons/harvest_condition_icons/nda_disaster_putrid_skies.dds"
 		offset = { 0 30 }
 		fontsize = 150
 	}
@@ -47,7 +47,7 @@ texticon = {
 texticon = {
 	icon = nda_fury_of_dagon
 	iconsize = {
-		texture = "gfx/interface/icons/harvest_condition_icons/drought.dds"
+		texture = "gfx/interface/icons/harvest_condition_icons/nda_disaster_fury_of_dagon.dds"
 		offset = { 0 30 }
 		fontsize = 150
 	}
@@ -56,7 +56,7 @@ texticon = {
 texticon = {
 	icon = nda_red_death
 	iconsize = {
-		texture = "gfx/interface/icons/harvest_condition_icons/disease_outbreak.dds"
+		texture = "gfx/interface/icons/harvest_condition_icons/nda_disaster_red_death.dds"
 		offset = { 0 30 }
 		fontsize = 150
 	}
