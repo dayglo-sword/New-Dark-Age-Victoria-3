@@ -71,7 +71,7 @@ nda_pan.2 = { # Great God Pan- MR. CLARKE’S MEMOIRS
 	trigger = {
  		# should it be part of the Tiberius investigation ?? In which case wait till journal is running?
 		# could be local investigator in country - if so then no need to allocate the players investigator as busy.
-		game_date >= 1888  # 1882 + 6
+		game_date >= 1888.1.1  # 1882 + 6
 		# is info event so ok to just show to player
 		p:xC7847D = { state = { owner = ROOT } } # Wales/Severn valley?? Or 
 		
@@ -125,7 +125,7 @@ nda_pan.3 = { # Great God Pan- Number 20 Paul Street
 	trigger = {
  		# should it be part of the Tiberius investigation ?? In which case wait till journal is running?
 		# could be local investigator in country - if so then no need to allocate the players investigator as busy.
-		game_date >= 1895  # 1882 + 6
+		game_date >= 1895.1.1  # 1882 + 6
 		# is info event so ok to just show to player
 		p:xC7847D = { state = { owner = ROOT } } # Wales/Severn valley?? Or 
 		
@@ -172,7 +172,7 @@ nda_pan.10 = { # The Golden Tiberius Journal Start - Three Imposters was publish
 
 	trigger = {
  		# owner of London or Boston if London is cultist
-		game_date >= 1885  
+		game_date >= 1885.1.1  
 		p:xC7847D = { state = { owner = ROOT } }
 		
 		NOT = { has_global_variable = nda_pan_setup }	
@@ -230,11 +230,8 @@ nda_pan.11 = { #
 
 	trigger = {
  		# 1904 and owner of London\Boston 
-		game_date >= 1904  
+		game_date >= 1904.1.1  
 		scope:nda_pan_location = { state = { owner = ROOT } }
-		
-		NOT = { has_global_variable = nda_carnacki_ghostfinder }	
-		NOT = { has_global_variable = nda_carnacki_dead }	
 	}
 
 	cooldown = { months = 12 }
@@ -242,7 +239,7 @@ nda_pan.11 = { #
 	immediate = {
 		set_global_variable = nda_carnacki_ghostfinder
 
-		debug_log = "Carnacki the Ghost Finder"
+		debug_log = "Pan 11"
 
 		# send toast notification to players as chrome
 	}	
@@ -274,16 +271,11 @@ nda_pan.12 = { #
 
 	trigger = {
  		# 1906 and non-cultist country 
-		game_date >= 1906  
+		game_date >= 1906.1.1  
 		is_player = yes  # no hope if not
 		
 		# cultist on loose in London
 		p:x7543C8 = { state = { owner = { has_variable = nda_cultists_in_open } } }
-
-		has_global_variable = nda_carnacki_ghostfinder	
-		NOT = { has_global_variable = nda_carnacki_dead }	
-		NOT = { has_global_variable = nda_carnacki_in_exile }
-		NOT = { has_variable = nda_cultists_in_open	} # He's not going to run to a cultist country
 	}
 
 	cooldown = { months = 12 }
@@ -298,16 +290,11 @@ nda_pan.12 = { #
 	
 	option = { #"Accept"
 		name = nda_pan.12.a
-		set_variable = nda_carnacki_in_exile
-		set_global_variable = nda_carnacki_in_exile # Is this enough to stop multiple Carnacki ?
 	}
 
 	option = { #"Reject"
 		name = nda_pan.12.b
 		default_option = yes
-
-		# Carnacki is doomed
-		trigger_event = { id = nda_pan.15 days = 100 }
 	}
 }
 
@@ -331,20 +318,8 @@ nda_pan.13 = { #
 
 	trigger = {
  		# 1907 and non-cultist country 
-		game_date >= 1907  
+		game_date >= 1907.1.1  
 		is_player = yes  # no hope if not
-		
-		has_global_variable = nda_carnacki_ghostfinder
-		NOT = { has_global_variable = nda_carnacki_research_request }	
-		OR = {
-			has_variable = nda_carnacki_in_exile # is in exile
-			AND = { 
-				NOT = { has_global_variable = nda_carnacki_in_exile }
-				p:x7543C8 = { state = { owner = { NOT = { has_variable = nda_cultists_in_open } } }	} # still in safe London		
-			}
-		}
-		# requires electrical_generation or electrical_capacitors ? ? 
-		has_technology_researched = electrical_capacitors
 	}
 	
 	cooldown = { months = 12 }

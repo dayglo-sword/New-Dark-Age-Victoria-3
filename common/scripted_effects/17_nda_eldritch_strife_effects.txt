@@ -1,13 +1,12 @@
 ﻿nda_effect_eldritch_strife =
 {
-	# Edit out to see what can occur naturally in 1.8
-	
 	# The Cult is falling apart after Cthulhu leaves. Cultures are re-asserting themselves
-	random_scope_culture = {
-		limit = { is_cult_culture = no }
-		save_scope_as = nda_eldritch_rebels
-		#debug_log_scopes = yes
-	}
+	# random_scope_culture = {
+	# 	limit = { is_cult_culture = no }
+	# 	save_scope_as = nda_eldritch_rebels
+	# 	#debug_log_scopes = yes
+	# }
+
 	random_scope_culture = {
 		limit = { 
 			is_cult_culture = no 

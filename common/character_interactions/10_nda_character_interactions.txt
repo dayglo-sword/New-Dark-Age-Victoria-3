@@ -663,7 +663,7 @@ adopt_cult_culture = {
 		}	
 		if = {
 			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
-			add = -20
+			add = -30
 		}	
 		if = {
 			limit = { is_historical = yes } # Changing historical culture can change DNA depiction!!!!

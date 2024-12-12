@@ -202,7 +202,7 @@ nda_nephrenka.20 = { # Start Event
 	option = {
 		name = nda_nephrenka.20.a
 		default_option = yes
-		trigger_event = { id = nda_nephrenka.21 days = 0 popup = yes }
+		trigger_event = { id = nda_nephrenka.21 days = 1 popup = yes }
 	}
 
 	option = {
@@ -214,7 +214,7 @@ nda_nephrenka.20 = { # Start Event
 	option = {
 		name = nda_nephrenka.20.c # A foolish idea
 		set_variable = nda_nile_expedition_refused
-
+		debug_log = "Nile Expedition Start Refused : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 }
 
@@ -236,12 +236,12 @@ nda_nephrenka.21 = { #Choose commander
 	
 	icon = "gfx/interface/icons/event_icons/event_map.dds" 
 
-	trigger = {
-		any_scope_character = {
-			has_role = admiral
-			is_busy = no
-		}
-	}
+	# trigger = {
+	# 	any_scope_character = {
+	# 		has_role = admiral
+	# 		is_busy = no
+	# 	}
+	# }
 
 	immediate = {
 		debug_log = "Nile Expedition Leader Event : [THIS.GetCountry.GetNameNoFormatting]"
@@ -403,11 +403,14 @@ nda_nephrenka.22 = { # expedition costs / funding
 			multiplier = money_amount_multiplier_small
 		}
 
+		debug_log = "Nile Expedition Costs - Poorly Funded"
+
 		add_journal_entry = {
 			type = je_nda_nile_expedition
 		}
 
 		set_variable = nda_nile_expedition_cheap
+
 		default_option = yes
 	}
 
@@ -426,6 +429,8 @@ nda_nephrenka.22 = { # expedition costs / funding
 			add = 1 
 		}
 
+		debug_log = "Nile Expedition Costs - Funded"
+
 		add_journal_entry = {
 			type = je_nda_nile_expedition
 		}
@@ -440,6 +445,8 @@ nda_nephrenka.22 = { # expedition costs / funding
 		}
 
 		set_variable = nda_nile_expedition_well_funded
+
+		debug_log = "Nile Expedition Costs - Well Funded"
 
 		change_variable = {
 			name = nda_nile_expedition_progress
@@ -471,7 +478,7 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 				}
 				desc =nda_nephrenka.23.d_2
 			}
-			triggered_desc = { # defaulr
+			triggered_desc = { # default
 				trigger = {
 					always = yes
 				}				

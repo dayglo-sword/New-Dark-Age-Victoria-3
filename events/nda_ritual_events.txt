@@ -812,6 +812,7 @@ nda_ritual.11 = { # The world surrenders. - Boost DGN by auto adding Cult countr
 		default_option = yes
 	}
 }
+
 # Yig annex after arrival
 nda_ritual.12 = { # The world surrenders. - Boost ELD by auto adding Cult countries on a regular basis
 	type = country_event

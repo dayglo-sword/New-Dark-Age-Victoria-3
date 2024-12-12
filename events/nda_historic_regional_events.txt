@@ -86,6 +86,10 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 	}
 }
 
+# nda_historic_regional.1867 = { } # “The Spiritual Athenæum and the law - DANIEL DUNGLAS HOME sued and lost 
+# The litigation was long, the case finally ending in May, 1868, with a judgment in favor of Mrs. Lyon; the Court holding that as the transfer of money and deed had been accomplished by fraud it was therefore void. 
+# In his closing remarks the Vice Chancellor referred to Mrs. Lyon as an old lady with a mind “saturated with delusion” and characterized Spiritualism as being, according to the evidence, a “system of mischievous nonsense well calculated to delude the vain, the weak, the foolish, and the superstitious.”
+
 nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers time span 1869 - 1900's. Have as single event?
 	type = country_event
 	placement = p:x01D042 # NY State
@@ -296,6 +300,9 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 
 	}
 }
+
+#nda_historic_regional.1895 = { # Pallandino and the SPR
+#The first exposure of Palladino was made by Dr. Richard Hodgson in 1895. A committee from the English Society for Psychical Research, consisting of Hereward Carrington, Hon. Everard Feilding, and Wortly W. Baggally, which had held a series of test seances with Palladino in Italy, brought her to England for a fresh try-out and another series of sittings was held. Very early in the series suspicious movements on the part of the medium were observed. Later Dr. Hodgson joined the circle and was able to show conclusively that by clever manipulation—sheer trickery—she was getting one hand free and with it making the movements observed.
 
 #nda_historic_regional.1897 = { # Golden Dawn in America
 # The Order of the Golden Dawn establishes two Temples in the United States of America.&nbsp; Thmê Temple #8 is chartered in Chicago, Illinois, under G.W. Wiggs as Imperator, and Thoth-Hermes Temple #9 is chartered in New York City, under C. Lockwood as Imperator.&nbsp; (Paul Foster Case was a member of Thoth-Hermes.)

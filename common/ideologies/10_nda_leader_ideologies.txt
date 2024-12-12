@@ -57,7 +57,6 @@
 
 	# Do by forced scripted allocation initially
 	interest_group_leader_trigger = {
-		ideology_bonapartist_valid_trigger = yes
 		always = no
 	}
 
