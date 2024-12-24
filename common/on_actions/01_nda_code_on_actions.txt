@@ -232,12 +232,12 @@ nda_monthly_pan_on_action = {
 		nda_nen.1894 # Mor-rison Warning
 
 		nda_pan.1 
-		nda_pan.2 
-		nda_pan.3 
-		nda_pan.10 
-		nda_pan.11
-		nda_pan.12
-		nda_pan.13
+		# nda_pan.2 
+		# nda_pan.3 
+		# nda_pan.10 
+		# nda_pan.11
+		# nda_pan.12
+		# nda_pan.13
 	}
 }
 
@@ -815,7 +815,7 @@ nda_create_leng_on_action = {
 # scope:intensity = the highest intensity of the affected states
 on_harvest_condition_started_in_country = {
 	effect = {
-		debug_log_scopes = yes
+		#debug_log_scopes = yes
 		if = {
 			limit = {
 				OR = {
@@ -836,7 +836,10 @@ on_harvest_condition_started_in_country = {
 
 		}
 		else = {
-			post_notification = nda_disaster_condition_started_in_country
+			if = {
+				limit = { NOT = { scope:area = { type = harvest_condition_type:nda_red_death }}} # stop spam
+				post_notification = nda_disaster_condition_started_in_country	
+			}
 		}
 	}
 }

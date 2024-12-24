@@ -5,12 +5,11 @@ Converted Red Death, Fury of Dagon, Putrid Skies to be 'Harvest Conditions'
 Add Political Movement for Cult Supremacy
 
 Minor Changes
-Add 'Pan' Journal and Events (A Machen)
-Add 'Major Character' of AC Doyle
 Dynamic State/Hub names for countries
 Use Cult Comcepts on Loading Screens
 Slow down Stygia formation
 Add country flag icon to Historical Events
+Add 'Major Character' from AC Doyle
 
 Bug Fixes
 Cultist Power Bloc formable without SOI DLC

@@ -49,7 +49,7 @@
 		# 	}
 		# }
 		trigger_else = {
-			is_cult_culture = yes
+			culture = { is_cult_culture = yes }	
 		}
 	}
 

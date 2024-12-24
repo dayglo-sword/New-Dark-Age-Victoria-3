@@ -10,9 +10,9 @@ nda_cult_spread_goal_value_slow = 1200
 nda_cult_spread_goal_value_quick = 1000
 
 #ritual goal values
-nda_ritual_goal_value = 6000
-nda_ritual_goal_value_slow = 6600
-nda_ritual_goal_value_quick = 5400
+nda_ritual_goal_value = 6300
+nda_ritual_goal_value_slow = 6900
+nda_ritual_goal_value_quick = 5700
 
 # Power Bloc boost
 nda_cult_leverage_boost = 100

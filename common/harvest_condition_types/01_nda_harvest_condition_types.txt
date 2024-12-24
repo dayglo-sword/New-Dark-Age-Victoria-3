@@ -37,6 +37,8 @@ nda_putrid_skies = {
 
 		state_mortality_mult = 0.2 # 0.30
 		#state_standard_of_living_add = -2
+
+		state_pollution_generation_add = 25
 	}
 
 	intensity = {
@@ -93,6 +95,10 @@ nda_fury_of_dagon = {
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add = 0.010
+
+		# Migration
+		state_migration_pull_mult = -0.05 # -0.3
+		state_migration_push_mult = 0.05
 	}
 
 	intensity = {
@@ -139,20 +145,17 @@ nda_red_death = {
 		game_date <= 1853.10.1
 	}
 
-	# Incompatible with Disease Outbreak: pollinators
-	# Replaces pollinators
-
-	range = {
+	range = { # Single state region only
 		integer_range = {
-			min = 1
-			max = 1
+			min = 0
+			max = 0
 		}
 	}
 
 	duration = {
 		fixed_range = {
 			min = 36
-			max = 96
+			max = 80
 		}
 	}
 
@@ -168,6 +171,7 @@ nda_red_death = {
 		# From original modifier
 		state_mortality_mult = 0.6 #1.7 # needs to be more? or scaled like plague?
 		state_migration_pull_mult = -0.2 # -0.3
+		state_migration_push_mult = 0.3
 	}
 
 	intensity = {
@@ -178,7 +182,7 @@ nda_red_death = {
 	}
 
 	chance = {
-		value = 0.01
+		value = 0 # 0.01 should be governed by event spread.
 	}
 
 	color = { 58 10 17 }
