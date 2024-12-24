@@ -1,126 +1,135 @@
-﻿je_nda_pan_golden_tiberius = {
-	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds" 
+﻿# je_nda_pan_golden_tiberius = {
+# 	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds" 
 
-	group = je_group_nda_eldritch
+# 	group = je_group_nda_eldritch
 
-	scripted_progress_bar = nda_cult_spread_progress_bar # great_game_core_progress_bar
+# 	#scripted_progress_bar = nda_cult_spread_progress_bar # great_game_core_progress_bar
 
-	immediate = {
-		# je:je_nda_cult_spreads = {
-		# 	add_progress = {
-		# 		value = -100
-		# 		name = nda_cult_spread_progress_bar
-		# 	}					
-		# }
+# 	immediate = {
+# 		# je:je_nda_cult_spreads = {
+# 		# 	add_progress = {
+# 		# 		value = -100
+# 		# 		name = nda_cult_spread_progress_bar
+# 		# 	}					
+# 		# }
 
-		debug_log = "Cult Spread Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
-	}
+# 		debug_log = "Golden Tiberius Journal : Started : [THIS.GetCountry.GetNameNoFormatting]"
+# 	}
 
-    complete = {
-		trigger_if = {
-			limit = { has_variable = nda_cultists_in_open }
-			custom_tooltip = {
-				text = je_nda_cult_spread_reinstate_complete_tt
+#     complete = {
 
-				scope:journal_entry = {
-					"scripted_bar_progress(nda_cult_spread_progress_bar)" >= 1200 # absolute value not percentage
-				}
-			}
-		}
-		trigger_else = {
-			custom_tooltip = {
-				text = je_nda_cult_spread_complete_tt
-				scope:journal_entry = {
-					"scripted_bar_progress(nda_cult_spread_progress_bar)" >= 1200 # absolute value not percentage
-				}
-			}
-		}
+# 		# Coin is found, or natural end to investigation.
+# 		trigger_if = {
+# 			limit = { has_variable = nda_cultists_in_open }
+# 			custom_tooltip = {
+# 				text = je_nda_cult_spread_reinstate_complete_tt
 
-		# Should also be head of government ?? All member IG's ?
-		custom_tooltip = {
-			text = je_nda_cult_spread_hasleader_complete_tt
+# 				# scope:journal_entry = {
+# 				# 	"scripted_bar_progress(nda_cult_spread_progress_bar)" >= 1200 # absolute value not percentage
+# 				# }
+# 			}
+# 		}
+# 		trigger_else = {
+# 			custom_tooltip = {
+# 				text = je_nda_cult_spread_complete_tt
+# 				# scope:journal_entry = {
+# 				# 	"scripted_bar_progress(nda_cult_spread_progress_bar)" >= 1200 # absolute value not percentage
+# 				# }
+# 			}
+# 		}
 
-			OR = {
-				any_interest_group = {	
-					leader = { 
-						has_eldritch_trait = yes
-					}
-					is_in_government = yes	
-					is_powerful = yes			
-				}	
-				any_scope_character = {
-					is_ruler = yes
-					has_eldritch_trait = yes
-				}			
-			}
+# 		# Should also be head of government ?? All member IG's ?
+# 		custom_tooltip = {
+# 			text = je_nda_cult_spread_hasleader_complete_tt
 
-		}
-    }
+# 			# OR = {
+# 			# 	any_interest_group = {	
+# 			# 		leader = { 
+# 			# 			has_eldritch_trait = yes
+# 			# 		}
+# 			# 		is_in_government = yes	
+# 			# 		is_powerful = yes			
+# 			# 	}	
+# 			# 	any_scope_character = {
+# 			# 		is_ruler = yes
+# 			# 		has_eldritch_trait = yes
+# 			# 	}			
+# 			# }
 
-	on_complete = {
-		debug_log =  "Cult Spread Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
-		trigger_event = { id = nda_base.7 }				
-	}
+# 		}
+#     }
 
-	scripted_button = je_nda_cult_spreads_btn_purge
+# 	on_complete = {
+# 		debug_log =  "Golden Tiberius Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
+# 		trigger_event = { id = nda_pan.20 }				
+# 	}
+
+# 	#scripted_button = je_nda_cult_spreads_btn_purge
 	
-	status_desc = {
-		first_valid = {
-			triggered_desc = {
-				desc = je_nda_cult_spreads_inquisition_status
-				trigger = {
-					has_journal_entry = je_nda_devout_inquisition
-				}
-			}
-			triggered_desc = {
-				desc = je_nda_cult_spreads_investigated_status
-				trigger = {
-					has_investigators = yes
-				}
-			}			
+# 	# status_desc = {
+# 	# 	first_valid = {
+# 	# 		triggered_desc = {
+# 	# 			desc = je_nda_cult_spreads_inquisition_status
+# 	# 			trigger = {
+# 	# 				has_journal_entry = je_nda_devout_inquisition
+# 	# 			}
+# 	# 		}
+# 	# 		triggered_desc = {
+# 	# 			desc = je_nda_cult_spreads_investigated_status
+# 	# 			trigger = {
+# 	# 				has_investigators = yes
+# 	# 			}
+# 	# 		}			
 			
-			triggered_desc = {
-				desc = je_nda_cult_spreads_not_investigated_status
-				trigger = {
-					always = yes
-				}
-			}
-		}
-	}
+# 	# 		triggered_desc = {
+# 	# 			desc = je_nda_cult_spreads_not_investigated_status
+# 	# 			trigger = {
+# 	# 				always = yes
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# }
 
-	on_monthly_pulse = {
-		# Chance that another character will become cultist
-		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
-			10 = 0
-			1 = nda_base.6 
-		}		
-	}
+# 	on_monthly_pulse = {
+		
+# 		random_events = { # adjust randomness based upon desired speed? Not sure how if 'IF' not working
+# 			10 = 0
+# 			# Great God Pan Events
+# 			1 = nda_pan.2 # Pan Info 1
+# 			1 = nda_pan.3 # Pan Info 2
+# 			# Actual Golden Tiberius Events
+# 			1 = nda_pan.11
+# 			1 = nda_pan.14
+# 			1 = nda_pan.15
+# 		}		
+# 	}
 
-    fail = {
-		# if ritual failed or star alignment occured
-		custom_tooltip = {
-				text = je_nda_cult_spread_fail_tt
-				has_global_variable = nda_ritual_cthulhu_leaves			
-			}
-    }
+#     fail = {
+# 		# if ritual failed or star alignment occured
+# 		custom_tooltip = {
+# 				text = je_nda_cult_spread_fail_tt
+# 				has_global_variable = nda_pan_tiberius_fail			
+# 			}
+#     }
 	
-	on_fail = {
-		# celebratory event?
-		trigger_event = { id = nda_base.13 }	
-	}
+# 	on_fail = {
+# 		# celebratory event?
+# 		trigger_event = { id = nda_base.13 }	
+# 	}
 
-	timeout = 7500 # Hold off cult for 20 years - too difficult?
+# 	# should have timeout based on time frame of events.
+# 	# timeout = 7500 # Hold off cult for 20 years - too difficult?
 
-	on_timeout = {
-		# set variable so it does not rerun for country
-		trigger_event = { id = nda_base.13 }	
-	}
+# 	# on_timeout = {
+# 	# 	# set variable so it does not rerun for country
+# 	# 	trigger_event = { id = nda_base.13 }	
+# 	# }
 
-	#progressbar = yes
-	weight = 100
+# 	#progressbar = yes
+# 	weight = 50
 
-	#inheritable = yes
-	#progress_desc = "journal_entry_goal_progress_integer"
+# 	#inheritable = yes
+# 	#progress_desc = "journal_entry_goal_progress_integer"
 
-	should_be_pinned_by_default = yes
-}
+# 	should_be_pinned_by_default = yes
+# }

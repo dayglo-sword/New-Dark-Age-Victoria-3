@@ -1,0 +1,96 @@
+﻿nda_effect_map_name_miskaton = { # Rename New Hampshire to Miskaton	
+	s:STATE_NEW_HAMPSHIRE = {
+		random_scope_state = {
+
+			set_state_name = nda_MISKATON
+
+			set_hub_name = { type = city name = nda_MISKATON_city }
+
+			set_hub_name = { type = port name = nda_MISKATON_port }
+
+			set_hub_name = { type = mine name = nda_MISKATON_mine }
+
+			set_hub_name = { type = farm name = nda_MISKATON_farm }
+
+			set_hub_name = { type = wood name = nda_MISKATON_wood }
+		}
+	}	
+}
+
+nda_effect_map_name_averoigne = { # Averoigne - Clark Ashton Smith
+	s:STATE_AUVERGNE_LIMOUSIN = {
+		random_scope_state = {
+			set_state_name = nda_AVEROIGNE
+
+			set_hub_name = { type = city name = nda_AVEROIGNE_city }
+
+			#set_hub_name = { type = port name = nda_AVEROIGNE_port }
+
+			set_hub_name = { type = mine name = nda_AVEROIGNE_mine }
+
+			set_hub_name = { type = farm name = nda_AVEROIGNE_farm }
+
+			set_hub_name = { type = wood name = nda_AVEROIGNE_wood }
+		}
+	}
+}
+
+nda_effect_map_name_new_carcosa = { # King in Yellow - Hasturian America
+	s:STATE_NEW_YORK = {
+		random_scope_state = {
+
+			set_state_name = nda_NEW_CARCOSA
+
+			set_hub_name = { type = city name = nda_NEW_CARCOSA_city }
+		}
+	}
+}
+
+nda_effect_map_name_leng_yian = { # Yian - oriental city from Robert Chambers
+	c:LEN ?= {
+		random_scope_state = {
+			limit = { is_capital = yes }
+
+			#set_state_name = nda_NEW_CARCOSA
+
+			set_hub_name = { type = city name = nda_LENG_YIAN_city }
+		}
+	}
+}
+
+# The administrative capital and seat of the king was Luxur, lying inland and south of the Styx on an important caravan route. We may presume that when the climate was wetter, the River Bakhr was navigable up to Luxur. 
+# In Conan's time it was not. The greatest port and religious center was at Khemi, on the estuary of the Styx. Sukhmet and Kheshatta were apparently caravan cities that serviced traders from the black nations.
+# From the coast, it was possible to take a caravan trail all the way to Sukhmet and presumably beyond.
+# Pteion (reputedly built by the serpentmen), was the stronghold of the black magicians of Old Stygia.
+
+nda_effect_map_name_stygia = { # Rename to Hyborian equivalents
+	c:STY ?= {
+		# luxor to Luxur
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_UPPER_EGYPT
+				owner = ROOT
+			}
+
+			set_hub_name = { type = city name = nda_STYGIA_LUXUR_city }
+		}
+		# Cairo to Khemi - or port
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_LOWER_EGYPT
+				owner = ROOT
+			}
+
+			set_hub_name = { type = city name = nda_STYGIA_KHEMI_city }
+		}
+		# Kartoum to Kheshatta
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_BLUE_NILE
+				owner = ROOT
+			}
+			
+			set_hub_name = { type = city name = nda_STYGIA_KHESHATTA_city }
+		}
+	}
+}

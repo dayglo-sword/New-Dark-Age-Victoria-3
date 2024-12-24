@@ -634,7 +634,8 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 							add_trait = nda_investigator # has a grudge against the cult!
 						}
 					}
-	
+					# Error: exile_character effect [ Can't exile Character Ahmet Osmanoglu (33558616): is already exiled ]
+					# Script location: file: common/scripted_effects/00_victoria_scripted_effects.txt line: 2172 file: events/nda_base_events.txt line: 638	
 					exile_character_with_martyrdom = yes
 					
 					debug_log = "[THIS.GetCountry.GetNameNoFormatting] - Non-cult IG Leader exiled"

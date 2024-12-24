@@ -4,22 +4,23 @@
 	building_arts_academy_throughput_add = 0.15
 }
 
-nda_dark_skies_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	building_group_bg_agriculture_throughput_add = -0.4
-	building_group_bg_ranching_throughput_add = -0.4
-	building_group_bg_plantations_throughput_add = -0.4
-	building_group_bg_logging_throughput_add = -0.2
-	building_group_bg_rubber_throughput_add = -0.2
-	state_mortality_mult = 0.30
-	state_standard_of_living_add = -2
-}
+# replaced by weather effect
+# nda_dark_skies_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+# 	building_group_bg_agriculture_throughput_add = -0.4
+# 	building_group_bg_ranching_throughput_add = -0.4
+# 	building_group_bg_plantations_throughput_add = -0.4
+# 	building_group_bg_logging_throughput_add = -0.2
+# 	building_group_bg_rubber_throughput_add = -0.2
+# 	state_mortality_mult = 0.30
+# 	state_standard_of_living_add = -2
+# }
 
 nda_dagonic_state_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	building_whaling_station_throughput_add = 0.33
 	building_fishing_wharf_throughput_add = 0.33
-	state_poor_standard_of_living_add = 2
+	state_standard_of_living_add = 2
 }
 
 nda_dagonic_country_modifier = {
@@ -37,6 +38,9 @@ nda_cult_renaissance_country_modifier = {
 	unit_army_defense_mult = 0.2
 	unit_army_offense_mult = 0.2	
 	state_slave_import_mult = 0.5
+
+	country_revolution_progress_mult = -0.2
+	country_secession_progress_mult = -0.2
 }
 
 nda_cult_decline_country_modifier = {
@@ -47,6 +51,8 @@ nda_cult_decline_country_modifier = {
 	unit_army_offense_mult = -0.2	
 	unit_recovery_rate_add = -0.2
 	#unit_morale_loss_add = -0.2
+	country_revolution_progress_mult = 0.5
+	country_secession_progress_mult = 0.5
 }
 
 nda_reanimated_state_modifier = {
@@ -54,6 +60,7 @@ nda_reanimated_state_modifier = {
 	state_mortality_mult = 0.4
 	state_standard_of_living_add = -2
 	state_migration_pull_mult = -0.2
+	state_migration_push_mult = 0.5
 }
 
 nda_ig_secret_masters_modifier = {
@@ -91,6 +98,7 @@ nda_dagonic_state_ruin_modifier = {
 	state_mortality_mult = 0.10
 	state_migration_pull_mult = -0.2
 	state_construction_mult = -0.2
+	state_migration_push_mult = 0.5
 }
 
 nda_star_scorched_earth_state_modifier = {
@@ -103,6 +111,7 @@ nda_star_scorched_earth_state_modifier = {
 	state_mortality_mult = 0.60
 	state_standard_of_living_add = -6
 	state_migration_pull_mult = -0.6
+	state_migration_push_mult = 0.6
 	state_construction_mult = -0.6
 }
 
@@ -113,6 +122,7 @@ nda_star_tsunami_state_modifier = {
 	state_standard_of_living_add = -2
 	state_mortality_mult = 0.20
 	state_migration_pull_mult = -0.2
+	state_migration_push_mult = 0.2
 	state_construction_mult = -0.2
 }
 
@@ -162,11 +172,13 @@ nda_lostcity_defense_modifier = {
 	unit_kill_rate_add = 5
 }
 
-nda_red_death_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_skull_negative.dds
-	state_mortality_mult = 1.7 # needs to be more? or scaled like plague?
-	state_migration_pull_mult = -0.3
-}
+# replaced by condition
+# nda_red_death_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_skull_negative.dds
+# 	state_mortality_mult = 1.7 # needs to be more? or scaled like plague?
+# 	state_migration_pull_mult = -0.3
+# 	state_migration_push_mult = 0.3
+# }
 
 nda_hastur_critics_choice_ig_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds

@@ -73,6 +73,7 @@
 			text = je_expedition_fail
 			var:nda_nile_expedition_peril >= 8
 		}
+
     }
 	
 	on_fail = {
@@ -89,6 +90,8 @@
 		remove_variable = nda_nile_expedition_cheap
 		remove_variable = nda_nile_expedition_funded
 		remove_variable = nda_nile_expedition_well_funded
+
+		debug_log = "Nile Expedition Journal : Failed : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	current_value = {
@@ -122,6 +125,8 @@
 		remove_variable = nda_nile_expedition_cheap
 		remove_variable = nda_nile_expedition_funded
 		remove_variable = nda_nile_expedition_well_funded
+
+		debug_log = "Nile Expedition Journal : Completed : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	
@@ -130,11 +135,6 @@
 	# Send Mirror Back
 	# Continue Search
 	# Send Book Back
-
-	#scripted_button = je_nda_nile_expedition_btn_new_brunswick
-	#scripted_button = je_nda_nile_expedition_btn_nova_scotia
-	#scripted_button = je_nda_nile_expedition_btn_strange_ways
-	#scripted_button = je_nda_nile_expedition_btn_old_ways
 
 	progressbar = yes
 	weight = 10

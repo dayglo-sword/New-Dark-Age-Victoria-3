@@ -19,6 +19,8 @@ nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Ed
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1848.3.1 
 		game_date < 1849.3.1 
@@ -33,7 +35,7 @@ nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Ed
 	cooldown = { months = 16 }	
 
 	immediate = {
-
+		p:xB0C080 = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { #"Interesting"
@@ -60,6 +62,8 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1864.3.1 
 		game_date < 1865.3.1 
@@ -73,7 +77,7 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 	cooldown = { months = 16 }	
 
 	immediate = {
-
+		p:x0E3435 = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { #"Interesting"
@@ -81,6 +85,10 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 		default_option = yes
 	}
 }
+
+# nda_historic_regional.1867 = { } # “The Spiritual Athenæum and the law - DANIEL DUNGLAS HOME sued and lost 
+# The litigation was long, the case finally ending in May, 1868, with a judgment in favor of Mrs. Lyon; the Court holding that as the transfer of money and deed had been accomplished by fraud it was therefore void. 
+# In his closing remarks the Vice Chancellor referred to Mrs. Lyon as an old lady with a mind “saturated with delusion” and characterized Spiritualism as being, according to the evidence, a “system of mischievous nonsense well calculated to delude the vain, the weak, the foolish, and the superstitious.”
 
 nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers time span 1869 - 1900's. Have as single event?
 	type = country_event
@@ -100,6 +108,8 @@ nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers tim
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1870.3.1 
 		game_date < 1871.3.1 
@@ -114,7 +124,7 @@ nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers tim
 	cooldown = { months = 16 }	
 
 	immediate = {
-
+		p:x01D042 = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { 
@@ -144,6 +154,8 @@ nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Don
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1882.3.1 
 		game_date < 1883.3.1 
@@ -158,7 +170,7 @@ nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Don
 	cooldown = { months = 16 }	
 
 	immediate = {
-
+		p:x9A9297 = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { 
@@ -192,11 +204,13 @@ nda_historic_regional.1890 = { # december - first advert for ouija boards "The O
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1890.12.1 
 		game_date < 1892.1.1 
 
-		# owner of Amsterdam
+		# owner of Baltimore
 		OR = {
 			p:x0E3435 = { state = { owner = ROOT } }
 			has_interest_marker_in_region = p:x0E3435.region			
@@ -206,7 +220,7 @@ nda_historic_regional.1890 = { # december - first advert for ouija boards "The O
 	cooldown = { months = 24 }	
 
 	immediate = {
-
+		p:x0E3435 = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { #"Silly Toy"
@@ -247,6 +261,8 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1892.10.1 # 1892.10.1 # trial run
 		game_date < 1894.1.1 
@@ -261,7 +277,7 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 	cooldown = { months = 24 }	
 	
 	immediate = {
-	
+		p:x777732 = { state = { owner = { save_scope_as = location_country } } }	
 	}
 
 	option = { #"Fantastical"
@@ -272,18 +288,21 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 	option = { #"Sea Monsters Everywhere"
 		name = nda_historic_regional.1892.b
 		trigger = { 
-			has_global_variable = nda_cthulhu_arrives
+			nda_coa_def_cthulhu_trigger = yes
 		}
 	}
 	option = { #"And they are ours"
 		name = nda_historic_regional.1892.c
 		trigger = { 
-			c:DAG = ROOT
+			c:DAG ?= ROOT
 		}
 		# have event to cause panic around North Sea?? - effect fishing?
 
 	}
 }
+
+#nda_historic_regional.1895 = { # Pallandino and the SPR
+#The first exposure of Palladino was made by Dr. Richard Hodgson in 1895. A committee from the English Society for Psychical Research, consisting of Hereward Carrington, Hon. Everard Feilding, and Wortly W. Baggally, which had held a series of test seances with Palladino in Italy, brought her to England for a fresh try-out and another series of sittings was held. Very early in the series suspicious movements on the part of the medium were observed. Later Dr. Hodgson joined the circle and was able to show conclusively that by clever manipulation—sheer trickery—she was getting one hand free and with it making the movements observed.
 
 #nda_historic_regional.1897 = { # Golden Dawn in America
 # The Order of the Golden Dawn establishes two Temples in the United States of America.&nbsp; Thmê Temple #8 is chartered in Chicago, Illinois, under G.W. Wiggs as Imperator, and Thoth-Hermes Temple #9 is chartered in New York City, under C. Lockwood as Imperator.&nbsp; (Paul Foster Case was a member of Thoth-Hermes.)
@@ -310,11 +329,13 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
+	minor_left_icon = scope:location_country
+
 	trigger = { 		
 		game_date >= 1901.12.1 
 		game_date < 1903.1.1 
 
-		# owner of Amsterdam
+		# owner of Baltimore
 		OR = {
 			p:x0E3435 = { state = { owner = ROOT } }
 			has_interest_marker_in_region = p:x0E3435.region			
@@ -324,7 +345,7 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 	cooldown = { months = 24 }	
 
 	immediate = {
-
+		p:x0E3435 = { state = { owner = { save_scope_as = location_country } } }	
 	}
 
 	option = { #"Good ridence to them"
@@ -332,7 +353,7 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 		default_option = yes
 	}
 
-	option = { #"Great, now there's three of theme"
+	option = { #"Great, now there's three of them"
 		name = nda_historic_regional.1901.b
 
 		# Boost to Spiritulism - should not do in cult countries?

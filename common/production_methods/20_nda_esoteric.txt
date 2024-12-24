@@ -47,15 +47,23 @@ pm_nda_esoteric_streetlights = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 12 # normal is 10
-			goods_output_services_add = 50
+			goods_input_electricity_add = 4
+			goods_output_services_add = 10
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 350
-			building_employment_engineers_add = 150
+			building_employment_laborers_add = 200
+			building_employment_engineers_add = 50
 		}
 	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 2
+		}
+	}
+
+	required_input_goods = electricity
 }
 
 # lost city pms - in effect are free goods as minimal above ground population needed - have both goods available in all methods to try and kickstart demand

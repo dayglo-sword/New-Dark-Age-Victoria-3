@@ -160,10 +160,25 @@ is_potentially_dagonic = {
 		region = sr:region_south_china
 		region = sr:region_japan
 		region = sr:region_oceania
-		region = sr:region_south_india
+		state_region = s:STATE_CEYLON
 	}
 }
 
+is_potentially_dagonic_lands = { 
+# has capital and coast in certain asian/pacific lands
+	is_coastal = yes # state level check
+
+	OR = {
+		region = sr:region_indochina
+		region = sr:region_indonesia
+		region = sr:region_north_china
+		region = sr:region_manchuria
+		region = sr:region_south_china
+		region = sr:region_japan
+		region = sr:region_oceania
+		state_region = s:STATE_CEYLON
+	}
+}
 
 has_lost_city = { # state level - works for country as well?
 	custom_tooltip = {
@@ -186,21 +201,7 @@ lost_cities_exist = {
 	}
 }
 
-is_potentially_dagonic_lands = { 
-# has capital and coast in certain asian/pacific lands
-	is_coastal = yes # state level check
 
-	OR = {
-		region = sr:region_indochina
-		region = sr:region_indonesia
-		region = sr:region_north_china
-		region = sr:region_manchuria
-		region = sr:region_south_china
-		region = sr:region_japan
-		region = sr:region_oceania
-		region = sr:region_south_india
-	}
-}
 
 has_investigators = {
 	any_scope_character = {
@@ -230,7 +231,7 @@ has_non_cult_culture = {
 			OR = {
 				THIS = cu:nda_cul_cultist 
 				THIS = cu:nda_cul_dagonic
-				THIS =cu:nda_cul_yigian				
+				THIS = cu:nda_cul_yigian				
 			}
 		}
 	}

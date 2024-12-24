@@ -1,0 +1,324 @@
+﻿movement_cabalistic = {
+	category = movement_category_ideological
+
+	ideology = ideology_nda_cabalistic
+	character_ideologies = {
+		ideology_nda_cultist
+	}
+	
+	creation_trigger = {
+		has_variable = nda_cultists_in_open
+	}	
+
+	creation_weight = {
+		value = 100
+	}
+
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	
+	culture_selection_trigger = {
+		is_cult_culture = yes
+
+		scope:country = {
+			OR = {
+				any_scope_state = { state_region = { is_homeland = root } }
+				culture_percent_country = {
+					target = root
+					value >= 0.05
+				}
+			}
+		}
+	}
+
+	character_support_trigger = {
+		trigger_if = {
+			limit = {
+				is_in_exile_pool = yes
+			}
+			has_ideology = ideology:ideology_nda_cultist
+
+		}
+		# trigger_else_if = {
+		# 	limit = { }
+		# 	has_ideology = ideology:ideology_nda_cultist
+
+		# 	interest_group ?= {
+		# 		has_ideology = ideology:ideology_nda_cabalistic
+		# 	}
+		# }
+		trigger_else = {
+			culture = { is_cult_culture = yes }	
+		}
+	}
+
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_nda_cultist
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	
+	pop_support_trigger = {
+
+		OR = {
+			culture = { is_cult_culture = yes }
+			OR = {
+				religion = rel:nda_rel_cultist
+				religion = rel:nda_rel_yigian
+			}			
+		}
+		
+	}
+
+	pop_support_factors = {
+		movement_support_slave_state
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_farmers
+		movement_support_clergymen
+		movement_support_officers
+		movement_support_clergymen
+	}
+
+	pop_support_weight = {	
+		add = {
+			value = 9
+			desc = "SLAVE_STATE"
+		}	
+	
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 45
+				desc = "POP_ARISTOCRATS"
+			}
+		}	
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 15
+				desc = "POP_FARMERS"
+			}
+		}		
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 15
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 15
+				desc = "POP_OFFICERS"
+			}
+		}
+		
+		# if = {
+		# 	limit = { 
+		# 		owner ?= { has_journal_entry = je_acw_countdown }
+		# 	}
+			
+		# 	multiply = {
+		# 		value = 3.0
+		# 		desc = "je_acw_countdown"
+		# 	}		
+		# }
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+	}
+	
+	revolution = {
+		possible = {
+			political_movement_identity_support >= 0.25
+			owner ?= {
+				any_scope_state = {
+					state_region = { is_homeland = root.culture }
+				}
+			}
+		}
+	
+		weight = {
+			value = 1000		
+		}	
+		
+		state_weight = {
+			value = 0
+		
+			if = {
+				limit = { 
+					is_capital = no
+					state_region = { is_homeland = scope:political_movement.culture }
+				}
+				add = 50
+
+				if = {
+					limit = {
+						culture_percent_state = {
+							target = scope:political_movement.culture
+							value >= 0.75
+						}
+					}
+					add = 250
+				}
+				else_if = {
+					limit = {
+						culture_percent_state = {
+							target = scope:political_movement.culture
+							value >= 0.5
+						}
+					}
+					add = 150
+				}
+				else_if = {
+					limit = {
+						culture_percent_state = {
+							target = scope:political_movement.culture
+							value >= 0.25
+						}
+					}
+					add = 50
+				}
+				else_if = {
+					limit = {
+						culture_percent_state = {
+							target = scope:political_movement.culture
+							value >= 0.1
+						}
+					}
+					add = 10
+				}
+			}				
+		}
+
+		target_fraction_of_states = {
+			value = political_movement_identity_support
+			add = scope:clout
+			multiply = 3
+			min = 0.15
+			max = 0.75
+		}
+	}
+	
+	secession = {
+		possible = {
+			political_movement_identity_support >= 0.25
+			owner ?= {
+				any_scope_state = {
+					state_region = { is_homeland = root.culture }
+				}
+			}
+		}
+	
+		weight = {
+			value = 1000		
+		}	
+		
+		state_weight = {
+			value = 0
+		
+			if = {
+				limit = { 
+					is_capital = no
+					state_region = { is_homeland = scope:political_movement.culture }
+				}
+				add = 50
+
+				if = {
+					limit = {
+						culture_percent_state = {
+							target = scope:political_movement.culture
+							value >= 0.75
+						}
+					}
+					add = 250
+				}
+				else_if = {
+					limit = {
+						culture_percent_state = {
+							target = scope:political_movement.culture
+							value >= 0.5
+						}
+					}
+					add = 150
+				}
+				else_if = {
+					limit = {
+						culture_percent_state = {
+							target = scope:political_movement.culture
+							value >= 0.25
+						}
+					}
+					add = 50
+				}
+				else_if = {
+					limit = {
+						culture_percent_state = {
+							target = scope:political_movement.culture
+							value >= 0.1
+						}
+					}
+					add = 10
+				}
+			}				
+		}
+
+		target_fraction_of_states = {
+			value = political_movement_identity_support
+			add = scope:clout
+			multiply = 3
+			min = 0.15
+			max = 0.75
+		}
+	}
+	
+	additional_radicalism_factors = {
+	
+		# # ELD exists
+		# if = {
+		# 	limit = { 
+		# 		has_global_variable = nda_cthulhu_arrives
+		# 	}
+			
+		# 	add = {
+		# 		value = 0.2
+		# 		desc = "je_acw_countdown"
+		# 	}
+		# }
+
+		# Cthulhu is here
+		if = {
+			limit = { 
+				nda_coa_def_cthulhu_trigger = yes
+			}
+			
+			add = {
+				value = 0.5
+				desc = "cthulhu is here"
+			}
+		}		
+	}
+}
+

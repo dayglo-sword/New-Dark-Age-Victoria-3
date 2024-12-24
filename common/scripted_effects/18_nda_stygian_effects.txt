@@ -20,6 +20,9 @@ nda_effect_stygian_setup = {
 
 	# make recognized if not already
 	set_country_type = recognized
+
+	# rename location to ancient Stygian
+	nda_effect_map_name_stygia = yes
 	
 	# set cult to be cultists and to be power brokers
 	ig:ig_nda_cult_worshippers = {

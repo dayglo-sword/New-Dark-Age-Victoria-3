@@ -343,8 +343,7 @@ nda_ritual.4 = { # Cthulhu Leaves
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
 	trigger = { 
-		has_global_variable = nda_cthulhu_arrives
-		NOT = { has_global_variable = nda_ritual_cthulhu_leaves }
+		nda_coa_def_cthulhu_trigger = yes
 		has_variable = nda_cthulhu_timer_active
 		NOT = { has_variable = nda_cthulhu_timer } # time has run out
 	}
@@ -390,8 +389,8 @@ nda_ritual.5 = { # The world surrenders. - Boost ELD by auto adding Cult countri
 	trigger = { 
 		
 		# Cthulhu is still here
-		has_global_variable = nda_cthulhu_arrives
-		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+		nda_coa_def_cthulhu_trigger = yes
+		
 		AND = {
 			exists = c:ELD
 			c:ELD = ROOT
@@ -782,8 +781,7 @@ nda_ritual.11 = { # The world surrenders. - Boost DGN by auto adding Cult countr
 	trigger = { 
 		
 		# Cthulhu is still here
-		has_global_variable = nda_cthulhu_arrives
-		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+		nda_coa_def_cthulhu_trigger = yes
 		AND = {
 			exists = c:DGN
 			c:DGN = ROOT
@@ -814,6 +812,7 @@ nda_ritual.11 = { # The world surrenders. - Boost DGN by auto adding Cult countr
 		default_option = yes
 	}
 }
+
 # Yig annex after arrival
 nda_ritual.12 = { # The world surrenders. - Boost ELD by auto adding Cult countries on a regular basis
 	type = country_event
@@ -839,8 +838,7 @@ nda_ritual.12 = { # The world surrenders. - Boost ELD by auto adding Cult countr
 	trigger = { 
 		
 		# Cthulhu is still here
-		has_global_variable = nda_cthulhu_arrives
-		NOT = { has_global_variable = nda_ritual_cthulhu_leaves	}
+		nda_coa_def_cthulhu_trigger = yes
 		AND = {
 			exists = c:YIG
 			c:YIG = ROOT

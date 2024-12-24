@@ -4,6 +4,7 @@
 	group = je_group_foreign_affairs
 
 	is_shown_when_inactive = {
+		NOT = { is_country_type = unrecognized }
 		country_is_in_africa = no
 		OR = {
 			has_interest_marker_in_region = sr:region_senegal
@@ -14,10 +15,7 @@
 			has_interest_marker_in_region = sr:region_congo
 		}
 		# don't include for cultists
-		# don't include for cultists
 		NOT = {
-			#c:NDA_ARES ?= THIS	
-			#is_full_cult_country = { COUNTRY="ROOT" }	# needed better way that would work for both Mods
 			has_variable = nda_anti_colonial_admin
 		}
 	}
@@ -71,7 +69,6 @@
     invalid = {
 		# needs to close if country converts to full cult country - re-enable after CTH leaves - invalid stops it repeating??
 		has_variable = nda_anti_colonial_admin
-		#is_full_cult_country = { COUNTRY="ROOT" }	
 	}
 	
 	# Establish Colonial Administration

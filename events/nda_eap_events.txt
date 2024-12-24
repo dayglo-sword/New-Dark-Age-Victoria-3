@@ -29,24 +29,20 @@ nda_eap.10 = { # The initial outbreak - (Baltimore) direct from Poe Death event.
 
 		p:x0E3435 = { 
 			state = { 	
-				set_variable = {
-					name = nda_poe_red_death_state
-					value = nda_red_death_duration
-				} 
+				# stop running multiple times
+				if = {
+					limit = { NOT = { has_variable = nda_poe_red_death_state } }
 
-				# action effect - pop death and mortality increase modifier
-				IF = {
-					limit = { NOT = { has_modifier =  nda_red_death_modifier } }
-					add_modifier = {
-						name = nda_red_death_modifier
+					state_region = {
+						start_harvest_condition = nda_red_death	
+						debug_log = "Red Death Begins - Harvest Condition applied"
+						every_scope_state = { # is region wide so set for all states
+							set_variable = nda_poe_red_death_state						
+						}
 					}					
 				}
 			} 
 		}
-
-		# notification??
-
-		##trigger_event = { id = nda_eap.11 days = 10 } # 3 months as per story
 	}	
 	
 	option = {
@@ -63,47 +59,97 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 	
 	trigger = { 
 		has_global_variable = nda_poe_red_death
-		any_scope_state = { has_variable = nda_poe_red_death_state 	}
+		any_scope_state = { state_region = { has_harvest_condition = nda_red_death } }
 		game_date <= 1853.10.1 # 4 years of the Red Death should be enough
 	}
 
-	immediate = {		
+	immediate = {	
+		debug_log = "Red death spreads : country: [THIS.GetCountry.GetNameNoFormatting]"
+		save_scope_as = scope_spread_source	
 		random_scope_state = {
 			limit = {
-				has_variable = nda_poe_red_death_state 
+				state_region = { has_harvest_condition = nda_red_death }
 			}
-
-			random_neighbouring_state = {
+			save_scope_as = scope_spread_source_state
+			random_neighbouring_state = { # possible to spread to other country
 				limit = {
-					NOT = { has_variable = nda_poe_red_death_state  }							
+					NOT = { state_region = { has_harvest_condition = nda_red_death } }
+					# don't revisit state (could hit same state_Region?)
+					NOT = { has_variable = nda_poe_red_death_state }
 					owner = { coa_def_native_american_trigger = no } # reverse uno - don't hit native americans
 				}
 
 				# if previously hit reduce chance of spread - will not prevent secondary waves
 				
-				debug_log = "Red death spreads : [THIS.GetState.GetNameNoFormatting]"
+				debug_log = "Red death spreads : [THIS.GetState.GetNameNoFormatting] from [PREV.GetState.GetNameNoFormatting]"
 				trigger_event = { id = nda_eap.12 }	# fire main event						
-				save_scope_as = scope_spread_state
+				save_scope_as = scope_spread_state				
 			}			
 		}	
-		
+		debug_log_scopes = yes
 		# if it hasn't spread by going neighbouring then see if it can jump elsewhere
 		if = {
 			limit = { NOT = { exists = scope:scope_spread_state } }
-
-			random_scope_state = {
+			debug_log = "Red death spreads : no scope_spread_state"
+			debug_log_scopes = yes
+			random_state = { # don't limit to same country but use weights to keep it local or to countries in same market
 				limit = {
-					NOT = { has_variable = nda_poe_red_death_state  }	
+					NOT = { state_region = { has_harvest_condition = nda_red_death } }	
+					# don't revisit state (could hit same state_Region?)
+					NOT = { has_variable = nda_poe_red_death_state }
 					is_coastal = yes # presume it came in by sea	
-					owner = { coa_def_native_american_trigger = no } # reverse uno - don't hit native americans					
+					owner = { 
+						coa_def_native_american_trigger = no 
+						coa_def_african_trigger = no
+					} # reverse uno - don't hit native americans		
+					# OR = { 
+					# 	owner = { num_mutual_trade_route_levels_with_country:root > 0 }	
+					# 	market = scope:scope_spread_source.market		
+					# }
 				}
-
+				# will this work?
+				weight = {
+					base = 0
+					# straight 'add' does not work?
+					#add = 10		#  num_mutual_trade_route_levels_with_country:root		
+					modifier = {
+						# is in same country - spread via coastal routes
+						owner = scope:scope_spread_source
+						has_building = building_port
+						add = 500
+					}
+					modifier = { # spreads over seas via trade
+						owner = { num_mutual_trade_route_levels_with_country:root > 0 }
+						has_building = building_port
+						add = 20
+						# not a usable value	- have to do case??
+						#add = num_mutual_trade_route_levels_with_country:root
+					}
+					modifier = { # spreads over seas via trade
+						owner = { num_mutual_trade_route_levels_with_country:root > 5 }
+						has_building = building_port
+						add = 100
+					}
+					modifier = { # In same market
+						market = scope:scope_spread_source.market
+						add = 50
+					}
+					modifier = { # Is unincorporated - try and stop spread to minor
+						is_incorporated = no
+						subtract = 50
+					}
+					modifier = { # Don't punish smaller countries too much
+						owner = { country_rank <= rank_value:insignificant_power}
+						subtract = 50
+					}
+				}
 				# if previously hit reduce chance of spread - will not prevent secondary waves
 				
-				debug_log = "Red death spreads by jump : [THIS.GetState.GetNameNoFormatting]"
+				debug_log = "Red death spreads by jump : [THIS.GetState.GetNameNoFormatting] from [PREV.GetCountry.GetNameNoFormatting]"
 				trigger_event = { id = nda_eap.12 }	# fire main event						
 				save_scope_as = scope_spread_state
-			}
+
+			}			
 		}
 	}
 }
@@ -112,7 +158,25 @@ nda_eap.12 = { # The plague spreads
 	type = state_event
 	placement = ROOT
 	title = nda_eap.12.t
-	desc = nda_eap.12.d
+	
+	desc = 	{
+		first_valid = {
+			triggered_desc = {
+				trigger = { # from overseas
+					NOT = { scope:red_death_state_scope.owner = scope:scope_spread_source_state.owner }
+					NOT = { scope:red_death_state_scope.owner = { any_neighbouring_state = { THIS =  scope:scope_spread_source_state }  } }
+				}
+				desc = nda_eap.12.d2
+			}			
+			triggered_desc = {
+				trigger = { # across border
+					NOT = { scope:red_death_state_scope.owner = scope:scope_spread_source_state.owner }
+				}
+				desc = nda_eap.12.d1
+			}
+			desc = nda_eap.12.d
+		}
+	}
 	flavor =  nda_eap.12.f
 
 	duration = 3
@@ -126,15 +190,16 @@ nda_eap.12 = { # The plague spreads
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	immediate = {
-		set_variable = {
-			name = nda_poe_red_death_state
-			value = nda_red_death_duration
-		} 
+		state_region = {
+			start_harvest_condition = nda_red_death
 
-		add_modifier = {
-			name = nda_red_death_modifier			
+			every_scope_state = { # is region wide so set for all states
+				set_variable = nda_poe_red_death_state						
+			}
 		}
+
 		save_scope_as = red_death_state_scope
+
 	}	
 	
 	option = { #" A tragic event"
@@ -166,9 +231,11 @@ nda_eap.13 = { # Masque of the Red Death
 		NOT = { has_variable = nda_poe_red_death_masque }
 
 		any_scope_state = {
-			is_capital = yes				
-			has_variable = nda_poe_red_death_state	
-			has_modifier =  nda_red_death_modifier					
+			is_capital = yes							
+			
+			state_region = {
+				has_harvest_condition = nda_red_death				
+			}
 		}
 	}
 
@@ -181,17 +248,24 @@ nda_eap.13 = { # Masque of the Red Death
 				is_capital = yes					
 			}
 					
-			save_scope_as = red_death_state_scope
-
-			# kill off some wealthy pops
+			save_scope_as = red_death_state_scope	
+			
 			kill_population_percent_in_state = { percent = 0.1 strata = rich }	
 			
-			# kill off a powerful leader?? Or make them sickly? Have a separate event to decide?			
+			# kill off a powerful leader?? Or make them sickly? Have a separate event to decide?				
 		}
 	}	
 	
 	option = { #" A tragic event"
 		name = nda_eap.13.a
+
+		scope:red_death_state_scope = {
+			# kill off some wealthy pops
+			# need tooltip
+			custom_tooltip = nda_eap.13.a_tt
+		
+		}
+
 		default_option = yes
 	}
 }
@@ -220,7 +294,9 @@ nda_eap.14 = { # Red Death Redemption - post Red Death Spiritualist boost
 
 		NOT = {
 			any_scope_state = { # Red Death is finished in country
-				has_modifier =  nda_red_death_modifier
+				state_region = {
+					has_harvest_condition = nda_red_death				
+				}
 			}		
 		}
 		any_scope_state = {  

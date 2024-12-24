@@ -1,0 +1,193 @@
+﻿# Negative
+nda_putrid_skies = {
+	trigger = {
+		nda_coa_def_cthulhu_trigger = yes
+	}
+
+	# No Incompatibility
+	range = {
+		integer_range = {
+			min = 3
+			max = 5
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 52
+			max = 260
+		}
+	}
+
+	modifier = {
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.1
+		building_group_bg_plantations_throughput_add = -0.1
+		building_group_bg_ranching_throughput_add = -0.1
+		building_group_bg_logging_throughput_add = -0.04
+		building_group_bg_rubber_throughput_add = -0.04
+
+		#Infrastructure
+		building_group_bg_agriculture_infrastructure_usage_mult = 0.2
+		building_group_bg_plantations_infrastructure_usage_mult = 0.2
+		building_group_bg_ranching_infrastructure_usage_mult = 0.2
+
+		#Subsistence
+		state_peasants_consumption_multiplier_add= 0.025
+
+		state_mortality_mult = 0.2 # 0.30
+		#state_standard_of_living_add = -2
+
+		state_pollution_generation_add = 25
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 1
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.01
+	}
+
+	color = { 142 36 170 }
+	icon = "gfx/interface/icons/harvest_condition_icons/nda_disaster_putrid_skies.dds"
+	graphics = drought
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+nda_fury_of_dagon = {
+	trigger = {
+		nda_coa_def_cthulhu_trigger = yes
+		any_scope_state = {
+			is_coastal = yes			
+		}
+	}
+
+	range = {
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 26
+			max = 78
+		}
+	}
+
+	modifier = {
+		#Infrastructure
+		state_infrastructure_mult = -0.05
+
+		#MAPI
+		state_market_access_price_impact = -0.05
+
+		#Throughput
+		building_group_bg_agriculture_throughput_add = -0.15
+		building_group_bg_plantations_throughput_add = -0.15
+		building_group_bg_ranching_throughput_add = -0.15
+		building_group_bg_extraction_throughput_add = -0.15
+
+		#Subsistence
+		state_peasants_consumption_multiplier_add = 0.010
+
+		# Migration
+		state_migration_pull_mult = -0.05 # -0.3
+		state_migration_push_mult = 0.05
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 1
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0.01
+		# if = {
+		# 	limit = {
+		# 		OR = {
+		# 			has_harvest_condition = moderate_rainfall
+		# 			has_harvest_condition = heatwave
+		# 		}
+		# 	}
+		# 	multiply = 1.2
+		# }
+		# if = {
+		# 	limit = {
+		# 		has_harvest_condition = hailstorm
+		# 	}
+		# 	multiply = 1.1
+		# }
+		# if = {
+		# 	limit = {
+		# 		has_harvest_condition = torrential_rains
+		# 	}
+		# 	multiply = 1.5
+		# }
+	}
+
+	color = { 38 198 218 }
+	icon = "gfx/interface/icons/harvest_condition_icons/nda_disaster_fury_of_dagon.dds"
+	graphics = flood
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+}
+
+nda_red_death = {
+	trigger = {
+		has_global_variable = nda_poe_red_death
+		game_date <= 1853.10.1
+	}
+
+	range = { # Single state region only
+		integer_range = {
+			min = 0
+			max = 0
+		}
+	}
+
+	duration = {
+		fixed_range = {
+			min = 36
+			max = 80
+		}
+	}
+
+	modifier = {
+		# Throughput
+		building_group_bg_agriculture_throughput_add = -0.1
+		building_group_bg_plantations_throughput_add = -0.1
+		building_group_bg_ranching_throughput_add = -0.1
+
+		#Subsistence
+		state_peasants_consumption_multiplier_add= 0.03
+
+		# From original modifier
+		state_mortality_mult = 0.6 #1.7 # needs to be more? or scaled like plague?
+		state_migration_pull_mult = -0.2 # -0.3
+		state_migration_push_mult = 0.3
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 1
+			max = 4
+		}
+	}
+
+	chance = {
+		value = 0 # 0.01 should be governed by event spread.
+	}
+
+	color = { 58 10 17 }
+	icon = "gfx/interface/icons/harvest_condition_icons/nda_disaster_red_death.dds"
+	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
+	graphics = drought
+}
+

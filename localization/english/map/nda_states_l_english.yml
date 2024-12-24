@@ -1,7 +1,27 @@
 ﻿l_english:
 
- STATE_NEW_HAMPSHIRE:1 "Miskaton"
+nda_MISKATON: "Miskaton"
+nda_MISKATON_city: "Arkham"
+nda_MISKATON_port: "Innsmouth"
+nda_MISKATON_mine: "Bolton"
+nda_MISKATON_farm: "Beverly"
+nda_MISKATON_wood: "Dunwich"
 
- STATE_AUVERGNE_LIMOUSIN:0 "Averoigne"
- 
+# Averoigne - Clark Ashton Smith
+nda_AVEROIGNE: "Averoigne"
+nda_AVEROIGNE_city: "Vyones"
+nda_AVEROIGNE_mine: "Les Hiboux"
+nda_AVEROIGNE_farm: "Ximes"
+nda_AVEROIGNE_wood: "Saint-Zenobie"
 
+# Hasturian America
+nda_NEW_CARCOSA: "New Carcosa"
+nda_NEW_CARCOSA_city: "New Carcosa"
+
+# Leng
+nda_LENG_YIAN_city: "Yian"
+
+# Stygia
+nda_STYGIA_LUXUR_city: "Luxur"
+nda_STYGIA_KHEMI_city: "Khemi"
+nda_STYGIA_KHESHATTA_city: "Khesatta"

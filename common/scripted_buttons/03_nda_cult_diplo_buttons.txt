@@ -24,7 +24,7 @@ je_nda_cult_diplo_btn_recognise_dagonic_lands = {
 				region = sr:region_south_china
 				region = sr:region_japan
 				region = sr:region_oceania
-				region = sr:region_south_india
+				#region = sr:region_south_india
 			}		
 
 		}
@@ -74,7 +74,7 @@ je_nda_cult_diplo_btn_recognise_dagonic_lands = {
 						region = sr:region_south_china
 						region = sr:region_japan
 						region = sr:region_oceania
-						region = sr:region_south_india
+						#region = sr:region_south_india
 					}
 				}	
 

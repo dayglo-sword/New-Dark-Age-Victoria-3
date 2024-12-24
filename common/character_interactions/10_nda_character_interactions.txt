@@ -17,9 +17,9 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
 	potential = {
-		owner = scope:actor	
+		owner ?= scope:actor	
 		
-		scope:actor = {
+		scope:actor ?= {
 			custom_tooltip = {
 				text = nda_no_senior_cultist_IG_leaders_tt
 				has_variable = nda_cult_leaderless
@@ -58,7 +58,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 	effect = {
 		if = {
 			limit = { 
-				scope:actor = {
+				scope:actor ?= {
 					country_has_primary_culture = cu:nda_cul_cultist 
 				} 				
 			}
@@ -66,7 +66,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		}
 		else_if = {
 			limit = { 
-				scope:actor = {
+				scope:actor ?= {
 					country_has_primary_culture = cu:nda_cul_dagonic 
 				} 				
 			}
@@ -74,7 +74,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		}
 		else_if = {
 			limit = { 
-				scope:actor = {
+				scope:actor ?= {
 					country_has_primary_culture = cu:nda_cul_yigian 
 				} 				
 			}
@@ -83,7 +83,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		}
 		set_variable = nda_coven_leader
 
-		scope:actor = { 
+		scope:actor ?= { 
 			remove_variable = nda_cult_leaderless # we have a leader!
 			remove_variable = nda_cult_leaderless_timer
 		} 
@@ -192,9 +192,9 @@ initiate_into_coven = { # If not already give character eldritch trait
 	potential = {
 		has_role = politician
 
-		owner = scope:actor
+		owner ?= scope:actor
 
-		scope:actor = {
+		scope:actor ?= {
 			has_cult_culture = yes
 		}
 
@@ -216,7 +216,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 	effect = {
 		if = {
 			limit = { 
-				scope:actor = {
+				scope:actor ?= {
 					country_has_primary_culture = cu:nda_cul_cultist 
 				} 				
 			}
@@ -224,7 +224,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 		}
 		else_if = {
 			limit = { 
-				scope:actor = {
+				scope:actor ?= {
 					country_has_primary_culture = cu:nda_cul_dagonic 
 				} 				
 			}
@@ -232,7 +232,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 		}
 		else_if = {
 			limit = { 
-				scope:actor = {
+				scope:actor ?= {
 					country_has_primary_culture = cu:nda_cul_yigian 
 				} 				
 			}
@@ -300,9 +300,9 @@ convert_to_dagon = { # If not already give character eldritch trait
 	potential = {
 		has_role = politician
 
-		owner = scope:actor
+		owner ?= scope:actor
 
-		scope:actor = {
+		scope:actor ?= {
 			has_cult_culture = yes
 			has_variable = nda_dagon_in_open
 		}
@@ -327,19 +327,22 @@ convert_to_dagon = { # If not already give character eldritch trait
 			limit = { 
 				has_trait = nda_cultist			
 			}
-			add_trait = nda_dagon_cultist			
+			add_trait = nda_dagon_cultist	
+			remove_trait = nda_cultist	 		
 		}
 		else_if = {
 			limit = { 
 				has_trait = nda_acolyte			
 			}
-			add_trait = nda_dagon_acolyte			
+			add_trait = nda_dagon_acolyte	
+			remove_trait = nda_acolyte		
 		}
 		else_if = {
 			limit = { 
 				has_trait = nda_master			
 			}
-			add_trait = nda_dagon_master		
+			add_trait = nda_dagon_master
+			remove_trait = nda_master			
 		}
 	}
 
@@ -393,9 +396,9 @@ convert_to_yig = { # If not already give character eldritch trait
 	potential = {
 		has_role = politician
 
-		owner = scope:actor
+		owner ?= scope:actor
 
-		scope:actor = {
+		scope:actor ?= {
 			has_cult_culture = yes
 			has_variable = nda_yig_in_open
 		}
@@ -420,19 +423,22 @@ convert_to_yig = { # If not already give character eldritch trait
 			limit = { 
 				has_trait = nda_cultist			
 			}
-			add_trait = nda_yig_cultist			
+			add_trait = nda_yig_cultist	
+			remove_trait = nda_cultist			
 		}
 		else_if = {
 			limit = { 
 				has_trait = nda_acolyte			
 			}
-			add_trait = nda_yig_acolyte			
+			add_trait = nda_yig_acolyte	
+			remove_trait = nda_acolyte			
 		}
 		else_if = {
 			limit = { 
 				has_trait = nda_master			
 			}
-			add_trait = nda_yig_master		
+			add_trait = nda_yig_master	
+			remove_trait = nda_master		
 		}
 	}
 
@@ -484,11 +490,11 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
 	potential = {
-		owner = scope:actor	
+		owner ?= scope:actor	
 		
 		interest_group.leader ?= THIS
 		# has_role = politician	 # not needed due to IG leader check
-		scope:actor = {
+		scope:actor ?= {
 			# has cult spread journal or Ritual in progress, also include completed but nothing for them to do yepast this point yet
 			OR = {
 				has_journal_entry = je_nda_cult_spreads	
@@ -565,9 +571,9 @@ adopt_cult_culture = {
 	potential = {
 		#has_role = politician
 
-		owner = scope:actor
+		owner ?= scope:actor
 
-		scope:actor = {
+		scope:actor ?= {
 			has_cult_culture = yes
 		}
 
@@ -657,7 +663,7 @@ adopt_cult_culture = {
 		}	
 		if = {
 			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
-			add = -20
+			add = -30
 		}	
 		if = {
 			limit = { is_historical = yes } # Changing historical culture can change DNA depiction!!!!

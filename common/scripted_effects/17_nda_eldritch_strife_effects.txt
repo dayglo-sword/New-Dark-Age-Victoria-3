@@ -1,26 +1,28 @@
 ﻿nda_effect_eldritch_strife =
 {
 	# The Cult is falling apart after Cthulhu leaves. Cultures are re-asserting themselves
+	# random_scope_culture = {
+	# 	limit = { is_cult_culture = no }
+	# 	save_scope_as = nda_eldritch_rebels
+	# 	#debug_log_scopes = yes
+	# }
 
-	random_scope_state = { # select an homeland state to get culture
-		limit = {
-			any_scope_culture = {
-				is_cult_culture = no
+	random_scope_culture = {
+		limit = { 
+			is_cult_culture = no 
+			ROOT = {
+				culture_percent_country = {  target = PREV  value >= 0.01 } # at least 1% to try and make rebellions bigger
 			}
 		}
-		save_scope_as = culture_state
-		random_scope_culture = {
-			limit = { is_cult_culture = no }
-			save_scope_as = nda_eldritch_rebels
-			#debug_log_scopes = yes
-		}
+
+		save_scope_as = nda_eldritch_rebels
 	}
 
 	THIS = {
 		# convert cultists back to culture in homeland
 		every_scope_state = {
 			limit = {
-				state_region = { is_homeland = scope:nda_eldritch_rebels }
+				state_region ?= { is_homeland = scope:nda_eldritch_rebels }
 			}
 			save_scope_as = nda_rebel_homeland # use to see if anything worth notifiing occured
 
@@ -33,7 +35,7 @@
 					}
 				}
 				
-				change_pop_culture = { target = scope:nda_eldritch_rebels value = 0.33 }
+				change_pop_culture = { target = scope:nda_eldritch_rebels value = 0.20 } # was 0.33
 				#scope:nda_eldritch_rebels.Religion
 			
 			}	
@@ -78,12 +80,20 @@
 			}			
 		}
 
-		add_loyalists = { value = -0.8 culture = scope:nda_eldritch_rebels }	
+		if = {
+			limit = {
+				exists = scope:nda_eldritch_rebels
+			}
+			# Acceptance levels and Movements should do this naturally
+			add_loyalists = { value = -0.8 culture = scope:nda_eldritch_rebels }	# was -0.8
 
-		add_radicals = {
-			value = 0.8
-			culture = scope:nda_eldritch_rebels
-		}	
+			add_radicals = {
+				value = 0.8 # was 0.8
+				culture = scope:nda_eldritch_rebels
+			}
+		}
+	
+
 		#debug_log_scopes = yes
 		debug_log = "Ritual - Eldritch Cult Rebels : [THIS.GetCountry.GetNameNoFormatting]"		
 

@@ -1,7 +1,7 @@
 ﻿l_english:
 
 # Use Novanglican for New English as suggested by 'Automne des Forêts'
-NEN_ADJ: "Novanglian"
+#NEN_ADJ: "Novanglian"
 ELD: "Eldritch Realm"
 ELD_ADJ: "Eldritch"
 YIG: "Yigian Lands"
@@ -78,3 +78,8 @@ nda_greater_new_england: "Greater New England"
 # New England Military
 nda_grand_yankee_army: "Grand Yankee Army"
 nda_grand_yankee_navy: "Grand Yankee Navy"
+
+# Movements
+movement_cabalistic: "Cult Supremacy Movement"
+movement_cabalistic_name: "$movement_cabalistic$"
+movement_cabalistic_icon: "@movement_pro_slavery!"

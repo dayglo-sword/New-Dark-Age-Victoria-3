@@ -46,13 +46,65 @@
 		law_council_republic = disapprove
 	}
 	
-	possible = {
-		owner = { 
-			has_variable = nda_cultists_in_open # only in openly cultist countries
-		}
+	country_trigger = {
+		has_variable = nda_cultists_in_open # only in openly cultist countries	
 	}
-	
-	leader_weight = {
+	# possible = {
+	# 	owner = { 
+	# 		has_variable = nda_cultists_in_open # only in openly cultist countries
+	# 	}
+	# }
+
+	# Do by forced scripted allocation initially
+	interest_group_leader_trigger = {
+		always = no
+	}
+
+	non_interest_group_leader_trigger = {
+		NOT = { has_role = agitator }
+		always = no
+	}
+
+	interest_group_leader_weight = {
+		value = 50
+
+		if = {
+			limit = { has_trait = cruel }
+			add = 100
+		}		
+		if = {
+			limit = { has_trait = bigoted }
+			add = 100
+		}
+		if = {
+			limit = { has_any_cultist_trait = yes }
+			add = 200
+		}
+		# Boost for big cultists
+		if = {
+			limit = {
+				exists = c:ELD
+				owner = { c:ELD = THIS }
+			}
+			add = 300
+		}	
+		if = {
+			limit = {
+				exists = c:YIG
+				owner = { c:YIG = THIS }
+			}
+			add = 300
+		}	
+		if = {
+			limit = {
+				exists = c:DGN
+				owner = { c:DGN = THIS }
+			}
+			add = 300
+		}	
+	}
+
+	non_interest_group_leader_weight = {
 		value = 50
 
 		if = {

@@ -8,9 +8,11 @@
 				# and polution
 				add_pollution = 40				
 			}
-			add_modifier = {
-				name = nda_dark_skies_modifier
-			}
+
+			# now done via weather effects
+			# add_modifier = {
+			# 	name = nda_dark_skies_modifier
+			# }
 
 			# Cultists everywhere!
 			if = { limit = { is_capital = yes }  # boost in capital
@@ -214,9 +216,9 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# and polution
 					add_pollution = 30				
 				}
-				remove_modifier = nda_dark_skies_modifier # skies clear	
+				#remove_modifier = nda_dark_skies_modifier # skies clear	
 			}
-			remove_modifier = nda_dark_skies_modifier			
+			#remove_modifier = nda_dark_skies_modifier			
 		}
 		
 		save_scope_as =  target_scope

@@ -107,6 +107,7 @@ concept_nda_yhanthlei = {
 
 concept_nda_shamballa = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+	is_loading_tip = yes
 }
 
 concept_nda_nameless_city = {
@@ -114,6 +115,16 @@ concept_nda_nameless_city = {
 }
 
 concept_nda_investigator = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+	is_loading_tip = yes
+}
+
+concept_disaster_condition = {
+	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
+	is_loading_tip = yes
+}
+
+concept_esoteric_orders = {
 	texture = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"	
 	is_loading_tip = yes
 }

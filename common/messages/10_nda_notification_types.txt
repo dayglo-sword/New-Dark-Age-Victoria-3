@@ -15,7 +15,7 @@ nda_first_open_cult = {
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
 	notification_type = toast
- 
+ 	color = bad
 }
 
 nda_first_yig_cult = {
@@ -24,7 +24,7 @@ nda_first_yig_cult = {
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_first_dagon_cult = {
@@ -33,7 +33,7 @@ nda_first_dagon_cult = {
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_elditch_realm_proclaimed = {
@@ -42,7 +42,7 @@ nda_elditch_realm_proclaimed = {
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_yigian_lands_proclaimed = {
@@ -51,7 +51,7 @@ nda_yigian_lands_proclaimed = {
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_yigian_lands_expand = {
@@ -60,7 +60,7 @@ nda_yigian_lands_expand = {
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
 	notification_type = toast
- 
+  	color = bad
 }
 
 nda_dagonic_shores_proclaimed = {
@@ -69,7 +69,7 @@ nda_dagonic_shores_proclaimed = {
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_dagonic_shores_expand = {
@@ -78,7 +78,7 @@ nda_dagonic_shores_expand = {
 	texture = "gfx/interface/icons/notification_icons/interest_group_bad.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_dagonic_asian_release = {
@@ -96,7 +96,7 @@ nda_dagon_attacks = {
 	texture = "gfx/interface/icons/notification_icons/military.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 ### notifications from ritual
@@ -106,7 +106,7 @@ nda_ritual_cthulhu_returns = {
 	texture = "gfx/interface/icons/notification_icons/military.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_ritual_cthulhu_leaves = {
@@ -115,7 +115,7 @@ nda_ritual_cthulhu_leaves = {
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_ritual_country_surrenders = {
@@ -124,7 +124,7 @@ nda_ritual_country_surrenders = {
 	texture = "gfx/interface/icons/notification_icons/peace.dds"
 
 	notification_type = toast
- 
+	color = bad 
 }
 
 nda_ritual_post_cthulhu_split = {
@@ -133,7 +133,7 @@ nda_ritual_post_cthulhu_split = {
 	texture = "gfx/interface/icons/notification_icons/secession.dds"
 
 	notification_type = toast
- 
+	color = good 
 }
 
 nda_ritual_post_cthulhu_strife = {
@@ -142,7 +142,7 @@ nda_ritual_post_cthulhu_strife = {
 	texture = "gfx/interface/icons/notification_icons/secession.dds"
 
 	notification_type = toast
- 
+	color = good
 }
 
 nda_ritual_assist_notice = {
@@ -151,7 +151,7 @@ nda_ritual_assist_notice = {
 	texture = "gfx/interface/icons/notification_icons/influence.dds"
 
 	notification_type = feed # potentially too many for toast
- 
+	color = neutral 
 }
 
 nda_ritual_halt_notice = {
@@ -160,7 +160,7 @@ nda_ritual_halt_notice = {
 	texture = "gfx/interface/icons/notification_icons/secession.dds"
 
 	notification_type = feed # potentially too many for toast
- 
+	color = neutral 
 }
 
 ### notifications from WHH events
@@ -170,7 +170,7 @@ nda_house_on_borderlands = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_carnacki_parties = {
@@ -179,7 +179,7 @@ nda_carnacki_parties = {
 	texture = "gfx/interface/icons/notification_icons/character.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_carnacki_exile = {
@@ -188,7 +188,7 @@ nda_carnacki_exile = {
 	texture = "gfx/interface/icons/notification_icons/character.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_carnacki_death = {
@@ -197,7 +197,7 @@ nda_carnacki_death = {
 	texture = "gfx/interface/icons/notification_icons/character.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 ### Hasturian
@@ -207,7 +207,7 @@ nda_hastur_coronation = {
 	texture = "gfx/interface/icons/notification_icons/character.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_hasturian_players = {
@@ -216,7 +216,7 @@ nda_hasturian_players = {
 	texture = "gfx/interface/icons/notification_icons/character.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 ### Lost Cities
@@ -226,7 +226,7 @@ nda_lostcity_knyan_reveal = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_lostcity_knyan_hidden = {
@@ -235,7 +235,7 @@ nda_lostcity_knyan_hidden = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_lostcity_yhanthlei_reveal = {
@@ -244,7 +244,7 @@ nda_lostcity_yhanthlei_reveal = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_lostcity_yhanthlei_hidden = {
@@ -253,7 +253,7 @@ nda_lostcity_yhanthlei_hidden = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_lostcity_shamballa_reveal = {
@@ -262,7 +262,7 @@ nda_lostcity_shamballa_reveal = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_lostcity_shamballa_hidden = {
@@ -271,7 +271,7 @@ nda_lostcity_shamballa_hidden = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_lostcity_nameless_city_reveal = {
@@ -280,7 +280,7 @@ nda_lostcity_nameless_city_reveal = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 nda_lostcity_nameless_city_hidden = {
@@ -289,7 +289,7 @@ nda_lostcity_nameless_city_hidden = {
 	texture = "gfx/interface/icons/notification_icons/buildings.dds"
 
 	notification_type = toast
- 
+	color = neutral 
 }
 
 # Stygian/Yigian
@@ -299,5 +299,16 @@ nda_nitocris_coronation = {
 	texture = "gfx/interface/icons/notification_icons/character.dds"
 
 	notification_type = toast
- 
+	color = neutral 
+}
+
+# Harvest Condition 'Disaster'
+nda_disaster_condition_started_in_country = {
+	type = country
+	group = "harvest_condition_notification_group"
+	
+	texture = "gfx/interface/icons/notification_icons/harvest_conditions.dds"
+
+	notification_type = feed
+	color = neutral
 }

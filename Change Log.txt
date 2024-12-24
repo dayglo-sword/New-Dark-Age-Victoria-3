@@ -1,3 +1,25 @@
+Version v1.8.6
+
+Major Changes
+Converted Red Death, Fury of Dagon, Putrid Skies to be 'Harvest Conditions'
+Add Political Movement for Cult Supremacy
+
+Minor Changes
+Dynamic State/Hub names for countries
+Use Cult Comcepts on Loading Screens
+Slow down Stygia formation
+Add country flag icon to Historical Events
+Add 'Major Character' from AC Doyle
+
+Bug Fixes
+Cultist Power Bloc formable without SOI DLC
+Revolting Cultist can not add to Ritual
+Greater New England requires 10+ states
+YIG annexes limited to the Americas
+YIG missionaries to Upper not Middle Egypt
+
+------
+
 Version v1.7.6.1
 
 Major Changes

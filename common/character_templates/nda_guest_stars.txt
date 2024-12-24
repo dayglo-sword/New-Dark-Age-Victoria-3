@@ -154,7 +154,6 @@ investigator_harry_escott = {  # from the stories by Fitz-James O’Brien
     traits = {
         nda_investigator
         charismatic
-        imposing
     }	
     agitator_usage = {
         country_trigger = {
@@ -190,7 +189,6 @@ investigator_john_silence = { # from the stories by Algernon Blackwood
 	traits = {
         nda_investigator
 		charismatic
-		imposing
 	}
 	agitator_usage = {
 		country_trigger = {
@@ -226,7 +224,6 @@ investigator_simon_iff = { # from the stories by Aleister Crowley
 	traits = {
         nda_investigator
 		charismatic
-		imposing
 	}
 	agitator_usage = {
 		country_trigger = {
@@ -263,7 +260,6 @@ investigator_lisa_la_guiffria = { # from the story Moonchild by Aleister Crowley
 	traits = {
         nda_investigator
 		charismatic
-		imposing
 	}
 	agitator_usage = {
 		country_trigger = {
@@ -298,7 +294,6 @@ investigator_jules_de_grandin = { # from the stories by Seabury Quinn
 	dna = ecchi_dna_charles_dickens
 	traits = {
 		nda_investigator
-        charismatic
 		imposing
 	}
 	agitator_usage = {

@@ -20,7 +20,7 @@ titanic.2 = { #the titanic gets attacked - homage to CAS 'Coming of the White Wo
 				trigger = {
 					exists = c:GBR
 					c:GBR = ROOT
-					has_global_variable = nda_cthulhu_arrives
+					nda_coa_def_cthulhu_trigger = yes
 				}
 				desc = nda_titanic.2.d
 			}
@@ -29,7 +29,7 @@ titanic.2 = { #the titanic gets attacked - homage to CAS 'Coming of the White Wo
 					OR = {
 						NOT = { exists = c:GBR }
 						NOT = { c:GBR = ROOT }
-						has_global_variable = nda_cthulhu_arrives
+						nda_coa_def_cthulhu_trigger = yes
 					}
 				}
 				desc = nda_titanic.2.d2
@@ -58,7 +58,7 @@ titanic.2 = { #the titanic gets attacked - homage to CAS 'Coming of the White Wo
 	flavor = { 
 		triggered_desc = {
 			trigger = {
-				has_global_variable = nda_cthulhu_arrives
+				nda_coa_def_cthulhu_trigger = yes
 			}
 			desc = nda_titanic.2.f
 		}

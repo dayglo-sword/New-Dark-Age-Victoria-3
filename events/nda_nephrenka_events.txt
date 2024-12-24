@@ -196,23 +196,25 @@ nda_nephrenka.20 = { # Start Event
 	immediate = {
 		# Check if Miskatonic Uni is around - change text if it is.	
 		set_variable = nda_nile_expedition_start
+		debug_log = "Nile Expedition Start Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = {
 		name = nda_nephrenka.20.a
 		default_option = yes
-		trigger_event = { id = nda_nephrenka.21 days = 0 popup = yes }
+		trigger_event = { id = nda_nephrenka.21 days = 1 popup = yes }
 	}
 
 	option = {
 		name = nda_nephrenka.20.b # defer the expedition
 		trigger_event = { id = nda_nephrenka.20 months = 24 popup = yes }
+		debug_log = "Nile Expedition Start Defered : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = {
 		name = nda_nephrenka.20.c # A foolish idea
 		set_variable = nda_nile_expedition_refused
-
+		debug_log = "Nile Expedition Start Refused : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 }
 
@@ -234,14 +236,15 @@ nda_nephrenka.21 = { #Choose commander
 	
 	icon = "gfx/interface/icons/event_icons/event_map.dds" 
 
-	trigger = {
-		any_scope_character = {
-			has_role = admiral
-			is_busy = no
-		}
-	}
+	# trigger = {
+	# 	any_scope_character = {
+	# 		has_role = admiral
+	# 		is_busy = no
+	# 	}
+	# }
 
 	immediate = {
+		debug_log = "Nile Expedition Leader Event : [THIS.GetCountry.GetNameNoFormatting]"
 		random_scope_character = {
 			limit = {
 				is_busy = no
@@ -388,6 +391,10 @@ nda_nephrenka.22 = { # expedition costs / funding
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds" 
 
+	immediate = {
+		debug_log = "Nile Expedition Costs Event : [THIS.GetCountry.GetNameNoFormatting]"
+	}
+
 	option = {
 		name = nda_nephrenka.22.a # Poorly Funded
 
@@ -396,11 +403,14 @@ nda_nephrenka.22 = { # expedition costs / funding
 			multiplier = money_amount_multiplier_small
 		}
 
+		debug_log = "Nile Expedition Costs - Poorly Funded"
+
 		add_journal_entry = {
 			type = je_nda_nile_expedition
 		}
 
 		set_variable = nda_nile_expedition_cheap
+
 		default_option = yes
 	}
 
@@ -419,6 +429,8 @@ nda_nephrenka.22 = { # expedition costs / funding
 			add = 1 
 		}
 
+		debug_log = "Nile Expedition Costs - Funded"
+
 		add_journal_entry = {
 			type = je_nda_nile_expedition
 		}
@@ -433,6 +445,8 @@ nda_nephrenka.22 = { # expedition costs / funding
 		}
 
 		set_variable = nda_nile_expedition_well_funded
+
+		debug_log = "Nile Expedition Costs - Well Funded"
 
 		change_variable = {
 			name = nda_nile_expedition_progress
@@ -464,7 +478,7 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 				}
 				desc =nda_nephrenka.23.d_2
 			}
-			triggered_desc = { # defaulr
+			triggered_desc = { # default
 				trigger = {
 					always = yes
 				}				
@@ -500,7 +514,8 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 			change_variable = {
 				name = nda_nile_expedition_progress
 				add = 1 
-			}	
+			}
+
 			set_variable = nda_nile_expedition_in_progress	
 
 			change_variable = {
@@ -539,7 +554,7 @@ nda_nephrenka.23 = { # Arrival - Result will be dependant on relationship with c
 
 			save_scope_as = nda_nile_expedition_leader
 		}
-
+		debug_log = "Nile Expedition Arrival Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = {
@@ -602,7 +617,9 @@ nda_nephrenka.24 = { # Along the Nile
 		change_variable = {
 			name = nda_nile_expedition_progress
 			add = 1
-		}	
+		}
+		
+		debug_log = "Nile Expedition AAlong the Nile Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -652,6 +669,8 @@ nda_nephrenka.25 = { # A fortunate find  - can happen if delayed
 			name = nda_nile_expedition_progress
 			add = 1
 		}	
+
+		debug_log = "Nile Expedition Fortunate Find Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -709,6 +728,8 @@ nda_nephrenka.26 = { # dancing disease
 		}
 		
 		set_variable = nda_nile_expedition_disease
+
+		debug_log = "Nile Expedition Dancing Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -760,6 +781,8 @@ nda_nephrenka.27 = { # The wrong site
 			name = nda_nile_expedition_peril
 			add = 1
 		}
+
+		debug_log = "Nile Expedition Wrong Site Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -806,6 +829,7 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 
 	immediate = { 
 		# add peril ??
+		debug_log = "Nile Expedition Knife in Dark Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -1001,6 +1025,8 @@ nda_nephrenka.29 = { # The wrong site
 			name = nda_nile_expedition_progress
 			add = 1
 		}	
+
+		debug_log = "Nile Expedition Attack Aftermath : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -1058,6 +1084,8 @@ nda_nephrenka.30 = {
 		# get prestige boost
 
 		# should start path to YIG/STY in country it is found in. - Have event for that Country.
+
+		debug_log = "Nile Expedition Tomb Found Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -1108,6 +1136,8 @@ nda_nephrenka.31 = {
 		# get artifact modifier
 
 		# should notify YIG/STY  that it is found. - Have event for that Country.
+
+		debug_log = "Nile Expedition Mirror Found Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { # a most welcome addition
@@ -1191,6 +1221,8 @@ nda_nephrenka.32 = {
 
 			}			
 		}
+
+		debug_log = "Nile Expedition Influence of Nitocris Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -1354,7 +1386,7 @@ nda_nephrenka.41 = { # Allow the Expedition to continue
 	icon = "gfx/interface/icons/event_icons/event_map.dds" 
 
 	immediate = { 
-
+		debug_log = "Nile Expedition Continue Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { # Allow
@@ -1409,6 +1441,8 @@ nda_nephrenka.42 = { # Notification of approval
 		}
 		# remove delay
 		remove_variable = nda_nephrenka_delay
+
+		debug_log = "Nile Expedition Approval Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { # Hurrah!
@@ -1443,7 +1477,7 @@ nda_nephrenka.43 = { # Ignore Disapproval
 	icon = "gfx/interface/icons/event_icons/event_map.dds" 
 	
 	immediate = { 
-
+		debug_log = "Nile Expedition Ignore Disapproval Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { # Ignore Disapproval
@@ -1527,6 +1561,8 @@ nda_nephrenka.50 = {
 		# get prestige boost
 
 		# should start path to YIG/STY in country it is found in. - Have event for that Country.
+
+		debug_log = "Nile Expedition Dark Pyramid Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -1582,6 +1618,7 @@ nda_nephrenka.51 = {
 		set_global_variable = nda_nephrenka_tomb_nitocris 
 		set_variable = nda_nephrenka_tomb_nitocris 
 
+		debug_log = "Nile Expedition Book of Thoth Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 
@@ -1619,7 +1656,7 @@ nda_nephrenka.60 = {
 	}
 
 	immediate = { 
-
+		debug_log = "Nile Expedition Expedition Fail Event : [THIS.GetCountry.GetNameNoFormatting]"
 	}
 
 	option = { 

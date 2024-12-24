@@ -4,7 +4,10 @@
 # Root = Country
 on_monthly_pulse_country = {
 	on_actions = {
-		nda_monthly_on_action	
+		nda_monthly_on_action
+		delay = { days = 4 }
+		nda_monthly_historical_on_action	
+		delay = { days = 8 }
 		nda_monthly_cult_rejection_on_action
 	}
 }
@@ -75,37 +78,6 @@ nda_monthly_on_action = {
 		nda_whh.13 # Electric Pentangle
 
 		nda_nephrenka.20 # Pyramid Expedition Start
-
-		nda_historic.1837
-		nda_historic.1838
-		nda_historic.1842
-		nda_historic.1848
-		nda_historic.1849
-		nda_historic.1852
-		nda_historic.1854
-		nda_historic.1857 
-		nda_historic.1858
-		nda_historic.1862
-		nda_historic.1865
-		nda_historic.1867
-		nda_historic.1871
-		nda_historic.1875
-		nda_historic.1879		
-		nda_historic.1882	
-		nda_historic.1887
-		nda_historic.1888
-		nda_historic.1889
-		nda_historic.1891		
-		nda_historic.1892
-		nda_historic.1893
-
-		nda_historic_regional.1848
-		nda_historic_regional.1864
-		nda_historic_regional.1870
-		nda_historic_regional.1882
-		nda_historic_regional.1890
-		nda_historic_regional.1892
-		nda_historic_regional.1901
 
 		nda_migo.1
 		nda_migo.4
@@ -216,6 +188,59 @@ nda_monthly_on_action = {
 	}
 }
 
+nda_monthly_historical_on_action = {
+	events = {		
+		nda_historic.1837
+		nda_historic.1838
+		nda_historic.1842
+		nda_historic.1848
+		nda_historic.1849
+		nda_historic.1852
+		nda_historic.1854
+		nda_historic.1857 
+		nda_historic.1858
+		nda_historic.1862
+		nda_historic.1865
+		nda_historic.1867
+		nda_historic.1871
+		nda_historic.1875
+		nda_historic.1879		
+		nda_historic.1882	
+		nda_historic.1887
+		nda_historic.1888
+		nda_historic.1889
+		nda_historic.1891		
+		nda_historic.1892
+		nda_historic.1893
+
+		nda_historic_regional.1848
+		nda_historic_regional.1864
+		nda_historic_regional.1870
+		nda_historic_regional.1882
+		nda_historic_regional.1890
+		nda_historic_regional.1892
+		nda_historic_regional.1901
+	}
+}
+
+# British Folk-ish Horror
+nda_monthly_pan_on_action = {
+	events = {	
+		nda_authors.42 # A C Doyle Character
+		nda_authors.43
+		nda_authors.50
+		nda_nen.1894 # Mor-rison Warning
+
+		nda_pan.1 
+		# nda_pan.2 
+		# nda_pan.3 
+		# nda_pan.10 
+		# nda_pan.11
+		# nda_pan.12
+		# nda_pan.13
+	}
+}
+
 nda_monthly_cult_rejection_on_action = {
 	# after Cthulhu leaves we need to cause reversion back to normal cultures 
 	# - was done via event 'nda_ritual.7' and effect but needs to be expanded to released colonies etc.
@@ -267,7 +292,8 @@ nda_monthly_cult_rejection_on_action = {
 on_monthly_pulse_state = {
 	on_actions = {
 		nda_monthly_state_conversion_on_action	
-		nda_monthly_red_death_effect_on_action
+		# delay = { days = 4 }
+		# nda_monthly_red_death_effect_on_action
 	}
 }
 
@@ -335,40 +361,42 @@ nda_monthly_state_conversion_on_action = {
 	}
 }
 
-nda_monthly_red_death_effect_on_action = {
-	# state level ongoing religious and population conversions
-	effect = {
-		if = {
-			limit = { # Red Death in play			
-				game_date < 1857.1.1 # should be all over by then
-				has_global_variable = nda_poe_red_death				
-				has_variable = nda_poe_red_death_state	
-			}
-			# work out adjustments for variable - do simple countdown to begin with
-			if = {
-				limit = {
-					var:nda_poe_red_death_state < 0
-				}
-				# has run it's course - remove modifier
-				remove_modifier = nda_red_death_modifier
-				#set_variable = nda_red_death_passes
-			}
-			else_if = {
-				limit = {
-					var:nda_poe_red_death_state > -1
-				}
-				change_variable = {
-					name = nda_poe_red_death_state
-					subtract = 1
-				}	
-			}
-		}
-	}
-}
+# Being done by 'Harvest' conditions
+# nda_monthly_red_death_effect_on_action = {
+# 	# state level ongoing religious and population conversions
+# 	effect = {
+# 		if = {
+# 			limit = { # Red Death in play			
+# 				game_date < 1857.1.1 # should be all over by then
+# 				has_global_variable = nda_poe_red_death				
+# 				has_variable = nda_poe_red_death_state	
+# 			}
+# 			# work out adjustments for variable - do simple countdown to begin with
+# 			if = {
+# 				limit = {
+# 					var:nda_poe_red_death_state < 0
+# 				}
+# 				# has run it's course - remove modifier
+# 				remove_modifier = nda_red_death_modifier
+# 				#set_variable = nda_red_death_passes
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					var:nda_poe_red_death_state > -1
+# 				}
+# 				change_variable = {
+# 					name = nda_poe_red_death_state
+# 					subtract = 1
+# 				}	
+# 			}
+# 		}
+# 	}
+# }
 
 on_half_yearly_pulse_country = {
 	on_actions = {
 		nda_half_yearly_on_action	
+		delay = { days = 4 }
 		nda_half_yearly_heirs_on_action
 	}
 }
@@ -378,7 +406,7 @@ nda_half_yearly_on_action = {
 		nda_base.4 # Death of Junzt (Nameless Cults)
 		#nda_base.16 # Cult Country recruiting	# replaced with char interaction		
 		nda_dagonic.4 # Bounty of the Seas
-		nda_dagonic.6 # Fury of Dagon
+		#nda_dagonic.6 # Fury of Dagon # replaced by weather effect
 		nda_hasturian.8 # The Play Fades
 		nda_hasturian.1894 # Travelling Show
 		nda_nen.1934 # Dr West - Denouncement
@@ -560,6 +588,7 @@ on_diplo_play_war_start = {
 	}
 }
 
+# Does this even work any more????
 nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to save files - Does not work in 1.5 ????
 	effect = {
 		war = {
@@ -776,3 +805,41 @@ nda_create_leng_on_action = {
 # 		# }
 # 	}
 # }
+
+##### This overides base on_actions else would get duplicate notifications
+# Root = country
+# scope:area = harvest condition area
+# scope:state = affected state with the highest intensity
+# scope:duration = duration of the harvest condition in days
+# scope:num_states = the number of affected states in the country
+# scope:intensity = the highest intensity of the affected states
+on_harvest_condition_started_in_country = {
+	effect = {
+		#debug_log_scopes = yes
+		if = {
+			limit = {
+				OR = {
+					scope:area = { type = harvest_condition_type:pollinator_surge }
+					scope:area = { type = harvest_condition_type:optimal_sunlight }
+				}				
+			}
+			# Standard Harvest Condition
+			if = {
+				limit = {
+					scope:intensity > 3
+				}
+				post_notification = harvest_condition_started_in_country_important
+			}
+			else = {
+				post_notification = harvest_condition_started_in_country
+			}
+
+		}
+		else = {
+			if = {
+				limit = { NOT = { scope:area = { type = harvest_condition_type:nda_red_death }}} # stop spam
+				post_notification = nda_disaster_condition_started_in_country	
+			}
+		}
+	}
+}

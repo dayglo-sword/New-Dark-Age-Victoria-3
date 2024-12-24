@@ -2,11 +2,11 @@
 
 # Put JE localisation here
  je_nda_nile_expedition: "Archaeological Expedition to the Nile"
- je_nda_nile_expedition_reason: "There is obviously great prestige to be had in uncovering the ancient past of the civilisations along the Nile."
+ je_nda_nile_expedition_reason: "There is obviously great prestige to be had in uncovering the ancient past of the civilisations along the Nile.\n\nThere is also the chance we may recover some arcane artifacts before our rivals can."
  je_nda_nile_expedition_goal: "To find evidence of cultures predating even the Pharaohs.'"
  je_nda_nile_expedition_possible_tt: "Has a University."
- je_nda_nile_expedition_complete_tt: "We have uncovered everything we belive can be found."
- je_nda_nile_expedition_complete: "We have uncovered everything we belive can be found."
+ je_nda_nile_expedition_complete_tt: "We have uncovered everything we believe can be found."
+ je_nda_nile_expedition_complete: "We have uncovered everything we believe can be found."
 
 
 nda_nephrenka.10.t: "Stygian Test"

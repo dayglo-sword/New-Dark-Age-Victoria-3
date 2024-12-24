@@ -120,7 +120,13 @@ nda_effect_yigian_annex = {
 				is_player = no		
 				is_full_cult = no
 				has_variable = nda_yig_in_open	
-				country_has_primary_culture = cu:nda_cul_yigian # needed to stop strange results after revolutions remove culture		
+				country_has_primary_culture = cu:nda_cul_yigian # needed to stop strange results after revolutions remove culture	
+				# capital should be in americas?
+				OR = {
+					country_is_in_north_america = yes
+					country_is_in_central_america = yes
+					country_is_in_south_america = yes
+				}	
 			}
 			order_by = { subtract = global_country_ranking }
 			#position = 1 # just annex most powerful
@@ -131,117 +137,124 @@ nda_effect_yigian_annex = {
 		debug_log = "Yigian - Country surrenders."	
 		#debug_log_scopes = yes	
 
-		scope:nda_yigian_annex = {			
-			debug_log = "YIG - Country surrenders : [THIS.GetCountry.GetNameNoFormatting]"
+		if = {
+			limit = {
+				exists = scope:nda_yigian_annex
+			}
 
-			# send notification - does country still exist after annex?
-			every_country = {
-					post_notification = nda_yigian_lands_expand
-			}		
-			
-			# release puppets and dominions - needs constraint to check if themselves not cultists
-			every_country = {
-				limit = {
-					is_subject_of = scope:nda_yigian_annex
-					NOT = { country_has_primary_culture = cu:nda_cul_yigian }	# don't release - they want to be part of ELD		
-				}
+			scope:nda_yigian_annex = {			
+				debug_log = "YIG - Country surrenders : [THIS.GetCountry.GetNameNoFormatting]"
 
-				make_independent = yes				
-			}	
-			
-			# transfer a leading character to YIG (preferably an historic one)
-			ordered_scope_character = {
-				limit = { 
-					is_ruler = no
-					has_role = politician
-					has_any_cultist_trait = yes
-				}
-				order_by = { 
-					add = 1
-					if = {
-						limit = { has_trait = nda_yig_master }
-						add = 3
-					}
-					if = {
-						limit = { has_trait = nda_yig_acolyte }
-						add = 1
-					}
-					if = {
-						limit = {
-							interest_group = { is_powerful = yes }							
-						}
-						add = 2
-					}
-					if = {
-						limit = { is_historical = yes }
-						add = 5
-					}
-				}
-				max = 1
-				save_scope_as = transfered_ig_leader
+				# send notification - does country still exist after annex?
+				every_country = {
+						post_notification = nda_yigian_lands_expand
+				}		
 				
-			}
-	
-			IF = {
-				limit = { exists = scope:transfered_ig_leader }
-				scope:transfered_ig_leader = {
-					hidden_effect = {
-						if = {
-							limit = {
-								NOT = { has_role = agitator }
-							}
-							add_character_role = agitator
-						}
-						if = {
-							limit = {
-								has_role = general
-							}
-							remove_character_role = general
-						}
-						if = {
-							limit = {
-								has_role = admiral
-							}
-							remove_character_role = admiral
-						}
-						# if = {
-						# 	limit = {
-						# 		has_role = politician
-						# 	}
-						# 	set_as_interest_group_leader = no
-						# 	remove_character_role = politician
-						# }
+				# release puppets and dominions - needs constraint to check if themselves not cultists
+				every_country = {
+					limit = {
+						is_subject_of = scope:nda_yigian_annex
+						NOT = { country_has_primary_culture = cu:nda_cul_yigian }	# don't release - they want to be part of ELD		
 					}
 
-					remove_variable = nda_coven_leader
-
-					interest_group = {
-						save_scope_as = target_IG_type						
+					make_independent = yes				
+				}	
+				
+				# transfer a leading character to YIG (preferably an historic one)
+				ordered_scope_character = {
+					limit = { 
+						is_ruler = no
+						has_role = politician
+						has_any_cultist_trait = yes
 					}
-					if = { 
-						limit = { 
-							has_trait = nda_yig_master 
-							# the respective YIG chararater does not, so replace with senior cultist							
-							c:YIG = { 
-								any_interest_group = { 
-									is_same_interest_group_type = scope:target_IG_type
-									NOT = { leader = { has_trait = nda_yig_master } }
-								} 
-							}
+					order_by = { 
+						add = 1
+						if = {
+							limit = { has_trait = nda_yig_master }
+							add = 3
 						}
-						transfer_character = c:YIG
-						set_as_interest_group_leader = yes
-						debug_log = "YIG Master Transfered"
+						if = {
+							limit = { has_trait = nda_yig_acolyte }
+							add = 1
+						}
+						if = {
+							limit = {
+								interest_group = { is_powerful = yes }							
+							}
+							add = 2
+						}
+						if = {
+							limit = { is_historical = yes }
+							add = 5
+						}
 					}
-					else = {
-						exile_character_with_martyrdom = yes	
-						debug_log = "YIG Master Released"					
-					}
+					max = 1
+					save_scope_as = transfered_ig_leader
 					
-				}			
+				}
+		
+				IF = {
+					limit = { exists = scope:transfered_ig_leader }
+					scope:transfered_ig_leader = {
+						hidden_effect = {
+							if = {
+								limit = {
+									NOT = { has_role = agitator }
+								}
+								add_character_role = agitator
+							}
+							if = {
+								limit = {
+									has_role = general
+								}
+								remove_character_role = general
+							}
+							if = {
+								limit = {
+									has_role = admiral
+								}
+								remove_character_role = admiral
+							}
+							# if = {
+							# 	limit = {
+							# 		has_role = politician
+							# 	}
+							# 	set_as_interest_group_leader = no
+							# 	remove_character_role = politician
+							# }
+						}
+
+						remove_variable = nda_coven_leader
+
+						interest_group = {
+							save_scope_as = target_IG_type						
+						}
+						if = { 
+							limit = { 
+								has_trait = nda_yig_master 
+								# the respective YIG chararater does not, so replace with senior cultist							
+								c:YIG = { 
+									any_interest_group = { 
+										is_same_interest_group_type = scope:target_IG_type
+										NOT = { leader = { has_trait = nda_yig_master } }
+									} 
+								}
+							}
+							transfer_character = c:YIG
+							set_as_interest_group_leader = yes
+							debug_log = "YIG Master Transfered"
+						}
+						else = {
+							exile_character_with_martyrdom = yes	
+							debug_log = "YIG Master Released"					
+						}
+						
+					}			
+				}
 			}
+			annex = scope:nda_yigian_annex			
 		}
-		annex = scope:nda_yigian_annex
+
 
 	}	
 	else = {
