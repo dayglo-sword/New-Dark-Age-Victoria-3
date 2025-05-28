@@ -76,7 +76,10 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 					NOT = { state_region = { has_harvest_condition = nda_red_death } }
 					# don't revisit state (could hit same state_Region?)
 					NOT = { has_variable = nda_poe_red_death_state }
-					owner = { coa_def_native_american_trigger = no } # reverse uno - don't hit native americans
+					owner = { 
+						coa_def_native_american_trigger = no # reverse uno - don't hit native americans
+						coa_def_african_trigger = no
+					} 
 				}
 
 				# if previously hit reduce chance of spread - will not prevent secondary waves
@@ -136,11 +139,11 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 					}
 					modifier = { # Is unincorporated - try and stop spread to minor
 						is_incorporated = no
-						subtract = 50
+						add = -150
 					}
 					modifier = { # Don't punish smaller countries too much
 						owner = { country_rank <= rank_value:insignificant_power}
-						subtract = 50
+						add = -150
 					}
 				}
 				# if previously hit reduce chance of spread - will not prevent secondary waves

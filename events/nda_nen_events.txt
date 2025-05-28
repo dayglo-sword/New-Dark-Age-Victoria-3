@@ -1031,12 +1031,12 @@ nda_nen.1935 = { # The Outro / denouncement
 }
 
 # A handful of non-Mythos events for the Uni
-nda_nen.1893 = { # An Offer of a Chair
+nda_nen.1893 = { # An Offer of a Chair - called from nda_authors.42 
 	type = country_event
 	placement = p:x2B5499
-	title = nda_nen.1922.t
-	desc = nda_nen.1922.d
-	flavor =  nda_nen.1922.f
+	title = nda_nen.1893.t
+	desc = nda_nen.1893.d
+	flavor =  nda_nen.1893.f
 	dlc = dlc_NDA
 
 	duration = 3
@@ -1058,24 +1058,39 @@ nda_nen.1893 = { # An Offer of a Chair
 	}	
 	
 	option = { #"A Welcome Addition."
-		name = nda_nen.1922.a
+		name = nda_nen.1893.a
 		default_option = yes
 
 		# remove crime wave from Bern (hidden effect)
-
+		hidden_effect = {
+			p:x60E0C0 = { 
+				state = { 
+					remove_modifier = modifier_organised_crime
+					remove_variable = nda_moriarty_location
+				}
+			}	
+			
+			p:x2B5499 = { 
+				state = { 
+					set_variable = nda_moriarty_location
+				}
+			}
+			
+			trigger_event = { id = nda_nen.1894 days = {40 90} }	
+		}
 	}
 	option = { #"An Unwanted Person."
 
-		name = nda_nen.1922.b
+		name = nda_nen.1893.b
 	}
 }
 
 nda_nen.1894 = { # A crime wave in Arkham
 	type = country_event
 	placement = p:x2B5499 
-	title = nda_nen.1922.t
-	desc = nda_nen.1922.d
-	flavor =  nda_nen.1922.f
+	title = nda_nen.1894.t
+	desc = nda_nen.1894.d
+	flavor =  nda_nen.1894.f
 	dlc = dlc_NDA
 
 	duration = 3
@@ -1095,10 +1110,20 @@ nda_nen.1894 = { # A crime wave in Arkham
 
 	immediate = {
 		# add crime wave
+		p:x2B5499 = { 
+			state = { 
+				add_modifier = {
+					name = modifier_organised_crime
+					#months = normal_modifier_time # permanent till he dies or moves on.
+				}
+								
+				# or do via additional events if player is owner?
+			}
+		}			
 	}	
 	
 	option = { #"Do we not have detectives?"
-		name = nda_nen.1922.a
+		name = nda_nen.1894.a
 		default_option = yes
 
 	}

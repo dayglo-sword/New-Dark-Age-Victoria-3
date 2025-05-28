@@ -230,16 +230,18 @@ nda_historic_regional.1890 = { # december - first advert for ouija boards "The O
 
 	option = { #"Spiritualists will love it"
 		name = nda_historic_regional.1890.b
-
 		# Boost to Spiritulism - should not do in cult countries?
-		if = {
-			limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+		every_scope_state = {
+			limit = {
+				NOT = { has_variable = nda_rel_boost_spiritualism }
+			}
+
 			set_variable = { # ongoing conversion
-				name = nda_rel_boost_spiritualism						
+				name = nda_rel_boost_spiritualism	
 				months = 6
 				value = nda_trivial_conversion
-			}				
-		}
+			}						
+		}		
 	}
 }
 
@@ -313,7 +315,7 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits into three factions? Alpha et Omega, The Independant and Rectified Rite, The Order of the Stalle Matutina (Morning Star)
 
 	type = country_event
-	placement = p:x0E3435 # Baltimore
+	placement = p:x7543C8 # London
 	title = nda_historic_regional.1901.t
 	desc = nda_historic_regional.1901.d
 	flavor = nda_historic_regional.1901.f
@@ -337,15 +339,15 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 
 		# owner of Baltimore
 		OR = {
-			p:x0E3435 = { state = { owner = ROOT } }
-			has_interest_marker_in_region = p:x0E3435.region			
+			p:x7543C8 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x7543C8.region			
 		}
 	}
 
 	cooldown = { months = 24 }	
 
 	immediate = {
-		p:x0E3435 = { state = { owner = { save_scope_as = location_country } } }	
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }	
 	}
 
 	option = { #"Good ridence to them"
@@ -356,14 +358,21 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 	option = { #"Great, now there's three of them"
 		name = nda_historic_regional.1901.b
 
-		# Boost to Spiritulism - should not do in cult countries?
-		if = {
-			limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-			set_variable = { # ongoing conversion
-				name = nda_rel_boost_spiritualism						
-				months = 6
-				value = nda_trivial_conversion
-			}				
+		# Boost to Theosophy - should not do in cult countries?
+		p:x7543C8 = {
+			state = {
+				if = {
+					# do limited conversion
+					limit = { NOT = { has_variable = nda_rel_boost_theosophic }}
+					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_theosophic
+						months = 6
+						value = nda_trivial_conversion
+					}
+				}
+				owner = { save_scope_as = location_country }
+			} 				
 		}
 	}
 }

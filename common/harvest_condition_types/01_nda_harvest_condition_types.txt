@@ -190,4 +190,3 @@ nda_red_death = {
 	map_texture = "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds"
 	graphics = drought
 }
-
