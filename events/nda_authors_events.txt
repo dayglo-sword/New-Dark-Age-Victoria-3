@@ -681,6 +681,7 @@ nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but
 				p:x60E0C0 = { state = { owner = ROOT } }
 			 }
 
+
 			# create_character = {
 			# 	template = protagonist_bellingham 
 			# 	on_created = {
@@ -702,10 +703,22 @@ nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but
 		default_option = yes
 
 		# Gets granted a position
-
 		# add crime wave
+		hidden_effect = {
+			p:x60E0C0 = { 
+				state = { 
+					add_modifier = {
+						name = modifier_organised_crime
+						#months = normal_modifier_time # permanent till he dies or moves on.
+					}
+					# or do via additional events if player is owner?
+				}
 
-		# send event to owner of Miskatonic Uni in 12 months
+				set_variable = nda_moriarty_location
+			}			
+		}
+
+		# send event to owner of Miskatonic Uni in 6 months
 		if = {
 			limit = {
 				p:x2B5499  = { 
@@ -754,9 +767,9 @@ nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but
 	}
 }
 
-nda_authors.43 = { # The Dynamics of a Star
+nda_authors.43 = { # The Dynamics of a Star - Advance warning of event nda_hgw.10
 	type = country_event
-	placement = p:x60E0C0 # this needs to be Arkham based on location
+	placement = p:x2B5499 # this needs to be Arkham based on location
 	title = nda_authors.43.t
 	desc = nda_authors.43.d
 	flavor =  nda_authors.43.f
@@ -776,14 +789,14 @@ nda_authors.43 = { # The Dynamics of a Star
 		
  		# 1927, no Cthulhu
 		 is_player = yes	
-		 game_date >=  1927.4.2  
+		 game_date >=  1927.6.2  # 6 months prior to main warning
 		 game_date < 1929.1.1  
 		 has_global_variable = nda_ritual_cthulhu_visits
 		 NOT = { has_global_variable = nda_the_star_intro }	
 
-		# owner of Bern
+		# owner of Bern - must have 'Morrison'
 		OR = {
-			p:x60E0C0 = { state = { owner = ROOT } }			
+			p:x2B5499 = { state = { owner = ROOT } }			
 		}			
    }
 
@@ -794,7 +807,7 @@ nda_authors.43 = { # The Dynamics of a Star
 
 		IF = {
 			limit = {
-				p:x60E0C0 = { state = { owner = ROOT } }
+				p:x2B5499 = { state = { owner = ROOT } }
 			 }
 		}
 	}
@@ -829,7 +842,7 @@ nda_authors.50 = { # The Willows - written in 1907 push to earlier date? > 1887
 		 game_date >=  1887.4.2  
 		 game_date < 1889.1.1  
 
-		# should not be a war zone
+		# should not be a war zone as needs tourists.
 		OR = {
 			p:xD06161 = { state = { owner =  { is_at_war = no } } }		
 		}		
