@@ -68,6 +68,18 @@ nda_authors.50.b: "We should protest."
 
 
 
+nda_authors.60.t: "Mysterious Plague"
+nda_authors.60.d: "A plague has hit the town of Wisburg, near Wismar. If was apparently started when rats came streaming off the schooner Empusa, which had recently docked in the port.\n\n"
+nda_authors.60.f: "''"
+nda_authors.60.a: "The hazards of travel"
+nda_authors.60.b: "We should protest."
+
+nda_authors.61.t: "A Case of Defamation"
+nda_authors.61.d: "The film director F W Murnau is being sued for defamation by a certain Count Orlok, who claims that the film depicts an unflatering version of them.\n\nMurnau's defense seems to revolve around the fact that, since the film is depicting events based in 1838, it can not be the same Orlok who is being depicted.\n\nThe estate of Bram Stoker is also apparently starting legal action as they claim the film is a thinly disgused interpretation of the novel and stage play 'Dracula'"
+nda_authors.61.f: "''"
+nda_authors.61.a: "The hazards of travel"
+nda_authors.61.b: "We should protest."
+
 nda_titanic.2.t: "A Mournful Disaster"
 nda_titanic.2.d: "After the monumental Titanic left the shipyards of [SCOPE.sState('titanic_state').GetName], it wasn't long until tragedy reached her, as part of her hull collided with an equally imposing iceberg.\n\nThe ice enveloped the ship and it soon became apparent this was no ordinary iceberg.\n\nA number of crew and passengers appeared to suffer from some form of Mesmerism and wandered from the entrapped ship onto the Iceberg, where they waited in line to be devoured by a Great White Worm.\n\nOnly a handful of survivors managed to escape via the lifeboats.\n\nNo trace of the iceberg can now be found."
 nda_titanic.2.d2: "After the monumental [SCOPE.GetRootScope.GetCountry.GetCustom('dynamic_titanic')] left the shipyards of [SCOPE.sState('titanic_state').GetName], it wasn't long until tragedy reached her, as part of her hull collided with an equally imposing iceberg.\n\nThe ice enveloped the ship and it soon became apparent this was no ordinary iceberg.\n\nA number of crew and passengers appeared to suffer from some form of Mesmerism and wandered from the entrapped ship onto the Iceberg, where they waited in line to be devoured by a Great White Worm.\n\nOnly a handful of survivors managed to escape via the lifeboats.\n\nNo trace of the iceberg can now be found."

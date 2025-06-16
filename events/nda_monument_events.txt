@@ -12,12 +12,10 @@ nda_monuments.10 = {  # Vatican falls to cultists - launched from decision
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
-		
+		video = "unspecific_devastation"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -41,11 +39,10 @@ nda_monuments.20 = {  # Hagia Sophia falls to cultists - launched from decision
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
-		
+		video = "unspecific_devastation"	
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -69,12 +66,10 @@ nda_monuments.30 = {  # St Basils falls to cultists - launched from decision
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
-		
+		video = "unspecific_devastation"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
@@ -98,12 +93,10 @@ nda_monuments.40 = {  # Miskatonic Uni falls to cultists - launched from decisio
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
-		
+		video = "unspecific_devastation"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 

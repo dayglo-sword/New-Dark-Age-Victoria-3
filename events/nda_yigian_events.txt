@@ -87,13 +87,13 @@ nda_yigian.2 = { # Cult in country converts to Yigian - called from journal 'je_
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		video = "southamerica_war_civilians"
 		
 	}
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -203,11 +203,11 @@ nda_yigian.3 = { # Notifications that the Yigian Lands has formed
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -269,11 +269,11 @@ nda_yigian.11 = { # Snake Oil Incident
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -326,11 +326,11 @@ nda_yigian.1892 = { # The Mirror reappears
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -455,11 +455,11 @@ nda_yigian.1893 = { # Demand Mirror from player.
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -511,11 +511,11 @@ nda_yigian.1894 = {
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -594,11 +594,11 @@ nda_yigian.1894 = {
 # 	duration = 3
 
 # 	event_image = {
-# 		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+# 		video = "southamerica_war_civilians"		
 # 	}
 
 # 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+# 	 
 
 # 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 

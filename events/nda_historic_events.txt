@@ -58,11 +58,10 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "southamerica_christianity"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -105,11 +104,10 @@ nda_historic.1842 = { # Zanoni novel by Edward Bulwer-Lytton
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "ep1_printing_press"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -159,11 +157,10 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -252,7 +249,7 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	# 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds" 
 
@@ -320,11 +317,10 @@ nda_historic.1852 = { # An American Medium in London
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -416,11 +412,10 @@ nda_historic.1854 = { # Eliphas Levi - Dogme et Rituel de la Haute Magie 'The Do
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -470,11 +465,10 @@ nda_historic.1857 = { # Banner of Light
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -582,11 +576,10 @@ nda_historic.1858 = { # Le Livre des Esprits
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -835,11 +828,10 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe!
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 	
@@ -889,11 +881,10 @@ nda_historic.1867 = { # Societas Rosicruciana in Anglia TODO (should be regional
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -935,11 +926,10 @@ nda_historic.1871 = { # Vril - Power of the coming race : book by Edward Bulwer-
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "ep1_printing_press"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -1182,11 +1172,10 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 	minor_left_icon = scope:location_country
@@ -1250,11 +1239,10 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement (https://www.gu
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 	minor_left_icon = scope:location_country
@@ -1299,11 +1287,10 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 	minor_left_icon = scope:location_country
@@ -1352,11 +1339,10 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 	minor_left_icon = scope:location_country
@@ -1423,11 +1409,10 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 	minor_left_icon = scope:location_country
@@ -1473,11 +1458,10 @@ nda_historic.1893 = {  # National Spiritualist Association of Churches
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+		video = "europenorthamerica_london_center"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 	minor_left_icon = scope:location_country

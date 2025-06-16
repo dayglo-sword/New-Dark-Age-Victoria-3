@@ -107,7 +107,7 @@ nda_nen.1903 = { # Appeal for reinstatement
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds" # hammer and gavel
 
@@ -169,7 +169,7 @@ nda_nen.12 = { # Plague in Arkham
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -212,7 +212,7 @@ nda_nen.1918 = { #
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
@@ -275,7 +275,7 @@ nda_nen.1920 = { # Disappearence of Dr West
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -325,7 +325,7 @@ nda_nen.1934 = { # End Herbert West with warning from the future - Actually a ho
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -366,7 +366,7 @@ nda_nen.16 = { # A plague of reanimated - End result of 'tonic for the troops' -
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -456,7 +456,7 @@ nda_nen.18 = { # The plague of reanimated spreads
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -491,7 +491,7 @@ nda_nen.1845 = { # Devil Worship in Innsmouth
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -536,7 +536,7 @@ nda_nen.1846 = { # Plague in Innsmouth
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -589,7 +589,7 @@ nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_christianity.bk2"		
+		video = "southamerica_christianity"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -635,7 +635,7 @@ nda_nen.1877 = { # Controversy surrounding the Church of Starry Wisdom - Rhode I
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_christianity.bk2"		
+		video = "southamerica_christianity"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -703,7 +703,7 @@ nda_nen.1878 = { # "Goverment Shutdown!"
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_christianity.bk2"		
+		video = "southamerica_christianity"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -750,7 +750,7 @@ nda_nen.1879 = {
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -785,7 +785,7 @@ nda_nen.1880 = {
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -826,11 +826,11 @@ nda_nen.1882 = { # The Colour Out Of Space - The Meteor
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -865,11 +865,11 @@ nda_nen.1883 = { # The Colour Out Of Space
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -919,7 +919,7 @@ nda_nen.1913 = { # Maine Meteor - The Green Meadow
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -958,7 +958,7 @@ nda_nen.1922 = { # Horror at Martin's Beach
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -1100,7 +1100,7 @@ nda_nen.1894 = { # A crime wave in Arkham
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 

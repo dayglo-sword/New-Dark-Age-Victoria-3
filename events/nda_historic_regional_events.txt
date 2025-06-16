@@ -11,11 +11,10 @@ nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Ed
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -54,11 +53,10 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -100,11 +98,10 @@ nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers tim
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -146,11 +143,10 @@ nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Don
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -196,11 +192,10 @@ nda_historic_regional.1890 = { # december - first advert for ouija boards "The O
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "europenorthamerica_art_gallery"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -255,11 +250,10 @@ nda_historic_regional.1892 = { # The Great Sea Serpent - book by zoologist Corne
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "unspecific_steam_ship"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -323,11 +317,10 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/europenorthamerica_art_gallery.bk2"		
+		video = "unspecific_politicians_arguing"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -337,7 +330,7 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 		game_date >= 1901.12.1 
 		game_date < 1903.1.1 
 
-		# owner of Baltimore
+		# owner of London
 		OR = {
 			p:x7543C8 = { state = { owner = ROOT } }
 			has_interest_marker_in_region = p:x7543C8.region			

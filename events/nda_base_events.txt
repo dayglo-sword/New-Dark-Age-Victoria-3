@@ -11,11 +11,11 @@ nda_base.1 = { # An Introduction to NDA
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+		video = "southamerica_war_civilians"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
@@ -53,7 +53,7 @@ nda_base.2 = { # Nameless Cults published
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
@@ -200,7 +200,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
@@ -327,7 +327,7 @@ nda_base.4 = { # The Death of Junzt
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -487,13 +487,13 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		video = "southamerica_war_civilians"
 		
 	}
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -662,13 +662,13 @@ nda_base.8 = { # Neigbouring country has spread cult to us
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		video = "southamerica_war_civilians"
 		
 	}
 #	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -781,11 +781,11 @@ nda_base.10 = { # Notifications that the Eldritch Realms has formed
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+		video = "southamerica_war_civilians"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -845,11 +845,11 @@ nda_base.11 = { # Intro help - triggered from nda_base.1
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+		video = "southamerica_war_civilians"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
@@ -929,7 +929,7 @@ nda_base.13 = { # The Cult fails to spread
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		video = "southamerica_war_civilians"
 		
 	}
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
@@ -1663,7 +1663,7 @@ nda_base.30 = { # Cult is leaderless
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
@@ -1771,7 +1771,7 @@ nda_base.31 = { # Pandered to cult but failed to add leader - worse than normal 
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
@@ -1864,11 +1864,11 @@ nda_base.40 = { # ModCon3 Ref - Abe disappears
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+		video = "southamerica_war_civilians"	
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
 
