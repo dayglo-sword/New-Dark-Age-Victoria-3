@@ -12,13 +12,11 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_christianity.bk2"
-		
+		video = "southamerica_christianity"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-
+	 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
 	trigger = {
@@ -132,12 +130,12 @@ nda_authors.20 = { # Lair of the White Worm - Character event
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_christianity.bk2"
+		video = "southamerica_christianity"
 		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
@@ -326,7 +324,7 @@ nda_authors.31 = { # A Tragic Death
 	left_icon = scope:nda_rune_victim_1
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -358,7 +356,7 @@ nda_authors.32 = { #  A Worried Intellectual
 	left_icon = scope:nda_rune_potential_victim
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -411,7 +409,7 @@ nda_authors.33 = { # Final Victim
 	left_icon = scope:nda_rune_victim_2
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
@@ -543,12 +541,14 @@ nda_authors.41 = { # Professor Challenger returns
 	dlc = dlc_NDA
 
 	event_image = {
-		video = "unspecific_sick_in_hospital"
+		video = "rp1_amazon_exploitation"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	minor_left_icon = scope:location_country
 
 	duration = 3
 
@@ -572,6 +572,8 @@ nda_authors.41 = { # Professor Challenger returns
 
 	immediate = {
 		debug_log = "Professor Challenger"
+
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }	
 
 		IF = {
 			limit = {
@@ -657,6 +659,8 @@ nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
+	minor_left_icon = scope:location_country
+
 	duration = 3
 
 	trigger = { 
@@ -681,21 +685,9 @@ nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but
 				p:x60E0C0 = { state = { owner = ROOT } }
 			 }
 
-
-			# create_character = {
-			# 	template = protagonist_bellingham 
-			# 	on_created = {
-			# 		set_variable = is_bellingham						
-			# 	}
-			# }
-						
-			# random_scope_character = {
-			# 	limit = {
-			# 		has_variable = is_bellingham
-			# 	}
-			# 	save_scope_as = scope_bellingham
-			# }	
 		}
+
+		p:x60E0C0 = { state = { owner = { save_scope_as = location_country } } }	
 	}	
 	
 	option = {
@@ -751,19 +743,7 @@ nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but
 	
 	}
 	option = {
-		name = nda_authors.42.b
-
-		# Is sent on way - random assign to country or leave out of game??
-		# trigger = {
-		# 	p:x60E0C0 = { state = { owner = ROOT } }
-		# 	is_cultist_country = yes
-		# 	empty_agitator_slots >= 1
-		# }
-
-		# # Recruit Bellingham
-		# scope:scope_bellingham = { 
-		# 	add_character_role = agitator
-		# }						
+		name = nda_authors.42.b				
 	}
 }
 
@@ -861,5 +841,101 @@ nda_authors.50 = { # The Willows - written in 1907 push to earlier date? > 1887
 
 	option = {
 		name = nda_authors.50.b
+	}
+}
+
+# Nosferatu: A Symphony of Horror  - have lead event for 1838 when story is set? Use Wismar for Wisburg
+nda_authors.60 = { # Event from Nosferatu
+	type = country_event
+	placement = p:xE080A0 # Wismar
+	title = nda_authors.60.t
+	desc = nda_authors.60.d
+	flavor =  nda_authors.60.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	minor_left_icon = scope:location_country
+
+	duration = 3
+
+	trigger = { 
+		is_player = yes	
+		game_date >=  1838.4.2  
+		game_date < 1839.1.1  
+ 
+
+		OR = {
+			p:xE080A0 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:xE080A0.region			
+		}
+   }
+
+	cooldown = { months = 48 }
+
+	immediate = {
+		debug_log = "Nosferatu Event"
+		# Add plague effect to the region
+
+		p:xE080A0 = { state = { owner = { save_scope_as = location_country } } }	
+	}
+	
+	option = { # 
+		name = nda_authors.60.a
+		default_option = yes	
+	}
+}
+
+# Nosferatu: A Symphony of Horror 
+nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
+	type = country_event
+	placement = p:xE080A0 # Wismar
+	title = nda_authors.61.t
+	desc = nda_authors.61.d
+	flavor =  nda_authors.61.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	minor_left_icon = scope:location_country
+
+	duration = 3
+
+	trigger = { 
+		is_player = yes	
+		game_date >=  1922.4.2  
+		game_date < 1926.1.1  
+
+		OR = {
+			p:xE080A0 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:xE080A0.region			
+		}
+   }
+
+	cooldown = { months = 48 }
+
+	immediate = {
+		debug_log = "Nosferatu Film"
+
+		p:xE080A0 = { state = { owner = { save_scope_as = location_country } } }
+	}
+	
+	option = { # 
+		name = nda_authors.61.a
+		default_option = yes	
+	}
+
+	option = { # Poor Count Orlok
+		name = nda_authors.61.b
 	}
 }

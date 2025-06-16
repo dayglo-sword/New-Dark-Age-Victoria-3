@@ -16,7 +16,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
 
@@ -62,12 +62,12 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 # 	duration = 3
 
 # 	event_image = {
-# 		video = "gfx/event_pictures/southamerica_war_civilians.bk2" # medical
+# 		video = "southamerica_war_civilians" # medical
 		
 # 	}
 
 # 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+# 	 
 
 # 	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
 
@@ -165,12 +165,12 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 # 	duration = 3
 
 # 	event_image = {
-# 		video = "gfx/event_pictures/southamerica_war_civilians.bk2" # medical
+# 		video = "southamerica_war_civilians" # medical
 		
 # 	}
 
 # 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+# 	 
 
 # 	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
 
@@ -552,7 +552,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 # 	}
 
 # 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+# 	 
 
 # 	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
 

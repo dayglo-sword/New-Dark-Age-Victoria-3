@@ -542,12 +542,10 @@ nda_lostcities.40 = {  # Nameless City revealed - For ELD or STY (original owner
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_jungle_expedition.bk2"
-		
+		video = "ep1_central_asian_city"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 

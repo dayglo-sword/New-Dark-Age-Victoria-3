@@ -13,7 +13,7 @@ nda_investigator.1 = { # Character event - becomes Investigator
 	duration = 3
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
@@ -59,7 +59,7 @@ nda_investigator.2 = { # Character event - becomes Cultist
 	duration = 3
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
@@ -116,7 +116,7 @@ nda_investigator.3 = { # Character event - Assasinated
 	duration = 3
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 

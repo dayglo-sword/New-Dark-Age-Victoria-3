@@ -20,13 +20,13 @@ nda_migo.1 = { #  Migo Intro - In The Night
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	trigger = {
-		game_date >= 1838.4.1 
+		game_date >= 1838.5.1 
 		game_date < 1839.1.1 
 		is_player = yes
 		NOT ={ has_global_variable =  nda_migo_experiment }
@@ -63,12 +63,12 @@ nda_migo.2 = { # All A Dream - Migo rejected
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+		video = "southamerica_war_civilians"
 		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -97,11 +97,11 @@ nda_migo.3 = { #  We Will Return
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -133,11 +133,11 @@ nda_migo.4 = { #  We Have Returned
 	duration = 1 # don't give player too long to resolve things in old country
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -190,11 +190,11 @@ nda_migo.5 = { #  New Home
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -240,11 +240,11 @@ nda_migo.1878 = { # The Trapezohedron reappears (events nda_nen.1878-1880) - if 
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -362,11 +362,11 @@ nda_migo.1890 = { # The 'King in Yellow' Play spooks Mi-Go
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -402,11 +402,11 @@ nda_migo.1892 = { # 'Hasturian America' spooks Mi-Go
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -444,11 +444,11 @@ nda_migo.1924 = { #  The End Is Nigh
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -499,11 +499,11 @@ nda_migo.1927 = { #  The End Is Nigh
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -560,11 +560,11 @@ nda_migo.1935 = { #  The End Of Time
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	trigger = { # This is an alt to the standard end of game denouncement 'nda_nen.1935'
 		game_date >= 1935.10.1 

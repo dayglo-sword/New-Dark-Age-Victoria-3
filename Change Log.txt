@@ -1,3 +1,17 @@
+Version v1.9.0
+
+Major Changes
+
+
+Minor Changes
+Add minor Nosferatu events.
+Add negative diplo catalyst to Maritime buttons.
+
+Bug Fixes
+Correct premature Spirtualism boost on Inqusition fail.
+
+------
+
 Version v1.8.7
 
 Major Changes

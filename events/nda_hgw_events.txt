@@ -86,13 +86,14 @@ nda_hgw.12 = { #  Closest Approach - Devestation (Punishment for Defeating Cthul
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+		video = "unspecific_devastation"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
-
+	 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	minor_left_icon = scope:nda_star_epicentre
 
 	immediate = {
 		debug_log = "The Star - Closest Approach"
@@ -121,11 +122,11 @@ nda_hgw.13 = { # Aftermath
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_devastation.bk2"		
+		video = "unspecific_devastation"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -304,7 +305,8 @@ nda_hgw.25 = { # THE SEA RAIDERS - from same collection of short stories as Abys
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	
+	minor_left_icon = scope:location_country
+
 	trigger = {
 		# owner of Devon coast or NEN
 		OR = {
@@ -327,6 +329,7 @@ nda_hgw.25 = { # THE SEA RAIDERS - from same collection of short stories as Abys
 			p:xC900EF = { state = {  add_modifier = { name = nda_sea_creatures_modifier months = 3 } } }
 		}
 
+		p:xC900EF = { state = { owner = { save_scope_as = location_country } } }	
 	}	
 	
 	option = { #"Interesting"

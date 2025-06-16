@@ -358,13 +358,23 @@ nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
 	type = country_event
 	placement = ROOT
 	title = nda_eap.15.t
-	desc = nda_eap.15.d
+	desc = { 
+		first_valid = {
+		triggered_desc = {
+			trigger = { # from overseas
+				 has_local_variable = is_spiritualism
+			}
+			desc = nda_eap.15.ds
+		}			
+		desc = nda_eap.15.da
+		}
+	}
 	flavor =  nda_eap.15.f
 
 	duration = 3
 
 	event_image = {
-		video = "unspecific_sick_in_hospital"
+		video = "southamerica_christianity"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -387,39 +397,54 @@ nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
 
 	immediate = {
 		set_variable = nda_inqusition_aftermath
+
+		# Set options based on if Spiritulism active
+		if = { 
+			limit = { game_date >= 1848.4.1 }
+			set_local_variable = is_spiritualism
+		 }
 	}	
 	
 	option = { # Ignore for minor boost
 		name = nda_eap.15.a
 		default_option = yes
 
-		every_scope_state = {
-			limit = { NOT = { has_variable = nda_rel_boost_spiritualism } }
-					
-			set_variable = { # ongoing conversion
-				name = nda_rel_boost_spiritualism						
-				months = 12
-				value = nda_trivial_conversion
-			}					
+		custom_tooltip = nda_eap.15.a_tt
+		if = { limit = { has_local_variable = is_spiritualism}
+
+			every_scope_state = {
+				limit = { NOT = { has_variable = nda_rel_boost_spiritualism } }
+						
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism						
+					months = 12
+					value = nda_trivial_conversion
+				}					
+			}		
 		}
 	}
 
 	option = { # Promote for major boost
 		name = nda_eap.15.b
+		
+		custom_tooltip = nda_eap.15.b_tt
+		if = { limit = { has_local_variable = is_spiritualism}
 
-		every_scope_state = {
-			limit = { has_variable = nda_rel_boost_spiritualism }
-				
-			set_variable = { # ongoing conversion
-				name = nda_rel_boost_spiritualism						
-				months = 12
-				value = nda_small_conversion
-			}		
+			every_scope_state = {
+				limit = { has_variable = nda_rel_boost_spiritualism }
+					
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism						
+					months = 12
+					value = nda_small_conversion
+				}		
+			}
 		}
 	}
 
 	option = { # 
 		name = nda_eap.15.c
+		custom_tooltip = nda_eap.15.c_tt
 
 	}
 }

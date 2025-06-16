@@ -11,11 +11,10 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"		
+		video = "unspecific_politicians_arguing"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
@@ -93,11 +92,10 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"	
+		video = "unspecific_politicians_arguing"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
@@ -200,13 +198,10 @@ nda_hasturian.3 = { # The Repairer of Reputations
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
-		
+		video = "unspecific_politicians_arguing"		
 	}
-#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/africa/leader_arguing"
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 	#icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
@@ -282,13 +277,10 @@ nda_hasturian.4 = { # The Repairers Offer
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
-		
+		video = "unspecific_politicians_arguing"		
 	}
-#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect ="event:/SFX/Events/africa/leader_arguing"
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -685,11 +677,11 @@ nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) 
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -811,11 +803,11 @@ nda_hasturian.1893 = { # Demand Trapezohedron from player.
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
@@ -892,11 +884,11 @@ nda_hasturian.1895 = { # The Travelling Players
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_war_civilians.bk2"		
+		video = "southamerica_war_civilians"		
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+	 
 
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
