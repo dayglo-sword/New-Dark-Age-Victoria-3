@@ -36,21 +36,23 @@ je_nda_cult_diplo_btn_recognise_dagonic_lands = {
 	}
 
 	ai_chance = {
-		base = 5	
+		value = 5	
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		if = {
+			limit = {
+				 bureaucracy > 0
+			}
 			add = 5
 		}
-		modifier = {
-			trigger = {
+		if = {
+			limit = {
 				OR = {
 					is_diplomatic_play_committed_participant = yes
 					is_at_war = yes
 				}
 			}
 			add = -1000
-		}	
+		}
 	}
 
 	effect = {
@@ -133,21 +135,23 @@ je_nda_cult_diplo_btn_release_dagonic_lands = {
 	}
 
 	ai_chance = {
-		base = 5
+		value = 5	
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		if = {
+			limit = {
+				 bureaucracy > 0
+			}
 			add = 5
 		}
-		modifier = {
-			trigger = {
+		if = {
+			limit = {
 				OR = {
 					is_diplomatic_play_committed_participant = yes
 					is_at_war = yes
 				}
 			}
 			add = -1000
-		}	
+		}
 	}
 
 	effect = {
@@ -210,21 +214,23 @@ je_nda_cult_diplo_btn_recognise_yigian_lands = {
 	}
 
 	ai_chance = {
-		base = 5	
+		value = 5	
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		if = {
+			limit = {
+				 bureaucracy > 0
+			}
 			add = 5
 		}
-		modifier = {
-			trigger = {
+		if = {
+			limit = {
 				OR = {
 					is_diplomatic_play_committed_participant = yes
 					is_at_war = yes
 				}
 			}
 			add = -1000
-		}	
+		}
 	}
 
 	effect = {
@@ -296,21 +302,23 @@ je_nda_cult_diplo_btn_release_yigian_lands = {
 	}
 
 	ai_chance = {
-		base = 5
+		value = 5	
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		if = {
+			limit = {
+				 bureaucracy > 0
+			}
 			add = 5
 		}
-		modifier = {
-			trigger = {
+		if = {
+			limit = {
 				OR = {
 					is_diplomatic_play_committed_participant = yes
 					is_at_war = yes
 				}
 			}
 			add = -1000
-		}	
+		}
 	}
 
 	effect = {
@@ -400,21 +408,23 @@ je_nda_cult_diplo_btn_nameless_city = {
 	}
 
 	ai_chance = {
-		base = 10
+		value = 10	
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		if = {
+			limit = {
+				 bureaucracy > 0
+			}
 			add = 5
 		}
-		modifier = {
-			trigger = {
+		if = {
+			limit = {
 				OR = {
 					is_diplomatic_play_committed_participant = yes
 					is_at_war = yes
 				}
 			}
 			add = -1000
-		}	
+		}
 	}
 
 	effect = {
@@ -473,13 +483,23 @@ je_nda_cult_diplo_btn_cult_missionaries = {
 	}
 
 	ai_chance = {
-		base = 5
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		value = 5	
+
+		if = {
+			limit = {
+				 bureaucracy > 0
+			}
 			add = 5
 		}
-		# modifier based on relationship ?
-	
+		if = {
+			limit = {
+				OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_at_war = yes
+				}
+			}
+			add = -1000
+		}
 	}
 
 	effect = {

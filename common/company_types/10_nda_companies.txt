@@ -7,6 +7,8 @@ company_nda_bovril = {
 	
 	flavored_company = yes
 	
+	preferred_headquarters = { STATE_ONTARIO } # Canada or Britain?
+
 	building_types = { 
 		building_food_industry
 	}
@@ -27,7 +29,7 @@ company_nda_bovril = {
 	possible = { 
 		AND = {
 			any_scope_state = {
-				region = sr:region_north_sea_coast	
+				region = sr:region_north_sea_coast	 # Canada or Britain?
 
 				any_scope_building = {
 					is_building_type = building_food_industry
@@ -58,9 +60,26 @@ company_nda_marsh_fishing = {
 	
 	flavored_company = yes
 	
+	preferred_headquarters = { STATE_NEW_HAMPSHIRE }
+
 	building_types = {
 		building_fishing_wharf
 		building_whaling_station
+	}
+
+	extension_building_types = {
+		building_shipyards
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_fish
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_fish_complete_tt
+			has_variable = prestige_good_generic_fish_var
+		}
 	}
 
 	potential = {
@@ -103,8 +122,14 @@ company_nda_curwen_forestry = {
 	
 	flavored_company = yes
 	
+	preferred_headquarters = { STATE_NEW_HAMPSHIRE }
+
 	building_types = {
 		building_logging_camp
+	}
+
+	extension_building_types = {
+		building_tooling_workshops
 	}
 
 	potential = {
@@ -146,9 +171,26 @@ company_nda_west_chemicals = {
 	
 	flavored_company = yes
 	
+	preferred_headquarters = { STATE_NEW_HAMPSHIRE }
+
 	building_types = {
 		building_chemical_plants
 		building_synthetics_plants
+	}
+
+	extension_building_types = {
+		building_sulfur_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_fertilizer
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_fertilizer_complete_tt
+			has_variable = prestige_good_generic_fertilizer_var
+		}
 	}
 
 	attainable = {

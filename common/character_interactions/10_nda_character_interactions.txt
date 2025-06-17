@@ -89,7 +89,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		} 
 	}
 
-	cooldown = { months = 3 }
+	cooldown = { days = very_long_modifier_time }
 	show_confirmation_box = yes
 	show_requirements = yes
 
@@ -240,7 +240,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 		}
 	}
 
-	cooldown = { months = 3 } # event version was 6mo but this should be better
+	cooldown = { days= 100 } # event version was 6mo but this should be better
 	show_confirmation_box = yes
 	show_requirements = yes
 
@@ -346,7 +346,7 @@ convert_to_dagon = { # If not already give character eldritch trait
 		}
 	}
 
-	cooldown = { months = 3 } # event version was 6mo but this should be better
+	cooldown = { days= 100 } # event version was 6mo but this should be better
 	show_confirmation_box = yes
 	show_requirements = yes
 
@@ -442,7 +442,7 @@ convert_to_yig = { # If not already give character eldritch trait
 		}
 	}
 
-	cooldown = { months = 3 } # event version was 6mo but this should be better
+	cooldown = { days= 100 } # event version was 6mo but this should be better
 	show_confirmation_box = yes
 	show_requirements = yes
 
@@ -555,7 +555,7 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 		}
 	}
 
-	cooldown = { months = 3 }
+	cooldown = { days= 100 }
 	show_confirmation_box = yes
 	show_requirements = yes
 
@@ -625,7 +625,7 @@ adopt_cult_culture = {
 		}
 	}
 
-	cooldown = { months = 3 } # event version was 6mo but this should be better
+	cooldown = { days= 100 } # event version was 6mo but this should be better
 	show_confirmation_box = yes
 	show_requirements = yes
 

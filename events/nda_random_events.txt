@@ -45,7 +45,7 @@ nda_random.1 = { # Random Spread of Spiritualism to other major country - do aft
 
    }
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		debug_log = "Random 1 - Spiritualism Spread"
@@ -149,7 +149,7 @@ nda_random.2 = { # Random Spread of Theosophy to other major country - do after 
 
    }
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		debug_log = "Random 1 - Spiritualism Spread"

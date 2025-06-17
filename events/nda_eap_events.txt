@@ -20,7 +20,7 @@ nda_eap.10 = { # The initial outbreak - (Baltimore) direct from Poe Death event.
 
 	duration = 3
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		debug_log = "Red Death Begins - Baltimore"
@@ -121,18 +121,18 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 						has_building = building_port
 						add = 500
 					}
-					modifier = { # spreads over seas via trade
-						owner = { num_mutual_trade_route_levels_with_country:root > 0 }
-						has_building = building_port
-						add = 20
-						# not a usable value	- have to do case??
-						#add = num_mutual_trade_route_levels_with_country:root
-					}
-					modifier = { # spreads over seas via trade
-						owner = { num_mutual_trade_route_levels_with_country:root > 5 }
-						has_building = building_port
-						add = 100
-					}
+					# modifier = { # spreads over seas via trade
+					# 	owner = { num_mutual_trade_route_levels_with_country:root > 0 }
+					# 	has_building = building_port
+					# 	add = 20
+					# 	# not a usable value	- have to do case??
+					# 	#add = num_mutual_trade_route_levels_with_country:root
+					# }
+					# modifier = { # spreads over seas via trade
+					# 	owner = { num_mutual_trade_route_levels_with_country:root > 5 }
+					# 	has_building = building_port
+					# 	add = 100
+					# }
 					modifier = { # In same market
 						market = scope:scope_spread_source.market
 						add = 50
@@ -307,7 +307,7 @@ nda_eap.14 = { # Red Death Redemption - post Red Death Spiritualist boost
 		}
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 
@@ -393,7 +393,7 @@ nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
 		}
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		set_variable = nda_inqusition_aftermath

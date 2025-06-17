@@ -35,7 +35,7 @@ nda_historic.1837 = { # Masonic Meeting
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		debug_log = "Masonic Meeting"
@@ -81,7 +81,7 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		debug_log = "Great Awakening"
@@ -128,7 +128,7 @@ nda_historic.1842 = { # Zanoni novel by Edward Bulwer-Lytton
 		}	
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 	
 	immediate = {
 		debug_log = "Zanoni : [THIS.GetCountry.GetNameNoFormatting]" 
@@ -181,7 +181,7 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 		}	
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		debug_log = "Founding of Spiritualist Movement : [THIS.GetCountry.GetNameNoFormatting]" 
@@ -270,7 +270,7 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		#set_global_variable = nda_poe_death # not used
@@ -341,7 +341,7 @@ nda_historic.1852 = { # An American Medium in London
 		}	
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 	
 	immediate = {
 		debug_log = "American Medium in London : [THIS.GetCountry.GetNameNoFormatting]" 
@@ -436,7 +436,7 @@ nda_historic.1854 = { # Eliphas Levi - Dogme et Rituel de la Haute Magie 'The Do
 		}	
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 	
 	immediate = {
 		debug_log = "Eliphas Levi - Dogme et Rituel : [THIS.GetCountry.GetNameNoFormatting]" 
@@ -489,7 +489,7 @@ nda_historic.1857 = { # Banner of Light
 		}	
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		p:x211ECF = { state = { owner = { save_scope_as = location_country } } }
@@ -600,7 +600,7 @@ nda_historic.1858 = { # Le Livre des Esprits
 		}	
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		p:xB04060 = { state = { owner = { save_scope_as = location_country } } }
@@ -772,7 +772,7 @@ nda_historic.1862 = { # The Ghost Club
 		# dickens should not be dead???
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 
 	immediate = {
 		p:x7543C8 = { # London
@@ -851,7 +851,7 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe!
 		}
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
@@ -904,7 +904,7 @@ nda_historic.1867 = { # Societas Rosicruciana in Anglia TODO (should be regional
 		}
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 	
 	immediate = {
 		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
@@ -949,7 +949,7 @@ nda_historic.1871 = { # Vril - Power of the coming race : book by Edward Bulwer-
 		}
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 	
 	immediate = {
 		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
@@ -1008,7 +1008,7 @@ nda_historic.1875 = { # The Theosophical Society
 		}
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		p:xE217B5 = {
@@ -1081,7 +1081,7 @@ nda_historic.1879 = {
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 
 	immediate = {
 		p:x07104C = {
@@ -1145,7 +1145,7 @@ nda_historic.1882 = { # The Society for Psychical Research
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
@@ -1195,7 +1195,7 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 
 	immediate = {
 		p:xE217B5 = {
@@ -1262,7 +1262,7 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement (https://www.gu
 		} 
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		p:x01D042 = { state = { owner = { save_scope_as = location_country } } }
@@ -1310,7 +1310,7 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
@@ -1361,7 +1361,7 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
@@ -1431,7 +1431,7 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc
 		}
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
@@ -1481,7 +1481,7 @@ nda_historic.1893 = {  # National Spiritualist Association of Churches
 		}	
 	}
 
-	cooldown = { months = 24 }	
+	cooldown = { days = 740 }	
 	
 	immediate = {
 		debug_log = "National Spiritualist Association : [THIS.GetCountry.GetNameNoFormatting]" 	

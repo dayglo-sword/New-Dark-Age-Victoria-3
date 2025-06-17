@@ -33,7 +33,7 @@ nda_migo.1 = { #  Migo Intro - In The Night
 		#popup = yes
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		debug_log = "Mi-Go Visit : [THIS.GetCountry.GetNameNoFormatting]" 
@@ -148,7 +148,7 @@ nda_migo.4 = { #  We Have Returned
 		NOT = { has_global_variable = nda_migo_final_country }
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		#set_variable = nda_migo_visited
@@ -379,7 +379,7 @@ nda_migo.1890 = { # The 'King in Yellow' Play spooks Mi-Go
 		game_date < 1891.3.23 # 
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 
@@ -420,7 +420,7 @@ nda_migo.1892 = { # 'Hasturian America' spooks Mi-Go
 		game_date < 1893.3.23 # 
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 
@@ -464,7 +464,7 @@ nda_migo.1924 = { #  The End Is Nigh
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		# Final Destination till end of game
@@ -515,7 +515,7 @@ nda_migo.1927 = { #  The End Is Nigh
 		NOT = { has_global_variable = nda_the_star_intro }	# Star events have not started
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		# Final Destination till end of game

@@ -1,6 +1,6 @@
 ﻿je_colonial_administration = {
 	icon = "gfx/interface/icons/invention_icons/colonization.dds"
-	
+
 	group = je_group_foreign_affairs
 
 	is_shown_when_inactive = {
@@ -21,6 +21,7 @@
 	}
 
 	possible = {
+		NOT = { is_country_type = unrecognized }
 		any_scope_state = {
 			state_is_in_africa = yes
 		}

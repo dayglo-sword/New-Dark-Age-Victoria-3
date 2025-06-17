@@ -1,7 +1,7 @@
 ﻿ai_strategy_nda_eldritch_administrative_agenda = { # based on ai_strategy_resource_expansion
 	icon = "gfx/interface/icons/ai_strategy_icons/resource_expansion.dds"
-	
-	type = administrative	
+
+	type = administrative
 
 	building_group_weights = {
 		bg_rubber = 1.5
@@ -9,25 +9,19 @@
 		bg_mining = 1.5
 		bg_logging = 1.5
 	}
-	
+
 	subsidies = {
-		building_tooling_workshops = wants_to_have
-		building_chemical_plants = wants_to_have
+		building_tooling_workshops = nice_to_have
+		building_explosives_factory = nice_to_have
 	}
-	
+
 	goods_stances = {
-		explosives = { 
-			stance = wants_high_supply 
+		explosives = {
+			stance = wants_high_supply
 			trigger = {
 				has_technology_researched = nitroglycerin
-			}			
-		}	
-		# fertilizer = { # Explosives byproduct
-		# 	stance = wants_export   
-		# 	trigger = {
-		# 		has_technology_researched = nitroglycerin
-		# 	}				
-		# }
+			}
+		}
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_export }
 		iron = { stance = wants_export }
@@ -35,7 +29,7 @@
 		lead = { stance = wants_export }
 		wood = { stance = wants_export }
 		hardwood = { stance = wants_export }
-		sulfur = { stance = wants_export }			
+		sulfur = { stance = wants_export }
 	}
 
 
@@ -43,23 +37,26 @@
 		# for primary cult countries only? - should be default
 		is_full_cult = yes
 	}
-	
+
 	weight = {
 		value = 200
-			
+
 		if = {
 			limit = { ig:ig_nda_cult_worshippers = { is_powerful = yes } }
 			multiply = 1.5
-		}	
+		}
+
 		if = {
 			limit = { nda_coa_def_cthulhu_trigger = yes }
 			multiply = 1.5
-		}	
+		}
+
 		if = {
 			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
 			multiply = 0.5
-		}		
+		}
 	}
+
 }
 
 ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territorial_expansion 
@@ -422,12 +419,8 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 		}
 
 		if = {
-			limit = { 
-				OR = {
-					has_journal_entry = je_government_petition  
-					has_journal_entry = je_law_imposition
-					has_journal_entry = je_british_dictate_law
-				}
+			limit = {
+				has_enactment_je_or_law_commitment = yes
 			}
 			add = 25
 		}			
@@ -456,6 +449,7 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 		movement_corporatist
 		movement_orleanist
 		movement_bonapartist
+		movement_feminist
 	}
 	
 	anti_movements = {
@@ -464,8 +458,7 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 		movement_labor
 		movement_communist
 		movement_anarchist
-		movement_nihilist
-		movement_feminist
+		movement_nihilist		
 		movement_radical
 	}
 	

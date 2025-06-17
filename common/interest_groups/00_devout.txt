@@ -9,7 +9,7 @@
 		ideology_moralist
 		ideology_patriarchal
 	}
-	
+
 	character_ideologies = {
 		ideology_moderate
 		ideology_traditionalist
@@ -21,11 +21,11 @@
 	}
 
 	# Deprecated; use on_enable effect to assign traits instead
-	# traits = {
-	# 	ig_trait_be_fruitful_and_multiply
-	# 	ig_trait_divine_right
-	# 	ig_trait_pious_fiction
-	# }
+	traits = {
+		ig_trait_be_fruitful_and_multiply
+		ig_trait_divine_right
+		ig_trait_pious_fiction
+	}
 
 	on_enable = {
 		ig:ig_devout = {
@@ -135,7 +135,7 @@
 				set_ig_trait = ig_trait:ig_trait_be_fruitful_and_multiply
 			}
 		}
-		
+
 		### Specific
 
 		# Buddhist Monks (Japan)
@@ -294,40 +294,40 @@
 		# Catholic Church
 		else_if = {
 			limit = { country_has_state_religion = rel:catholic }
-			ig:ig_devout = { 
-				set_interest_group_name = ig_catholic_church 
+			ig:ig_devout = {
+				set_interest_group_name = ig_catholic_church
 			}
 		}
 		# Evangelical Church
 		else_if = {
-			limit = { 
-				country_has_state_religion = rel:protestant 
+			limit = {
+				country_has_state_religion = rel:protestant
 				NOT = {
 					c:BIC ?= this
 				}
 			}
-			ig:ig_devout = { 
+			ig:ig_devout = {
 				set_interest_group_name = ig_evangelical_church
 			}
 		}
 		# Sunni Ulema
 		else_if = {
 			limit = { country_has_state_religion = rel:sunni }
-			ig:ig_devout = { 
+			ig:ig_devout = {
 				set_interest_group_name = ig_sunni_madrasahs
 			}
 		}
 		# Shi'a Ulema
 		else_if = {
 			limit = { country_has_state_religion = rel:shiite }
-			ig:ig_devout = { 
+			ig:ig_devout = {
 				set_interest_group_name = ig_shia_madrasahs
 			}
 		}
 		# Oriental Orthodox Church
 		else_if = {
 			limit = { country_has_state_religion = rel:oriental_orthodox }
-			ig:ig_devout = { 
+			ig:ig_devout = {
 				set_interest_group_name = ig_oriental_orthodox_church
 				remove_ideology = ideology_patriarchal
 				add_ideology = ideology_oriental_orthodox_patriarch
@@ -335,7 +335,7 @@
 		}
 		# Orthodox Church
 		else_if = {
-			limit = { 
+			limit = {
 				country_has_state_religion = rel:orthodox
 				NOR = {
 					country_has_primary_culture = cu:russian
@@ -343,7 +343,7 @@
 					country_has_primary_culture = cu:ukrainian
 				}
 			}
-			ig:ig_devout = { 
+			ig:ig_devout = {
 				set_interest_group_name = ig_orthodox_church
 				remove_ideology = ideology_patriarchal
 				add_ideology = ideology_orthodox_patriarch
@@ -351,9 +351,9 @@
 		}
 		# Hindu Priesthood
 		else_if = {
-			limit = { 
+			limit = {
 				OR = {
-					country_has_state_religion = rel:hindu 
+					country_has_state_religion = rel:hindu
 					c:BIC ?= this
 				}
 			}
@@ -428,7 +428,7 @@
 		rule = {
 			trigger = {
 				c:BIC ?= this
-				any_primary_culture = { 
+				any_primary_culture = {
 					cu:british = this
 				}
 			}
@@ -537,7 +537,7 @@
 				value = 0.1
 			}
 		}
-		
+
 		if = {
 			limit = {
 				owner = {
@@ -549,7 +549,7 @@
 				value = 1.5
 			}
 		}
-		
+
 		if = {
 			limit = {
 				owner = {
@@ -575,7 +575,7 @@
 				add = 1
 			}
 		}
-		
+
 		if = {
 			limit = {
 				owner = {
@@ -763,11 +763,19 @@
 		value = 1.0
 	}
 
+	executive_weight = {
+		value = 1.0
+	}
+
 	noble_chance = {
 		value = 0.5
 	}
 
 	female_commander_chance = {
+		value = 0.0
+	}
+
+	female_executive_chance = {
 		value = 0.0
 	}
 
@@ -800,7 +808,7 @@
 
 	female_agitator_chance = {
 		value = 0.01
-		
+
 		if = {
 			limit = {
 				owner = {
@@ -811,8 +819,8 @@
 			add = {
 				value = 0.01
 			}
-		}	
-		
+		}
+
 		if = {
 			limit = {
 				owner = {
@@ -855,5 +863,11 @@
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult
+	}
+
+	# The chance that a executive belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular executive in the IG
+	executive_leader_chance = {
+		value = 0.25
 	}
 }

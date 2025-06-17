@@ -6,6 +6,8 @@
 		
 		effect_starting_technology_tier_1_tech = yes
 		
+		set_market_capital = STATE_MASSACHUSETTS
+
 		effect_starting_politics_liberal = yes
 		activate_law = law_type:law_public_schools
 		#activate_law = law_type:law_slavery_banned #law_legacy_slavery

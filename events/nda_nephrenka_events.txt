@@ -125,7 +125,7 @@ nda_nephrenka.15 = {
 	}
 
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		p:x44702D = { state = { save_scope_as = target_country } }

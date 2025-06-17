@@ -62,11 +62,13 @@
 	}
 
 	ai_chance = {
-		base = 10
-		modifier = {
-			trigger = { influence  > 500 }
+		value = 10
+		if = {
+			limit = {
+				influence  > 500
+			}
 			add = 10
-		}	
+		}
 	}
 }
 
@@ -118,11 +120,13 @@ nda_yig_form_union_of_the_snake = {
 	}
 
 	ai_chance = {
-		base = 10
-		modifier = {
-			trigger = { influence  > 500 }
+		value = 10
+		if = {
+			limit = {
+				influence  > 500
+			}
 			add = 10
-		}	
+		}
 	}
 }
 
@@ -176,10 +180,12 @@ nda_dgn_form_cetacean_leagues = {
 	}
 
 	ai_chance = {
-		base = 10
-		modifier = {
-			trigger = { influence  > 500 }
+		value = 10
+		if = {
+			limit = {
+				influence  > 500
+			}
 			add = 10
-		}	
+		}
 	}
 }

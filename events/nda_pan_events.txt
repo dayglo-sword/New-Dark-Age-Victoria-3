@@ -82,7 +82,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 
 # 	}
 
-# 	cooldown = { months = 24 }
+# 	cooldown = { days = 740 }
 
 # 	immediate = {
 # 		#set_global_variable = nda_pan_the_experiment
@@ -136,7 +136,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 
 # 	}
 
-# 	cooldown = { months = 24 }
+# 	cooldown = { days = 740 }
 
 # 	immediate = {
 	
@@ -185,7 +185,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 
 # 	}
 
-# 	cooldown = { months = 24 }
+# 	cooldown = { days = 740 }
 
 # 	immediate = {
 # 		#set_global_variable = nda_pan_the_experiment
@@ -239,7 +239,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 
 # 	}
 
-# 	cooldown = { months = 24 }
+# 	cooldown = { days = 740 }
 
 # 	immediate = {
 	
@@ -345,7 +345,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 # 		scope:nda_pan_location = { state = { owner = ROOT } }
 # 	}
 
-# 	cooldown = { months = 12 }
+# 	cooldown = { days= 370 }
 
 # 	immediate = {
 # 		set_global_variable = nda_carnacki_ghostfinder
@@ -389,7 +389,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 # 		p:x7543C8 = { state = { owner = { has_variable = nda_cultists_in_open } } }
 # 	}
 
-# 	cooldown = { months = 12 }
+# 	cooldown = { days= 370 }
 	
 # 	immediate = {
 # 		#set_global_variable = nda_carnacki_ghostfinder
@@ -433,7 +433,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 # 		is_player = yes  # no hope if not
 # 	}
 	
-# 	cooldown = { months = 12 }
+# 	cooldown = { days= 370 }
 
 # 	immediate = {
 # 		set_global_variable = nda_carnacki_research_request

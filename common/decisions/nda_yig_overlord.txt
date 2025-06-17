@@ -87,13 +87,13 @@
 	}
 
 	ai_chance = {
-		base = 10	
+		value = 5
 		# boost if cthuhlu in town
-		modifier = {
-			trigger = { 
+		if = {
+			limit = {
 				nda_coa_def_cthulhu_trigger = yes
 			}
 			add = 20
-		}	
+		}
 	}
 }

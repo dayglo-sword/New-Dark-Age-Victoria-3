@@ -16,6 +16,9 @@
 	on_government_type_change = {
 		change_to_hereditary = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
 }
 
 gov_eldritch_junta = {
@@ -38,6 +41,9 @@ gov_eldritch_junta = {
 	on_government_type_change = {
 		change_to_dictatorial = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
 }
 
 gov_eldritch_republic = {
@@ -54,6 +60,9 @@ gov_eldritch_republic = {
 	on_government_type_change = {
 		change_to_dictatorial = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}	
 }
 
 gov_cult_controlled = {
@@ -70,6 +79,9 @@ gov_cult_controlled = {
 	on_government_type_change = {
 		change_to_dictatorial = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}	
 }
 
 gov_eldritch_cult = {
@@ -88,6 +100,9 @@ gov_eldritch_cult = {
 	on_government_type_change = {
 		change_to_hereditary = yes
 	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
 }
 
 gov_eldritch_democracy = {
@@ -105,5 +120,8 @@ gov_eldritch_democracy = {
 
 	on_government_type_change = {
 		change_to_parliamentary_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
 	}
 }

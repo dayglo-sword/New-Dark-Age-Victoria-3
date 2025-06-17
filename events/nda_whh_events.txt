@@ -76,7 +76,7 @@ nda_whh.11 = { # Carnacki the Ghost Finder
 		NOT = { has_global_variable = nda_carnacki_dead }	
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		set_global_variable = nda_carnacki_ghostfinder
@@ -125,7 +125,7 @@ nda_whh.12 = { #
 		NOT = { has_variable = nda_cultists_in_open	} # He's not going to run to a cultist country
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 	
 	immediate = {
 		#set_global_variable = nda_carnacki_ghostfinder
@@ -186,7 +186,7 @@ nda_whh.13 = { # 'Electric Pentagram' - should this really be a decision?
 		has_technology_researched = electrical_capacitors
 	}
 	
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		set_global_variable = nda_carnacki_research_request

@@ -1,7 +1,7 @@
 ﻿je_oregon = { # Replace original as fails and crashes if USA not there to get transfers in event oregon.2
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	is_shown_when_inactive = {
 		exists = c:USA
@@ -39,7 +39,7 @@
 		}
 	}
 
-	possible = { 
+	possible = {
 		OR = {
 			has_interest_marker_in_region = region_pacific_coast
 			custom_tooltip = {
@@ -121,7 +121,7 @@
 			}
 			add_modifier = {
 				name = oregon_resolved
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 	}
@@ -150,7 +150,7 @@
 je_conquer_oregon = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-	group = je_group_historical_content
+	group = je_group_usa_manifest_destiny
 
 	complete = {
 		c:USA = {

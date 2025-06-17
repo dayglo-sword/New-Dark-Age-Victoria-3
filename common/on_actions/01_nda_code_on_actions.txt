@@ -1,5 +1,61 @@
 ﻿# For custom on_actions launched by the code itself.
 # have used separate on_actions in case we ever need to use 'effects'
+# Fires when bookmark initialization is complete but players are still in the lobby
+# At this point we do not know who the players are
+# No root scope set
+# on_game_started = {
+# 	# effect = {
+# 	# 	# Memento Mori
+# 	# 	every_country = {
+# 	# 		every_interest_group = {
+# 	# 			leader = {
+# 	# 				if = {
+# 	# 					limit = {
+# 	# 						NOT = {
+# 	# 							has_variable = memento_mori_immunity
+# 	# 						}
+# 	# 					}
+# 	# 					set_variable = {
+# 	# 						name = memento_mori_immunity
+# 	# 						years = 5
+# 	# 					}
+# 	# 				}
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# }
+# }
+
+# # Fires after everyone enters the game from the lobby for the first time for each campaign
+# # At this point we DO know who the players are
+# # No root scope set
+# on_game_started_after_lobby = {
+# 	# effect = {
+# 	# 	# Game Rule: No Dynamic Naming
+# 	# 	if = {
+# 	# 		limit = {
+# 	# 			has_game_rule = no_dynamic_naming
+# 	# 		}
+# 	# 		every_state = {
+# 	# 			reset_state_name = yes
+# 	# 		    reset_hub_names = yes
+# 	# 		}
+# 	# 	}
+# 	# 	# The Ripper
+# 	# 	every_country = {
+# 	# 		if = {
+# 	# 			limit = {
+# 	# 				is_player = yes
+# 	# 			}
+# 	# 			random = {
+# 	# 				chance = 10
+
+# 	# 				set_variable = var_jack_ripper_possible
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# }
+# }
 
 # Root = Country
 on_monthly_pulse_country = {

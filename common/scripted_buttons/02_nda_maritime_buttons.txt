@@ -48,22 +48,24 @@ je_nda_maritimes_btn_new_brunswick = {
 	}
 
 	ai_chance = {
-		base = 5	
+		value = 5	
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		if = {
+			limit = {
+				 bureaucracy > 0
+			}
 			add = 5
 		}
-		modifier = {
-			trigger = {
+		if = {
+			limit = {
 				OR = {
 					is_diplomatic_play_committed_participant = yes
 					is_at_war = yes
-				}			
+				}
 			}
 			add = -1000
-		}	
-	}
+		}
+	}			
 
 	effect = {
 		custom_tooltip = je_nda_maritimes_btn_new_brunswick_union_tooltip       
@@ -172,22 +174,23 @@ je_nda_maritimes_btn_nova_scotia = {
 	}
 
 	ai_chance = {
-		base = 5
+		value = 5	
 
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		if = {
+			limit = {
+				 bureaucracy > 0
+			}
 			add = 5
 		}
-		modifier = {
-			trigger = {
+		if = {
+			limit = {
 				OR = {
 					is_diplomatic_play_committed_participant = yes
 					is_at_war = yes
-				}			
+				}
 			}
-
 			add = -1000
-		}	
+		}
 	}
 
 	effect = {
@@ -305,7 +308,7 @@ je_nda_maritimes_btn_strange_ways = {
 	}
 
 	ai_chance = {
-		base = 2		
+		value = 2		
 	}
 }
 
@@ -338,6 +341,6 @@ je_nda_maritimes_btn_old_ways = {
 	}
 
 	ai_chance = {
-		base = 5		
+		value = 5		
 	}
 }

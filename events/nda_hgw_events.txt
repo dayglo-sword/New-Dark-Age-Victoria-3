@@ -30,7 +30,7 @@ nda_hgw.10 = { # The Star - Intro
 		NOT = { has_global_variable = nda_the_star_intro }	
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		set_global_variable = nda_the_star_intro
@@ -180,7 +180,7 @@ nda_hgw.20 = { # In the Abyss - Intro
 		NOT = { has_global_variable = nda_in_the_abyss_intro }	
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		set_global_variable = nda_in_the_abyss_intro

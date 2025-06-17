@@ -60,20 +60,21 @@
 	}
 
 	ai_chance = {
-		base = 10
-		modifier = {
-			trigger = { bureaucracy > 0 }
+		value = 10
+		if = {
+			limit = {
+				bureaucracy > 0 
+			}
 			add = 5
 		}
-		# modifier based on relationship
-
-		modifier = {
+		if = {
+			limit = {
 			OR = {
 				is_diplomatic_play_committed_participant = yes
 				is_at_war = yes
 			}
+			}
 			add = -10
-		}		
+		}
 	}
-
 }

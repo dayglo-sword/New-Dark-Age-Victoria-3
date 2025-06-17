@@ -66,7 +66,7 @@ nda_base.2 = { # Nameless Cults published
 		NOT = {has_global_variable = nda_nameless_cults_exists}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		set_global_variable = nda_nameless_cults_exists
@@ -338,7 +338,7 @@ nda_base.4 = { # The Death of Junzt
 		has_global_variable = nda_nameless_cults_exists
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 
@@ -1552,7 +1552,7 @@ nda_base.26 = { # The Pit and the Pendulum!
 		}
 	}
 
-	cooldown = { months = 4 } # stop repeat while still open
+	cooldown = { days = 120 } # stop repeat while still open
 
 	immediate = {
 		random_interest_group = {
@@ -1690,7 +1690,7 @@ nda_base.30 = { # Cult is leaderless
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		random_country = {
@@ -1800,7 +1800,7 @@ nda_base.31 = { # Pandered to cult but failed to add leader - worse than normal 
 		}
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		random_country = {

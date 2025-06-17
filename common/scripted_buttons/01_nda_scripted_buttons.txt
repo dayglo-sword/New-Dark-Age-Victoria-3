@@ -13,41 +13,40 @@
 			NOT = { has_variable = je_nda_ritual_assist_started_cooldown }
 			
 		}
-		
-		#c:ELD ?= { relations:root >= relations_threshold:amicable }
+
 		c:ELD ?= { relations:root >= relations_threshold:neutral }
-		#c:ELD ?= { relations:root >= relations_threshold:friendly }
+
 	}
 
 	ai_chance = {
-		base = 5	
-		modifier = {
-			trigger = { 
+		value = 5
+
+		if = {
+			limit = {
 				has_global_variable = nda_conjunction_4 # speed things up
 			}
 			add = 10
 		}
-		modifier = {
-			trigger = { 
+		if = {
+			limit = {
 				has_global_variable = nda_conjunction_5 # really need to speed things up
 			}
 			add = 20
 		}
-
-		modifier = {
-			trigger = { 
+		if = {
+			limit = {
 				c:ELD ?= { relations:root >= relations_threshold:amicable }
 			}
 			add = 5
 		}
-
-		modifier = {
-			trigger = { 
+		if = {
+			limit = {
 				c:ELD ?= { relations:root >= relations_threshold:friendly }
 			}
 			add = 5
 		}
 	}
+
 
 	effect = {
         custom_tooltip =  {
@@ -83,7 +82,7 @@ je_nda_ritual_assist_btn_halt = {
 	}
 
 	ai_chance = {
-		base = 100	
+		value = 100	
 	}
 
 	effect = {
@@ -109,13 +108,13 @@ je_nda_ritual_oppose_btn_start = {
 	}
 
 	ai_chance = {
-		base = 10
-		modifier = {
-			trigger = { 
+		value = 10
+		if = {
+			limit = {
 				has_investigators = yes
 			}
 			add = 40
-		}		
+		}	
 	}
 
 	possible = {
@@ -159,9 +158,9 @@ je_nda_ritual_oppose_btn_halt = {
 	}
 
 	ai_chance = {
-		base = 10
-		modifier = {
-			trigger = { 
+		value = 10
+		if = {
+			limit = {
 				has_investigators = no
 			}
 			add = 40

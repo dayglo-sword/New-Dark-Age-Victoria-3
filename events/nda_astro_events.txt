@@ -692,7 +692,7 @@ nda_astro.1858 = { # 1858 great comet 'Donati's comet'
 		game_date < 1859.1.1
 	}
 
-	cooldown = { months = 6 }
+	cooldown = { days = 180 }
 
 	immediate = {
 		debug_log = "1858 Great Comet"
@@ -734,7 +734,7 @@ nda_astro.1910 = { #  Great January Comet of 1910
 		game_date < 1911.1.1
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		debug_log = "1910 Great Comet"
@@ -797,7 +797,7 @@ nda_astro.10 = {
 		}	
 	}
 
-	cooldown = { months = 18 }
+	cooldown = { days = 500 }
 
 	immediate = {
 		debug_log = "Conclave Invite"

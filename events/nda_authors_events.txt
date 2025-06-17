@@ -27,7 +27,7 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		# create character - unusual effects if later used for IG leader - jusy use for localisation
@@ -147,7 +147,7 @@ nda_authors.20 = { # Lair of the White Worm - Character event
 
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		# create character - unusual effects if later used for IG leader - just use for localisation
@@ -278,7 +278,7 @@ nda_authors.30 = { # A complaint
 		}
 	}
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		debug_log = "Runes - Intro"
@@ -460,7 +460,7 @@ nda_authors.40 = {
 		}			
    }
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		debug_log = "Lot No. 249"
@@ -552,7 +552,7 @@ nda_authors.41 = { # Professor Challenger returns
 
 	duration = 3
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 	
 	trigger = { 
 		
@@ -675,7 +675,7 @@ nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but
 		}			
    }
 
-	cooldown = { months = 48 }
+	cooldown = { days = 1350 }
 
 	immediate = {
 		debug_log = "Prof. James Mor...rison"
@@ -780,7 +780,7 @@ nda_authors.43 = { # The Dynamics of a Star - Advance warning of event nda_hgw.1
 		}			
    }
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		debug_log = "The Star is on its way"
@@ -828,7 +828,7 @@ nda_authors.50 = { # The Willows - written in 1907 push to earlier date? > 1887
 		}		
    }
 
-	cooldown = { months = 24 }
+	cooldown = { days = 740 }
 
 	immediate = {
 		debug_log = "The Willows"
@@ -876,7 +876,7 @@ nda_authors.60 = { # Event from Nosferatu
 		}
    }
 
-	cooldown = { months = 48 }
+	cooldown = { days = 1350 }
 
 	immediate = {
 		debug_log = "Nosferatu Event"
@@ -922,7 +922,7 @@ nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
 		}
    }
 
-	cooldown = { months = 48 }
+	cooldown = { days = 1350 }
 
 	immediate = {
 		debug_log = "Nosferatu Film"

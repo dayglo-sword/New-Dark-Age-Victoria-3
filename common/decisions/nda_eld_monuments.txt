@@ -36,11 +36,13 @@
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { authority  > 0 } # need 100 for the loss from losing the Vatican
+		value = 0
+		if = {
+			limit = {
+				authority  > 0  # need 100 for the loss from losing the Vatican
+			}
 			add = 10
-		}	
+		}
 	}
 }
 
@@ -81,11 +83,13 @@ nda_eld_destroy_hagia_sophia = {
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { authority  > 0 } 
+		value = 0
+		if = {
+			limit = {
+				authority  > 0  
+			}
 			add = 10
-		}	
+		}
 	}
 }
 
@@ -126,11 +130,13 @@ nda_eld_destroy_st_basils = {
 	}
 
 	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = { authority  > 0 } 
+		value = 0
+		if = {
+			limit = {
+				authority  > 0  
+			}
 			add = 10
-		}	
+		}
 	}
 }
 
@@ -177,6 +183,6 @@ nda_cult_destroy_miskatonic_uni = {
 	}
 
 	ai_chance = {
-		base = 10	
+		value = 10	
 	}
 }

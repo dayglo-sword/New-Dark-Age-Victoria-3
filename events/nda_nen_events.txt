@@ -603,7 +603,7 @@ nda_nen.1844 = { # Founding of Church of Starry Wisdom - Rhode Island
 		p:x1A77EA = { state = { owner = ROOT } }
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		p:x1A77EA = { 
@@ -649,7 +649,7 @@ nda_nen.1877 = { # Controversy surrounding the Church of Starry Wisdom - Rhode I
 		p:x1A77EA = { state = { owner = ROOT } }
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		p:x1A77EA = { 
@@ -714,7 +714,7 @@ nda_nen.1878 = { # "Goverment Shutdown!"
 	trigger = {
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		set_global_variable = nda_trapezohedron_revealed
@@ -757,7 +757,7 @@ nda_nen.1879 = {
 	trigger = {
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 
@@ -792,7 +792,7 @@ nda_nen.1880 = {
 	trigger = {
 	}
 
-	cooldown = { months = 12 }
+	cooldown = { days= 370 }
 
 	immediate = {
 		set_variable = nda_trapezohedron_used # since used by the unwary it's reappearence is known - migo event

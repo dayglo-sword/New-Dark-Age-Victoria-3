@@ -5,7 +5,8 @@
 	
 	obsession_chance = 2.0
 	prestige_factor = 5
-	convoy_cost_multiplier = 0.5	
+	convoy_cost_multiplier = 0.5
+	traded_quantity = 8 # 240		
 	consumption_tax_cost = 200
 }
 
@@ -17,6 +18,6 @@ black_lotus = {
 	obsession_chance = 2.0
 	prestige_factor = 4
 	convoy_cost_multiplier = 0.5
+	traded_quantity = 5 # 250
 
-	consumption_tax_cost = 200
 }

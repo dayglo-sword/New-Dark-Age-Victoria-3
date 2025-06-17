@@ -9,6 +9,7 @@
 
 combat_unit_type_cultist_infantry = {
 	group = combat_unit_group_infantry
+	max_manpower = 1000
 
 	battle_modifier = {
         unit_offense_add = 15
@@ -29,9 +30,11 @@ combat_unit_type_cultist_infantry = {
         }
     }
 
-    can_build_conscript = {
-        always = yes
-    }    
+    conscript_peasant_levies = yes
+
+    # can_build_conscript = {
+    #     always = yes
+    # }    
 
     combat_unit_image = {
 		# fallback
@@ -42,7 +45,8 @@ combat_unit_type_cultist_infantry = {
 
 combat_unit_type_leviathan = {
     group = combat_unit_group_capital_ship
-
+	max_manpower = 1000
+    
     upkeep_modifier = {
         goods_input_fish_add = 50
     }
