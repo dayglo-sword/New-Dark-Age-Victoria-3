@@ -425,7 +425,7 @@ nda_dagonic.5 = {
 
 # 		add_modifier = {
 # 			name = nda_dagonic_state_ruin_modifier
-# 			months = normal_modifier_time
+# 			days = normal_modifier_time
 # 			is_decaying = yes
 # 		}
 

@@ -769,6 +769,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	}
 }
 
+# This should be in 'nation'
 nda_base.10 = { # Notifications that the Eldritch Realms has formed
 	type = country_event
 	#hidden = yes # if there are no option, make it hidden
@@ -805,7 +806,7 @@ nda_base.10 = { # Notifications that the Eldritch Realms has formed
 		every_country = {
 			limit = {
 				#is_player = yes
-				NOT = {	c:ELD = ROOT }
+				NOT = {	c:ELD = THIS }
 			}
 
 			post_notification = nda_elditch_realm_proclaimed # toast

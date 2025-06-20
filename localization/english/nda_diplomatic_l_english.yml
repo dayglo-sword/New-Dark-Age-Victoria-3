@@ -17,6 +17,9 @@ nda_oppose_cult_spread_potential2_tt: "Cultists have not taken over."
 nda_oppose_cult_spread_possible_tt: "This Country has Cultists infiltrating."
 nda_oppose_cult_spread_possible2_tt: "The Cultist activity has not been stopped."
 
+# Treaties
+nda_treaty_providence: "Treaty of Providence"
+
 # Cultist Actions
 dp_unify_eldritch_cult: "Unify the Eldritch Cult"
 dp_unify_eldritch_cult_desc: "Sets the initiating [concept_war_goal] to annex all Eldritch homeland states held by other nations."

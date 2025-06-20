@@ -86,7 +86,7 @@ titanic.2 = { #the titanic gets attacked - homage to CAS 'Coming of the White Wo
 		default_option = yes
 		add_modifier = { #people question your lifeboats choice
 			name = titanic_sank_modifier
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:titanic_state = {
 			add_radicals_in_state = { #public outrage

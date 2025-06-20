@@ -22,9 +22,10 @@ nda_historic.1848.d: "Strange goings on in up-state New York as two sisters, Mar
 nda_historic.1848.f: "'Spiritualists are in the habit of taking March 31, 1848, as the beginning of all psychic things, because their own movement dates from that day.\n\n...one of the great points of psychic evolution was reached, for it was then that young Kate Fox challenged the unseen power to repeat the snaps of her fingers.' - Sir Arthur Conan Doyle"
 nda_historic.1848.a: "We hope this does not spread further."
 nda_historic.1848.b: "What harm can such parlour games do?."
+nda_historic.1848.b_tt: "Allow it to spread into the country."
 
 nda_historic.1849.t: "Death of an Author"
-nda_historic.1849.d: "The well known poet and author, #ITALIC Edgar Allan Poe#! has past away in Baltimore.\n\nHe was found 'in great distress, and... in need of immediate assistance', after disappearing en-route to New York City.\n\nHe was never able to explain how he came to be in this condition in the few hours before his death."
+nda_historic.1849.d: "The well known poet and author, #GREEN Edgar Allan Poe#! has past away in Baltimore.\n\nHe was found 'in great distress, and... in need of immediate assistance', after disappearing en-route to New York City.\n\nHe was never able to explain how he came to be in this condition in the few hours before his death."
 nda_historic.1849.f: "His final words were, 'Lord, help my poor soul.'"
 nda_historic.1849.a: "Nevermore!"
 nda_historic.1849.b: "Some form of disease?"

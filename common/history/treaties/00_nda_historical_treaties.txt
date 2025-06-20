@@ -1,0 +1,52 @@
+﻿TREATIES = {
+	# Treaty of Providence - NEN and USA side of it
+	create_treaty = {
+		name = nda_treaty_providence
+		first_country = c:NEN
+		second_country = c:USA
+
+		is_draft = no
+		entered_into_force_on = 1816.7.8
+		binding_period = { years = 25 } 
+
+		articles_to_create = {
+			{ 
+				article = trade_privilege
+				source_country = c:USA
+				target_country = c:NEN
+			}
+			{
+				article = money_transfer
+				source_country = c:USA
+				target_country = c:NEN
+				inputs = {
+					{ quantity = 100 }
+				}
+			}
+		}
+	}
+
+	### Treaty of Providence - NEN and GB side of it
+	create_treaty = {
+		name = nda_treaty_providence
+		first_country = c:GBR
+		second_country = c:NEN
+
+		is_draft = no
+		entered_into_force_on =  1816.7.8
+		binding_period = { years = 25 } 
+
+		articles_to_create = {
+			{ # Defensive Pact
+				article = defensive_pact
+			}
+			{ # British Economic interests in New England
+				article = foreign_investment_rights
+				source_country = c:NEN
+				target_country = c:GBR
+			}
+		}
+
+	}
+
+}

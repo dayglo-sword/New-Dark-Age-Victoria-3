@@ -701,7 +701,7 @@ nda_authors.42 = { # The amnesiac - chain should move over to nda_nen_events but
 				state = { 
 					add_modifier = {
 						name = modifier_organised_crime
-						#months = normal_modifier_time # permanent till he dies or moves on.
+						#days = normal_modifier_time # permanent till he dies or moves on.
 					}
 					# or do via additional events if player is owner?
 				}

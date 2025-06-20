@@ -1,11 +1,15 @@
-Version v1.9.0
+Version v1.9.2
 
 Major Changes
-
+Add executives for NEN companies.
+Add 'Treaty of Providance'
 
 Minor Changes
+Change formation code to on_actions
 Add minor Nosferatu events.
 Add negative diplo catalyst to Maritime buttons.
+Correct Spiritulism concept.
+Improve tooltips and notifications.
 
 Bug Fixes
 Correct premature Spirtualism boost on Inqusition fail.

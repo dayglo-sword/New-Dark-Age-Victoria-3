@@ -75,7 +75,7 @@ nda_monthly_on_action = {
 		nda_base.5 # First Cultist
 		
 		nda_base.9 # Full Cult Ideology Clean
-		nda_base.10 # Eldritch Realms Proclaimed
+		#nda_base.10 # Eldritch Realms Proclaimed - now on action
 
 		nda_base.14	# Revolt Reset
 		nda_base.15 # Local Cult Ideology Clean
@@ -120,6 +120,9 @@ nda_monthly_on_action = {
 		nda_nen.1920 # Dr West - End			
 		nda_nen.1922 # Horror at Martins Beach
 		nda_nen.1935 # New England Outro
+
+		nda_nen.20 # Company Specific - Marsh Wealth
+		nda_nen.21 # Company Specific - Curwen Inbreeding
 
 		nda_hasturian.1 # Play in Paris 
 		nda_hasturian.2 # Play Spreads 
@@ -761,10 +764,50 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 
 on_country_formed = {
 	on_actions = {
+		nda_eldrtich_realm_formed_on_action
 		nda_greater_new_england_on_action
 		#delay = { days = 7 }
 		nda_create_leng_on_action
 	}
+}
+
+nda_eldrtich_realm_formed_on_action = {
+	# Proper notification
+	effect = {
+		if = {
+			limit = {
+				c:ELD ?= ROOT
+			}	
+			
+			set_global_variable = nda_eldritch_realm_founded
+
+			# send out notification		
+			every_country = {
+				limit = {
+					#is_player = yes
+					NOT = {	c:ELD = THIS }
+				}
+
+				post_notification = nda_elditch_realm_proclaimed # toast
+
+			}
+
+			# set up Leaders and IG's
+			nda_effect_eldritch_setup = yes
+
+			# spread to non-cultist  Neighbour
+			random_country = {
+				limit = {
+					is_adjacent_to_country = ROOT
+					can_cult_infiltrate = yes
+				}
+				trigger_event = { id = nda_base.8 }	# spread the cult
+			}
+
+			# trigger events for other cult countries to bow down/offer tribute/ignore
+
+		}		
+	}	
 }
 
 nda_greater_new_england_on_action = {

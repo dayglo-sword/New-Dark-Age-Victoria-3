@@ -292,7 +292,7 @@ je_nda_cult_spreads_btn_purge = {
 			# make IG unhappy	
 			add_modifier = {
 				name = ig_mass_arrests
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}	
 		}
 
@@ -383,7 +383,7 @@ je_nda_cult_spreads_btn_purge = {
 
 		add_modifier = {
 			name = government_conflict
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}	
 
 		# set_variable = {

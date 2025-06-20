@@ -105,18 +105,18 @@ nda_nen.1882.f: "'The stone, magnetic as it had been, must have had some peculia
 nda_nen.1882.a: "Disappeared?"
 
 nda_nen.1883.t: "Strange Fruit"
-nda_nen.1883.d: "There are reports of possible pollution of the soil west of Arkham, near where last years meteor landed."
+nda_nen.1883.d: "There are reports of possible pollution of the soil west of Arkham, near where last years meteor landed.\n\nThere are worries in the populace that it may threaten the local crops and livestock."
 nda_nen.1883.f: "'Never were things of such size seen before, and they held strange colours that could not be put into any words. Their shapes were monstrous, and the horse had snorted at an odour which struck as wholly unprecedented.\n\nThat afternoon several persons drove past to see the abnormal growth, and all agreed that plants of that kind ought never to sprout in a healthy world.'\n\n“It spreads on everything organic that’s been around here,” muttered the medical examiner. No one replied, but the man who had been in the well gave a hint that his long pole must have stirred up something intangible.\n\n “It was awful,” he added. “There was no bottom at all. Just ooze and bubbles and the feeling of something lurking under there.”"
 nda_nen.1883.a: "Polluted?"
 
 nda_nen.1893.t: "An Offer of a Chair"
-nda_nen.1893.d: "."
+nda_nen.1893.d: "The Miskatonic University are asking you to expediate the arrival of a new Chair of Mathematics and Astronomy.\n\nFound washed up in a river near Zurich the unfortunate man has no memory of their past life, but he appears to be a genius in his field, a true savant.\n\nLack of identity documentation is blocking their entry into the country. It is hoped you can help reslove the situation.\n\nBeing totally fluent in English, he has currently adopted the name of James Morrison."
 nda_nen.1893.f: "'He is a man of excellent education, endowed by nature with a phenomenal mathematical faculty.\n\nHe is a genius, a philosopher, an abstract thinker. He has a brain of the first order. He sits motionless, like a spider in the centre of its web...\n\nHis soft, precise fashion of speech leaves a conviction of sincerity...'"
 nda_nen.1893.a: "A Welcome Addition."
 nda_nen.1893.b: "An Unwanted Person."
 
 nda_nen.1894.t: "A Crime Wave"
-nda_nen.1894.d: "."
+nda_nen.1894.d: "What seems to be an organised crime wavehas broken out in Arkham and the surrounds.\n\nThese are not spontanious acts, but appear to have an underlying intelligence behind them."
 nda_nen.1894.f: "'Dark rumours gathered round the university town...\n\nCrimes of the most varying sorts — forgery cases, robberies, murders...\n\nSome deep organizing power which forever stands in the way of the law...'"
 nda_nen.1894.a: "Who is the Ringleader?"
 
@@ -135,3 +135,13 @@ nda_nen.1935.t: "A Journey to Arkham"
 nda_nen.1935.d: "It is one of those unfortunate affairs where you have to share transportation on your journey.\n\nUnfortunate, in that you are sitting opposite that one person who can not keep themselves to themselves.\n\nThey were head deep in a book, but you could still tell that their face was gradually reddening, and then they burst forth and address you directly..."
 nda_nen.1935.f: "'Can you believe this nonsense!\n\nThat everything is being run in secret by a select band of long-lived people!\n\nThe idea that we humans have no general agency, that everything, from the economy, to the form of government itself, is governed by entities beyond our control!\n\nIt's preposterous! What sort of a person could ever have such power and not reveal themselves?'"
 nda_nen.1935.a: "Well..."
+
+nda_nen.20.t: "The Wealth of the Marsh Family"
+nda_nen.20.d: ""
+nda_nen.20.f: ""
+nda_nen.20.a: ""
+
+nda_nen.21.t: "A Scandal for the Curwens?"
+nda_nen.21.d: ""
+nda_nen.21.f: ""
+nda_nen.21.a: ""

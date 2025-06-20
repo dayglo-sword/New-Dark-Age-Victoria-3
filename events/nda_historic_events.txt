@@ -219,6 +219,7 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 	}
 	option = { #"What harm can it do"
 		name = nda_historic.1848.b
+		custom_tooltip = nda_historic.1848.b_tt
 		every_scope_state = {
 			limit = {
 				is_incorporated = yes

@@ -2,21 +2,21 @@
   
  notification_nda_first_open_cult_tooltip: "#header $notification_nda_first_open_cult_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_first_open_cult_desc$"
  notification_nda_first_open_cult_name: "[SCOPE.sC('originator').GetName ] - The Cult in the Open"
- notification_nda_first_open_cult_desc: "The Elditch Cult in [SCOPE.sC('originator').GetName] no longer operates in secret. The Cultists openly practice their Rites."
+ notification_nda_first_open_cult_desc: "The Elditch Cult in [SCOPE.sC('originator').GetName] no longer operates in secret.\nThe Cultists openly practice their Rites and have effectively taken control of the Country even as the old structures of power still nominally exist.\nMany of the existing inhabitants seem oblivious to this change."
  notification_nda_first_yig_cult_tooltip: "#header $notification_nda_first_yig_cult_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_first_yig_cult_desc$"
  notification_nda_first_yig_cult_name: "[SCOPE.sC('originator').GetName ] - The Rise of Yig"
- notification_nda_first_yig_cult_desc: "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of [concept_nda_yig]."
+ notification_nda_first_yig_cult_desc: "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones.\nThey now follow the teaching of [concept_nda_yig], the worship of which has been traditional strong among the local cultists."
  notification_nda_first_dagon_cult_tooltip: "#header $notification_nda_first_dagon_cult_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_first_dagon_cult_desc$"
  notification_nda_first_dagon_cult_name: "[SCOPE.sC('originator').GetName ] - The Rise of Dagon"
- notification_nda_first_dagon_cult_desc: "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of the sea god, [concept_nda_dagon]."
+ notification_nda_first_dagon_cult_desc: "The Cult in [SCOPE.sC('originator').GetName] no longer follows the Old Ones. They now follow the teaching of the sea god, [concept_nda_dagon], the worship of which has been traditional strong among the local cultists."
 
  notification_nda_elditch_realm_proclaimed_tooltip: "#header $notification_nda_elditch_realm_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_elditch_realm_proclaimed_desc$"
  notification_nda_elditch_realm_proclaimed_name: "[SCOPE.sC('originator').GetName ] - Hail The Eldritch Realm"
- notification_nda_elditch_realm_proclaimed_desc: "The Elditch Cult has found a homeland as the existence of the Eldritch Realm is proclaimed."
+ notification_nda_elditch_realm_proclaimed_desc: "The Elditch Cult has found a homeland as the existence of the #BOLD Eldritch Realm#! is proclaimed.\nThe Cultists now have total and open control of the Nation."
 
  notification_nda_yigian_lands_proclaimed_tooltip: "#header $notification_nda_yigian_lands_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_yigian_lands_proclaimed_desc$"
  notification_nda_yigian_lands_proclaimed_name: "[SCOPE.sC('originator').GetName ] - Hail The Yigian Lands"
- notification_nda_yigian_lands_proclaimed_desc: "The Snake Cult has found a homeland as the existence of the#BOLD Yigian Lands#! is proclaimed."
+ notification_nda_yigian_lands_proclaimed_desc: "The Snake Cult has found a homeland as the existence of the #BOLD Yigian Lands#! is proclaimed.\nThe Snake People and their now have total and open control of the Nation."
 
  notification_nda_yigian_lands_expand_tooltip: "#header $notification_nda_yigian_lands_expand_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_yigian_lands_expand_desc$"
  notification_nda_yigian_lands_expand_name: "The Yigian Lands Expands"
