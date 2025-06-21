@@ -1894,8 +1894,11 @@ nda_base.40 = { # ModCon3 Ref - Abe disappears
 		}
 
 	}
-	option = { #So it begins
-		name = nda_base.1.a
+	option = { #Where
+		name = nda_base.40.a
 		default_option = yes
+	}
+		option = { #When
+		name = nda_base.40.b
 	}
 }

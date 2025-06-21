@@ -6,7 +6,7 @@ building_nda_miskatonic_university = {
 
 	buildable = no
 	downsizeable = no
-	unique = yes
+	unique = no # allows expansion?
 
 	city_type = city
 
@@ -23,6 +23,13 @@ building_nda_miskatonic_university = {
 		pmg_nda_esoteric_academia
 		# special occult one?
 	}
+
+	potential = {
+        # trigger definition
+		this = {
+			state_region = s:STATE_NEW_HAMPSHIRE			
+		}	
+    }
 
 	possible = {
 		this = {

@@ -1,21 +1,21 @@
 ﻿l_english:
 
 nda_authors.10.t: "The Holiness of Azédarac"
-nda_authors.10.d: "News has reach us of a holy man in Averoigne doing great works among the faithful.\n\n[SCOPE.sCharacter('scope_azedarac').GetFullName], the recently appointed Bishop of Ximes appears to be destined for great things!\n\nSome say he is the reincarnation of St. Azédarac the renowned 12th Century saint, not that we believe in that sort of heresy."
+nda_authors.10.d: "News has reach us of a holy man in Averoigne doing great works among the faithful.\n\n[SCOPE.sCharacter('scope_azedarac').GetFullName], the recently appointed Bishop of Ximes appears to be destined for great things!\n\nSome say he is the reincarnation of #GREEN St. Azédarac#! the renowned 12th Century saint, not that we believe in that sort of heresy."
 nda_authors.10.f: "'St. Azédarac died and was duly canonized in 1198. Some say that he did not die, but was transported to heaven alive, and that his body was never buried in the great mausoleum reared for him at Ximes. But that is probably a mere legend.'"
 nda_authors.10.a: "He must come to the Capital!"
 nda_authors.10.b: "They should go to the Holy See!"
 nda_authors.10.c: "Must continue their works in Averoigne."
 
 nda_authors.20.t: "The White Worm?"
-nda_authors.20.d: "A tragic tale from the Midlands of England has reached our ears.\n\nIt appears that the last of an ancient line of nobles, Edgar Caswall, Master of Castra Regis, has lost their life due to their delving into the art of Mesmerism, and the resulting actions of a local Lady, Arabella of Diana's Grove. She was said to be possesed by the spirit of a snake.\n\n A lightining strike is presumed to have killed the Lady after hitting the gunpowder store where she was hiding after brutally slaying Caswell."
+nda_authors.20.d: "A tragic tale from the Midlands of England has reached our ears.\n\nIt appears that the last of an ancient line of nobles, #GREEN Edgar Caswall#!, Master of Castra Regis, has lost their life due to their delving into the art of Mesmerism, and the resulting actions of a local Lady, Arabella of Diana's Grove. She was said to be possesed by the spirit of a snake.\n\n A lightining strike is presumed to have killed the Lady after hitting the gunpowder store where she was hiding after brutally slaying Caswell."
 nda_authors.20.f: "'...have come to the conclusion that the foul White Worm obtained control of her body, just as her soul was leaving its earthly tenement -- that would explain the sudden revival of energy, the strange and inexplicable craving for maiming and killing, as well as many other matters with which I need not trouble you now...\n\n ...God alone knows what poor Captain March discovered -- it must have been something too ghastly for human endurance, if my theory is correct that the once beautiful human body of Lady Arabella is under the control of this ghastly White Worm.'"
 nda_authors.20.a: "They might have survived..."
 nda_authors.20.b: "but it is unlikely."
 nda_authors.20.c: "Maybe they went abroad"
 
 nda_authors.30.t: "An Unusual Complaint"
-nda_authors.30.d: "An unusual affair has been brought forward where the leading intellectual, [SCOPE.sCharacter('nda_rune_victim_1').GetFullName], is complaining of being harrased by the Cultist, [SCOPE.sCharacter('nda_rune_antagonist').GetFullName].\n\nApparently this is due to the refusal to review for publication a manuscript called 'History of Witchcraft and Alchemy', as no one of a reasonable scientific disposition could accept such fanciful notions as being possible."
+nda_authors.30.d: "An unusual affair has been brought forward where the leading intellectual, [SCOPE.sCharacter('nda_rune_victim_1').GetFullName], is complaining of being harrased by the Cultist, [SCOPE.sCharacter('nda_rune_antagonist').GetFullName].\n\nApparently this is due to the refusal to review for publication a manuscript called #BLUE 'History of Witchcraft and Alchemy'#!, as no one of a reasonable scientific disposition could accept such fanciful notions as being possible."
 nda_authors.30.f: "'...is a very angry person. But I don't know much about them otherwise, except that they are a person of wealth, and they're an alchemist, apparently, and wants to tell us all about it; and that's about all — except that I don't want to meet them for the next week or two.'"
 nda_authors.30.a: "Interesting"
 
@@ -36,14 +36,14 @@ nda_authors.33.f: "'All that is known is that a traveller, examining the front o
 nda_authors.33.a: "Our Condolences"
 
 nda_authors.40.t: "Mummy In Oxford"
-nda_authors.40.d: "There has been a story circulating around Oxford about unusual nocturnal activity after the purchase of a Sarchopagus, which sold at an auction as Lot No. 249.\n\nIt is alledged that the purchaser, a student by the name of Edward Bellingham, has been able to use rituals to bring it back to life and send it out to do acts of violence against other students."
+nda_authors.40.d: "There has been a story circulating around Oxford about unusual nocturnal activity after the purchase of a Sarchopagus, which sold at an auction as Lot No. 249.\n\nIt is alledged that the purchaser, a student by the name of #GREEN Edward Bellingham#!, has been able to use rituals to bring it back to life and send it out to do acts of violence against other students."
 nda_authors.40.f: "'...in his Eastern studies, has got hold of some infernal secret by which a mummy — or possibly only this particular mummy — can be temporarily brought to life...\n\n...he naturally bethought him that he might use the creature as an agent. It has intelligence and it has strength.'"
 nda_authors.40.a: "Only a story."
 nda_authors.40.b: "An able recruit!"
 nda_authors.40.c: "Send him away!"
 
 nda_authors.41.t: "Challenger Returns!"
-nda_authors.41.d: "The noted Zoologist, Professor Challenger, has returned from an expedition to the Americas. They claim to have uncovered a 'Lost World' populated by Dinosaurs and other wonders of times past."
+nda_authors.41.d: "The noted Zoologist, #GREEN Professor Challenger#!, has returned from an expedition to the Americas. They claim to have uncovered a #BLUE 'Lost World'#! populated by Dinosaurs and other wonders of times past."
 nda_authors.41.f: "'The much-discussed meeting of the Zoological Institute, convened to hear the report of the Committee of Investigation sent out to South America to test the assertions made by Professor Challenger as to the continued existence of prehistoric life upon that Continent, was held last night in the greater Queen's Hall, and it is safe to say that it is likely to be a red letter date in the history of Science, for the proceedings were of so remarkable and sensational a character that no one present is ever likely to forget them.'"
 nda_authors.41.a: "Completely made up!"
 nda_authors.41.b: "A capable man!"
@@ -56,7 +56,7 @@ nda_authors.42.a: "A welcome addition"
 nda_authors.42.b: "Send them on their way."
 
 nda_authors.43.t: "The Dynamics of a Star"
-nda_authors.43.d: "Professor Morrison has come to us with what appears to be a dire prediction of the worlds doom!\n\nThere is apparently a large object approaching the outer limits of the solar system, and which will make a close approach of the Earth within the year! There is even the chance that it will hit the planet with devastating results!"
+nda_authors.43.d: "#GREEN Professor Morrison#!, of the Miskatonic, has come to us with what appears to be a dire prediction of the worlds doom!\n\nThere is apparently a large object approaching the outer limits of the solar system, and which will make a close approach of the Earth within the year! There is even the chance that it will hit the planet with devastating results!"
 nda_authors.43.f: "'He is a genius, a philosopher, an abstract thinker. He has a brain of the first order. He sits motionless, like a spider in the centre of its web...\n\nHis soft, precise fashion of speech leaves a conviction of sincerity...'"
 nda_authors.43.a: "What can we do?"
 
@@ -69,19 +69,19 @@ nda_authors.50.b: "We should protest."
 
 
 nda_authors.60.t: "Mysterious Plague"
-nda_authors.60.d: "A plague has hit the town of Wisburg, near Wismar. If was apparently started when rats came streaming off the schooner Empusa, which had recently docked in the port.\n\n"
+nda_authors.60.d: "A plague has hit the town of Wisburg, near Wismar. If was apparently started when rats came streaming off the schooner #BLUE Empusa#!, which had recently docked in the port.\n\n"
 nda_authors.60.f: "''"
 nda_authors.60.a: "The hazards of travel"
 nda_authors.60.b: "We should protest."
 
 nda_authors.61.t: "A Case of Defamation"
-nda_authors.61.d: "The film director F W Murnau is being sued for defamation by a certain Count Orlok, who claims that the film depicts an unflatering version of them.\n\nMurnau's defense seems to revolve around the fact that, since the film is depicting events based in 1838, it can not be the same Orlok who is being depicted.\n\nThe estate of Bram Stoker is also apparently starting legal action as they claim the film is a thinly disgused interpretation of the novel and stage play 'Dracula'"
+nda_authors.61.d: "The film director #GREEN F W Murnau#! is being sued for defamation by a certain #GREEN Count Orlok#!, who claims that the film #BLUE Nosferatu#! depicts an unflatering version of them.\n\nMurnau's defense seems to revolve around the fact that, since the film is depicting events based in 1838, it can not be the same Orlok who is being depicted.\n\nThe estate of Bram Stoker is also apparently starting legal action as they claim the film is a thinly disgused interpretation of the novel and stage play #BLUE 'Dracula'#!"
 nda_authors.61.f: "''"
-nda_authors.61.a: "The hazards of travel"
-nda_authors.61.b: "We should protest."
+nda_authors.61.a: "Obviously not the same person!"
+nda_authors.61.b: "Poor Count Orlok."
 
 nda_titanic.2.t: "A Mournful Disaster"
-nda_titanic.2.d: "After the monumental Titanic left the shipyards of [SCOPE.sState('titanic_state').GetName], it wasn't long until tragedy reached her, as part of her hull collided with an equally imposing iceberg.\n\nThe ice enveloped the ship and it soon became apparent this was no ordinary iceberg.\n\nA number of crew and passengers appeared to suffer from some form of Mesmerism and wandered from the entrapped ship onto the Iceberg, where they waited in line to be devoured by a Great White Worm.\n\nOnly a handful of survivors managed to escape via the lifeboats.\n\nNo trace of the iceberg can now be found."
-nda_titanic.2.d2: "After the monumental [SCOPE.GetRootScope.GetCountry.GetCustom('dynamic_titanic')] left the shipyards of [SCOPE.sState('titanic_state').GetName], it wasn't long until tragedy reached her, as part of her hull collided with an equally imposing iceberg.\n\nThe ice enveloped the ship and it soon became apparent this was no ordinary iceberg.\n\nA number of crew and passengers appeared to suffer from some form of Mesmerism and wandered from the entrapped ship onto the Iceberg, where they waited in line to be devoured by a Great White Worm.\n\nOnly a handful of survivors managed to escape via the lifeboats.\n\nNo trace of the iceberg can now be found."
+nda_titanic.2.d: "After the monumental Titanic left the shipyards of [SCOPE.sState('titanic_state').GetName], it wasn't long until tragedy reached her, as part of her hull collided with an equally imposing iceberg.\n\nThe ice enveloped the ship and it soon became apparent this was no ordinary iceberg.\n\nA number of crew and passengers appeared to suffer from some form of Mesmerism and wandered from the entrapped ship onto the Iceberg, where they waited in line to be devoured by a #BLUE Great White Worm#!.\n\nOnly a handful of survivors managed to escape via the lifeboats.\n\nNo trace of the iceberg can now be found."
+nda_titanic.2.d2: "After the monumental [SCOPE.GetRootScope.GetCountry.GetCustom('dynamic_titanic')] left the shipyards of [SCOPE.sState('titanic_state').GetName], it wasn't long until tragedy reached her, as part of her hull collided with an equally imposing iceberg.\n\nThe ice enveloped the ship and it soon became apparent this was no ordinary iceberg.\n\nA number of crew and passengers appeared to suffer from some form of Mesmerism and wandered from the entrapped ship onto the Iceberg, where they waited in line to be devoured by a #BLUE Great White Worm#!.\n\nOnly a handful of survivors managed to escape via the lifeboats.\n\nNo trace of the iceberg can now be found."
 nda_titanic.2.f: "From spaces beyond the limits of the north he hath come in his floating citadel, the ice-mountain Yikilth, to voyage the mundane oceans and to blast with a chill spendour the puny peoples of humankind.\n\n...there towered an iceberg such as no vessel had yet sighted in all its sea-faring to the north, and no legend had told of among the dim Hyperborean isles.\n\n ...sheered up to a height immeasurable with piled escarpments and tiered precipices; and its pinnacles hung like towers in the zenith..."
 nda_titanic.2.a: "This can not be..."

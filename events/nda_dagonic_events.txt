@@ -192,84 +192,84 @@ nda_dagonic.2 = { # Cult in country converts to dagonic - called from journal 'j
 	}
 }
 
-nda_dagonic.3 = { # Notifications that the Dagonic Shores has formed
-	type = country_event
-	placement = ROOT
-	title = nda_dagonic.3.t
-	desc = nda_dagonic.3.d
-	flavor =  nda_dagonic.3.f
-	dlc = dlc_NDA
+# nda_dagonic.3 = { # Notifications that the Dagonic Shores has formed
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_dagonic.3.t
+# 	desc = nda_dagonic.3.d
+# 	flavor =  nda_dagonic.3.f
+# 	dlc = dlc_NDA
 
-	duration = 3
+# 	duration = 3
 
-	event_image = {
-		video = "southamerica_war_civilians"
+# 	event_image = {
+# 		video = "southamerica_war_civilians"
 		
-	}
-#	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+# 	}
+# #	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	 
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	trigger = {
-		AND = {
-				exists = c:DGN
-				c:DGN = ROOT
-		}
-		NOT = { has_global_variable = nda_dagonic_shores_founded} 
-	}
+# 	trigger = {
+# 		AND = {
+# 				exists = c:DGN
+# 				c:DGN = ROOT
+# 		}
+# 		NOT = { has_global_variable = nda_dagonic_shores_founded} 
+# 	}
 
-	immediate = {
+# 	immediate = {
 
-		set_global_variable =  nda_dagonic_shores_founded
+# 		set_global_variable =  nda_dagonic_shores_founded
 
-		# send out notification		
-		every_country = {
-			limit = {
-				#is_player = yes
-				NOT = {	c:DGN = ROOT }
-			}
+# 		# send out notification		
+# 		every_country = {
+# 			limit = {
+# 				#is_player = yes
+# 				NOT = {	c:DGN = ROOT }
+# 			}
 
-			post_notification = nda_dagonic_shores_proclaimed # toast
-		}
+# 			post_notification = nda_dagonic_shores_proclaimed # toast
+# 		}
 
-		# Set up Dagonic leadership and IGs
-		nda_effect_dagonic_setup = yes
+# 		# Set up Dagonic leadership and IGs
+# 		nda_effect_dagonic_setup = yes
 
-		# get other countries onside by increasing approval
-		nda_effect_dagonic_influence = yes
+# 		# get other countries onside by increasing approval
+# 		nda_effect_dagonic_influence = yes
 
-		# push conversion a bit as currently too slow - too many small countries
-		random_country = {
-			limit = {				
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_dagonic = yes
-				}
-			}
+# 		# push conversion a bit as currently too slow - too many small countries
+# 		random_country = {
+# 			limit = {				
+# 				NOT = { has_variable = nda_nameless_cults_selected }
+# 				any_scope_state = { 
+# 					is_potentially_dagonic = yes
+# 				}
+# 			}
 
-			set_variable = nda_nameless_cults_selected
-		}
+# 			set_variable = nda_nameless_cults_selected
+# 		}
 
-		random_country = {
-			limit = {				
-				NOT = { has_variable = nda_nameless_cults_selected }
-				any_scope_state = { 
-					is_potentially_dagonic = yes
-				}
-			}
+# 		random_country = {
+# 			limit = {				
+# 				NOT = { has_variable = nda_nameless_cults_selected }
+# 				any_scope_state = { 
+# 					is_potentially_dagonic = yes
+# 				}
+# 			}
 
-			set_variable = nda_nameless_cults_selected
-		}
-	}	
+# 			set_variable = nda_nameless_cults_selected
+# 		}
+# 	}	
 	
-	option = { #Hurrah!
-		name = nda_dagonic.3.a
-		default_option = yes
-	}
-}
+# 	option = { #Hurrah!
+# 		name = nda_dagonic.3.a
+# 		default_option = yes
+# 	}
+# }
 
 # Bounty of the Sea!
 nda_dagonic.4 = {

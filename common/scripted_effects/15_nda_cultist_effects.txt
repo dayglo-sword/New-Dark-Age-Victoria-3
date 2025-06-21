@@ -2,14 +2,15 @@
 	if = {
 		limit = { has_non_cultist_ideology = yes }
 		random_list = {	
-			25 = { set_ideology = ideology:ideology_nda_cultist }
+			35 = { set_ideology = ideology:ideology_nda_cultist }
 			20 = { set_ideology = ideology:ideology_jingoist_leader }
 			15 = { set_ideology = ideology:ideology_fascist }
 			20 = { set_ideology = ideology:ideology_slaver }
 			#1.3
 			10 = { set_ideology = ideology:ideology_authoritarian }
 			10 = { set_ideology = ideology:ideology_luddite }
-			
+			#1.9
+			10 = { set_ideology = ideology:ideology_despotic_utopian }			
 		}
 	}
 }

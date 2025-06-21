@@ -899,11 +899,18 @@ nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
 	desc = nda_authors.61.d
 	flavor =  nda_authors.61.f
 
-	event_image = {
-		video = "unspecific_sick_in_hospital"
-	}
+	gui_window = event_window_1char_tabloid_halloween
+	left_icon = scope:orlok_scope
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	# event_image = {
+	# 	video = "unspecific_sick_in_hospital"
+	# }
+
+	# on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
 
@@ -927,7 +934,33 @@ nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
 	immediate = {
 		debug_log = "Nosferatu Film"
 
-		p:xE080A0 = { state = { owner = { save_scope_as = location_country } } }
+		p:xE080A0 = { 
+			state = { 
+				owner = { 
+					save_scope_as = location_country 
+
+					IF = { 
+						limit = {
+							NOT = { any_character = { has_variable = orlok_var } }
+						}
+						# create using ecchi - could be a return from dead?
+						create_character = {
+							template = ecchi_gbr_dickens_character_template 
+							on_created = {
+								set_variable = orlok_var						
+							}
+						}						
+					}
+					random_scope_character = {
+						limit = {
+							has_variable = orlok_var
+						}
+
+						save_scope_as = orlok_scope
+					}
+				}
+			} 
+		}
 	}
 	
 	option = { # 

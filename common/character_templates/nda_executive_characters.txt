@@ -33,15 +33,16 @@
 #    }
 #}
 
-nda_generic_marsh_character_template = { # should have initial non-generic for founder
+nda_marsh_obed_character_template = { # should have Obed Marsh for founder
+	first_name = Obed
 	last_name = Marsh
     culture = cu:nda_cul_trueyankee
     female = no
-    religion = nda_rel_yigian
-    ideology = ideology_reformer
-    interest_group = ig_nda_cult_worshippers
+    religion = protestant # but not really!
+    ideology = ideology_authoritarian
+    interest_group = ig_industrialists
 	dna = nda_dna_marsh
-    #birth_date = 1812.2.7
+    birth_date = 1812.2.7
     traits = { 
 		nda_master
 		ambitious
@@ -52,7 +53,8 @@ nda_generic_marsh_character_template = { # should have initial non-generic for f
 		company_trigger = {
 			is_company_type = company_type:company_nda_marsh_fishing
 		}
-	    earliest_usage_date = 1841.1.1
+	    earliest_usage_date = 1836.1.1
+		latest_usage_date = 1875.12.31
 		chance = 100
 	}
 	on_created = {
@@ -62,13 +64,74 @@ nda_generic_marsh_character_template = { # should have initial non-generic for f
     }
 }
 
-nda_generic_curwen_character_template = {
+nda_marsh_onesiphorus_character_template = { # Onesiphorus Marsh
+	first_name = Onesiphorus
+	last_name = Marsh
+    culture = cu:nda_cul_trueyankee
+    female = no
+    religion = nda_rel_cultist
+    ideology = ideology_authoritarian
+    interest_group = ig_nda_cult_worshippers # might not exist??
+	dna = nda_dna_marsh
+    birth_date = 1842.2.7
+    traits = { 
+		nda_master
+		ambitious
+		wrathful
+	}
+	#is_agitator = yes # add only if available
+	executive_usage = {
+		company_trigger = {
+			is_company_type = company_type:company_nda_marsh_fishing
+		}
+	    earliest_usage_date = 1876.1.1
+		latest_usage_date = 1900.12.31
+		chance = 100
+	}
+	on_created = {
+        set_variable = {
+            name = is_marsh
+        }
+    }
+}
+
+nda_marsh_barnabas_character_template = { # Barnabas Marsh at time of Innsmouth raid. 
+	first_name = Barnabas
+	last_name = Marsh
+    culture = cu:nda_cul_trueyankee
+    female = no
+    religion = nda_rel_dagon
+    ideology = ideology_authoritarian
+    interest_group = ig_nda_cult_worshippers # might not exist??
+	dna = nda_dna_marsh
+    birth_date = 1862.2.7
+    traits = { 
+		nda_dagon_master
+		ambitious
+		wrathful
+	}
+	#is_agitator = yes # add only if available
+	executive_usage = {
+		company_trigger = {
+			is_company_type = company_type:company_nda_marsh_fishing
+		}
+	    earliest_usage_date = 1901.1.1
+		chance = 100
+	}
+	on_created = {
+        set_variable = {
+            name = is_marsh
+        }
+    }
+}
+
+nda_generic_curwen_character_template = { # Should be same character that is perpetually young?
 
 	last_name = Curwen
     culture = cu:nda_cul_trueyankee
     female = no
-    religion = nda_rel_yigian
-    ideology = ideology_reformer
+    religion = nda_rel_cultist
+    ideology = ideology_authoritarian
     interest_group = ig_nda_cult_worshippers
 	dna = nda_dna_curwen
     #birth_date = 1812.2.7

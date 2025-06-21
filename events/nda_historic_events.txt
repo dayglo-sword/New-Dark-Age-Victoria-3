@@ -747,6 +747,8 @@ nda_historic.1862 = { # The Ghost Club
 
 	left_icon = scope:dickens_scope
 
+	minor_left_icon = scope:location_country
+
 	#event_image = {
 	#	video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
 	#}
@@ -777,6 +779,7 @@ nda_historic.1862 = { # The Ghost Club
 
 	immediate = {
 		p:x7543C8 = { # London
+		 	owner = { save_scope_as = location_country } 
 			state = { save_scope_as = spiritualist_state 
 				# add Dickens to country - could already exist due to VOTP DLC so check first
 				owner = {

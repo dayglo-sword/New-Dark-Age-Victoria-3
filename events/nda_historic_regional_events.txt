@@ -45,7 +45,7 @@ nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Ed
 
 nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoologist and biogeographer Philip Sclater appeared in The Quarterly Journal of Science. Ernst Haeckel, supported by Russel Wallace (what about Mu - Augustus Le Plongeon + James Churchward
 	type = country_event
-	placement = p:x0E3435 # Baltimore - 
+	placement = p:x7543C8 # London
 	title = nda_historic_regional.1864.t
 	desc = nda_historic_regional.1864.d
 	flavor = nda_historic_regional.1864.f
@@ -67,15 +67,15 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 		game_date < 1865.3.1 
 
 		OR = {
-			p:x0E3435 = { state = { owner = ROOT } }
-			has_interest_marker_in_region = p:x0E3435.region			
+			p:x7543C8 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x7543C8.region			
 		}
 	}
 
 	cooldown = { days = 1000 }	
 
 	immediate = {
-		p:x0E3435 = { state = { owner = { save_scope_as = location_country } } }
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
 	}
 
 	option = { #"Interesting"

@@ -139,11 +139,11 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 					}
 					modifier = { # Is unincorporated - try and stop spread to minor
 						is_incorporated = no
-						add = -150
+						add = -50
 					}
 					modifier = { # Don't punish smaller countries too much
 						owner = { country_rank <= rank_value:insignificant_power}
-						add = -150
+						add = -50
 					}
 				}
 				# if previously hit reduce chance of spread - will not prevent secondary waves

@@ -63,6 +63,8 @@ has_non_cultist_ideology = {
 		#1.3
 		has_ideology = ideology:ideology_humanitarian	
 		has_ideology = ideology:ideology_positivist	
+		#1.9
+		has_ideology = ideology:ideology_utopian	
 	}
 }
 

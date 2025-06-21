@@ -104,8 +104,8 @@ nda_monthly_on_action = {
 		nda_ritual.5 # Eldritch add Cult countries
 		nda_ritual.8 # Final War		
 
-		nda_yigian.3 # Yigian Lands Proclaimed
-		nda_dagonic.3 # Dagonic Shores Proclaimed
+		#nda_yigian.3 # Yigian Lands Proclaimed
+		#nda_dagonic.3 # Dagonic Shores Proclaimed
 
 		nda_nen.1842 # Founding of Miskatonic Uni
 		nda_nen.1845 # Cult in Innsmouth
@@ -765,8 +765,9 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 on_country_formed = {
 	on_actions = {
 		nda_eldrtich_realm_formed_on_action
+		nda_yigian_lands_formed_on_action
+		nda_dagonic_shores_formed_on_action 
 		nda_greater_new_england_on_action
-		#delay = { days = 7 }
 		nda_create_leng_on_action
 	}
 }
@@ -807,6 +808,100 @@ nda_eldrtich_realm_formed_on_action = {
 			# trigger events for other cult countries to bow down/offer tribute/ignore
 
 		}		
+	}	
+}
+
+nda_yigian_lands_formed_on_action = {
+	# Proper notification
+	effect = {
+		if = {
+			limit = {
+				c:YIG ?= ROOT
+			}	
+			
+			set_global_variable =  nda_yigian_lands_founded
+
+			# send out notification		
+			every_country = {
+				limit = {
+					#is_player = yes
+					NOT = {	c:YIG = THIS }
+				}
+
+				post_notification = nda_yigian_lands_proclaimed # toast
+			}
+
+			# push conversion a bit as currently too slow
+			random_country = {
+				limit = {				
+					NOT = { has_variable = nda_nameless_cults_selected }
+					any_scope_state = { 
+						is_potentially_yigian = yes
+					}
+				}
+
+				set_variable = nda_nameless_cults_selected
+			}	
+
+			# Set up Yigian leadership and IGs
+			nda_effect_yigian_setup = yes
+
+			# get other countries onside by increasing approval
+			#nda_effect_yigian_influence = yes
+
+		}		
+	}	
+}
+
+nda_dagonic_shores_formed_on_action = {
+	# Proper notification
+	effect = {
+		if = {
+			limit = {
+				c:DGN ?= ROOT
+			}	
+			
+			set_global_variable =  nda_dagonic_shores_founded
+
+			# send out notification		
+			every_country = {
+				limit = {
+					#is_player = yes
+					NOT = {	c:DGN = ROOT }
+				}
+
+				post_notification = nda_dagonic_shores_proclaimed # toast
+			}
+
+			# Set up Dagonic leadership and IGs
+			nda_effect_dagonic_setup = yes
+
+			# get other countries onside by increasing approval
+			nda_effect_dagonic_influence = yes
+
+			# push conversion a bit as currently too slow - too many small countries
+			random_country = {
+				limit = {				
+					NOT = { has_variable = nda_nameless_cults_selected }
+					any_scope_state = { 
+						is_potentially_dagonic = yes
+					}
+				}
+
+				set_variable = nda_nameless_cults_selected
+			}
+
+			random_country = {
+				limit = {				
+					NOT = { has_variable = nda_nameless_cults_selected }
+					any_scope_state = { 
+						is_potentially_dagonic = yes
+					}
+				}
+
+				set_variable = nda_nameless_cults_selected
+			}	
+		}	
 	}	
 }
 
