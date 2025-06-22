@@ -253,9 +253,13 @@ nda_eap.13 = { # Masque of the Red Death
 					
 			save_scope_as = red_death_state_scope	
 			
-			kill_population_percent_in_state = { percent = 0.1 strata = rich }	
+			kill_population_percent_in_state = { percent = 0.1 strata = upper }	
 			
 			# kill off a powerful leader?? Or make them sickly? Have a separate event to decide?				
+		}
+
+		random_scope_politician = {
+			
 		}
 	}	
 	
@@ -422,6 +426,17 @@ nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
 				}					
 			}		
 		}
+		else = {			
+			every_scope_state = {
+				limit = { NOT = { has_variable = nda_rel_boost_atheism } }
+						
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_atheism						
+					months = 12
+					value = nda_trivial_conversion
+				}					
+			}	
+		}
 	}
 
 	option = { # Promote for major boost
@@ -439,6 +454,17 @@ nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
 					value = nda_small_conversion
 				}		
 			}
+		}
+		else = {			
+			every_scope_state = {
+				limit = { NOT = { has_variable = nda_rel_boost_atheism } }
+						
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_atheism						
+					months = 12
+					value = nda_small_conversion
+				}					
+			}	
 		}
 	}
 

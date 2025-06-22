@@ -329,3 +329,23 @@ investigator_real_william_wynn_wescott = { #founder of the Golden Dawn
     traits = { nda_investigator inspirational_orator }
 	is_agitator = yes
 }
+
+nda_count_orlok = {
+	first_name = Count
+	last_name = Orlok
+	historical = yes
+	culture = cu:szekely
+	female = no
+	dna = dna_dracula
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	is_general = yes
+	age = 51
+	religion = rel:orthodox
+	traits = {
+		erudite
+		imposing
+		charismatic
+		forest_commander
+	}
+}

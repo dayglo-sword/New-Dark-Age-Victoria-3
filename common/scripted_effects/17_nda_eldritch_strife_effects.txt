@@ -85,10 +85,10 @@
 				exists = scope:nda_eldritch_rebels
 			}
 			# Acceptance levels and Movements should do this naturally
-			add_loyalists = { value = -0.8 culture = scope:nda_eldritch_rebels }	# was -0.8
+			add_loyalists = { value = -0.9 culture = scope:nda_eldritch_rebels }	# was -0.8
 
 			add_radicals = {
-				value = 0.8 # was 0.8
+				value = 0.9 # was 0.8
 				culture = scope:nda_eldritch_rebels
 			}
 		}

@@ -7,6 +7,7 @@ nda_historic.1837 = { # Masonic Meeting
 	title = nda_historic.1837.t
 	desc = nda_historic.1837.d
 	flavor = nda_historic.1837.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -54,6 +55,7 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	title = nda_historic.1838.t
 	desc = nda_historic.1838.d
 	flavor = nda_historic.1838.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -100,6 +102,7 @@ nda_historic.1842 = { # Zanoni novel by Edward Bulwer-Lytton
 	title = nda_historic.1842.t
 	desc = nda_historic.1842.d
 	flavor =  nda_historic.1842.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -153,6 +156,7 @@ nda_historic.1848 = { # Founding of Spiritualist Movement
 	title =nda_historic.1848.t
 	desc =nda_historic.1848.d
 	flavor = nda_historic.1848.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -242,6 +246,7 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 	title = nda_historic.1849.t
 	desc = nda_historic.1849.d
 	flavor =  nda_historic.1849.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -314,6 +319,7 @@ nda_historic.1852 = { # An American Medium in London
 	title = nda_historic.1852.t
 	desc = nda_historic.1852.d
 	flavor =  nda_historic.1852.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -409,6 +415,7 @@ nda_historic.1854 = { # Eliphas Levi - Dogme et Rituel de la Haute Magie 'The Do
 	title = nda_historic.1854.t
 	desc = nda_historic.1854.d
 	flavor =  nda_historic.1854.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -462,14 +469,13 @@ nda_historic.1857 = { # Banner of Light
 	title = nda_historic.1857.t
 	desc = nda_historic.1857.d
 	flavor =  nda_historic.1857.f
+	dlc = dlc_NDA
 
 	duration = 3
 
 	event_image = {
-		video = "europenorthamerica_london_center"
+		video = "ep1_printing_press"
 	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
@@ -573,6 +579,7 @@ nda_historic.1858 = { # Le Livre des Esprits
 	title = nda_historic.1858.t
 	desc = nda_historic.1858.d
 	flavor =  nda_historic.1858.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -740,6 +747,7 @@ nda_historic.1862 = { # The Ghost Club
 		}
 	} 
 	flavor =  nda_historic.1862.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -828,6 +836,7 @@ nda_historic.1865 = { # Zetetic Astronomy - Earth is not a globe!
 	title = nda_historic.1865.t
 	desc = nda_historic.1865.d
 	flavor =  nda_historic.1865.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -881,6 +890,7 @@ nda_historic.1867 = { # Societas Rosicruciana in Anglia TODO (should be regional
 	title = nda_historic.1867.t
 	desc = nda_historic.1867.d
 	flavor =  nda_historic.1867.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -926,6 +936,7 @@ nda_historic.1871 = { # Vril - Power of the coming race : book by Edward Bulwer-
 	title = nda_historic.1871.t
 	desc = nda_historic.1871.d
 	flavor =  nda_historic.1871.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -983,6 +994,7 @@ nda_historic.1875 = { # The Theosophical Society
 	title = nda_historic.1875.t
 	desc = nda_historic.1875.d
 	flavor =  nda_historic.1875.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1056,6 +1068,7 @@ nda_historic.1879 = {
 	title = nda_historic.1879.t
 	desc = nda_historic.1879.d
 	flavor =  nda_historic.1879.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1120,6 +1133,7 @@ nda_historic.1882 = { # The Society for Psychical Research
 	title = nda_historic.1882.t
 	desc = nda_historic.1882.d
 	flavor =  nda_historic.1882.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1172,6 +1186,7 @@ nda_historic.1887 = { # "The Secret Doctrine" - actually 1888
 	title = nda_historic.1887.t
 	desc = nda_historic.1887.d
 	flavor =  nda_historic.1887.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1239,6 +1254,7 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement (https://www.gu
 	title = nda_historic.1888.t
 	desc = nda_historic.1888.d
 	flavor =  nda_historic.1888.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1287,6 +1303,7 @@ nda_historic.1889 = { # Hermetic Order of the Golden Dawn - actually 1888
 	title = nda_historic.1889.t
 	desc = nda_historic.1889.d
 	flavor =  nda_historic.1889.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1339,6 +1356,7 @@ nda_historic.1891 = { # Vril-Ya Bazaar and Fete
 	title = nda_historic.1891.t
 	desc = nda_historic.1891.d
 	flavor =  nda_historic.1891.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1409,6 +1427,7 @@ nda_historic.1892 = { # Zetetic Astronomy - Universal Zetetic Soc
 	title = nda_historic.1892.t
 	desc = nda_historic.1892.d
 	flavor =  nda_historic.1892.f
+	dlc = dlc_NDA
 
 	duration = 3
 
@@ -1458,7 +1477,8 @@ nda_historic.1893 = {  # National Spiritualist Association of Churches
 	title = nda_historic.1893.t
 	desc = nda_historic.1893.d
 	flavor =  nda_historic.1893.f
-
+	dlc = dlc_NDA
+	
 	duration = 3
 
 	event_image = {

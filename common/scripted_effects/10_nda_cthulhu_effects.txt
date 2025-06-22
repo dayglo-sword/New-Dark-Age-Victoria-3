@@ -240,11 +240,11 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# Make non-cultist survivors angry
 					scope:target_scope = {
 						add_loyalists = {
-							value = -0.7
+							value = -0.75
 							culture =  PREV #THIS
 						}
 						add_radicals = {
-							value = 0.7
+							value = 0.75
 							culture =  PREV #THIS
 						}					
 					}				
@@ -283,9 +283,14 @@ nda_effect_cthulhu_leaves = { # Used at departure
 			# drop cultist religion - convert in part to Theosophy as they are partially right!
 			every_scope_pop = {
 				limit = {
-					religion = rel:nda_rel_cultist
+					OR = {
+						religion = rel:nda_rel_cultist	
+						religion = rel:nda_rel_yigian					
+					}
+
 				}
-				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.05 }			
+				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.05 }	
+				change_pop_religion = { target = rel:atheist value = 0.05 }		
 			}
 		}
 		else_if = {
@@ -355,7 +360,8 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				limit = {
 					religion = rel:nda_rel_cultist
 				}
-				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.1 }			
+				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.1 }
+				change_pop_religion = { target = rel:atheist value = 0.05 }				
 			}
 		}
 		else = { # not cultists  - make happier
@@ -409,7 +415,8 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				limit = {
 					religion = rel:nda_rel_cultist
 				}
-				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.1 }			
+				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.1 }	
+				change_pop_religion = { target = rel:atheist value = 0.05 }			
 			}
 		}	
 

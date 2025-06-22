@@ -67,7 +67,7 @@ nda_hgw.11 = { # Getting closer
 	immediate = {
 		debug_log = "The Star - Approach"
 
-		trigger_event = { id = nda_hgw.12 days = 10 }
+		trigger_event = { id = nda_hgw.12 popup = yes days = 10 }
 	}	
 	
 	option = { #"Interesting"
@@ -103,7 +103,7 @@ nda_hgw.12 = { #  Closest Approach - Devestation (Punishment for Defeating Cthul
 			nda_effect_star_devastation = yes
 		}
 		set_global_variable = nda_the_star_devestation # stop rerun
-		trigger_event = { id = nda_hgw.13 days = 10 }
+		trigger_event = { id = nda_hgw.13 popup = yes days = 10 }
 	}	
 	
 	option = { #"Interesting"

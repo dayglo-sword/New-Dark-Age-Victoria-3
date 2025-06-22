@@ -13,6 +13,7 @@ Improve tooltips and notifications.
 Colour code text for events
 Add despotic utopian as approved cult ideology.
 Change Power Bloc naming to force Cult names.
+Launch NEN journals on start up
 
 Bug Fixes
 Correct premature Spirtualism boost on Inqusition fail.

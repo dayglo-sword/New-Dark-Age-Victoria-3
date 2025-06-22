@@ -769,71 +769,71 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	}
 }
 
-# This should be in 'nation'
-nda_base.10 = { # Notifications that the Eldritch Realms has formed
-	type = country_event
-	#hidden = yes # if there are no option, make it hidden
-	placement = ROOT
-	title = nda_base.10.t
-	desc = nda_base.10.d
-	flavor =  nda_base.10.f
-	dlc = dlc_NDA
+# # This should be in 'nation'
+# nda_base.10 = { # Notifications that the Eldritch Realms has formed
+# 	type = country_event
+# 	#hidden = yes # if there are no option, make it hidden
+# 	placement = ROOT
+# 	title = nda_base.10.t
+# 	desc = nda_base.10.d
+# 	flavor =  nda_base.10.f
+# 	dlc = dlc_NDA
 
-	duration = 3
+# 	duration = 3
 
-	event_image = {
-		video = "southamerica_war_civilians"	
-	}
+# 	event_image = {
+# 		video = "southamerica_war_civilians"	
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	 
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	trigger = {
-		NOT = { has_global_variable = nda_eldritch_realm_founded } 		
-		AND = {
-				exists = c:ELD
-				c:ELD = ROOT
-		}
-	}
+# 	trigger = {
+# 		NOT = { has_global_variable = nda_eldritch_realm_founded } 		
+# 		AND = {
+# 				exists = c:ELD
+# 				c:ELD = ROOT
+# 		}
+# 	}
 
-	immediate = {
+# 	immediate = {
 
-		set_global_variable = nda_eldritch_realm_founded
+# 		set_global_variable = nda_eldritch_realm_founded
 
-		# send out notification		
-		every_country = {
-			limit = {
-				#is_player = yes
-				NOT = {	c:ELD = THIS }
-			}
+# 		# send out notification		
+# 		every_country = {
+# 			limit = {
+# 				#is_player = yes
+# 				NOT = {	c:ELD = THIS }
+# 			}
 
-			post_notification = nda_elditch_realm_proclaimed # toast
+# 			post_notification = nda_elditch_realm_proclaimed # toast
 
-		}
+# 		}
 
-		# set up Leaders and IG's
-		nda_effect_eldritch_setup = yes
+# 		# set up Leaders and IG's
+# 		nda_effect_eldritch_setup = yes
 
-		# spread to non-cultist  Neighbour
-		random_country = {
-			limit = {
-				is_adjacent_to_country = ROOT
-				can_cult_infiltrate = yes
-			}
-			trigger_event = { id = nda_base.8 }	# spread the cult
-		}
+# 		# spread to non-cultist  Neighbour
+# 		random_country = {
+# 			limit = {
+# 				is_adjacent_to_country = ROOT
+# 				can_cult_infiltrate = yes
+# 			}
+# 			trigger_event = { id = nda_base.8 }	# spread the cult
+# 		}
 
-		# trigger events for other cult countries to bow down/offer tribute/ignore
+# 		# trigger events for other cult countries to bow down/offer tribute/ignore
 
-	}	
+# 	}	
 	
-	option = { # #Hurrah!
-		name = nda_base.10.a
-		default_option = yes
-	}
-}
+# 	option = { # #Hurrah!
+# 		name = nda_base.10.a
+# 		default_option = yes
+# 	}
+# }
 
 nda_base.11 = { # Intro help - triggered from nda_base.1
 	type = country_event

@@ -42,10 +42,10 @@
  nda_base.9.a: "Pursuade Them!"
  nda_base.9.b: "Ignore Them!"
 
- nda_base.10.t: "Eldritch Realm Proclaimed"
- nda_base.10.d: "For too long has the Cult been without a homeland to call their own! But that is no longer the case as #BOLD The Eldritch Realm on Earth#!. has been proclaimed!"
- nda_base.10.f: "But why stop here when we can include the rest of the world in our ambitions!"
- nda_base.10.a: "Hurrah!"
+#  nda_base.10.t: "Eldritch Realm Proclaimed"
+#  nda_base.10.d: "For too long has the Cult been without a homeland to call their own! But that is no longer the case as #BOLD The Eldritch Realm on Earth#!. has been proclaimed!"
+#  nda_base.10.f: "But why stop here when we can include the rest of the world in our ambitions!"
+#  nda_base.10.a: "Hurrah!"
 
 # re-used base.11 as Intro help
  nda_base.11.t: "Strife Without End?"

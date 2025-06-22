@@ -40,5 +40,8 @@
 		ig:ig_devout = {
 			set_interest_group_name = ig_evangelicals
 		}
+
+		add_journal_entry = { type = je_nda_maritimes }
+		add_journal_entry = { type = je_nda_yankee_reconcile }
 	}
 }

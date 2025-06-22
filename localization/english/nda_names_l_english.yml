@@ -122,6 +122,7 @@ Howard_Phillips: "Howard Phillips"
 Richard_Upton: "Richard Upton"
 Asenath: "Asenath"
 Lavinia: "Lavinia"
+Obed: "Obed"
 Onesiphorus: "Onesiphorus" #Marsh
 
 # Atlantian - get additional from Crowley story
@@ -146,11 +147,13 @@ Challenger: "Challenger"
 
 #Arabella: "Arabella"
 March: "March"
+Orlok: "Orlok"
 
 #Titles
 Professor: "Professor"
 Pharaoh: "Pharaoh"
 Queen: "Queen"
+Count: "Count"
 
 #Power Blocs
 nda_dark_pact: "The Dark Pact"

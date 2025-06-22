@@ -3,59 +3,70 @@
 # Fires when bookmark initialization is complete but players are still in the lobby
 # At this point we do not know who the players are
 # No root scope set
-# on_game_started = {
-# 	# effect = {
-# 	# 	# Memento Mori
-# 	# 	every_country = {
-# 	# 		every_interest_group = {
-# 	# 			leader = {
-# 	# 				if = {
-# 	# 					limit = {
-# 	# 						NOT = {
-# 	# 							has_variable = memento_mori_immunity
-# 	# 						}
-# 	# 					}
-# 	# 					set_variable = {
-# 	# 						name = memento_mori_immunity
-# 	# 						years = 5
-# 	# 					}
-# 	# 				}
-# 	# 			}
-# 	# 		}
-# 	# 	}
-# 	# }
-# }
+on_game_started = {
+	on_actions = {
+		nda_game_started_on_action
+	}
+	# effect = {
+	# 	# Memento Mori
+	# 	every_country = {
+	# 		every_interest_group = {
+	# 			leader = {
+	# 				if = {
+	# 					limit = {
+	# 						NOT = {
+	# 							has_variable = memento_mori_immunity
+	# 						}
+	# 					}
+	# 					set_variable = {
+	# 						name = memento_mori_immunity
+	# 						years = 5
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+}
 
-# # Fires after everyone enters the game from the lobby for the first time for each campaign
-# # At this point we DO know who the players are
-# # No root scope set
-# on_game_started_after_lobby = {
-# 	# effect = {
-# 	# 	# Game Rule: No Dynamic Naming
-# 	# 	if = {
-# 	# 		limit = {
-# 	# 			has_game_rule = no_dynamic_naming
-# 	# 		}
-# 	# 		every_state = {
-# 	# 			reset_state_name = yes
-# 	# 		    reset_hub_names = yes
-# 	# 		}
-# 	# 	}
-# 	# 	# The Ripper
-# 	# 	every_country = {
-# 	# 		if = {
-# 	# 			limit = {
-# 	# 				is_player = yes
-# 	# 			}
-# 	# 			random = {
-# 	# 				chance = 10
+nda_game_started_on_action = {
+	effect = {
+		# Remane New Hampshire to Miskaton - Change Hub Names
+		nda_effect_map_name_miskaton = yes
+		# Averoigne - Clark Ashton Smith
+		nda_effect_map_name_averoigne = yes
+	}
 
-# 	# 				set_variable = var_jack_ripper_possible
-# 	# 			}
-# 	# 		}
-# 	# 	}
-# 	# }
-# }
+}
+# Fires after everyone enters the game from the lobby for the first time for each campaign
+# At this point we DO know who the players are
+# No root scope set
+on_game_started_after_lobby = {
+	on_actions = {
+		nda_game_started_after_lobby_on_action
+	}
+}
+
+nda_game_started_after_lobby_on_action = {
+		effect = {
+		set_global_variable = { # mod compatibility flag
+			name = nda_is_loaded
+			value = yes
+		}
+
+		# NDA start up event / screen
+		every_country = {
+			limit = {
+				is_player = yes # show to players only - but is_player not working at this point, just show all
+			}
+			trigger_event = {
+				id = nda_base.1
+				#days = 1
+				popup = yes
+			}
+		}
+	}
+}
 
 # Root = Country
 on_monthly_pulse_country = {
@@ -165,6 +176,8 @@ nda_monthly_on_action = {
 		nda_authors.10 # Holiness of Azedarac
 		nda_authors.20 # White Worm
 		nda_authors.30 # Casting the Runes
+		nda_authors.60 # Event from Nosferatu
+		nda_authors.61 # Joke event for Nosferatu 
 	}
 	random_events = {
 		4 = 0
@@ -273,9 +286,12 @@ nda_monthly_historical_on_action = {
 		nda_historic.1893
 
 		nda_historic_regional.1848
+		nda_historic_regional.1860
 		nda_historic_regional.1864
 		nda_historic_regional.1870
+		nda_historic_regional.1878
 		nda_historic_regional.1882
+		nda_historic_regional.1887
 		nda_historic_regional.1890
 		nda_historic_regional.1892
 		nda_historic_regional.1901
@@ -370,6 +386,12 @@ nda_monthly_state_conversion_on_action = {
 				has_variable = nda_rel_boost_theosophic	
 			}
 			convert_population = { target = rel:nda_rel_theosophic value = var:nda_rel_boost_theosophic }	
+		}
+		else_if = {
+			limit = { # Boost Atheism
+				has_variable = nda_rel_boost_atheism	
+			}
+			convert_population = { target = rel:atheist value = var:nda_rel_boost_atheism }	
 		}
 
 		if = {

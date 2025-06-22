@@ -256,8 +256,11 @@ nda_effect_dagonic_annex = {
 							debug_log = "DGN Master Transfered"
 						}
 						else = {
-							exile_character_with_martyrdom = yes	
-							debug_log = "DGN Master Released"					
+							if = {
+								limit = { any_character_in_exile_pool = { count > 200 }}
+								exile_character_with_martyrdom = yes
+								debug_log = "DGN Master Released"							
+							}						
 						}
 					}			
 				}

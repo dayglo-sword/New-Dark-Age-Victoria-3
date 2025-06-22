@@ -215,10 +215,15 @@ nda_hasturian.3 = { # The Repairer of Reputations
 		NOT = { 
 			exists = c:IAM 
 			has_variable = nda_king_in_yellow_meeting
-			is_full_cult = yes
-			is_revolutionary = no # exclude revolution as can cause ELD to flip IAM if revolt succesful
-			is_at_war = no
+			# is_full_cult = yes
+			# is_revolutionary = no # exclude revolution as can cause ELD to flip IAM if revolt succesful
+			# is_at_war = no
 		}
+				
+		is_full_cult = no
+		is_revolutionary = no # exclude revolution as can cause ELD to flip IAM if revolt succesful
+		is_at_war = no
+		
 		# capital should be in americas?
 		OR = {
 			country_is_in_north_america = yes
@@ -262,7 +267,7 @@ nda_hasturian.3 = { # The Repairer of Reputations
 		}
 
 		#follow on event
-		trigger_event = { id = nda_hasturian.4 days = 200 }	# ask for meeting
+		trigger_event = { id = nda_hasturian.4 days = 2 }	# ask for meeting
 	}
 }
 
@@ -323,7 +328,7 @@ nda_hasturian.4 = { # The Repairers Offer
 		}
 
 		#follow on event
-		trigger_event = { id = nda_hasturian.5 days = 200 }	# Imperial America	
+		trigger_event = { id = nda_hasturian.5 popup = yes days = 200 }	# Imperial America	
 	}
 }
 

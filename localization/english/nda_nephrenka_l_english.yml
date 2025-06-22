@@ -24,7 +24,7 @@ nda_nephrenka.15.b: "We must suppress it!"
 nda_nephrenka.15.c: "Nothing we can we do?"
 
 nda_nephrenka.20.t: "A Proposed Expedition!"
-nda_nephrenka.20.d: "The Miskatonic University is requesting funding to launch an archaeological expedition to the Nile Valley.\n\nAfter researching the documents left behind by Dr Bowen, of the Starry Wisdon Cult, they believe they can retrace his steps back to his discovery of the tomb of Nephren-Ka.\n\nIt they are sucessful it could lead to a revolution in archeology - Proof of a lost dynasty of pharoahs that predates the currently known 1st Dynasty!"
+nda_nephrenka.20.d: "The Miskatonic University is requesting funding to launch an archaeological expedition to the Nile Valley.\n\nAfter researching the documents left behind by #GREEN Dr Bowen#!, of the #BLUE Starry Wisdon Cult#!, they believe they can retrace his steps back to his discovery of the tomb of #GREEN Nephren-Ka#!.\n\nIt they are sucessful it could lead to a revolution in archeology - Proof of a lost dynasty of pharoahs that predates the currently known 1st Dynasty!"
 nda_nephrenka.20.f: ""
 nda_nephrenka.20.a: "We must start at once!"
 nda_nephrenka.20.b: "Come back in a couple of years."
@@ -66,12 +66,12 @@ nda_nephrenka.25.f: "'The roofed, quieter bazaars were... alluring. Spice, perfu
 nda_nephrenka.25.a: "Fortunate indeed!"
 
 nda_nephrenka.26.t: "A dancing disease?"
-nda_nephrenka.26.d: "Professors Wilson and Keppel, and their assistant Betty, have stuck down with a most pecular disease. They seem to be possesed, wearing clothing which is a mockery of the local garb, and dancing across the sands in strange jerky movements.\n\nThis mania makes their continued participation in the expedition impossible."
+nda_nephrenka.26.d: "Professors Wilson and Keppel, and their assistant Betty, have been stuck down with a most pecular disease. They seem to be possesed, wearing clothing which is a mockery of the local garb, and dancing across the sands in strange jerky movements.\n\nThis mania makes their continued participation in the expedition impossible."
 nda_nephrenka.26.f: "'...generally opened with Betty performing a voluptuous dance with finger cymbals while the two men played whistle and tambourine and watched, before dancing in some obscure form of homage or imitation of her in long night-shirts and Fezzes. This would be followed by the sand dance, with the sand often supplied from a Grecian urn...'\n- The Wilson, Keppel and Betty Story."
 nda_nephrenka.26.a: "Maybe they can make a career of it?"
 
 nda_nephrenka.27.t: "The wrong site"
-nda_nephrenka.27.d: "It looks like the initial dig site is from the wrong era and has a much later date than any locations expected for either the reigns of Nitocris or Nephren-Ka."
+nda_nephrenka.27.d: "It looks like the initial dig site is from the wrong era and has a much later date than any locations expected for either the reigns of #GREEN Nitocris#! or #GREEN Nephren-Ka#!."
 nda_nephrenka.27.f: "'An antiquarian discovery of great interest to Egyptologists has been made at Luxor, where, after twelve months spent in excavating the tomb of Queen Hatasoo, who flourished about 1500 B.C. —that is to say, some 3,400 years ago- her sarcophagus has been discovered.It is in perfect preservation.\n\n It was Queen Hatasoo, or, more correctly, Hatshepeut Maat Ka-Ra, who raised two obelisks at Karnak, and who built the temple of Der el Bahri, near Thebes.'\n- Weekly Mail, May 1904"
 nda_nephrenka.27.a: "Not what we expected!"
 
@@ -87,26 +87,26 @@ nda_nephrenka.29.f: ""
 nda_nephrenka.29.a: "We must hope for the best."
 
 nda_nephrenka.30.t: "Tomb of Nitocris Found"
-nda_nephrenka.30.d: "The Tomb of Nitocris Found! Resting place of the forgotten Queen uncovered.\n\nWhat artifacts may lie within this underground mausoleum of the legendary queen!"
+nda_nephrenka.30.d: "The #BLUE Tomb of Nitocris#! Found! Resting place of the forgotten Queen uncovered.\n\nWhat artifacts may lie within this underground mausoleum of the legendary queen!"
 nda_nephrenka.30.f: "'Nitocris, who was the second wife of the pharaoh, but now the greatest lady in Egypt. The gods were not mistaken when they called her to be the mother of a pharaoh. She was a tall person, of rather full habit, and in spite of forty years was still beautiful. There was in her eyes, face, and whole form such majesty that even when she went unattended, in the modest garb of a priestess, people bowed their heads to her.'"
 nda_nephrenka.30.a: "An Interesting Find..."
 
 #Gain Mirror as Artifact
 nda_nephrenka.31.t: "A Truly Interesting Find..."
-nda_nephrenka.31.d: "The Tomb of Nitocris may not be packed with treasures, but a most exquisite piece of furniture has been found. An ancient Mirror of intricate design. The finders have requested that it should be given, as a symbol of gratitude for the aid provided, to the leader of their country... You."
+nda_nephrenka.31.d: "The #BLUE Tomb of Nitocris#! may not be packed with treasures, but a most exquisite piece of furniture has been found. An ancient Mirror of intricate design. The finders have requested that it should be given, as a symbol of gratitude for the aid provided, to the leader of their country... You."
 nda_nephrenka.31.f: ""
 nda_nephrenka.31.a: "A Most Welcome Gift."
 nda_nephrenka.31.b: "It Belongs In A Museum."
 nda_nephrenka.31.c: "It Belongs to the locals."
 
 nda_nephrenka.32.t: "A Baleful Influence."
-nda_nephrenka.32.d: "Every day you stare into the Mirror of Nitocris, and every day the world seems a bit different.\n\nA bit more mundane.\n\nYou can't understand why people would continue along that path while there is greater glory to be had in worshiping other entities."
+nda_nephrenka.32.d: "Every day you stare into the #BLUE Mirror of Nitocris#!, and every day the world seems a bit different.\n\nA bit more mundane.\n\nYou can't understand why people would continue along that path while there is greater glory to be had in worshiping other entities."
 nda_nephrenka.32.f: "'the cult... had always existed and always would exist...'"
 nda_nephrenka.32.a: "Cultists Are Just Misunderstood..."
 
 # Start of Dark Pyramid
 nda_nephrenka.40.t: "Trail of the Dark Pyramid"
-nda_nephrenka.40.d: "There is now enough new evidence from the Tomb of Nitocris, when combined with our existing knowledge, that suggests the real posibility of finding the legendary Dark Pyramid of Nephren-Ka.\n\nGiven some of the latest local disturbances caused by our recent discoveries it appears the local authorities might need pursuading to let us continue."
+nda_nephrenka.40.d: "There is now enough new evidence from the #BLUE Tomb of Nitocris#!, when combined with our existing knowledge, that suggests the real posibility of finding the legendary #BLUE Dark Pyramid#! of Nephren-Ka.\n\nGiven some of the latest local disturbances caused by our recent discoveries it appears the local authorities might need pursuading to let us continue."
 nda_nephrenka.40.f: "'...phantom processions marching interminably through subterraneous labyrinths and avenues of titanic propylaea beside which a man is as a fly, and offering unnamable sacrifices to indescribable gods.\n\nStone colossi marched in endless night and drove herds of grinning androsphinxes down to the shores of illimitable stagnant rivers of pitch. And behind it all I saw the ineffable malignity of primordial necromancy, black and amorphous...'"
 nda_nephrenka.40.a: "We must request a continuation."
 nda_nephrenka.40.b: "We have uncovered enough."
@@ -133,14 +133,14 @@ nda_nephrenka.43.b: "Recall the Expedition."
 
 # Dark Pyramid found
 nda_nephrenka.50.t: "Dark Pyramid Found!"
-nda_nephrenka.50.d: "The Legendary Dark Pyramid has been found! Tomb of forgotten Pharaoh uncovered."
+nda_nephrenka.50.d: "The Legendary #BLUE Dark Pyramid#! has been found! Tomb of forgotten Pharaoh uncovered."
 nda_nephrenka.50.f: "He came out of the tent into the moonlight, and looked up at the pyramid. The entrance was a good way above his head, of course, and quite fifty or sixty yards from the point where he was standing, but the moonbeams bathed that side of the building in dazzling light so that he was enabled to see a perfect crowd of bats whirling out of the pyramid.\n\nThat indescribable smell, as of a decay begun in remote ages, that rises with the impalpable dust in these mysterious labyrinths of Ancient Egypt which never know the light of day, rose stiflingly; until, at some forty or fifty feet below the level of the sand outside, respiration became difficult "
 nda_nephrenka.50.a: "Hurrah!"
 nda_nephrenka.50.b: "What can we do?"
 
 # Book of Thoth found
 nda_nephrenka.51.t: "Book of Thoth"
-nda_nephrenka.51.d: "The True Book of Thoth"
+nda_nephrenka.51.d: "The True Book of Thoth, a long sort for tome, has been found in the lower reaches of the pyramid!"
 nda_nephrenka.51.f: "...a wizard of Ancient Egypt, armed with the lost lore of that magical land, walks amongst us! What that lore is worth, it would be profitless for us to discuss, but that he possesses it — all of it — I know, beyond doubt. The most ancient and most powerful magical book which has ever existed was the Book of Thoth."
 nda_nephrenka.51.a: "A Great Treasure For Our Country!"
 nda_nephrenka.51.b: "It Belongs To The Locals"

@@ -153,7 +153,7 @@ nda_cul_trueyankee={
 		Lysander Lawrence Lewis Lorenzo Leland Levi Leonard Lucius
 		Micah Marcellus Mark Michael Millard Matthew Matthias Montgomery Maxwell Milton 
 		Nicholas Noah Nathaniel Newton Nelson
-		Obadiah Oswald Orson Orville Oscar Otis Oliver Orrin Owen Ormsby
+		Obadiah Obed Oswald Orson Orville Oscar Otis Orrin Owen Ormsby
 		Peter Paul Patrick Philip Phineas Philemon Purley Palmetus Philetus
 		Quentin Quincy
 		Rutherford Richard Robert Rufus Roger

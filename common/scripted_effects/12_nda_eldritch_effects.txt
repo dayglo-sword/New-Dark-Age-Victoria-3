@@ -296,8 +296,13 @@ nda_effect_eldritch_annex = {
 						}
 						remove_variable = nda_coven_leader		
 
-						exile_character_with_martyrdom = yes
-						set_home_country = c:ELD # are characters disappearing because original home is gone?								
+						# if agitator count too large then don't exile
+						if = {
+							limit = { any_character_in_exile_pool = { count > 200 }}
+							exile_character_with_martyrdom = yes
+							set_home_country = c:ELD # are characters disappearing because original home is gone?							
+						}
+								
 					}
 				}
 
@@ -388,8 +393,12 @@ nda_effect_eldritch_annex = {
 						debug_log = "ELD Master Transfered"
 					}
 					else = {
-						exile_character_with_martyrdom = yes
-						debug_log = "ELD Master Released"						
+						# if agitator count too large then don't exile
+						if = {
+							limit = { any_character_in_exile_pool = { count > 200 }}
+							exile_character_with_martyrdom = yes
+							debug_log = "ELD Master Released"							
+						}					
 					}
 					
 				}			
