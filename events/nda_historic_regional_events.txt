@@ -231,7 +231,7 @@ nda_historic_regional.1878 = { # British Theosophical Society founded aka London
 						has_pop_religion = nda_rel_spiritualism		
 												
 					}
-					change_pop_religion = { target = nda_rel_boost_theosophic value = 0.20 }
+					change_pop_religion = { target = rel:nda_rel_boost_theosophic value = 0.20 }
 				}							
 			}			
 		}

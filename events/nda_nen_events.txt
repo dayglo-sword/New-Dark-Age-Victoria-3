@@ -1133,82 +1133,82 @@ nda_nen.1894 = { # A crime wave in Arkham
 
 ## company events
 
-# Marsh Wealth flowing to Innsmouth
-nda_nen.20 = { # 
-	type = country_event
-	placement = ROOT
-	title = nda_nen.20.t
-	desc = nda_nen.20.d
-	flavor =  nda_nen.20.f
-	dlc = dlc_NDA
+# # Marsh Wealth flowing to Innsmouth
+# nda_nen.20 = { # 
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_nen.20.t
+# 	desc = nda_nen.20.d
+# 	flavor =  nda_nen.20.f
+# 	dlc = dlc_NDA
 
-	duration = 3
+# 	duration = 3
 
-	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+# 	event_image = {
+# 		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
 		
-	}
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	 
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	trigger = {
-		exists = c:NEN
-		c:NEN = ROOT
-		any_company = {
-			is_company_type = company_type:company_nda_marsh_fishing
-			company_is_prosperous = yes
-		}
-	}
+# 	trigger = {
+# 		exists = c:NEN
+# 		c:NEN = ROOT
+# 		any_company = {
+# 			is_company_type = company_type:company_nda_marsh_fishing
+# 			company_is_prosperous = yes
+# 		}
+# 	}
 
-	immediate = {
-		# Add modifier to Miskaton
-	}	
+# 	immediate = {
+# 		# Add modifier to Miskaton
+# 	}	
 	
-	option = { #" A tragic event"
-		name = nda_nen.20.a
-		default_option = yes
-	}
-}
+# 	option = { #" A tragic event"
+# 		name = nda_nen.20.a
+# 		default_option = yes
+# 	}
+# }
 
-# Curwen Inbreeding Scandal - must happen before Dunwich Horror
-nda_nen.21 = { # 
-	type = country_event
-	placement = ROOT
-	title = nda_nen.21.t
-	desc = nda_nen.21.d
-	flavor =  nda_nen.21.f
-	dlc = dlc_NDA
+# # Curwen Inbreeding Scandal - must happen before Dexter Ward, tie into Dunwich Horror?
+# nda_nen.21 = { # 
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_nen.21.t
+# 	desc = nda_nen.21.d
+# 	flavor =  nda_nen.21.f
+# 	dlc = dlc_NDA
 
-	duration = 3
+# 	duration = 3
 
-	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+# 	event_image = {
+# 		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
 		
-	}
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	 
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	trigger = {
-		exists = c:NEN
-		c:NEN = ROOT
-		any_company = {
-			is_company_type = company_type:company_nda_curwen_forestry
-			company_is_prosperous = yes
-		}
-	}
+# 	trigger = {
+# 		exists = c:NEN
+# 		c:NEN = ROOT
+# 		any_company = {
+# 			is_company_type = company_type:company_nda_curwen_forestry
+# 			company_is_prosperous = yes
+# 		}
+# 	}
 
-	immediate = {
+# 	immediate = {
 
-	}	
+# 	}	
 	
-	option = { #" A tragic event"
-		name = nda_nen.21.a
-		default_option = yes
-	}
-}
+# 	option = { #" A tragic event"
+# 		name = nda_nen.21.a
+# 		default_option = yes
+# 	}
+# }

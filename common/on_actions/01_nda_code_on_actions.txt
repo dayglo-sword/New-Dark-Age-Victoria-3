@@ -132,8 +132,8 @@ nda_monthly_on_action = {
 		nda_nen.1922 # Horror at Martins Beach
 		nda_nen.1935 # New England Outro
 
-		nda_nen.20 # Company Specific - Marsh Wealth
-		nda_nen.21 # Company Specific - Curwen Inbreeding
+		#nda_nen.20 # Company Specific - Marsh Wealth
+		#nda_nen.21 # Company Specific - Curwen Inbreeding
 
 		nda_hasturian.1 # Play in Paris 
 		nda_hasturian.2 # Play Spreads 
