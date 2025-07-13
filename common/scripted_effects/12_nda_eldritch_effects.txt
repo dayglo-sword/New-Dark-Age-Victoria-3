@@ -172,6 +172,15 @@ nda_effect_eldritch_annex = {
 				NOT = { # Hastur does not surrender to a giant cat with squid on its head
 					has_variable = nda_king_in_yellow_rules				
 				}
+				NOT = { 
+					OR = {
+						is_subject_of = c:YIG
+						is_subject_of = c:DGN
+						is_subject_of = c:STY
+						is_subject_of = c:IAM		
+						is_subject_of = c:LEN						
+					}	
+				}
 				has_variable = nda_cultists_in_open
 				country_has_primary_culture = cu:nda_cul_cultist # needed to stop strange results after revolutions remove culture	
 			}
@@ -193,6 +202,15 @@ nda_effect_eldritch_annex = {
 				}
 				NOT = { # Hastur does not surrender to a giant cat with squid on its head
 					has_variable = nda_king_in_yellow_rules						
+				}
+				NOT = { 
+					OR = {
+						is_subject_of = c:YIG
+						is_subject_of = c:DGN
+						is_subject_of = c:STY
+						is_subject_of = c:IAM		
+						is_subject_of = c:LEN						
+					}	
 				}
 				has_variable = nda_cultists_in_open		
 				country_has_primary_culture = cu:nda_cul_cultist # needed to stop strange results after revolutions remove culture		
@@ -298,7 +316,7 @@ nda_effect_eldritch_annex = {
 
 						# if agitator count too large then don't exile
 						if = {
-							limit = { any_character_in_exile_pool = { count > 200 }}
+							limit = { any_character_in_exile_pool = { count < 200 }}
 							exile_character_with_martyrdom = yes
 							set_home_country = c:ELD # are characters disappearing because original home is gone?							
 						}
@@ -306,104 +324,111 @@ nda_effect_eldritch_annex = {
 					}
 				}
 
-			# transfer a leading character to ELD (preferably an historic one)
-			ordered_scope_character = {
-				limit = { 
-					is_ruler = no
-					has_role = politician
-					has_any_cultist_trait = yes
-				}
-				order_by = { 
-					add = 1
-					if = {
-						limit = { has_trait = nda_master }
-						add = 3
+				# transfer a leading character to ELD (preferably an historic one)
+				ordered_scope_character = {
+					limit = { 
+						is_ruler = no
+						has_role = politician
+						has_any_cultist_trait = yes
 					}
-					if = {
-						limit = { has_trait = nda_acolyte }
+					order_by = { 
 						add = 1
-					}
-					if = {
-						limit = {
-							interest_group = { is_powerful = yes }							
-						}
-						add = 2
-					}
-					if = {
-						limit = { is_historical = yes }
-						add = 5
-					}
-				}
-				max = 1
-				save_scope_as = transfered_ig_leader
-				
-			}
-	
-			IF = {
-				limit = { exists = scope:transfered_ig_leader }
-				scope:transfered_ig_leader = {
-					hidden_effect = {
 						if = {
-							limit = {
-								NOT = { has_role = agitator }
-							}
-							add_character_role = agitator
+							limit = { has_trait = nda_master }
+							add = 3
+						}
+						if = {
+							limit = { has_trait = nda_acolyte }
+							add = 1
 						}
 						if = {
 							limit = {
-								has_role = general
+								interest_group = { is_powerful = yes }							
 							}
-							remove_character_role = general
+							add = 2
 						}
 						if = {
-							limit = {
-								has_role = admiral
-							}
-							remove_character_role = admiral
+							limit = { is_historical = yes }
+							add = 5
 						}
-						# if = {
-						# 	limit = {
-						# 		has_role = politician
-						# 	}
-						# 	set_as_interest_group_leader = no
-						# 	remove_character_role = politician
-						# }
 					}
-
-					remove_variable = nda_coven_leader
-
-					interest_group = {
-						save_scope_as = target_IG_type						
-					}
-
-					if = { 
-						limit = { 
-							has_trait = nda_master 
-							# the respective chararater does not, so replace with senior cultist							
-							c:ELD = { 
-								any_interest_group = { 
-									is_same_interest_group_type = scope:target_IG_type 
-									NOT = { leader = { has_trait = nda_master } }
-								} 
-							}
-						}
-						transfer_character = c:ELD
-						set_as_interest_group_leader = yes
-
-						debug_log = "ELD Master Transfered"
-					}
-					else = {
-						# if agitator count too large then don't exile
-						if = {
-							limit = { any_character_in_exile_pool = { count > 200 }}
-							exile_character_with_martyrdom = yes
-							debug_log = "ELD Master Released"							
-						}					
-					}
+					max = 1
+					save_scope_as = transfered_ig_leader
 					
-				}			
+				}
+		
+				IF = {
+					limit = { exists = scope:transfered_ig_leader }
+					scope:transfered_ig_leader = {
+						hidden_effect = {
+							if = {
+								limit = {
+									NOT = { has_role = agitator }
+								}
+								add_character_role = agitator
+							}
+							if = {
+								limit = {
+									has_role = general
+								}
+								remove_character_role = general
+							}
+							if = {
+								limit = {
+									has_role = admiral
+								}
+								remove_character_role = admiral
+							}
+							# if = {
+							# 	limit = {
+							# 		has_role = politician
+							# 	}
+							# 	set_as_interest_group_leader = no
+							# 	remove_character_role = politician
+							# }
+						}
+
+						remove_variable = nda_coven_leader
+
+						interest_group = {
+							save_scope_as = target_IG_type						
+						}
+
+						if = { 
+							limit = { 
+								has_trait = nda_master 
+								# the respective chararater does not, so replace with senior cultist							
+								c:ELD = { 
+									any_interest_group = { 
+										is_same_interest_group_type = scope:target_IG_type 
+										NOT = { leader = { has_trait = nda_master } }
+									} 
+								}
+							}
+							transfer_character = c:ELD
+							set_as_interest_group_leader = yes
+
+							debug_log = "ELD Master Transfered"
+						}
+						else = {
+							# if agitator count too large then don't exile
+							if = {
+								limit = { any_character_in_exile_pool = { count < 200 }}
+								exile_character_with_martyrdom = yes
+								debug_log = "ELD Master Released"							
+							}					
+						}
+						
+					}			
+				}
+			
+				# Need to reduce government buildings and ports as excessive bureaucracy and convoys kills has_healthy_economy ??
+				every_scope_state = {
+					limit = { has_building = building_government_administration}
+					remove_building = building_government_administration 
+				}
 			}
-			}
+
 			annex = scope:nda_eldritch_annex
 
 			# IF = {

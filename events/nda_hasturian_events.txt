@@ -735,8 +735,7 @@ nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) 
 						}
 						add = 20							
 					}
-				}
-				modifier = {
+
 					if = {
 						limit = {
 								is_cultist_country = no
@@ -764,16 +763,16 @@ nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) 
 						}
 						add = 20							
 					}
-				}
-				modifier = {
+
 					if = {
 						limit = {
 								is_cultist_country = no
 								scope:trapezo_owner = { country_rank > root.country_rank }
 						}
 						add = 50							
-					}
+					}					
 				}
+
 				custom_tooltip = nda_hasturian.1892.b_b_tt #"Annoy the country"
 				
 				scope:trapezo_owner = { 

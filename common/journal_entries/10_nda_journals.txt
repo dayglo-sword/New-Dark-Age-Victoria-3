@@ -99,9 +99,9 @@
     fail = {
 		# if ritual failed or star alignment occured
 		custom_tooltip = {
-				text = je_nda_cult_spread_fail_tt
-				has_global_variable = nda_ritual_cthulhu_leaves			
-			}
+			text = je_nda_cult_spread_fail_tt
+			has_global_variable = nda_ritual_cthulhu_leaves			
+		}
     }
 	
 	on_fail = {
@@ -115,6 +115,13 @@
 		# set variable so it does not rerun for country
 		trigger_event = { id = nda_base.13 }	
 	}
+
+    invalid = {
+		custom_tooltip = {
+			text = je_nda_cult_spread_invalid_tt
+			has_variable = nda_cultists_in_open			
+		}
+    }
 
 	#progressbar = yes
 	weight = 100
@@ -140,10 +147,14 @@ je_nda_cult_to_yigian = {
 				c:ELD = ROOT				
 			}
 
-		}				
-		any_scope_state = { # has capital in americas
-			is_potentially_yigian = yes
-		}				
+		}	
+		OR = {
+			any_scope_state = { # has capital in americas
+				is_potentially_yigian = yes
+			}
+			is_subject_of = c:YIG # Allow Yigian colonies			
+		}			
+				
 	}
 
 	possible = {
@@ -151,8 +162,11 @@ je_nda_cult_to_yigian = {
 
 		country_has_primary_culture = cu:nda_cul_cultist # easy check
 
-		any_scope_state = { # has capital in americas
-			is_potentially_yigian = yes
+		OR = {
+			any_scope_state = { # has capital in americas
+				is_potentially_yigian = yes
+			}
+			is_subject_of = c:YIG # Allow Yigian colonies			
 		}
 	}
 
@@ -344,7 +358,7 @@ je_nda_cult_to_dagonic = {
 	#	# ? has any state as Eldritch homeland - will convert to dagonic on completion
 
 		country_has_primary_culture = cu:nda_cul_cultist # easy check
-	
+		
 		any_scope_state = { # has capital in coastal asia/pacific
 			is_potentially_dagonic = yes
 		}

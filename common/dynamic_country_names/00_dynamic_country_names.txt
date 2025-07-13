@@ -1165,6 +1165,23 @@ BIC = { # East India Company
 			}
 		}
 	}
+
+	dynamic_country_name = { 
+		name = nda_east_india_cabal
+		adjective = CULTIST_ADJ
+		
+		is_main_tag_only = yes
+		priority = 30
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				is_cultist_country = yes
+			}
+
+		}
+	}
 }
 
 DEI = { # East Indies
@@ -1661,6 +1678,24 @@ HBC = { # Hudson Bay Company
 
 		trigger = {
 			coa_def_independent_trigger = yes
+		}
+	}
+
+	# For Hudson's Bay turns Cultist
+	dynamic_country_name = { 
+		name = nda_hudson_bay_cabal
+		adjective = CULTIST_ADJ
+		
+		is_main_tag_only = yes
+		priority = 30
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				is_cultist_country = yes
+			}
+
 		}
 	}
 }
@@ -2698,6 +2733,21 @@ USA = { # United States of America
 			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
 				has_law = law_type:law_technocracy
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = nda_united_sabbaths_of_america
+		adjective = USA_ADJ
+
+		is_main_tag_only = yes
+		priority = 30
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
 			}
 		}
 	}

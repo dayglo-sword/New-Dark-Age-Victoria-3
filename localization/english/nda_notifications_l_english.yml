@@ -44,7 +44,7 @@
 
  notification_nda_carnacki_parties_tooltip: "#header $notification_nda_carnacki_parties_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_carnacki_parties_desc$"
  notification_nda_carnacki_parties_name: "Carnacki the Ghost Finder"
- notification_nda_carnacki_parties_desc: "Carnacki, the self proclaimed 'Ghost Finder' is entertaining guests in London with tales of his encounters with the Supernatural!"
+ notification_nda_carnacki_parties_desc: "Thomas Carnacki, the self proclaimed 'Ghost Finder' is entertaining guests in London with tales of his encounters with the Supernatural!"
 
  notification_nda_carnacki_exile_tooltip: "#header $notification_nda_carnacki_exile_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_carnacki_exile_desc$"
  notification_nda_carnacki_exile_name: "Carnacki Requests Asylum"

@@ -20,6 +20,8 @@ DLM_ADJ: "Lemurian"
 LEM: "Lemuria"
 LEM_ADJ: "Lemurian"
 
+CULTIST_ADJ: "Cultist"
+
 # Flavour text
 ELD_FLAVOR_TEXT: "Finally, the age that worshippers of the [concept_nda_old_ones] have waited so long for is upon us.\n\n The #BOLD Eldritch Realm #! must ensure that when the Stars are right, [concept_nda_cthulhu] returns and that humans recognise their insignificance."
 YIG_FLAVOR_TEXT: "Once, before the age of #BOLD Atlantis#!, the Snake-people, worshippers of [concept_nda_yig], ruled the land and the primitive primates upon it.\n\n Forced into hiding at the end of the #BOLD Hyborean Age#!, now is the time of renewal."
@@ -71,6 +73,12 @@ cultist_southern_africa: "Cultist South Africa"
 cultist_congo: "Cultist Congo"
 cultist_niger: "Cultist Niger"
 cultist_senegal: "Cultist Senegal"
+
+# Cultist Renames
+nda_east_india_cabal: "East India Cabal"
+nda_hudson_bay_cabal: "Hudson's Bay Cabal"
+nda_united_sabbaths_of_america: "United Sabbats of America"
+nda_unholy_kingdom: "Unholy Kingdom"
 
 # Greater New England 
 nda_greater_new_england: "Greater New England"

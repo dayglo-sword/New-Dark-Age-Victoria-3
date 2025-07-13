@@ -11,6 +11,8 @@
 	}
 	
 	enable = {
+		#always = no
+		game_date > 1836.2.1 # was being enabled in start up ignoring the below
 		OR = {
 			religion_percent_country = { target = rel:nda_rel_cultist value > 0.01 }
 			religion_percent_country = { target = rel:nda_rel_yigian value > 0.01 }			

@@ -23,7 +23,7 @@ ELD = {
 		adjective = nda_eld_worshippers_revolt_adj
 		
 		is_revolutionary = yes
-		priority = 0
+		priority = 30
 		
 		trigger = {
 			exists = scope:actor
@@ -60,7 +60,7 @@ ELD = {
 		name = nda_eld_illuminati
 		adjective = nda_eld_illuminati_adj
 		
-		priority = 10
+		priority = 30
 		
 		trigger = {
 			exists = scope:actor
@@ -83,7 +83,7 @@ YIG = {
 		adjective = nda_yig_worshippers_revolt_adj
 		
 		is_revolutionary = yes
-		priority = 0
+		priority = 30
 		
 		trigger = {
 			exists = scope:actor
@@ -105,7 +105,7 @@ DGN = {
 		adjective = nda_dgn_worshippers_revolt_adj
 		
 		is_revolutionary = yes
-		priority = 0
+		priority = 30
 		
 		trigger = {
 			exists = scope:actor
@@ -127,7 +127,7 @@ STY = {
 		adjective = nda_sty_worshippers_revolt_adj
 		
 		is_revolutionary = yes
-		priority = 0
+		priority = 30
 		
 		trigger = {
 			exists = scope:actor
@@ -150,7 +150,7 @@ NEN = { # For when NEN forms Canada
 		adjective = NEN_ADJ
 		
 		is_main_tag_only = yes
-		priority = 0
+		priority = 30
 		
 		trigger = {
 			exists = scope:actor
@@ -161,4 +161,24 @@ NEN = { # For when NEN forms Canada
 
 		}
 	}
+}
+
+
+TPG = {
+	dynamic_country_name = { 
+		name = nda_unholy_kingdom
+		adjective = CULTIST_ADJ
+		
+		is_main_tag_only = yes
+		priority = 30
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				is_cultist_country = yes
+			}
+
+		}
+	}	
 }

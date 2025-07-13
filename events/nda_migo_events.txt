@@ -292,8 +292,7 @@ nda_migo.1878 = { # The Trapezohedron reappears (events nda_nen.1878-1880) - if 
 						}
 						add = 20							
 					}
-				}
-				modifier = {
+
 					if = {
 						limit = {
 								is_cultist_country = no
@@ -302,6 +301,7 @@ nda_migo.1878 = { # The Trapezohedron reappears (events nda_nen.1878-1880) - if 
 						add = 50							
 					}
 				}
+
 				custom_tooltip = nda_migo.1878.b_a_tt 
 				set_global_variable = nda_trapezohedron_migo_recovered	
 				scope:trapezo_owner = { 
@@ -321,8 +321,7 @@ nda_migo.1878 = { # The Trapezohedron reappears (events nda_nen.1878-1880) - if 
 						}
 						add = 20							
 					}
-				}
-				modifier = {
+
 					if = {
 						limit = {
 								is_cultist_country = no

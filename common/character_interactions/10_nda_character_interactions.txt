@@ -30,7 +30,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 			
 		}	
 		OR = {
-			interest_group.leader = THIS	
+			interest_group.leader ?= THIS	
 			is_ruler = yes	
 		}
 

@@ -905,13 +905,6 @@ nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
-	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
-	# event_image = {
-	# 	video = "unspecific_sick_in_hospital"
-	# }
-
-	# on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
 	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
 
 	minor_left_icon = scope:location_country

@@ -247,7 +247,7 @@ nda_effect_yigian_annex = {
 						else = {
 							# if agitator count too large then don't exile
 							if = {
-								limit = { any_character_in_exile_pool = { count > 200 }}
+								limit = { any_character_in_exile_pool = { count < 200 }}
 								exile_character_with_martyrdom = yes
 								debug_log = "YIG Master Released"							
 							}					

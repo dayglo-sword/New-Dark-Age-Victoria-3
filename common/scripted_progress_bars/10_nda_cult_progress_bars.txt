@@ -203,6 +203,38 @@
 				value = 1 
 			}
 		}
+
+		if = {
+			limit = { 
+				any_scope_diplomatic_pact = {
+					is_diplomatic_action_type = nda_oppose_cult_spread
+				}
+			}
+			# work out amount to deduct
+			subtract = { 
+				desc = "nda_cult_spread_oppose_cult_tt"
+				value = 2
+			}
+				
+			# IF = {
+			# 	limit = {						
+			# 		global_country_ranking > ROOT.global_country_ranking # if ranking greater than target increase effect
+			# 	}
+			# 	subtract = { 
+			# 		desc = "nda_cult_spread_oppose_cult_tt"
+			# 		value = 1
+			# 	}
+			# }
+			# ELSE_IF = {
+			# 	limit = {						
+			# 		country_rank > ROOT.country_rank # # if rank lower than target decrease effect
+			# 	}
+			# 	subtract = { 
+			# 		desc = "nda_cult_spread_oppose_cult_tt"
+			# 		value = 2
+			# 	}
+			# }
+		}
  	}
 
  	start_value = 0

@@ -72,7 +72,7 @@ nda_marsh_onesiphorus_character_template = { # Onesiphorus Marsh
     religion = nda_rel_cultist
     ideology = ideology_authoritarian
     interest_group = ig_nda_cult_worshippers # might not exist??
-	dna = nda_dna_marsh
+	dna = nda_dna_marsh_2
     birth_date = 1842.2.7
     traits = { 
 		nda_master
@@ -100,10 +100,10 @@ nda_marsh_barnabas_character_template = { # Barnabas Marsh at time of Innsmouth 
 	last_name = Marsh
     culture = cu:nda_cul_trueyankee
     female = no
-    religion = nda_rel_dagon
+    religion = nda_rel_cultist
     ideology = ideology_authoritarian
     interest_group = ig_nda_cult_worshippers # might not exist??
-	dna = nda_dna_marsh
+	dna = nda_dna_marsh_3
     birth_date = 1862.2.7
     traits = { 
 		nda_dagon_master
@@ -149,6 +149,36 @@ nda_generic_curwen_character_template = { # Should be same character that is per
 		chance = 100
 	}
 		on_created = {
+        set_variable = {
+            name = is_curwen
+        }
+    }
+}
+
+nda_generic_whatley_character_template = { # 
+
+	last_name = Curwen
+    culture = cu:nda_cul_trueyankee
+    female = no
+    religion = nda_rel_cultist
+    ideology = ideology_authoritarian
+    interest_group = ig_nda_cult_worshippers
+	dna = nda_dna_curwen
+    #birth_date = 1812.2.7
+    traits = { 
+		nda_master
+		ambitious
+		wrathful
+	}
+	#is_agitator = yes # add only if available
+	#executive_usage = {
+	#	company_trigger = {
+	#		is_company_type = company_type:company_nda_curwen_forestry
+	#	}
+	#   earliest_usage_date = 1841.1.1
+	#	chance = 100
+	#}
+	on_created = {
         set_variable = {
             name = is_curwen
         }

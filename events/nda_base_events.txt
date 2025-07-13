@@ -715,7 +715,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 		#is_full_cult_country = { COUNTRY="ROOT" }
 
 		any_interest_group = {
-			leader = { 
+			leader ?= { 
 				has_any_cultist_trait = yes
 				has_non_cultist_ideology = yes
 			} 
@@ -726,7 +726,7 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	immediate = {
 		random_interest_group = {
 			limit = { 
-				leader = { 
+				leader ?= { 
 					has_any_cultist_trait = yes
 					has_non_cultist_ideology = yes
 				} 

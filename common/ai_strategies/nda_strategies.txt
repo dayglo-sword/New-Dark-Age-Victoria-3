@@ -126,7 +126,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 			limit = {
 				scope:target_country = { is_full_cult = yes } 		
 			}
-			multiply = 0
+			multiply = 0.1
 		}	
 
 
@@ -143,7 +143,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 			limit = {
 				is_cultist_country = no				
 			}
-			add = 2
+			add = 3
 		}	
 
 		# Less aggressive against countries we're just antagonistic against, rather than belligerent/domineering

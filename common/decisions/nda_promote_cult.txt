@@ -22,6 +22,9 @@
 			target = cu:nda_cul_cultist
 			value >= 0.2
 		}
+
+		is_secessionist = no # wait till war is over - could be a cultist fracture.
+
 	}
     	
 	when_taken = {

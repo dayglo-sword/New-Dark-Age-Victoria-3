@@ -1,14 +1,30 @@
+Version v1.9.7
+
+Major Changes
+
+
+Minor Changes
+Add invalidating conditions to Cult Spread journal.
+Unique DNA for Marsh company executives
+Dynamic country names for Cultist USA and a handful of 'Company Countries'
+
+Bug Fixes
+Fix 'Oppose Cult Spread' Diplo Action
+Fixed Successionists from ELD being immediately annexed.
+
+------
+
 Version v1.9.2
 
 Major Changes
 Add executives for NEN companies.
-Add 'Treaty of Providance'
+Add 'Treaty of Providence'
 
 Minor Changes
 Change country formation code to on_actions
 Add minor Nosferatu events.
 Add negative diplo catalyst to Maritime buttons.
-Correct Spiritulism concept.
+Correct Spiritualism concept.
 Improve tooltips and notifications.
 Colour code text for events
 Add despotic utopian as approved cult ideology.
@@ -16,7 +32,7 @@ Change Power Bloc naming to force Cult names.
 Launch NEN journals on start up
 
 Bug Fixes
-Correct premature Spirtualism boost on Inqusition fail.
+Correct premature Spiritualism boost on Inquisition fail.
 
 ------
 

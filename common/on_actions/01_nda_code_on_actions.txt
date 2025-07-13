@@ -227,6 +227,25 @@ nda_monthly_on_action = {
 			add_primary_culture = cu:nda_cul_cultist
 		}
 
+		# If country has Cultist in charge but journal not run then trigger cult spread
+		if = {
+			limit = {
+				OR = {
+					any_scope_character = {
+						is_ruler = yes
+						has_any_cultist_trait = yes
+					}	
+					# any_interest_group = { leader = { has_any_cultist_trait = yes } }					
+				}
+
+				NOT = { has_variable = nda_cultists_in_open }
+				NOT = { has_variable = nda_cult_spread_failed }
+				NOT = { has_journal_entry = je_nda_cult_spreads }				
+			}
+			debug_log = "Cult Spread due to leaders : [THIS.GetCountry.GetNameNoFormatting]"
+			add_journal_entry = { type = je_nda_cult_spreads } 
+		}
+
 		# # Check for missing IG leaders - is there a problem with Hasturian America to cause no leaders and shadow men (id : -1)
 		# 1.5 finds missing and runs char generation, but does not replace leaders
 		# if = {
@@ -643,6 +662,14 @@ on_revolution_start = { # need to copy over appropriate variables so at not to t
 	}
 }
 
+# Root = Country
+# scope:target = Uprising country
+on_secession_start = {
+	on_actions = {
+		nda_on_revolution_start_on_action	# same as revolution
+	}
+}
+
 nda_on_revolution_start_on_action = {
 	effect = {
 		if = {
@@ -656,7 +683,11 @@ nda_on_revolution_start_on_action = {
 					limit = { has_cult_culture = yes }
 					set_variable = nda_cultists_in_open # need to check if						
 				}		
+				else = { 
+					set_variable = nda_is_from_cult_revolt
+				}
 			}
+
 		}
 	}
 }

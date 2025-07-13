@@ -9,11 +9,6 @@
 				add_pollution = 40				
 			}
 
-			# now done via weather effects
-			# add_modifier = {
-			# 	name = nda_dark_skies_modifier
-			# }
-
 			# Cultists everywhere!
 			if = { limit = { is_capital = yes }  # boost in capital
 				convert_population = { target = rel:nda_rel_cultist value = nda_large_conversion }			
@@ -133,6 +128,17 @@
 				
 				add_liberty_desire = -50			
 			}
+
+			# Do cult spread to other countries not previously affected - only to a small handful as can cascade
+			random_country = {
+				limit = {
+					country_rank >= rank_value:unrecognized_power	
+	
+					NOT = { has_variable = nda_nameless_cults_selected }
+				}
+	
+				set_variable = nda_nameless_cults_selected
+			}
 		}
 
 		# remove 'secret masters' as not appropriate
@@ -151,7 +157,6 @@
 					name = nda_ig_cult_justified_modifier
 				}					
 			}	
-
 		}
 
 		# Diplo Catalyst - has returned so positive
@@ -167,36 +172,18 @@
 		}
 
 		# Drive certain characters crazy
-		trigger_event = { id = nda_ritual.20 days = 3 } 
+		trigger_event = { id = nda_ritual.20 days = { 1 4 } } 
 
-		# Do cult spread to other countries not previously affected?
-		random_country = {
-			limit = {
-				country_rank >= rank_value:unrecognized_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				country_rank >= rank_value:unrecognized_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
-		random_country = {
-			limit = {
-				country_rank >= rank_value:unrecognized_power	
-
-				NOT = { has_variable = nda_nameless_cults_selected }
-			}
-
-			set_variable = nda_nameless_cults_selected
-		}
+	#	# Do cult spread to other countries not previously affected?
+	#	random_country = {
+	#		limit = {
+	#			country_rank >= rank_value:unrecognized_power	
+#
+#				NOT = { has_variable = nda_nameless_cults_selected }
+#			}
+#
+#			set_variable = nda_nameless_cults_selected
+#		}
 	}	
 }
 

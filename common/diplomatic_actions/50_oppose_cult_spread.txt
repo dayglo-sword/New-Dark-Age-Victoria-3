@@ -7,10 +7,10 @@
 	show_confirmation_box = no
 
 	potential = {
-		is_player = yes			
+		#is_player = yes			# since AI chance is zero can show in observer
 		custom_tooltip = {
 			text = nda_oppose_cult_spread_potential_tt
-			any_country = { has_variable = nda_cult_spread_tracker }	
+			any_country = { has_journal_entry = je_nda_cult_spreads }	
 			
 		}
 
@@ -23,7 +23,7 @@
 	possible = {
 		custom_tooltip = {
 			text = nda_oppose_cult_spread_possible_tt
-			scope:target_country = { has_variable = nda_cult_spread_tracker } # spread has started				
+			scope:target_country = { has_journal_entry = je_nda_cult_spreads } # spread has started				
 		}
 
 		custom_tooltip = {
@@ -47,6 +47,7 @@
 		is_two_sided_pact = no
 
 		monthly_effect = {
+			# This does nothing!!
 			scope:target_country = { 
 				change_variable = {
 					name = nda_cult_spread_tracker
@@ -83,8 +84,17 @@
 		requirement_to_maintain = {
 			trigger = {	
 				custom_tooltip = {	
-					text = nda_oppose_cult_spread_potential2_tt	
+					text = nda_oppose_cult_spread_potential2_tt	#Wording should be reversed ? 'cultists have taken over'
 					NOT = { scope:target_country = { has_variable = nda_cultists_in_open } }
+				}
+			}
+		}
+
+		requirement_to_maintain = {
+			trigger = {	
+				custom_tooltip = {	
+					text = nda_oppose_cult_spread_potential2_tt	#Wording should be reversed ? 'cultists have taken over'
+					scope:target_country = { has_journal_entry = je_nda_cult_spreads } 
 				}
 			}
 		}
