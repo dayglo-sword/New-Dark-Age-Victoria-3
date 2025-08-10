@@ -1,0 +1,482 @@
+﻿namespace = nda_masonic #  Events related to Masonic orders
+
+nda_masonic.10 = { # A Question of Leadership - Called Event
+	type = country_event
+	placement = ROOT
+	title = nda_masonic.10.t
+	desc = nda_masonic.10.d
+	flavor = nda_masonic.10.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	# should be character block
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	gui_window = event_window_2char
+
+	left_icon = scope:nda_lodge_master_candidate_1
+	right_icon = scope:nda_lodge_master_candidate_2
+
+	minor_left_icon = scope:location_country
+
+	cooldown = { days = 1740 } # does this work for called events
+
+	immediate = {
+		debug_log = "Masonic Leadership"
+
+		random_scope_character = { 
+			limit = { has_variable = nda_lodge_master } 
+			save_scope_as = nda_lodge_master_candidate_1
+		}
+
+		random_scope_character = { 
+			limit = { 
+				has_variable = nda_lodge_master 
+				NOT = { THIS ?= scope:nda_lodge_master_candidate_1 }
+			} 
+			save_scope_as = nda_lodge_master_candidate_2
+		}
+
+		random_scope_state = { # Must have a Major Grand Lodge - turn conditions into trigger??
+			limit = { has_variable = nda_lodge_level var:nda_lodge_level > 1 }
+			save_scope_as = nda_lodge_loc
+		}
+	}
+
+	option = {
+		name = nda_masonic.10.a
+		default_option = yes	
+
+		scope:nda_lodge_master_candidate_1 = {
+			save_scope_as = scope_master_mason
+			# set or reaffirm as master, including IG boost
+		}
+
+		scope:nda_lodge_master_candidate_2 = { # Demote to honourific position
+			set_variable = nda_past_master
+			remove_variable = nda_lodge_master
+
+			remove_modifier = nda_master_mason_modifier
+		}
+
+		every_country = {
+			post_notification = nda_masonic_new_master
+		}
+	}
+
+	option = {
+		name = nda_masonic.10.b	
+
+		scope:nda_lodge_master_candidate_2 = {
+			save_scope_as = scope_master_mason
+			# set or reaffirm as master, including IG boost
+		}
+		
+		scope:nda_lodge_master_candidate_1 = { # Demote to honourific position
+			set_variable = nda_past_master
+			remove_variable = nda_lodge_master
+
+			remove_modifier = nda_master_mason_modifier
+		}
+
+		every_country = {
+			post_notification = nda_masonic_new_master
+		}
+	}
+}
+
+nda_masonic.11 = { # Masonic Foundings - Called Event
+	type = country_event
+	placement = ROOT
+	title = nda_masonic.11.t
+	desc = nda_masonic.11.d
+	flavor = nda_masonic.11.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	# should be character block
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	gui_window = event_window_1char
+
+	left_icon = scope:scope_master_mason
+
+	minor_left_icon = scope:location_country
+
+	cooldown = { days = 1740 } # does this work for called events
+
+	immediate = {
+		debug_log = "Masons Start in "
+
+		ordered_scope_character = {
+			limit = { 
+				age > 25
+			}
+
+			order_by = nda_masonic_potential
+			max = 1
+
+			nda_effect_set_as_master = yes
+
+			save_scope_as = scope_master_mason
+		}
+	}
+
+	# options need AI weightings based on conditions
+	option = {
+		name = nda_masonic.11.a
+		default_option = yes	
+
+		# create lodge in capital state
+		random_scope_state = {
+			limit = { is_capital = yes }
+			# minor lodge
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 1 }		
+			save_scope_as = nda_lodge_loc
+		}
+
+		every_country = {
+			post_notification = nda_masonic_new_lodge
+		}
+	}
+
+	option = {
+		name = nda_masonic.11.b	
+	}
+}
+
+nda_masonic.20 = { # Masonic Baning
+	type = country_event
+	placement = ROOT
+	title = nda_masonic.20.t
+	desc = nda_masonic.20.d
+	flavor = nda_masonic.20.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "middleeast_police_breaking_door"
+	}
+
+	#on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	cooldown = { days = 1740 } 
+
+	trigger = {
+		has_masonic_lodge = yes
+		OR = {
+			has_law = law_type:law_outlawed_dissent	
+			has_law = law_type:law_censorship	
+		}
+		NOT = { has_variable = nda_masonry_outlawed }
+	}
+
+	immediate = {
+		debug_log = "Masonry ban?"
+	}
+
+	# options need AI weightings based on conditions
+	option = {
+		name = nda_masonic.20.a # Ban Masonry
+		default_option = yes	
+
+		# every mason modfier in country gets flipped
+		nda_effect_ban_masons = yes
+		every_country = {
+			post_notification = nda_masonic_outlawed_masonry
+		}
+	}
+
+	option = {
+		name = nda_masonic.20.b	 # Continue with Masonry
+		nda_effect_unban_masons = yes
+	}
+}
+
+nda_masonic.21 = { # Masonic Oppose Potential Banning Movement
+	type = country_event
+	placement = ROOT
+	title = nda_masonic.21.t
+	desc = nda_masonic.21.d
+	flavor = nda_masonic.21.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	minor_left_icon = scope:location_country
+
+	cooldown = { days = 1740 } 
+
+	trigger = {
+		has_masonic_lodge = yes
+		has_masonic_master = yes	
+		NOT = { has_variable = nda_masonry_outlawed }		
+		OR = {
+			is_enacting_law = law_type:law_outlawed_dissent	
+			is_enacting_law = law_type:law_censorship	
+		}
+
+		any_scope_character = { 
+			has_variable = nda_lodge_master 
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value <= neutral
+			}
+		}
+	}
+
+	immediate = {
+		debug_log = "Masonic Influence?"
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+
+		random_scope_character = { 
+			limit = { 
+				has_variable = nda_lodge_master 
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}			
+			}
+
+			save_scope_as = masonic_leader_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	# options need AI weightings based on conditions
+	option = {
+		name = nda_masonic.21.a # Masonic Warning
+		default_option = yes
+		
+		add_enactment_modifier = {
+			name = nda_masonic_law_opposition
+		}
+	}
+
+	option = {
+		name = nda_masonic.21.b	 # Ignore Masonic Warning	
+		add_enactment_setback = 1	
+	}
+}
+
+nda_masonic.22 = { # Masonic Unbaning
+	type = country_event
+	placement = ROOT
+	title = nda_masonic.22.t
+	desc = nda_masonic.22.d
+	flavor = nda_masonic.22.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	#on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	cooldown = { days = 1740 } 
+
+	trigger = {
+		has_masonic_lodge = yes
+		has_variable = nda_masonry_outlawed
+		OR = {
+			has_law = law_type:law_right_of_assembly	
+			has_law = law_type:law_protected_speech	
+		}
+	}
+
+	immediate = {
+		debug_log = "Masonry ban?"
+	}
+
+	# options need AI weightings based on conditions
+	option = {
+		name = nda_masonic.22.a # Unban Masonry
+		default_option = yes	
+
+		# every mason modfier in country gets flipped
+		nda_effect_unban_masons = yes
+
+		every_country = {
+			post_notification = nda_masonic_resume_masonry
+		}
+	}
+
+	option = {
+		name = nda_masonic.22.b	 # Continue with Masonry Ban
+		nda_effect_ban_masons = yes
+	}
+}
+
+# nda_masonic.21 = { } # Masonic Support Potential Unbanning Movement
+
+# nda_masonic.25 = { } # Masonic Atheism
+# nda_masonic.26 = { } # Masonic Oppose Atheism Movement
+
+# nda_masonic.27 = { } # Masonic Spiritual Reversion
+# nda_masonic.26 = { } # Masonic Spiritual Movement
+
+# fixed 'historic' events
+
+nda_masonic.1837 = { # Masonic Meeting - Scottish Aniversary
+	type = country_event
+	placement = p:xA0E080 # Edinburgh??
+	title = nda_masonic.1837.t
+	desc = nda_masonic.1837.d
+	flavor = nda_masonic.1837.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	minor_left_icon = scope:location_country
+
+	trigger = { 		
+		game_date >= 1837.4.1 
+		game_date < 1838.1.1 
+
+		#is_player = yes
+				
+		# owner of Edinburgh. or NEN
+		OR = {
+			p:xA0E080 = { state = { owner = ROOT } }
+			c:NEN ?= ROOT
+			# should be multiple other locations			
+		}
+	}
+
+	cooldown = { days = 740 }	
+	
+	immediate = {
+		debug_log = "Masonic Meeting"
+		p:xA0E080 = { 
+			state = { 
+				owner = { save_scope_as = location_country } 
+				save_scope_as = nda_lodge_loc
+			} 
+		}	
+	}
+
+	option = {
+		name = nda_masonic.1837.a
+		default_option = yes	
+	}
+}
+
+nda_masonic.1838 = { # Masonry in New England
+	type = country_event
+	placement = p:x211ECF
+	title = nda_masonic.1838.t
+	desc = nda_masonic.1838.d
+	flavor = nda_masonic.1838.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	minor_left_icon = scope:location_country
+
+	trigger = { 		
+		game_date >= 1838.3.1 
+		game_date < 1839.1.1 
+
+		#is_player = yes
+		p:x211ECF = { state = { owner = ROOT } }		
+		c:NEN ?= ROOT
+	}
+
+	cooldown = { days = 740 }	
+	
+	immediate = {
+		debug_log = "Masonry in NEN"
+		p:x211ECF = { 
+			state = { 
+				owner = { save_scope_as = location_country } 
+				save_scope_as = nda_lodge_loc
+			} 
+		}
+	}
+
+	option = { # With London
+		name = nda_masonic.1838.a
+		default_option = yes	
+
+		# formally adopt Unified Rite
+		s:STATE_MASSACHUSETTS = {
+			region_state:NEN={
+				set_variable = { name = nda_lodge_rite value = 1 }	
+			}
+		}
+
+		# London approves - increase relationship, do lobby boost?
+	}
+
+	option = { # With New York
+		name = nda_masonic.1838.b
+
+		# formally adopt York Rite	(which is default)
+		s:STATE_MASSACHUSETTS = {
+			region_state:NEN={
+				set_variable = { name = nda_lodge_rite value = 3 }	
+			}
+		}
+
+		# US approves - advance reconciliation journal
+	}
+
+	option = { # Form Own Unified lodge
+		name = nda_masonic.1838.c	
+		s:STATE_MASSACHUSETTS = {
+			region_state:NEN={
+				set_variable = { name = nda_lodge_level value = 1 }	# promote up from 2	
+			}
+		}
+
+		# US disapproves - regress reconciliation journal
+	}
+
+	option = { # Do Nothing
+		name = nda_masonic.1838.d1	
+	}
+
+}

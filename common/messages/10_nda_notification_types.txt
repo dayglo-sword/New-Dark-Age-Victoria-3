@@ -312,3 +312,40 @@ nda_disaster_condition_started_in_country = {
 	notification_type = feed
 	color = neutral
 }
+
+# Masonic
+nda_masonic_new_master = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/character.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_masonic_new_lodge = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_masonic_outlawed_masonry = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}
+
+nda_masonic_resume_masonry = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}

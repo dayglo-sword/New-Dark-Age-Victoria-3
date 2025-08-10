@@ -1,6 +1,6 @@
 Timeline of events in mod
 
-1837.4		nda_historic.1837 	Masonic Meeting - Scottish Rite
+1837.4		nda_masonic.1837 	Masonic Meeting - Scottish Rite
 1838        nda_historic.1838   2nd Great Awakening
 1839        nda_base.2          Nameless Cults published
 1840        nda_base.3          Imprint of Nameless Cults

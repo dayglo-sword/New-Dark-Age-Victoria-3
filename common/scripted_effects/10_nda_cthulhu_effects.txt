@@ -364,11 +364,11 @@ nda_effect_cthulhu_leaves = { # Used at departure
 					# Make non-cultist survivors happy
 					scope:target_scope = {
 						add_radicals = {
-							value = -0.5
+							value = -0.75
 							culture =  PREV #THIS
 						}	
 						add_loyalists = {
-							value = 0.5
+							value = 0.75
 							culture =  PREV #THIS
 						}				
 					}				
@@ -402,6 +402,7 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				limit = {
 					religion = rel:nda_rel_cultist
 				}
+				change_pop_religion = { target = prev.religion value = 0.1 }	
 				change_pop_religion = { target = rel:nda_rel_theosophic value = 0.1 }	
 				change_pop_religion = { target = rel:atheist value = 0.05 }			
 			}

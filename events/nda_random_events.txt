@@ -207,3 +207,121 @@ nda_random.2 = { # Random Spread of Theosophy to other major country - do after 
 		set_variable = nda_theosophic_spread # stop it reoccuring for country		
 	}
 }
+
+
+
+nda_random.3 = { # Events involving British Exile migrations - called from effects
+	type = country_event
+	placement = ROOT
+	title = nda_random.3.t
+	desc = nda_random.3.d
+	flavor =  nda_random.3.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	duration = 3
+
+	immediate = {
+		debug_log = "Exile British"
+
+		random_scope_state = { 
+			limit = {
+				state_is_eligible_as_mass_migration_target = yes				
+			}
+
+			debug_log = "migration candidate state : [THIS.GetState.GetNameNoFormatting]"
+
+			save_scope_as = target_state
+		}
+	}	
+	
+	option = {
+		name = nda_random.3.a
+		default_option = yes
+
+		ai_chance = { 
+			base = 90	
+		}
+
+		scope:target_state = {
+			create_mass_migration = {  
+				origin = c:GBR  
+				culture = cu:british  
+			}
+		}
+	}
+
+	option = {
+		name = nda_random.3.b
+
+		ai_chance = { 
+			base = 10		
+		}
+	
+	}
+}
+
+nda_random.4 = { # Events involving French Exile migrations - called from effects
+	type = country_event
+	placement = ROOT
+	title = nda_random.4.t
+	desc = nda_random.4.d
+	flavor =  nda_random.4.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	duration = 3
+
+	immediate = {
+		debug_log = "Exile French"
+
+		random_scope_state = { 
+			limit = {
+				state_is_eligible_as_mass_migration_target = yes				
+			}
+
+			debug_log = "migration candidate state : [THIS.GetState.GetNameNoFormatting]"
+
+			save_scope_as = target_state
+		}
+	}	
+	
+	option = {
+		name = nda_random.4.a
+		default_option = yes
+
+		ai_chance = { 
+			base = 90	
+		}
+
+		scope:target_state = {
+			create_mass_migration = {  
+				origin = c:FRA  
+				culture = cu:french  
+			}			
+		}
+	}
+
+	option = {
+		name = nda_random.4.b
+
+		ai_chance = { 
+			base = 10		
+		}
+	
+	}
+}

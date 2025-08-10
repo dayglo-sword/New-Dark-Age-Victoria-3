@@ -1,0 +1,275 @@
+﻿
+# Based on 'Canada Flag Pack' by Amtoj https://steamcommunity.com/sharedfiles/filedetails/?id=2888072185
+# Many Thanks for the permission,
+
+HBC = { # Hudson Bay Company
+	dynamic_country_name = {
+		name = dyn_c_ruperts_land
+		adjective = dyn_c_ruperts_land_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			coa_def_independent_trigger = yes
+		}
+	}
+
+	# For Hudson's Bay turns Cultist
+	dynamic_country_name = { 
+		name = nda_hudson_bay_cabal
+		adjective = CULTIST_ADJ
+		
+		is_main_tag_only = yes
+		priority = 30
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_secessionist = no
+				is_cultist_country = yes
+			}
+
+		}
+	}
+}
+
+MTC = { # Metis
+	dynamic_country_name = {
+		name = nda_manitoba #"Manitoba"
+		adjective = nda_manitoba_adj #"Manitoban"
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			OR = {
+				coa_def_british_ensign_trigger = yes
+				coa_def_french_ensign_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = nda_saskatchewan #"Saskatchewan"
+		adjective = nda_saskatchewan_adj # "Saskatchewanian"
+
+		is_main_tag_only = yes
+		priority = 20
+		
+		trigger = {
+			scope:actor = { capital = { state_region = s:STATE_SASKATCHEWAN } }
+			OR = {
+				coa_def_british_ensign_trigger = yes
+				coa_def_french_ensign_trigger = yes
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = nda_alberta #"Alberta"
+		adjective = nda_alberta_adj # "Albertan"
+
+		is_main_tag_only = yes
+		priority = 20
+		
+		trigger = {
+			scope:actor = { capital = { state_region = s:STATE_ALBERTA } }
+			OR = {
+				coa_def_british_ensign_trigger = yes
+				coa_def_french_ensign_trigger = yes
+			}
+		}
+	}
+}
+
+NBS = { # New Brunswick
+	dynamic_country_name = {
+		name = nda_acadia # "Acadia"
+		adjective = nda_acadia_adj # "Acadian"
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			OR = {
+				coa_def_french_ensign_trigger = yes				
+				scope:actor = { country_has_primary_culture = cu:french } # via French Exlie event?
+			}
+		}
+	}
+}
+
+NEW = { # Newfoundland
+	dynamic_country_name = {
+		name = nda_labrador #"Labrador"
+		adjective =  nda_labrador_adj #"Labradorian"
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor = {
+				any_scope_state = { state_region = s:STATE_QUEBEC }
+			}
+			OR = {
+				coa_def_monarchy_flag_trigger = yes
+				coa_def_french_ensign_trigger = yes
+				scope:actor = { country_has_primary_culture = cu:french } # via French Exlie event?
+			}
+			coa_def_british_ensign_trigger = no
+		}
+	}
+}
+
+ONT = { # Ontario
+	dynamic_country_name = {
+		name = dyn_c_upper_canada
+		adjective = dyn_c_upper_canada_adj
+
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = c:GBR
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:ONT
+					type = puppet
+					is_initiator = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = nda_canada_republic #"Republic of Canada"
+		adjective = nda_republic_adj #"Republican"
+
+		is_main_tag_only = yes
+		priority = 10
+		
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			coa_def_independent_trigger = yes
+		}
+	}
+}
+
+ORG = { # Oregon
+	dynamic_country_name = {
+		name = dyn_c_columbia
+		adjective = dyn_c_columbia_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			OR = {
+				AND = {
+					exists = c:GBR
+					c:GBR = {
+						has_diplomatic_pact = {
+							who = scope:actor
+							type = dominion
+							is_initiator = yes
+						}
+					}
+				}
+				AND = {
+					exists = c:HBC
+					scope:actor = {
+						is_subject_of = c:HBC
+					}
+				}
+				AND = {
+					exists = c:CAN
+					scope:actor = {
+						is_subject_of = c:CAN
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_columbia_district
+		adjective = dyn_c_columbia_adj # no need for a different adjective from the above entry
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = c:GBR
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:ORG
+					type = puppet
+					is_initiator = yes
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = nda_british_columbia
+		adjective = nda_british_columbia_adj
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor = {
+				NOR = { 
+					any_scope_state = { state_region = s:STATE_OREGON }
+					any_scope_state = { state_region = s:STATE_WASHINGTON }
+					any_scope_state = { state_region = s:STATE_IDAHO } 
+				}
+			}
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+}
+
+UOM = { # Michigan
+	dynamic_country_name = {
+		name = "Illinois Country"
+		adjective = "Illinoisan"
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+}
+
+LOU_FRA = { # French Louisiana
+	dynamic_country_name = {
+		name = nda_french_louisiana 
+		adjective =  french_adj 
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			OR = {
+				scope:actor = { country_has_primary_culture = cu:french } # via French Exile event?
+				coa_def_french_ensign_trigger = yes				
+			}
+
+			coa_def_british_ensign_trigger = no
+		}
+	}
+	
+	dynamic_country_name = {
+		name = nda_new_france # should also cover canadian provencies - should be separate formable?
+		adjective =  french_adj 
+
+		is_main_tag_only = yes
+		priority = 5
+		
+		trigger = {
+			scope:actor = { country_has_primary_culture = cu:french } # via French Exile event?
+			NOT = { exists = c:FRA }
+			coa_def_british_ensign_trigger = no
+		}
+	}
+}

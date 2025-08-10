@@ -1,0 +1,109 @@
+﻿nda_effect_exile_from_france = {
+	# Once taken over by cultist try and direct where migrations go
+	every_country = {
+		limit = {
+			is_cultist_country = no # flee away from the cult
+			c:FRA = { country_can_have_mass_migration_to = PREV }
+			any_scope_state = { 
+				state_region = {
+					OR = {
+						is_homeland = cu:french
+						is_homeland = cu:franco_canadian
+						is_homeland = cu:cajun
+						is_homeland = cu:metis
+					}
+				}
+			}
+		}
+
+		debug_log = "migration candidate : [THIS.GetCountry.GetNameNoFormatting]"
+		
+		if = {
+			limit = { is_player = yes}
+			# do by event giving option to turn it down
+			trigger_event = { id = nda_random.4 }	
+		}
+		else = {
+			nda_effect_do_exile_from_france = yes		
+		}
+
+	}
+
+}
+
+nda_effect_do_exile_from_france = {
+	random_scope_state = { 
+		limit = {
+			state_is_eligible_as_mass_migration_target = yes
+			state_region = {
+				OR = {
+					is_homeland = cu:french
+					is_homeland = cu:franco_canadian
+					is_homeland = cu:cajun
+					is_homeland = cu:metis
+				}
+			}				
+		}
+
+		debug_log = "migration candidate state : [THIS.GetState.GetNameNoFormatting]"
+
+		create_mass_migration = {  
+			origin = c:FRA  
+			culture = cu:french  
+		}
+	}
+}
+
+nda_effect_exile_from_britain = {
+	# Once taken over by cultist try and direct where migrations go
+	debug_log = "migration from : [THIS.GetCountry.GetNameNoFormatting]"
+
+	every_direct_subject = { # colonies only? - needs to be done before colonies become independant?
+		limit = {			
+			is_cultist_country = no # flee away from the cult
+			#c:GBR = { country_can_have_mass_migration_to = PREV } # this doesn't seem to validate - because of 'subject' relationship?
+			OR = {
+				country_has_primary_culture = cu:british
+				country_has_primary_culture = cu:australian
+				country_has_primary_culture = cu:anglo_canadian
+			}
+			any_scope_state = { 
+				state_is_eligible_as_mass_migration_target = yes
+			}
+		}
+
+		debug_log = "migration candidate : [THIS.GetCountry.GetNameNoFormatting]"
+
+		if = {
+			limit = { is_player = yes}
+			# do by event giving option to turn it down
+			trigger_event = { id = nda_random.3 }	
+		}
+		else = {
+			nda_effect_do_exile_from_britain = yes		
+		}	
+	}
+
+}
+
+nda_effect_do_exile_from_britain = {
+	random_scope_state = { 
+		limit = {
+			state_is_eligible_as_mass_migration_target = yes
+			state_region = {
+				OR = {
+					is_homeland = cu:british
+					is_homeland = cu:australian
+					is_homeland = cu:anglo_canadian
+				}
+			}				
+		}
+
+		debug_log = "migration candidate state : [THIS.GetState.GetNameNoFormatting]"
+
+		create_mass_migration = {  
+			origin = c:GBR  
+			culture = cu:british  
+		}
+	}
+}

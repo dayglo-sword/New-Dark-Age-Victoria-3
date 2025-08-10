@@ -48,36 +48,36 @@
 
 		monthly_effect = {
 			# This does nothing!!
-			scope:target_country = { 
-				change_variable = {
-					name = nda_cult_spread_tracker
-					subtract = 2
-				}
+			# scope:target_country = { 
+			# 	change_variable = {
+			# 		name = nda_cult_spread_tracker
+			# 		subtract = 2
+			# 	}
 				
-				IF = {
-					limit = {						
-						global_country_ranking > ROOT.global_country_ranking # if ranking greater than target increase effect
-					}
-					change_variable = {
-						name = nda_cult_spread_tracker
-						subtract = 1
-					}
-				}
-				ELSE_IF = {
-					limit = {						
-						country_rank > ROOT.country_rank # # if rank lower than target decrease effect
-					}
-					change_variable = {
-						name = nda_cult_spread_tracker
-						subtract = 1
-					}
-				}
-				clamp_variable = {
-					name = nda_cult_spread_tracker
-					min = 0
-					max = 1201			
-				}
-			 }
+			# 	IF = {
+			# 		limit = {						
+			# 			global_country_ranking > ROOT.global_country_ranking # if ranking greater than target increase effect
+			# 		}
+			# 		change_variable = {
+			# 			name = nda_cult_spread_tracker
+			# 			subtract = 1
+			# 		}
+			# 	}
+			# 	ELSE_IF = {
+			# 		limit = {						
+			# 			country_rank > ROOT.country_rank # # if rank lower than target decrease effect
+			# 		}
+			# 		change_variable = {
+			# 			name = nda_cult_spread_tracker
+			# 			subtract = 1
+			# 		}
+			# 	}
+			# 	clamp_variable = {
+			# 		name = nda_cult_spread_tracker
+			# 		min = 0
+			# 		max = 1201			
+			# 	}
+			#  }
 		}
 
 		# target must not become Cult controlled

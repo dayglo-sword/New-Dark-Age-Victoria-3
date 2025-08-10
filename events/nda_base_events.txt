@@ -555,7 +555,13 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 				debug_log = "Offer Obligation to ELD on becoming Cultist : [THIS.GetCountry.GetNameNoFormatting]" #[ROOT.GetName] : 
 
 				set_owes_obligation_to = { country = c:ELD setting = yes }
-				change_relations = { country = c:ELD value = 50 } # 30 was too low?				
+				change_relations = { country = c:ELD value = 50 } # 30 was too low?	
+
+				# Diplo Catalyst
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_positive
+					target = c:ELD
+				}		
 			}
 
 			# Need to try and spread further so pass off to a non-cultist neighbour
@@ -623,7 +629,7 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 							limit = {
 								has_role = politician
 							}
-							set_as_interest_group_leader = no
+							#set_as_interest_group_leader = no
 							remove_character_role = politician
 						}
 						if = {
@@ -642,6 +648,16 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 					debug_log_scopes = no
 				}			
 			}
+		}
+
+		# Do emigration events if FRA or GBR
+		if = {
+			limit = { ROOT ?= c:FRA}
+			nda_effect_exile_from_france = yes
+		}
+		else_if = {
+			limit = { ROOT ?= c:GBR}
+			nda_effect_exile_from_britain = yes
 		}		
 	}	
 	

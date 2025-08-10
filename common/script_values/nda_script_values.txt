@@ -200,3 +200,57 @@ nda_purge_infamy =
 		add = 5
 	}
 }
+
+# ROOT scope is Character - use to find candidate masons
+nda_masonic_potential =
+{
+	value = { 1 5 } # does this actually do random amount?
+	if = {
+		limit = { 
+			OR = {
+				interest_group = { is_interest_group_type = ig_armed_forces }
+				interest_group = { is_interest_group_type = ig_landowners }
+				interest_group = { is_interest_group_type = ig_intelligentsia }
+				interest_group = { is_interest_group_type = ig_petty_bourgeoisie }
+			}
+		}
+		add = 5
+	}	
+	if = {
+		limit = {
+			has_variable = nda_is_mason # used to find master candidates
+		}
+		add = 10
+	}
+	if = {
+		limit = {
+			has_variable = nda_lodge_master # used to promote masters 
+		}
+		add = 20
+	}
+	if = {
+		limit = {
+			age > 40 # old duffers rule
+		}
+		add = 2
+	}	
+	if = {
+		limit = {
+			age < 25 # youngsters are last resort
+		}
+		add = -20
+	}
+	if = {
+		limit = {
+			is_ruler = yes # No Active rulers (but can be prior - like British Royals)
+		}
+		add = -10
+	}		
+	if = {
+		limit = {
+			is_female = yes
+			# need condition for if females allowed
+		}
+		add = -20	
+	}
+}

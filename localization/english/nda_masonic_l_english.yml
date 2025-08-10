@@ -1,0 +1,86 @@
+﻿l_english:
+
+nda_lodge: "Lodge"
+nda_unified_lodge: "The Unified Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
+nda_scottish_grand_lodge: "The Scottish Grand Lodge"
+nda_grand_oriental_lodge:  "The Grand Oriental Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
+nda_grand_lodge: "The Grand Lodge of [ROOT.GetState.GetNameNoFormatting]"
+nda_provincial_lodge: "The Provincial Lodge of  [ROOT.GetState.GetNameNoFormatting]"
+
+nda_rite_unified: "Unified Rite"
+nda_rite_scottish: "Scottish Rite"
+nda_rite_york: "York Rite"
+
+nda_rite_esoteric: "Twilight Rite"
+
+# Masonic Notifications
+notification_nda_masonic_new_master_tooltip: "#header $notification_nda_masonic_new_master_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_new_master_desc$"
+notification_nda_masonic_new_master_name: "A New Grand Master"
+notification_nda_masonic_new_master_desc: "[SCOPE.sCharacter('scope_master_mason').GetFullName] has been apointed the new #GREEN Grand Master#! of #BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')]#!."
+
+notification_nda_masonic_new_lodge_tooltip: "#header $notification_nda_masonic_new_lodge_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_new_lodge_desc$"
+notification_nda_masonic_new_lodge_name: "A New Lodge"
+notification_nda_masonic_new_lodge_desc: "A new Masonic Lodge has been founded : [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')]."
+
+
+notification_nda_masonic_outlawed_masonry_tooltip: "#header $notification_nda_masonic_outlawed_masonry_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_outlawed_masonry_desc$"
+notification_nda_masonic_outlawed_masonry_name: "Freemasonry Outlawed in [SCOPE.GetRootScope.GetCountry.GetName]"
+notification_nda_masonic_outlawed_masonry_desc: "Masonic practises have been made illegal and Lodges no longer meet openly."
+
+notification_nda_masonic_resume_masonry_tooltip: "#header $notification_nda_masonic_resume_masonry_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_resume_masonry_desc$"
+notification_nda_masonic_resume_masonry_name: "Freemasonry Resumes in [SCOPE.GetRootScope.GetCountry.GetName]"
+notification_nda_masonic_resume_masonry_desc: "Masonic practises and membership have been made legal and Lodges can now meet openly."
+
+nda_effect_ban_masons_desc: "Persecute existing Freemasons"
+nda_effect_unban_masons_desc: "Reverse the persecution of Freemasons"
+
+# Modifiers
+nda_master_mason_modifier: "Grand Master Mason"
+nda_mason_modifier: "Masonic Lodge Member"
+nda_lodge_modifier: "Mason Lodge"
+
+nda_masonic_law_opposition: "Masons Oppose This Law"
+
+nda_masonic.10.t: "A Question of Leadership"
+nda_masonic.10.d: "It appears that there is some controversy at#BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] #!. There are two candidates for the role of Grand Master, each appears to be equally adept in The Craft."
+nda_masonic.10.f: "'The M.E. Grand Master, Sir W. R. Wright, stated to the Knights that the Grand Conclave had been summoned this day for the election of a new #GREEN Grand Master#! in his stead;\n\nHe therefore, proposed, That His Royal Highness the Duke of Sussex be appointed Grand Master of the Grand Conclave during his life.'\n - The Freemasons' Quarterly Review, March 1836"
+nda_masonic.10.a: "[SCOPE.sCharacter('nda_lodge_master_candidate_1').GetPrimaryRoleTitle] [SCOPE.sCharacter('nda_lodge_master_candidate_1').GetFullName]"
+nda_masonic.10.b: "[SCOPE.sCharacter('nda_lodge_master_candidate_2').GetPrimaryRoleTitle] [SCOPE.sCharacter('nda_lodge_master_candidate_2').GetFullName]"
+
+nda_masonic.11.t: "A Masonic Lodge?"
+nda_masonic.11.d: "A number of influential people are wanting to found a Lodge to follow the Masonic tradition, and possibly other [concept_esoteric_orders].\n\nThis may possibly unnerve a number of people in the country, but may help with social cohesion.\n\nThe proposed lodge has the provisional name of#BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] #! and [SCOPE.sCharacter('nda_lodge_master_candidate_1').GetPrimaryRoleTitle] [SCOPE.sCharacter('nda_lodge_master_candidate_1').GetFullName] is the leading candidate to be the first #GREEN Grand Master#! of it."
+nda_masonic.11.f: "'The M.E. Grand Master, Sir W. R. Wright, stated to the Knights that the Grand Conclave had been summoned this day for the election of a new Grand Master in his stead;\n\nHe therefore, proposed, That His Royal Highness the Duke of Sussex be appointed Grand Master of the Grand Conclave during his life.'\n - The Freemasons' Quarterly Review, March 1836"
+nda_masonic.11.a: "A Grand Idea"
+nda_masonic.11.b: "Too dangerous to contemplate"
+
+nda_masonic.20.t: "Banning Freemasonry"
+nda_masonic.20.d: "Laws are now in place that would allow us to stop the spread of the Masonic tradition in our country.\n\n They may oppose it but control of the country must remain exclusively in our hands."
+nda_masonic.20.f: "'The M.E. Grand Master, Sir W. R. Wright, stated to the Knights that the Grand Conclave had been summoned this day for the election of a new Grand Master in his stead;\n\nHe therefore, proposed, That His Royal Highness the Duke of Sussex be appointed Grand Master of the Grand Conclave during his life.'\n - The Freemasons' Quarterly Review, March 1836"
+nda_masonic.20.a: "The Ban is essential"
+nda_masonic.20.b: "Not a good idea"
+
+nda_masonic.21.t: "The Masonic Influence"
+nda_masonic.21.d: "The Masons see the Law that is as a threat to their Order and are seeking to oppose it \n\n What right do they have to try and oppose it?"
+nda_masonic.21.f: "'The M.E. Grand Master, Sir W. R. Wright, stated to the Knights that the Grand Conclave had been summoned this day for the election of a new Grand Master in his stead;\n\nHe therefore, proposed, That His Royal Highness the Duke of Sussex be appointed Grand Master of the Grand Conclave during his life.'\n - The Freemasons' Quarterly Review, March 1836"
+nda_masonic.21.a: "Let them oppose"
+nda_masonic.21.b: "We must reconsider."
+
+nda_masonic.22.t: "Lifting the Ban on Freemasonry"
+nda_masonic.22.d: "Laws are now in place that would allow the Masonic tradition to resume in our country.\n\n Exisitng Masons should no longer be persecuted in this manner."
+nda_masonic.22.f: "'The M.E. Grand Master, Sir W. R. Wright, stated to the Knights that the Grand Conclave had been summoned this day for the election of a new Grand Master in his stead;\n\nHe therefore, proposed, That His Royal Highness the Duke of Sussex be appointed Grand Master of the Grand Conclave during his life.'\n - The Freemasons' Quarterly Review, March 1836"
+nda_masonic.22.a: "They must be allowed their freedom!"
+nda_masonic.22.b: "The Ban is essential"
+
+nda_masonic.1837.t: "Masonic Meetings"
+nda_masonic.1837.d: "The act of Freemasonry seems to still be wide-spread, and may even be increasing around the world.\n\n#BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] #! has recently celebrated its centenary, but claims an older ancestry of hereditary Grand Masters dating back to at least James the First, of Scotland."
+nda_masonic.1837.f: "'Under the blessing of the Great Architect of the Universe, the Grand Lodge of Scotland has spread and prospered.\n\n The Lodges in Denmark own her as their mother; she claims the Brethren in Russia as her children; in France her power is acknowledged, and in Holland her sway is felt; in New England they obey her laws, and in Nova Scotia her protection is claimed.\n\n In the West Indies and in Turkey, in Ceylon, and Syria, her influence is confessed, her mandates are obeyed...'\n - The Freemasons' Quarterly Review, March 1837"
+nda_masonic.1837.a: "Delusions of grandeur?"
+nda_masonic.1837.b: "We should keep an eye on them."
+
+nda_masonic.1838.t: "The Future of [SCOPE.sCountry('location_country').GetAdjectiveNoFormatting] Freemasonry"
+nda_masonic.1838.d: "#BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')]#!, arguably the pre-eminent Lodge in New England, is wondering what the future course of Freemasonry in this country might be.\n\nSince independence there has been the question as to who the 'parent' organisation might be for the Provincial Lodges. Where should they look for overall guidance on the additional Rites?\n\nShould it defer to #BLUE The Grand United Lodge#! in London, or the nearby #BLUE Grand Lodge of New York#!; or should it go it's own way and form an independent #BLUE Unified Lodge#! for the country."
+nda_masonic.1838.f: "'It is impossible to doubt, as it would be impolitic to question, the advantages of the Mason Union...\n\n One only feeling, we are morally convinced, pervades every heart and mind, that of joyful gratitude to him who planned, and, under the guidance of Providence, brought this desirable object to its happy consummation.'\n - The Freemasons' Quarterly Review, March 1836"
+nda_masonic.1838.a: "With Grand United Lodge of England"
+nda_masonic.1838.b: "With New York Lodge of America"
+nda_masonic.1838.c: "Form Unified Lodge of New England"
+nda_masonic.1838.d1: "Let things stay as they are."

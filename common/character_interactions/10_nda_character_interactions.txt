@@ -633,14 +633,14 @@ adopt_cult_culture = {
 		value = 5
 		if = {
 			limit = {
-				interest_group = { is_interest_group_type = ig_nda_cult_worshippers }	 # need to be for cult IG! Other effects can set it by default, but use this as catch all just in case
+				interest_group ?= { is_interest_group_type = ig_nda_cult_worshippers }	 # need to be for cult IG! Other effects can set it by default, but use this as catch all just in case
 			}
 
 			add = 100
 		}
 		if = {
 			limit = {
-				interest_group = { is_powerful = yes }	 # more chance if powerful IG			
+				interest_group ?= { is_powerful = yes }	 # more chance if powerful IG			
 			}
 
 			add = 10

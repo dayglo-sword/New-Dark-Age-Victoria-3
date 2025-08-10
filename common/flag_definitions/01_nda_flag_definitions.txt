@@ -143,12 +143,21 @@ NEN = { # New England Cultist
 	}
 	flag_definition = {
 		coa = NEN_republic
-		subject_canton = NEN_republic
+		subject_canton = NEN_subject_FRA # NEN_republic
 		priority = 10
 		trigger = { 
 			coa_def_republic_flag_trigger = yes
 		}
 	}
+
+	flag_definition = {
+		coa = NEN_subject_FRA	# From CAN flag pack	
+		priority = 50
+		trigger = { 
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+
 	flag_definition = {
 		coa = NEN_Cultist
 		priority = 200
@@ -161,20 +170,10 @@ NEN = { # New England Cultist
 		coa = NEN_Greater # When NEN forms CAN
 		priority = 500
 		trigger = { 
-			scope:actor = { was_formed_from = NEN }
+			scope:actor ?= { was_formed_from = NEN }
 		}
 	}	
 }
-
-# USA = { # This overrides existing???
-# 	flag_definition = {
-# 		coa = USA_Cultist
-# 		priority = 200
-# 		trigger = { 
-# 			nda_coa_def_cultist_trigger = yes
-# 		}
-# 	}
-# }
 
 AUS = { # Austria
 	flag_definition = {

@@ -1,11 +1,5 @@
 ﻿l_english:
 
-nda_historic.1837.t: "Masonic Meetings"
-nda_historic.1837.d: "The act of Freemasonry seems to still be wide-spread, and may even be increasing around the world.\n\n#BLUE The Scottish Grand Lodge#! has recently celebrated its centenary, but claims an older ancestry of hereditary Grand Masters dating back to at least James the First, of Scotland."
-nda_historic.1837.f: "'Under the blessing of the Great Architect of the Universe, the Grand Lodge of Scotland has spread and prospered.\n\n The Lodges in Denmark own her as their mother; she claims the Brethren in Russia as her children; in France her power is acknowledged, and in Holland her sway is felt; in New England they obey her laws, and in Nova Scotia her protection is claimed.\n\n In the West Indies and in Turkey, in Ceylon, and Syria, her influence is confessed, her mandates are obeyed...'\n - The Freemasons' Quarterly Review, March 1837"
-nda_historic.1837.a: "Delusions of grandeur?"
-nda_historic.1837.b: "We should keep an eye on them."
-
 nda_historic.1838.t: "A Second Great Awakening"
 nda_historic.1838.d: "By the mid-1830s a wave of religious zeal was sweeping across the USA.\n\nDriven by charismatic preachers who called for the faithful to return to the original teachings of the Bible and lead upstanding moral lives, the movement would spawn several new Protestant sects, lead to debates and schisms within established sects over points of theology and ritual, and reinforce the power and influence of Christian teachings among the lower and middle classes of the American people."
 nda_historic.1838.f: "'I refuse to join any cult that would have me as a member.'\n - Marx"
@@ -37,8 +31,8 @@ nda_historic.1852.a: "Just a circus act."
 nda_historic.1852.b: "What harm can such parlour games do?."
 
 nda_historic.1854.t: "Dogme et Rituel de la Haute Magie"
-nda_historic.1854.d: "The French author, #GREEN Eliphas Levi#! has released the first volume of a book by the title #BLUE 'Dogme et Rituel de la Haute Magie'#! - 'The Doctrine and Ritual of High Magic'\n\nIt is illustrated with various 'symbols' such as pentagrams, and differentiates between the different types depending on their orientation."
-nda_historic.1854.f: "'There exists in nature a force which is much more powerful than steam. This force was known to the ancients - it consists of a universal agent whose supreme law is equilibrium, and whose direction is concerned immediately with the great arcanum of transcendental magic.\n\n This agent, which barely manifests itself under the trial and error of the disciples of Mesmer, is exactly what the adepts of the Middle Ages called the first matter of the great work. The Gnostics represented it as the very body of the Holy Spirit, and it was the object of adoration in the secret rites of the Sabbath or the Temple, under the hieroglyphic figure of Baphomet or the Androgynous Goat of Mendes.'"
+nda_historic.1854.d: "The French author, #GREEN Eliphas Levi#! has released the first volume of a book by the title #BLUE 'Dogme et Rituel de la Haute Magie'#! - 'The Doctrine and Ritual of High Magic'\n\nIt is illustrated with various 'symbols' of the occult such as pentagrams; and differentiates between the various types depending on their orientation."
+nda_historic.1854.f: "'There exists in nature a force which is much more powerful than steam. This force was known to the ancients - it consists of a universal agent whose supreme law is equilibrium, and whose direction is concerned immediately with the great arcanum of transcendental magic.\n\n This agent, which barely manifests itself under the trial and error of the disciples of Mesmer, is exactly what the adepts of the Middle Ages called the first matter of the great work. The Gnostics represented it as the very body of the Holy Spirit, and it was the object of adoration in the secret rites of the Sabbath or the Temple, under the hieroglyphic figure of #GREEN Baphomet#! or the #GREEN Androgynous Goat of Mendes#!.'"
 nda_historic.1854.a: "Pointy Stars and Goats?!"
 nda_historic.1854.b: ""
 

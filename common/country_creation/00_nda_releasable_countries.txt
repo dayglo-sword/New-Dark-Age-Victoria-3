@@ -115,3 +115,28 @@ DLM = { # Dagonic Lemuria - This is different to standard Lemuria as Cultist
 		exists = c:DGN
 	}
 }
+
+# should be in separate file??
+LOU = { # Overide default LOU to cover some of the purchase lands, not just state
+	use_culture_states = yes
+
+	required_num_states = 2
+
+	ai_will_do = { always = no }
+}
+
+# should be in separate file??
+LOU_FRA = { # Set up as new france, but rename after
+	use_culture_states = yes
+
+	required_num_states = 2
+
+	ai_will_do = { always = no }
+
+	possible = {
+		OR = {
+			s:STATE_LOUISIANA = { is_homeland = cu:french }
+			s:STATE_MISSISSIPPI = { is_homeland = cu:french }
+		}
+	}
+}

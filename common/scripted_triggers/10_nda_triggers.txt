@@ -216,6 +216,27 @@ has_investigators = {
 	}
 }
 
+has_masonic_lodge = {
+	any_scope_state = {
+		has_variable = nda_lodge_level
+	}
+}
+
+has_masons = {
+	custom_tooltip = {
+		text = nda_eldritch_cultist_tt
+		any_scope_character = {
+			has_variable = nda_is_mason
+		}
+	}
+
+}
+
+has_masonic_master = {
+	any_scope_character = { 
+		has_variable = nda_lodge_master
+	}
+}
 
 ## Event conditions
 has_cult_culture = {

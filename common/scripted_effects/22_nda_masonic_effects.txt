@@ -1,0 +1,406 @@
+﻿nda_effect_initial_lodges = {
+	# Once taken over by cultist try and direct where migrations go
+
+	# Country 'Unified Lodges' 
+	# London 
+	s:STATE_HOME_COUNTIES = {
+		region_state:GBR={
+			set_variable = { name = nda_lodge_level value = 1 }	
+			set_variable = { name = nda_lodge_rite value = 1 }		
+
+			add_modifier = { name = nda_lodge_modifier }
+
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}		
+	}
+
+	# Paris 'Oriental'
+	s:STATE_ILE_DE_FRANCE = {
+		region_state:FRA={
+			set_variable = { name = nda_lodge_level value = 1 }	
+			set_variable = { name = nda_lodge_rite value = 2 }	
+
+			add_modifier = { name = nda_lodge_modifier }
+
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}
+	}
+
+	# Scotland? differs from London
+	s:STATE_LOWLANDS = {
+		region_state:GBR={
+			set_variable = { name = nda_lodge_level value = 1 }	
+			set_variable = { name = nda_lodge_rite value = 1 }	
+			
+			add_modifier = { name = nda_lodge_modifier }
+		}
+	}
+
+	# Ireland
+	s:STATE_LEINSTER = {
+		region_state:GBR={
+			set_variable = { name = nda_lodge_level value = 1 }	
+			set_variable = { name = nda_lodge_rite value = 1 }	
+			
+			add_modifier = { name = nda_lodge_modifier }
+		}
+	}
+
+	# State 'Grand Lodges'
+	s:STATE_NEW_YORK = {
+		region_state:USA={
+			set_variable = { name = nda_lodge_level value = 2 }	
+			set_variable = { name = nda_lodge_rite value = 2 }	
+
+			add_modifier = { name = nda_lodge_modifier }
+
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}
+	}
+
+	s:STATE_MASSACHUSETTS = {
+		region_state:NEN={
+			set_variable = { name = nda_lodge_level value = 2 }	
+			set_variable = { name = nda_lodge_rite value = 2 }	
+
+			add_modifier = { name = nda_lodge_modifier }	
+			
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}
+
+	}
+
+	# State 'Provincial Lodges'
+	s:STATE_NEW_HAMPSHIRE = { # the Miskatonic Lodge
+		region_state:NEN={
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 2 }	
+
+			add_modifier = { name = nda_lodge_modifier }		
+		}
+	}
+
+	#Lodges around the World
+	s:STATE_NEW_BRUNSWICK = {
+		region_state:NVS={
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 2 }	
+
+			add_modifier = { name = nda_lodge_modifier }
+			
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}
+	}
+
+	s:STATE_HOLLAND = {
+		region_state:NET={
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 2 }	
+			
+			add_modifier = { name = nda_lodge_modifier }
+
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}
+	}
+
+	s:STATE_ZEALAND = {
+		region_state:DEN={
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 2 }	
+
+			add_modifier = { name = nda_lodge_modifier }
+
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}
+	}
+
+	# s:STATE_JAMACIA = { # does not like - because unincorporated???
+	# 	region_state:GBR={
+	# 		set_variable = { name = nda_lodge_level value = 3 }	
+	# 		set_variable = { name = nda_lodge_rite value = 1 }				
+	# 	}
+	# }
+
+	s:STATE_CEYLON = {
+		region_state:BCE={
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 1 }	
+			
+			add_modifier = { name = nda_lodge_modifier }
+			
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}		
+	}
+}
+
+# From Country scope - if grand lodge or player then ensure a leader. If conflict and two or more then trigger event to decide
+# could do it as character interaction like Coven leader ?? - limit till after the intial events - have flag for activation
+nda_effect_lodge_leader = { # running half-yearly
+	if = {	
+		limit = { 
+			has_masonic_lodge = yes 
+			NOT = { has_variable = nda_masonry_outlawed }
+		} # Has Lodges, has Masons, is not outlawed
+
+		if = {
+			limit = {						
+				has_masonic_master = no # but no master
+			}
+
+			# remove existing IG modifer if still in place
+			every_interest_group = {
+				if = {
+					limit = { has_modifier = nda_ig_mason_modifier } 
+					remove_modifier = nda_ig_mason_modifier
+					debug_log = "New Lodge Master - Remove Old Modifier"
+				}
+			}
+
+			ordered_scope_character = {
+				limit = { 
+					NOT = { has_variable = nda_is_mason } 
+				}
+
+				order_by = nda_masonic_potential
+				max = 1
+
+				nda_effect_set_as_master = yes
+				# set_variable = { name = nda_lodge_master }
+
+				# add_modifier = {
+	            # 	name = nda_master_mason_modifier
+	        	# }
+
+				# interest_group = { 
+				# 	if = {
+				# 		limit = { NOT = { has_modifier = nda_ig_mason_modifier } }
+
+				# 		add_modifier = nda_ig_mason_modifier
+				# 	}
+
+				# }	
+
+				save_scope_as = scope_master_mason
+			}
+
+			random_scope_state = {
+				limit = {
+					has_variable = nda_lodge_level
+					var:nda_lodge_level > 1
+				}
+
+				save_scope_as = nda_lodge_loc
+				debug_log = "Find Grand Lodge"		
+			}
+
+			if = {
+				limit= { NOT = { EXISTS = scope:nda_lodge_loc } }
+				capital = { save_scope_as = nda_lodge_loc } # Always presume a lodge is in capital?	
+				debug_log = "Fallback Lodge in Capital"			
+			}
+
+			debug_log = "New Lodge Master"
+
+			# send notification
+			every_country = {
+				post_notification = nda_masonic_new_master
+			}
+		}
+		else_if = {
+			limit = {	
+				any_scope_character = { has_variable = nda_lodge_master count > 1 }
+				game_date > 1836.1.1 # don't trigger during game start
+			}
+			trigger_event = { id = nda_masonic.10 days = { 3 7 } } # A question of Leadership
+		}
+	}
+	else_if = {
+		limit = {						
+			has_masons = yes # should be any mason????
+		}
+		trigger_event = { id = nda_masonic.11 days = { 3 7 } } # A first lodge for the country!
+	}
+}
+
+# Country Scope - recruit a new non-master mason - useful for gradually expanding or providing new masters - don't over do it
+nda_effect_recruit_mason = {
+	if = { 
+		limit = { 
+			has_masonic_lodge = yes 
+			NOT = { has_variable = nda_masonry_outlawed }
+		} 
+		ordered_scope_character = {
+			limit = { 
+				NOT = { has_variable = nda_is_mason } 
+			}
+
+			order_by = nda_masonic_potential
+			max = 1
+
+			set_variable = nda_is_mason
+
+			add_modifier = { name = nda_mason_modifier }
+			debug_log = "Mason Recruited"
+		}
+	}
+}
+
+# Character Scope
+nda_effect_set_as_master = {
+
+	set_variable = { name = nda_lodge_master }
+
+	if= {
+		limit = { NOT = { has_modifier = nda_master_mason_modifier } }
+		add_modifier = {
+			name = nda_master_mason_modifier
+		}	
+	}
+
+	interest_group = { 
+		if = {
+			limit = { NOT = { has_modifier = nda_ig_mason_modifier } }
+
+			add_modifier = nda_ig_mason_modifier
+		}
+
+	}
+}
+
+nda_effect_ban_masons = {
+	custom_tooltip = {
+		text = nda_effect_ban_masons_desc
+	}
+	hidden_effect = {	
+		set_variable = nda_masonry_outlawed
+
+		every_scope_character = {
+			limit = {
+				OR = { 
+					has_variable = nda_is_mason  
+					has_variable = nda_lodge_master
+				}
+			}
+			if = {
+				limit = { has_modifier = nda_master_mason_modifier }
+				remove_modifier = nda_master_mason_modifier
+				add_modifier = nda_master_mason_pariah_modifier
+			}
+
+			if = {
+				limit = { has_modifier = nda_mason_modifier }
+				remove_modifier = nda_mason_modifier
+				add_modifier = nda_mason_pariah_modifier
+			}
+		}		
+	}
+}
+
+nda_effect_unban_masons = {
+	custom_tooltip = {
+		text = nda_effect_unban_masons_desc
+	}
+	hidden_effect = {	
+		remove_variable = nda_masonry_outlawed
+
+		every_scope_character = {
+			limit = {
+				OR = { 
+					has_variable = nda_is_mason  
+					has_variable = nda_lodge_master
+				}
+			}
+			if = {
+				limit = { has_modifier = nda_master_mason_pariah_modifier }
+				add_modifier = nda_master_mason_modifier
+				remove_modifier = nda_master_mason_pariah_modifier
+			}
+
+			if = {
+				limit = { has_modifier = nda_mason_pariah_modifier }
+				add_modifier = nda_mason_modifier
+				remove_modifier = nda_mason_pariah_modifier
+			}
+		}
+	} 
+}
+
+nda_effect_clean_masons = {
+	# do sanity check of modifiers and apply appropriate ones if not what is expected
+	every_country = {
+		if = {
+			limit = { has_masonic_lodge = yes }
+
+			every_scope_state = {
+				if = { 
+					limit = { 
+						has_variable = nda_lodge_level
+						NOT = { has_modifier = nda_lodge_modifier }  
+					}
+
+					add_modifier = nda_lodge_modifier
+				}
+			}
+		}
+		else = {
+			# no lodge so make sure no modifiers on states
+			every_scope_state = {
+				if = { 
+					limit = { has_modifier = nda_lodge_modifier } 
+					remove_modifier = nda_lodge_modifier
+				}
+			}
+		}	
+		
+		if = {
+			limit = {
+				has_variable = nda_masonry_outlawed
+			}
+			nda_effect_ban_masons = yes
+		}
+		else = {
+			nda_effect_unban_masons = yes # should correct any rogue negatives
+		}
+	}
+
+}

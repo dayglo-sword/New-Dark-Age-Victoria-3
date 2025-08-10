@@ -1,0 +1,884 @@
+﻿# common variables - do not carry over from other flag def files
+@coa_width = 768
+@coa_height = 512
+@canton_scale_cross_x = @[ ( 333 / coa_width ) + 0.001 ]
+@canton_scale_cross_y = @[ ( 205 / coa_height ) + 0.001 ]
+
+# Based on 'Canada Flag Pack' by Amtoj https://steamcommunity.com/sharedfiles/filedetails/?id=2888072185
+# Many Thanks for the permission,
+
+CAN = { # Canada
+	flag_definition = {
+		coa = CAN
+		coa_with_overlord_canton = CAN_subject
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = CAN_monarchy
+		allow_overlord_canton = yes
+		priority = 5
+		trigger = {
+			exists = c:GBR
+			exists = c:CAN
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:CAN
+					type = dominion
+					is_initiator = yes
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = CAN_quebec
+		subject_canton = CAN_quebec
+		priority = 10
+		trigger = { 
+			exists = scope:actor
+			scope:actor ?= { capital ?= { state_region = s:STATE_QUEBEC } }
+		}
+	}
+	flag_definition = {
+		coa = CAN_republic
+		subject_canton = CAN_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = CAN_theocracy
+		subject_canton = CAN_theocracy
+		priority = 10
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_absolute_monarchy
+		subject_canton = CAN_absolute_monarchy
+		priority = 20
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_dictatorship
+		subject_canton = CAN_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_oligarchy
+		subject_canton = CAN_oligarchy
+		priority = 25
+		trigger = {
+			coa_def_oligarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_republic_subject_GBR
+		allow_overlord_canton = yes
+		overlord_canton_offset = { 0.025 0.025 }
+		overlord_canton_scale = { 0.2 0.2 }
+		priority = 30
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_theocracy_subject_GBR
+		allow_overlord_canton = yes
+		priority = 30
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_absolute_monarchy_subject_GBR
+		priority = 35
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_dictatorship_subject_GBR
+		allow_overlord_canton = yes	
+		overlord_canton_scale = { 0.333 0.333 }
+		priority = 35
+		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_absolute_monarchy_dominion_GBR
+		priority = 40
+		trigger = { 
+			exists = c:GBR
+			exists = c:CAN
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:CAN
+					type = dominion
+					is_initiator = yes
+				}
+			}
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_oligarchy_subject_GBR
+		allow_overlord_canton = yes
+		priority = 40
+		trigger = { 
+			coa_def_oligarchy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_subject_USA
+		priority = 50
+		trigger = { 
+			coa_def_american_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_fascist
+		subject_canton = CAN_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = CAN_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAN_anarchist
+		priority = 1600
+		trigger = { 
+			coa_def_anarchy_flag_trigger = yes
+		}
+	}
+}
+
+GBR = { # Great Britain / United Kingdom
+	flag_definition = {
+		coa = GBR
+		subject_canton = GBR
+		priority = 1
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+	}
+	flag_definition = {
+		coa = GBR_uk
+		subject_canton = GBR_uk
+		priority = 2
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		trigger = { 
+			coa_def_controls_part_of_ireland = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_scotland
+		subject_canton = GBR_scotland
+		priority = 10
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		trigger = { 
+			coa_def_dominant_scotland_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_republic
+		priority = 15
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		# English and Scottish flags quartered
+		coa = GBR_dictatorship
+		subject_canton = ENG
+		priority = 16
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		# English, Scottish, Irish crosses quartered
+		coa = GBR_dictatorship_uk
+		subject_canton = ENG
+		priority = 17
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+			coa_def_controls_part_of_ireland = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_coa
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_coa_scotland
+		priority = 21
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_dominant_scotland_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_coa_france
+		priority = 22
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_controls_part_of_france = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_uk_coa
+		priority = 23
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_controls_part_of_ireland = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_uk_coa_france
+		priority = 24
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_controls_part_of_ireland = yes
+			coa_def_controls_part_of_france = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_uk_scotland_coa
+		priority = 24
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_controls_part_of_ireland = yes
+			coa_def_dominant_scotland_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_uk_scotland_coa_france
+		priority = 25
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_controls_part_of_ireland = yes
+			coa_def_dominant_scotland_trigger = yes
+			coa_def_controls_part_of_france = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_theocracy
+		subject_canton = GBR_theocracy
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_white_ensign
+		subject_canton = GBR
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		priority = 20
+		trigger = { 
+			coa_def_military_junta_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_uk_white_ensign
+		subject_canton = GBR_uk
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		priority = 21
+		trigger = { 
+			coa_def_military_junta_flag_trigger = yes
+			coa_def_controls_part_of_ireland = yes
+		}
+	}
+	flag_definition = {
+		coa = MAC
+		subject_canton = MAC
+		priority = 22
+		trigger = { 
+			exists = scope:actor
+			scope:actor ?= { capital ?=  { state_region = s:STATE_LANCASHIRE } }
+		}
+	}
+	flag_definition = {
+		coa = MAC_communist
+		priority = 23
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			scope:actor ?= { capital ?= { state_region = s:STATE_LANCASHIRE } }
+		}
+	}
+	flag_definition = {
+		coa = GBR_monarchy_imperial_federation
+		subject_canton = GBR_uk
+		priority = 50
+		trigger = {
+			exists = c:GBR
+			exists = c:AST
+			exists = c:CAN
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:AST
+					type = dominion
+					is_initiator = yes
+				}
+				has_diplomatic_pact = {
+					who = c:CAN
+					type = dominion
+					is_initiator = yes
+				}
+			}
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_controls_part_of_ireland = yes
+		}
+	}
+	flag_definition = {
+		coa = GBR_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+			scope:actor ?=  { NOT = { capital ?=  { state_region = s:STATE_LANCASHIRE } } }
+		}
+	}	
+	flag_definition = {
+		coa = GBR_fascist
+		subject_canton = GBR_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+}
+
+HBC = { # Hudson Bay Company
+	flag_definition = {
+		coa = HBC
+		coa_with_overlord_canton = HBC_subject
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = HBC_monarchy
+		coa_with_overlord_canton = HBC_monarchy
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		subject_canton = HBC_monarchy
+		priority = 20
+		trigger = { 
+			OR = {
+				coa_def_monarchy_flag_trigger = yes
+				coa_def_theocracy_flag_trigger = yes
+			}
+		}
+	}
+	flag_definition = {
+		coa = HBC_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HBC_subject	
+		allow_overlord_canton = yes	
+		overlord_canton_offset = { 0.01 0.015 }
+		overlord_canton_scale = { 0.48 0.47 }			
+		priority = 50
+		trigger = { 
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = HBC_multicultural
+		priority = 100
+		trigger = { 
+			coa_def_multicultural_trigger = yes
+		}
+	}	
+}
+
+LOU = { # Louisiana
+	flag_definition = {
+		coa = LOU
+		subject_canton = LOU
+		allow_overlord_canton = yes		
+		coa_with_overlord_canton = LOU_subject			
+		priority = 1
+	}
+	flag_definition = {
+		coa = LOU_monarchy
+		subject_canton = LOU_monarchy
+		priority = 10
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = LOU_monarchy
+		subject_canton = LOU_monarchy
+		priority = 10
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = LOU_subject_FRA			
+		priority = 50
+		trigger = { 
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+}
+
+# Full French Lou for exiles
+LOU_FRA = {
+	flag_definition = {
+		coa = LOU
+		subject_canton = LOU
+		allow_overlord_canton = yes		
+		coa_with_overlord_canton = LOU_subject			
+		priority = 1
+	}
+	# flag_definition = {
+	# 	coa = LOU_monarchy
+	# 	subject_canton = LOU_monarchy
+	# 	priority = 10
+	# 	trigger = { 
+	# 		coa_def_theocracy_flag_trigger = yes
+	# 	}
+	# }
+	# flag_definition = {
+	# 	coa = LOU_monarchy
+	# 	subject_canton = LOU_monarchy
+	# 	priority = 10
+	# 	trigger = { 
+	# 		coa_def_monarchy_flag_trigger = yes
+	# 	}
+	# }
+	flag_definition = {
+		coa = LOU_subject_FRA			
+		priority = 50
+		# trigger = { 
+		# 	coa_def_french_ensign_trigger = yes
+		# }
+	}
+}
+
+MTC = { # Metis
+	flag_definition = {
+		coa = MTC
+		coa_with_overlord_canton = MTC_subject
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = MTC_subject_FRA			
+		priority = 5
+		trigger = { 
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_saskatchewan_subject_FRA
+		priority = 10
+		trigger = {
+			scope:actor ?= { capital ?=  { state_region = s:STATE_SASKATCHEWAN } }
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_alberta_subject_FRA
+		priority = 15
+		trigger = {
+			scope:actor ?= { capital ?=  { state_region = s:STATE_ALBERTA } }
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_subject_GBR
+		allow_overlord_canton = yes
+		priority = 20
+		trigger = {
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_saskatchewan_subject_GBR
+		allow_overlord_canton = yes
+		priority = 25
+		trigger = {
+			scope:actor ?= { capital ?=  { state_region = s:STATE_SASKATCHEWAN } }
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_alberta_subject_GBR
+		allow_overlord_canton = yes		
+		priority = 30
+		trigger = {
+			scope:actor ?= { capital ?=  { state_region = s:STATE_ALBERTA } }
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_monarchy_saskatchewan_subject_GBR
+		priority = 35
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= { capital ?=  { state_region = s:STATE_SASKATCHEWAN } }
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_monarchy_alberta_subject_GBR
+		priority = 40
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= { capital ?=  { state_region = s:STATE_ALBERTA } }
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_absolute_monarchy_subject_GBR
+		priority = 45
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_absolute_monarchy_saskatchewan_subject_GBR
+		priority = 50
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			scope:actor ?= { capital ?=  { state_region = s:STATE_SASKATCHEWAN } }
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MTC_oligarchy_saskatchewan_subject_GBR
+		priority = 55
+		trigger = { 
+			coa_def_oligarchy_flag_trigger = yes
+			scope:actor ?= { capital ?=  { state_region = s:STATE_SASKATCHEWAN } }
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+}
+
+NBS = { # New Brunswick
+	flag_definition = {
+		coa = NBS_subject_FRA #NBS
+		coa_with_overlord_canton = NBS_subject
+		allow_overlord_canton = yes		
+	}
+	flag_definition = {
+		coa = NBS_subject_FRA	
+		priority = 50
+		trigger = { 
+			coa_def_french_ensign_trigger = yes
+		}
+	}	
+}
+
+NEW = { # Newfoundland
+	flag_definition = {
+		coa = NEW
+		coa_with_overlord_canton = NEW_subject
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = NEW_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = NEW_monarchy
+		priority = 15
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_independent_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = NEW_monarchy_labrador
+		priority = 20
+		trigger = {
+			scope:actor ?=  {
+				any_scope_state = { state_region = s:STATE_QUEBEC }
+			}
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_independent_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = NEW_coa
+		priority = 25
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = NEW_theocracy
+		subject_canton = NEW_theocracy
+		priority = 25
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = NEW_oligarchy
+		subject_canton = NEW_oligarchy
+		priority = 30
+		trigger = { 
+			coa_def_oligarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = NEW_subject_FRA		
+		priority = 50
+		trigger = { 
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = NEW_dictatorship_subject_GBR
+		priority = 50
+		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = NEW_subject_USA	
+		priority = 50
+		trigger = { 
+			coa_def_american_ensign_trigger = yes
+		}
+	}
+}
+
+NVS = { # Nova Scotia
+	flag_definition = {
+		coa = NVS
+		coa_with_overlord_canton = NVS_subject
+		allow_overlord_canton = yes		
+	}
+}
+
+ONT = { # Ontario
+	flag_definition = {
+		coa = ONT
+		coa_with_overlord_canton = ONT_subject
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = ONT_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			coa_def_independent_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ONT_secessionist
+		priority = 15
+		trigger = {
+			coa_def_secessionist_or_revolutionary_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ONT_theocracy_subject_GBR
+		allow_overlord_canton = yes
+		priority = 30
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ONT_subject_FRA		
+		priority = 50
+		trigger = { 
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+}
+
+ORG = { # Oregon
+	flag_definition = {
+		coa = ORG
+		subject_canton = ORG		
+		coa_with_overlord_canton = ORG_subject
+		allow_overlord_canton = yes
+		priority = 1		
+	}
+	flag_definition = {
+		coa = ORG_monarchy
+		priority = 5
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ORG_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ORG_subject_GBR
+		allow_overlord_canton = yes		
+		priority = 50
+		trigger = { 
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ORG_subject_FRA	
+		priority = 50
+		trigger = { 
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ORG_treaty_monarchy_subject_GBR
+		allow_overlord_canton = yes		
+		priority = 55
+		trigger = { 
+			scope:actor ?=  {
+				NOR = { 
+					any_scope_state = { state_region = s:STATE_OREGON }
+					any_scope_state = { state_region = s:STATE_WASHINGTON }
+					any_scope_state = { state_region = s:STATE_IDAHO } 
+				}
+			}
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ORG_treaty_absolute_monarchy_subject_GBR
+		priority = 60
+		trigger = {
+			scope:actor ?=  {
+				NOR = { 
+					any_scope_state = { state_region = s:STATE_OREGON }
+					any_scope_state = { state_region = s:STATE_WASHINGTON }
+					any_scope_state = { state_region = s:STATE_IDAHO } 
+				}
+			}
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+}
+
+QUE = { # Quebec
+	flag_definition = {
+		coa = QUE
+		coa_with_overlord_canton = QUE_subject
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = QUE_secessionist
+		priority = 15
+		trigger = {
+			coa_def_secessionist_or_revolutionary_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = QUE_theocracy
+		subject_canton = QUE_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = QUE_absolute_monarchy
+		subject_canton = QUE_absolute_monarchy
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = QUE_oligarchy
+		subject_canton = QUE_oligarchy
+		priority = 25
+		trigger = {
+			coa_def_oligarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = QUE_monarchy_subject_GBR
+		priority = 30
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = QUE_absolute_monarchy_subject_GBR
+		priority = 35
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = QUE_subject_FRA
+		priority = 50
+		trigger = {
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = QUE_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+UOM = { # Michigam
+	flag_definition = {
+		coa = UOM_state_of_michigan
+		priority = 5
+	}
+	flag_definition = {
+		coa = UOM_subject_FRA
+		priority = 50
+		trigger = {
+			coa_def_french_ensign_trigger = yes
+		}
+	}
+}

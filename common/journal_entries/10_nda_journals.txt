@@ -152,9 +152,11 @@ je_nda_cult_to_yigian = {
 			any_scope_state = { # has capital in americas
 				is_potentially_yigian = yes
 			}
-			is_subject_of = c:YIG # Allow Yigian colonies			
-		}			
-				
+			AND = {
+				exists = c:YIG
+				is_subject_of = c:YIG # Allow Yigian colonies					
+			}		
+		}							
 	}
 
 	possible = {
@@ -166,7 +168,10 @@ je_nda_cult_to_yigian = {
 			any_scope_state = { # has capital in americas
 				is_potentially_yigian = yes
 			}
-			is_subject_of = c:YIG # Allow Yigian colonies			
+			AND = {
+				exists = c:YIG
+				is_subject_of = c:YIG # Allow Yigian colonies					
+			}			
 		}
 	}
 

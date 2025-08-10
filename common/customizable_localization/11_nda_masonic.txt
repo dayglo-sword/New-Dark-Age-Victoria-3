@@ -1,0 +1,112 @@
+﻿
+full_lodge_name = {
+	type = state
+	random_valid = no
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
+				var:nda_lodge_level = 1				
+			}
+			state_region = s:STATE_LOWLANDS
+		}
+		localization_key = nda_scottish_grand_lodge
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
+				var:nda_lodge_level = 1				
+			}
+			AND = {
+				has_variable = nda_lodge_rite
+				var:nda_lodge_rite = 2				
+			}
+
+			state_region = s:STATE_FRANCHE_COMTE
+		}
+		localization_key = nda_grand_oriental_lodge
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
+				var:nda_lodge_level = 1				
+			}
+		}
+		localization_key = nda_unified_lodge
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
+				var:nda_lodge_level = 2			
+			}
+		}
+		localization_key = nda_grand_lodge
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
+				var:nda_lodge_level = 3				
+			}
+		}
+		localization_key = nda_provincial_lodge
+	}
+	text = { # default to just lodge
+		localization_key = nda_lodge
+	}
+}
+
+rite_name = {
+	type = state
+	random_valid = no
+	# Cultist Rites auto overwrite historic
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_rite
+				var:nda_lodge_rite = 1				
+			}
+			owner = { religion = rel:nda_rel_cultist }
+		}
+
+		localization_key = nda_rite_esoteric
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_rite
+				var:nda_lodge_rite = 1				
+			}
+		}
+
+		localization_key = nda_rite_unified
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_rite
+				var:nda_lodge_rite = 2				
+			}
+
+		}
+
+		localization_key = nda_rite_scottish # as used by the French!
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_rite
+				var:nda_lodge_rite = 3				
+			}
+		}
+
+		localization_key = nda_rite_york # as used by the Americans!
+	}
+	text = { # default to just unified
+
+		localization_key = nda_rite_unified
+	}
+}

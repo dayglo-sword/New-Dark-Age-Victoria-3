@@ -1,12 +1,29 @@
 Version v1.9.7
 
 Major Changes
+THe Masons and Lodges
+Migrations from GBR anf FRA if Cultist take over.
+Integrated parts of the 'Canadian Flag Pack', (thanks to Amtoj for allowing it)
 
+Minor Changes
+Make cultist USA name harder to get (Theocracy only)
+Allow a bigger Louisiana
+
+Bug Fixes
+Speliug mistakes
+
+------
+
+Version v1.9.6
+
+Major Changes
+Updated to Vic3 v1.9.6
 
 Minor Changes
 Add invalidating conditions to Cult Spread journal.
 Unique DNA for Marsh company executives
 Dynamic country names for Cultist USA and a handful of 'Company Countries'
+Increase rate of ELD breakup
 
 Bug Fixes
 Fix 'Oppose Cult Spread' Diplo Action

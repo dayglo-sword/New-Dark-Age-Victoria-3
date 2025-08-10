@@ -111,3 +111,15 @@ NDA_ARES = {
 	cultures = { nda_cul_cultist } # will be changed
 	capital = STATE_HOME_COUNTIES # not really needed
 }
+
+
+LOU_FRA = {
+	color = { 53 52 144 }
+
+	country_type = recognized
+
+	tier = kingdom
+
+	cultures = { french cajun afro_antillean }
+	capital = STATE_LOUISIANA
+}

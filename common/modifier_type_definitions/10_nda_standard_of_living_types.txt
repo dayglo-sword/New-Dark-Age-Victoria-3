@@ -72,3 +72,10 @@ state_nda_rel_theosophic_standard_of_living_add={
 		ai_value=0
 	}
 }
+
+# # 
+# country_nda_cul_cultist_cultural_acceptance_add = {
+# 	decimals = 0
+# 	color = good
+# 	percent = no
+# }

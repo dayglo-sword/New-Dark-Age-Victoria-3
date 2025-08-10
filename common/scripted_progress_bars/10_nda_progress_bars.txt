@@ -75,6 +75,10 @@
 
 		}				
 	
+		# boost if treaty with USA
+
+		# reduce if treaty with CSA
+		
 		subtract = {
 			desc = "nda_yankee_reconcile_gradual_decline_tt"
 			value = 0.1 

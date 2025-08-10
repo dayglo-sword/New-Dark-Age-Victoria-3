@@ -208,6 +208,7 @@
 			limit = { 
 				any_scope_diplomatic_pact = {
 					is_diplomatic_action_type = nda_oppose_cult_spread
+					NOT = { first_country = ROOT }
 				}
 			}
 			# work out amount to deduct
