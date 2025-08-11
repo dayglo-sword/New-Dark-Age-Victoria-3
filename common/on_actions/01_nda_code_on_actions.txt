@@ -664,9 +664,9 @@ nda_on_revolution_start_on_action = {
 					limit = { has_cult_culture = yes }
 					set_variable = nda_cultists_in_open # need to check if						
 				}		
-				else = { 
-					set_variable = nda_is_from_cult_revolt
-				}
+				# else = { 
+				# 	set_variable = nda_is_from_cult_revolt
+				# }
 			}
 
 		}
@@ -798,12 +798,26 @@ nda_diplo_play_war_start_on_action= { # add_war_exhaustion - does not persist to
 
 on_country_formed = {
 	on_actions = {
+		nda_new_dark_age_on_action
 		nda_eldrtich_realm_formed_on_action
 		nda_yigian_lands_formed_on_action
 		nda_dagonic_shores_formed_on_action 
 		nda_greater_new_england_on_action
 		nda_create_leng_on_action
 	}
+}
+
+nda_new_dark_age_on_action = {
+	effect = {				
+		if = {
+			limit = {
+				has_global_variable = nda_ritual_cthulhu_visits	# don't trash the place if just a visit
+			}
+
+			add_modifier = { name = nda_new_dark_age_country_modifier }
+		}
+	}
+
 }
 
 nda_eldrtich_realm_formed_on_action = {
@@ -814,7 +828,7 @@ nda_eldrtich_realm_formed_on_action = {
 				c:ELD ?= ROOT
 			}	
 			
-			set_global_variable = nda_eldritch_realm_founded
+			#set_global_variable = nda_eldritch_realm_founded
 
 			# send out notification		
 			every_country = {
@@ -853,7 +867,7 @@ nda_yigian_lands_formed_on_action = {
 				c:YIG ?= ROOT
 			}	
 			
-			set_global_variable =  nda_yigian_lands_founded
+			#set_global_variable =  nda_yigian_lands_founded
 
 			# send out notification		
 			every_country = {
@@ -895,7 +909,7 @@ nda_dagonic_shores_formed_on_action = {
 				c:DGN ?= ROOT
 			}	
 			
-			set_global_variable =  nda_dagonic_shores_founded
+			#set_global_variable =  nda_dagonic_shores_founded
 
 			# send out notification		
 			every_country = {

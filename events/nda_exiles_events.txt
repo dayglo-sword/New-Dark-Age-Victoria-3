@@ -1,60 +1,60 @@
 ﻿namespace = nda_exiles #  Events around the future of exiles from the cults 
 
-nda_exiles.10 = { # Excessive French in a state
-	type = country_event
-	placement = ROOT
-	title = nda_exiles.10.t
-	desc = nda_exiles.10.d
-	flavor =  nda_exiles.10.f
+# nda_exiles.10 = { # Excessive French in a state
+# 	type = country_event
+# 	placement = ROOT
+# 	title = nda_exiles.10.t
+# 	desc = nda_exiles.10.d
+# 	flavor =  nda_exiles.10.f
 
-	event_image = {
-		video = "unspecific_sick_in_hospital"
-	}
+# 	event_image = {
+# 		video = "unspecific_sick_in_hospital"
+# 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+# 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	duration = 3
+# 	duration = 3
 
-	cooldown = { days = 1740 }
+# 	cooldown = { days = 1740 }
 
-	trigger = {
-		EXISTS = c:FRA
-		c:FRA = { is_cultist_country = yes }
-		NOT = { ROOT = c:FRA }
-		is_cultist_country = no
-		any_scope_state = {
-			population_by_culture = {
-				target = cu:french
-				value = 0.5
-			}
-		}
-	}
+# 	trigger = {
+# 		EXISTS = c:FRA
+# 		c:FRA = { is_cultist_country = yes }
+# 		NOT = { ROOT = c:FRA }
+# 		is_cultist_country = no
+# 		any_scope_state = {
+# 			population_by_culture = {
+# 				target = cu:french
+# 				value = 0.5
+# 			}
+# 		}
+# 	}
 
-	immediate = {
+# 	immediate = {
 
-	}	
+# 	}	
 	
-	option = {
-		name = nda_exiles.10.a
-		default_option = yes
+# 	option = {
+# 		name = nda_exiles.10.a
+# 		default_option = yes
 
-		#Add french homeland
-		every_scope_state = {
-			limit =  { population_by_culture = { target = cu:french value = 0.5 } }
-			state_region = {
-				add_homeland = cu:french
-			} 
-		}
-	}
+# 		#Add french homeland
+# 		every_scope_state = {
+# 			limit =  { population_by_culture = { target = cu:french value = 0.5 } }
+# 			state_region = {
+# 				add_homeland = cu:french
+# 			} 
+# 		}
+# 	}
 
-	option = {
-		name = nda_exiles.10.a
-		default_option = yes
+# 	option = {
+# 		name = nda_exiles.10.a
+# 		default_option = yes
 
-		#Convert portion to other french culture with homeland - cajun or metis as antillian not appropriate
-	}
-	# options to treat / lockdown the state
-}
+# 		#Convert portion to other french culture with homeland - cajun or metis as antillian not appropriate
+# 	}
+# 	# options to treat / lockdown the state
+# }
 

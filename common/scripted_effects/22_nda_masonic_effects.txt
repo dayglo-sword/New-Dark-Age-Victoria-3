@@ -34,6 +34,8 @@
 				nda_effect_recruit_mason = yes # always two there is (at start)
 			}
 		}
+
+		# how to set up Lodge of Adoption - the initial stage for female masons
 	}
 
 	# Scotland? differs from London
@@ -101,6 +103,20 @@
 	}
 
 	#Lodges around the World
+	c:BRZ = { # Empire of Brazil is a Senior Scotch Rite
+		random_state ={
+			limit = { is_capital = yes }
+			set_variable = { name = nda_lodge_level value = 2 }	
+			set_variable = { name = nda_lodge_rite value = 2 }	
+
+			add_modifier = { name = nda_lodge_modifier }	
+		}
+
+		nda_effect_recruit_mason = yes
+		nda_effect_lodge_leader = yes
+		nda_effect_recruit_mason = yes # always two there is (at start)
+	}
+
 	s:STATE_NEW_BRUNSWICK = {
 		region_state:NVS={
 			set_variable = { name = nda_lodge_level value = 3 }	
@@ -171,6 +187,56 @@
 			}
 		}		
 	}
+
+	# Bengal - a Provincial Grand Lodge
+	s:STATE_WEST_BENGAL =  {
+		region_state:BIC ={
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 1 }	
+			
+			add_modifier = { name = nda_lodge_modifier }
+			
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}		
+	}
+	# Bombay
+	s:STATE_BOMBAY =  {
+		region_state:BIC ={
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 1 }	
+			
+			add_modifier = { name = nda_lodge_modifier }
+			
+			# initial masons - not needed, created above
+		}		
+	}
+	# Madras - do we need another in India?
+
+	# Sydney (Canberra) - 'Under the Grand Lodge of Ireland'
+	s:STATE_NEW_SOUTH_WALES = {
+		region_state:NSW ={
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 1 }	
+			
+			add_modifier = { name = nda_lodge_modifier }
+			
+			# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}		
+	}
+
+	c:RUS = { # Outlawed in Russia due to trying to overthrow government!
+		set_variable = nda_masonry_outlawed
+	}
 }
 
 # From Country scope - if grand lodge or player then ensure a leader. If conflict and two or more then trigger event to decide
@@ -223,11 +289,13 @@ nda_effect_lodge_leader = { # running half-yearly
 				save_scope_as = scope_master_mason
 			}
 
-			random_scope_state = {
+			ordered_scope_state = {
 				limit = {
 					has_variable = nda_lodge_level
-					var:nda_lodge_level > 1
 				}
+
+				order_by = nda_masonic_lodge_rank
+				max = 1
 
 				save_scope_as = nda_lodge_loc
 				debug_log = "Find Grand Lodge"		
@@ -243,13 +311,14 @@ nda_effect_lodge_leader = { # running half-yearly
 
 			# send notification
 			every_country = {
+				limit = { game_date >= 1837.6.1 } # Don't notify till after initial Mason event
 				post_notification = nda_masonic_new_master
 			}
 		}
 		else_if = {
 			limit = {	
 				any_scope_character = { has_variable = nda_lodge_master count > 1 }
-				game_date > 1836.1.1 # don't trigger during game start
+				game_date >= 1837.6.1  # Don't trigger till after initial Mason event
 			}
 			trigger_event = { id = nda_masonic.10 days = { 3 7 } } # A question of Leadership
 		}
@@ -257,6 +326,7 @@ nda_effect_lodge_leader = { # running half-yearly
 	else_if = {
 		limit = {						
 			has_masons = yes # should be any mason????
+			has_masonic_lodge = no # don't overwrite existing lodge!
 		}
 		trigger_event = { id = nda_masonic.11 days = { 3 7 } } # A first lodge for the country!
 	}

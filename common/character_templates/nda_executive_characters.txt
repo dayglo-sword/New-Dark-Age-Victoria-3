@@ -44,7 +44,7 @@ nda_marsh_obed_character_template = { # should have Obed Marsh for founder
 	dna = nda_dna_marsh
     birth_date = 1812.2.7
     traits = { 
-		nda_master
+		# nda_master - don't reveal as master till Innsmouth Cultists
 		ambitious
 		wrathful
 	}
@@ -84,7 +84,7 @@ nda_marsh_onesiphorus_character_template = { # Onesiphorus Marsh
 		company_trigger = {
 			is_company_type = company_type:company_nda_marsh_fishing
 		}
-	    earliest_usage_date = 1876.1.1
+	    earliest_usage_date = 1872.1.1
 		latest_usage_date = 1900.12.31
 		chance = 100
 	}
@@ -115,7 +115,7 @@ nda_marsh_barnabas_character_template = { # Barnabas Marsh at time of Innsmouth 
 		company_trigger = {
 			is_company_type = company_type:company_nda_marsh_fishing
 		}
-	    earliest_usage_date = 1901.1.1
+	    earliest_usage_date = 1900.1.1
 		chance = 100
 	}
 	on_created = {

@@ -24,7 +24,7 @@ nda_mason_pariah_modifier = {
 }
 
 nda_lodge_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_masonic_negative.dds # revert after test
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_masonic_positive.dds # revert after test
 }
 
 nda_masonic_law_opposition = {

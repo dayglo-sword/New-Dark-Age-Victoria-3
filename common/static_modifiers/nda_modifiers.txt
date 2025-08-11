@@ -197,3 +197,11 @@ nda_sea_creatures_modifier = {
 # 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 # 	country_nda_cul_cultist_cultural_acceptance_add = -10
 #}
+
+nda_new_dark_age_country_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_skull_negative.dds
+	country_weekly_innovation_mult = -0.5
+	country_society_tech_spread_mult = -0.8
+	country_production_tech_spread_mult = -0.8
+	country_military_tech_spread_mult = -0.8
+}

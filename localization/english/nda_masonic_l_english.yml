@@ -5,6 +5,7 @@ nda_unified_lodge: "The Unified Lodge of [ROOT.GetState.GetCountry.GetNameNoForm
 nda_scottish_grand_lodge: "The Scottish Grand Lodge"
 nda_grand_oriental_lodge:  "The Grand Oriental Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
 nda_grand_lodge: "The Grand Lodge of [ROOT.GetState.GetNameNoFormatting]"
+nda_union_lodge: "The Union Lodge of [ROOT.GetState.GetNameNoFormatting]"
 nda_provincial_lodge: "The Provincial Lodge of  [ROOT.GetState.GetNameNoFormatting]"
 
 nda_rite_unified: "Unified Rite"
@@ -24,11 +25,11 @@ notification_nda_masonic_new_lodge_desc: "A new Masonic Lodge has been founded :
 
 
 notification_nda_masonic_outlawed_masonry_tooltip: "#header $notification_nda_masonic_outlawed_masonry_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_outlawed_masonry_desc$"
-notification_nda_masonic_outlawed_masonry_name: "Freemasonry Outlawed in [SCOPE.GetRootScope.GetCountry.GetName]"
+notification_nda_masonic_outlawed_masonry_name: "Freemasonry Outlawed in [SCOPE.sC('nda_outlawed').GetName]"
 notification_nda_masonic_outlawed_masonry_desc: "Masonic practises have been made illegal and Lodges no longer meet openly."
 
 notification_nda_masonic_resume_masonry_tooltip: "#header $notification_nda_masonic_resume_masonry_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_resume_masonry_desc$"
-notification_nda_masonic_resume_masonry_name: "Freemasonry Resumes in [SCOPE.GetRootScope.GetCountry.GetName]"
+notification_nda_masonic_resume_masonry_name: "Freemasonry Resumes in [SCOPE.sC('nda_unbanned').GetName]"
 notification_nda_masonic_resume_masonry_desc: "Masonic practises and membership have been made legal and Lodges can now meet openly."
 
 nda_effect_ban_masons_desc: "Persecute existing Freemasons"
@@ -37,7 +38,7 @@ nda_effect_unban_masons_desc: "Reverse the persecution of Freemasons"
 # Modifiers
 nda_master_mason_modifier: "Grand Master Mason"
 nda_mason_modifier: "Masonic Lodge Member"
-nda_lodge_modifier: "Mason Lodge"
+nda_lodge_modifier: "Masonic Lodge"
 
 nda_masonic_law_opposition: "Masons Oppose This Law"
 
@@ -55,7 +56,7 @@ nda_masonic.11.b: "Too dangerous to contemplate"
 
 nda_masonic.20.t: "Banning Freemasonry"
 nda_masonic.20.d: "Laws are now in place that would allow us to stop the spread of the Masonic tradition in our country.\n\n They may oppose it but control of the country must remain exclusively in our hands."
-nda_masonic.20.f: "'The M.E. Grand Master, Sir W. R. Wright, stated to the Knights that the Grand Conclave had been summoned this day for the election of a new Grand Master in his stead;\n\nHe therefore, proposed, That His Royal Highness the Duke of Sussex be appointed Grand Master of the Grand Conclave during his life.'\n - The Freemasons' Quarterly Review, March 1836"
+nda_masonic.20.f: "'WILLIAM REX.'\n\nI willingly assent to the prayer of my faithful Commons, that I will be pleased to take such measures as shall seem advisable for the effectual discouragement of Orange Lodges, and generally, of all political societies excluding persons of a different religious persuasion, using signs and symbols, and acting by means of associated lodges.\n\n It is my firm intention to discourage all such societies, and I rely with confidence upon the fidelity of my loyal subjects to support me in my determination.'\n - House of Commons, 25th Feb 1836."
 nda_masonic.20.a: "The Ban is essential"
 nda_masonic.20.b: "Not a good idea"
 

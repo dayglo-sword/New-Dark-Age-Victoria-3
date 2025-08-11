@@ -123,7 +123,7 @@
 
 
  nda_base.40.t: "Where he go?"
- nda_base.40.d: "[SCOPE.sCharacter('nda_abe_scope').GetFullName], has disappeared while watching a technological demonstration by a young scientist by the name of #GREEN Nikoli Tesla#!.\n\nAlso gone is the unit of US soldiers acting as his honour guard.\n\nAccording to eye witnesses the infernal machine had exploded soon after the people had disappeared.  It looks like the possibility of return, or recovery of the bodies, is unlikely."
+ nda_base.40.d: "[SCOPE.sCharacter('nda_abe_scope').GetFullName], has disappeared while watching a technological demonstration by a young scientist by the name of #GREEN Nikoli Tesla#! who had claimed that they had come back in time a few decades.\n\nAlso gone is the unit of US soldiers acting as his honour guard.\n\nAccording to eye witnesses the infernal machine had exploded soon after the people had disappeared.\n\nIt looks like the possibility of return, or recovery of the bodies, is unlikely."
  nda_base.40.f: "'Disappeared? What #BOLD Mod#!ern #BOLD Con#!trivance could cause that?"
  nda_base.40.a: "Where is Lincoln?"
  nda_base.40.b: "When is Lincoln?"

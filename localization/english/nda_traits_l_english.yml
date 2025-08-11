@@ -41,6 +41,8 @@ occult: "Occult"
 esoteric: "Esoteric"
 
 # Modifiers
+nda_new_dark_age_country_modifier: "A New Dark Age"
+nda_new_dark_age_country_modifier_desc: "We are not meant to know all things, and we cannot claim to know all things!"
 nda_dark_skies_modifier: "Putrid Skies"
 nda_dark_skies_modifier_desc: "The Skies are darkened with billowing clouds."
 nda_dagonic_state_modifier: "The Bounty of Dagon"

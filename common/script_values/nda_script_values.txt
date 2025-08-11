@@ -201,7 +201,7 @@ nda_purge_infamy =
 	}
 }
 
-# ROOT scope is Character - use to find candidate masons
+# ROOT scope is Character - used to find candidate masons
 nda_masonic_potential =
 {
 	value = { 1 5 } # does this actually do random amount?
@@ -242,6 +242,13 @@ nda_masonic_potential =
 	}
 	if = {
 		limit = {
+			culture = {  has_discrimination_trait = european_heritage }
+			# need condition to open it up for all
+		}
+		add = 5	
+	}
+	if = {
+		limit = {
 			is_ruler = yes # No Active rulers (but can be prior - like British Royals)
 		}
 		add = -10
@@ -253,4 +260,19 @@ nda_masonic_potential =
 		}
 		add = -20	
 	}
+}
+
+# ROOT scope is State - used to find senior lodge
+nda_masonic_lodge_rank = {
+	value = 10 
+
+	subtract = var:nda_lodge_level
+	subtract = var:nda_lodge_level # do again to allow capital boost
+
+	if = {
+		limit = { 
+			is_capital = yes
+		}
+		add = 1
+	}	
 }

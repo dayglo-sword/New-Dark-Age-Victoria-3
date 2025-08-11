@@ -172,6 +172,7 @@ nda_masonic.20 = { # Masonic Baning
 	cooldown = { days = 1740 } 
 
 	trigger = {
+		game_date >= 1837.6.1 # Don't do till after initial Mason event
 		has_masonic_lodge = yes
 		OR = {
 			has_law = law_type:law_outlawed_dissent	
@@ -189,6 +190,12 @@ nda_masonic.20 = { # Masonic Baning
 		name = nda_masonic.20.a # Ban Masonry
 		default_option = yes	
 
+		ai_chance = { # will +ve effect conversion rate
+			base = 50	
+		}
+
+		save_scope_as = nda_outlawed
+
 		# every mason modfier in country gets flipped
 		nda_effect_ban_masons = yes
 		every_country = {
@@ -198,6 +205,11 @@ nda_masonic.20 = { # Masonic Baning
 
 	option = {
 		name = nda_masonic.20.b	 # Continue with Masonry
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 50	
+		}
+
 		nda_effect_unban_masons = yes
 	}
 }
@@ -210,6 +222,8 @@ nda_masonic.21 = { # Masonic Oppose Potential Banning Movement
 	flavor = nda_masonic.21.f
 	dlc = dlc_NDA
 
+	category = enactment
+	
 	duration = 3
 
 	event_image = {
@@ -223,6 +237,7 @@ nda_masonic.21 = { # Masonic Oppose Potential Banning Movement
 	cooldown = { days = 1740 } 
 
 	trigger = {
+		game_date >= 1837.6.1 # Don't do till after initial Mason event
 		has_masonic_lodge = yes
 		has_masonic_master = yes	
 		NOT = { has_variable = nda_masonry_outlawed }		
@@ -268,6 +283,10 @@ nda_masonic.21 = { # Masonic Oppose Potential Banning Movement
 		name = nda_masonic.21.a # Masonic Warning
 		default_option = yes
 		
+		ai_chance = { # will +ve effect conversion rate
+			base = 60	
+		}		
+		
 		add_enactment_modifier = {
 			name = nda_masonic_law_opposition
 		}
@@ -275,6 +294,10 @@ nda_masonic.21 = { # Masonic Oppose Potential Banning Movement
 
 	option = {
 		name = nda_masonic.21.b	 # Ignore Masonic Warning	
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 40	
+		}
 		add_enactment_setback = 1	
 	}
 }
@@ -301,6 +324,7 @@ nda_masonic.22 = { # Masonic Unbaning
 	cooldown = { days = 1740 } 
 
 	trigger = {
+		game_date >= 1837.6.1 # Don't do till after initial Mason event
 		has_masonic_lodge = yes
 		has_variable = nda_masonry_outlawed
 		OR = {
@@ -318,8 +342,14 @@ nda_masonic.22 = { # Masonic Unbaning
 		name = nda_masonic.22.a # Unban Masonry
 		default_option = yes	
 
+		ai_chance = { # will +ve effect conversion rate
+			base = 50	
+		}
+
 		# every mason modfier in country gets flipped
 		nda_effect_unban_masons = yes
+
+		save_scope_as = nda_unbanned
 
 		every_country = {
 			post_notification = nda_masonic_resume_masonry
@@ -328,6 +358,11 @@ nda_masonic.22 = { # Masonic Unbaning
 
 	option = {
 		name = nda_masonic.22.b	 # Continue with Masonry Ban
+
+		ai_chance = { # will +ve effect conversion rate
+			base = 50	
+		}
+
 		nda_effect_ban_masons = yes
 	}
 }

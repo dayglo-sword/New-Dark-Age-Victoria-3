@@ -478,15 +478,27 @@ nda_nen.1845 = { # Devil Worship in Innsmouth
 	type = country_event
 	placement = p:x30C040 
 	title = nda_nen.1845.t
-	desc = nda_nen.1845.d
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					any_company = {	is_company_type = company_type:company_nda_marsh_fishing }
+				}
+				desc = nda_nen.1845.d1
+			}
+			triggered_desc = {
+				desc =  nda_nen.1845.d
+			}
+
+		}
+	}
 	flavor =  nda_nen.1845.f
 	dlc = dlc_NDA
 
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
-		
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"		
 	}
 	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
 
@@ -510,12 +522,22 @@ nda_nen.1845 = { # Devil Worship in Innsmouth
 			months = 6
 			value = nda_trivial_conversion
 		}
+		
+		random_company = {
+			limit = { 
+				is_company_type = company_type:company_nda_marsh_fishing 
+			}
+			executive = {
+				save_scope_as = innsmouth_cult_leader	
+				
+				add_trait = nda_master
+			}
+		}
 	}	
 	
 	option = { #"This will not do"
 		name = nda_nen.1845.a
 		default_option = yes
-
 	}
 
 }

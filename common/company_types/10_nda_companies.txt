@@ -89,28 +89,21 @@ company_nda_marsh_fishing = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			country_has_primary_culture = cu:nda_cul_trueyankee
+			any_scope_state = {
+				state_region = s:STATE_NEW_HAMPSHIRE
+			}			
 		}
 	}
 
 	possible = { 
 		any_scope_state = {
-			#region = sr:region_new_england
-			state_region = s:STATE_NEW_HAMPSHIRE
-			OR = {
-				any_scope_building = {
+			any_scope_building = {
+				OR = {
 					is_building_type = building_fishing_wharf
-					level >= 2
+					is_building_type = building_whaling_station
 				}
-				any_scope_building = {
-					is_building_type = building_port
-					level >= 1
-				}		
-				# any_scope_building = {
-				# 	is_building_type = building_whaling_station
-				# 	level >= 1
-				# }			
+				level >= 5
 			}
-
 		}
 	}
 	
@@ -121,6 +114,18 @@ company_nda_marsh_fishing = {
 
 	ai_weight = {
 		value = 5 # Higher base value for mod companies!!
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_fishing_wharf
+					is_building_type = building_whaling_station
+				}
+				level >= 3
+			}
+		}
 	}
 }
 
@@ -147,18 +152,17 @@ company_nda_curwen_forestry = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			country_has_primary_culture = cu:nda_cul_trueyankee
+			any_scope_state = {
+				state_region = s:STATE_NEW_HAMPSHIRE
+			}
 		}
 	}
 	
 	possible = { 
 		any_scope_state = {
-			#region = sr:region_new_england
-			state_region = s:STATE_NEW_HAMPSHIRE
 			any_scope_building = {
-				OR = {
-					is_building_type = building_logging_camp
-				}
-				level >= 2
+				is_building_type = building_logging_camp
+				level >= 5
 			}
 		}
 	}
@@ -170,6 +174,15 @@ company_nda_curwen_forestry = {
 
 	ai_weight = {
 		value = 5 # Higher base value for mod companies!!
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_logging_camp
+				level >= 3
+			}
+		}
 	}
 }
 
@@ -204,20 +217,21 @@ company_nda_west_chemicals = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			country_has_primary_culture = cu:nda_cul_trueyankee
+			any_scope_state = {
+				state_region = s:STATE_NEW_HAMPSHIRE
+			}			
 		}
 	}
 
 	possible = { 
 		any_scope_state = {
-			#region = sr:region_new_england
-			state_region = s:STATE_NEW_HAMPSHIRE
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
 					is_building_type = building_chemical_plants
 					is_building_type = building_synthetics_plants
 				}
-				level >= 2
+				level >= 5
 			}
 		}
 	}
@@ -228,5 +242,18 @@ company_nda_west_chemicals = {
 
 	ai_weight = {
 		value = 5 # Higher base value for mod companies!!
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_chemical_plants
+					is_building_type = building_synthetics_plants
+				}
+				level >= 5
+			}
+		}
 	}
 }

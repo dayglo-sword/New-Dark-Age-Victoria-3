@@ -27,6 +27,7 @@ full_lodge_name = {
 		}
 		localization_key = nda_grand_oriental_lodge
 	}
+	# s:STATE_CEYLON = {
 	text = {
 		trigger = {
 			AND = {
@@ -44,6 +45,16 @@ full_lodge_name = {
 			}
 		}
 		localization_key = nda_grand_lodge
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
+				var:nda_lodge_level > 1				
+			}
+			state_region = s:STATE_CEYLON
+		}
+		localization_key = nda_union_lodge
 	}
 	text = {
 		trigger = {
