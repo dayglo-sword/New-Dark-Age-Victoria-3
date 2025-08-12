@@ -94,68 +94,62 @@ nda_eap.11 = { # The plague spreads - non visible watcher but fire off event if 
 			}			
 		}	
 		debug_log_scopes = yes
+
 		# if it hasn't spread by going neighbouring then see if it can jump elsewhere
 		if = {
 			limit = { NOT = { exists = scope:scope_spread_state } }
-			debug_log = "Red death spreads : no scope_spread_state"
-			debug_log_scopes = yes
-			random_state = { # don't limit to same country but use weights to keep it local or to countries in same market
-				limit = {
-					NOT = { state_region = { has_harvest_condition = nda_red_death } }	
-					# don't revisit state (could hit same state_Region?)
-					NOT = { has_variable = nda_poe_red_death_state }
-					is_coastal = yes # presume it came in by sea	
-					owner = { 
-						coa_def_native_american_trigger = no 
-						coa_def_african_trigger = no
-					} # reverse uno - don't hit native americans		
-					# OR = { 
-					# 	owner = { num_mutual_trade_route_levels_with_country:root > 0 }	
-					# 	market = scope:scope_spread_source.market		
-					# }
-				}
-				# will this work?
-				weight = {
-					base = 0
-					# straight 'add' does not work?
-					#add = 10		#  num_mutual_trade_route_levels_with_country:root		
-					modifier = {
-						# is in same country - spread via coastal routes
-						owner = scope:scope_spread_source
-						has_building = building_port
-						add = 500
-					}
-					# modifier = { # spreads over seas via trade
-					# 	owner = { num_mutual_trade_route_levels_with_country:root > 0 }
-					# 	has_building = building_port
-					# 	add = 20
-					# 	# not a usable value	- have to do case??
-					# 	#add = num_mutual_trade_route_levels_with_country:root
-					# }
-					# modifier = { # spreads over seas via trade
-					# 	owner = { num_mutual_trade_route_levels_with_country:root > 5 }
-					# 	has_building = building_port
-					# 	add = 100
-					# }
-					modifier = { # In same market
-						market = scope:scope_spread_source.market
-						add = 50
-					}
-					modifier = { # Is unincorporated - try and stop spread to minor
-						is_incorporated = no
-						add = -50
-					}
-					modifier = { # Don't punish smaller countries too much
-						owner = { country_rank <= rank_value:insignificant_power}
-						add = -50
-					}
-				}
-				# if previously hit reduce chance of spread - will not prevent secondary waves
-				
-				debug_log = "Red death spreads by jump : [THIS.GetState.GetNameNoFormatting] from [PREV.GetCountry.GetNameNoFormatting]"
-				trigger_event = { id = nda_eap.12 }	# fire main event						
-				save_scope_as = scope_spread_state
 
+			random = {
+				chance = 30
+
+				debug_log = "Red death spreads : no scope_spread_state"
+				#debug_log_scopes = yes
+
+				random_state = { # don't limit to same country but use weights to keep it local or to countries in same market
+					limit = {
+						NOT = { state_region = { has_harvest_condition = nda_red_death } }	
+						# don't revisit state (could hit same state_Region?)
+						NOT = { has_variable = nda_poe_red_death_state }
+						is_coastal = yes # presume it came in by sea	
+						owner = { 
+							coa_def_native_american_trigger = no 
+							coa_def_african_trigger = no
+						} # reverse uno - don't hit native americans		
+						# OR = { 
+						# 	owner = { num_mutual_trade_route_levels_with_country:root > 0 }	
+						# 	market = scope:scope_spread_source.market		
+						# }
+					}
+					# will this work?
+					weight = {
+						base = 0
+						# straight 'add' does not work?
+						#add = 10		#  num_mutual_trade_route_levels_with_country:root		
+						modifier = {
+							# is in same country - spread via coastal routes
+							owner = scope:scope_spread_source
+							has_building = building_port
+							add = 500
+						}
+						modifier = { # In same market
+							market = scope:scope_spread_source.market
+							add = 50
+						}
+						modifier = { # Is unincorporated - try and stop spread to minor
+							is_incorporated = no
+							add = -50
+						}
+						modifier = { # Don't punish smaller countries too much
+							owner = { country_rank <= rank_value:insignificant_power}
+							add = -50
+						}
+					}
+					# if previously hit reduce chance of spread - will not prevent secondary waves
+					
+					debug_log = "Red death spreads by jump : [THIS.GetState.GetNameNoFormatting] from [PREV.GetCountry.GetNameNoFormatting]"
+					trigger_event = { id = nda_eap.12 }	# fire main event						
+					save_scope_as = scope_spread_state					
+				}			
 			}			
 		}
 	}
@@ -411,6 +405,8 @@ nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
 			limit = { game_date >= 1848.4.1 }
 			set_local_variable = is_spiritualism
 		 }
+
+		 save_scope_as =  
 	}	
 	
 	option = { # Ignore for minor boost

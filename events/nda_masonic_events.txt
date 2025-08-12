@@ -179,6 +179,9 @@ nda_masonic.20 = { # Masonic Baning
 			has_law = law_type:law_censorship	
 		}
 		NOT = { has_variable = nda_masonry_outlawed }
+		NOT = { # Ruler not going to ban themselves
+			ruler = { has_variable = nda_is_mason } 
+		} 
 	}
 
 	immediate = {
@@ -191,7 +194,15 @@ nda_masonic.20 = { # Masonic Baning
 		default_option = yes	
 
 		ai_chance = { # will +ve effect conversion rate
-			base = 50	
+			base = 25	
+
+			modifier = {
+				trigger = {
+					has_law = law_type:law_outlawed_dissent			
+				}
+
+				add = 50
+			}
 		}
 
 		save_scope_as = nda_outlawed
@@ -207,7 +218,7 @@ nda_masonic.20 = { # Masonic Baning
 		name = nda_masonic.20.b	 # Continue with Masonry
 
 		ai_chance = { # will +ve effect conversion rate
-			base = 50	
+			base = 75	
 		}
 
 		nda_effect_unban_masons = yes

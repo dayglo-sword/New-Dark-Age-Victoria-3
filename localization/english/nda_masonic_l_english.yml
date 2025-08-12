@@ -6,7 +6,7 @@ nda_scottish_grand_lodge: "The Scottish Grand Lodge"
 nda_grand_oriental_lodge:  "The Grand Oriental Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
 nda_grand_lodge: "The Grand Lodge of [ROOT.GetState.GetNameNoFormatting]"
 nda_union_lodge: "The Union Lodge of [ROOT.GetState.GetNameNoFormatting]"
-nda_provincial_lodge: "The Provincial Lodge of  [ROOT.GetState.GetNameNoFormatting]"
+nda_provincial_lodge: "The Provincial Lodge of  [ROOT.GetState.GetCityHubName]"
 
 nda_rite_unified: "Unified Rite"
 nda_rite_scottish: "Scottish Rite"

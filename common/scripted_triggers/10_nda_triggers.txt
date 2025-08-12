@@ -77,6 +77,13 @@ has_negative_trait = {
 	}
 }
 
+is_mason = {
+	OR = {
+		has_variable = nda_is_mason
+		has_variable = nda_lodge_master
+	}
+}
+
 ### Geography triggers
 
 is_full_cult = {
@@ -226,10 +233,9 @@ has_masons = {
 	custom_tooltip = {
 		text = nda_eldritch_cultist_tt
 		any_scope_character = {
-			has_variable = nda_is_mason
+			is_mason = yes
 		}
 	}
-
 }
 
 has_masonic_master = {

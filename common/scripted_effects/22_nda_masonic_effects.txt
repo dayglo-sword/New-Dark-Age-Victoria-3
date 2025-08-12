@@ -246,6 +246,7 @@ nda_effect_lodge_leader = { # running half-yearly
 		limit = { 
 			has_masonic_lodge = yes 
 			NOT = { has_variable = nda_masonry_outlawed }
+			is_revolutionary = no # Not during revolution - likely to be pointless if revolution fails
 		} # Has Lodges, has Masons, is not outlawed
 
 		if = {
