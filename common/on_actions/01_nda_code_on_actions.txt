@@ -510,7 +510,7 @@ nda_half_yearly_on_action = {
 	}
 	effect = {
 		nda_effect_lodge_leader = yes
-
+		nda_effect_masonic_exiles = yes
 		random = {
 			chance = 20 # Approx one recruit every 5 years - too few? don't want to swarm game. - is this enough to cause spread abroad? or force on subjects?
 			nda_effect_recruit_mason = yes

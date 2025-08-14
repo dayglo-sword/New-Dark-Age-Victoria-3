@@ -1,16 +1,21 @@
-Version v1.9.7
+Version v1.9.8
 
 Major Changes
-THe Masons and Lodges
+THe Masons and Lodges - Initial handful of Lodges and Members.
+Events to Outlaw and Unban Freemasonry
 Migrations from GBR anf FRA if Cultist take over.
 Integrated parts of the 'Canadian Flag Pack', (thanks to Amtoj for allowing it)
 
 Minor Changes
 Make cultist USA name harder to get (Theocracy only)
 Allow a bigger Louisiana
+Medium in London allows Spiritualism spread in NEN
+Dynamic Rename Dagonic part of Miskaton to Y'ha-nthlei
+Adjust Country Hop to stop during early Cthulhu arrival
 
 Bug Fixes
 Speliug mistakes
+Log Spam during Eldritch Annex effect
 
 ------
 

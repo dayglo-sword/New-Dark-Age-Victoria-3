@@ -42,11 +42,12 @@ nda_marsh_obed_character_template = { # should have Obed Marsh for founder
     ideology = ideology_authoritarian
     interest_group = ig_industrialists
 	dna = nda_dna_marsh
-    birth_date = 1812.2.7
+    birth_date = 1807.2.7
     traits = { 
 		# nda_master - don't reveal as master till Innsmouth Cultists
 		ambitious
 		wrathful
+		basic_entrepreneur
 	}
 	#is_agitator = yes # add only if available
 	executive_usage = {

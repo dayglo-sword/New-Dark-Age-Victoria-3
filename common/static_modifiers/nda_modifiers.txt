@@ -45,6 +45,10 @@ nda_cult_decline_country_modifier = {
 	country_revolution_progress_mult = 0.75
 	country_secession_clock_time_add = 1
 	country_secession_progress_mult = 0.75
+	country_weekly_innovation_mult = -0.2
+	country_society_tech_spread_mult = -0.2
+	country_production_tech_spread_mult = -0.2
+	country_military_tech_spread_mult = -0.2
 }
 
 nda_reanimated_state_modifier = {
@@ -200,7 +204,7 @@ nda_sea_creatures_modifier = {
 
 nda_new_dark_age_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_skull_negative.dds
-	country_weekly_innovation_mult = -0.5
+	country_weekly_innovation_mult = -0.8
 	country_society_tech_spread_mult = -0.8
 	country_production_tech_spread_mult = -0.8
 	country_military_tech_spread_mult = -0.8

@@ -25,3 +25,6 @@ nda_LENG_YIAN_city: "Yian"
 nda_STYGIA_LUXUR_city: "Luxur"
 nda_STYGIA_KHEMI_city: "Khemi"
 nda_STYGIA_KHESHATTA_city: "Khesatta"
+
+# Dagonic
+nda_YHANTHLEI: "Y'ha-Nthlei"

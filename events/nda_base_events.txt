@@ -652,11 +652,11 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 
 		# Do emigration events if FRA or GBR
 		if = {
-			limit = { ROOT ?= c:FRA}
+			limit = { c:FRA ?= ROOT }
 			nda_effect_exile_from_france = yes
 		}
 		else_if = {
-			limit = { ROOT ?= c:GBR}
+			limit = { c:GBR ?= ROOT}
 			nda_effect_exile_from_britain = yes
 		}		
 	}	

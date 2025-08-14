@@ -200,11 +200,24 @@ nda_migo.5 = { #  New Home
 
 	immediate = {
 		set_variable = nda_migo_visited
-		set_variable = {
-			name = nda_migo_timer
-			days = 3000
-			value = yes
+
+		if = {
+			limit = { has_global_variable = nda_migo_long_visit }
+			set_variable = {
+				name = nda_migo_timer
+				days = 8000
+				value = yes
+			}
+			remove_global_variable = nda_migo_long_visit
 		}
+		else  = {
+			set_variable = {
+				name = nda_migo_timer
+				days = 3000
+				value = yes
+			}			
+		}
+
 		add_journal_entry = { type = je_nda_migo_status } # je to tell current status
 	}	
 	
@@ -432,7 +445,7 @@ nda_migo.1892 = { # 'Hasturian America' spooks Mi-Go
 }
 
 #1924 - The End Is Nigh - Cthulhu
-nda_migo.1924 = { #  The End Is Nigh
+nda_migo.1924 = { #  The End Is Nigh - need to also do for 1889?
 	type = country_event
 	placement = ROOT
 	title = nda_migo.1924.t
@@ -456,8 +469,14 @@ nda_migo.1924 = { #  The End Is Nigh
 		is_player = yes
 		has_global_variable = nda_migo_experiment
 		has_global_variable = nda_ritual_completed	
-		game_date >= 1924.3.23	
-		game_date < 1925.3.23 # the return date	
+		AND = {
+			game_date >= 1889.3.23	
+			game_date < 1890.3.23 # the return date				
+		}
+		AND = {
+			game_date >= 1924.3.23	
+			game_date < 1925.3.23 # the return date				
+		}
 		NOT = {
 			has_global_variable = nda_cthulhu_arrives	# run once
 		}
@@ -467,9 +486,46 @@ nda_migo.1924 = { #  The End Is Nigh
 
 	immediate = {
 		# Final Destination till end of game
-		set_global_variable = nda_migo_final_country
+		if = {
+			limit = { game_date >= 1924.1.1	}
+			set_global_variable = nda_migo_final_country
+		}
+		else = {
+			set_global_variable = nda_migo_long_visit
+		}
 
 		# If exists move back to NEN else highest ranked unvisited
+		if = {
+			limit = { EXISTS = c:NEN }
+			c:NEN = { save_scope_as = nda_migo_new_country }
+		}
+		else = {
+			# select a new country
+			ordered_country = {
+				limit = {
+					is_full_cult = no
+					NOT = { has_variable = nda_migo_visited }
+					country_rank >= rank_value:unrecognized_regional_power					
+				}
+
+				order_by = { subtract = global_country_ranking }
+				min = 1	
+				save_scope_as = nda_migo_new_country		
+			}
+		}
+
+		if = {
+			limit = { NOT = { exists = scope:nda_migo_new_country}}
+			random_country = {
+				limit = {
+					is_full_cult = no
+					# NOT = { has_variable = nda_migo_visited } # can revidt if final option
+					country_rank >= rank_value:unrecognized_regional_power					
+				}
+
+				save_scope_as = nda_migo_new_country		
+			}
+		}
 	}	
 	
 	option = {

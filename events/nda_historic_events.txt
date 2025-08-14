@@ -1,4 +1,4 @@
-﻿namespace = nda_historic # Series of Historic 'Colour' events around spiritulism and the Occult - show to source country and to NEN as colour
+﻿namespace = nda_historic # Series of Historic 'Colour' events around Spiritualism and the Occult - show to source country and to NEN as colour
 # use cooldown to stop refires to reduce variable bloat
 
 nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
@@ -338,10 +338,12 @@ nda_historic.1852 = { # An American Medium in London
 
 		name = nda_historic.1852.b
 		trigger = {
-			p:x7543C8 = {
-				state = {
-					owner = ROOT
-				}
+			OR = {
+				p:x7543C8 = { state = { owner = ROOT } }
+				AND = {
+					exists = c:NEN
+					c:NEN = ROOT
+				}			
 			}
         }
 

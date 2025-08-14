@@ -169,20 +169,39 @@ nda_effect_eldritch_annex = {
 						}						
 					}	
 				}
+
+				has_variable = nda_cultists_in_open
+				country_has_primary_culture = cu:nda_cul_cultist # needed to stop strange results after revolutions remove culture		
+
 				NOT = { # Hastur does not surrender to a giant cat with squid on its head
 					has_variable = nda_king_in_yellow_rules				
 				}
+				
 				NOT = { 
 					OR = {
 						is_subject_of = c:YIG
-						is_subject_of = c:DGN
-						is_subject_of = c:STY
-						is_subject_of = c:IAM		
-						is_subject_of = c:LEN						
+						AND = {
+							EXISTS = c:YIG
+							is_subject_of = c:YIG							
+						}
+						AND = {
+							EXISTS =c:DGN
+							is_subject_of = c:DGN							
+						}
+						AND = {
+							EXISTS =c:STY
+							is_subject_of = c:STY							
+						}
+						AND = {
+							EXISTS =c:IAM
+							is_subject_of = c:IAM							
+						}
+						AND = {
+							EXISTS =c:LEN
+							is_subject_of = c:LEN							
+						}				
 					}	
 				}
-				has_variable = nda_cultists_in_open
-				country_has_primary_culture = cu:nda_cul_cultist # needed to stop strange results after revolutions remove culture	
 			}
 		} 
 		debug_log = "nda_effect_eldritch_annex find country"	
@@ -206,10 +225,26 @@ nda_effect_eldritch_annex = {
 				NOT = { 
 					OR = {
 						is_subject_of = c:YIG
-						is_subject_of = c:DGN
-						is_subject_of = c:STY
-						is_subject_of = c:IAM		
-						is_subject_of = c:LEN						
+						AND = {
+							EXISTS = c:YIG
+							is_subject_of = c:YIG							
+						}
+						AND = {
+							EXISTS =c:DGN
+							is_subject_of = c:DGN							
+						}
+						AND = {
+							EXISTS =c:STY
+							is_subject_of = c:STY							
+						}
+						AND = {
+							EXISTS =c:IAM
+							is_subject_of = c:IAM							
+						}
+						AND = {
+							EXISTS =c:LEN
+							is_subject_of = c:LEN							
+						}				
 					}	
 				}
 				has_variable = nda_cultists_in_open		

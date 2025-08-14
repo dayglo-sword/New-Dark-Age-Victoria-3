@@ -400,7 +400,7 @@ nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
 	immediate = {
 		set_variable = nda_inqusition_aftermath
 
-		# Set options based on if Spiritulism active
+		# Set options based on if Spiritualism active
 		if = { 
 			limit = { game_date >= 1848.4.1 }
 			set_local_variable = is_spiritualism

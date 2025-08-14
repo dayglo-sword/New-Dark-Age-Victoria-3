@@ -247,6 +247,7 @@ nda_effect_lodge_leader = { # running half-yearly
 			has_masonic_lodge = yes 
 			NOT = { has_variable = nda_masonry_outlawed }
 			is_revolutionary = no # Not during revolution - likely to be pointless if revolution fails
+			is_secessionist = no # ditto
 		} # Has Lodges, has Masons, is not outlawed
 
 		if = {
@@ -368,13 +369,19 @@ nda_effect_set_as_master = {
 		}	
 	}
 
+	# clean up pariah status if present
+	if = {
+		limit = { has_modifier = nda_mason_pariah_modifier }
+		add_modifier = nda_mason_modifier
+		remove_modifier = nda_mason_pariah_modifier
+	}
+
 	interest_group = { 
 		if = {
 			limit = { NOT = { has_modifier = nda_ig_mason_modifier } }
 
 			add_modifier = nda_ig_mason_modifier
 		}
-
 	}
 }
 
@@ -434,6 +441,22 @@ nda_effect_unban_masons = {
 			}
 		}
 	} 
+}
+
+nda_effect_masonic_exiles = {
+	every_character_in_exile_pool = {
+		if = {
+			limit = { has_modifier = nda_master_mason_pariah_modifier }
+			add_modifier = nda_master_mason_modifier
+			remove_modifier = nda_master_mason_pariah_modifier
+		}
+
+		if = {
+			limit = { has_modifier = nda_mason_pariah_modifier }
+			add_modifier = nda_mason_modifier
+			remove_modifier = nda_mason_pariah_modifier
+		}
+	}
 }
 
 nda_effect_clean_masons = {

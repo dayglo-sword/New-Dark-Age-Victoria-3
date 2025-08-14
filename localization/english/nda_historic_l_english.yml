@@ -24,7 +24,7 @@ nda_historic.1849.f: "His final words were, 'Lord, help my poor soul.'"
 nda_historic.1849.a: "Nevermore!"
 nda_historic.1849.b: "Some form of disease?"
 
-nda_historic.1852.t: "A New English Medium In London"
+nda_historic.1852.t: "A Novanglican Medium In London"
 nda_historic.1852.d: "A '[Concept('concept_spiritualism','$concept_spiritualism_adj$')]' medium by the name of #GREEN Mrs Maria Hayden#!, has travelled over to London from America and is performing séances.\n\nDespite criticism from both the church and press her audiences continue to grow!"
 nda_historic.1852.f: "... All was still, hushed as the grave — we looked at each other but spoke not, for words were inadequate for the occasion, as they had noi power to express the throbbing tumult of the heart — had we crossed the stormy Atlantic only to reap disappointment for our reward?\n\nImpossible! they will not desert us now. But hark! a slight tremor is felt in the table; a few faint ticks or raps are heard. Our hearts beat more freely, a mountain haa fallen from our shoulders.\n\n'Oh, thou of little faith, wherefore didst thou doubt?' But louder and firmer came the gentle patterings until the room was musical with the cheering sounds. A moment’s pause succeeds — one long breath of relief is drawn and then comes the call for the alphabet, followed by a well known and to us much loved signal...\n -  Dr. William R. Hayden'"
 nda_historic.1852.a: "Just a circus act."
@@ -43,7 +43,7 @@ nda_historic.1857.f: "'Modern spiritualism, so called, discloses all these error
 nda_historic.1857.a: "An Interesting Read?"
 nda_historic.1857.b: "Distribute across the nation!"
 
-# april 1857 - Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritulism
+# april 1857 - Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritualism
 nda_historic.1858.t: "Le Livre des Esprits"
 nda_historic.1858.d: "The French author #GREEN Allen Kardec#! has relised a book called #BLUE 'Le Livre des Esprits'#! - (The Spirits' Book) where they are aspousing what seems to be a more Christian version of [concept_spiritualism].\n\nIt appears to be an attempt to frame the Spiritualist belief, along with other beliefs such as reincarnation, into a Christian framework."
 nda_historic.1858.f: "'Strictly speaking, spiritualism is the opposite of materialism and everyone who believes there is something within them that is more than matter are spiritualists; however, it does not necessarily follow that they must therefore believe in the existence of spirits or in communications with the invisible world. Therefore, instead of the words spiritual and spiritualism for designating this latter belief, we have coined and employed the words Spiritist and Spiritism' - Allen Kardec"

@@ -37,7 +37,7 @@ nda_random.1 = { # Random Spread of Spiritualism to other major country - do aft
 			}
 		}
 	    
-	   # not already has spiritulism present
+	   # not already has Spiritualism present
 		religion_percent_country = {
 			target = rel:nda_rel_spiritualism
 			value < 0.01
@@ -141,7 +141,7 @@ nda_random.2 = { # Random Spread of Theosophy to other major country - do after 
 			}
 		}
 	    
-	   # not already has spiritulism present
+	   # not already has Spiritualism present
 		religion_percent_country = {
 			target = rel:nda_rel_theosophic
 			value < 0.01

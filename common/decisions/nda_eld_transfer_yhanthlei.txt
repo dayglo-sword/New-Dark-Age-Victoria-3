@@ -57,6 +57,8 @@
 				create_pop = { size = 40 culture = nda_cul_dagonic religion = nda_rel_cultist pop_type = clergymen }
 			}
 		}
+
+		nda_effect_map_name_dagonic_yhanthlei = yes
 	}
 
 	ai_chance = {

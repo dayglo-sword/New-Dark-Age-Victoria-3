@@ -144,11 +144,11 @@
 # Notifications
  notification_nda_ritual_cthulhu_returns_tooltip: "#header $notification_nda_ritual_cthulhu_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_returns_desc$"
  notification_nda_ritual_cthulhu_returns_name: "Cthulhu Has Returned"
- notification_nda_ritual_cthulhu_returns_desc: "The stars are right again... After vigintillions of years #BOLD Great Cthulhu#! is loose again."
+ notification_nda_ritual_cthulhu_returns_desc: "The stars are right again... After vigintillions of years #RED Great Cthulhu#! is loose upon the World again.\n\nThey have risen from the nightmare corpse-city of R'lyeh!\n\nCultists Rejoice!"
 
  notification_nda_ritual_cthulhu_leaves_tooltip: "#header $notification_nda_ritual_cthulhu_leaves_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_cthulhu_leaves_desc$"
  notification_nda_ritual_cthulhu_leaves_name: "Cthulhu Has Departed"
- notification_nda_ritual_cthulhu_leaves_desc: "To everyones suprise the God has not rampaged across the world but instead has flown into the realm beyond the Earths atmosphere."
+ notification_nda_ritual_cthulhu_leaves_desc: "The God-like entity, that sat upon it's monolith-crowned citadel for so long, has not rampaged across the world.\n\nInstead they have flown into the realm beyond the Earth's atmosphere, heading back to the dark elder stars."
 
  notification_nda_ritual_country_surrenders_tooltip: "#header $notification_nda_ritual_country_surrenders_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_country_surrenders_desc$"
  notification_nda_ritual_country_surrenders_name: "[SCOPE.sC('nda_eldritch_annex').GetName ] Surrenders to the Cultists."

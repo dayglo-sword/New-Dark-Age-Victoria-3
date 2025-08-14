@@ -484,7 +484,7 @@ nda_historic_regional.1890 = { # december - first advert for ouija boards "The O
 
 	option = { #"Spiritualists will love it"
 		name = nda_historic_regional.1890.b
-		# Boost to Spiritulism - should not do in cult countries?
+		# Boost to Spiritualism - should not do in cult countries?
 		every_scope_state = {
 			limit = {
 				NOT = { has_variable = nda_rel_boost_spiritualism }

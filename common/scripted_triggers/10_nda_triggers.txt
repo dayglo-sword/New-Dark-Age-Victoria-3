@@ -78,10 +78,14 @@ has_negative_trait = {
 }
 
 is_mason = {
-	OR = {
-		has_variable = nda_is_mason
-		has_variable = nda_lodge_master
+	custom_tooltip = {
+		text = nda_is_mason
+		OR = {
+			has_variable = nda_is_mason
+			has_variable = nda_lodge_master
+		}	
 	}
+
 }
 
 ### Geography triggers

@@ -2,6 +2,7 @@ Timeline of events in mod
 
 1837.4		nda_masonic.1837 	Masonic Meeting - Scottish Rite
 1838        nda_historic.1838   2nd Great Awakening
+1838.3		nda_masonic.1838 	Masonry in New England
 1839        nda_base.2          Nameless Cults published
 1840        nda_base.3          Imprint of Nameless Cults
 1840        nda_base.4          The Death of Junzt
@@ -20,8 +21,8 @@ Timeline of events in mod
 
 1852.1      nda_historic.1852   An American Medium in London
 1854.3		nda_historic.1854	Eliphas Levi - Dogme et Rituel de la Haute Magie
-1857.4		nda_historic.1857	Spiritulism - The Banner of Light
-1857.8		nda_historic.1858	Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritulism
+1857.4		nda_historic.1857	Spiritualism - The Banner of Light
+1857.8		nda_historic.1858	Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritualism
 1858.7      nda_astro.1858      Great Comet 1
 1860.3		nda_authors.20		The White Worm
 1861.10     nda_astro.1861      Conjunction 2

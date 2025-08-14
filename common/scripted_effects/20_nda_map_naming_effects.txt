@@ -94,3 +94,14 @@ nda_effect_map_name_stygia = { # Rename to Hyborian equivalents
 		}
 	}
 }
+
+# If Treaty Port for DGN in Miskaton
+nda_effect_map_name_dagonic_yhanthlei = { # Yian - oriental city from Robert Chambers
+	c:DGN ?= {
+		random_scope_state = {
+			limit = { state_region = s:STATE_NEW_HAMPSHIRE }
+
+			set_state_name = nda_YHANTHLEI
+		}
+	}
+}

@@ -39,8 +39,12 @@ nda_effect_unban_masons_desc: "Reverse the persecution of Freemasons"
 nda_master_mason_modifier: "Grand Master Mason"
 nda_mason_modifier: "Masonic Lodge Member"
 nda_lodge_modifier: "Masonic Lodge"
-
+nda_mason_pariah_modifier: "Masonic Pariah"
+nda_master_mason_pariah_modifier: "Pariah Master Mason"
 nda_masonic_law_opposition: "Masons Oppose This Law"
+
+# tooltips
+nda_is_mason: "Is a Freemason"
 
 nda_masonic.10.t: "A Question of Leadership"
 nda_masonic.10.d: "It appears that there is some controversy at#BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] #!. There are two candidates for the role of Grand Master, each appears to be equally adept in The Craft."
