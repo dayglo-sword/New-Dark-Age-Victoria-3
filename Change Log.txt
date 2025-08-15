@@ -15,7 +15,7 @@ Adjust Country Hop to stop during early Cthulhu arrival
 
 Bug Fixes
 Speliug mistakes
-Log Spam during Eldritch Annex effect
+Remove Log Spam during Eldritch Annex effect
 
 ------
 
