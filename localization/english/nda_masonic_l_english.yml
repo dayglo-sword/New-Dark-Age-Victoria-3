@@ -11,8 +11,21 @@ nda_provincial_lodge: "The Provincial Lodge of  [ROOT.GetState.GetCityHubName]"
 nda_rite_unified: "Unified Rite"
 nda_rite_scottish: "Scottish Rite"
 nda_rite_york: "York Rite"
-
 nda_rite_esoteric: "Twilight Rite"
+nda_rite_templars: "Knights Templar"
+
+# Titles
+nda_masonic_title_basic: "Mason"
+nda_masonic_title_unified_master: "Master Mason"
+nda_masonic_title_unified: "Mason"
+nda_masonic_title_scottish_master: "Sovereign Grand Commander"
+nda_masonic_title_scottish_past_master: "Past Master"
+nda_masonic_title_scottish: "Brother"
+nda_masonic_title_york_master: "Grand Master"
+nda_masonic_title_york_past_master: "Grand Steward"
+nda_masonic_title_york: "Mason"
+
+
 
 # Masonic Notifications
 notification_nda_masonic_new_master_tooltip: "#header $notification_nda_masonic_new_master_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_new_master_desc$"
@@ -46,6 +59,21 @@ nda_masonic_law_opposition: "Masons Oppose This Law"
 # tooltips
 nda_is_mason: "Is a Freemason"
 
+# scripted lists
+nda_mason_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],nda_mason_list_tt $nda_mason_list_title_tt$ #!"
+nda_mason_list_tt: "[GetScriptedGui('nda_country_mason_list_sgui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+nda_mason_list_title_tt: "#BOLD Prominent Local Freemasons #!"
+nda_mason_list_item_tt: "[SCOPE.sCharacter('nda_mason').GetPrimaryRoleTitle] [SCOPE.sCharacter('nda_mason').GetFullName]"
+nda_mason_list_empty_tt: "No Freemasons in the Country #!"
+
+nda_mason_lodges_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],nda_mason_lodges_list_tt $nda_mason_lodge_list_title_tt$ #!"
+nda_mason_lodges_list_tt: "[GetScriptedGui('nda_global_lodge_list_sgui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+nda_mason_lodge_list_title_tt: "Major International Lodges"
+nda_mason_lodge_list_tt: "[SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] ( [SCOPE.sState('nda_lodge_loc').GetCustom('lodge_rite_name')] )"
+nda_mason_lodge_list_empty_tt: "No Major Lodges in the World"
+
+# events
 nda_masonic.10.t: "A Question of Leadership"
 nda_masonic.10.d: "It appears that there is some controversy at#BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] #!. There are two candidates for the role of Grand Master, each appears to be equally adept in The Craft."
 nda_masonic.10.f: "'The M.E. Grand Master, Sir W. R. Wright, stated to the Knights that the Grand Conclave had been summoned this day for the election of a new #GREEN Grand Master#! in his stead;\n\nHe therefore, proposed, That His Royal Highness the Duke of Sussex be appointed Grand Master of the Grand Conclave during his life.'\n - The Freemasons' Quarterly Review, March 1836"

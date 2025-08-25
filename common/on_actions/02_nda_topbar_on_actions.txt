@@ -1,0 +1,160 @@
+﻿# Adding base game elements if they are missing
+on_monthly_pulse = {
+    on_actions = {
+        nda_custom_topbar_save_game_compatibility
+        nda_custom_topbar_data_refresh
+    }
+}
+
+# Adding base game elements if they are missing
+nda_custom_topbar_save_game_compatibility = {
+    effect = {
+        if = {
+            limit = {
+                NOT = {
+                    any_in_global_list = {
+                        variable = com_topbar_items
+                        var:com_name ?= flag:nda_topbar_element_cult_countries
+                    }
+                }
+            }
+
+            random_country = { 
+                nda_effect_generate_global_cult_count = yes                          
+            }  
+
+            
+            add_com_topbar_element = {
+                element_name = nda_topbar_element_cult_countries
+            }
+            every_country = {
+                add_to_variable_list = {
+                    name = com_topbar_second_line
+                    target = scope:nda_topbar_element_cult_countries
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = {
+                    any_in_global_list = {
+                        variable = com_topbar_items
+                        var:com_name ?= flag:nda_topbar_element_cult_spread_countries
+                    }
+                }
+            }
+
+            random_country = {
+                nda_effect_generate_global_cult_spread_count = yes               
+            }
+            
+            add_com_topbar_element = {
+                element_name = nda_topbar_element_cult_spread_countries
+            }
+            every_country = {
+                add_to_variable_list = {
+                    name = com_topbar_second_line
+                    target = scope:nda_topbar_element_cult_spread_countries
+                }
+            }
+
+        }
+
+        if = {
+            limit = {
+                NOT = {
+                    any_in_global_list = {
+                        variable = com_topbar_items
+                        var:com_name ?= flag:nda_topbar_element_masonic_lodges
+                    }
+                }
+            }
+
+            random_country = {
+                nda_effect_generate_global_lodge_count =  yes             
+            }                     
+            
+            add_com_topbar_element = {
+                element_name = nda_topbar_element_masonic_lodges
+            }
+            every_country = {
+                add_to_variable_list = {
+                    name = com_topbar_second_line
+                    target = scope:nda_topbar_element_masonic_lodges
+                }
+            }
+
+        }
+    }
+}
+
+nda_custom_topbar_data_refresh = {
+    effect = {       
+        random_country = { 
+            # update topbar counts
+            nda_effect_generate_global_cult_count = yes # only needs to be done on becoming cult coutry
+            nda_effect_generate_global_cult_list = yes
+            
+            nda_effect_generate_global_cult_spread_count = yes # only needs to be done on je launch?
+            nda_effect_generate_global_cult_spread_list = yes	
+
+            nda_effect_generate_global_lodge_count =  yes # only needs to be done on lodge add or banning / unbanning?
+            nda_effect_generate_global_lodge_list = yes
+
+            nda_effect_generate_mason_list = yes            
+        }
+    }
+}
+
+on_game_started_after_lobby = {
+	on_actions = { nda_custom_topbar_activate }
+}
+
+nda_custom_topbar_activate = {
+	effect = {
+
+        random_country = {
+            nda_effect_generate_global_cult_count = yes           
+        }
+
+
+		add_com_topbar_element = {
+			element_name = nda_topbar_element_cult_countries
+		}
+		every_country = {
+			add_to_variable_list = {
+				name = com_topbar_second_line
+				target = scope:nda_topbar_element_cult_countries
+			}
+		}
+
+        random_country = { 
+           	nda_effect_generate_global_cult_spread_count = yes         
+        }
+	
+        add_com_topbar_element = {
+			element_name = nda_topbar_element_cult_spread_countries
+		}
+		every_country = {
+			add_to_variable_list = {
+				name = com_topbar_second_line
+				target = scope:nda_topbar_element_cult_spread_countries
+			}
+		}
+
+        random_country = { 
+           	nda_effect_generate_global_lodge_count = yes         
+        }
+
+        add_com_topbar_element = {
+			element_name = nda_topbar_element_masonic_lodges
+		}
+		every_country = {
+			add_to_variable_list = {
+				name = com_topbar_second_line
+				target = scope:nda_topbar_element_masonic_lodges
+			}
+		}
+	}
+}

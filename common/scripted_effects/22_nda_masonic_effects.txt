@@ -350,7 +350,7 @@ nda_effect_recruit_mason = {
 			max = 1
 
 			set_variable = nda_is_mason
-
+			set_variable = { name = nda_masonic_rite value= {1 3} }
 			add_modifier = { name = nda_mason_modifier }
 			debug_log = "Mason Recruited"
 		}
@@ -497,4 +497,76 @@ nda_effect_clean_masons = {
 		}
 	}
 
+}
+
+# Generate Lists for scripted_sguis
+nda_effect_generate_global_lodge_list = {
+
+	clear_global_variable_list = nda_global_lodge_list
+
+	ordered_state = {
+		limit = {
+			has_variable = nda_lodge_level
+			owner = { NOT = { has_variable = nda_masonry_outlawed }}
+		}
+
+		order_by = { 
+			subtract = owner.global_country_ranking 
+			
+			if = {
+				limit = { is_capital = yes }
+				add = 10
+			}
+
+			if = {
+				limit = {  var:nda_lodge_level = 1 }
+				add = 20
+			}
+			else_if = {
+				limit = {  var:nda_lodge_level = 2 }
+				add = 10
+			}
+
+		}
+		#min = 1	
+		max = 20			
+        
+		check_range_bounds = no
+
+		add_to_global_variable_list = {
+			name = nda_global_lodge_list
+			target = THIS
+		}
+	}
+}
+
+nda_effect_generate_global_lodge_count = {
+	set_global_variable = {
+        name = nda_topbar_cult_global_lodge_count
+        value = {
+            value = 0
+			every_state = {
+				limit = {
+					has_variable = nda_lodge_level
+					owner = { NOT = { has_variable = nda_masonry_outlawed }}
+				}
+				add = 1
+			}
+        }
+    }
+}
+
+nda_effect_generate_mason_list = {
+	every_scope_character = {
+		limit = {
+			is_mason = yes
+			#owner = { NOT = { has_variable = nda_masonry_outlawed }}
+		}
+		root = {
+			add_to_variable_list = {
+				name = nda_mason_list
+				target = prev
+			}
+		}
+	}
 }

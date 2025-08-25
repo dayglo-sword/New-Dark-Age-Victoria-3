@@ -433,10 +433,22 @@ nda_masonic.1837 = { # Masonic Meeting - Scottish Aniversary
 				save_scope_as = nda_lodge_loc
 			} 
 		}	
+		
+		nda_effect_generate_global_lodge_list = yes
+		nda_effect_generate_mason_list = yes
+		nda_effect_generate_global_cult_list = yes
+		nda_effect_generate_global_cult_spread_list = yes
 	}
 
 	option = {
 		name = nda_masonic.1837.a
+
+		custom_tooltip = { text = nda_mason_lodges_tt }
+
+		custom_tooltip = { text = nda_mason_tt }
+
+		custom_tooltip = { text = nda_global_cult_countries_tt }
+
 		default_option = yes	
 	}
 }

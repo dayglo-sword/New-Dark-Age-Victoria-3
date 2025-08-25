@@ -148,3 +148,44 @@ colonial_senegal_cultist = {
 		instance = { scale = { 0.55 0.55 } position = { 0.27 0.5 } rotation = 180 }			
 	}
 }
+
+# INCLUDE SPLINTER STATES
+
+nda_cultist_splinter_sect = {
+	pattern = "pattern_vertical_split_01.tga"
+	color1 = "green"
+	color2 = "purple"
+	
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "yellow"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
+	}
+}
+
+nda_cultist_splinter_coven = {
+	pattern = "pattern_vertical_split_01.tga"
+	color1 = "white"
+	color2 = "purple"
+	
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "yellow"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
+	}
+}
+
+nda_cultist_splinter_cult = {
+	pattern = "pattern_vertical_split_01.tga"
+	color1 = "lightblue"
+	color2 = "purple"
+	
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "yellow"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
+	}
+}

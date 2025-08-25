@@ -22,6 +22,11 @@ LEM_ADJ: "Lemurian"
 
 CULTIST_ADJ: "Cultist"
 
+nda_eldritch_splinter_sect: "$ADJECTIVE$ Sect"
+nda_eldritch_splinter_coven: "$ADJECTIVE$ Coven"
+nda_eldritch_splinter_cult: "$ADJECTIVE$ Cult"
+nda_eldritch_splinter_adj: "$ADJECTIVE$"
+
 # Flavour text
 ELD_FLAVOR_TEXT: "Finally, the age that worshippers of the [concept_nda_old_ones] have waited so long for is upon us.\n\n The #BOLD Eldritch Realm #! must ensure that when the Stars are right, [concept_nda_cthulhu] returns and that humans recognise their insignificance."
 YIG_FLAVOR_TEXT: "Once, before the age of #BOLD Atlantis#!, the Snake-people, worshippers of [concept_nda_yig], ruled the land and the primitive primates upon it.\n\n Forced into hiding at the end of the #BOLD Hyborean Age#!, now is the time of renewal."

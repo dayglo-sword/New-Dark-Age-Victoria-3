@@ -485,7 +485,8 @@ nda_yigian.1894 = {
 				ruler = yes
 				template = nda_nitocris_character_template 
 				on_created = {
-					set_variable = is_nitocris 									
+					set_variable = is_nitocris 	
+					set_variable = memento_mori_immunity								
 				}
 			}
 	

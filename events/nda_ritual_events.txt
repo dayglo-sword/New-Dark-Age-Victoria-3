@@ -1053,6 +1053,7 @@ nda_ritual.1860 = { # Webb expedition to Greenland - recovers idol - best as par
 
 			on_created = {
 			 	set_variable = prof_webb_var
+				set_variable = memento_mori_immunity
 			}
 		}	
 		

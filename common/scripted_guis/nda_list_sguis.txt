@@ -1,0 +1,86 @@
+﻿nda_global_lodge_list_sgui = {
+    scope = country
+
+    effect = {
+        # custom_description_no_bullet = { 
+        #     text = "nda_mason_lodge_list_title_tt"  
+        #     object = THIS
+        # }
+
+        if = {
+            limit = {
+                has_global_variable_list = nda_global_lodge_list
+            }
+            every_in_global_list = {
+                variable = nda_global_lodge_list
+                save_temporary_scope_as = nda_lodge_loc
+                custom_tooltip = "nda_mason_lodge_list_tt" # for each print a line
+            }
+        }
+        else = {
+            custom_tooltip = nda_mason_lodge_list_empty_tt # no lodges
+        }
+    }
+}
+
+nda_country_mason_list_sgui = {
+    scope = country
+
+    effect = {
+        #custom_label = nda_mason_list_title_tt
+
+        if = {
+            limit = {
+                has_variable_list = nda_mason_list
+            }
+            every_in_list = {
+                variable = nda_mason_list
+                save_temporary_scope_as = nda_mason
+                custom_tooltip = nda_mason_list_item_tt # for each print a line
+            }
+        }
+        else = {
+            custom_tooltip = nda_mason_list_empty_tt # no masons
+        }
+    }
+}
+
+nda_global_cult_country_list_sgui = {
+    scope = country
+
+    effect = {        
+        if = {
+            limit = {
+                has_global_variable_list = nda_global_cult_list
+            }
+            every_in_global_list = {
+                variable = nda_global_cult_list
+                save_temporary_scope_as = nda_cult_loc
+                custom_tooltip = "nda_global_cult_countries_item_tt" # for each print a line
+            }
+        }
+        else = {
+            custom_tooltip = nda_global_cult_countries_empty_tt # no lodges
+        }
+    }
+}
+
+nda_global_cult_spread_country_list_sgui = {
+    scope = country
+
+    effect = {        
+        if = {
+            limit = {
+                has_global_variable_list = nda_global_cult_spread_list
+            }
+            every_in_global_list = {
+                variable = nda_global_cult_spread_list
+                save_temporary_scope_as = nda_cult_loc
+                custom_tooltip = "nda_global_cult_countries_item_tt" # for each print a line
+            }
+        }
+        else = {
+            custom_tooltip = nda_global_cult_countries_empty_tt # no lodges
+        }
+    }
+}

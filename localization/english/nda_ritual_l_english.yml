@@ -171,3 +171,17 @@
  notification_nda_ritual_halt_notice_desc: "[SCOPE.sC('nda_je_ritual_proceeds_scope').GetName ] has stopped in assisting [concept_nda_ritual]."
 # diplo
  nda_cult_liberation: "War of Liberation from the Cult"
+
+# scripted lists
+nda_global_cult_countries_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],nda_global_cult_countries_list $nda_global_cult_countries_title_tt$ #!"
+nda_global_cult_countries_list: "[GetScriptedGui('nda_global_cult_country_list_sgui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+nda_global_cult_countries_title_tt: "#BOLD Prominent Cult Countries #!"
+nda_global_cult_countries_item_tt: "[SCOPE.sC('nda_cult_loc').GetName]"
+nda_global_cult_countries_empty_tt: "No Cult Countries #!"
+
+nda_global_cult_spread_countries_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],nda_global_cult_spread_countries_list $nda_global_cult_spread_countries_title_tt$ #!"
+nda_global_cult_spread_countries_list: "[GetScriptedGui('nda_global_cult_spread_country_list_sgui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+nda_global_cult_spread_countries_title_tt: "#BOLD Cult Spread Countries #!"
+nda_global_cult_spread_countries_item_tt: "[SCOPE.sC('nda_cult_loc').GetName]"
+nda_global_cult_spead_countries_empty_tt: "No Cult Spread Countries #!"

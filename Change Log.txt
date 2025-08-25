@@ -1,6 +1,21 @@
 Version v1.9.8
 
 Major Changes
+Add List of Cult Countries to Topbar 
+
+Minor Changes
+Destroy Universties on ELD Annex
+Split out isolated late game ELD States as new country.
+Add Memento Mori Immunity to major characters
+
+Bug Fixes
+
+
+------
+
+Version v1.9.8
+
+Major Changes
 THe Masons and Lodges - Initial handful of Lodges and Members.
 Events to Outlaw and Unban Freemasonry
 Migrations from GBR anf FRA if Cultist take over.

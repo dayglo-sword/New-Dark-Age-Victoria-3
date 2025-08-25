@@ -241,4 +241,47 @@ DEFAULT = {
 			}
 		}
 	}
+
+	# Eldritch Splinter State
+	flag_definition = {
+		coa = nda_cultist_splinter_sect
+
+		priority = 150
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 1
+			}
+		}
+	}
+
+	flag_definition = {
+		coa = nda_cultist_splinter_coven
+
+		priority = 150
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 2
+			}
+		}
+	}
+
+	flag_definition = {
+		coa = nda_cultist_splinter_cult
+
+		priority = 250
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 3
+			}
+		}
+	}
  }

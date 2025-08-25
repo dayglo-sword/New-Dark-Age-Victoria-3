@@ -474,6 +474,72 @@ nda_nen.18 = { # The plague of reanimated spreads
 }
 
 #Shadow over Innsmouth events
+
+nda_nen.1843 = { # Esoteric Order of Dagon
+	type = country_event
+	placement = p:x30C040 
+	title = nda_nen.1843.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					any_company = {	is_company_type = company_type:company_nda_marsh_fishing }
+				}
+				desc = nda_nen.1843.d1
+			}
+			triggered_desc = {
+				desc =  nda_nen.1843.d
+			}
+
+		}
+	}
+	flavor =  nda_nen.1843.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"		
+	}
+	#event_image = {  texture = "gfx/event_pictures/event1.dds"  }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	 
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		game_date >= 1843.9.1 
+		game_date < 1844.8.1
+
+		p:x30C040 = { state = { owner = ROOT } }
+
+	}
+
+	cooldown = { days= 370 }
+
+	immediate = {
+		#set_global_variable = innsmouth_cult	
+
+		
+		# random_company = {
+		# 	limit = { 
+		# 		is_company_type = company_type:company_nda_marsh_fishing 
+		# 	}
+		# 	executive = {
+		# 		save_scope_as = innsmouth_cult_leader	
+				
+		# 		add_trait = nda_master
+		# 	}
+		# }
+	}	
+	
+	option = { #"
+		name = nda_nen.1843.a
+		default_option = yes
+	}
+}
+
 nda_nen.1845 = { # Devil Worship in Innsmouth
 	type = country_event
 	placement = p:x30C040 

@@ -786,6 +786,61 @@ DEFAULT = {
 			}
 		}
 	}
+
+	# Eldritch Splinter State
+	dynamic_country_name = {
+		name = nda_eldritch_splinter_sect
+		adjective = nda_eldritch_splinter_adj
+
+		use_overlord_prefix = yes
+
+		priority = 200
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 1
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = nda_eldritch_splinter_coven
+		adjective = nda_eldritch_splinter_adj
+
+		use_overlord_prefix = yes
+
+		priority = 200
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 2
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = nda_eldritch_splinter_cult
+		adjective = nda_eldritch_splinter_adj
+
+		use_overlord_prefix = yes
+
+		priority = 200
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 3
+			}
+		}
+	}
 }
 
 SWE = {

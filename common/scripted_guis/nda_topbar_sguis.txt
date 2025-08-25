@@ -1,0 +1,35 @@
+﻿nda_topbar_element_cult_countries = {
+    scope = country
+
+    is_shown = {
+        always = yes
+    }
+
+    effect = {        
+
+    }
+}
+
+nda_topbar_element_cult_spread_countries = {
+    scope = country
+
+    is_shown = {
+        always = yes
+    }
+
+    effect = {        
+
+    }
+}
+
+nda_topbar_element_masonic_lodges = {
+    scope = country
+
+    is_shown = {
+        always = yes
+    }
+
+    effect = {        
+
+    }
+}

@@ -62,3 +62,116 @@ nda_effect_add_negative_trait = {
 		}	
 	}
 }
+
+
+# Generate Lists for scripted_sguis
+nda_effect_generate_global_cult_list = {
+
+	clear_global_variable_list = nda_global_cult_list
+
+	ordered_country = {
+		limit = {
+			is_cultist_country = yes
+			NOT = { # Hastur does not surrender to a giant cat with squid on its head
+				has_variable = nda_king_in_yellow_rules						
+			}
+		}
+		order_by = { 
+			subtract = global_country_ranking 
+			
+			if = {
+				limit = { is_full_cult = yes } 
+				add = 20
+			}
+		}
+		#min = 1	
+		max = 20			
+        
+		check_range_bounds = no
+
+		add_to_global_variable_list = {
+			name = nda_global_cult_list
+			target = THIS
+		}
+	}
+}
+
+nda_effect_generate_global_cult_count = {
+
+    set_global_variable = {
+        name = nda_topbar_cult_country_count
+        value = {
+            value = 0
+            every_country = {
+				limit = {
+					is_cultist_country = yes
+					NOT = {
+						has_variable = nda_king_in_yellow_rules						
+					}
+				}
+                add = 1
+            }
+        }
+    }
+}
+
+nda_effect_generate_global_cult_spread_list = {
+
+	clear_global_variable_list = nda_global_cult_spread_list
+
+	ordered_country = {
+		limit = {
+			is_cultist_country = no
+			has_journal_entry = je_nda_cult_spreads
+		}
+		order_by = { 
+			subtract = global_country_ranking 
+			
+		}
+		min = 1	
+		max = 20			
+
+		add_to_global_variable_list = {
+			name = nda_global_cult_spread_list
+			target = THIS
+		}
+	}
+}
+
+nda_effect_generate_global_cult_spread_count = {
+
+    set_global_variable = {
+        name = nda_topbar_cult_spread_country_count
+        value = {
+            value = 0
+            every_country = {
+				limit = {
+					is_cultist_country = no
+					has_journal_entry = je_nda_cult_spreads
+				}
+                add = 1
+            }
+        }
+    }
+}
+
+nda_effect_generate_global_coven_leader_list = {
+	# just top 5 to use for Conclave ?
+	every_country = {
+		limit = {
+			is_cultist_country = yes
+			any_scope_character = {
+				has_variable = nda_coven_leader
+			}
+		}
+
+		random_scope_character = {
+			limit = { has_variable = nda_coven_leader }
+			add_to_global_variable_list = {
+				name = nda_global_cult_list
+				target = THIS
+			}			
+		}
+		
+	}
+}

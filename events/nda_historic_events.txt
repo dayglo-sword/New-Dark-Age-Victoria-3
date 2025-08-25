@@ -754,7 +754,8 @@ nda_historic.1862 = { # The Ghost Club
 						create_character = {
 							template = ecchi_gbr_dickens_character_template 
 							on_created = {
-								set_variable = dickens_var						
+								set_variable = dickens_var	
+								set_variable = memento_mori_immunity					
 							}
 						}						
 					}

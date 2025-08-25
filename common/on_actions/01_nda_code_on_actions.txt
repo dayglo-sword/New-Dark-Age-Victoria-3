@@ -7,26 +7,6 @@ on_game_started = {
 	on_actions = {
 		nda_game_started_on_action
 	}
-	# effect = {
-	# 	# Memento Mori
-	# 	every_country = {
-	# 		every_interest_group = {
-	# 			leader = {
-	# 				if = {
-	# 					limit = {
-	# 						NOT = {
-	# 							has_variable = memento_mori_immunity
-	# 						}
-	# 					}
-	# 					set_variable = {
-	# 						name = memento_mori_immunity
-	# 						years = 5
-	# 					}
-	# 				}
-	# 			}
-	# 		}
-	# 	}
-	# }
 }
 
 nda_game_started_on_action = {
@@ -118,6 +98,7 @@ nda_monthly_on_action = {
 		nda_ritual.8 # Final War		
 
 		nda_nen.1842 # Founding of Miskatonic Uni
+		nda_nen.1843 # Esoteric Order of Dagon
 		nda_nen.1845 # Cult in Innsmouth
 		nda_nen.1846 # Plague in Innsmouth
 		nda_nen.1844 # Church of Starry Wisdom
@@ -247,6 +228,9 @@ nda_monthly_on_action = {
 			debug_log = "Cult Spread due to leaders : [THIS.GetCountry.GetNameNoFormatting]"
 			add_journal_entry = { type = je_nda_cult_spreads } 
 		}
+
+
+
 
 		# # Check for missing IG leaders - is there a problem with Hasturian America to cause no leaders and shadow men (id : -1)
 		# 1.5 finds missing and runs char generation, but does not replace leaders
@@ -514,7 +498,8 @@ nda_half_yearly_on_action = {
 		random = {
 			chance = 20 # Approx one recruit every 5 years - too few? don't want to swarm game. - is this enough to cause spread abroad? or force on subjects?
 			nda_effect_recruit_mason = yes
-		}		
+		}	
+		nda_effect_release_eld_isolated = yes # Release Isolated ELD states	
 	}
 }
 
@@ -811,13 +796,12 @@ nda_new_dark_age_on_action = {
 	effect = {				
 		if = {
 			limit = {
-				has_global_variable = nda_ritual_cthulhu_visits	# don't trash the place if just a visit
+				nda_coa_def_cthulhu_trigger = yes
 			}
 
 			add_modifier = { name = nda_new_dark_age_country_modifier }
 		}
 	}
-
 }
 
 nda_eldrtich_realm_formed_on_action = {

@@ -462,6 +462,12 @@ nda_effect_eldritch_annex = {
 					limit = { has_building = building_government_administration}
 					remove_building = building_government_administration 
 				}
+
+				# Need to reduce educational establishments as excess nullifies 'New Dark Age' modifier
+				every_scope_state = {
+					limit = { has_building = building_university }
+					remove_building = building_university 
+				}
 			}
 
 			annex = scope:nda_eldritch_annex
@@ -595,4 +601,67 @@ nda_effect_boost_unification = {
 			debug_log = "Boost ELD"
 		}			
 	}
+}
+
+
+nda_effect_release_eld_isolated = {
+	if = {
+		limit = {
+			EXISTS = c:ELD
+			c:ELD = ROOT			
+			is_at_war = no # Don't do during war as places can lose market access
+			isolated_states > 0
+
+			# Do at any time? or only after Cthulhu leaves?
+		}
+
+		random_scope_state = {
+			limit = {				
+				is_isolated_from_market = yes
+				is_capital = no
+				NOT = { any_neighbouring_state = { owner = c:ELD } } # Must be properly isolated
+			}
+			save_scope_as = nda_releasable_state
+			set_variable = nda_release_candidate
+		}
+
+		random_scope_state = {
+			limit = {
+				has_variable = nda_release_candidate
+			}
+			
+			create_dynamic_country = {
+				origin = PREV.owner
+				country_type = unrecognized
+				tier = principality
+				#color = { 113 120 107 }
+				capital = PREV
+				culture = cu:nda_cul_cultist
+				cede_state_trigger = {
+					has_variable = nda_release_candidate
+				}
+
+				on_created = {
+					change_relations = {
+						country = PREV.owner
+						value = 100
+					}
+					# Set a Colony?
+
+					set_variable = nda_cultists_in_open
+					set_variable = { name = nda_eldritch_splinter value = { integer_range = { min = 1 max = 3 } } }
+				}
+			}
+			
+			remove_variable = nda_release_candidate
+		}	
+		
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:nda_releasable_state.owner
+				type = colony
+			}
+		}
+	}
+
 }
