@@ -943,9 +943,8 @@ nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
 						limit = {
 							NOT = { any_character = { has_variable = orlok_var } }
 						}
-						# create using ecchi - could be a return from dead?
 						create_character = {
-							template = ecchi_gbr_dickens_character_template 
+							template = nda_count_orlok 
 							on_created = {
 								set_variable = orlok_var	
 								set_variable = memento_mori_immunity					

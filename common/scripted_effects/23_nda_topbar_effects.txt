@@ -6,19 +6,3 @@
     }
 }
 
-# com_topbar_calculate_subsistence_pops = {
-#     set_variable = {
-#         name = nda_topbar_cult_country_count
-#         value = {
-#             value = 0
-#             every_country = {
-#                 limit = {
-#                     workplace ?= {
-#                         is_subsistence_building = yes
-#                     }
-#                 }
-#                 add = 1
-#             }
-#         }
-#     }
-# }

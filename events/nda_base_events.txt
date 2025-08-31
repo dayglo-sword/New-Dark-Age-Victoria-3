@@ -7,6 +7,7 @@ nda_base.1 = { # An Introduction to NDA
 	desc = nda_base.1.d
 	flavor =  nda_base.1.f
 	dlc = dlc_NDA
+	gui_window = nda_event_window_full 
 
 	duration = 3
 
@@ -794,6 +795,7 @@ nda_base.11 = { # Intro help - triggered from nda_base.1
 	flavor =  nda_base.11.f
 	dlc = dlc_NDA
 
+	gui_window = nda_event_window_full 
 	duration = 3
 
 	event_image = {

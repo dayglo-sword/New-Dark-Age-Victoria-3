@@ -69,6 +69,7 @@ nda_ritual.1 = { # Cthulhu Returns
 	desc = nda_ritual.1.d
 	flavor =  nda_ritual.1.f
 	dlc = dlc_NDA
+	gui_window = nda_event_window_full 
 
 	duration = 3
 
@@ -264,6 +265,7 @@ nda_ritual.2 = { # Cthulhu Early Return
 	desc = nda_ritual.2.d
 	flavor =  nda_ritual.2.f
 	dlc = dlc_NDA
+	gui_window = nda_event_window_full 
 
 	duration = 3
 
@@ -328,7 +330,8 @@ nda_ritual.4 = { # Cthulhu Leaves
 	desc = nda_ritual.4.d
 	flavor =  nda_ritual.4.f
 	dlc = dlc_NDA
-
+	gui_window = nda_event_window_full 
+	
 	duration = 3
 
 	event_image = {

@@ -146,6 +146,8 @@ nda_astro.2 = { # 1861 conjunction
 	title = nda_astro.2.t
 	desc = nda_astro.2.d
 
+	gui_window = nda_event_window_conjunction_full 
+	
 	flavor = {
 		first_valid = {
 			triggered_desc = {
@@ -229,6 +231,17 @@ nda_astro.2 = { # 1861 conjunction
 				nda_effect_rite_conversion = yes
 				#nda_effect_boost_unification = yes	# not this early					
 			}			
+		}
+		if = {
+			limit = { is_player = yes }
+			nda_effect_generate_global_cult_leader_list = yes		
+		}
+
+		random_character = {
+			limit = { has_variable = nda_coven_leader }
+	
+			save_scope_as = nda_cover_leader_scope
+			set_global_variable = { name=nda_coven_leader_1 value = scope:nda_cover_leader_scope } 
 		}
 	}	
 			

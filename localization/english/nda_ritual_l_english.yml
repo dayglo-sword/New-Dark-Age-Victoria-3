@@ -51,7 +51,7 @@
 
  nda_ritual.20.t: "The case of [SCOPE.sCharacter('nda_ritual_victim').GetFullName]"
  nda_ritual.20.d: "The recent horrific changes to the world has had serious effects upon the health of our citizens. Few can sleep well at night without suffering horrific dreams.\n\n[SCOPE.sCharacter('nda_ritual_victim').GetFullName] has found the ongoing catastrophe to be too much to bear, and has tragically taken their own life."
- nda_ritual.20.f: "'...had had an unprecedented dream of great Cyclopean cities of titan blocks and sky-flung monoliths, all dripping with green ooze and sinister with latent horror. Hieroglyphics had covered the walls and pillars, and from some undetermined point below had come a voice that was not a voice; a chaotic sensation which only fancy could transmute into sound... ...The febrile mind, apparently, was dwelling on strange things; They included not only a repetition of what they had formerly dreamed, but touched wildly on a gigantic thing “miles high” which walked or lumbered about...'"
+ nda_ritual.20.f: "'...had had an unprecedented dream of great Cyclopean cities of titan blocks and sky-flung monoliths, all dripping with green ooze and sinister with latent horror. Hieroglyphics had covered the walls and pillars, and from some undetermined point below had come a voice that was not a voice; a chaotic sensation which only fancy could transmute into sound...\n\n ...The febrile mind, apparently, was dwelling on strange things; They included not only a repetition of what they had formerly dreamed, but touched wildly on a gigantic thing “miles high” which walked or lumbered about...'"
  nda_ritual.20.a: "What Horrors..."
 
  nda_ritual.1860.t: "The Tale of Professor Webb"

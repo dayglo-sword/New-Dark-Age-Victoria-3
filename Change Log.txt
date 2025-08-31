@@ -9,7 +9,7 @@ Split out isolated late game ELD States as new country.
 Add Memento Mori Immunity to major characters
 
 Bug Fixes
-
+Fix Orlok template
 
 ------
 

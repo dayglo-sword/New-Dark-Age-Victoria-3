@@ -1,6 +1,53 @@
 ﻿namespace = nda_historic # Series of Historic 'Colour' events around Spiritualism and the Occult - show to source country and to NEN as colour
 # use cooldown to stop refires to reduce variable bloat
 
+# nda_historic.1836 = { # Trancendentalism - Founding of Transcendental Club
+# 	type = country_event
+# 	placement = p:x01D042 # Cambridge, Mass
+# 	title = nda_historic.1836.t
+# 	desc = nda_historic.1836.d
+# 	flavor = nda_historic.1836.f
+# 	dlc = dlc_NDA
+
+# 	duration = 3
+
+# 	event_image = {
+# 		video = "southamerica_christianity"		
+# 	}
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+# 	minor_left_icon = scope:location_country
+
+# 	trigger = { 		
+# 		game_date >= 1836.9.11 
+# 		game_date < 1837.1.1 
+
+# 		# owner ofCambridge, Mass
+# 		OR = {
+# 			p:x01D042 = { state = { owner = ROOT } }
+# 			AND = {
+# 				exists = c:NEN
+# 				c:NEN = ROOT
+# 			}			
+# 		}
+# 	}
+
+# 	cooldown = { days = 740 }	
+	
+# 	immediate = {
+# 		p:x01D042 = { state = { owner = { save_scope_as = location_country } } }	
+# 	}
+
+# 	option = { #""
+# 		name = nda_historic.1836.a
+# 		default_option = yes	
+# 	}
+# }
+
+
 nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	type = country_event
 	placement = p:x01D042
@@ -38,7 +85,6 @@ nda_historic.1838 = { # 2nd Great Awakening - based on base Vic2 version
 	cooldown = { days = 740 }	
 	
 	immediate = {
-		debug_log = "Great Awakening"
 		p:x01D042 = { state = { owner = { save_scope_as = location_country } } }	
 	}
 

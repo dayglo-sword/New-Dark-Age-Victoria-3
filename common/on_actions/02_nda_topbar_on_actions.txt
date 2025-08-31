@@ -144,7 +144,8 @@ nda_custom_topbar_activate = {
 		}
 
         random_country = { 
-           	nda_effect_generate_global_lodge_count = yes         
+           	nda_effect_generate_global_lodge_count = yes  
+            nda_effect_generate_global_lodge_list = yes       
         }
 
         add_com_topbar_element = {
