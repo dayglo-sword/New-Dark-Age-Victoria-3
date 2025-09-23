@@ -1,0 +1,275 @@
+widget = {
+    name = "com_topbar"
+    layer = layer_ingame_menu
+    size = { 100% 100% }
+    datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+    visible = "[Country.IsValid]"
+    max_update_rate = 8
+
+    container = {
+        using = hud_visibility
+        parentanchor = top|left
+
+        container = {
+            visible = "[And(
+                Not(Or3(
+                    InformationPanelBar.IsAnyPanelOpen,
+                    MapListPanelManager.IsVisible,
+                    GetVariableSystem.Exists('com_open_window')
+                )),
+                Or(
+                    DataModelHasItems(Country.MakeScope.GetList('com_topbar_first_line')),
+                    DataModelHasItems(Country.MakeScope.GetList('com_topbar_second_line'))
+                )
+            )]"
+
+            onmousehierarchyenter = "[PdxGuiInterruptThenTriggerAllAnimations('hide_topbar_secondary_stats','show_topbar_secondary_stats')]"
+            onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_topbar_secondary_stats','hide_topbar_secondary_stats')]"
+
+            #shows only on hover
+            com_topbar = {
+                visible = "[GetVariableSystem.Exists('more_topbar_info')]"
+            }
+
+            #locked
+            com_topbar = {
+                visible = "[Not(GetVariableSystem.Exists('more_topbar_info'))]"
+
+                blockoverride "animation" {
+                    position = { 0 75 }
+                    alpha = 1
+                }
+            }
+        }
+    }
+}
+
+widget = {
+    name = "com_topbar_hud"
+    layer = layer_ingame_hud
+    size = { 100% 100% }
+    datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+    visible = "[And(
+        Country.IsValid,
+        Country.MakeScope.Var('com_topbar_always_show').IsSet
+    )]"
+    max_update_rate = 8
+
+    container = {
+        using = hud_visibility
+        parentanchor = top|left
+        container = {
+            visible = "[And(
+                Or3(
+                    InformationPanelBar.IsAnyPanelOpen,
+                    MapListPanelManager.IsVisible,
+                    GetVariableSystem.Exists('com_open_window')
+                ),
+                Or(
+                    DataModelHasItems(Country.MakeScope.GetList('com_topbar_first_line')),
+                    DataModelHasItems(Country.MakeScope.GetList('com_topbar_second_line'))
+                )
+            )]"
+
+            onmousehierarchyenter = "[PdxGuiInterruptThenTriggerAllAnimations('hide_topbar_secondary_stats','show_topbar_secondary_stats')]"
+            onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_topbar_secondary_stats','hide_topbar_secondary_stats')]"
+
+            #shows only on hover
+            com_topbar = {
+                visible = "[GetVariableSystem.Exists('more_topbar_info')]"
+                blockoverride "background" {}
+                blockoverride "topbar_margin" {
+                    margin = { 105 0 }
+                    spacing = -5
+                }
+            }
+
+            #locked
+            com_topbar = {
+                visible = "[Not(GetVariableSystem.Exists('more_topbar_info'))]"
+                blockoverride "background" {}
+                blockoverride "topbar_margin" {
+                    margin = { 105 0 }
+                    spacing = -5
+                }
+                blockoverride "animation" {
+                    position = { 0 75 }
+                }
+            }
+        }
+    }
+}
+
+widget = {
+    name = "com_topbar_popup"
+    allow_outside = yes
+    size = { 100% 100% }
+    layer = popups
+    datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+    visible = "[Country.IsValid]"
+    max_update_rate = 8
+
+    widget = {
+        using = hud_visibility
+        allow_outside = yes
+        size = { 100% 100% }
+        com_topbar_configuration = {}
+    }
+
+    container = {
+        using = hud_visibility
+        com_topbar_configuration_button = {
+            visible = "[GreaterThanZero_CFixedPoint(GetPlayer.GetSupplyNetworkStrength)]"
+            onmousehierarchyenter = "[PdxGuiInterruptThenTriggerAllAnimations('hide_topbar_secondary_stats','show_topbar_secondary_stats')]"
+            onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_topbar_secondary_stats','hide_topbar_secondary_stats')]"
+            state = {
+                name = show_topbar_secondary_stats
+                delay = 0.15
+                alpha = 1
+                duration = 0.15
+                using = Animation_Curve_Default
+            }
+            state = {
+                name = hide_topbar_secondary_stats
+                alpha = 0
+                duration = 0
+                using = Animation_Curve_Default
+            }
+            alpha = 0
+            position = { 690 10 }
+        }
+
+        com_topbar_configuration_button = {
+            visible = "[Not(GreaterThanZero_CFixedPoint(GetPlayer.GetSupplyNetworkStrength))]"
+            onmousehierarchyenter = "[PdxGuiInterruptThenTriggerAllAnimations('hide_topbar_secondary_stats','show_topbar_secondary_stats')]"
+            onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_topbar_secondary_stats','hide_topbar_secondary_stats')]"
+            using = hud_visibility
+            state = {
+                name = show_topbar_secondary_stats
+                delay = 0.15
+                alpha = 1
+                duration = 0.15
+                using = Animation_Curve_Default
+            }
+            state = {
+                name = hide_topbar_secondary_stats
+                alpha = 0
+                duration = 0
+                using = Animation_Curve_Default
+            }
+            alpha = 0
+            position = { 670 10 }
+        }
+    }
+}
+
+widget = {
+    name = "com_topbar_hidden_interactions"
+    allow_outside = yes
+    size = { 0 0 }
+    layer = popups
+    datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+    visible = "[Country.IsValid]"
+    max_update_rate = 8
+    alpha = 0
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_prestige')]"
+        state = {
+            name = _show
+            on_finish = "[MapListPanelManager.OpenCurrentPanel]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_innovation')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanel('tech_tree')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_army')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanelTab('military', 'army')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_navy')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanelTab('military', 'navy')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_interests')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanel('diplomatic_overview')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_taxes')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanel('budget')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_census')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPopBrowserPanel(Country.Self)]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_companies')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanel('companies')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_power_bloc')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanel('power_bloc_panel')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_politics')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanel('politics')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+    widget = {
+        visible = "[GetVariableSystem.HasValue('com_open_window', 'com_topbar_market')]"
+        state = {
+            name = _show
+            on_finish = "[InformationPanelBar.OpenPanel('market')]"
+            on_finish = "[GetVariableSystem.Clear('com_open_window')]"
+        }
+    }
+
+}

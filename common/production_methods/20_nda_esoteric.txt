@@ -67,7 +67,7 @@ pm_nda_esoteric_streetlights = {
 }
 
 # lost city pms - in effect are free goods as minimal above ground population needed - have both goods available in all methods to try and kickstart demand
-pm_nda_esoteric_lost_city = { #
+pm_nda_esoteric_lost_city = { # Split this into differing ones for the various cities?
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	country_modifiers = {
@@ -77,6 +77,40 @@ pm_nda_esoteric_lost_city = { #
 			interest_group_ig_nda_cult_worshippers_pol_str_mult = 0.05 # this does not work - shows politically unaligned
 			country_authority_add = 25
 			country_prestige_add = 25
+		}
+	}
+
+	state_modifiers = {
+		unscaled = {
+			goods_output_fruit_add = 50
+			goods_output_groceries_add = 50
+
+			state_nda_cul_cultist_standard_of_living_add = 2
+			state_nda_cul_yigian_standard_of_living_add = 2
+		}
+	}
+}
+
+pm_nda_esoteric_lost_city_coastal = { # Split this into differing ones for the various cities?
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			#country_legitimacy_headofstate_add = 20
+			interest_group_ig_landowners_pol_str_mult = 0.05 
+			interest_group_ig_nda_cult_worshippers_pol_str_mult = 0.05 # this does not work - shows politically unaligned
+			country_authority_add = 25
+			country_prestige_add = 25
+		}
+	}
+
+	state_modifiers = {
+		unscaled = {
+			goods_output_fish_add = 50
+			goods_output_groceries_add = 50
+			
+			state_nda_cul_cultist_standard_of_living_add = 2
+			state_nda_cul_dagonic_standard_of_living_add = 4
 		}
 	}
 }

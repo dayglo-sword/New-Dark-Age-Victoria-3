@@ -1,0 +1,135 @@
+﻿com_topbar_element_prestige = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_bloc_prestige = {
+	scope = country
+
+	is_shown = {
+		exists = power_bloc
+	}
+}
+
+com_topbar_element_bloc_cohesion = {
+	scope = country
+
+	is_shown = {
+		exists = power_bloc
+	}
+}
+
+com_topbar_element_bloc_size = {
+	scope = country
+
+	is_shown = {
+		exists = power_bloc
+	}
+}
+
+com_topbar_element_legitimacy = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_innovation = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_companies = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_charters = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_army_size = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_navy_size = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_interests = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_unemployed_pops = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_subsistence_pops = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_unrealized_taxes = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_agitators = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_market_balance = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}
+
+com_topbar_element_market_gdp = {
+	scope = country
+
+	is_shown = {
+		always = yes
+	}
+}

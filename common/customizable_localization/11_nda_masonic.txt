@@ -12,6 +12,7 @@ full_lodge_name = {
 		}
 		localization_key = nda_scottish_grand_lodge
 	}
+
 	text = {
 		trigger = {
 			AND = {
@@ -26,6 +27,16 @@ full_lodge_name = {
 			state_region = s:STATE_FRANCHE_COMTE
 		}
 		localization_key = nda_grand_oriental_lodge
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
+				var:nda_lodge_level = 1				
+			}
+			state_region = s:STATE_LEINSTER
+		}
+		localization_key = nda_irish_grand_lodge
 	}
 	# s:STATE_CEYLON = {
 	text = {

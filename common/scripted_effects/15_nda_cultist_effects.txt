@@ -85,7 +85,7 @@ nda_effect_generate_global_cult_list = {
 			}
 		}
 		#min = 1	
-		max = 20			
+		max = 15 #20			
         
 		check_range_bounds = no
 
@@ -168,7 +168,7 @@ nda_effect_generate_global_cult_spread_list = {
 			
 		}
 		min = 1	
-		max = 20			
+		max = 15 #20			
 
 		add_to_global_variable_list = {
 			name = nda_global_cult_spread_list

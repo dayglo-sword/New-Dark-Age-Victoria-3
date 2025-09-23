@@ -20,7 +20,7 @@
 	}
 
 	# Paris 'Oriental'
-	s:STATE_ILE_DE_FRANCE = {
+	s:STATE_FRANCHE_COMTE = {
 		region_state:FRA={
 			set_variable = { name = nda_lodge_level value = 1 }	
 			set_variable = { name = nda_lodge_rite value = 2 }	

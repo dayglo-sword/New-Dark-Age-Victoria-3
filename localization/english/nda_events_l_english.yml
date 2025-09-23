@@ -31,6 +31,7 @@
  nda_base.7.d: "The Eldritch Cult in this country no longer operates in secret.\n\nIt is enroute to taking open control of the government and to use it resources to further its goal...\nThe return of the Great Cthulhu!"
  nda_base.7.f: "\n\n#ITALIC 'In his house at R'lyeh dead Cthulhu waits dreaming.' #!"
  nda_base.7.a: "This is getting out of hand!"
+
  nda_base.8.t: "The Cult Next Door"
  nda_base.8.d: "The Eldritch Cult in the country of [SCOPE.sC('originator').GetName] has started spreading their dogma into our fair country."
  nda_base.8.f: "How long will it be before our politicians become corrupt and self-serving?"
@@ -41,6 +42,11 @@
  nda_base.9.f: "Fortunately we can be very persuasive when we need to be and they will see the error of their ways."
  nda_base.9.a: "Pursuade Them!"
  nda_base.9.b: "Ignore Them!"
+
+ nda_base.10.t: "Cult Control of [SCOPE.sC('originator').GetName]"
+ nda_base.10.d: "The Eldritch Cult in [SCOPE.sC('originator').GetName] no longer operates in the shadows.\n\nIt has spread it's madness to take open control of the government and to use it resources to further its goal...\nThe return of the [concept_nda_cthulhu] Great Cthulhu!"
+ nda_base.10.f: "\n\n#ITALIC 'In his house at R'lyeh dead Cthulhu waits dreaming.' #!"
+ nda_base.10.a: "This is getting out of hand!"
 
 #  nda_base.10.t: "Eldritch Realm Proclaimed"
 #  nda_base.10.d: "For too long has the Cult been without a homeland to call their own! But that is no longer the case as #BOLD The Eldritch Realm on Earth#!. has been proclaimed!"

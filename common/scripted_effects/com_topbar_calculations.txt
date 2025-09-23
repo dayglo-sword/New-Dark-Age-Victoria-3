@@ -1,0 +1,16 @@
+﻿com_topbar_calculate_subsistence_pops = {
+    set_variable = {
+        name = com_topbar_subsistence_pops
+        value = {
+            value = 0
+            every_scope_pop = {
+                limit = {
+                    workplace ?= {
+                        is_subsistence_building = yes
+                    }
+                }
+                add = workforce
+            }
+        }
+    }
+}

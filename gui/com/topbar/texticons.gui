@@ -1,0 +1,53 @@
+texticon = {
+  icon = com_power_bloc_prestige
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/main_hud/powerblocs.dds"
+    fontsize = 43
+  }
+}
+
+texticon = {
+  icon = com_power_bloc_size
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/icons/generic_icons/number_of_countries.dds"
+    fontsize = 80
+  }
+}
+
+texticon = {
+  icon = com_company
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/main_hud/companies_btn.dds"
+    fontsize = 43
+  }
+}
+
+texticon = {
+  icon = com_company_charters
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/texticons/company_charters.dds"
+    fontsize = 43
+  }
+}
+
+texticon = {
+  icon = com_interests
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/main_hud/dip_btn.dds"
+    fontsize = 43
+  }
+}
+
+texticon = {
+  icon = com_unrealized_taxes
+  iconsize = {
+    offset = { 0 15 }
+    texture = "gfx/interface/budget/budget_set_very_low.dds"
+    fontsize = 70
+  }
+}

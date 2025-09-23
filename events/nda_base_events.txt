@@ -541,6 +541,11 @@ nda_base.7 = { # The Cult in power - called from journal ' je_nda_cult_spreads' 
 				this = {
 					post_notification = nda_first_open_cult # this is not noticable (like most notices) go back to event ?					
 				}
+				if = {
+					limit = { NOT = { has_global_variable = nda_cultists_in_open } }
+					# Event to mark first cult country
+					trigger_event = { id = nda_base.10 popup = yes }
+				}
 			}
 			
 			set_global_variable = nda_cultists_in_open	
@@ -786,6 +791,32 @@ nda_base.9 = { # Is there some non-conformists within the cult
 	}
 }
 
+nda_base.10 = { # The first cult country
+	type = country_event
+	placement = ROOT
+	title = nda_base.10.t
+	desc = nda_base.10.d
+	flavor =  nda_base.10.f
+	dlc = dlc_NDA
+
+	gui_window = nda_event_window_full 
+	duration = 3
+
+	event_image = {
+		video = "southamerica_war_civilians"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	 
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" #event_fire.dds"
+
+	option = { #So it begins
+		name = nda_base.10.a
+		custom_tooltip = nda_base.11.a_tt
+		default_option = yes
+	}
+}
 
 nda_base.11 = { # Intro help - triggered from nda_base.1
 	type = country_event
@@ -879,7 +910,8 @@ nda_base.13 = { # The Cult fails to spread
 	desc = nda_base.13.d
 	flavor =  nda_base.13.f
 	dlc = dlc_NDA
-
+	gui_window = nda_event_window_full 
+	
 	duration = 3
 
 	event_image = {

@@ -1,0 +1,23 @@
+﻿add_com_topbar_element = {
+	ordered_country = {
+		order_by = prestige
+		position = 0
+		save_temporary_scope_as = com_topbar_random_country
+	}
+	scope:com_topbar_random_country = {
+		create_character = {
+			template = struct_template
+			save_scope_as = $element_name$
+		}
+		scope:$element_name$ = {
+			set_variable = {
+				name = com_name
+				value = flag:$element_name$
+			}
+		}
+		add_to_global_variable_list = {
+			target = scope:$element_name$
+			name = com_topbar_items
+		}
+	}
+}

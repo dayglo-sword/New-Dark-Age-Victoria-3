@@ -7,7 +7,9 @@
 #lost/hidden cities
 pmg_nda_esoteric_lostcity: "Hidden Masters"
 pmg_nda_esoteric_lostcity_goods: "Hidden Lore"
+pmg_nda_esoteric_lostcity_coastal: "The Sea Realm"
 pm_nda_esoteric_lost_city: "Ancient Texts of the Masters"
+pm_nda_esoteric_lost_city_coastal: "Fruits of the Deep Sea"
 pm_nda_esoteric_vril: "Vril Generation"
 pm_nda_esoteric_blacklotus: "Black Lotus Preparation" 
 pm_nda_esoteric_goods: "Esoteric Goods" 

@@ -1,0 +1,47 @@
+﻿namespace = com_topbar_error_suppression
+
+# This event is hidden and should never run
+# but will suppress unused variable errors
+com_topbar_error_suppression.1 = {
+    type = country_event
+    placement = root
+    hidden = yes
+
+	# DO NOT CALL THIS EVENT
+	trigger = {
+		always = no
+	}
+	
+	cancellation_trigger = {
+		always = yes
+	}
+
+	immediate = {
+		# Internal
+		fix_variable_error = { variable = is_topbar_element }
+		fix_variable_error = { variable = com_name }
+		fix_variable_error = { variable = com_topbar_items }
+		fix_variable_error = { variable = com_topbar_first_line }
+		fix_variable_error = { variable = com_topbar_second_line }
+
+		# Default elements
+		fix_variable_error = { variable = com_topbar_element_prestige }
+		fix_variable_error = { variable = com_topbar_element_bloc_prestige }
+		fix_variable_error = { variable = com_topbar_element_bloc_cohesion }
+		fix_variable_error = { variable = com_topbar_element_bloc_size }
+		fix_variable_error = { variable = com_topbar_element_legitimacy }
+		fix_variable_error = { variable = com_topbar_element_innovation }
+		fix_variable_error = { variable = com_topbar_element_companies }
+		fix_variable_error = { variable = com_topbar_element_charters }
+		fix_variable_error = { variable = com_topbar_element_army_size }
+		fix_variable_error = { variable = com_topbar_element_navy_size }
+		fix_variable_error = { variable = com_topbar_element_interests }
+		fix_variable_error = { variable = com_topbar_element_unemployed_pops }
+		fix_variable_error = { variable = com_topbar_element_subsistence_pops }
+		fix_variable_error = { variable = com_topbar_element_unrealized_taxes }
+
+	}
+	
+	orphan = yes
+	
+}
