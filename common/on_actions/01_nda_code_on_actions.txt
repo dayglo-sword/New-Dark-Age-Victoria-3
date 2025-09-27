@@ -976,61 +976,8 @@ nda_create_leng_on_action = {
 }
 
 
-#nda_diplo_play_do_stuff_on_action = { # it does do stuff! so no clash of effects from separate on_actions
-#	effect = {
-#		war = {
-#			IF = { 
-#				limit = { 
-#					is_war_participant = c:ELD
-#					exists = c:CHI	
-#				} 
-#				debug_log = "test 2nd effect on_diplo war_Start"
-#				c:TIB = { change_tag = LEN }				
-#			}
-#		}		
-#	}	
-#}
 
-# # Root = attacker or defender country
-# # scope:battle = battle
-# # scope:attacker = attacking commander
-# # scope:defender = defending commander
-# # scope:state = location state
-# on_battle_started = {
-#     on_actions = {
-#         nda_on_battle_started
-#     }
-# }
 
-# nda_on_battle_started = {
-#     effect = {
-#         # if = {
-# 		# 	limit = {
-# 		# 		exists = scope:state
-#         #         scope:state = {
-# 		# 			has_lost_city = yes
-                    
-#         #             OR = {
-#         #                 owner = scope:defender.owner
-#         #                 owner = {
-#         #                     is_in_war_together = scope:defender.owner
-#         #                 }
-#         #             }
-#         #         }
-				
-# 		# 		scope:defender = {
-# 		# 			NOT = {
-# 		# 				has_modifier = nda_lostcity_defense_modifier
-# 		# 			}
-# 		# 		}
-# 		# 	}
-# 		# 	debug_log = "City Boost to Defenders"			
-# 		# 	scope:defender = {
-# 		# 		add_modifier = { name = nda_lostcity_defense_modifier }
-# 		# 	}
-# 		# }
-# 	}
-# }
 
 ##### This overides base on_actions else would get duplicate notifications
 # Root = country

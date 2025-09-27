@@ -1,5 +1,21 @@
 ﻿l_english:
 
+# Movements
+movement_cabalistic: "Cult Supremacy Movement"
+movement_cabalistic_short: "$movement_cabalistic$"
+movement_cabalistic_name: "$movement_cabalistic$"
+movement_cabalistic_icon: "@movement_pro_slavery!"
+
+movement_spiritualist_majority: "Spiritualist Movement"
+movement_spiritualist_majority_short: "Spiritualist Movement"
+movement_spiritualist_majority_name: "Spiritualist Movement"
+movement_spiritualist_majority_icon: "@movement_religious_majority!"
+
+movement_spiritualist_minority: "Spiritualist Movement"
+movement_spiritualist_minority_short: "Spiritualist Movement"
+movement_spiritualist_minority_name: "Spiritualist Movement"
+movement_spiritualist_minority_icon: "@movement_religious_minority!"
+
 # Modifiers
 nda_reign_of_cthulhu_modifier: "A Towering Fear"
 nda_reign_of_cthulhu_modifier_desc: "No is not the time to think of such things!"

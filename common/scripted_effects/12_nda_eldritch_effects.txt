@@ -148,7 +148,8 @@
 			name = nda_eldritch_cult_ritual_delay
 			months = 3
 		}
-
+		
+		# Do boost for Cultist movements, nerf others to give ELD initial stability
 }
 
 nda_effect_eldritch_annex = {
@@ -256,6 +257,11 @@ nda_effect_eldritch_annex = {
 				# slow down annexing of NY owner to give Hastur a chance
 				if = {
 					limit = { p:xE217B5 = { owner = PREV } } # New York
+					subtract = 10
+				}
+				# If Eldritch splinter then reduce - annexing can just cause it to be released again
+				if = {
+					limit = { has_variable = nda_eldritch_splinter }
 					subtract = 10
 				}
 			}

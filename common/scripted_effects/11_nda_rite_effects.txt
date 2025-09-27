@@ -130,6 +130,7 @@
 				}
 			}
 		}
+
 	}	
 
 	# boost Nationalism and/or pan-nationalism to speed up formation
@@ -148,7 +149,12 @@
 
 	nda_effect_yigian_influence = yes
 
-	nda_effect_dagonic_influence = yes
+	nda_effect_dagonic_influence = yes	
+
+	# # Suppress non-cultist movements - reduces persistent successions?
+	# every_political_movement = {
+	# 	nda_movement_noncultist_modifiers = yes
+	# }
 }
 
 nda_effect_rite_annexations = { # Called from astro events - day after main effects 'nda_effect_rite_conversion' as annex can cause conflict crash 
@@ -247,5 +253,38 @@ nda_effect_ritual_assist_counts = {
 				}									
 			}
 		}	
+	}
+}
+
+# country scope - movements should be in non-cultist countries??
+nda_effect_cult_movements_boost = {
+	every_political_movement = {
+		limit = {
+			OR = {
+				is_political_movement_type = movement_cabalistic
+				is_political_movement_type = movement_religious_majority
+				is_political_movement_type = movement_religious_minority
+				is_political_movement_type = movement_cultural_majority
+				is_political_movement_type = movement_cultural_minority
+			}
+			OR = {
+				religion = rel:nda_rel_cultist
+				religion = rel:nda_rel_yigian
+				culture = cu:nda_cul_cultist
+				culture = cu:nda_cul_dagonic
+			}
+		}
+		add_modifier = { name = nda_grand_conjunction_modifier years = 2 }
+	}
+}
+
+nda_effect_rite_cultist_movement_boost = {
+	# Cultist movements should get short boost due to Conjunction
+	if = {
+		limit = { NOT = { has_global_variable = nda_ritual_cthulhu_leaves } } # No boosts in aftermath
+
+		every_country = {
+			nda_effect_cult_movements_boost = yes
+		}		
 	}
 }

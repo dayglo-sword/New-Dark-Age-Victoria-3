@@ -3,11 +3,13 @@ Version v1.10.0
 Major Changes
 Add List of Cult Countries, Cult Inflitrations, and Masonic Lodges to Topbar 
 Add Super Event screens
+Modifers to Cultist Movements based on world situation
 
 Minor Changes
 Destroy Universties on ELD Annex
 Split out isolated late game ELD States as new country.
 Add Memento Mori Immunity to major characters
+Add Movements for Spiritualist religion
 
 Bug Fixes
 Fix Orlok template

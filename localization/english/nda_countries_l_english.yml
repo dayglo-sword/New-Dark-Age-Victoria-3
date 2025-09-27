@@ -27,9 +27,22 @@ nda_eldritch_splinter_coven: "$ADJECTIVE$ Coven"
 nda_eldritch_splinter_cult: "$ADJECTIVE$ Cult"
 nda_eldritch_splinter_adj: "$ADJECTIVE$"
 
+# Cultures and Religions
+heritage_group_nda_cultist: "Cultist"
+heritage_group_nda_esoteric: "Hyborian"
+heritage_nda_cultist: "Cultist"
+heritage_nda_dagonic: "Dagonic"
+heritage_nda_yigian: "Yigian"
+heritage_nda_atlantian: "Atlantian"
+language_group_nda_cultist: "Hyborian"
+language_nda_cultist: "Neo Hyborian"
+# Religion
+heritage_group_nda_esoteric: "Hyborian Esoteric"
+heritage_nda_esoteric: "Esoteric" 
+
 # Flavour text
 ELD_FLAVOR_TEXT: "Finally, the age that worshippers of the [concept_nda_old_ones] have waited so long for is upon us.\n\n The #BOLD Eldritch Realm #! must ensure that when the Stars are right, [concept_nda_cthulhu] returns and that humans recognise their insignificance."
-YIG_FLAVOR_TEXT: "Once, before the age of #BOLD Atlantis#!, the Snake-people, worshippers of [concept_nda_yig], ruled the land and the primitive primates upon it.\n\n Forced into hiding at the end of the #BOLD Hyborean Age#!, now is the time of renewal."
+YIG_FLAVOR_TEXT: "Once, before the age of #BOLD Atlantis#!, the Snake-people, worshippers of [concept_nda_yig], ruled the land and the primitive primates upon it.\n\n Forced into hiding at the end of the #BOLD Hyborian Age#!, now is the time of renewal."
 DGN_FLAVOR_TEXT: "In the depths of the oceans the worship of [concept_nda_dagon] and #BOLD Hydra#! continues.\n\n Now is the time for it to reach the shores, in preparation for the return of [concept_nda_cthulhu]!"
 NEN_FLAVOR_TEXT: "After the compromise of 1816, New England stradles both the Old World and the New.\n\n As such it can be superior to both, leading the world forward into a second time of enlightenment.\n\nKnowledge is Power!"
 IAM_FLAVOR_TEXT: "By the grace of the #BOLD King in Yellow#!, #BOLD Lord Hastur#! , these are our lands on this pitiful planet while we dream our dreams, and await the end of all and our deliverance to #BOLD Carcosa!#!"
@@ -91,11 +104,6 @@ nda_greater_new_england: "Greater New England"
 # New England Military
 nda_grand_yankee_army: "Grand Yankee Army"
 nda_grand_yankee_navy: "Grand Yankee Navy"
-
-# Movements
-movement_cabalistic: "Cult Supremacy Movement"
-movement_cabalistic_name: "$movement_cabalistic$"
-movement_cabalistic_icon: "@movement_pro_slavery!"
 
 # Location for Canada Flags Mod integartion
 nda_imperial_federation: "Imperial Federation"

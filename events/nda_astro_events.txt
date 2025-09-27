@@ -72,6 +72,8 @@ nda_astro.1861 = { # 1861 conjunction
 
 	immediate = {
 		debug_log = "Conjunction 2 Lead Fire"
+		set_global_variable = nda_conjunction_2	
+
 		every_country = {
 			limit = {
 				OR = {
@@ -85,8 +87,9 @@ nda_astro.1861 = { # 1861 conjunction
 		}	
 
 		trigger_event = { id = nda_astro.21 days = 7 }	# fire follow up event
-		set_global_variable = nda_conjunction_2
 
+		# Boost Cult movements around the globe
+		nda_effect_rite_cultist_movement_boost = yes
 	}	
 }
 
@@ -243,6 +246,9 @@ nda_astro.2 = { # 1861 conjunction
 			save_scope_as = nda_cover_leader_scope
 			set_global_variable = { name=nda_coven_leader_1 value = scope:nda_cover_leader_scope } 
 		}
+
+		# nda_effect_cult_movements_boost = yes # Boost Cult movements for a while - should also do in non-cult countries?
+
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do

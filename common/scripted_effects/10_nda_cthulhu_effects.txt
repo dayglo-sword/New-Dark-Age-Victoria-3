@@ -436,5 +436,44 @@ nda_effect_cthulhu_leaves = { # Used at departure
 				name = nda_ig_cult_crisis_modifier
 			}
 		}	
+
+		# remove 'political movement' buff for Cultists, add malus?
+		every_political_movement = {
+			nda_effect_movement_noncultist_mofifiers = yes
+		}
 	}		
+}
+
+# scope is Political Movement
+nda_effect_movement_noncultist_mofifiers = {
+	if = {
+		limit = { 
+			owner = { is_cultist_country = yes }	
+			OR = {
+				is_political_movement_type = movement_cultural_minority
+				movement_is_nationalist = yes					
+			}			
+			culture ?= {
+				NOT = { has_discrimination_trait_group = heritage_group_nda_cultist } # must be non cultist
+			}
+		}
+
+		if = {
+			limit = { 
+				nda_coa_def_cthulhu_trigger = yes 
+				NOT = { has_modifier = nda_reign_of_cthulhu_modifier }
+			}
+			# modifier to supress movement
+			add_modifier = nda_reign_of_cthulhu_modifier				
+		}
+		else_if = {
+			limit = { 
+				has_global_variable = nda_ritual_cthulhu_leaves 
+				NOT = { has_modifier = nda_winter_of_the_cults_modifier }
+			}
+			# Cthulhu has gone, time for action
+			add_modifier = nda_winter_of_the_cults_modifier
+			remove_modifier = nda_reign_of_cthulhu_modifier
+		}
+	}
 }

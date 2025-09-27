@@ -1,0 +1,806 @@
+﻿movement_spiritualist_majority = {
+	category = movement_category_religious
+
+	ideology = ideology_feminist_movement
+	character_ideologies = {
+		ideology_theocrat
+		ideology_feminist
+		ideology_humanitarian
+	}
+
+	can_cause_obstinance = yes
+
+	creation_trigger = {
+		NOT = {
+			has_law_or_variant = law_type:law_state_atheism
+		}
+	}
+	creation_weight = {
+		value = 100
+	}
+	on_created = {}
+
+	disband_trigger = {
+		scope:political_movement ?= {
+			religion = {
+				NOT = { is_state_religion = root }
+			}
+		}
+	}
+
+	religion_selection_trigger = {
+		is_state_religion = scope:country
+	}
+	religion_selection_weight = {
+		value = 100
+	}
+
+	character_support_trigger = {
+		religion = scope:religion
+		OR = {
+			is_interest_group_type = ig_devout
+			has_ideology = ideology:ideology_feminist
+			has_ideology = ideology:ideology_theocrat
+			has_ideology = ideology:ideology_humanitarian
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					is_interest_group_type = ig_devout
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_feminist
+					has_ideology = ideology:ideology_humanitarian
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_integralist
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		religion = scope:religion
+	}
+
+	pop_support_factors = {				
+		movement_support_clergymen
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_shopkeepers
+		movement_support_academics
+		movement_support_clerks
+		movement_support_machinists
+		movement_support_peasants
+		movement_support_aristocrats
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+					OR = {
+						is_being_suppressed = yes
+						is_being_bolstered = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		add = {
+			value = 10
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 45
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 15
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 10
+				desc = "POP_PEASANTS"
+			}
+		}
+
+		add = { # Weakened by increasing literacy rates
+			desc = "POP_LITERACY"
+			this = {
+				value = literacy_rate
+				multiply = -2
+			}
+		}
+
+		if = { # Discriminated pops are less inclined to support the state church
+			limit = {
+				pop_acceptance < acceptance_status_5
+			}
+			multiply = {
+				desc = "POP_ACCEPTANCE"
+				value = pop_acceptance
+				divide = 100
+				add = 0.25
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					has_technology_researched = corporatism
+				}
+			}
+			multiply = {
+				value = 1.5
+				desc = "CORPORATISM_TECH"
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						is_political_movement_type = movement_legitimist
+					}
+				}
+			}
+			multiply = {
+				value = 0.25
+			}
+		}
+
+		if = { # Should be reduced till feminism
+			limit = {
+				owner ?= {
+					NOT = { has_technology_researched = feminism }
+				}
+			}
+			multiply = {
+				value = 0.25
+			}
+		}
+	}
+
+	revolution = {
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+
+			if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.75
+					}
+				}
+				add = 75
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.5
+					}
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.25
+					}
+				}
+				add = 25
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.1
+					}
+				}
+				add = 10
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 0
+
+			if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.75
+					}
+				}
+				add = 250
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.5
+					}
+				}
+				add = 150
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.25
+					}
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.1
+					}
+				}
+				add = 10
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner.ruler ?= {
+					NOT = { religion = root.religion }
+				}
+			}
+
+			add = {
+				value = 0.1
+				desc = "RULER_WRONG_RELIGION"
+			}
+		}
+
+		add = {
+			value = "owner.average_sol"
+			subtract = "owner.average_sol_for_religion(scope:religion)"
+			multiply = 0.05
+			max = 0.5
+			min = 0
+			desc = "STANDARD_OF_LIVING_FOR_RELIGION"
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								religion ?= ROOT.religion
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_RELIGIOUS_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_spiritualist_minority = {
+	category = movement_category_religious
+
+	ideology = ideology_feminist_movement 
+	character_ideologies = {
+		ideology_feminist
+		ideology_humanitarian
+	}
+
+	can_cause_obstinance = yes
+
+	creation_trigger = {
+	}
+
+	creation_weight = {
+		value = 200
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		OR = {
+			scope:political_movement ?= {
+				religion = {
+					is_state_religion = root
+				}
+				root = {
+					religion_percent_country = {
+						target = scope:political_movement.religion
+						value <= 0.08
+					}
+				}
+			}
+		}
+	}
+
+	on_disbanded = {
+
+	}
+
+	religion_selection_trigger = {
+		NOT = { is_state_religion = scope:country }
+		NOT = { rel:atheist = this }
+		scope:country = {
+			religion_percent_country = {
+				target = root
+				value >= 0.1
+			}
+		}
+	}
+	religion_selection_weight = {
+		value = 100
+	}
+
+	character_support_trigger = {
+		religion = scope:religion
+		OR = {
+			has_ideology = ideology:ideology_feminist
+			has_ideology = ideology:ideology_moderate
+			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_humanitarian
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					is_interest_group_type = ig_devout
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_feminist
+					has_ideology = ideology:ideology_moderate
+					has_ideology = ideology:ideology_social_democrat
+					has_ideology = ideology:ideology_humanitarian
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		religion = scope:religion
+	}
+
+	pop_support_factors = {
+		movement_support_religious_discrimination
+		movement_support_clergymen
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_shopkeepers
+		movement_support_academics
+		movement_support_clerks
+		movement_support_machinists
+		movement_support_peasants
+		movement_support_aristocrats
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+					OR = {
+						is_being_suppressed = yes
+						is_being_bolstered = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		# from feminist
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			add = {
+				value = 6
+				desc = "UPPER_NO_ICON"
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 9
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 25
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 3
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				add = {
+					value = 6
+					desc = "POP_MACHINISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = -3
+					desc = "POP_PEASANTS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = { # Multiplied by 1.25x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			divide = 4
+			add = 1
+		}
+		## end feminist section
+
+		if = { # Should be reduced till feminism
+			limit = {
+				owner ?= {
+					NOT = { has_technology_researched = feminism }
+				}
+			}
+			multiply = {
+				value = 0.25
+			}
+		}
+
+		# Favor cultural movement if necessary
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						is_political_movement_type = movement_cultural_minority
+						this.culture ?= root.culture
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = { cultural_acceptance_base = { target = culture value <= acceptance_status_1 } }
+				}
+				multiply = 0.1
+			}
+			else_if = {
+				limit = {
+					owner = { cultural_acceptance_base = { target = culture value <= acceptance_status_2 } }
+				}
+				multiply = 0.25
+			}
+			else_if = {
+				limit = {
+					owner = { cultural_acceptance_base = { target = culture value <= acceptance_status_3 } }
+				}
+				multiply = 0.5
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			owner ?= {
+				any_scope_state = {
+					religion_percent_state = {
+						target = root.religion
+						value >= 0.10
+					}
+				}
+			}
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 0
+
+			if = {
+				limit = {
+					is_capital = no
+				}
+
+				if = {
+					limit = {
+						religion_percent_state = {
+							target = scope:political_movement.religion
+							value >= 0.75
+						}
+					}
+					add = 250
+				}
+				else_if = {
+					limit = {
+						religion_percent_state = {
+							target = scope:political_movement.religion
+							value >= 0.5
+						}
+					}
+					add = 150
+				}
+				else_if = {
+					limit = {
+						religion_percent_state = {
+							target = scope:political_movement.religion
+							value >= 0.25
+						}
+					}
+					add = 50
+				}
+				else_if = {
+					limit = {
+						religion_percent_state = {
+							target = scope:political_movement.religion
+							value >= 0.1
+						}
+					}
+					add = 10
+				}
+			}
+		}
+
+		target_fraction_of_states = {
+			value = political_movement_identity_support
+			add = scope:clout
+			multiply = 3
+			min = 0.15
+			max = 0.75
+		}
+	}
+
+	additional_radicalism_factors = {
+		add = {
+			value = "owner.average_sol"
+			subtract = "owner.average_sol_for_religion(scope:religion)"
+			multiply = 0.05
+			max = 0.5
+			min = 0
+			desc = "STANDARD_OF_LIVING_FOR_RELIGION"
+		}
+
+		subtract = {
+			value = 0.5
+			subtract = political_movement_identity_support
+			min = 0
+			desc = "LOW_MOVEMENT_IDENTITY_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								religion ?= ROOT.religion
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_RELIGIOUS_REVOLUTION"
+				value = 0.15
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						NOT = { this = root } # Insurrectionary movements should not make themselves more insurrectionary
+						is_insurrectionary = yes
+					}
+				}
+			}
+			add = {
+				desc = "INSURRECTIONARY_MOVEMENTS"
+				owner = {
+					every_political_movement = {
+						limit = {
+							NOT = { this = root } # Insurrectionary movements should not make themselves more insurrectionary
+							is_insurrectionary = yes
+						}
+						if = {
+							limit = {
+								exists = this.political_movement_identity_support
+							}
+							add = { # Identity support can get a bit high
+								value = this.political_movement_identity_support
+								multiply = 0.5
+							}
+						}
+						else = {
+							add = this.political_movement_support
+						}
+					}
+				}
+				min = 0.05
+				max = 0.25
+			}
+		}
+	}
+}

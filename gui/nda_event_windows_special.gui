@@ -681,7 +681,6 @@ types nda_superevent_window_types {
 
                     parentanchor = center
 					size = { 600 300 }
-					parentanchor = hcenter
 
 					flowcontainer = {
 						direction = vertical
