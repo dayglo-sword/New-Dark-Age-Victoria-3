@@ -158,9 +158,9 @@
  notification_nda_ritual_post_cthulhu_split_name: "Freedom for [SCOPE.sC('nda_eldritch_freedom').GetName ]"
  notification_nda_ritual_post_cthulhu_split_desc: "They have broken free from the Eldritch Cult!"
 
- notification_nda_ritual_post_cthulhu_strife_tooltip: "#header $notification_nda_ritual_post_cthulhu_strife_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_post_cthulhu_strife_desc$"
- notification_nda_ritual_post_cthulhu_strife_name: "The [SCOPE.sCulture('nda_eldritch_rebels').GetName ] people are desiring to become free. "
- notification_nda_ritual_post_cthulhu_strife_desc: "They are openly protesting against the Cultist rule! Is rebellion near?"
+#  notification_nda_ritual_post_cthulhu_strife_tooltip: "#header $notification_nda_ritual_post_cthulhu_strife_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_post_cthulhu_strife_desc$"
+#  notification_nda_ritual_post_cthulhu_strife_name: "The [SCOPE.sCulture('nda_eldritch_rebels').GetName ] people are desiring to become free. "
+#  notification_nda_ritual_post_cthulhu_strife_desc: "They are openly protesting against the Cultist rule! Is rebellion near?"
 
  notification_nda_ritual_assist_notice_tooltip: "#header $notification_nda_ritual_assist_notice_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ritual_assist_notice_desc$"
  notification_nda_ritual_assist_notice_name: "[SCOPE.sC('nda_je_ritual_proceeds_scope').GetName ] is assisting [concept_nda_ritual]."

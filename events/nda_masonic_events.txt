@@ -136,10 +136,19 @@ nda_masonic.11 = { # Masonic Foundings - Called Event
 			limit = { is_capital = yes }
 			# minor lodge
 			set_variable = { name = nda_lodge_level value = 3 }	
-			set_variable = { name = nda_lodge_rite value = 1 }		
+			set_variable = { name = nda_lodge_rite value = {1 3} }		
 			save_scope_as = nda_lodge_loc
 		}
 
+		if = {
+			limit = { NOT = { exists = scope:nda_lodge_loc} }
+			random_scope_state = {				
+				# minor lodge
+				set_variable = { name = nda_lodge_level value = 3 }	
+				set_variable = { name = nda_lodge_rite value = {1 3} }		
+				save_scope_as = nda_lodge_loc
+			}
+		}
 		every_country = {
 			post_notification = nda_masonic_new_lodge
 		}
@@ -150,7 +159,7 @@ nda_masonic.11 = { # Masonic Foundings - Called Event
 	}
 }
 
-nda_masonic.20 = { # Masonic Baning
+nda_masonic.20 = { # Masonic Banning
 	type = country_event
 	placement = ROOT
 	title = nda_masonic.20.t
@@ -164,9 +173,6 @@ nda_masonic.20 = { # Masonic Baning
 		video = "middleeast_police_breaking_door"
 	}
 
-	#on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
-
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	cooldown = { days = 1740 } 
@@ -175,8 +181,8 @@ nda_masonic.20 = { # Masonic Baning
 		game_date >= 1837.6.1 # Don't do till after initial Mason event
 		has_masonic_lodge = yes
 		OR = {
-			has_law = law_type:law_outlawed_dissent	
-			has_law = law_type:law_censorship	
+			has_law_or_variant = law_type:law_outlawed_dissent	
+			has_law_or_variant = law_type:law_censorship	
 		}
 		NOT = { has_variable = nda_masonry_outlawed }
 		NOT = { # Ruler not going to ban themselves
@@ -194,14 +200,14 @@ nda_masonic.20 = { # Masonic Baning
 		default_option = yes	
 
 		ai_chance = { # will +ve effect conversion rate
-			base = 25	
+			base = 15	
 
 			modifier = {
 				trigger = {
-					has_law = law_type:law_outlawed_dissent			
+					has_law_or_variant = law_type:law_outlawed_dissent			
 				}
 
-				add = 50
+				add = 30
 			}
 		}
 
@@ -219,6 +225,20 @@ nda_masonic.20 = { # Masonic Baning
 
 		ai_chance = { # will +ve effect conversion rate
 			base = 75	
+
+			modifier = {
+				trigger = {
+					leader = {
+						OR = {
+							has_modifier = nda_mason_modifier	
+							has_modifier = nda_master_mason_modifier						
+						}
+
+					}			
+				}
+
+				add = 50
+			}
 		}
 
 		nda_effect_unban_masons = yes
@@ -327,9 +347,6 @@ nda_masonic.22 = { # Masonic Unbaning
 		video = "europenorthamerica_capitalists_meeting"
 	}
 
-	#on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	#on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
-
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
 	cooldown = { days = 1740 } 
@@ -339,8 +356,8 @@ nda_masonic.22 = { # Masonic Unbaning
 		has_masonic_lodge = yes
 		has_variable = nda_masonry_outlawed
 		OR = {
-			has_law = law_type:law_right_of_assembly	
-			has_law = law_type:law_protected_speech	
+			has_law_or_variant = law_type:law_right_of_assembly	
+			has_law_or_variant = law_type:law_protected_speech	
 		}
 	}
 
@@ -355,6 +372,20 @@ nda_masonic.22 = { # Masonic Unbaning
 
 		ai_chance = { # will +ve effect conversion rate
 			base = 50	
+
+			modifier = {
+				trigger = {
+					leader = {
+						OR = {
+							has_modifier = nda_mason_modifier	
+							has_modifier = nda_master_mason_modifier						
+						}
+
+					}			
+				}
+
+				add = 50
+			}
 		}
 
 		# every mason modfier in country gets flipped
@@ -385,6 +416,61 @@ nda_masonic.22 = { # Masonic Unbaning
 
 # nda_masonic.27 = { } # Masonic Spiritual Reversion
 # nda_masonic.26 = { } # Masonic Spiritual Movement
+
+
+nda_masonic.30 = { # Change Rite if Grand Master is different
+	type = country_event
+	placement = ROOT
+	title = nda_masonic.30.t
+	desc = nda_masonic.30.d
+	flavor = nda_masonic.30.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	cooldown = { days = 1740 } 
+
+	trigger = {
+		game_date >= 1837.6.1 # Don't do till after initial Mason event
+		has_masonic_lodge = yes
+		NOT = { has_variable = nda_masonry_outlawed }
+
+		any_scope_character = {
+			has_variable = nda_lodge_master
+		}
+		
+	}
+
+	immediate = {
+		debug_log = "Switch Rites?"
+	}
+
+	# options need AI weightings based on conditions
+	option = {
+		name = nda_masonic.30.a # Switch Rite
+		default_option = yes	
+
+		ai_chance = { 
+			base = 50	
+		}
+
+	}
+
+	option = {
+		name = nda_masonic.30.b	 # Keep Existing
+
+		ai_chance = { 
+			base = 50	
+		}
+
+	}
+}
 
 # fixed 'historic' events
 
@@ -434,10 +520,11 @@ nda_masonic.1837 = { # Masonic Meeting - Scottish Aniversary
 			} 
 		}	
 		
-		nda_effect_generate_global_lodge_list = yes
-		nda_effect_generate_mason_list = yes
-		nda_effect_generate_global_cult_list = yes
-		nda_effect_generate_global_cult_spread_list = yes
+		# nda_effect_generate_global_lodge_list = yes
+		# nda_effect_generate_mason_list = yes
+		# nda_effect_generate_global_cult_list = yes
+		# nda_effect_generate_global_cult_spread_list = yes
+		set_global_variable = nda_masons_activate
 	}
 
 	option = {
@@ -445,9 +532,9 @@ nda_masonic.1837 = { # Masonic Meeting - Scottish Aniversary
 
 		custom_tooltip = { text = nda_mason_lodges_tt }
 
-		custom_tooltip = { text = nda_mason_tt }
+		# custom_tooltip = { text = nda_mason_tt }
 
-		custom_tooltip = { text = nda_global_cult_countries_tt }
+		# custom_tooltip = { text = nda_global_cult_countries_tt }
 
 		default_option = yes	
 	}

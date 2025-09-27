@@ -44,8 +44,8 @@
  nda_base.9.b: "Ignore Them!"
 
  nda_base.10.t: "Cult Control of [SCOPE.sC('originator').GetName]"
- nda_base.10.d: "The Eldritch Cult in [SCOPE.sC('originator').GetName] no longer operates in the shadows.\n\nIt has spread it's madness to take open control of the government and to use it resources to further its goal...\nThe return of the [concept_nda_cthulhu] Great Cthulhu!"
- nda_base.10.f: "\n\n#ITALIC 'In his house at R'lyeh dead Cthulhu waits dreaming.' #!"
+ nda_base.10.d: "The Eldritch Cult in [SCOPE.sC('originator').GetName] no longer operates in the shadows.\n\nIt has spread it's madness to take open control of the government and to use it resources to further its goal...\n\nThe return of the [concept_nda_cthulhu] Great Cthulhu!"
+ nda_base.10.f: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn\n\nIn his house at R'lyeh dead Cthulhu waits dreaming."
  nda_base.10.a: "This is getting out of hand!"
 
 #  nda_base.10.t: "Eldritch Realm Proclaimed"

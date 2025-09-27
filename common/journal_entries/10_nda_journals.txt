@@ -117,12 +117,20 @@
 	}
 
     invalid = {
+
 		custom_tooltip = {
 			text = je_nda_cult_spread_invalid_tt
-			has_variable = nda_cultists_in_open			
-		}
+			OR = {
+				has_variable = nda_cultists_in_open	
+				has_cult_culture = yes
+			}	
+		}			
     }
 
+	on_invalid = {
+		set_variable = nda_cultists_in_open # stop repeats
+	}
+	
 	#progressbar = yes
 	weight = 100
 

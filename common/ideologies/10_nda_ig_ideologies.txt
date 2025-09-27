@@ -11,6 +11,7 @@
 	}
 	
 	lawgroup_distribution_of_power = {
+		law_single_party_state = approve
 		law_landed_voting = neutral
 		law_autocracy = strongly_approve
 		law_oligarchy = strongly_approve
@@ -64,6 +65,7 @@
 		law_slave_trade = strongly_approve
 		law_debt_slavery = approve
 		law_legacy_slavery = approve
+		law_colonial_slavery = approve
 		law_slavery_banned = strongly_disapprove
 	}
 }

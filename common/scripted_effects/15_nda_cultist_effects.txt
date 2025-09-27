@@ -170,6 +170,8 @@ nda_effect_generate_global_cult_spread_list = {
 		min = 1	
 		max = 15 #20			
 
+		check_range_bounds = no
+		
 		add_to_global_variable_list = {
 			name = nda_global_cult_spread_list
 			target = THIS

@@ -667,7 +667,7 @@ je_conquest_of_central_asia_turkmen_button = {
 			if = {
 				limit = {
 					NOT = {
-						has_law = law_type:law_frontier_colonization
+						has_law_or_variant = law_type:law_frontier_colonization
 					}
 				}
 				activate_law = law_type:law_frontier_colonization

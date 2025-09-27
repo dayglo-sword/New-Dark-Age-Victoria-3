@@ -204,7 +204,7 @@ popneed_intoxicants = {
 	entry = {
 		goods = tobacco
 
-		weight = 1
+		weight = 0.9 # As it's also part of Stimulants
 		max_supply_share = 0.75
 		min_supply_share = 0.0
 	}
@@ -234,7 +234,6 @@ popneed_intoxicants = {
 	}
 }
 
-#CHANGED
 popneed_luxury_drinks = {
 	default = tea
 	
@@ -261,7 +260,7 @@ popneed_luxury_drinks = {
 	entry = {
 		goods = wine
 
-		weight = 0.33
+		weight = 0.45 # Coffee and Tea are now in Stimulants as well
 		max_supply_share = 0.33
 		min_supply_share = 0.0
 	}
@@ -360,7 +359,6 @@ popneed_luxury_food = {
 	}
 }
 
-# CHANGED
 popneed_luxury_items = {
 	default = silk
 
@@ -514,3 +512,54 @@ popneed_leisure = {
 	}
 }
 
+popneed_stimulants = {
+	default = sugar
+
+	entry = {
+		goods = sugar
+
+		weight = 1
+		max_supply_share = 0.75
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = tea
+
+		weight = 0.95
+		max_supply_share = 0.75
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = coffee
+
+		weight = 0.95
+		max_supply_share = 0.75
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = tobacco
+
+		weight = 0.8
+		max_supply_share = 0.75
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = vril
+		
+		weight = 1.5
+		max_supply_share = 0.5
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = black_lotus
+		
+		weight = 1.5
+		max_supply_share = 0.5
+		min_supply_share = 0.0
+	}
+}

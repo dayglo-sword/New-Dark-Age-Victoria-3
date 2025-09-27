@@ -12,7 +12,7 @@ new_brunswick_big_money_in: "Sale of New Brunswick - Payments"
 
 # Miskatonic Uni - Library and Herbert West
 nda_nen.1842.t: "A New University?"
-nda_nen.1842.d: "Concerned about the condition of the existing library in Arkham, the citizens have offered to finance a new building to house the considerable collection that Joeseph Orne had aquired from overseas and donated to the local College on his death."
+nda_nen.1842.d: "Concerned about the condition of the existing library in Arkham, the citizens have offered to finance a new building to house the considerable collection that #GREEN Joeseph Orne #!had aquired from overseas and donated to the local College on his death."
 nda_nen.1842.f: "The building is to be known as #BLUE The Orne Library#!. and is to be an integral part of expanding the college campus on the site into a full fledged university - #BLUE The Miskatonic University#!.\n\nHopefully this will become a centre for intellectual studies which will gain the town a notable reputation.\n\nOther locals feel that this would be a waste of funds and that another statue to New England's greatest hero and founding father, President Cabot, is more fitting."
 nda_nen.1842.a: "Only good can come of this!"
 nda_nen.1842.b: "We don't need no education."

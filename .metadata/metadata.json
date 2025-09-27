@@ -1,11 +1,11 @@
 {
   "name" : "New Dark Age",
   "id" : "NDA",
-  "version" : "1.9.8",
-  "supported_game_version" : "1.9.*",
+  "version" : "1.10.0",
+  "supported_game_version" : "1.10.*",
   "picture": "thumbnail.png",
   "short_description" : "A New Dark Age - An Eldritch Tales Mod",
-  "tags" : ["Events","Alternative History","New Nations","1.9","Horror","Cthulhu","Lovecraft","Freemasons"],
+  "tags" : ["Events","Alternative History","New Nations","1.10","Horror","Cthulhu","Lovecraft","Freemasons"],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true,

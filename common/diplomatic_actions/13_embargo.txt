@@ -24,21 +24,15 @@
 	possible = {
 		# Might have these despite low relations due to a forced pact
 		NOT = {
-			any_scope_treaty = {
-				binds = scope:target_country
-				any_scope_article = {
-					has_type = trade_privilege
-				}
+			scope:target_country = {
+				has_treaty_trade_privilege_with = { TARGET = root }
 			}
 		}
 
 		# You cannot embargo somebody who has secured foreign investment rights in your country
 		NOT = {
-			any_scope_treaty = {
-				binds = scope:target_country
-				any_scope_article = {
-					has_type = foreign_investment_rights
-				}
+			scope:target_country = {
+				has_treaty_foreign_investment_rights_with = { TARGET = root }
 			}
 		}
 
@@ -134,13 +128,13 @@
 
 		requirement_to_maintain = {
 			trigger = {
-				NOT = { has_law = law_type:law_isolationism }
+				NOT = { has_law_or_variant = law_type:law_isolationism }
 			}
 		}
 
 		requirement_to_maintain = {
 			trigger = {
-				NOT = { scope:target_country = { has_law = law_type:law_isolationism } }
+				NOT = { scope:target_country = { has_law_or_variant = law_type:law_isolationism } }
 			}
 		}
 
@@ -166,12 +160,7 @@
 			trigger = {
 				NOT = {
 					scope:target_country = {
-						any_scope_treaty = {
-							binds = root
-							any_scope_article = {
-								has_type = foreign_investment_rights
-							}
-						}
+						has_treaty_foreign_investment_rights_with = { TARGET = root }
 					}
 				}
 			}
@@ -237,42 +226,6 @@
 						}
 					}
 
-				}
-				multiply = 2
-			}	
-
-			if = { # Cultist Countries use it against non-Cult 
-				limit = {
-					AND = {
-						is_cultist_country = yes		
-						scope:target_country = {
-							is_cultist_country = no
-						}
-					}					
-				}
-				multiply = 3
-			}	
-
-			if = { # Cultist Countries should be sort of friends
-				limit = {
-					AND = {
-						is_cultist_country = yes		
-						scope:target_country = {
-							is_cultist_country = yes
-						}
-					}					
-				}
-				divide = 2
-			}
-
-			if = { # Non-Cultist Countries use it against Cult 
-				limit = {
-					AND = {
-						is_cultist_country = no		
-						scope:target_country = {
-							is_cultist_country = yes
-						}
-					}					
 				}
 				multiply = 2
 			}

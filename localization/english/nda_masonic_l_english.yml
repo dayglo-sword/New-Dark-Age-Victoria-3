@@ -7,7 +7,7 @@ nda_irish_grand_lodge: "The Irish Grand Lodge"
 nda_grand_oriental_lodge:  "The Grand Oriental Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
 nda_grand_lodge: "The Grand Lodge of [ROOT.GetState.GetNameNoFormatting]"
 nda_union_lodge: "The Union Lodge of [ROOT.GetState.GetNameNoFormatting]"
-nda_provincial_lodge: "The Provincial Lodge of  [ROOT.GetState.GetCityHubName]"
+nda_provincial_lodge: "The Provincial Lodge of [ROOT.GetState.GetCityHubName]"
 
 nda_rite_unified: "Unified Rite"
 nda_rite_scottish: "Scottish Rite"
@@ -31,7 +31,7 @@ nda_masonic_title_york: "Mason"
 # Masonic Notifications
 notification_nda_masonic_new_master_tooltip: "#header $notification_nda_masonic_new_master_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_new_master_desc$"
 notification_nda_masonic_new_master_name: "A New Grand Master"
-notification_nda_masonic_new_master_desc: "[SCOPE.sCharacter('scope_master_mason').GetFullName] has been apointed the new #GREEN Grand Master#! of #BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')]#!."
+notification_nda_masonic_new_master_desc: "[SCOPE.sCharacter('scope_master_mason').GetFullName] has been appointed the new #GREEN Grand Master#! of #BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')]#!."
 
 notification_nda_masonic_new_lodge_tooltip: "#header $notification_nda_masonic_new_lodge_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_masonic_new_lodge_desc$"
 notification_nda_masonic_new_lodge_name: "A New Lodge"

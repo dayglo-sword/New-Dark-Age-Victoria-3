@@ -21,7 +21,7 @@
 			value > 0.2
 		  }
 
-		NOT = { has_law = law_type:law_state_religion } # spiritualism isn't that rigid
+		NOT = { has_law_or_variant = law_type:law_state_religion } # spiritualism isn't that rigid
 	}
 
 	when_taken = {

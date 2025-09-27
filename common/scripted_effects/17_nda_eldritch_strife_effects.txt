@@ -97,22 +97,23 @@
 		#debug_log_scopes = yes
 		debug_log = "Ritual - Eldritch Cult Rebels : [THIS.GetCountry.GetNameNoFormatting]"		
 
-		# notification to world of unrest - only for major cultists or player if running minor
-		if = {
-			limit = {
-				exists = scope:nda_rebel_homeland # at least one home land affected
-			}
-			every_country = {
-				limit = {
-					is_player = yes
-					# OR = {
-					# 	is_full_cult_country = { COUNTRY="ROOT" } 	
-					# 	ROOT = { is_player = yes }					
-					# }
-				}
-				post_notification = nda_ritual_post_cthulhu_strife
-			}				
-		}
+		# remove as too spammy
+		# # notification to world of unrest - only for major cultists or player if running minor
+		# if = {
+		# 	limit = {
+		# 		exists = scope:nda_rebel_homeland # at least one home land affected
+		# 	}
+		# 	every_country = {
+		# 		limit = {
+		# 			is_player = yes
+		# 			# OR = {
+		# 			# 	is_full_cult_country = { COUNTRY="ROOT" } 	
+		# 			# 	ROOT = { is_player = yes }					
+		# 			# }
+		# 		}
+		# 		post_notification = nda_ritual_post_cthulhu_strife
+		# 	}				
+		# }
 				
 	}
 

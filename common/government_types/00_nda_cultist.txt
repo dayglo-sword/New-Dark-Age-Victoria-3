@@ -8,7 +8,7 @@
 	female_heir = "RULER_TITLE_ARCHON"
 	
 	possible = {
-		#has_law = law_type:law_monarchy
+		#has_law_or_variant = law_type:law_monarchy
 		is_full_cult = yes
 		ruler = { has_variable = nda_coven_leader}
 	}		
@@ -29,11 +29,11 @@ gov_eldritch_junta = {
 	
 	possible = {
 		
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 		country_has_voting_franchise = no
 		OR = {
-			has_law = law_type:law_mass_conscription
-			has_law = law_type:law_professional_army
+			has_law_or_variant = law_type:law_mass_conscription
+			has_law_or_variant = law_type:law_professional_army
 		}
 		is_full_cult = yes
 	}
@@ -53,7 +53,7 @@ gov_eldritch_republic = {
 	female_ruler = "RULER_TITLE_GRAND_ARCHON"
 	
 	possible = {
-		has_law = law_type:law_presidential_republic
+		has_law_or_variant = law_type:law_presidential_republic
 		is_full_cult = yes
 	}
 
@@ -72,7 +72,7 @@ gov_cult_controlled = {
 	female_ruler = "RULER_TITLE_HIGH_PRIEST"
 	
 	possible = {
-		has_law = law_type:law_theocracy
+		has_law_or_variant = law_type:law_theocracy
 		is_full_cult = yes
 	}
 
@@ -113,7 +113,7 @@ gov_eldritch_democracy = {
 	female_ruler = "RULER_TITLE_CHANCELLOR"
 	
 	possible = {
-		has_law = law_type:law_parliamentary_republic
+		has_law_or_variant = law_type:law_parliamentary_republic
 		country_has_voting_franchise = yes
 		is_full_cult = yes
 	}

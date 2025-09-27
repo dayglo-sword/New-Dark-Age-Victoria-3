@@ -2,35 +2,28 @@
 
 # Basic Eldritch Cultist Rite
 nda_rel_cultist = {
-	texture = "gfx/interface/icons/religion_icons/animist.dds"
-	traits = {
-		abomination occult
-	}
+	icon = "gfx/interface/icons/religion_icons/atheist.dds"
+	heritage = heritage_nda_esoteric
 	color =  { 142 36 170 } #{ 0.33 0.35 0.01 }
 }
 
 # Basic Snake Worshippers
 nda_rel_yigian = {
-	texture = "gfx/interface/icons/religion_icons/animist.dds"
-	traits = {
-		abomination occult
-	}
+	icon = "gfx/interface/icons/religion_icons/atheist.dds"
+	heritage = heritage_nda_esoteric
 	color =  { 50 220 57 } #{0.23 0.45 0.01 }
 }
 
 # Spiritualist
 nda_rel_spiritualism = {
-	texture = "gfx/interface/icons/religion_icons/animist.dds"
-	traits = {		
-	}
+	icon = "gfx/interface/icons/religion_icons/atheist.dds"
+	heritage = heritage_christian
 	color =  { 142 136 170 } #{ 0.13 0.35 0.01 }
 }
 
 # Theosophical
 nda_rel_theosophic = {
-	texture = "gfx/interface/icons/religion_icons/animist.dds"
-	traits = {
-		occult
-	}
+	icon = "gfx/interface/icons/religion_icons/atheist.dds"
+	heritage = heritage_nda_esoteric
 	color =  { 142 36 70 } #{ 0.33 0.15 0.01 }
 }

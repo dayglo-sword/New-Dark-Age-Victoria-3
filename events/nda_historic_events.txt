@@ -696,8 +696,8 @@ nda_historic.1858 = { # Le Livre des Esprits
 			p:xB04060 = { state = { owner = ROOT } }
 			NOT = { 
 				OR = {
-					has_law = law_type:law_protected_speech 
-					has_law = law_type:law_total_separation 				
+					has_law_or_variant = law_type:law_protected_speech 
+					has_law_or_variant = law_type:law_total_separation 				
 				}
 			 } 
 		}

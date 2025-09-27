@@ -21,7 +21,7 @@
 		
 		# if not slave then regress
 		if = { 
-			limit = { has_law = law_type:law_slavery_banned }
+			limit = { has_law_or_variant = law_type:law_slavery_banned }
 			activate_law = law_type:law_debt_slavery
 		}
 
@@ -414,6 +414,7 @@ nda_effect_dagonic_buff = { # boost to dagon
 			}
 			state_region = {
 				add_homeland = cu:nda_cul_dagonic
+				remove_claim = c:ELD
 			}
 			
 		}

@@ -253,14 +253,14 @@ je_nda_cult_spreads_btn_purge = {
 		save_scope_as = nda_purge_scope
 		
 		if = {
-			limit = { has_law = law_type:law_protected_speech } # should not really be doing this!
+			limit = { has_law_or_variant = law_type:law_protected_speech } # should not really be doing this!
 			custom_tooltip = {
 				text = je_nda_cult_spreads_btn_purge_protected_speech_tooltip
 				change_infamy = 20
 
 				# every country that has protected speech hates you
 				every_country = {
-					limit = { has_law = law_type:law_protected_speech }
+					limit = { has_law_or_variant = law_type:law_protected_speech }
 					change_relations = { country = ROOT value = -50 } 
 				}
 			}	

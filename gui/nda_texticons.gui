@@ -61,3 +61,31 @@ texticon = {
 		fontsize = 150
 	}
 }
+
+# Toolbar Icons
+texticon = {
+	icon = nda_cult_countries
+	iconsize = {
+		offset = { 0 22 }
+		texture = "gfx/interface/icons/topbar/nda_cult_countries.dds"
+		fontsize = 80
+	}
+}
+
+texticon = {
+	icon = nda_cult_spread
+	iconsize = {
+		offset = { 0 22 }
+		texture = "gfx/interface/icons/topbar/nda_cult_spread.dds"
+		fontsize = 80
+	}
+}
+
+texticon = {
+	icon = nda_masonic
+	iconsize = {
+		offset = { 0 22 }
+		texture = "gfx/interface/icons/topbar/nda_masonic.dds"
+		fontsize = 80
+	}
+}

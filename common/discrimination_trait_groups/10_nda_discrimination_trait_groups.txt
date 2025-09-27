@@ -1,0 +1,14 @@
+﻿# This list is alphabetically sorted. Please keep it so.
+
+heritage_group_nda_cultist = {
+	type = heritage
+}
+
+language_group_nda_cultist = {
+	type = language
+}
+
+#religion
+heritage_group_nda_esoteric = {
+	type = heritage
+}

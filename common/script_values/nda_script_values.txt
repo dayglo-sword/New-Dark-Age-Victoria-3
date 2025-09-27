@@ -184,7 +184,7 @@ nda_purge_infamy =
 {
 	value = 10	
 	if = {
-		limit = { has_law = law_type:law_protected_speech }
+		limit = { has_law_or_variant = law_type:law_protected_speech }
 		add = 10
 	}
 

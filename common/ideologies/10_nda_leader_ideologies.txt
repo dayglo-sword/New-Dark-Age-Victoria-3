@@ -7,6 +7,7 @@
 	lawgroup_slavery = {
 		law_slave_trade = strongly_approve
 		law_legacy_slavery = approve
+		law_colonial_slavery = approve
 		law_debt_slavery = neutral
 		law_slavery_banned = strongly_disapprove
 	}
@@ -46,6 +47,14 @@
 		law_council_republic = disapprove
 	}
 	
+	lawgroup_labour_associations = {
+		law_combination_acts = neutral
+		law_guild_system = approve
+		law_anti_strike_laws = neutral
+		law_corporatized_unions = neutral
+		law_right_to_associate = disapprove
+	}
+
 	country_trigger = {
 		has_variable = nda_cultists_in_open # only in openly cultist countries	
 	}

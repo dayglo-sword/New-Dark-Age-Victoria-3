@@ -1,0 +1,17 @@
+﻿nda_reign_of_cthulhu_modifier = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds"
+	political_movement_pop_attraction_mult = -0.25
+	political_movement_radicalism_add = -0.25
+}
+
+nda_winter_of_the_cults_modifier = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	political_movement_pop_attraction_mult = 0.25
+	political_movement_radicalism_add = 0.25
+}
+
+nda_grand_conjunction_modifier = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	political_movement_pop_attraction_mult = 0.5
+	political_movement_radicalism_add = 0.25
+}

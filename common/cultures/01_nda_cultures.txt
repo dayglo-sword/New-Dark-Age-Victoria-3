@@ -1,8 +1,11 @@
 ﻿nda_cul_cultist={
 	color=  { 142 36 170 } # rgb{ 117 127 174 }
 	religion = nda_rel_cultist
-	traits = { eldritch_culture_group }
-	
+	#traits = { eldritch_culture_group }
+	heritage = heritage_nda_cultist
+	language = language_nda_cultist
+	traditions = { }
+
 	male_common_first_names={
 		child_of son_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
 	}
@@ -42,7 +45,10 @@
 nda_cul_yigian={
 	color= { 205 220 57 } #rgb{ 21 191 16 }
 	religion = nda_rel_cultist
-	traits = { eldritch_culture_group abomination }
+	#traits = { eldritch_culture_group abomination }
+	heritage = heritage_nda_yigian
+	language = language_nda_cultist
+	traditions = { }
 	
 	male_common_first_names={
 		child_of son_of slave_of servant_of beloved_of follower_of minion_of squire_of bairn_of consort_of offspring_of hatchling_of neonate_of
@@ -87,8 +93,11 @@ nda_cul_yigian={
 nda_cul_dagonic={
 	color= rgb { 11 84 179 }
 	religion = nda_rel_cultist
-	traits = { eldritch_culture_group abomination }
-	
+	#traits = { eldritch_culture_group abomination }
+	heritage = heritage_nda_dagonic
+	language = language_nda_cultist
+	traditions = { }
+
 	male_common_first_names={
 		child_of son_of slave_of servant_of beloved_of follower_of acolyte_of minion_of squire_of bairn_of consort_of offspring_of 
 	}
@@ -129,7 +138,11 @@ nda_cul_dagonic={
 nda_cul_trueyankee={
 	color= rgb{ 25 196 245 } #125 196 245
 	religion = protestant
-	traits = { anglophone european_heritage }
+	#traits = { anglophone european_heritage }
+	heritage = heritage_north_american_settler
+	language = language_anglophone
+	traditions = { }
+
 	male_common_first_names = {
 		Allan
 		Keziah 
@@ -213,7 +226,10 @@ nda_cul_trueyankee={
 nda_cul_atlantian={
 	color=  { 36 142 170 } # rgb{ 117 127 174 }
 	religion = nda_rel_cultist
-	traits = { eldritch_culture_group }
+	#traits = { eldritch_culture_group }
+	heritage = heritage_nda_atlantian
+	language = language_nda_cultist
+	traditions = { }
 	
 	male_common_first_names={
 		Kathulos Thulsa 

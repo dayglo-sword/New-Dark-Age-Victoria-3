@@ -374,6 +374,8 @@ nda_hasturian.5 = { # Create Imperial America
 			}
 			add_primary_culture = cu:nda_cul_cultist
 		}
+		# don't allow Cult Spread
+		set_variable = nda_cultists_in_open
 	}	
 	
 	option = { # Coronation

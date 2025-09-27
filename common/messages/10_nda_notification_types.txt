@@ -136,14 +136,14 @@ nda_ritual_post_cthulhu_split = {
 	color = good 
 }
 
-nda_ritual_post_cthulhu_strife = {
-	type = country
+# nda_ritual_post_cthulhu_strife = {
+# 	type = country
 
-	texture = "gfx/interface/icons/notification_icons/secession.dds"
+# 	texture = "gfx/interface/icons/notification_icons/secession.dds"
 
-	notification_type = toast
-	color = good
-}
+# 	notification_type = toast
+# 	color = good
+# }
 
 nda_ritual_assist_notice = {
 	type = country

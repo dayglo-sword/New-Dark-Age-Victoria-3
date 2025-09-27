@@ -1,14 +1,35 @@
-﻿eldritch_culture_group={
+﻿
+heritage_nda_cultist = {
+	type = heritage
+	trait_group = heritage_group_nda_cultist
 }
+
+heritage_nda_dagonic = {
+	type = heritage
+	trait_group = heritage_group_nda_cultist
+}
+
+heritage_nda_yigian = {
+	type = heritage
+	trait_group = heritage_group_nda_cultist
+}
+
+heritage_nda_atlantian = {
+	type = heritage
+	trait_group = heritage_group_nda_cultist
+}
+
+language_nda_cultist = {
+	type = language
+	trait_group = language_group_nda_cultist
+}
+
+tradition_abomination = {
+	type = tradition
+}
+
 # religion
-occult = {
-	heritage = yes
-}
-# culture
-abomination = {
-	heritage = yes
-}
-#
-esoteric = {
-	heritage = yes
+heritage_nda_esoteric = {
+	type = heritage
+	trait_group = heritage_group_nda_esoteric
 }

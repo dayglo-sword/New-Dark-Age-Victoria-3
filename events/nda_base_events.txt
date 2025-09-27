@@ -332,6 +332,8 @@ nda_base.4 = { # The Death of Junzt
 
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		# 1841 - msg to all players
 		game_date >= 1841
@@ -342,7 +344,7 @@ nda_base.4 = { # The Death of Junzt
 	cooldown = { days= 370 }
 
 	immediate = {
-
+		p:x2101E0 = { state = { owner = { save_scope_as = location_country } } }
 	}	
 	
 	option = { #So it begins

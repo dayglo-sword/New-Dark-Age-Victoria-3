@@ -1,7 +1,8 @@
-Version v1.9.8
+Version v1.10.0
 
 Major Changes
-Add List of Cult Countries to Topbar 
+Add List of Cult Countries, Cult Inflitrations, and Masonic Lodges to Topbar 
+Add Super Event screens
 
 Minor Changes
 Destroy Universties on ELD Annex
@@ -10,6 +11,8 @@ Add Memento Mori Immunity to major characters
 
 Bug Fixes
 Fix Orlok template
+Hasturian America does not need Cult Spread
+Stop Cult Spread if already Cultist by other means
 
 ------
 
