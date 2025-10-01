@@ -846,6 +846,34 @@ DEFAULT = {
 			}
 		}
 	}
+
+	dynamic_country_name = { 
+		name = nda_new_america
+		adjective = USA_ADJ
+
+		priority = 40
+		is_revolutionary = no
+		is_main_tag_only = yes
+		trigger = {
+			exists = scope:actor
+			NAND = {
+				exists = c:CSA
+				exists = c:USA
+				exists = c:FSA
+			}			
+			scope:actor = {
+				has_global_variable = nda_ritual_cthulhu_leaves
+				is_secessionist = no
+				OR = {
+					country_is_in_north_america = yes	
+					country_is_in_central_america = yes		
+				}
+
+				country_has_primary_culture = cu:yankee
+				num_incorporated_states > 5				
+			}
+		}
+	}
 }
 
 SWE = {
@@ -3343,6 +3371,7 @@ HRE = {
 				OR = {
 					has_law_or_variant = law_type:law_parliamentary_republic
 					has_law_or_variant = law_type:law_presidential_republic
+					has_law_or_variant = law_type:law_corporate_state
 				}
 				has_law_or_variant = law_type:law_technocracy
 			}

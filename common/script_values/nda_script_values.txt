@@ -204,7 +204,7 @@ nda_purge_infamy =
 # ROOT scope is Character - used to find candidate masons
 nda_masonic_potential =
 {
-	value = { 1 5 } # does this actually do random amount?
+	value = { 1 9 } # does this actually do random amount?
 	if = {
 		limit = { 
 			OR = {
@@ -220,13 +220,19 @@ nda_masonic_potential =
 		limit = {
 			has_variable = nda_is_mason # used to find master candidates
 		}
-		add = 10
+		add = 15
 	}
 	if = {
 		limit = {
 			has_variable = nda_lodge_master # used to promote masters 
 		}
-		add = 20
+		add = 30
+	}
+	if = {
+		limit = {
+			has_variable = nda_past_master # used to find former masters
+		}
+		add = 10
 	}
 	if = {
 		limit = {
@@ -242,10 +248,16 @@ nda_masonic_potential =
 	}
 	if = {
 		limit = {
-			culture = {  has_discrimination_trait = european_heritage }
+			culture = {  has_discrimination_trait_group = heritage_group_european }
 			# need condition to open it up for all
 		}
 		add = 5	
+	}
+	if = {
+		limit = {
+			religion = { has_discrimination_trait = heritage_christian 	}
+		}
+		add = 5
 	}
 	if = {
 		limit = {
@@ -276,3 +288,26 @@ nda_masonic_lodge_rank = {
 		add = 1
 	}	
 }
+
+# ROOT scope is country
+nda_more_states_outside_americas = {
+	value = 0
+
+	every_scope_state = {
+		limit = { 
+			is_incorporated = yes
+			state_is_in_americas = no
+		}
+
+		if = {
+			limit = { state_is_in_americas = no }
+			add = 1
+		}
+		else =
+		{
+			add = -1
+		}
+
+	}
+}
+

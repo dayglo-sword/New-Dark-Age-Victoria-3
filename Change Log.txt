@@ -1,4 +1,4 @@
-Version v1.10.0
+Version v1.10.3
 
 Major Changes
 Add List of Cult Countries, Cult Inflitrations, and Masonic Lodges to Topbar 
@@ -10,11 +10,13 @@ Destroy Universties on ELD Annex
 Split out isolated late game ELD States as new country.
 Add Memento Mori Immunity to major characters
 Add Movements for Spiritualist religion
+Add additional dynamic country names for Americas
 
 Bug Fixes
 Fix Orlok template
 Hasturian America does not need Cult Spread
 Stop Cult Spread if already Cultist by other means
+Correct missing primary cultures
 
 ------
 

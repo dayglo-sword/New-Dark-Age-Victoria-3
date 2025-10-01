@@ -500,6 +500,7 @@ nda_half_yearly_on_action = {
 			nda_effect_recruit_mason = yes
 		}	
 		nda_effect_release_eld_isolated = yes # Release Isolated ELD states	
+		nda_effect_fix_missing_primary_culture = yes # try and fix missing cultures that occur
 	}
 }
 

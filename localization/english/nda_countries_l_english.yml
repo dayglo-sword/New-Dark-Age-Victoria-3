@@ -97,6 +97,7 @@ nda_east_india_cabal: "East India Cabal"
 nda_hudson_bay_cabal: "Hudson's Bay Cabal"
 nda_united_sabbaths_of_america: "United Sabbats of America"
 nda_unholy_kingdom: "Unholy Kingdom"
+nda_dreamlands: "Dreamlands"
 
 # Greater New England 
 nda_greater_new_england: "Greater New England"
@@ -104,6 +105,9 @@ nda_greater_new_england: "Greater New England"
 # New England Military
 nda_grand_yankee_army: "Grand Yankee Army"
 nda_grand_yankee_navy: "Grand Yankee Navy"
+
+# dynamic names
+nda_new_america: "New America"
 
 # Location for Canada Flags Mod integartion
 nda_imperial_federation: "Imperial Federation"

@@ -164,3 +164,21 @@ TPG = {
 		}
 	}	
 }
+
+IAM = {
+	# nda_dreamlands
+	dynamic_country_name = { 
+		name = nda_dreamlands
+		adjective = IAM_ADJ
+		
+		is_main_tag_only = yes
+		priority = 50
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				nda_more_states_outside_americas = yes
+			}
+		}
+	}
+}

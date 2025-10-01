@@ -75,3 +75,15 @@
 		}				
 	}
 }
+
+nda_effect_fix_missing_primary_culture = {
+	every_country = {
+		limit = { 
+			NOT = { 
+				any_primary_culture = { count > 0 } 			
+			}
+		}
+		
+		add_primary_culture = cu:nda_cul_cultist # should work out largest local
+	}
+}
