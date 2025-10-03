@@ -611,7 +611,8 @@ nda_migo.1935 = { #  The End Of Time
 	desc = nda_migo.1935.d
 	flavor =  nda_migo.1935.f
 	dlc = dlc_NDA
-	
+	gui_window = nda_event_window_full 
+
 	duration = 3
 
 	event_image = {

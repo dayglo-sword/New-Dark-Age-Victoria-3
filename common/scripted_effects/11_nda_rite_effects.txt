@@ -268,10 +268,10 @@ nda_effect_cult_movements_boost = {
 				is_political_movement_type = movement_cultural_minority
 			}
 			OR = {
-				religion = rel:nda_rel_cultist
-				religion = rel:nda_rel_yigian
-				culture = cu:nda_cul_cultist
-				culture = cu:nda_cul_dagonic
+				religion ?= rel:nda_rel_cultist
+				religion ?= rel:nda_rel_yigian
+				culture ?= cu:nda_cul_cultist
+				culture ?= cu:nda_cul_dagonic
 			}
 		}
 		add_modifier = { name = nda_grand_conjunction_modifier years = 2 }

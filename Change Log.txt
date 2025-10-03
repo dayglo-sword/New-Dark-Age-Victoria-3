@@ -1,4 +1,4 @@
-Version v1.10.3
+Version v1.10.4
 
 Major Changes
 Add List of Cult Countries, Cult Inflitrations, and Masonic Lodges to Topbar 

@@ -119,6 +119,12 @@
 		set_strategy = ai_strategy_nda_eldritch_diplomatic_agenda
 		set_strategy = ai_strategy_nda_eldritch_political_agenda
 		
+		# add initial national awakening
+		start_national_awakening = {
+			culture =  cu:nda_cul_dagonic
+			months = 120
+			state_region = capital.state_region
+		}
 }
 
 nda_effect_dagonic_annex = {

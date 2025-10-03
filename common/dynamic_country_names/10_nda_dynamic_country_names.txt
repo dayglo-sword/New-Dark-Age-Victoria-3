@@ -177,7 +177,7 @@ IAM = {
 		trigger = {
 			exists = scope:actor
 			scope:actor = {
-				nda_more_states_outside_americas = yes
+				nda_more_states_outside_americas > 0
 			}
 		}
 	}

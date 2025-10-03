@@ -806,7 +806,10 @@ DEFAULT = {
 			scope:actor ?= {
 				is_cultist_country = yes
 				has_variable = nda_eldritch_splinter
-				var:nda_eldritch_splinter = 1
+				OR = {
+					var:nda_eldritch_splinter = 1
+					var:nda_eldritch_splinter = 4
+				}
 			}
 		}
 	}
@@ -824,7 +827,10 @@ DEFAULT = {
 			scope:actor ?= {
 				is_cultist_country = yes
 				has_variable = nda_eldritch_splinter
-				var:nda_eldritch_splinter = 2
+				OR = {
+					var:nda_eldritch_splinter = 2
+					var:nda_eldritch_splinter = 5
+				}
 			}
 		}
 	}
@@ -842,7 +848,10 @@ DEFAULT = {
 			scope:actor ?= {
 				is_cultist_country = yes
 				has_variable = nda_eldritch_splinter
-				var:nda_eldritch_splinter = 3
+				OR = {
+					var:nda_eldritch_splinter = 3
+					var:nda_eldritch_splinter = 6
+				}
 			}
 		}
 	}
@@ -860,7 +869,8 @@ DEFAULT = {
 				exists = c:CSA
 				exists = c:USA
 				exists = c:FSA
-			}			
+			}
+			NOT = { scope:actor ?= { this = c:IAM } }
 			scope:actor = {
 				has_global_variable = nda_ritual_cthulhu_leaves
 				is_secessionist = no

@@ -519,19 +519,15 @@ nda_nen.1843 = { # Esoteric Order of Dagon
 	cooldown = { days= 370 }
 
 	immediate = {
-		#set_global_variable = innsmouth_cult	
-
-		
-		# random_company = {
-		# 	limit = { 
-		# 		is_company_type = company_type:company_nda_marsh_fishing 
-		# 	}
-		# 	executive = {
-		# 		save_scope_as = innsmouth_cult_leader	
-				
-		# 		add_trait = nda_master
-		# 	}
-		# }
+	
+		random_company = {
+			limit = { 
+				is_company_type = company_type:company_nda_marsh_fishing 
+			}
+			executive = {
+				save_scope_as = innsmouth_cult_leader	
+			}
+		}
 	}	
 	
 	option = { #"
@@ -1085,7 +1081,8 @@ nda_nen.1935 = { # The Outro / denouncement
 	desc = nda_nen.1935.d
 	flavor =  nda_nen.1935.f
 	dlc = dlc_NDA
-	
+	gui_window = nda_event_window_full 
+		
 	duration = 3
 
 	event_image = {

@@ -28,8 +28,7 @@ nda_eldritch_splinter_cult: "$ADJECTIVE$ Cult"
 nda_eldritch_splinter_adj: "$ADJECTIVE$"
 
 # Cultures and Religions
-heritage_group_nda_cultist: "Cultist"
-heritage_group_nda_esoteric: "Hyborian"
+heritage_group_nda_cultist: "Hyborian"
 heritage_nda_cultist: "Cultist"
 heritage_nda_dagonic: "Dagonic"
 heritage_nda_yigian: "Yigian"

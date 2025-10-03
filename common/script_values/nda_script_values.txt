@@ -207,11 +207,13 @@ nda_masonic_potential =
 	value = { 1 9 } # does this actually do random amount?
 	if = {
 		limit = { 
-			OR = {
-				interest_group = { is_interest_group_type = ig_armed_forces }
-				interest_group = { is_interest_group_type = ig_landowners }
-				interest_group = { is_interest_group_type = ig_intelligentsia }
-				interest_group = { is_interest_group_type = ig_petty_bourgeoisie }
+			interest_group ?= { 
+				OR = {
+					is_interest_group_type = ig_armed_forces 	
+					is_interest_group_type = ig_landowners 	
+					is_interest_group_type = ig_intelligentsia 
+					is_interest_group_type = ig_petty_bourgeoisie
+				}		
 			}
 		}
 		add = 5

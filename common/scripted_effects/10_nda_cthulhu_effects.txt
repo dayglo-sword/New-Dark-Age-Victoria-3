@@ -139,6 +139,9 @@
 	
 				set_variable = nda_nameless_cults_selected
 			}
+
+			# supress nationalist movements - new ones are done by half-yearly effect
+			
 		}
 
 		# remove 'secret masters' as not appropriate
@@ -178,17 +181,34 @@
 			name = nda_new_dark_age_country_modifier 
 		}
 
-	#	# Do cult spread to other countries not previously affected?
-	#	random_country = {
-	#		limit = {
-	#			country_rank >= rank_value:unrecognized_power	
-#
-#				NOT = { has_variable = nda_nameless_cults_selected }
-#			}
-#
-#			set_variable = nda_nameless_cults_selected
-#		}
 	}	
+
+	# add additional national awakening - 2nd Awakenings can't occur - how to boost fevour
+	c:ELD ?= {
+		start_national_awakening = {
+			culture =  cu:nda_cul_cultist
+			months = 120
+			state_region = capital.state_region
+		}
+		debug_log = "National Awakening : Cultists"							
+	}
+	c:YIG ?= {
+		start_national_awakening = {
+			culture =  cu:nda_cul_yigian
+			months = 120
+			state_region = capital.state_region
+		}	
+		debug_log = "National Awakening : Yigian"					
+	}
+	c:DGN ?= {
+		start_national_awakening = {
+			culture =  cu:nda_cul_dagonic
+			months = 120
+			state_region = capital.state_region
+		}	
+		debug_log = "National Awakening : Dagonic"						
+	}
+
 }
 
 nda_effect_cthulhu_leaves = { # Used at departure

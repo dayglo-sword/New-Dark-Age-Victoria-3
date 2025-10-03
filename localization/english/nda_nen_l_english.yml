@@ -61,6 +61,7 @@ nda_nen.18.a: "We had no choice!"
 # A commandery is a collection of Knights Templar who meet regularly to conduct business, confer orders, and enjoy fellowship. Commanderies typically meet in Masonic temples, like lodges and other York Rite bodies.
 nda_nen.1843.t: "A New Order"
 nda_nen.1843.d: "It looks like the Freemasons are not as universally popular as might be thought.\n\n The small Lodge in Innsmouth, former host of the local Calvary Commandery of the Knights Templar, has closed!\n\n The former Masonic Hall has been purchased to host a new Fraternal Order made up of notable locals; One by the name of #BLUE The Esoteric Order of Dagon#!."
+nda_nen.1843.d1: "It looks like the Freemasons are not as universally popular as might be thought.\n\n The small Lodge in Innsmouth, former host of the local Calvary Commandery of the Knights Templar, has closed!\n\n The former Masonic Hall has been purchased to host a new Fraternal Order made up of notable locals; One by the name of #BLUE The Esoteric Order of Dagon#!.\n\nThis was assisted by a kind donation from [SCOPE.sCharacter('innsmouth_cult_leader').GetFullName]"
 nda_nen.1843.f: " 'A large pillared hall... The structure's once white paint was now grey and peeling, and the black and gold sign on the pediment was so faded that I could only with difficulty make out the words...'"
 nda_nen.1843.a: "Sounds a bit fishy."
 

@@ -357,7 +357,14 @@ nda_effect_recruit_mason = {
 			max = 1
 
 			set_variable = nda_is_mason
-			set_variable = { name = nda_masonic_rite value= {1 3} }
+			if = {
+				limit = { culture = cu:nda_cul_cultist }
+				set_variable = { name = nda_masonic_rite value= 4 }
+			}
+			else = {
+				set_variable = { name = nda_masonic_rite value= {1 3} }			
+			}
+
 			add_modifier = { name = nda_mason_modifier }
 			debug_log = "Mason Recruited"
 		}

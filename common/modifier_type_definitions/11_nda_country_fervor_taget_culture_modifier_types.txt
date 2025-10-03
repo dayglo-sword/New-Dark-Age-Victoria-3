@@ -1,0 +1,40 @@
+﻿country_fervor_target_nda_cul_cultist_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_nda_cul_yigian_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_nda_cul_dagonic_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_nda_cul_trueyankee_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_nda_cul_atlantian_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+

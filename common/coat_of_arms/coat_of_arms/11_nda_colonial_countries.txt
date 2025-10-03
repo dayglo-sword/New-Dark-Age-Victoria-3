@@ -164,10 +164,36 @@ nda_cultist_splinter_sect = {
 	}
 }
 
+nda_cultist_splinter_sect_alt = {
+	pattern = "pattern_vertical_split_01.tga"
+	color1 = "yellow"
+	color2 = "purple"
+	
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "green"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
+	}
+}
+
 nda_cultist_splinter_coven = {
 	pattern = "pattern_vertical_split_01.tga"
 	color1 = "white"
 	color2 = "purple"
+	
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "yellow"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
+	}
+}
+
+nda_cultist_splinter_coven_alt = {
+	pattern = "pattern_vertical_split_01.tga"
+	color1 = "purple"
+	color2 = "white"
 	
 	colored_emblem = {
 		texture = "ce_star_pentagram.dds"
@@ -185,6 +211,19 @@ nda_cultist_splinter_cult = {
 	colored_emblem = {
 		texture = "ce_star_pentagram.dds"
 		color1 = "yellow"
+		color2 = color2
+		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
+	}
+}
+
+nda_cultist_splinter_cult_alt = {
+	pattern = "pattern_vertical_split_01.tga"
+	color1 = "purple"
+	color2 = "lightblue"
+	
+	colored_emblem = {
+		texture = "ce_star_pentagram.dds"
+		color1 = "purple"
 		color2 = color2
 		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
 	}

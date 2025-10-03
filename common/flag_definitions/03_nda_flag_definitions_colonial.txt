@@ -284,4 +284,46 @@ DEFAULT = {
 			}
 		}
 	}
+
+		flag_definition = {
+		coa = nda_cultist_splinter_sect_alt
+
+		priority = 150
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 4
+			}
+		}
+	}
+
+	flag_definition = {
+		coa = nda_cultist_splinter_coven_alt
+
+		priority = 150
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 5
+			}
+		}
+	}
+
+	flag_definition = {
+		coa = nda_cultist_splinter_cult_alt
+
+		priority = 250
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_cultist_country = yes
+				has_variable = nda_eldritch_splinter
+				var:nda_eldritch_splinter = 6
+			}
+		}
+	}
  }

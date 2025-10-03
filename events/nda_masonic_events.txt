@@ -228,14 +228,14 @@ nda_masonic.20 = { # Masonic Banning
 
 			modifier = {
 				trigger = {
-					leader = {
+					ruler ?= {
 						OR = {
 							has_modifier = nda_mason_modifier	
 							has_modifier = nda_master_mason_modifier						
 						}
 
-					}			
-				}
+					}							
+				}		
 
 				add = 50
 			}
@@ -375,14 +375,14 @@ nda_masonic.22 = { # Masonic Unbaning
 
 			modifier = {
 				trigger = {
-					leader = {
+					ruler ?= {
 						OR = {
 							has_modifier = nda_mason_modifier	
 							has_modifier = nda_master_mason_modifier						
 						}
 
-					}			
-				}
+					}							
+				}		
 
 				add = 50
 			}
@@ -418,59 +418,85 @@ nda_masonic.22 = { # Masonic Unbaning
 # nda_masonic.26 = { } # Masonic Spiritual Movement
 
 
-nda_masonic.30 = { # Change Rite if Grand Master is different
-	type = country_event
-	placement = ROOT
-	title = nda_masonic.30.t
-	desc = nda_masonic.30.d
-	flavor = nda_masonic.30.f
-	dlc = dlc_NDA
+# nda_masonic.30 = { # Change Rite if Grand Master is different
+# 	type = country_event
+# 	placement = scope:nda_lodge_loc
+# 	title = nda_masonic.30.t
+# 	desc = nda_masonic.30.d
+# 	flavor = nda_masonic.30.f
+# 	dlc = dlc_NDA
 
-	duration = 3
+# 	duration = 3
 
-	event_image = {
-		video = "europenorthamerica_capitalists_meeting"
-	}
+# 	event_image = {
+# 		video = "europenorthamerica_capitalists_meeting"
+# 	}
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+# 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
-	cooldown = { days = 1740 } 
+# 	cooldown = { days = 1740 } 
 
-	trigger = {
-		game_date >= 1837.6.1 # Don't do till after initial Mason event
-		has_masonic_lodge = yes
-		NOT = { has_variable = nda_masonry_outlawed }
+# 	trigger = {
+# 		game_date >= 1837.6.1 # Don't do till after initial Mason event
 
-		any_scope_character = {
-			has_variable = nda_lodge_master
-		}
-		
-	}
+# 		any_scope_character = {
+# 			has_variable = nda_lodge_master
+# 			save_temporary_scope_as = lodge_master
+# 		}
+	
+# 		any_scope_state = {
+# 			has_variable = nda_lodge_level
+			
 
-	immediate = {
-		debug_log = "Switch Rites?"
-	}
+# 			save_temporary_scope_as = nda_lodge_loc
+# 			#debug_log = "Find Grand Lodge"		
+# 		}
 
-	# options need AI weightings based on conditions
-	option = {
-		name = nda_masonic.30.a # Switch Rite
-		default_option = yes	
+ 
+#  		NOT = { scope:lodge_master.var:nda_masonic_rite = scope:nda_lodge_loc.var:nda_lodge_rite }
 
-		ai_chance = { 
-			base = 50	
-		}
+# 	}
 
-	}
+# 	immediate = {
+# 		debug_log = "Switch Rites?"
 
-	option = {
-		name = nda_masonic.30.b	 # Keep Existing
+# 		random_scope_character = {
+# 			limit = {
+# 				has_variable = nda_lodge_master
+# 			}
+# 			save_scope_as = lodge_master
+# 		}
 
-		ai_chance = { 
-			base = 50	
-		}
+# 		random_scope_state = {
+# 			limit = {
+# 				has_variable = nda_lodge_level
+# 				NOT = { var:nda_lodge_level = scope:lodge_master.var:nda_masonic_rite }				
+# 			}
 
-	}
-}
+# 			save_scope_as = nda_lodge_loc
+# 		}
+# 	}
+
+# 	# options need AI weightings based on conditions
+# 	option = {
+# 		name = nda_masonic.30.a # Switch Rite
+# 		default_option = yes	
+
+# 		ai_chance = { 
+# 			base = 50	
+# 		}
+
+# 	}
+
+# 	option = {
+# 		name = nda_masonic.30.b	 # Keep Existing
+
+# 		ai_chance = { 
+# 			base = 50	
+# 		}
+
+# 	}
+# }
 
 # fixed 'historic' events
 

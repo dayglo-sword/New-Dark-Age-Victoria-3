@@ -176,7 +176,7 @@ nda_monthly_on_action = {
 				NOT = { # must not be any interest groups with coven_leader. - need check for non-IG head of state??
 					OR = {
 						any_interest_group = { 
-							leader = { 								
+							leader ?= { 								
 								#has_any_cultist_master_trait = yes	
 								has_variable = nda_coven_leader			
 							}
