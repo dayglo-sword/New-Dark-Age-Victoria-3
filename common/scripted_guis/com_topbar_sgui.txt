@@ -1,4 +1,6 @@
-﻿com_topbar_toggle_element_first_line = {
+﻿# Includes 'Expanded Topbar Framework'  https://discord.com/channels/827163966551621662/1387116148478181526
+# as not available on Paradox Plaza
+com_topbar_toggle_element_first_line = {
 	scope = country
 
 	saved_scopes = {

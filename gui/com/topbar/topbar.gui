@@ -1,3 +1,5 @@
+# Including / Integrating 'Expanded Topbar Framework'  https://discord.com/channels/827163966551621662/1387116148478181526
+# as not available on Paradox Plaza
 @secondary_icon_size = 18
 
 types com_topbar_types {

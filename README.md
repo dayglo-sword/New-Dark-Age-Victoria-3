@@ -33,5 +33,6 @@ https://forum.paradoxplaza.com/forum/threads/miskatonic-university-class-of-1836
 'Flags' - From 'Canadian Flag Pack', by Amtoj 
 'Shamballa' - Models of Prambanan temple by Matt Alexi, off the CK3 Modding Discord  
 'Masks' - Models by ALU, from original 'fantasy_war_01', off the CK3 Modding Discord 
+'Topbar' - integrated 'Expanded Topbar Framework' from 'Community Mod Framework' https://discord.com/channels/827163966551621662/1387116148478181526
 
 

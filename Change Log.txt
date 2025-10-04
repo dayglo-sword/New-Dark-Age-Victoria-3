@@ -2,12 +2,13 @@ Version v1.10.4
 
 Major Changes
 Add List of Cult Countries, Cult Inflitrations, and Masonic Lodges to Topbar 
-Add Super Event screens
+Add Super Event screens.
 Modifers to Cultist Movements based on world situation
+Add Cultist 'National Awakenings'
 
 Minor Changes
 Destroy Universties on ELD Annex
-Split out isolated late game ELD States as new country.
+Split out isolated late game ELD States as new splinter country.
 Add Memento Mori Immunity to major characters
 Add Movements for Spiritualist religion
 Add additional dynamic country names for Americas
