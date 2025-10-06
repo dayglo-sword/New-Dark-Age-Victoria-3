@@ -870,7 +870,13 @@ DEFAULT = {
 				exists = c:USA
 				exists = c:FSA
 			}
-			NOT = { scope:actor ?= { this = c:IAM } }
+
+			scope:actor ?= {
+				NOT = { 					
+					c:IAM ?= this
+				}
+			}
+
 			scope:actor = {
 				has_global_variable = nda_ritual_cthulhu_leaves
 				is_secessionist = no

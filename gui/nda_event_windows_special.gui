@@ -214,7 +214,7 @@ types nda_superevent_window_types {
                         maximumsize =  { 580 -1 }#  { 480 -1 }
                         parentanchor = top|hcenter
                         align = top|left
-                        raw_text = "#lore [EventWindow.GetFlavor]#!"
+                        raw_text = "[EventWindow.GetFlavor]#!"
                         margin = { 30 10 }
                     }
 
@@ -557,7 +557,7 @@ types nda_superevent_window_types {
                         maximumsize = { 480 -1 }
                         parentanchor = top|hcenter
                         align = top|left
-                        raw_text = "#lore [EventWindow.GetFlavor]#!"
+                        raw_text = "#[EventWindow.GetFlavor]#!"
                         margin = { 30 10 }
                     }
 

@@ -418,85 +418,88 @@ nda_masonic.22 = { # Masonic Unbaning
 # nda_masonic.26 = { } # Masonic Spiritual Movement
 
 
-# nda_masonic.30 = { # Change Rite if Grand Master is different
-# 	type = country_event
-# 	placement = scope:nda_lodge_loc
-# 	title = nda_masonic.30.t
-# 	desc = nda_masonic.30.d
-# 	flavor = nda_masonic.30.f
-# 	dlc = dlc_NDA
+nda_masonic.30 = { # Change Rite if Grand Master is different
+	type = country_event
+	placement = scope:nda_lodge_loc
+	title = nda_masonic.30.t
+	desc = nda_masonic.30.d
+	flavor = nda_masonic.30.f
+	dlc = dlc_NDA
 
-# 	duration = 3
+	duration = 3
 
-# 	event_image = {
-# 		video = "europenorthamerica_capitalists_meeting"
-# 	}
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
 
-# 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
 
-# 	cooldown = { days = 1740 } 
+	cooldown = { days = 1740 } 
 
-# 	trigger = {
-# 		game_date >= 1837.6.1 # Don't do till after initial Mason event
+	trigger = {
+		game_date >= 1837.6.1 # Don't do till after initial Mason event
 
-# 		any_scope_character = {
-# 			has_variable = nda_lodge_master
-# 			save_temporary_scope_as = lodge_master
-# 		}
+		any_scope_character = {
+			has_variable = nda_lodge_master
+			save_temporary_scope_as = lodge_master
+		}
 	
-# 		any_scope_state = {
-# 			has_variable = nda_lodge_level
+		any_scope_state = {
+			has_variable = nda_lodge_level
 			
 
-# 			save_temporary_scope_as = nda_lodge_loc
-# 			#debug_log = "Find Grand Lodge"		
-# 		}
+			save_temporary_scope_as = nda_lodge_loc
+			#debug_log = "Find Grand Lodge"		
+		}
 
  
-#  		NOT = { scope:lodge_master.var:nda_masonic_rite = scope:nda_lodge_loc.var:nda_lodge_rite }
+ 		NOT = { scope:lodge_master.var:nda_masonic_rite = scope:nda_lodge_loc.var:nda_lodge_rite }
 
-# 	}
+	}
 
-# 	immediate = {
-# 		debug_log = "Switch Rites?"
+	immediate = {
+		debug_log = "Switch Rites?"
 
-# 		random_scope_character = {
-# 			limit = {
-# 				has_variable = nda_lodge_master
-# 			}
-# 			save_scope_as = lodge_master
-# 		}
+		random_scope_character = {
+			limit = {
+				has_variable = nda_lodge_master
+			}
+			save_scope_as = lodge_master
+		}
 
-# 		random_scope_state = {
-# 			limit = {
-# 				has_variable = nda_lodge_level
-# 				NOT = { var:nda_lodge_level = scope:lodge_master.var:nda_masonic_rite }				
-# 			}
+		random_scope_state = {
+			limit = {
+				has_variable = nda_lodge_level
+				NOT = { var:nda_lodge_level = scope:lodge_master.var:nda_masonic_rite }				
+			}
 
-# 			save_scope_as = nda_lodge_loc
-# 		}
-# 	}
+			save_scope_as = nda_lodge_loc
+		}
+	}
 
-# 	# options need AI weightings based on conditions
-# 	option = {
-# 		name = nda_masonic.30.a # Switch Rite
-# 		default_option = yes	
+	# options need AI weightings based on conditions
+	option = {
+		name = nda_masonic.30.a # Switch Rite
+		default_option = yes	
 
-# 		ai_chance = { 
-# 			base = 50	
-# 		}
+		ai_chance = { 
+			base = 50	
+		}
 
-# 	}
+		scope:nda_lodge_loc = {
+			set_variable = { name=nda_lodge_level value== scope:lodge_master.var:nda_masonic_rite } 
+		}
+	}
 
-# 	option = {
-# 		name = nda_masonic.30.b	 # Keep Existing
+	option = {
+		name = nda_masonic.30.b	 # Keep Existing
 
-# 		ai_chance = { 
-# 			base = 50	
-# 		}
+		ai_chance = { 
+			base = 50	
+		}
 
-# 	}
-# }
+	}
+}
 
 # fixed 'historic' events
 
@@ -651,3 +654,84 @@ nda_masonic.1838 = { # Masonry in New England
 	}
 
 }
+
+nda_masonic.1854 = { # Foundation Stone at Sacramento - specific instance, do generic for any location
+	type = country_event
+	placement = p:xC900EF # Sacramento California
+	title = nda_masonic.1854.t
+	desc = nda_masonic.1854.d
+	flavor = nda_masonic.1854.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_art_gallery" 	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # pan coin
+
+	minor_left_icon = scope:location_country
+
+	trigger = { 		
+		game_date >= 1854.9.8 
+		game_date < 1855.5.1 
+
+		# owner of Sacramento
+		OR = {
+			p:xC900EF = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:xC900EF.region			
+		}
+
+		# must have freemasonry present and unbanned
+		p:xC900EF = { 
+			state = { 
+				owner = { 
+					has_masonic_lodge = yes
+					NOT = { has_variable = nda_masonry_outlawed }
+				} 
+			} 
+		}
+	}
+
+	cooldown = { days = 1000 }	
+
+	immediate = {
+		p:xC900EF = { state = { owner = { save_scope_as = location_country } } }
+	}
+
+	option = { 
+		name = nda_masonic.1854.a
+		default_option = yes
+
+		if = {
+			limit = {
+				p:xC900EF = { state = { owner = ROOT } }
+				NOT = { has_variable = nda_lodge_level }
+			}
+
+			custom_tooltip = {
+				text = nda_masonic.1854.a_tt
+
+				p:xC900EF = { 
+					state = { 
+						set_variable = { name = nda_lodge_level value = 3 }	
+						set_variable = { name = nda_lodge_rite value = 2 }	
+
+						add_modifier = { name = nda_lodge_modifier }
+					} 
+				}				
+			}
+
+		}
+	}
+
+	option = { 
+		name = nda_masonic.1854.b
+	}
+}
+
+
+# nda_historic_regional.1864 = { } # Masonic Grand Lodge in Egypt - move to masonic section (combining existing Greek, Italian and French lodges. - use as a route to trigger cult eventual spread depending on Egyptian reaction?

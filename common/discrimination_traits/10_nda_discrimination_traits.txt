@@ -24,6 +24,11 @@ language_nda_cultist = {
 	trait_group = language_group_nda_cultist
 }
 
+language_nda_atlantian = {
+	type = language
+	trait_group = language_group_nda_cultist	
+}
+
 tradition_abomination = {
 	type = tradition
 }

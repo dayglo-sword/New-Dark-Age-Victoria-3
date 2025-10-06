@@ -21,6 +21,8 @@ Timeline of events in mod
 
 1852.1      nda_historic.1852   An American Medium in London
 1854.3		nda_historic.1854	Eliphas Levi - Dogme et Rituel de la Haute Magie
+1854.10		nda_masonic.1854	Foundation Stone Ceremony at Sacramento
+1855.2		nda_ regional		Devil's Footprints
 1857.4		nda_historic.1857	Spiritualism - The Banner of Light
 1857.8		nda_historic.1858	Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritualism
 1858.7      nda_astro.1858      Great Comet 1

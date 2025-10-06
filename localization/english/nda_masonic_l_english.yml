@@ -105,6 +105,12 @@ nda_masonic.22.f: "'The M.E. Grand Master, Sir W. R. Wright, stated to the Knigh
 nda_masonic.22.a: "They must be allowed their freedom!"
 nda_masonic.22.b: "The Ban is essential"
 
+nda_masonic.30.t: "Equal Rites"
+nda_masonic.30.d: "The Lodge at is primarily following a different rite to that of it's Grand Master, [SCOPE.sCharacter('nda_lodge_master').GetFullName]"
+nda_masonic.30.f: "''"
+nda_masonic.30.a: "The Grand Master is right."
+nda_masonic.30.b: "No need for a change."
+
 nda_masonic.1837.t: "Masonic Meetings"
 nda_masonic.1837.d: "The act of Freemasonry seems to still be wide-spread, and may even be increasing around the world.\n\n#BLUE [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] #! has recently celebrated its centenary, but claims an older ancestry of hereditary Grand Masters dating back to at least James the First, of Scotland."
 nda_masonic.1837.f: "'Under the blessing of the Great Architect of the Universe, the Grand Lodge of Scotland has spread and prospered.\n\n The Lodges in Denmark own her as their mother; she claims the Brethren in Russia as her children; in France her power is acknowledged, and in Holland her sway is felt; in New England they obey her laws, and in Nova Scotia her protection is claimed.\n\n In the West Indies and in Turkey, in Ceylon, and Syria, her influence is confessed, her mandates are obeyed...'\n - The Freemasons' Quarterly Review, March 1837"
@@ -118,3 +124,10 @@ nda_masonic.1838.a: "With Grand United Lodge of England"
 nda_masonic.1838.b: "With New York Lodge of America"
 nda_masonic.1838.c: "Form Unified Lodge of New England"
 nda_masonic.1838.d1: "Let things stay as they are."
+
+nda_masonic.1854.t: "Laying the Foundations"
+nda_masonic.1854.d: "The Lodge in California appears to be growing in strength.\n\nIn a major public showing, the local members, including a number of Judges, made themselve know. They paraded through the streets, before the laying of a foundation stone.\n\n"
+nda_masonic.1854.f: "'The corner stone of a court house, for the county of Sacramento, was lately laid in that city, with all the pomp and ceremony which Freemasonry could impart to it...\n\nThe Grand Treasurer, then placed in a cavity of the quoin, the Sacred Law, Constitution of the United Sates, the Treaty with Mexico ceding California to the American Union, and the Newspapers published in the county.\n\n The stone was then lowered, when the master proved it true and trusty with square, level, and plumb rule, and announced to the crowd it was so.\n\n He then returned to the stone, and emptied on it successively, the contents of three silver goblets, saying, 'According to the ancient customs, and ceremonies of the fraternity of Free and Accepted Masons I now pour upon this stone, corn, wine, and oil.'\n - The Masonic Mirror, Dec 1854.'"
+nda_masonic.1854.a: "From strength to strength!"
+nda_masonic.1854.a_tt: "The Lodge in California becomes notable."
+nda_masonic.1854.b: "What sort of ceremony is that?"

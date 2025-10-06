@@ -393,19 +393,22 @@ nda_historic.1852 = { # An American Medium in London
 			}
         }
 
-		every_scope_state = {
-			limit = {
-				is_incorporated = yes
-				NOT = { has_variable = nda_rel_boost_spiritualism }
-			}
+		custom_tooltip = { 
+			text = nda_historic.1852.b_tt 
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+					NOT = { has_variable = nda_rel_boost_spiritualism }
+				}
 
-			set_variable = { # ongoing conversion
-				name = nda_rel_boost_spiritualism	
-				months = 12
-				value = nda_trivial_conversion
-			}						
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_spiritualism	
+					months = 12
+					value = nda_trivial_conversion
+				}						
 
-		}
+			}		
+		}	
 	}
 }
 
@@ -507,31 +510,38 @@ nda_historic.1857 = { # Banner of Light
 		default_option = yes
 
 		debug_log = "Banner of Light : [THIS.GetCountry.GetNameNoFormatting]" 
+
 		IF = { # only owner should not trigger this
 			limit = {
 				p:x211ECF = { state = { owner = ROOT } }
 			}
-			p:x211ECF = {
-				state = {
-					if = {
-						limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-						debug_log = "Banner of Light - add pop" 
-						set_variable = { # ongoing conversion
-							name = nda_rel_boost_spiritualism						
-							months = 12
-							value = nda_small_conversion
-						}
 
-						every_neighbouring_state = {
-							set_variable = { # # ongoing conversion of neighbours
-								name = nda_rel_boost_spiritualism							
+			custom_tooltip = { 
+				text = nda_historic.1857.a_tt 
+
+				p:x211ECF = {
+					state = {
+						if = {
+							limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+							debug_log = "Banner of Light - add pop" 
+
+							set_variable = { # ongoing conversion
+								name = nda_rel_boost_spiritualism						
 								months = 12
-								value = nda_trivial_conversion
-							}					
-						}									
-					}
-				} 				
-			}
+								value = nda_small_conversion
+							}
+
+							every_neighbouring_state = {
+								set_variable = { # # ongoing conversion of neighbours
+									name = nda_rel_boost_spiritualism							
+									months = 12
+									value = nda_trivial_conversion
+								}					
+							}									
+						}
+					} 				
+				}			
+			}			
 		}
 	}
 
@@ -541,34 +551,39 @@ nda_historic.1857 = { # Banner of Light
 			limit = {
 				p:x211ECF = { state = { owner = ROOT } }
 			}
-			p:x211ECF = {
-				state = {
+
+			custom_tooltip = { 
+				text = nda_historic.1857.b_tt 
+				p:x211ECF = {
+					state = {
+						if = {
+							limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+							debug_log = "Banner of Light - add pop" 
+
+							set_variable = { # ongoing conversion
+								name = nda_rel_boost_spiritualism						
+								months = 12
+								value = nda_small_conversion
+							}		
+						
+						}
+						save_scope_as = nda_publish_state_scope
+					} 							
+				}
+				# country wide
+				every_scope_state = {
+					limit = { NOT = { THIS = scope:nda_publish_state_scope } }
 					if = {
 						limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-						debug_log = "Banner of Light - add pop" 
 						set_variable = { # ongoing conversion
 							name = nda_rel_boost_spiritualism						
 							months = 12
-							value = nda_small_conversion
+							value = nda_trivial_conversion
 						}		
 					
 					}
-					save_scope_as = nda_publish_state_scope
-				} 							
-			}
-			# country wide
-			every_scope_state = {
-				limit = { NOT = { THIS = scope:nda_publish_state_scope } }
-				if = {
-					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-					set_variable = { # ongoing conversion
-						name = nda_rel_boost_spiritualism						
-						months = 12
-						value = nda_trivial_conversion
-					}		
-				
-				}
-			}		
+				}			
+			}	
 		}
 	}
 }
@@ -1291,7 +1306,18 @@ nda_historic.1888 = { # Fox's come clean - Spiritualist Movement (https://www.gu
 
 	option = { 
 		name = nda_historic.1888.a
-		default_option = yes		
+		default_option = yes	
+		custom_tooltip = {
+			text = nda_historic.1888.a_tt
+		}
+		#reduce level of spiritulism, nix any movements around the globe
+	}
+
+	option = { 
+		name = nda_historic.1888.b # obvious cohersion!
+		custom_tooltip = {
+			text = nda_historic.1888.b_tt
+		}
 	}
 }
 
@@ -1517,18 +1543,21 @@ nda_historic.1893 = {  # National Spiritualist Association of Churches
 	option = { 
 		name = nda_historic.1893.a
 
-		every_scope_state = {
-			if = {
-				limit = { 
-					NOT = { has_variable = nda_rel_boost_spiritualism }
-				}					
-				set_variable = { # ongoing conversion
-					name = nda_rel_boost_spiritualism						
-					months = 12
-					value = nda_small_conversion
-				}		
-			
-			}
+		custom_tooltip = {
+			text = nda_historic.1893.a_tt
+			every_scope_state = {
+				if = {
+					limit = { 
+						NOT = { has_variable = nda_rel_boost_spiritualism }
+					}					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritualism						
+						months = 12
+						value = nda_small_conversion
+					}		
+				
+				}
+			}			
 		}
 	}
 

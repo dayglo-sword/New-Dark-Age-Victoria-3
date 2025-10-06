@@ -1,6 +1,7 @@
 ﻿namespace = nda_historic_regional # Series of Historic 'Colour' events around Spiritualism and the Occult - show to source country and any with interest in region
 # use cooldown to stop refires to reduce variable bloat
 
+# Think this needs to be full historic? 
 nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Edwin Davis - 
 	type = country_event
 	placement = p:xB0C080 # Sw of Columbus - needs to be serpent location, east of cinn
@@ -40,6 +41,49 @@ nda_historic_regional.1848 = { # Great Serpent Mound, Ohio - Ephraim Squier + Ed
 
 	option = { #"Interesting"
 		name = nda_historic_regional.1848.a
+		default_option = yes
+	}
+}
+
+nda_historic_regional.1855 = { # The Devil's Footprints - Exmouth (use as tie in to Pan?)
+	type = country_event
+	placement = p:xC900EF # Exmouth
+	title = nda_historic_regional.1855.t
+	desc = nda_historic_regional.1855.d
+	flavor = nda_historic_regional.1855.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_art_gallery" # should be somewhere wild	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds" # pan coin
+
+	minor_left_icon = scope:location_country
+
+	trigger = { 		
+		game_date >= 1855.2.8 
+		game_date < 1855.5.1 
+
+		# owner of Exmouth
+		OR = {
+			p:xC900EF = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:xC900EF.region			
+		}
+	}
+
+	cooldown = { days = 1000 }	
+
+	immediate = {
+		p:xC900EF = { state = { owner = { save_scope_as = location_country } } }
+	}
+
+	option = { #"Interesting"
+		name = nda_historic_regional.1855.a
 		default_option = yes
 	}
 }
@@ -130,8 +174,6 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 	}
 }
 
-
-# nda_historic_regional.1864 = { } # Masonic Grand Lodge in Egypt (cobining existing Greek, Italian and French lodges. - use as a route to trigger cult eventual spread depending on Egyptian reaction?
 
 # nda_historic_regional.1867 = { } # “The Spiritual Athenæum and the law - DANIEL DUNGLAS HOME sued and lost 
 # The litigation was long, the case finally ending in May, 1868, with a judgment in favor of Mrs. Lyon; the Court holding that as the transfer of money and deed had been accomplished by fraud it was therefore void. 
@@ -435,9 +477,8 @@ nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Don
 
 # nda_historic_regional.1885 = { # Great Serpent Mound, Ohio - F W Putnam of Peabody Museum excavated and rasied money to buy the mound.
 
-# nda_historic_regional.1912 = { # Atlantis: Paul Schliemann, New York American
 
-# nda_historic_regional.1925 = { # The Old Straight Track - Alfred Watkins, Leylines
+
 
 nda_historic_regional.1890 = { # december - first advert for ouija boards "The Ouija: The Wonder of the 19th Century" FT413 p37 1886 was first instance in Ohio
 
@@ -632,4 +673,10 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 	}
 }
 
+# nda_historic_regional.1912 = { # Atlantis: Paul Schliemann, New York American
+
 #nda_historic_regional.1913 # - House of the Sun Golden Dawn spin-off in Havelock North, New Zealand - Is Anglican-Theosopic hybrid? Exagerate effects to increase spread.
+
+# nda_historic_regional.1925 = { # The Old Straight Track - Alfred Watkins, Leylines
+
+#nda_historic_regional.1926 = { # The Lost Continent of Mu, the Motherland of Men, James Churchward

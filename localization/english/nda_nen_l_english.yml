@@ -72,31 +72,31 @@ nda_nen.1845.f: " 'Some of the old timers tell about the black reef off the coas
 nda_nen.1845.a: "This will not do."
 
 nda_nen.1846.t: "Plague in Innsmouth"
-nda_nen.1846.d: "A mysterious plague has hit the coastal town of Innsmouth killing many of the inhabitants.\n\nIt looks like this will cause much decay to the towns principle industries."
+nda_nen.1846.d: "A mysterious plague has hit the coastal town of Innsmouth killing many of the inhabitants.\n\nIt looks like this will cause much decay to the towns principle industries.\n\nThankfully it seems to be isolated locally to just the coastal areas."
 nda_nen.1846.f: " '...it was probably some foreign kind of disease brought from China or somewhere by the shipping...\n\nIt surely was bad enough - there were riots over it, and all sorts of ghastly doings that I don't believe ever got outside town...'"
 nda_nen.1846.a: "Too late to help the poor souls."
 
 # Starry Wisdom Path
 nda_nen.1844.t: "New Church Founded"
-nda_nen.1844.d: "As is the current fashion, a new Church has been founded in Providence, Rhode Island.\n\nIt appears that it may have a more non-christian alignment to all the other sects coming into existence.\n\nAt least this one is doing some good by physically taking the place of an older deserted building from a previously failed Church."
+nda_nen.1844.d: "As is the current fashion, a new Church has been founded in Providence, Rhode Island.\n\nIt appears that it may have a more non-christian alignment to all the other sects coming into existence.\n\nAt least this one is doing some good by physically taking the place of an older deserted building from a previously failed Church.\n\nNo one outside of the congregation is sure what the churhces name #BLUE 'The Starry Wisdom'#! actually means."
 nda_nen.1844.f: "A certain Professor Enoch Bowen, of Providence, has traveled widely in Egypt, and in 1843, in the course of archaeological investigations of the crypt of Nephren-Ka, made the discovery of an ancient box.\n\nUpon unearthing his find in Egypt, Professor Bowen abandoned his research and returned to Providence, where he purchased the Free-Will Church, and has made it the headquarters of the 'Church of Starry Wisdom'."
 nda_nen.1844.a: "New Churches are everywhere!"
 
 nda_nen.1877.t: "Scandal Hit Church!"
-nda_nen.1877.d: "Over the years the Starry Wisdom Church has been the center of many rumours, including being involved in a spate of abductions and disappearences.\n\nAn investigation in 1853 came to nothing, but the stories persist, and a mob of Irish boys swarmed the church in 1869 looking for the missing Patrick Regan.\n\nAfter a recent increase in the number of missing the Mayor is asking us to conduct direct action against the church."
+nda_nen.1877.d: "Over the years the #BLUE Starry Wisdom Church#! has been the center of many rumours, including being involved in a spate of abductions and disappearences.\n\nAn investigation in 1853 came to nothing, but the stories persist, and a mob of Irish boys swarmed the church in 1869 looking for the missing Patrick Regan.\n\nAfter a recent increase in the number of missing the Mayor is asking us to conduct direct action against the church."
 nda_nen.1877.f: "''...stories of blood sacrifice... ...of devil-worship with box found in great Egyptian ruins... people say the Shining Trapezohedron shows them heaven & other worlds, that the Haunter of the Dark tells them secrets in some way... ...They call it up by gazing at the crystal, and have a secret language of their own.'"
 nda_nen.1877.a: "Leave things be."
 nda_nen.1877.b: "A Noble Church!"
 nda_nen.1877.c: "Shut it down!"
 
 nda_nen.1878.t: "Goverment Shutdown!"
-nda_nen.1878.d: "The Starry Wisdom Church in Providence has been shut down!\n\nA large segment of the congregation appears to have left town completely.\n\nA number of items, including Occult paraphernalia, Esoteric books, and a mysterious box were recovered from the building which has now been boarded up."
+nda_nen.1878.d: "The #BLUE Starry Wisdom Church#! in Providence has been shut down!\n\nA large segment of the congregation appears to have left town completely.\n\nA number of items, including Occult paraphernalia, Esoteric books, and a mysterious box were recovered from the building which has now been boarded up."
 nda_nen.1878.f: "'In the centre of the floor rose a curiously angled stone pillar home four feet in height and two in average diameter, covered on each side with bizarre, crudely incised and wholly unrecognizable hieroglyphs. On this pillar rested a metal box of peculiarly asymmetrical form... ...with odd bas-reliefs on the strange box of yellowish metal.\n\n...the figurings were of a monstrous and utterly alien kind; depicting entities which, though seemingly alive, resembled no known life-form ever evolved on this planet.'"
 nda_nen.1878.a: "What's in the Box!"
 nda_nen.1878.b: "Hide it somewhere safe!"
 
 nda_nen.1879.t: "Church Desecrated!"
-nda_nen.1879.d: "The Starry Wisdom Church in Providence has been ransacked by the locals, led by the notorious gang 'The Federal Hill Boys', and forcing the church to close its doors permanently!\n\nA large segment of the congregation appears to have been chased out, and have left town completely.\n\nWith the disappearence of the listed owners the building has now been boarded up."
+nda_nen.1879.d: "The #BLUE Starry Wisdom Church#! in Providence has been ransacked by the locals, led by the notorious gang 'The Federal Hill Boys', and forcing the church to close its doors permanently!\n\nA large segment of the congregation appears to have been chased out, and have left town completely.\n\nWith the disappearence of the listed owners the building has now been boarded up."
 nda_nen.1879.f: "'Some day the city would step in and take the property for lack of heirs, but little good would come of anybody's touching it. Better it be left alone for the years to topple, lest things be stirred that ought to rest forever in their black abyss.'"
 nda_nen.1879.a: "A tragedy or not?"
 
@@ -108,7 +108,7 @@ nda_nen.1880.a: "What's that behind me?"
 # End Starry Wisdom Path
 
 nda_nen.1882.t: "Meteor near Arkham"
-nda_nen.1882.d: "Three professors from Miskatonic University have hastened out to the west of Arkham to investigate tales of a 'great rock' falling from the sky\n\nAfter finding the remains in a crater, the professors found the meteorite to consist of an 'oddly soft' material.\n\nThe sample that they took faded away during experiments, which appears to also be the fate of the main body of the stellar object."
+nda_nen.1882.d: "Three professors from the #BLUE Miskatonic University#! have hastened out to the west of Arkham to investigate tales of a 'great rock' falling from the sky\n\nAfter finding the remains in a crater, the professors found the meteorite to consist of an 'oddly soft' material.\n\nThe sample that they took faded away during experiments, which appears to also be the fate of the main body of the stellar object."
 nda_nen.1882.f: "'The stone, magnetic as it had been, must have had some peculiar electrical property; for it had “drawn the lightning”...\n\nSix times within an hour the farmer saw the lightning strike the furrow in the front yard, and when the storm was over nothing remained but a ragged pit...\n\nAs was natural, the Arkham papers made much of the incident!'\n\n...nothing was left to do but go back to the laboratory and test again the disappearing fragment left carefully cased in lead. That fragment lasted a week, at the end of which nothing of value had been learned of it. When it had gone, no residue was left behind..."
 nda_nen.1882.a: "Disappeared?"
 
@@ -118,7 +118,7 @@ nda_nen.1883.f: "'Never were things of such size seen before, and they held stra
 nda_nen.1883.a: "Polluted?"
 
 nda_nen.1893.t: "An Offer of a Chair"
-nda_nen.1893.d: "The Miskatonic University are asking you to expediate the arrival of a new Chair of Mathematics and Astronomy.\n\nFound washed up in a river near Zurich the unfortunate man has no memory of their past life, but he appears to be a genius in his field, a true savant.\n\nLack of identity documentation is blocking their entry into the country. It is hoped you can help reslove the situation.\n\nBeing totally fluent in English, he has currently adopted the name of James Morrison."
+nda_nen.1893.d: "The #BLUE Miskatonic University#! are asking you to expediate the arrival of a new Chair of Mathematics and Astronomy.\n\nFound washed up in a river near Zurich the unfortunate man has no memory of their past life, but he appears to be a genius in his field, a true savant.\n\nLack of identity documentation is blocking their entry into the country. It is hoped you can help reslove the situation.\n\nBeing totally fluent in English, he has currently adopted the name of James Morrison."
 nda_nen.1893.f: "'He is a man of excellent education, endowed by nature with a phenomenal mathematical faculty.\n\nHe is a genius, a philosopher, an abstract thinker. He has a brain of the first order. He sits motionless, like a spider in the centre of its web...\n\nHis soft, precise fashion of speech leaves a conviction of sincerity...'"
 nda_nen.1893.a: "A Welcome Addition."
 nda_nen.1893.b: "An Unwanted Person."
@@ -134,7 +134,7 @@ nda_nen.1913.f: "The tale within, as translated by scholars tells of a persons t
 nda_nen.1913.a: "A Bizarre Tale..."
 
 nda_nen.1922.t: "Horror at Martin's Beach"
-nda_nen.1922.d: "A number of visitors to Martin's Beach have lost their lives after cruelly being dragged out to sea.\n\nThey had been attracted to the wealthy resort to see the body of a strange 50ft sea creature that had been put on display by Captain James P. Orne.\n\nStormy seas had caused the creature's display to be washed out to sea and Capt. Orne had arranged for the tourists to help in its recovery."
+nda_nen.1922.d: "A number of visitors to Martin's Beach have lost their lives after cruelly being dragged out to sea.\n\nThey had been attracted to the wealthy resort to see the body of a strange 50ft sea creature that had been put on display by Captain James P. Orne.\n\nStormy seas had caused the creature's display to be washed out to sea. Capt. Orne had arranged for the ill-fated tourists to help in its recovery."
 nda_nen.1922.f: "Witnesses describe how they remained routed to the spot, as the tragic victims seemed to be unable to detached themselves from the ropes attached to the body of the creature.\n\nAs the tide rose the indivduals were slowly dragged out to sea.\n\nIn response to this incident, a Professor Alton has already released an article with the title #ITALIC 'Are Hypnotic Powers Confined to Recognised Humanity?' #!"
 nda_nen.1922.a: "How Horrific..."
 nda_nen.1922.b: "Hail the Servants of Dagon!"

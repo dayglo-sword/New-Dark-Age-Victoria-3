@@ -1,3 +1,20 @@
+Version v1.10.5
+
+Major Changes
+
+
+Minor Changes
+Style Custom Events to new v1.10 styling
+Add more tooltips for Spiritualism choices
+Add 'Devil's Footprints' historic regional event
+
+Bug Fixes
+Fix New America naming bug
+Fix premature appearance of Masonic Lodge toolbar
+Localisation and Spelling errors
+
+------
+
 Version v1.10.4
 
 Major Changes

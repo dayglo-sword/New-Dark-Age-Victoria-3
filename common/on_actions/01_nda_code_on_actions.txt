@@ -291,6 +291,7 @@ nda_monthly_historical_on_action = {
 		nda_historic.1893
 
 		nda_historic_regional.1848
+		nda_historic_regional.1855
 		nda_historic_regional.1860
 		nda_historic_regional.1864
 		nda_historic_regional.1870
@@ -301,7 +302,8 @@ nda_monthly_historical_on_action = {
 		nda_historic_regional.1892
 		nda_historic_regional.1901
 
-		nda_masonic.1837		
+		nda_masonic.1837
+		nda_masonic.1854		
 	}
 }
 

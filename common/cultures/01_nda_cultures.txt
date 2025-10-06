@@ -1,7 +1,7 @@
 ﻿nda_cul_cultist={
 	color=  { 142 36 170 } # rgb{ 117 127 174 }
 	religion = nda_rel_cultist
-	#traits = { eldritch_culture_group }
+
 	heritage = heritage_nda_cultist
 	language = language_nda_cultist
 	traditions = { }
@@ -45,7 +45,7 @@
 nda_cul_yigian={
 	color= { 205 220 57 } #rgb{ 21 191 16 }
 	religion = nda_rel_cultist
-	#traits = { eldritch_culture_group abomination }
+
 	heritage = heritage_nda_yigian
 	language = language_nda_cultist
 	traditions = { }
@@ -93,7 +93,7 @@ nda_cul_yigian={
 nda_cul_dagonic={
 	color= rgb { 11 84 179 }
 	religion = nda_rel_cultist
-	#traits = { eldritch_culture_group abomination }
+
 	heritage = heritage_nda_dagonic
 	language = language_nda_cultist
 	traditions = { }
@@ -223,19 +223,19 @@ nda_cul_trueyankee={
 	}
 }
 
-nda_cul_atlantian={
-	color=  { 36 142 170 } # rgb{ 117 127 174 }
+nda_cul_atlantian={ # also includes names from Mu - have Early Atlantis and Late Mu co-exist before the Thurian Age
+	color=  { 36 142 170 } 
 	religion = nda_rel_cultist
-	#traits = { eldritch_culture_group }
+
 	heritage = heritage_nda_atlantian
-	language = language_nda_cultist
+	language = language_nda_atlantian
 	traditions = { }
 	
 	male_common_first_names={
-		Kathulos Thulsa 
+		Kathulos Thulsa Surama Bothon Tyog Imashmo Zanthu
 	}
 	female_common_first_names = {
-		Kathulos Thulsa 
+		Kathulos Thulsa Surama Bothon Tyog Imashmo Zanthu
 	}
 	common_last_names={
 		of_atlantis 
@@ -243,6 +243,7 @@ nda_cul_atlantian={
 
 	noble_last_names = {
 		of_atlantis
+		of_mu
 	}
 	
 	male_regal_first_names = {
@@ -253,6 +254,8 @@ nda_cul_atlantian={
 	}
 	regal_last_names = {
 		# populate with names here
+		of_atlantis
+		of_mu
 	}	
 	
 	ethnicities = { # have a bit of a mix

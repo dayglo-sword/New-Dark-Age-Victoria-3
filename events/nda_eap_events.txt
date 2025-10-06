@@ -319,34 +319,44 @@ nda_eap.14 = { # Red Death Redemption - post Red Death Spiritualist boost
 		name = nda_eap.14.a
 		default_option = yes
 
-		every_scope_state = {
-			limit = { has_variable = nda_poe_red_death_state }
-			if = {
-				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-				set_variable = { # ongoing conversion
-					name = nda_rel_boost_spiritualism						
-					months = 12
-					value = nda_trivial_conversion
-				}		
-			
-			}
+		custom_tooltip = { 
+			text = nda_eap.14.a_tt 
+
+			every_scope_state = {
+				limit = { has_variable = nda_poe_red_death_state }
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritualism						
+						months = 12
+						value = nda_trivial_conversion
+					}		
+				
+				}
+			}		
 		}
+
+
 	}
 
 	option = { # Promote for major boost
 		name = nda_eap.14.b
 
-		every_scope_state = {
-			limit = { has_variable = nda_poe_red_death_state }
-			if = {
-				limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
-				set_variable = { # ongoing conversion
-					name = nda_rel_boost_spiritualism						
-					months = 12
-					value = nda_small_conversion
-				}		
-			
-			}
+		custom_tooltip = { 
+			text = nda_eap.14.b_tt 
+
+			every_scope_state = {
+				limit = { has_variable = nda_poe_red_death_state }
+				if = {
+					limit = { NOT = { has_variable = nda_rel_boost_spiritualism }}					
+					set_variable = { # ongoing conversion
+						name = nda_rel_boost_spiritualism						
+						months = 12
+						value = nda_small_conversion
+					}		
+				
+				}
+			}				
 		}
 	}
 
@@ -356,7 +366,7 @@ nda_eap.14 = { # Red Death Redemption - post Red Death Spiritualist boost
 	}
 }
 
-nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
+nda_eap.15 = { # Turn Away - post Inqusition Spiritualist or Atheist boost
 	type = country_event
 	placement = ROOT
 	title = nda_eap.15.t
@@ -406,7 +416,7 @@ nda_eap.15 = { # Turn Away - post Inqusition Spiritualist boost
 			set_local_variable = is_spiritualism
 		 }
 
-		 save_scope_as =  
+ 	 	save_scope_as = inqusition_country
 	}	
 	
 	option = { # Ignore for minor boost

@@ -19,10 +19,12 @@ nda_eap.13.a: "Our Condolences"
 nda_eap.13.a_tt: "A large number of rich people in the Capital have died from the Red Death."
 
 nda_eap.14.t: "Red Death Redemption"
-nda_eap.14.d: "Now that the horror of the Red Death has passed the families of the dead are seeking solace by try to comunicate with their loved ones via the use of Mediums.\n\nAs a result it appears that Spiritualism is spreading throughout the country."
+nda_eap.14.d: "Now that the horror of the Red Death has passed the families of the dead are seeking solace by trying to comunicate with their loved ones via the use of Mediums.\n\nAs a result it appears that Spiritualism is spreading throughout the country."
 nda_eap.14.f: "'I have been interested in Spiritualism as belonging to the category of mysticism, and as a side line to my own phase of mystery shows I have associated myself with mediums, joining the rank and file and held seances as an independent medium to fathom the truth of it all. At the time I appreciated the fact that I surprised my clients, but while aware of the fact that I was deceiving them I did not see or understand the seriousness of trifling with such sacred sentimentality and the baneful result which inevitably followed.'\n - Harry Houdini, 1924"
 nda_eap.14.a: "Let them grieve."
+nda_eap.14.a_tt: "A small number of people converts to Spiritualism."
 nda_eap.14.b: "We should encourage this."
+nda_eap.14.b_tt: "A respectable number of people converts to Spiritualism."
 nda_eap.14.c: "This heresy must stop!."
 
 nda_eap.15.t: "A Questionable Legacy"
