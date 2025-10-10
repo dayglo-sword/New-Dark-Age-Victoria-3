@@ -451,3 +451,48 @@ nda_dagon_master = {
 	
 	value = 3
 }
+
+### atlantean
+nda_atlantean_trait = {
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/cultist.dds"
+
+	character_modifier = {
+		character_health_add = 0.8
+		character_popularity_add = 60
+	}
+
+	command_modifier = {
+		unit_defense_mult = 0.1
+		unit_offense_mult = 0.05
+	}
+	
+	country_modifier = {
+		country_influence_add = 50
+		country_authority_add = 50
+	}	
+
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.4
+		political_movement_pop_attraction_mult = 0.20
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.20
+		interest_group_pop_attraction_mult = 0.4
+		#interest_group_approval_add = 1
+	}
+
+	possible = {
+
+	}
+	
+	weight = 0
+	
+	replace = {	
+												
+	}
+	
+	value = 3
+}

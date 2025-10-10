@@ -1,0 +1,23 @@
+﻿
+battle_condition_nda_darks_magics = {
+	icon = "gfx/interface/icons/battle_conditions/battle_condition_charted_terrain.dds"
+
+	modifier = {
+		unit_morale_loss_mult = -1
+		battle_combat_width_mult = 10
+		unit_kill_rate_add = 0.15
+	}
+
+	possible = {
+		exists = scope:character
+		scope:character = {
+			has_role = general
+			has_trait = nda_atlantean_trait
+		}
+		NOT = { has_battle_condition = battle_condition_blunder }
+	}
+
+	weight = {
+		value = 3
+	}
+}

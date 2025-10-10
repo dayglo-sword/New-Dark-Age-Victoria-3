@@ -14,7 +14,7 @@ heritage_nda_yigian = {
 	trait_group = heritage_group_nda_cultist
 }
 
-heritage_nda_atlantian = {
+heritage_nda_atlantean = {
 	type = heritage
 	trait_group = heritage_group_nda_cultist
 }
@@ -24,7 +24,7 @@ language_nda_cultist = {
 	trait_group = language_group_nda_cultist
 }
 
-language_nda_atlantian = {
+language_nda_atlantean = {
 	type = language
 	trait_group = language_group_nda_cultist	
 }

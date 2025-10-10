@@ -123,8 +123,8 @@ nda_cul_dagonic_standard_of_living_modifier_positive: ""
 nda_cul_dagonic_standard_of_living_modifier_negative: ""
 nda_cul_trueyankee_standard_of_living_modifier_positive: ""
 nda_cul_trueyankee_standard_of_living_modifier_negative: ""
-nda_cul_atlantian_standard_of_living_modifier_positive: ""
-nda_cul_atlantian_standard_of_living_modifier_negative: ""
+nda_cul_atlantean_standard_of_living_modifier_positive: ""
+nda_cul_atlantean_standard_of_living_modifier_negative: ""
 
 # Religion SOL modifiers - not actually needed but vic3-tiger shows error?
 nda_rel_cultist_standard_of_living_modifier_positive: ""

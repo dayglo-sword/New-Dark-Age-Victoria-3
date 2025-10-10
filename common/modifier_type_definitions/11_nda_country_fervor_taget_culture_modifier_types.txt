@@ -30,7 +30,7 @@ country_fervor_target_nda_cul_trueyankee_add={
 	}
 }
 
-country_fervor_target_nda_cul_atlantian_add={
+country_fervor_target_nda_cul_atlantean_add={
 	decimals=1
 	color=good
 	game_data={

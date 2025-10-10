@@ -38,12 +38,12 @@ nda_cul_trueyankee_fervor_target_modifier_negative = {
 	country_fervor_target_nda_cul_trueyankee_add = 1
 }
 
-nda_cul_atlantian_fervor_target_modifier_positive = {
+nda_cul_atlantean_fervor_target_modifier_positive = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
-	country_fervor_target_nda_cul_atlantian_add = 1
+	country_fervor_target_nda_cul_atlantean_add = 1
 }
 
-nda_cul_atlantian_fervor_target_modifier_negative = {
+nda_cul_atlantean_fervor_target_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
-	country_fervor_target_nda_cul_atlantian_add = 1
+	country_fervor_target_nda_cul_atlantean_add = 1
 }

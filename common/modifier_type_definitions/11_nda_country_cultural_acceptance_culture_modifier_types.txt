@@ -30,7 +30,7 @@ country_nda_cul_trueyankee_cultural_acceptance_add={
 	}
 }
 
-country_nda_cul_atlantian_cultural_acceptance_add={
+country_nda_cul_atlantean_cultural_acceptance_add={
 	decimals=1
 	color=good
 	game_data={

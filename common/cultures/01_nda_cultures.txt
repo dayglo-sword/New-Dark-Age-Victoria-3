@@ -44,7 +44,7 @@
 
 nda_cul_yigian={
 	color= { 205 220 57 } #rgb{ 21 191 16 }
-	religion = nda_rel_cultist
+	religion = nda_rel_yigian
 
 	heritage = heritage_nda_yigian
 	language = language_nda_cultist
@@ -223,12 +223,12 @@ nda_cul_trueyankee={
 	}
 }
 
-nda_cul_atlantian={ # also includes names from Mu - have Early Atlantis and Late Mu co-exist before the Thurian Age
+nda_cul_atlantean={ # also includes names from Mu - have Early Atlantis and Late Mu co-exist before the Thurian Age
 	color=  { 36 142 170 } 
 	religion = nda_rel_cultist
 
-	heritage = heritage_nda_atlantian
-	language = language_nda_atlantian
+	heritage = heritage_nda_atlantean
+	language = language_nda_atlantean
 	traditions = { }
 	
 	male_common_first_names={

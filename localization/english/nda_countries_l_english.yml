@@ -32,10 +32,9 @@ heritage_group_nda_cultist: "Hyborian"
 heritage_nda_cultist: "Cultist"
 heritage_nda_dagonic: "Dagonic"
 heritage_nda_yigian: "Yigian"
-heritage_nda_atlantian: "Atlantian"
 language_group_nda_cultist: "Hyborian"
 language_nda_cultist: "Neo Hyborian"
-language_nda_atlantian: "Naacal"
+
 # Religion
 heritage_group_nda_esoteric: "Hyborian Esoteric"
 heritage_nda_esoteric: "Esoteric" 

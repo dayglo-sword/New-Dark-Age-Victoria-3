@@ -1,0 +1,26 @@
+﻿l_english:
+
+heritage_nda_atlantean: "Atlantean"
+language_nda_atlantean: "Naacal"
+nda_cul_atlantean: "Atlantean"
+
+battle_condition_nda_darks_magics: "Dark Magics"
+battle_condition_nda_darks_magics_desc: "The Atlantean has brought forth Dark Magics to use against their opponents."
+
+# traits
+nda_atlantean_trait: "Atlantean"
+nda_atlantean_trait_desc: "This person is a survivor of lost Atlantis, Master of the Dark Arts."
+
+# names
+Kathulos: "Kathulos"
+Thulsa: "Thulsa"
+Surama: "Surama"
+Bothon: "Bothon"
+Tyog: "T'yog"
+Imashmo: "Imash-Mo"
+Zanthu: "Zanthu"
+
+of_atlantis: "of Atlantis"
+of_ludekta: "of Ludekta"
+of_mu: "of Mu"
+of_agladdho: "of Aglad-Dho"

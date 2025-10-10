@@ -38,12 +38,12 @@ nda_cul_trueyankee_cultural_acceptance_modifier_negative = {
 	country_nda_cul_trueyankee_cultural_acceptance_add = 1
 }
 
-nda_cul_atlantian_cultural_acceptance_modifier_positive = {
+nda_cul_atlantean_cultural_acceptance_modifier_positive = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
-	country_nda_cul_atlantian_cultural_acceptance_add = 1
+	country_nda_cul_atlantean_cultural_acceptance_add = 1
 }
 
-nda_cul_atlantian_cultural_acceptance_modifier_negative = {
+nda_cul_atlantean_cultural_acceptance_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
-	country_nda_cul_atlantian_cultural_acceptance_add = 1
+	country_nda_cul_atlantean_cultural_acceptance_add = 1
 }

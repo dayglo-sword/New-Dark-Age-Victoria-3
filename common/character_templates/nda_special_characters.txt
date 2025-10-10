@@ -39,7 +39,7 @@ nda_nephren_ka_character_template = {
     culture = cu:nda_cul_yigian
     female = no
     religion = nda_rel_yigian
-    ideology = ideology_reformer
+    ideology = ideology_royalist
     interest_group = ig_nda_cult_worshippers
 	dna = nda_dna_nephren_ka
     #birth_date = 1812.2.7
@@ -57,12 +57,48 @@ nda_nitocris_character_template = {
     culture = cu:nda_cul_yigian
     female = yes
     religion = nda_rel_yigian
-    ideology = ideology_reformer
+    ideology = ideology_royalist
     interest_group = ig_nda_cult_worshippers
 	dna = nda_dna_nephren_ka
     #birth_date = 1812.2.7
     traits = { 
 		nda_yig_master
+		ambitious
+		wrathful
+	}
+	#is_agitator = yes # add only if available
+}
+
+nda_kathulos_character_template = {
+	first_name = Kathulos
+	last_name = of_atlantis
+    culture = cu:nda_cul_yigian
+    female = no
+    religion = nda_rel_yigian
+    ideology = ideology_royalist
+    interest_group = ig_nda_cult_worshippers
+	dna = nda_dna_kathulos
+    #birth_date = 1812.2.7
+    traits = { 
+		nda_atlantean_trait 
+		ambitious
+		wrathful
+	}
+	#is_agitator = yes # add only if available
+}
+
+nda_surama_character_template = {
+	first_name = Surama
+	last_name = of_atlantis
+    culture = cu:nda_cul_yigian
+    female = no
+    religion = nda_rel_yigian
+    ideology = ideology_royalist
+    interest_group = ig_nda_cult_worshippers
+	dna = nda_dna_surama
+    #birth_date = 1812.2.7
+    traits = { 
+		nda_atlantean_trait 
 		ambitious
 		wrathful
 	}
