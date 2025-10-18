@@ -8,22 +8,30 @@
 
 	required_states_fraction = 0.30 # 0.63 is way too high when multi GPs get homelands.
 	
-	ai_will_do = { always = yes }
+	ai_will_do = { has_technology_researched = nationalism }
 
 	possible = {
 		country_has_primary_culture = cu:nda_cul_cultist
-
+		has_technology_researched = pan-nationalism
 		any_country = {
 			OR = {
 				country_has_primary_culture = cu:nda_cul_cultist
 			}			
 			has_technology_researched = pan-nationalism
+			count >= 3
 		}
 	}
 
 	max_num_formation_candidates = 3
 	can_be_formation_candidate = {
 		country_rank >= rank_value:major_power
+	}
+
+	can_be_unification_target = { # don't steal potential YIG DAG lands
+		NOR = {
+			has_journal_entry = je_nda_cult_to_yigian
+			has_journal_entry = je_nda_cult_to_dagonic
+		}
 	}
 }
 
@@ -37,22 +45,27 @@ YIG = {
 
 	required_states_fraction = 0.3 # 0.63 is way too high when multi GPs get homelands.
 	
-	ai_will_do = { always = yes }
+	ai_will_do = { has_technology_researched = nationalism }
 
 	possible = {
 		country_has_primary_culture = cu:nda_cul_yigian
-	
+		has_technology_researched = nationalism	
 		any_country = {
 			OR = {
 				country_has_primary_culture = cu:nda_cul_yigian
 			}			
 			has_technology_researched = nationalism
+			count >= 3
 		}
 	}
 	
 	max_num_formation_candidates = 3
 	can_be_formation_candidate = {
 		country_rank >= rank_value:major_power
+	}
+
+	can_be_unification_target = { 
+		country_has_primary_culture = cu:nda_cul_yigian
 	}
 }
 
@@ -66,22 +79,27 @@ DGN = {
 
 	required_states_fraction = 0.3 # 0.63 is way too high when multi GPs get homelands.
 	
-	ai_will_do = { always = yes }
+	ai_will_do = { has_technology_researched = nationalism }
 
 	possible = {
 		country_has_primary_culture = cu:nda_cul_dagonic
-
+		has_technology_researched = nationalism
 		any_country = {
 			OR = {
 				country_has_primary_culture = cu:nda_cul_dagonic
 			}			
 			has_technology_researched = nationalism
+			count >= 3
 		}
 	}
 
 	max_num_formation_candidates = 3
 	can_be_formation_candidate = {
 		country_rank >= rank_value:major_power
+	}
+
+	can_be_unification_target = { 
+		country_has_primary_culture = cu:nda_cul_dagonic
 	}
 }
 

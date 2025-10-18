@@ -1020,7 +1020,7 @@ AZB = { # Azerbaijan
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_country_type = unrecognized
 				NOT = {
 					has_technology_researched = nationalism
@@ -1116,8 +1116,8 @@ BIC = { # East India Company
 		priority = 10
 
 		trigger = {
-			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				has_government_type = gov_chartered_company
 			}
 		}
@@ -1131,8 +1131,8 @@ BIC = { # East India Company
 		priority = 25
 
 		trigger = {
-			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				NOT = {
 					has_government_type = gov_chartered_company
 				}
@@ -1148,8 +1148,8 @@ BIC = { # East India Company
 		priority = 25
 
 		trigger = {
-			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				capital ?= {
 					region = sr:region_madras
 				}
@@ -1173,8 +1173,8 @@ BIC = { # East India Company
 		priority = 25
 
 		trigger = {
-			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				capital ?= {
 					region = sr:region_bombay
 				}
@@ -1198,8 +1198,8 @@ BIC = { # East India Company
 		priority = 25
 
 		trigger = {
-			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				capital ?= {
 					region = sr:region_bengal
 				}
@@ -1223,7 +1223,7 @@ BIC = { # East India Company
 		priority = 25
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = bengal_free_state
 				capital ?= {
 					region = sr:region_bengal
@@ -1243,7 +1243,7 @@ BIC = { # East India Company
 		priority = 25
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = selected_federal_solution_var
 				any_subject_or_below = {
 					has_variable = indian_federation_member
@@ -1251,6 +1251,7 @@ BIC = { # East India Company
 			}
 		}
 	}
+
 	dynamic_country_name = { 
 		name = nda_east_india_cabal
 		adjective = CULTIST_ADJ
@@ -1260,7 +1261,7 @@ BIC = { # East India Company
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				is_cultist_country = yes
 			}
@@ -1279,7 +1280,7 @@ BNT = { # Banat
 
 		trigger = {
 			coa_def_monarchy_flag_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
 				any_primary_culture = {
 					cu:serb ?= this
 				}
@@ -1299,7 +1300,9 @@ DEI = { # East Indies
 		priority = 0
 
 		trigger = {
-			coa_def_subject_trigger = yes
+			scope:actor ?= {
+				is_subject = yes
+			}
 		}
 	}
 }
@@ -1620,7 +1623,7 @@ LOM = { # Lombardy-Venetia
 		priority = 5
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				owns_entire_state_region = STATE_VENETIA
 			}
 		}
@@ -1636,7 +1639,7 @@ VEN = { # Venetia-Lombardy
 		priority = 5
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				owns_entire_state_region = STATE_LOMBARDY
 			}
 		}
@@ -1649,7 +1652,7 @@ VEN = { # Venetia-Lombardy
 		priority = 10
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				OR = {
 					has_law_or_variant = law_type:law_parliamentary_republic
 					has_law_or_variant = law_type:law_presidential_republic
@@ -1878,7 +1881,7 @@ HBC = { # Hudson Bay Company
 		
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_secessionist = no
 				is_cultist_country = yes
 			}
@@ -2443,7 +2446,7 @@ RUS = { # Russia
 
 		trigger = {
 			coa_def_communist_flag_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
 				OR = {
 					any_scope_state = {
 						state_region = {
@@ -3851,7 +3854,7 @@ PER = {
 		priority = 1
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				NOT = { is_country_type = unrecognized }
 			}
 		}
@@ -3868,7 +3871,7 @@ AFG = {
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_law_or_variant = law_type:law_monarchy
 				was_formed_from = HER
 			}
@@ -3883,7 +3886,7 @@ AFG = {
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				country_has_state_religion = rel:hindu
 				was_formed_from = KAF
 			}
@@ -3901,7 +3904,7 @@ GEO = {
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_country_type = unrecognized
 				NOT = {
 					has_technology_researched = nationalism
@@ -3921,7 +3924,7 @@ LUR = {
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				is_country_type = unrecognized
 				NOT = {
 					has_technology_researched = nationalism
@@ -4136,7 +4139,7 @@ BEI = {
 		priority = 15
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				has_global_variable = china_shatters
 				global_var:chinese_central_government ?= THIS
 				capital = {
@@ -4159,7 +4162,7 @@ KAF = {
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				OR = {
 					country_has_state_religion = rel:sunni
 					country_has_state_religion = rel:shiite
@@ -4327,8 +4330,8 @@ BHT = {
 		priority = 1
 
 		trigger = {
-			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				NOT = {
 					has_government_type = gov_chartered_company
 				}
@@ -4347,7 +4350,7 @@ ALK = {
 		priority = 5
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				is_subject = yes
 				is_subject_type = subject_type_chartered_company
 			}
@@ -4361,7 +4364,7 @@ ALK = {
 		priority = 0
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				any_primary_culture = {
 					cu:russian ?= this
 				}
@@ -4379,8 +4382,8 @@ IDS = {
 		priority = 1
 
 		trigger = {
-			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				has_variable = indian_federation_member
 				any_overlord_or_above = {
 					has_variable = selected_federal_solution_var
@@ -4399,8 +4402,8 @@ BGL = {
 		priority = 1
 
 		trigger = {
-			coa_def_subject_trigger = yes
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				has_variable = indian_federation_member
 				any_overlord_or_above = {
 					has_variable = selected_federal_solution_var
@@ -4419,21 +4422,21 @@ CRO = {
 		priority = 1
 
 		trigger = {
-			coa_def_subject_trigger = yes
 			OR = {
 				AND = {
 					c:AUS ?= {
 						has_law_or_variant = law_type:law_monarchy
 					}
-					scope:actor = {
+					scope:actor ?= {
 						is_subject_of = c:AUS
 					}
 				}
-				scope:actor = {
+				scope:actor ?= {
 					has_law_or_variant = law_type:law_monarchy
 				}
 			}
-			scope:actor = {
+			scope:actor ?= {
+				is_subject = yes
 				any_scope_state = {
 					state_region = s:STATE_CROATIA
 				}
@@ -4481,7 +4484,7 @@ KUK = {
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_law_or_variant = law_type:law_monarchy
 				was_formed_from = AUS
 			}
@@ -4496,7 +4499,7 @@ KUK = {
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_law_or_variant = law_type:law_council_republic
 			}
 		}
@@ -4513,7 +4516,7 @@ AUS = {
 
 		trigger = {
 			exists = scope:actor
-			scope:actor = {
+			scope:actor ?= {
 				has_law_or_variant = law_type:law_corporate_state
 			}
 		}
@@ -4531,7 +4534,7 @@ MON = { # serbian_montenegro
 
 		trigger = {
 			exists = c:MON
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = serbian_montenegro
 			}
 		}
@@ -4548,7 +4551,7 @@ SER = { # serbian_montenegro
 
 		trigger = {
 			exists = c:SER
-			scope:actor = {
+			scope:actor ?= {
 				has_variable = serbian_montenegro
 			}
 		}
@@ -4584,7 +4587,7 @@ SIB = {
 		priority = 1
 
 		trigger = {
-			scope:actor = {
+			scope:actor ?= {
 				has_government_type = gov_cybernetic_state
 			}
 		}

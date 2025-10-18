@@ -1,7 +1,6 @@
-Version v1.10.5
+Version v1.11.0
 
 Major Changes
-
 
 Minor Changes
 Style Custom Events to new v1.10 styling

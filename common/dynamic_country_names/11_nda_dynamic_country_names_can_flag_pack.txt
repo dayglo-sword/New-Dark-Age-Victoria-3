@@ -127,13 +127,13 @@ ONT = { # Ontario
 
 		is_main_tag_only = yes
 		priority = 0
-		
+
 		trigger = {
 			exists = c:GBR
 			c:GBR = {
 				has_diplomatic_pact = {
 					who = c:ONT
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
@@ -157,10 +157,10 @@ ORG = { # Oregon
 	dynamic_country_name = {
 		name = dyn_c_columbia
 		adjective = dyn_c_columbia_adj
-		
+
 		is_main_tag_only = yes
 		priority = 0
-		
+
 		trigger = {
 			exists = scope:actor
 			OR = {
@@ -176,13 +176,13 @@ ORG = { # Oregon
 				}
 				AND = {
 					exists = c:HBC
-					scope:actor = {
+					scope:actor ?= {
 						is_subject_of = c:HBC
 					}
 				}
 				AND = {
 					exists = c:CAN
-					scope:actor = {
+					scope:actor ?= {
 						is_subject_of = c:CAN
 					}
 				}
@@ -192,21 +192,22 @@ ORG = { # Oregon
 	dynamic_country_name = {
 		name = dyn_c_columbia_district
 		adjective = dyn_c_columbia_adj # no need for a different adjective from the above entry
-		
+
 		is_main_tag_only = yes
 		priority = 0
-		
+
 		trigger = {
 			exists = c:GBR
 			c:GBR = {
 				has_diplomatic_pact = {
 					who = c:ORG
-					type = puppet
+					type = colony
 					is_initiator = yes
 				}
 			}
 		}
 	}
+	
 	dynamic_country_name = {
 		name = nda_british_columbia
 		adjective = nda_british_columbia_adj

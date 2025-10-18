@@ -47,6 +47,7 @@
 	# Root = character
 	# scope:culture = The cultural identity of the movement, if any
 	# scope:religion = The religious identity of the movement, if any
+	# scope:interest_group = The interest group in the movement's country matching the character's IG - use this instead of character's actual IG so that it works for exiled agitators
 	character_support_trigger = {}
 	
 	# The weight for an agitator to support movements of this type, compared to other movements that are valid for them to support
@@ -54,6 +55,10 @@
 	# scope:culture = The cultural identity of the movement, if any
 	# scope:religion = The religious identity of the movement, if any
 	character_support_weight = {}
+	
+	# Trigger that must evaluate true for a movement to be able to pressure an Interest Group (this is in addition to the required supporting clout)
+	# Root = interest group
+	can_pressure_interest_group = {}
 	
 	# Trigger that must evaluate true for individuals in a pop to be able to support movements of this type
 	# Root = pop
@@ -82,6 +87,11 @@
 		# Root = political movement
 		# scope:clout = combined clout of IGs that would become insurrectionary
 		possible = {}
+		
+		# Trigger for whether an interest group can join a civil war started by the movement
+		# Root = interest group
+		# scope:political_movement = political movement
+		interest_group_can_join = {}	
 		
 		# Weight for whether this civil war type should be selected over others
 		# Root = political movement
@@ -121,6 +131,9 @@
 	
 	# Multiplies the impact law enactment has on the activism of this movement type
 	law_enactment_radicalism_multiplier = x
+	
+	# Multiplies the impact active laws have on the activism of this movement type
+	active_law_radicalism_multiplier = x
 	
 	# Bespoke factors for increasing/decreasing the activism of movements of this type
 	additional_radicalism_factors = {}	

@@ -233,6 +233,11 @@
 			value = 100
 		}
 
+		interest_group_can_join = {
+			leader = { religion = scope:political_movement.religion }
+		}
+
+
 		state_weight = {
 			value = 1
 
@@ -283,6 +288,10 @@
 
 		weight = {
 			value = 1000
+		}
+
+		interest_group_can_join = {
+			leader = { religion = scope:political_movement.religion }
 		}
 
 		state_weight = {
@@ -672,6 +681,10 @@ movement_spiritualist_minority = {
 
 		weight = {
 			value = 1000
+		}
+
+		interest_group_can_join = {
+			leader = { religion = scope:political_movement.religion }
 		}
 
 		state_weight = {
