@@ -38,6 +38,7 @@ nda_nephren_ka_character_template = {
 	last_name = nephren-ka
     culture = cu:nda_cul_yigian
     female = no
+	historical = yes
     religion = nda_rel_yigian
     ideology = ideology_royalist
     interest_group = ig_nda_cult_worshippers
@@ -56,6 +57,7 @@ nda_nitocris_character_template = {
 	last_name = nitocris
     culture = cu:nda_cul_yigian
     female = yes
+	historical = yes
     religion = nda_rel_yigian
     ideology = ideology_royalist
     interest_group = ig_nda_cult_worshippers
@@ -72,10 +74,11 @@ nda_nitocris_character_template = {
 nda_kathulos_character_template = {
 	first_name = Kathulos
 	last_name = of_atlantis
-    culture = cu:nda_cul_yigian
+    culture = cu:nda_cul_atlantean
     female = no
+	historical = yes
     religion = nda_rel_yigian
-    ideology = ideology_royalist
+	ideology = ideology_traditionalist
     interest_group = ig_nda_cult_worshippers
 	dna = nda_dna_kathulos
     #birth_date = 1812.2.7
@@ -84,23 +87,24 @@ nda_kathulos_character_template = {
 		ambitious
 		wrathful
 	}
-	#is_agitator = yes # add only if available
+	is_agitator = yes # add only if available
 }
 
 nda_surama_character_template = {
 	first_name = Surama
 	last_name = of_atlantis
-    culture = cu:nda_cul_yigian
+    culture = cu:nda_cul_atlantean
     female = no
-    religion = nda_rel_yigian
-    ideology = ideology_royalist
+	historical = yes
+    religion = nda_rel_cultist
+	ideology = ideology_traditionalist
     interest_group = ig_nda_cult_worshippers
-	dna = nda_dna_surama
+	dna = nda_dna_kathulos
     #birth_date = 1812.2.7
     traits = { 
 		nda_atlantean_trait 
 		ambitious
 		wrathful
 	}
-	#is_agitator = yes # add only if available
+	is_agitator = yes # add only if available
 }

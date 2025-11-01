@@ -160,6 +160,7 @@
 	
 	revolution = {
 		possible = {
+			exists = root.culture
 			political_movement_support >= 0.15 # too high?
 			owner ?= {
 				any_scope_state = {

@@ -1,38 +1,4 @@
 ﻿
-#ecchi_gbr_conan_doyle_character_template = {
-#    first_name = Arthur
-#    last_name = ecchi_Conan_Doyle
-#    culture = cu:scottish
-#    female = no
-#    religion = protestant
-#    ideology = ideology_royalist
-#    interest_group = ig_intelligentsia
-#	dna = ecchi_dna_arthur_conan_doyle
-#    birth_date = 1859.5.22
-#    traits = { meticulous persistent cautious }
-#    interest_group_leader_usage = {
-#        country_trigger = {
-#            OR = {
-#                AND = {
-#                    exists = c:GBR
-#                    this = c:GBR
-#                    NOT = { exists = c:SCO }
-#                }
-#                AND = {
-#                    exists = c:SCO
-#                    this = c:SCO
-#                }
-#            }
-#        }
-#        interest_group_trigger = {
-#            is_interest_group_type = ig_intelligentsia
-#        }
-#        earliest_usage_date = 1890.1.1
-#        latest_usage_date = 1930.7.7
-#        chance = 90
-#    }
-#}
-
 ecchi_gbr_dickens_character_template = {
     first_name = Charles
     last_name = ecchi_Dickens
@@ -336,7 +302,7 @@ nda_count_orlok = {
 	historical = yes
 	culture = cu:szekely
 	female = no
-	dna = dna_dracula
+	dna = nda_dna_orlok
 	interest_group = ig_landowners
 	ideology = ideology_traditionalist
 	is_general = yes

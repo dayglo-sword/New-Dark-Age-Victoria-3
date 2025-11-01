@@ -11,6 +11,9 @@ battle_condition_nda_darks_magics_desc: "The Atlantean has brought forth Dark Ma
 nda_atlantean_trait: "Atlantean"
 nda_atlantean_trait_desc: "This person is a survivor of lost Atlantis, Master of the Dark Arts."
 
+tradition_nda_grand_union: "Unity of Atlantis"
+tradition_nda_grand_union_desc: "Some power is unifying the peoples against the Colonials.\n'#ITALIC I sensed a giant intellect and a monstrous genius behind the veil, a genius powerful enough to accomplish this union and hold it together#!.'"
+
 # names
 Kathulos: "Kathulos"
 Thulsa: "Thulsa"
@@ -24,3 +27,33 @@ of_atlantis: "of Atlantis"
 of_ludekta: "of Ludekta"
 of_mu: "of Mu"
 of_agladdho: "of Aglad-Dho"
+
+# journal entries
+je_nda_atlantean_surama: "The Schemes of Surama"
+je_nda_atlantean_surama_reason: "The Sorcerer Surama of Atlantis has returned, and plans to re-envoke the old ways of the Atlanteans.\n\nThey seem to be working with the natives to resist foreign influences."
+
+je_nda_atlantean_surama_is_present_tt: "Surama is present in the country"
+je_nda_atlantean_surama_is_gone_tt: "Surama is no longer present in the country"
+
+# events
+nda_atlantean.10.t: "A Tomb Uncovered"
+nda_atlantean.10.d: "A strange tomb has been uncovered. It was hidden deep with the deserts of North Africa. The enscriptions unpon its walls undecipherable. When the tomb was first openned it was first thought that the sarcophgos that lay within still contained its contents, but it now appears to be empty."
+nda_atlantean.10.f: "''"
+nda_atlantean.10.a: "Interesting"
+nda_atlantean.10.b: "Interesting"
+
+nda_atlantean.40.t: "A Malignant Influence"
+nda_atlantean.40.d: "Unrest seems to be spreading among the African Cultures. It seems that some foreign influence is spreading dissent and talking of independence, oe even of a grand African empire."
+nda_atlantean.40.f: "'I found, in roundabout ways, that Africa was a seething cauldron of rebellion from Morocco to Cape Town. The old, old vow had been made again...'"
+nda_atlantean.40.a: "But what is the cause?"
+
+nda_atlantean.41.t: "Cross Culture Unity?"
+nda_atlantean.41.d: "There is talk across the Culture that there is strength in unity with their clos brethern. It seems that some foreign influence is promoting this."
+nda_atlantean.41.f: "'I sensed a giant intellect and a monstrous genius behind the veil, a genius powerful enough to accomplish this union and hold it together....'"
+nda_atlantean.41.a: "Interesting"
+
+# Modifiers
+nda_covert_support_modifier: "External Agitation"
+#nda_covert_support_modifier_desc: "Someone is stiring up unrest.\n'#ITALIC I sensed a giant intellect and a monstrous genius behind the veil, a genius powerful enough to accomplish this union and hold it together#!.'"
+
+nda_atlantean_suppresion_modifier: "Atlantean Supression"

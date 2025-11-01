@@ -40,7 +40,8 @@ has_any_cultist_trait = {
 		has_trait = nda_yig_master  
 		has_trait = nda_dagon_cultist 
 		has_trait = nda_dagon_acolyte 
-		has_trait = nda_dagon_master  		 
+		has_trait = nda_dagon_master  	
+		has_trait = nda_atlantean_trait	 
 	}
 }
 

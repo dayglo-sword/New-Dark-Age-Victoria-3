@@ -78,7 +78,7 @@ je_nda_ritual_assist_btn_halt = {
 			NOT = { has_variable = je_nda_ritual_assist_started_cooldown }			
 			
 		}
-		c:ELD = { relations:root <= relations_threshold:cold }
+		c:ELD ?= { relations:root <= relations_threshold:cold }
 	}
 
 	ai_chance = {

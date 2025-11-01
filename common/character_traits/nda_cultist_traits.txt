@@ -27,6 +27,7 @@ nda_cultist = {
 				has_trait = nda_acolyte
 				has_trait = nda_master
 				has_trait = nda_investigator
+				has_trait = nda_atlantean_trait
 			} 
 		}
 		exists = owner
@@ -72,6 +73,7 @@ nda_acolyte = {
 		NOT = { 
 			has_trait = nda_master 
 			has_trait = nda_investigator
+			has_trait = nda_atlantean_trait
 		}
 
 		exists = owner
@@ -124,6 +126,7 @@ nda_master = {
 		NOT = { age < define:NCharacters|ADULT_AGE }
 		NOT = { 				
 			has_trait = nda_investigator
+			has_trait = nda_atlantean_trait
 		}		
 		owner = { 
 			has_variable = nda_cultists_in_open
@@ -174,6 +177,7 @@ nda_yig_cultist = {
 				has_trait = nda_dagon_acolyte
 				has_trait = nda_dagon_master
 				has_trait = nda_investigator
+				has_trait = nda_atlantean_trait
 			} 
 		}
 		exists = owner
@@ -222,6 +226,7 @@ nda_yig_acolyte = {
 			has_trait = nda_dagon_acolyte
 			has_trait = nda_dagon_master
 			has_trait = nda_investigator
+			has_trait = nda_atlantean_trait
 		}
 		exists = owner
 		owner = { 
@@ -274,6 +279,7 @@ nda_yig_master = {
 			has_trait = nda_dagon_acolyte
 			has_trait = nda_dagon_master
 			has_trait = nda_investigator
+			has_trait = nda_atlantean_trait
 		}
 		exists = owner
 		owner = { 
@@ -328,6 +334,7 @@ nda_dagon_cultist = {
 				has_trait = nda_yig_acolyte
 				has_trait = nda_yig_master
 				has_trait = nda_investigator
+				has_trait = nda_atlantean_trait
 			} 
 		}
 		exists = owner
@@ -377,6 +384,7 @@ nda_dagon_acolyte = {
 			has_trait = nda_yig_acolyte
 			has_trait = nda_yig_master
 			has_trait = nda_investigator
+			has_trait = nda_atlantean_trait
 		}
 		exists = owner
 		owner = { 
@@ -432,6 +440,7 @@ nda_dagon_master = {
 			has_trait = nda_yig_acolyte
 			has_trait = nda_yig_master
 			has_trait = nda_investigator
+			has_trait = nda_atlantean_trait
 		}
 		exists = owner
 		owner = { 

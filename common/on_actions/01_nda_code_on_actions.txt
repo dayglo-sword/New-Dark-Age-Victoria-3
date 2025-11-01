@@ -59,6 +59,8 @@ on_monthly_pulse_country = {
 		nda_monthly_historical_on_action	
 		delay = { days = 8 }
 		nda_monthly_cult_rejection_on_action
+		delay = { days = 8 }
+		nda_monthly_pan_on_action
 	}
 }
 
@@ -313,7 +315,7 @@ nda_monthly_pan_on_action = {
 		nda_authors.42 # A C Doyle Character
 		nda_authors.43
 		nda_authors.50
-		nda_nen.1894 # Mor-rison Warning
+		# nda_nen.1894 # Mor-rison Warning
 
 		nda_pan.1 
 		# nda_pan.2 
@@ -454,7 +456,7 @@ nda_monthly_state_conversion_on_action = {
 on_half_yearly_pulse_country = {
 	on_actions = {
 		nda_half_yearly_on_action	
-		delay = { days = 4 }
+		delay = { days = 10 }
 		nda_half_yearly_heirs_on_action
 	}
 }
@@ -493,6 +495,8 @@ nda_half_yearly_on_action = {
 
 		nda_masonic.20 # Masonic Banning
 		nda_masonic.22 # Masonic Unbanning
+
+		nda_atlantean.10 # Surama Returns
 	}
 	effect = {
 		nda_effect_lodge_leader = yes
@@ -511,7 +515,7 @@ nda_half_yearly_heirs_on_action = {
 	effect = {
 		if = {
 			limit = { 
-				any_character = {
+				any_scope_character = {
 					has_variable = is_nitocris
 					is_ruler = yes
 				}	
@@ -534,7 +538,7 @@ nda_half_yearly_heirs_on_action = {
 		}
 		else_if = {
 			limit = { 
-				any_character = {
+				any_scope_character = {
 					has_variable = is_nephren 
 					is_ruler = yes
 				}	
@@ -600,6 +604,30 @@ nda_on_character_creation_on_action = {
 		}
 		# remove as investigator if auto generated
 		remove_trait = nda_investigator 
+	}
+}
+
+# Root = Character
+on_character_death = {
+	on_actions = {
+		nda_on_character_death_on_action	
+	}	
+}
+
+nda_on_character_death_on_action = {
+	effect = {
+		# do not duplicate cult trait from char definition, also do not change ideology as presume deliberately not set
+		if = {
+			limit = {
+				has_template = nda_surama_character_template	
+				NOT = { has_global_variable = nda_surama_revive }						
+			}
+			set_global_variable = nda_surama_revive	
+
+			# use same country selection as create
+			trigger_event = { id = nda_atlantean.11 days = 40 } # this needs a country scope??
+		}
+
 	}
 }
 

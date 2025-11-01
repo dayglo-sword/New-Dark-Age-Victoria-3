@@ -1017,11 +1017,6 @@ nda_base.13 = { # The Cult fails to spread
 	option = { #May be your right
 		name = nda_base.13.b
 		
-		# remove fail variable - should allow retrigger of journal
-		set_variable = { # can't just remove as causes error if details of failed journal still displayed 'current_value'
-			name = nda_cult_spread_tracker
-			value = 0
-		}	
 		remove_variable = nda_cult_spread_failed	
 
 		ai_chance = { # should be most likely if available
@@ -1052,10 +1047,6 @@ nda_base.14 = { # Revolt Cultist Countries have flags removed - reinstate them -
 
 	immediate = {
 		set_variable = nda_cultists_in_open
-		set_variable = {
-			name = nda_cult_spread_tracker
-			value = 1101
-		}
 
 		if = { # Eldritch only
 			limit = { 				

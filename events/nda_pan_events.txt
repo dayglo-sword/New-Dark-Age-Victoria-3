@@ -23,6 +23,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 	trigger = {
  		
 		game_date >= 1865.5.5  # 1882 - 17
+		game_date < 1866.5.5  
 		# is info event so ok to just show to player
 		is_player = yes		
 		#p:xC7847D = { state = { owner = ROOT } } # Wales/Severn valley?? Or 
@@ -40,7 +41,6 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 
 		debug_log = "Great God Pan- The Experiment"
 
-		# send toast notification to players as chrome - or just put NEN in as possible?
 	}	
 	
 	option = { #"Tragic"

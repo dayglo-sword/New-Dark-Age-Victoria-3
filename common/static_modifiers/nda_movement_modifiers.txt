@@ -15,3 +15,15 @@ nda_grand_conjunction_modifier = {
 	political_movement_pop_attraction_mult = 0.5
 	political_movement_radicalism_add = 0.25
 }
+
+nda_covert_support_modifier = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	political_movement_pop_attraction_mult = 0.25
+	political_movement_radicalism_add = 0.25
+}
+
+nda_atlantean_suppresion_modifier = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds"
+	political_movement_pop_attraction_mult = -0.25
+	political_movement_radicalism_add = -0.25
+}

@@ -120,6 +120,9 @@ nda_ritual.1930 = { # Been 5 years since 1925 and not to the Cults Expectation
 		NOT = {
 			has_variable = nda_cthulhu_mid_point	# run once
 		}
+		NOT = { 
+			has_global_variable = nda_cthulhu_arrives_early
+		}
 	}
 
 	immediate = {
@@ -187,6 +190,7 @@ nda_ritual.1890 = { # Cthulhu Early Return
 
 	immediate = {
 		set_global_variable = nda_cthulhu_arrives	
+		set_global_variable = nda_cthulhu_arrives_early	
 		every_country = {
 			limit = {
 				OR = { 

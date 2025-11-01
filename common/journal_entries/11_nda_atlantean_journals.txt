@@ -1,0 +1,235 @@
+﻿je_nda_atlantean_surama = {
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds" 
+
+	group = je_group_nda_eldritch
+	
+	possible = {
+
+		custom_tooltip = {
+			text = je_nda_atlantean_surama_is_present_tt
+
+			any_scope_character = {
+				has_template = nda_surama_character_template
+			}			
+		}
+
+	}	
+
+	immediate = {
+		debug_log = "Sumara target country [THIS.GetCountry.GetNameNoFormatting]"
+	}
+
+	modifiers_while_active = {
+		# Reduce movements over all
+	}
+
+    complete = {
+		# Surama is no longer around
+		custom_tooltip = {
+			text = je_nda_atlantean_surama_is_gone_tt
+			NOT = {
+				any_scope_character = {
+					has_template = nda_surama_character_template
+				}
+			}
+		}
+    }
+
+	on_complete = {
+		debug_log = "Sumara : Completed : [THIS.GetCountry.GetNameNoFormatting]"
+
+		# remove any local supressions
+
+	}
+
+	on_weekly_pulse = {		
+	}
+
+	on_monthly_pulse = {
+		# chance they will do something to spread dissent
+		# random_events = {
+		# 	200 = 0
+		# 	20 = balkan_wars.8  #A Student of Strategy
+		# 	20 = balkan_wars.9  #Caught in the Middle
+		# 	20 = balkan_wars.10 #Surplus Management
+		# }
+
+		effect = {
+			random_list = {
+				5 = {
+					# do nothing
+				}
+				4 = {
+					# spread support for neighbouring anti-colonial nationalist move
+
+					if = {
+						limit = {
+							any_neighbouring_state = {
+								NOT = { OWNER = ROOT }
+								OWNER = {
+									any_political_movement = {
+										is_political_movement_type = movement_cultural_minority	
+										culture = { has_discrimination_trait_group =  heritage_group_african }
+										NOT = { has_modifier = nda_covert_support_modifier }		
+ 									}								
+								}									
+							}
+						}
+
+						debug_log = "Spread Support to neighbour cultures: [THIS.GetCountry.GetNameNoFormatting]"
+						random_neighbouring_state = {
+							limit = {				
+								NOT = { OWNER = ROOT }
+								OWNER = {
+									any_political_movement = {
+										is_political_movement_type = movement_cultural_minority	
+										culture ?= { has_discrimination_trait_group =  heritage_group_african }
+										NOT = { has_modifier =nda_covert_support_modifier }		
+									}								
+								}									
+							}
+						
+							OWNER = {
+								every_political_movement = {
+									limit = {
+										is_political_movement_type = movement_cultural_minority	
+										culture ?= { has_discrimination_trait_group =  heritage_group_african }	
+										NOT = { has_modifier =nda_covert_support_modifier }						
+									}
+
+									add_modifier = nda_covert_support_modifier
+								}
+
+								# fire event to notify owner
+								trigger_event = { id = nda_atlantean.40 days=7 }
+							}
+						}							
+					}
+				}				
+				1 = {
+					# check local culture - give it tradition for Grand Unity
+					ROOT = {
+						if = {
+							limit = { 
+								any_primary_culture = { 
+									has_discrimination_trait_group = heritage_group_african
+									not = { has_discrimination_trait = tradition_nda_grand_union }
+								}
+							}
+
+							debug_log = "Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
+							random_primary_culture = {
+								limit = { 
+									has_discrimination_trait_group = heritage_group_african
+									not = { has_discrimination_trait = tradition_nda_grand_union }								
+								}
+								add_tradition_trait = tradition_nda_grand_union		
+								save_scope_as = converted_culture					
+							}
+
+							# fire event to notify owner
+							every_country = {
+								limit= {
+									is_player = yes
+									any_scope_pop = {
+										culture = scope:converted_culture
+									}
+								}
+							}
+							trigger_event = { id = nda_atlantean.41 days=7 }
+						}
+						else_if = {
+							# spread to cultures in neighbouring country
+						}
+					}
+
+				}
+				1 = {
+					# modifier to supress local movements to stop revolts, supress liberal
+					ROOT = {
+						if = {
+							limit = { 
+								any_political_movement = {
+									movement_is_liberal = yes
+									NOT = { has_modifier = nda_atlantean_suppresion_modifier }		
+								}
+							}
+
+							debug_log = "Supress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
+
+							every_political_movement = {
+								limit = {
+									movement_is_liberal = yes
+									
+									NOT = { has_modifier =nda_atlantean_suppresion_modifier }						
+								}
+
+								add_modifier = nda_atlantean_suppresion_modifier
+							}
+
+							# fire event to notify owner
+						}
+					}
+				}
+				1 = {
+					# change strategy to be more expansionist.
+					if = {
+						limit = {
+							is_player = no
+						}
+
+						if = {
+							limit = {NOT = { has_strategy = ai_strategy_territorial_expansion } }
+							set_strategy = ai_strategy_territorial_expansion
+						}
+						else_if = {
+							limit = {NOT = { has_strategy = ai_strategy_nationalist_agenda } }
+							set_strategy = ai_strategy_nationalist_agenda	
+						}
+						else_if = {
+							limit = {NOT = { has_strategy = ai_strategy_resource_expansion } }
+							set_strategy = ai_strategy_resource_expansion	
+						}
+					}
+				}
+				1 = {
+					# Political lobby boost in any potential ally
+					
+				}
+			}
+	
+		}
+	
+	}
+
+	on_yearly_pulse = {
+		effect = {
+			# update counts so we can see how much progress has been made
+			# Count of Cultures with trait
+			# Count of movements with modifier
+		}
+    }
+	# current_value = {
+
+	# }
+
+	# goal_add_value = {
+	
+	# }
+
+    # fail = {
+    # }
+	
+	# on_fail = {	
+	# }
+
+	#timeout = 3000
+
+	#progressbar = yes
+	weight = 10
+
+	can_deactivate = yes
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}
