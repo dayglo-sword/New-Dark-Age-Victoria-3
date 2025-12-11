@@ -329,7 +329,7 @@ nda_coa_def_dagonic_trigger = {
 
 
 # OVERWRITE - Power Bloc conditions
-country_can_form_power_bloc = {
+REPLACE_OR_CREATE:country_can_form_power_bloc = {
 	AND = {
 		is_revolutionary = no
 		OR = {

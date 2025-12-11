@@ -881,8 +881,11 @@ DEFAULT = {
 				has_global_variable = nda_ritual_cthulhu_leaves
 				is_secessionist = no
 				OR = {
-					country_is_in_north_america = yes	
-					country_is_in_central_america = yes		
+					#country_is_in_north_america = yes	
+					#country_is_in_central_america = yes		
+					is_in_geographic_region = geographic_region_north_america
+					is_in_geographic_region = geographic_region_central_america
+
 				}
 
 				country_has_primary_culture = cu:yankee
@@ -3460,8 +3463,10 @@ FND = { # Federation
 					any_scope_state = {
 						is_incorporated = yes
 						OR = {
-							state_is_in_north_america = yes
-							state_is_in_central_america = yes
+							#state_is_in_north_america = yes
+							#state_is_in_central_america = yes
+							is_in_geographic_region = geographic_region_north_america
+							is_in_geographic_region = geographic_region_central_america
 						}
 						count > 1
 					}
@@ -3507,8 +3512,10 @@ FND = { # Federation
 				any_scope_state = {
 					is_incorporated = yes
 					OR = {
-						state_is_in_north_america = yes
-						state_is_in_central_america = yes
+						#state_is_in_north_america = yes
+						#state_is_in_central_america = yes
+						is_in_geographic_region = geographic_region_north_america
+						is_in_geographic_region = geographic_region_central_america
 					}
 					count > 1
 				}

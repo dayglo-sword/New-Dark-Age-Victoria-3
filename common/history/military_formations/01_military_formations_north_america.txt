@@ -220,7 +220,7 @@
 			production_method = pm_power_of_the_purse
 		}
 		activate_production_method = {
-			building_type = building_barracks
+			building_type = building_barrack
 			production_method = pm_general_training
 		}
 	}

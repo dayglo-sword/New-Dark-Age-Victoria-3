@@ -104,7 +104,7 @@ DGN = {
 }
 
 # Override existing - should only do once while transisitioning to Greater NEN
-CAN = {
+REPLACE_OR_CREATE:CAN = {
 	use_culture_states = yes
 
 	required_states_fraction = 0.75	

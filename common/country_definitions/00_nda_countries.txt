@@ -42,7 +42,7 @@ IAM = {
 	capital = STATE_NEW_YORK # New York
 }
 
-NEN = {
+REPLACE_OR_CREATE:NEN = {
 	color = { 166  224  85 }
 	
 	country_type = colonial
@@ -77,7 +77,7 @@ STY = {
 }
 
 #dagonic lemuria
-DLM = {
+NDA_DLM = {
 	color = { 48 208 228 } #{ 11 84 179 }
 	
 	country_type = recognized

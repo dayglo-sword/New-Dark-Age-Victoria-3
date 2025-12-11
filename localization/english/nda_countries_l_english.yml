@@ -15,8 +15,8 @@ LEN_ADJ: "Lengian"
 
 STY: "Stygia"
 STY_ADJ: "Stygian"
-DLM: "Dagonic Lemuria"
-DLM_ADJ: "Lemurian"
+NDA_DLM: "Dagonic Lemuria"
+NDA_DLM_ADJ: "Lemurian"
 LEM: "Lemuria"
 LEM_ADJ: "Lemurian"
 

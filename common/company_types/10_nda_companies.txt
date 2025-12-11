@@ -195,8 +195,8 @@ company_nda_west_chemicals = {
 	preferred_headquarters = { STATE_NEW_HAMPSHIRE }
 
 	building_types = {
-		building_chemical_plants
-		building_synthetics_plants
+		building_chemical_plant
+		building_synthetics_plant
 	}
 
 	extension_building_types = {
@@ -228,8 +228,8 @@ company_nda_west_chemicals = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_chemical_plants
-					is_building_type = building_synthetics_plants
+					is_building_type = building_chemical_plant
+					is_building_type = building_synthetics_plant
 				}
 				level >= 5
 			}
@@ -253,8 +253,8 @@ company_nda_west_chemicals = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_chemical_plants
-					is_building_type = building_synthetics_plants
+					is_building_type = building_chemical_plant
+					is_building_type = building_synthetics_plant
 				}
 				level >= 5
 			}

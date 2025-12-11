@@ -2,7 +2,7 @@
 # Based on 'Canada Flag Pack' by Amtoj https://steamcommunity.com/sharedfiles/filedetails/?id=2888072185
 # Many Thanks for the permission,
 
-HBC = { # Hudson Bay Company
+REPLACE_OR_CREATE:HBC = { # Hudson Bay Company
 	dynamic_country_name = {
 		name = dyn_c_ruperts_land
 		adjective = dyn_c_ruperts_land_adj

@@ -11,7 +11,7 @@
 	}
 
 	subsidies = {
-		building_tooling_workshops = nice_to_have
+		building_tooling_workshop = nice_to_have
 		building_explosives_factory = nice_to_have
 	}
 
@@ -34,15 +34,14 @@
 
 
 	possible = {
-		# for primary cult countries only? - should be default
-		is_full_cult = yes
+		always = yes
 	}
 
 	weight = {
 		value = 200
 
 		if = {
-			limit = { ig:ig_nda_cult_worshippers = { is_powerful = yes } }
+			limit = { ig:ig_nda_cult_worshippers ?= { is_powerful = yes } }
 			multiply = 1.5
 		}
 
@@ -104,7 +103,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	diplomatic_play_boldness = {
 		value = 50
 	}
-	
+
 	recklessness = {
 		value = 0.25
 	}
@@ -395,19 +394,23 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 	type = political
 
 	revolution_aversion = {
-		value = 5
+		value = 75
 	}
 
 	min_law_chance_to_pass = {
 		value = 30
 		if = {
 			limit = { ai_has_reasons_to_not_oppose_law = yes }
-			multiply = 0.33
+			multiply = 0.5
 		}
 	}
 
 	max_progressiveness = {
 		value = 50
+		if = {
+			limit = { has_enactment_je_or_law_commitment = yes }
+			multiply = 2
+		}
 	}
 
 	max_regressiveness = {
@@ -467,6 +470,9 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 		movement_nihilist
 		movement_feminist
 		movement_radical
+		movement_german_national
+		movement_italian_national
+		movement_yugoslav_national
 	}
 
 	institution_scores = {

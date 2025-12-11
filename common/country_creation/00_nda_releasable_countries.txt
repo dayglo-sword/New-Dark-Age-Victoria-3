@@ -81,7 +81,7 @@ STY = { # Stygia
 	}
 }
 
-DLM = { # Dagonic Lemuria - This is different to standard Lemuria as Cultist
+NDA_DLM = { # Dagonic Lemuria - This is different to standard Lemuria as Cultist
 	states = {
 		STATE_ACEH
 		STATE_CENTRAL_JAVA
@@ -117,7 +117,7 @@ DLM = { # Dagonic Lemuria - This is different to standard Lemuria as Cultist
 }
 
 # should be in separate file??
-LOU = { # Overide default LOU to cover some of the purchase lands, not just state
+REPLACE_OR_CREATE:LOU = { # Overide default LOU to cover some of the purchase lands, not just state
 	use_culture_states = yes
 
 	required_num_states = 2

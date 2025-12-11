@@ -255,7 +255,7 @@ STY = {
 	}
 }
 
-DLM = { # Dagonic Lemuria
+NDA_DLM = { # Dagonic Lemuria
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "blue"

@@ -7,7 +7,7 @@
 # Based on 'Canada Flag Pack' by Amtoj https://steamcommunity.com/sharedfiles/filedetails/?id=2888072185
 # Many Thanks for the permission,
 
-CAN = { # Canada
+REPLACE_OR_CREATE:CAN = { # Canada
 	flag_definition = {
 		coa = CAN
 		coa_with_overlord_canton = CAN_subject
@@ -172,7 +172,7 @@ CAN = { # Canada
 	}
 }
 
-HBC = { # Hudson Bay Company
+REPLACE_OR_CREATE:HBC = { # Hudson Bay Company
 	flag_definition = {
 		coa = HBC
 		coa_with_overlord_canton = HBC_subject
@@ -218,7 +218,7 @@ HBC = { # Hudson Bay Company
 	}	
 }
 
-LOU = { # Louisiana
+REPLACE_OR_CREATE:LOU = { # Louisiana
 	flag_definition = {
 		coa = LOU
 		subject_canton = LOU
@@ -285,7 +285,7 @@ LOU_FRA = {
 	}
 }
 
-MTC = { # Metis
+REPLACE_OR_CREATE:MTC = { # Metis
 	flag_definition = {
 		coa = MTC
 		coa_with_overlord_canton = MTC_subject
@@ -386,7 +386,7 @@ MTC = { # Metis
 	}
 }
 
-NEW = { # Newfoundland
+REPLACE_OR_CREATE:NEW = { # Newfoundland
 	flag_definition = {
 		coa = NEW
 		coa_with_overlord_canton = NEW_subject
@@ -465,7 +465,7 @@ NEW = { # Newfoundland
 	}
 }
 
-ONT = { # Ontario
+REPLACE_OR_CREATE:ONT = { # Ontario
 	flag_definition = {
 		coa = ONT
 		coa_with_overlord_canton = ONT_subject
@@ -504,7 +504,7 @@ ONT = { # Ontario
 	}
 }
 
-ORG = { # Oregon
+REPLACE_OR_CREATE:ORG = { # Oregon
 	flag_definition = {
 		coa = ORG
 		subject_canton = ORG		
@@ -574,7 +574,7 @@ ORG = { # Oregon
 	}
 }
 
-QUE = { # Quebec
+REPLACE_OR_CREATE:QUE = { # Quebec
 	flag_definition = {
 		coa = QUE
 		coa_with_overlord_canton = QUE_subject
@@ -643,7 +643,7 @@ QUE = { # Quebec
 	}
 }
 
-UOM = { # Michigam
+REPLACE_OR_CREATE:UOM = { # Michigam
 	flag_definition = {
 		coa = UOM_state_of_michigan
 		priority = 5

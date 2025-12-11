@@ -107,13 +107,13 @@ STY = { # Stygia
 	}
 }
 
-DLM = { # Dagonic Lemuria
+NDA_DLM = { # Dagonic Lemuria
 	flag_definition = {
-		coa = DLM 
-		coa_with_overlord_canton = DLM
+		coa = NDA_DLM 
+		coa_with_overlord_canton = NDA_DLM
 		overlord_canton_offset = { 0.067 0.1 }
 		overlord_canton_scale = { 0.4 0.4 }	
-		subject_canton = DLM
+		subject_canton = NDA_DLM
 	}
 }
 
@@ -128,7 +128,7 @@ LEM = { # Free Lemuria
 	}
 }
 
-NEN = { # New England Cultist
+REPLACE_OR_CREATE:NEN = { # New England Cultist
 	flag_definition = {
 		coa = NEN
 		subject_canton = NEN
@@ -175,7 +175,7 @@ NEN = { # New England Cultist
 	}	
 }
 
-AUS = { # Austria
+REPLACE_OR_CREATE:AUS = { # Austria
 	flag_definition = {
 		coa = AUS
 		subject_canton = AUS
@@ -250,7 +250,7 @@ AUS = { # Austria
 	}
 }
 
-BRZ = { # Brazil
+REPLACE_OR_CREATE:BRZ = { # Brazil
 	flag_definition = {
 		coa = BRZ
 		subject_canton = BRZ
@@ -332,7 +332,7 @@ BRZ = { # Brazil
 	}
 }
 
-MEX = { # Mexico
+REPLACE_OR_CREATE:MEX = { # Mexico
 	flag_definition = {
 		coa = MEX
 		subject_canton = MEX
@@ -388,7 +388,7 @@ MEX = { # Mexico
 	}
 }
 
-JAP = { # Japan
+REPLACE_OR_CREATE:JAP = { # Japan
 	flag_definition = {
 		coa = JAP
 		allow_overlord_canton = yes

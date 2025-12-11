@@ -219,9 +219,12 @@ nda_yigian.11 = { # Snake Oil Incident
 			exists = c:YIG
 			game_date >= 1885.1.1 # towards end of century
 			OR = {
-				country_is_in_north_america = yes
-				country_is_in_south_america = yes	
-				country_is_in_central_america = yes				
+				#country_is_in_north_america = yes	
+				#country_is_in_central_america = yes		
+				is_in_geographic_region = geographic_region_north_america
+				is_in_geographic_region = geographic_region_central_america
+				is_in_geographic_region = geographic_region_south_america
+				#country_is_in_south_america = yes			
 			}
 			has_cult_culture = no
 		}
