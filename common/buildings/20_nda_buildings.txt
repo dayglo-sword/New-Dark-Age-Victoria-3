@@ -117,7 +117,7 @@ building_nda_lostcity_yhanthlei = {
 	}
 	
 	production_method_groups = {
-		pmg_nda_esoteric_lostcity
+		pmg_nda_esoteric_lostcity_coastal
 		pmg_nda_esoteric_lostcity_goods
 	}
 }

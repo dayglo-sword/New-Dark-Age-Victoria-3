@@ -229,7 +229,7 @@ nda_cul_atlantean={ # also includes names from Mu - have Early Atlantis and Late
 
 	heritage = heritage_nda_atlantean
 	language = language_nda_atlantean
-	traditions = { }
+	traditions = { tradition_nda_grand_union }
 	
 	male_common_first_names={
 		Kathulos Thulsa Surama Bothon Tyog Imashmo Zanthu
@@ -239,6 +239,9 @@ nda_cul_atlantean={ # also includes names from Mu - have Early Atlantis and Late
 	}
 	common_last_names={
 		of_atlantis 
+		of_daitya
+		of_ruta
+		of_poseidonis
 	}
 
 	noble_last_names = {

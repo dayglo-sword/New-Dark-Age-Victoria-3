@@ -750,6 +750,7 @@ nda_nen.1877 = { # Controversy surrounding the Church of Starry Wisdom - Rhode I
 				# riot forces shut down
 				trigger_event = { id = nda_nen.1879 days = 28 }	# ruin church, trapezoid lost - 'historic' result
 		}
+		debug_log = "Starry Wisdom - Do Nothing"
 	}
 
 	option = { #"A Noble church"
@@ -765,13 +766,14 @@ nda_nen.1877 = { # Controversy surrounding the Church of Starry Wisdom - Rhode I
 				}
 			}
 		}
+		debug_log = "Starry Wisdom - Noble Church"
 	}
 
 	option = { #"Close it down"
 		name = nda_nen.1877.c
 		trigger = { NOT = { has_variable = nda_cultists_in_open } }	
 		trigger_event = { id = nda_nen.1878 days = 7 }	# fire shutdown event
-
+		debug_log = "Starry Wisdom - Close It Dowm"
 	}	
 }
 
@@ -809,12 +811,13 @@ nda_nen.1878 = { # "Goverment Shutdown!"
 		default_option = yes
 
 		trigger_event = { id = nda_nen.1880 days = 1 }	# fire trapezoid event
+		debug_log = "Starry Wisdom - Keep Box"
 	}
 	option = { #"Put it somewhere safe"
 		name = nda_nen.1878.b
 
 		# if Miskatonic Uni available have them do research?
-
+		debug_log = "Starry Wisdom - Hide Box"
 	}	
 }
 
@@ -850,6 +853,7 @@ nda_nen.1879 = {
 	option = { #"A tragedy or not?"
 		name = nda_nen.1879.a
 		default_option = yes
+		debug_log = "Starry Wisdom - Gang Takedown"
 	}
 }
 
@@ -895,7 +899,9 @@ nda_nen.1880 = {
 				limit = {not = { has_trait = nda_master }}
 			   add_trait = nda_master
 		   }
-		}				
+		}	
+		
+		debug_log = "Starry Wisdom - Box Opened"
 	}
 }
 

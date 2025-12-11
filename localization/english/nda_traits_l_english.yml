@@ -77,6 +77,8 @@ nda_star_crop_ruination_state_modifier_desc: "The terrible heat of the Star has 
 nda_star_ruination_country_modifier: "Great Disruption"
 nda_star_ruination_country_modifier_desc: "The passing of the Star and destruction it caused makes governing difficult."
 
+nda_purge_aftermath_modifier: "Cult Purge Aftermath"
+nda_purge_aftermath_modifier_desc: "This unprecedented purge has destablised the country"
 
 nda_inquisition_righteous_modifier: "A Righteous Inquisition"
 nda_inquisition_unjust_modifier: "An Unjust Inquisition"

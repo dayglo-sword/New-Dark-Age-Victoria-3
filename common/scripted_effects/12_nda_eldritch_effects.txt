@@ -676,7 +676,12 @@ nda_effect_release_eld_isolated = {
 					# Set a Colony?
 
 					set_variable = nda_cultists_in_open
-					set_variable = { name = nda_eldritch_splinter value = { integer_range = { min = 1 max = 6 } } }
+					
+					# always sets to 1 despite running correctly in script runner.
+					# set_variable = { name = nda_eldritch_splinter value = { integer_range = { min = 1 max = 6 } } }
+
+					# always sets to 2!
+
 
 					every_scope_state = {
 						remove_variable = nda_release_candidate	
@@ -685,12 +690,25 @@ nda_effect_release_eld_isolated = {
 			}		
 		}	
 		
-		hidden_effect = {
-			create_diplomatic_pact = {
-				country = scope:nda_releasable_state.owner
-				type = colony
+		if = { 
+			limit = { exists = scope:nda_releasable_state.owner }
+			hidden_effect = {
+				create_diplomatic_pact = {
+					country = scope:nda_releasable_state.owner
+					type = colony
+				}
+
+				scope:nda_releasable_state.owner = {
+					random_list = {
+						1 = { set_variable = { name = nda_eldritch_splinter value = 1 } }
+						1 = { set_variable = { name = nda_eldritch_splinter value = 2 } }
+						1 = { set_variable = { name = nda_eldritch_splinter value = 3 } }
+						1 = { set_variable = { name = nda_eldritch_splinter value = 4 } }
+						1 = { set_variable = { name = nda_eldritch_splinter value = 5 } }
+						1 = { set_variable = { name = nda_eldritch_splinter value = 6 } }
+					}					
+				}
 			}
 		}
 	}
-
 }

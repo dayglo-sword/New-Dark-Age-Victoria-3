@@ -315,7 +315,17 @@ nda_lostcities.30 = {  # Shamballa revealed - unlike other cities ELD can not re
 		NOT = { has_global_variable = nda_lostcity_shamballa_exists }
 		p:xB9B797 = {
 			state = {
-				owner = c:LEN
+				OR = {
+					AND = {
+						exists = c:LEN
+						owner = c:LEN # Chagnaur Faur
+					}
+					AND = {
+						exists = c:IAM
+						owner = c:IAM # The Dreamland connection
+					}
+				}
+				
 				NOT = { has_building = building_nda_lostcity_shamballa }
 			}
 		}

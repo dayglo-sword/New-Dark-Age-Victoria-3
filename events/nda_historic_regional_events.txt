@@ -175,9 +175,56 @@ nda_historic_regional.1864 = { # Lemuria - 'The Mammals of Madagascar" by zoolog
 }
 
 
-# nda_historic_regional.1867 = { } # “The Spiritual Athenæum and the law - DANIEL DUNGLAS HOME sued and lost 
+# Should this be in main historical as he was raised in New England and had early investigation.
 # The litigation was long, the case finally ending in May, 1868, with a judgment in favor of Mrs. Lyon; the Court holding that as the transfer of money and deed had been accomplished by fraud it was therefore void. 
 # In his closing remarks the Vice Chancellor referred to Mrs. Lyon as an old lady with a mind “saturated with delusion” and characterized Spiritualism as being, according to the evidence, a “system of mischievous nonsense well calculated to delude the vain, the weak, the foolish, and the superstitious.”
+nda_historic_regional.1868 = { # “DANIEL DUNGLAS HOME sued and lost 
+	type = country_event
+	placement = p:x7543C8 # London
+	title = nda_historic_regional.1868.t
+	desc = nda_historic_regional.1868.d
+	flavor = nda_historic_regional.1868.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_art_gallery"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	minor_left_icon = scope:location_country
+
+	trigger = { 		
+		game_date >= 1868.3.1 
+		game_date < 1869.3.1 
+
+		OR = {
+			p:x7543C8 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x7543C8.region			
+		}
+	}
+
+	cooldown = { days = 1000 }	
+
+	immediate = {
+		p:x7543C8 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
+	option = { #"Interesting"
+		name = nda_historic_regional.1868.a
+		default_option = yes
+	}
+
+	option = { # affect Spiritulism
+		name = nda_historic_regional.1868.b
+		default_option = yes
+	}
+}
+
 
 nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers time span 1869 - 1900's. Have as single event?
 	type = country_event
@@ -223,6 +270,10 @@ nda_historic_regional.1870 = { # Cyrus Teed - Hollow Earth - Actually covers tim
 
 
 # nda_historic_regional.1870 = { # Uluru - Western discovery - name after Australian premier - tell story of Dreamtime battle between carpet-snake people and venomous snake-people.
+
+# nda_historic_regional.1873 = { # Paris - Louis Jacolliot 'Les fils de Dieu' Given manuscript by a Brahmin; Asgatha, ancient capital of India 15,000 years ago
+# Destroyed by the proto-Norse in 5000 BC
+# https://archive.org/stream/lesfilsdedieu00jaco/lesfilsdedieu00jaco_djvu.txt
 
 nda_historic_regional.1878 = { # British Theosophical Society founded aka London Lodge (if not full cult country) - Mimic Spiritualism setup
 	type = country_event
@@ -319,6 +370,51 @@ nda_historic_regional.1878 = { # British Theosophical Society founded aka London
 }
 
 # nda_historic_regional.1883 = { # Blavatsky Lodge - London Lodge (if not full cult country)
+
+
+nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Donnelly
+	type = country_event
+	placement = p:x9A9297 # Minnisota?
+	title = nda_historic_regional.1882.t
+	desc = nda_historic_regional.1882.d
+	flavor = nda_historic_regional.1882.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_art_gallery"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	minor_left_icon = scope:location_country
+
+	trigger = { 		
+		game_date >= 1882.3.1 
+		game_date < 1883.3.1 
+
+		# owner of Minnisota
+		OR = {
+			p:x9A9297 = { state = { owner = ROOT } }
+			has_interest_marker_in_region = p:x9A9297.region			
+		}
+	}
+
+	cooldown = { days = 1000 }	
+
+	immediate = {
+		p:x9A9297 = { state = { owner = { save_scope_as = location_country } } }
+	}
+
+	option = { 
+		name = nda_historic_regional.1882.a
+		default_option = yes
+	}
+}
+
 
 nda_historic_regional.1887 = { # Lucifer - The Theosopical journal edited by Blavatsky, founded in London (if not full cult country)
 	type = country_event
@@ -432,53 +528,11 @@ nda_historic_regional.1887 = { # Lucifer - The Theosopical journal edited by Bla
 	}
 }
 
-nda_historic_regional.1882 = { # Atlantis: The Antediluvian World - Ignatius Donnelly
-	type = country_event
-	placement = p:x9A9297 # Minnisota?
-	title = nda_historic_regional.1882.t
-	desc = nda_historic_regional.1882.d
-	flavor = nda_historic_regional.1882.f
-	dlc = dlc_NDA
-
-	duration = 3
-
-	event_image = {
-		video = "europenorthamerica_art_gallery"		
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
-
-	minor_left_icon = scope:location_country
-
-	trigger = { 		
-		game_date >= 1882.3.1 
-		game_date < 1883.3.1 
-
-		# owner of Minnisota
-		OR = {
-			p:x9A9297 = { state = { owner = ROOT } }
-			has_interest_marker_in_region = p:x9A9297.region			
-		}
-	}
-
-	cooldown = { days = 1000 }	
-
-	immediate = {
-		p:x9A9297 = { state = { owner = { save_scope_as = location_country } } }
-	}
-
-	option = { 
-		name = nda_historic_regional.1882.a
-		default_option = yes
-	}
-}
-
 # nda_historic_regional.1885 = { # Great Serpent Mound, Ohio - F W Putnam of Peabody Museum excavated and rasied money to buy the mound.
 
-
-
+# nda_historic_regional.1886 = { # Paris, Alexandre Sant-Yves d'Alveydre, 'Mission de l'Inde en Europe'
+# recalled and destroyed after threats for exposing Agartha secrets
+# https://archive.org/stream/missiondelindeeneurope/SaintYvesDAlveydre-MissionDeLIndeEnEurope%5B1910-FR%5D_djvu.txt
 
 nda_historic_regional.1890 = { # december - first advert for ouija boards "The Ouija: The Wonder of the 19th Century" FT413 p37 1886 was first instance in Ohio
 
@@ -673,9 +727,14 @@ nda_historic_regional.1901 = { # Horos Trial - fake Golden Dawn. Real GD splits 
 	}
 }
 
+# nda_historic_regional.1910 = { # , 'Mission de l'Inde en Europe'
+# reissued after death of Alexandre Sant-Yves d'Alveydre
+
 # nda_historic_regional.1912 = { # Atlantis: Paul Schliemann, New York American
 
 #nda_historic_regional.1913 # - House of the Sun Golden Dawn spin-off in Havelock North, New Zealand - Is Anglican-Theosopic hybrid? Exagerate effects to increase spread.
+
+# nda_historic_regional.1922 = { # 'Beasts, Men and Gods - Fredynand Ossendowski', Agratha has population of 800 million and will invade the serface in 2029
 
 # nda_historic_regional.1925 = { # The Old Straight Track - Alfred Watkins, Leylines
 

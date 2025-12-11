@@ -296,6 +296,7 @@ nda_monthly_historical_on_action = {
 		nda_historic_regional.1855
 		nda_historic_regional.1860
 		nda_historic_regional.1864
+		nda_historic_regional.1868
 		nda_historic_regional.1870
 		nda_historic_regional.1878
 		nda_historic_regional.1882
@@ -497,6 +498,7 @@ nda_half_yearly_on_action = {
 		nda_masonic.22 # Masonic Unbanning
 
 		nda_atlantean.10 # Surama Returns
+		nda_atlantean.20 # Kathulos Returns
 	}
 	effect = {
 		nda_effect_lodge_leader = yes
@@ -616,7 +618,7 @@ on_character_death = {
 
 nda_on_character_death_on_action = {
 	effect = {
-		# do not duplicate cult trait from char definition, also do not change ideology as presume deliberately not set
+		
 		if = {
 			limit = {
 				has_template = nda_surama_character_template	
@@ -625,9 +627,18 @@ nda_on_character_death_on_action = {
 			set_global_variable = nda_surama_revive	
 
 			# use same country selection as create
-			trigger_event = { id = nda_atlantean.11 days = 40 } # this needs a country scope??
+			nda_effect_home_for_surama = yes
 		}
+		else_if = {
+			limit = {
+				has_template = nda_kathulos_character_template	
+				NOT = { has_global_variable = nda_kathulos_revive }						
+			}
+			set_global_variable = nda_kathulos_revive	
 
+			# use same country selection as create
+			nda_effect_home_for_surama = yes
+		}
 	}
 }
 

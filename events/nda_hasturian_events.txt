@@ -719,6 +719,7 @@ nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) 
 
 	option = { # "Ignore"		
 		name = nda_hasturian.1892.a
+		debug_log = "Trapezphedron - Hastur Ignore"
 	}
 
 	option = { # "We could demand it from them?"
@@ -726,6 +727,7 @@ nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) 
 		default_option = yes
 		trigger = { scope:trapezo_owner = { is_player = no } } # only for AI
 
+		debug_log = "Trapezphedron - Hastur Wants"
 		# This interaction should be red flag to anyone tracking
 		# random result - either get it or destroy relations - increase if matching cult type and greater rank
 		random_list = {
@@ -756,7 +758,8 @@ nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) 
 						country = ROOT
 						value = -10
 					}
-				}			
+				}	
+				debug_log = "Trapezphedron - Hastur Recovered"		
 			}
 			50 = { 
 				modifier = {
@@ -786,6 +789,7 @@ nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) 
 						value = -50
 					}
 				}
+				debug_log = "Trapezphedron - Hastur Denied"
 			}
 		}
 	}
@@ -797,6 +801,7 @@ nda_hasturian.1892 = { # The Trapezohedron reappears (events nda_nen.1878-1880) 
 		scope:trapezo_owner = { 
 			trigger_event = { id = nda_hasturian.1893 popup=yes days=1 } 
 		}
+		debug_log = "Trapezphedron - Hastur Demand"
 	}
 }
 
@@ -833,6 +838,7 @@ nda_hasturian.1893 = { # Demand Trapezohedron from player.
 				value = 10
 			}
 		}
+		debug_log = "Trapezphedron - Player Accepts Transfer"
 	}
 
 	option = { # "Reject"
@@ -845,6 +851,7 @@ nda_hasturian.1893 = { # Demand Trapezohedron from player.
 				value = -50
 			}
 		}
+		debug_log = "Trapezphedron - Player Rejects Transfer"
 	}
 }
 

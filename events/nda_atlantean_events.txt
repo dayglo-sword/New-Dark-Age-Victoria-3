@@ -12,7 +12,8 @@ nda_atlantean.10 = { # Tomb of Surama found in North Africa - remanant of atlant
 	title = nda_atlantean.10.t
 	desc = nda_atlantean.10.d
 	flavor = nda_atlantean.10.f
-	
+	dlc = dlc_NDA
+
 	duration = 3
 	
     event_image = {
@@ -39,285 +40,22 @@ nda_atlantean.10 = { # Tomb of Surama found in North Africa - remanant of atlant
  	cooldown = { days= 370 }
 
  	immediate = {
- 		p:xC46661 = { state = { save_scope_as = target_country } }
+ 		p:xC46661 = { state = { owner = { save_scope_as = target_country } } }
 
-		# # if non-colonial country capable of agitators - then Surama appears	
-		# if = {
-		# 	limit = { 
-		# 		p:xC46661 = { 
-		# 			state = { 
-		# 				owner = {
-		# 					THIS = ROOT 
-		# 					NOT = { is_country_type = decentralized }
-		# 					is_revolutionary = no
-		# 					coa_def_african_trigger = 	yes
-		# 				} 
-		# 			} 
-		# 		}
-		# 	}
-		# 	# make room to add character
-		# 	if= {
-		# 		limit = { empty_agitator_slots = 0 }
-				
-		# 		random_scope_character = {
-		# 			limit = { 
-		# 				has_role = agitator 
-		# 				# is not existing Altantean
-		# 			}
-		# 			exile_character_with_martyrdom = yes
-		# 		}
-		# 	}
-
-		# 	# add cultural acceptance
-		# 	add_culture_acceptance_modifier = {
-		# 		culture = cu:nda_cul_atlantean
-		# 		multiplier = 40
-		# 	}
-
-		# 	# add surama as agitator to country
-		# 	if = {
-		# 		limit = {
-		# 			NOT = {
-		# 				any_scope_character = {
-		# 					has_template = nda_surama_character_template
-		# 				}
-		# 			}
-		# 		}
-
-		# 		create_character = {
-		# 			template = nda_surama_character_template
-
-		# 			on_created = {					
-		# 				set_variable = memento_mori_immunity
-		# 				set_character_immortal = yes
-		# 				set_interest_group = prev.ig:ig_landowners
-		# 				#save_scope_as = scope_sumara
-		# 			}
-		# 		}
-
-		# 		random_scope_character = {
-		# 			limit = { has_template = nda_surama_character_template }
-
-		# 			add_character_role = agitator
-		# 		}
-		# 		debug_log = "Sumara set as Agitator in [THIS.GetCountry.GetNameNoFormatting]"
-		# 	}
-
-
-
-		# 	add_journal_entry = {
-		# 		type = je_nda_atlantean_surama
-		# 	}
-		# 	#trigger_event = { id = nda_atlantean.11 days = 21} # event or journal?
-		# }
-		# else = {
-		# 	# find nearest suitable country - probably Massina 
-		# 	random_country = {
-		# 		limit = {
-		# 			NOT = { is_country_type = decentralized }
-		# 			is_revolutionary = no	
-		# 			is_adjacent_to_country = ROOT	
-		# 			coa_def_african_trigger = 	yes
-		# 		}
-		# 		# make room to add character
-		# 		if= {
-		# 			limit = { empty_agitator_slots = 0 }
-					
-		# 			random_scope_character = {
-		# 				limit = { 
-		# 					has_role = agitator 
-		# 					# is not existing Altantean
-		# 				}
-		# 				exile_character_with_martyrdom = yes
-		# 			}
-		# 		}
-
-		# 		# add cultural acceptance - try and stop instant exile
-		# 		add_culture_acceptance_modifier = {
-		# 			culture = cu:nda_cul_atlantean
-		# 			multiplier = 40
-		# 		}
-
-		# 		# add surama as agitator to country
-		# 		if = {
-		# 			limit = {
-		# 				NOT = {
-		# 					any_scope_character = {
-		# 						has_template = nda_surama_character_template
-		# 					}
-		# 				}
-		# 			}
-
-		# 			create_character = {
-		# 				template = nda_surama_character_template
-
-		# 				on_created = {					
-		# 					set_variable = memento_mori_immunity
-		# 					set_character_immortal = yes
-		# 					#save_scope_as = scope_sumara
-		# 					set_interest_group = prev.ig:ig_landowners
-		# 				}
-		# 			}
-
-		# 			random_scope_character = {
-		# 				limit = { has_template = nda_surama_character_template }
-
-		# 				add_character_role = agitator
-		# 			}
-		# 			debug_log = "Sumara set as Agitator in [THIS.GetCountry.GetNameNoFormatting]"
-		# 		}
-
-		# 		add_journal_entry = {
-		# 			type = je_nda_atlantean_surama
-		# 		}
-		# 		#trigger_event = { id = nda_atlantean.11 days = 21} # event or journal?				
-		# 	}
-		# }
+		debug_log = "Sumara Tomb in [THIS.GetCountry.GetNameNoFormatting]"	
  	}	
 
 	
 	option = {
-		name = nda_atlantean.10.a # Accept the cultists - set up conditions to allow nda_base.5 to run
+		name = nda_atlantean.10.a # Accept the surama
 		default_option = yes
 
 		trigger = {
 			p:xC46661 = { state = { owner = ROOT } }
 		}
 
-		# if non-colonial country capable of agitators - then Surama appears	
-		if = {
-			limit = { 
-				p:xC46661 = { 
-					state = { 
-						owner = {
-							THIS = ROOT 
-							NOT = { is_country_type = decentralized }
-							is_revolutionary = no
-							coa_def_african_trigger = 	yes
-						} 
-					} 
-				}
-			}
-			# make room to add character
-			if= {
-				limit = { empty_agitator_slots = 0 }
-				
-				random_scope_character = {
-					limit = { 
-						has_role = agitator 
-						# is not existing Altantean
-					}
-					exile_character_with_martyrdom = yes
-				}
-			}
-
-			# # add cultural acceptance
-			# add_culture_acceptance_modifier = {
-			# 	culture = cu:nda_cul_atlantean
-			# 	multiplier = 40
-			# }
-
-			# add surama as agitator to country
-			if = {
-				limit = {
-					NOT = {
-						any_scope_character = {
-							has_template = nda_surama_character_template
-						}
-					}
-				}
-
-				create_character = {
-					template = nda_surama_character_template
-					interest_group = ig_landowners
-					on_created = {					
-						set_variable = memento_mori_immunity
-						set_character_immortal = yes
-						#save_scope_as = scope_sumara
-					}
-				}
-
-				random_scope_character = {
-					limit = { has_template = nda_surama_character_template }
-
-					add_character_role = agitator
-				}
-				debug_log = "Sumara set as Agitator in [THIS.GetCountry.GetNameNoFormatting]"
-			}
-
-			add_journal_entry = {
-				type = je_nda_atlantean_surama
-			}
-			#trigger_event = { id = nda_atlantean.11 days = 21} # event or journal?
-		}
-		else = {
-			# find suitable country
-			ordered_country = {
-				limit = {
-					NOT = { is_country_type = decentralized }
-					is_revolutionary = no	
-					is_adjacent_to_country = ROOT	
-					coa_def_african_trigger = 	yes
-				}
-
-				order_by = { subtract = global_country_ranking }
-				max = 1	
-
-				# make room to add character
-				if= {
-					limit = { empty_agitator_slots = 0 }
-					
-					random_scope_character = {
-						limit = { 
-							has_role = agitator 
-							# is not existing Altantean
-						}
-						exile_character_with_martyrdom = yes
-					}
-				}
-
-				# # add cultural acceptance - try and stop instant exile
-				# add_culture_acceptance_modifier = {
-				# 	culture = cu:nda_cul_atlantean
-				# 	multiplier = 40
-				# }
-
-				# add surama as agitator to country
-				if = {
-					limit = {
-						NOT = {
-							any_scope_character = {
-								has_template = nda_surama_character_template
-							}
-						}
-					}
-
-					create_character = {
-						template = nda_surama_character_template
-						interest_group = ig_landowners
-
-						on_created = {					
-							set_variable = memento_mori_immunity
-							set_character_immortal = yes
-							#save_scope_as = scope_sumara
-
-						}
-					}
-
-					random_scope_character = {
-						limit = { has_template = nda_surama_character_template }
-
-						add_character_role = agitator
-					}
-					debug_log = "Sumara set as Agitator in [THIS.GetCountry.GetNameNoFormatting]"
-				}
-
-				add_journal_entry = {
-					type = je_nda_atlantean_surama
-				}
-				#trigger_event = { id = nda_atlantean.11 days = 21} # event or journal?				
-			}
-		}
+		# find suitable country
+		nda_effect_home_for_surama = yes
 
 	}
 
@@ -338,7 +76,8 @@ nda_atlantean.11 = {
 	title = nda_atlantean.11.t
 	desc = nda_atlantean.11.d
 	flavor = nda_atlantean.11.f
-	
+	dlc = dlc_NDA
+
 	duration = 3
 	
     event_image = {
@@ -362,7 +101,8 @@ nda_atlantean.11 = {
 	title = nda_atlantean.20.t
 	desc = nda_atlantean.20.d
 	flavor = nda_atlantean.20.f
-	
+	dlc = dlc_NDA
+
 	duration = 3
 	
     event_image = {
@@ -375,8 +115,8 @@ nda_atlantean.11 = {
 
 	trigger = {		
 		# regional
-		game_date >=  1871.3.23
-		game_date <  1872.1.1 
+		game_date >=  1875.3.23
+		game_date <  1877.1.1 
 
 		# owner of - only they get
 		OR = {
@@ -389,148 +129,20 @@ nda_atlantean.11 = {
  	cooldown = { days= 370 }
 
  	immediate = {
- 		p:xC46661 = { state = { save_scope_as = target_country } }
-
+		p:xC46661 = { state = { owner = { save_scope_as = target_country } } }
  	}	
 
 	
 	option = {
-		name = nda_atlantean.20.a # Accept the cultists - set up conditions to allow nda_base.5 to run
+		name = nda_atlantean.20.a 
 		default_option = yes
 
 		trigger = {
 			p:xC46661 = { state = { owner = ROOT } }
 		}
 
-		# if non-colonial country capable of agitators - then Surama appears	
-		if = {
-			limit = { 
-				p:xC46661 = { 
-					state = { 
-						owner = {
-							THIS = ROOT 
-							NOT = { is_country_type = decentralized }
-							is_revolutionary = no
-							coa_def_african_trigger = 	yes
-						} 
-					} 
-				}
-			}
-			# make room to add character
-			if= {
-				limit = { empty_agitator_slots = 0 }
-				
-				random_scope_character = {
-					limit = { 
-						has_role = agitator 
-						# is not existing Altantean
-					}
-					exile_character_with_martyrdom = yes
-				}
-			}
-
-			# # add cultural acceptance
-			# add_culture_acceptance_modifier = {
-			# 	culture = cu:nda_cul_atlantean
-			# 	multiplier = 40
-			# }
-
-			# add surama as agitator to country
-			if = {
-				limit = {
-					NOT = {
-						any_scope_character = {
-							has_template = nda_surama_character_template
-						}
-					}
-				}
-
-				create_character = {
-					template = nda_surama_character_template
-					interest_group = ig_landowners
-					on_created = {					
-						set_variable = memento_mori_immunity
-						set_character_immortal = yes
-						#save_scope_as = scope_sumara
-					}
-				}
-
-				random_scope_character = {
-					limit = { has_template = nda_surama_character_template }
-
-					add_character_role = agitator
-				}
-				debug_log = "Sumara set as Agitator in [THIS.GetCountry.GetNameNoFormatting]"
-			}
-
-			add_journal_entry = {
-				type = je_nda_atlantean_surama
-			}
-			#trigger_event = { id = nda_atlantean.11 days = 21} # event or journal?
-		}
-		else = {
-			# find suitable country
-			ordered_country = {
-				limit = {
-					NOT = { is_country_type = decentralized }
-					is_revolutionary = no	
-					is_adjacent_to_country = ROOT	
-					coa_def_african_trigger = 	yes
-				}
-
-				order_by = { subtract = global_country_ranking }
-				min = 1	
-
-				# make room to add character
-				if= {
-					limit = { empty_agitator_slots = 0 }
-					
-					random_scope_character = {
-						limit = { 
-							has_role = agitator 
-							# is not existing Altantean
-						}
-						exile_character_with_martyrdom = yes
-					}
-				}
-
-				# add surama as agitator to country
-				if = {
-					limit = {
-						NOT = {
-							any_scope_character = {
-								has_template = nda_surama_character_template
-							}
-						}
-					}
-
-					create_character = {
-						template = nda_surama_character_template
-						interest_group = ig_landowners
-
-						on_created = {					
-							set_variable = memento_mori_immunity
-							set_character_immortal = yes
-							#save_scope_as = scope_sumara
-
-						}
-					}
-
-					random_scope_character = {
-						limit = { has_template = nda_surama_character_template }
-
-						add_character_role = agitator
-					}
-					debug_log = "Sumara set as Agitator in [THIS.GetCountry.GetNameNoFormatting]"
-				}
-
-				add_journal_entry = {
-					type = je_nda_atlantean_surama
-				}
-				#trigger_event = { id = nda_atlantean.11 days = 21} # event or journal?				
-			}
-		}
-
+		# find suitable country
+		nda_effect_home_for_kathulos = yes
 	}
 
 	option = { # Default for non-owner 'news'
@@ -540,6 +152,32 @@ nda_atlantean.11 = {
 		}
 	}
  }
+
+ # The return of Surama - one off pulp style revival from certain death
+nda_atlantean.21 = {
+	type = country_event
+	placement = ROOT
+	
+	title = nda_atlantean.21.t
+	desc = nda_atlantean.21.d
+	flavor = nda_atlantean.21.f
+	dlc = dlc_NDA
+
+	duration = 3
+	
+    event_image = {
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	option = {
+		name = nda_atlantean.21.a # 
+	}
+}
+
 # nda_atlantean.30 = { } # Washed up in Pacific - Lovecraft
 
 # atlanteans boost native rebel movements in location and neighbourhood
@@ -550,7 +188,8 @@ nda_atlantean.40 = {
 	title = nda_atlantean.40.t
 	desc = nda_atlantean.40.d
 	flavor = nda_atlantean.40.f
-	
+	dlc = dlc_NDA
+
 	duration = 3
 	
     event_image = {
@@ -575,6 +214,7 @@ nda_atlantean.41 = {
 	title = nda_atlantean.41.t
 	desc = nda_atlantean.41.d
 	flavor = nda_atlantean.41.f
+	dlc = dlc_NDA
 	
 	duration = 3
 	

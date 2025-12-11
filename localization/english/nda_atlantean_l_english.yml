@@ -27,6 +27,9 @@ of_atlantis: "of Atlantis"
 of_ludekta: "of Ludekta"
 of_mu: "of Mu"
 of_agladdho: "of Aglad-Dho"
+of_daitya: "of Daitya"
+of_ruta: "of Ruta"
+of_poseidonis: "of Poseidonis"
 
 # journal entries
 je_nda_atlantean_surama: "The Schemes of Surama"
@@ -35,12 +38,37 @@ je_nda_atlantean_surama_reason: "The Sorcerer Surama of Atlantis has returned, a
 je_nda_atlantean_surama_is_present_tt: "Surama is present in the country"
 je_nda_atlantean_surama_is_gone_tt: "Surama is no longer present in the country"
 
+je_nda_atlantean_kathulos: "The Cult of Kathulos"
+je_nda_atlantean_kathulos_reason: "The Sorcerer Kathulos of Atlantis has returned, and plans to re-envoke the old ways of the Atlanteans.\n\nThey seem to be working with the natives to resist foreign influences.\n\n#ITALIC Kathulos' power is unlimited and unguessed. Like an octopus his tentacles stretch to the high places of civilization and the far corners of the world.#!"
+
+je_nda_atlantean_kathulos_is_present_tt: "Kathulos is present in the country"
+je_nda_atlantean_kathulos_is_gone_tt: "Kathulos is no longer present in the country"
+
+# 
+
 # events
 nda_atlantean.10.t: "A Tomb Uncovered"
-nda_atlantean.10.d: "A strange tomb has been uncovered. It was hidden deep with the deserts of North Africa. The enscriptions unpon its walls undecipherable. When the tomb was first openned it was first thought that the sarcophgos that lay within still contained its contents, but it now appears to be empty."
+nda_atlantean.10.d: "A strange tomb has been uncovered. It was hidden deep with the deserts of North Africa. The enscriptions upon its walls undecipherable. When the tomb was initially opened it was first thought that the sarcophagus that lay within still contained its contents, but it now appears to be empty."
 nda_atlantean.10.f: "''"
 nda_atlantean.10.a: "Interesting"
 nda_atlantean.10.b: "Interesting"
+
+nda_atlantean.11.t: "The Return of Surama"
+nda_atlantean.11.d: "Once believed dead, it appears that Surama has avoided their fate and are once more actively promoting their schemes."
+nda_atlantean.11.f: "The charred skull, oddly enough, was very human, and reminded people of Surama; but the rest of the bones were beyond conjecture. Only well-cut clothing could have made such a body look like a man."
+nda_atlantean.11.a: "Somehow they returned!"
+#'Surama, a man of great intelligence and seemingly inexhaustible erudition, was as morbidly lean as the Thibetan servants; with swarthy, parchment-like skin drawn so tightly over his bald pate and hairless face that every line of the skull stood out in ghastly prominence...'
+
+nda_atlantean.20.t: "All at Sea"
+nda_atlantean.20.d: "A strange casket has been found floating near the coast of Africa. Unfortunately further analysis can not be undertaken as it, and its contents have apparently disappeared."
+nda_atlantean.20.f: "'something floating was sighted, and this object, being grappled and brought aboard, proved to be a mummy-case of a most curious kind...\n\n it differed from the ordinary Egyptian style, but from his rather technical account I merely got the impression that it was a strangely shaped affair carved with characters neither cuneiform nor hieroglyphic. The case was heavily lacquered, being watertight and airtight...'"
+nda_atlantean.20.a: "Interesting"
+nda_atlantean.20.b: "Interesting"
+
+nda_atlantean.21.t: "The Return of Kathulos"
+nda_atlantean.21.d: "Once believed destroyed, it appears that Kathulos has avoided their fate and are once more actively promoting their schemes of power."
+nda_atlantean.21.f: "'...nothing is stable or certain, and mankind hovers at the brink of untold abysses of nameless horror.\n\nIf that dead monster be in truth Kathulos, brought to life in some hideous fashion, what can mortal effort do against him?'"
+nda_atlantean.21.a: "Somehow they returned!"
 
 nda_atlantean.40.t: "A Malignant Influence"
 nda_atlantean.40.d: "Unrest seems to be spreading among the African Cultures. It seems that some foreign influence is spreading dissent and talking of independence, oe even of a grand African empire."
@@ -48,7 +76,7 @@ nda_atlantean.40.f: "'I found, in roundabout ways, that Africa was a seething ca
 nda_atlantean.40.a: "But what is the cause?"
 
 nda_atlantean.41.t: "Cross Culture Unity?"
-nda_atlantean.41.d: "There is talk across the Culture that there is strength in unity with their clos brethern. It seems that some foreign influence is promoting this."
+nda_atlantean.41.d: "There is talk across the Culture that there is strength in unity with their close brethern. It seems that some foreign influence is promoting this."
 nda_atlantean.41.f: "'I sensed a giant intellect and a monstrous genius behind the veil, a genius powerful enough to accomplish this union and hold it together....'"
 nda_atlantean.41.a: "Interesting"
 

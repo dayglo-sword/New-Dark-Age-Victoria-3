@@ -311,6 +311,9 @@ nda_historic.1849 = { # Death of Poe in Baltimore
 	}	
 }
 
+#nda_historic.1850 = { # Home shows powers https://www.online-literature.com/andrew_lang/historical-mysteries/8/
+# Home, aged seventeen, was so constantly attended by noises of rappings that his aunt threw a chair at him, summoned three preachers, an Independent, a Baptist, and a Wesleyan (Home was then a Wesleyan), and plunged into conflict with the devil. The furniture now began to move about, untouched by man, and Home's aunt turned him out of the house. Home went to a friend in another little town, people crowded to witness the phenomena, and the press blazoned the matter abroad. Henceforth, Home was a wonder worker;
+
 nda_historic.1852 = { # An American Medium in London
 	type = country_event
 	placement = p:x7543C8 

@@ -382,15 +382,9 @@ je_nda_cult_spreads_btn_purge = {
 		}
 
 		add_modifier = {
-			name = government_conflict
+			name = nda_purge_aftermath_modifier
 			days = normal_modifier_time
 		}	
 
-		# set_variable = {
-		# 	name = nda_purge_infamy
-		# 	value = 19
-		# }
-		# infamy, infamy!
- #	 var:nda_purge_infamy # 20
 	}	
 }

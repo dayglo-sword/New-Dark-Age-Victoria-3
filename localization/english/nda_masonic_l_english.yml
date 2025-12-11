@@ -71,7 +71,7 @@ nda_mason_list_empty_tt: "No Freemasons in the Country #!"
 nda_mason_lodges_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],nda_mason_lodges_list_tt $nda_mason_lodge_list_title_tt$ #!"
 nda_mason_lodges_list_tt: "[GetScriptedGui('nda_global_lodge_list_sgui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 nda_mason_lodge_list_title_tt: "Major International Lodges"
-nda_mason_lodge_list_tt: "[SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] ( [SCOPE.sState('nda_lodge_loc').GetCustom('lodge_rite_name')] )"
+nda_mason_lodge_list_tt: "[SCOPE.sState('nda_lodge_loc').GetCountry.GetFlagTextIcon] [SCOPE.sState('nda_lodge_loc').GetCustom('full_lodge_name')] ( [SCOPE.sState('nda_lodge_loc').GetCustom('lodge_rite_name')] )"
 nda_mason_lodge_list_empty_tt: "No Major Lodges in the World"
 
 # events

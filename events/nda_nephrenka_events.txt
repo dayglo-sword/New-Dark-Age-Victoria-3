@@ -1229,6 +1229,41 @@ nda_nephrenka.32 = {
 		name = nda_nephrenka.32.a
 		default_option = yes
 
+		if = {
+			limit = {
+				any_country = { 
+					THIS = c:STY 
+					NOT = { 
+						any_scope_character = { 
+							OR = { 
+								has_template = nda_nephren_ka_character_template 
+								has_template = nda_nitocris_character_template
+							}							
+						} 
+					}
+				} 
+			}
+
+			# Put Nicrotis in charge, have pop-up event?
+			create_character = {
+				first_name = Queen
+				last_name = nitocris
+				birth_date = 1861.1.1
+				template = nda_nitocris_character_template 
+				on_created = {
+					set_variable = is_nitocris 									
+				}
+			}
+
+			random_scope_character = {
+				limit = {
+					has_variable = is_nitocris 
+				}
+				save_scope_as = scope_nitocris 
+				add_trait = nda_master 
+				set_character_immortal = yes
+			}
+		}
 		# ai_chance = { # will +ve effect conversion rate
 		# 	base = 80		
 		# }

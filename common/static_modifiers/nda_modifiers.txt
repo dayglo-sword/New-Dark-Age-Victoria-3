@@ -209,3 +209,9 @@ nda_new_dark_age_country_modifier = {
 	country_production_tech_spread_mult = -0.8
 	country_military_tech_spread_mult = -0.8
 }
+
+nda_purge_aftermath_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_authority_mult = -0.25
+	country_legitimacy_base_add = -10
+}

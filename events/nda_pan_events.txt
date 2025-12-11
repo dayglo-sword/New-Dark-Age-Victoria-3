@@ -20,6 +20,8 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 
 	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
 
+	minor_left_icon = scope:location_country
+
 	trigger = {
  		
 		game_date >= 1865.5.5  # 1882 - 17
@@ -35,9 +37,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 	immediate = {
 		set_global_variable = nda_pan_the_experiment
 
-		#p:x20E0C0 = { # Galway - could use x20E0C0 - wood - Loughrea
-		#	save_scope_as = target_state
-		#}
+		p:x6020C0 = { state = { owner = { save_scope_as = location_country } } }
 
 		debug_log = "Great God Pan- The Experiment"
 
