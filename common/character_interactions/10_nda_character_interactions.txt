@@ -138,6 +138,20 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 			add = -15
 		}
 
+		# if 'named' characters then boost chance - mostly effects New England
+		if = {
+			limit = { 
+				OR = {
+					has_variable = is_curwen	
+					has_variable = is_marsh				
+					has_variable = is_whatley
+					has_variable = is_nephren				
+					has_variable = is_nitocris					
+				}
+			}
+			add = 30
+		}
+
 		if = { # Devout should be in opposition 
 			limit = { 
 				interest_group = { is_interest_group_type = ig_devout } 

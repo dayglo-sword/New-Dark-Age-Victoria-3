@@ -149,7 +149,8 @@ nda_effect_dagonic_annex = {
 				country_has_primary_culture = cu:nda_cul_dagonic # needed to stop strange results after revolutions remove culture	
 			}
 			order_by = { subtract = global_country_ranking }
-			#position = 1 # just annex most powerful
+			
+			max = 1 # just annex most powerful
 
 			save_scope_as = nda_dagonic_annex			
 		}

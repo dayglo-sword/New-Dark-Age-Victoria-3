@@ -240,12 +240,12 @@ nda_astro.2 = { # 1861 conjunction
 			nda_effect_generate_global_cult_leader_list = yes		
 		}
 
-		random_character = {
-			limit = { has_variable = nda_coven_leader }
+		# random_character = {
+		# 	limit = { has_variable = nda_coven_leader }
 	
-			save_scope_as = nda_cover_leader_scope
-			set_global_variable = { name=nda_coven_leader_1 value = scope:nda_cover_leader_scope } 
-		}
+		# 	save_scope_as = nda_cover_leader_scope
+		# 	set_global_variable = { name=nda_coven_leader_1 value = scope:nda_cover_leader_scope } 
+		# }
 
 		# nda_effect_cult_movements_boost = yes # Boost Cult movements for a while - should also do in non-cult countries?
 

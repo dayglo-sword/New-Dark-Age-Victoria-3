@@ -186,7 +186,11 @@ je_nda_ritual_oppose_btn_halt = {
 			text = je_nda_ritual_oppose_btn_halt_effect_tt 
 			remove_variable = je_nda_ritual_opposition_started			
 		} 
-		remove_modifier = nda_investigation_cost_modifier
+		if = {
+			limit = { has_modifier = nda_investigation_cost_modifier}
+			remove_modifier = nda_investigation_cost_modifier		
+		}
+
 		custom_tooltip =  {
 			text = je_nda_ritual_btn_cooldown_effect_tt
 			set_variable = { name = je_nda_ritual_oppose_started_cooldown months = 1 } # cooldown to stop cheesing 

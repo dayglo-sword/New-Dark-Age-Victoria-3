@@ -56,7 +56,7 @@ nda_reanimated_state_modifier = {
 	state_mortality_mult = 0.4
 	state_standard_of_living_add = -2
 	state_migration_pull_mult = -0.2
-	state_migration_push_mult = 0.5
+	#state_migration_push_mult = 0.5
 }
 
 nda_ig_secret_masters_modifier = {
@@ -88,7 +88,7 @@ nda_dagonic_state_ruin_modifier = {
 	state_mortality_mult = 0.10
 	state_migration_pull_mult = -0.2
 	state_construction_mult = -0.2
-	state_migration_push_mult = 0.5
+	#state_migration_push_mult = 0.5
 }
 
 nda_star_scorched_earth_state_modifier = {
@@ -101,7 +101,7 @@ nda_star_scorched_earth_state_modifier = {
 	state_mortality_mult = 0.60
 	state_standard_of_living_add = -6
 	state_migration_pull_mult = -0.6
-	state_migration_push_mult = 0.6
+	#state_migration_push_mult = 0.6
 	state_construction_mult = -0.6
 }
 
@@ -112,7 +112,7 @@ nda_star_tsunami_state_modifier = {
 	state_standard_of_living_add = -2
 	state_mortality_mult = 0.20
 	state_migration_pull_mult = -0.2
-	state_migration_push_mult = 0.2
+	#state_migration_push_mult = 0.2
 	state_construction_mult = -0.2
 }
 

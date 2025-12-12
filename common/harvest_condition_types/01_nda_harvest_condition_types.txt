@@ -98,7 +98,7 @@ nda_fury_of_dagon = {
 
 		# Migration
 		state_migration_pull_mult = -0.05 # -0.3
-		state_migration_push_mult = 0.05
+		#state_migration_push_mult = 0.05
 	}
 
 	intensity = {
@@ -171,7 +171,7 @@ nda_red_death = {
 		# From original modifier
 		state_mortality_mult = 0.6 #1.7 # needs to be more? or scaled like plague?
 		state_migration_pull_mult = -0.2 # -0.3
-		state_migration_push_mult = 0.3
+		#state_migration_push_mult = 0.3
 	}
 
 	intensity = {

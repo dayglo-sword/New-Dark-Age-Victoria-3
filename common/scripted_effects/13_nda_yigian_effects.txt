@@ -139,7 +139,8 @@ nda_effect_yigian_annex = {
 				}	
 			}
 			order_by = { subtract = global_country_ranking }
-			#position = 1 # just annex most powerful
+			
+			max = 1 # just annex most powerful
 
 			save_scope_as = nda_yigian_annex			
 		}

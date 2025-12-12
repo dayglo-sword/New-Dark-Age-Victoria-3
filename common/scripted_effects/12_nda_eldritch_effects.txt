@@ -274,7 +274,7 @@ nda_effect_eldritch_annex = {
 				}
 			}
 			#min = 1	
-			#max = 1			
+			max = 1			
 			#position = 1 
 
 			save_scope_as = nda_eldritch_annex

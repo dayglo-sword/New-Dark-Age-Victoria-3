@@ -1,4 +1,15 @@
-Version v1.11.0
+Version v1.12.1
+
+Major Changes
+Upgrade to new Modding setup
+
+Minor Changes
+'Named' characters have more chance of becoming coven leaders
+
+Bug Fixes
+
+
+------Version v1.11.0
 
 Major Changes
 
