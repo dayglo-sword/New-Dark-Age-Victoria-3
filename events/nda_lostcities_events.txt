@@ -75,6 +75,15 @@ nda_lostcities.10 = {  # K'N-Yan revealed ? Do trigger but should be decision fo
 						value = nda_small_conversion
 					}
 				}
+
+				# cause earthquake effect / condition
+				state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
+				}
 			}	
 		}
 
@@ -140,6 +149,14 @@ nda_lostcities.11 = {  # K'N-Yan hidden ?
 				}				
 				remove_global_variable = nda_lostcity_knyan_exists	
 
+				# cause earthquake effect / condition
+				state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
+				}
 			}			
 		}
 	}	
@@ -213,7 +230,16 @@ nda_lostcities.20 = {  # y'han-thlei revealed ?
 				}
 
 				set_global_variable = nda_lostcity_yhanthlei_exists
-			}	
+
+				# cause earthquake effect / condition
+				state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
+				}					
+			}				
 		}
 		
 		# boost from discovery
@@ -277,6 +303,15 @@ nda_lostcities.21 = {  #  y'han-thlei  hidden ?
 				}
 
 				remove_global_variable = nda_lostcity_yhanthlei_exists	
+
+				# cause earthquake effect / condition
+				state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
+				}				
 			}	
 		}
 	}	
@@ -348,7 +383,16 @@ nda_lostcities.30 = {  # Shamballa revealed - unlike other cities ELD can not re
 					post_notification = nda_lostcity_shamballa_reveal
 				}
 
-				set_global_variable = nda_lostcity_shamballa_exists			
+				set_global_variable = nda_lostcity_shamballa_exists		
+				
+				# cause earthquake effect / condition
+				state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
+				}
 			}	
 		}
 
@@ -410,7 +454,16 @@ nda_lostcities.31 = {  # Shamballa hidden ?
 					post_notification = nda_lostcity_shamballa_hidden
 				}
 
-				remove_global_variable = nda_lostcity_shamballa_exists						
+				remove_global_variable = nda_lostcity_shamballa_exists	
+				
+				# cause earthquake effect / condition
+				state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
+				}				
 			}	
 		}
 
@@ -613,6 +666,15 @@ nda_lostcities.40 = {  # Nameless City revealed - For ELD or STY (original owner
 						months = 12
 						value = nda_small_conversion
 					}
+				}
+				
+				# cause earthquake effect / condition
+				state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
 				}				
 			}	
 		}
@@ -675,7 +737,16 @@ nda_lostcities.41 = {  # nameless_city hidden ?
 					post_notification = nda_lostcity_nameless_city_hidden
 				}
 
-				remove_global_variable = nda_lostcity_nameless_city_exists						
+				remove_global_variable = nda_lostcity_nameless_city_exists	
+
+				# cause earthquake effect / condition
+				state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
+				}
 			}	
 		}
 

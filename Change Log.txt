@@ -2,9 +2,12 @@ Version v1.12.1
 
 Major Changes
 Upgrade to new Modding setup
+Atlanteans added as custom characters
 
 Minor Changes
 'Named' characters have more chance of becoming coven leaders
+Earthquake effect for Lost City reveal / removal
+
 
 Bug Fixes
 

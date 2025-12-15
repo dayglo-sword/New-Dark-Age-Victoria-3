@@ -1,0 +1,226 @@
+﻿##############################################################
+######			HERO STATUES IN ALPHABETICAL ORDER		######
+##############################################################
+
+
+REPLACE_OR_CREATE:hero_octopus = {
+	entity = "powerbloc_statue_hero_octopus_01_entity"
+
+	default_choice_for_identities = {
+		identity_trade_league
+		identity_nda_cultist
+	}
+
+	attach = {
+		locator = "loc_head"
+		accessory = {
+			name = picklehelmet
+			locator = {
+				position = { -0.018 0.017 -0.0 }
+				rotation = { 0.0 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = tophat
+		accessory = {
+			name = laurelwreath
+			locator = {
+				position = { 0.0 0.004 -0.003 }
+				rotation = { 0.0 -35.884 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = academyhat
+		accessory = {
+			name = crown
+			locator = {
+				position = { -0.0 -0.018 -0.0 }
+				rotation = { 0.0 -2.64 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = romanhelmet
+			locator = {
+				position = { -0.001 0.011 0.001 }
+				rotation = { 0.567 -6.802 -4.741 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = halo
+			locator = {
+				position = { -0.0 -0.0 0.331 }
+				rotation = { 0.0 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+	}
+
+	attach = {
+		locator = "loc_sphere"
+		accessory = {
+			name = skull
+			locator = {
+				position = { 0.042 -0.38 -0.0 }
+				rotation = { 0.0 -0.0 0.0 }
+				scale = 1.6124876848746477
+			}
+		}
+		accessory = {
+			name = armillary
+			locator = {
+				position = { -0.139 -0.478 0.012 }
+				rotation = { -56.867 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = sun
+			locator = {
+				position = { -0.04 -0.41 -0.0 }
+				rotation = { 0.0 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = globe
+			locator = {
+				position = { -0.025 -0.524 -0.0 }
+				rotation = { 0.0 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = shield
+			locator = {
+				position = { 0.066 0.157 0.129 }
+				rotation = { -18.113 -14.386 -31.508 }
+				scale = 2.605053331431632
+			}
+		}
+		accessory = {
+			name = basket
+			locator = {
+				position = { 0.183 -0.156 0.046 }
+				rotation = { -9.452 -76.392 44.142 }
+				scale = 2.356928498079924
+			}
+		}
+		accessory = {
+			name = backpack
+			locator = {
+				position = { 0.119 0.043 0.329 }
+				rotation = { -17.247 -114.718 56.089 }
+				scale = 2.351329649178878
+			}
+		}
+	}
+
+	attach = {
+		locator = "loc_hand"
+		accessory = scale
+		accessory = {
+			name = sextant
+			locator = {
+				position = { -0.03 0.016 0.043 }
+				rotation = { 144.954 13.499 15.631 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = laurusbranch
+			locator = {
+				position = { 0.0 0.0 -0.0 }
+				rotation = { 113.602 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = gun
+			locator = {
+				position = { 0.0 0.0 -0.0 }
+				rotation = { 73.161 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = sword
+			locator = {
+				position = { 0.004 0.034 -0.004 }
+				rotation = { 62.648 -14.174 5.55 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = book
+			locator = {
+				position = { 0.06 0.034 0.007 }
+				rotation = { -146.476 -16.124 -27.63 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = banner
+			locator = {
+				position = { 0.0 0.0 -0.0 }
+				rotation = { -178.813 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = pitchfork
+		accessory = walkingcane
+		accessory = {
+			name = umbrella
+			locator = {
+				position = { 0.0 0.0 -0.0 }
+				rotation = { 91.74 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = wrench
+			locator = {
+				position = { -0.0 0.107 -0.0 }
+				rotation = { 0.0 -0.0 0.0 }
+				scale = 1.0
+			}
+		}
+		accessory = parasol
+		accessory = crudehoe
+		accessory = shovel
+		accessory = {
+			name = handheldfan
+			locator = {
+				position = { -0.01 0.053 -0.01 }
+				rotation = { 98.087 163.058 -124.68 }
+				scale = 1.0
+			}
+		}
+		accessory = trumpet
+		accessory = {
+			name = eagle
+			locator = {
+				position = { -0.022 0.07 -0.056 }
+				rotation = { -7.629 -58.481 12.725 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = sickle
+			locator = {
+				position = { 0.0 0.0 -0.0 }
+				rotation = { -166.308 15.843 -15.593 }
+				scale = 1.0
+			}
+		}
+		accessory = {
+			name = flame
+			locator = {
+				position = { -0.006 0.0 0.023 }
+				rotation = { -0.0 -4.885 15.256 }
+				scale = 1.0
+			}
+		}
+	}
+}

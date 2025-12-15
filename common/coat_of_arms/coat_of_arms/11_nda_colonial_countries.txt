@@ -186,7 +186,7 @@ nda_cultist_splinter_coven = {
 		texture = "ce_star_pentagram.dds"
 		color1 = "yellow"
 		color2 = color2
-		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
+		instance = { scale = { 0.55 0.55 } position = { 0.25 0.5 } rotation = 180 }			
 	}
 }
 
@@ -205,7 +205,7 @@ nda_cultist_splinter_coven_alt = {
 
 nda_cultist_splinter_cult = {
 	pattern = "pattern_vertical_split_01.tga"
-	color1 = "lightblue"
+	color1 = "blue"
 	color2 = "purple"
 	
 	colored_emblem = {
@@ -219,11 +219,11 @@ nda_cultist_splinter_cult = {
 nda_cultist_splinter_cult_alt = {
 	pattern = "pattern_vertical_split_01.tga"
 	color1 = "purple"
-	color2 = "lightblue"
+	color2 = "blue"
 	
 	colored_emblem = {
 		texture = "ce_star_pentagram.dds"
-		color1 = "purple"
+		color1 = "yellow"
 		color2 = color2
 		instance = { scale = { 0.55 0.55 } position = { 0.75 0.5 } rotation = 180 }			
 	}

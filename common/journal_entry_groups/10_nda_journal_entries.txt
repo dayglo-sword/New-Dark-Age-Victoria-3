@@ -7,3 +7,7 @@
 je_group_nda_eldritch = {
 	context = country
 }
+
+je_group_nda_eldritch_global = {
+	context = none
+}

@@ -116,6 +116,12 @@
  je_nda_ritual_assist_btn_halt_possible_tt: "We can stop assisting our opponents, the Eldritch Cult, in their Ritual."
  je_nda_ritual_assist_btn_halt_effect_tt: "Stop assisting the Eldritch Cult in the Ritual"
 
+ je_nda_ritual_assist_global: "Assist The Ritual"
+ je_nda_ritual_assist_global_reason: "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe should assist them in all ways possible in this great work.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+ #je_nda_ritual_assist_fail_is_eld_tt: "The country becomes the Eldritch Cult"
+ #je_nda_ritual_assist_goal:0 "Assist in the competion of the Ritual to enable Cthulhu's return when the 'Stars are Right.'"
+ #je_nda_ritual_assist_is_not_completed_tt: "The Ritual is not complete"
+
  je_nda_ritual_oppose: "Oppose The Ritual"
  je_nda_ritual_oppose_reason: "The Eldritch Cult, now secure in its power, has commenced [concept_nda_ritual] that will ensure the Great Ones reawakening.\n\nWe must use all our power to stop this!\n\nWe must investigate and attempt to undermine this fiendish plot... But do we have enough investigators to even try?"
  #je_nda_ritual_oppose_goal:0 "Halt the Ritual to stop [concept_nda_cthulhu]'s return when the 'Stars are Right.'"

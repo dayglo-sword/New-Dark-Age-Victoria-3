@@ -33,7 +33,9 @@ Timeline of events in mod
 1865.6      nda_historic.1865   Zetetic Astronomy - Earth is not a globe!
 1867.6		nda_historic.1867 	Societas Rosicruciana in Anglia
 1870.3		nda_ regional		Cyrus Teed - Hollow Earth
+1871~		nsa_atlantean.10	The Return of Sumara of Atlantis
 1871.5		nda_historic.1871	Vril - Power of the coming race : book by Edward Bulwer-Lytton
+1875~		nsa_atlantean.20	The Return of Kathulos of Atlantis
 1875.4      nda_historic.1875   NY - The Theosophical Society
 1877.3      nda_nen.1877        Starry Wisdom - Close Down
 1881.4      nda_astro.1881      Conjunction 3

@@ -469,6 +469,7 @@ nda_atlantean_trait = {
 	character_modifier = {
 		character_health_add = 0.8
 		character_popularity_add = 60
+		character_coup_strength_mult = 0.20 # backstabbers
 	}
 
 	command_modifier = {

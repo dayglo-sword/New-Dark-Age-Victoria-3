@@ -352,3 +352,125 @@ je_nda_ritual_proceeds = {
 
 	should_be_pinned_by_default = yes
 }
+
+je_nda_ritual_assist_global = {
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	group = je_group_nda_eldritch_global
+
+	possible = {
+		
+		# custom_tooltip = {
+		# 	text = trigger_has_cult_culture
+		# 	has_cult_culture = yes
+		# }
+		exists = c:ELD
+
+		#is_revolutionary = no
+		# NOT = { THIS ?= c:ELD }
+
+		# NOT = { has_global_variable = nda_ritual_completed  }
+
+		custom_tooltip = {
+			text = je_nda_ritual_assist_is_not_completed_tt
+			#NOT = { THIS = c:ELD }
+			NOT = { has_global_variable = nda_ritual_completed  } 
+			has_global_variable = je_nda_ritual_proceeds_tracker
+		}
+	}
+
+
+	should_be_involved = { # If CUlt country activly supporting
+		has_variable = je_nda_ritual_assist_started
+	}
+	
+	should_show_when_not_involved = { # If just a cult country
+		NOT = { has_variable = je_nda_ritual_assist_started }
+		is_cultist_country = yes	
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = je_nda_ritual_proceeds_complete_tt
+			has_global_variable = nda_ritual_completed  
+		}
+	}
+
+	fail = {
+		# if ritual failed or star alignment occured
+		custom_tooltip = {
+			text = je_nda_ritual_time_has_passed_tt
+			has_global_variable = nda_ritual_cthulhu_visits # Ritual is too late
+		}		
+		# # if relations have deteriorated
+		# OR = {
+		# 	custom_tooltip = {
+		# 		# If becomes ELD due to original ELD destruction stop assist
+		# 		text = je_nda_ritual_assist_fail_is_eld_tt
+		# 		EXISTS = c:ELD
+		# 		ROOT = c:ELD		
+		# 	}
+		# 	custom_tooltip = {
+		# 		text = je_nda_ritual_time_has_passed_tt
+		# 		has_global_variable = nda_ritual_cthulhu_visits # Ritual is too late
+		# 	}
+		# 	#c:ELD = { relations:root <= relations_threshold:cold }
+		# 	custom_tooltip = {
+		# 		text = trigger_has_cult_culture_not
+		# 		has_cult_culture = no
+		# 	}
+		# }
+	}
+	
+	immediate_all_involved = {
+		# if = {
+		# 	limit = { exists = c:LIP }
+		# 	change_relations = { country = c:LIP value = -10 }
+		# }
+		# if = {
+		# 	limit = { exists = c:SCM }
+		# 	change_relations = { country = c:SCM value = -10 }
+		# }
+	}	
+
+	on_become_involved_after_activation = {
+		# if = {
+		# 	limit = { exists = c:LIP }
+		# 	change_relations = { country = c:LIP value = -10 }
+		# }
+		# if = {
+		# 	limit = { exists = c:SCM }
+		# 	change_relations = { country = c:SCM value = -10 }
+		# }
+	}
+
+	on_no_longer_involved = {
+		# if = {
+		# 	limit = { exists = c:LIP }
+		# 	change_relations = { country = c:LIP value = 10 }
+		# }
+		# if = {
+		# 	limit = { exists = c:SCM }
+		# 	change_relations = { country = c:SCM value = 10 }
+		# }
+	}
+
+	on_complete_all_involved = {
+		#add_modifier = { name = lippe_crisis_averted years = 10 }
+	}
+	
+	on_fail_all_involved = {
+		#add_modifier = { name = lippe_crisis years = 10 }
+	}
+	
+	on_timeout_all_involved = {
+		#add_modifier = { name = lippe_crisis years = 10 }
+	}
+
+	
+	weight = 200
+
+	#inheritable = yes
+
+	should_be_pinned_by_default = yes
+}

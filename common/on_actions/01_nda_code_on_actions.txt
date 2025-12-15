@@ -637,7 +637,7 @@ nda_on_character_death_on_action = {
 			set_global_variable = nda_kathulos_revive	
 
 			# use same country selection as create
-			nda_effect_home_for_surama = yes
+			nda_effect_home_for_kathulos = yes
 		}
 	}
 }

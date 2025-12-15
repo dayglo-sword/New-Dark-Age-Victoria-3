@@ -499,7 +499,7 @@ nda_authors.40 = {
 		IF = {
 			limit = { p:x60E0C0 = { state = { owner = ROOT } } }
 
-				# Send Bellingham into exile
+				# Send Bellingham into exile or make as local agitator
 				scope:scope_bellingham = { 
 					add_character_role = agitator
 					exile_character_with_martyrdom = yes
@@ -528,7 +528,7 @@ nda_authors.40 = {
 
 		}
 
-		# Send Bellingham into exile - needs tooltipping for flees abroad
+		# Send Bellingham into exile - needs tooltipping for flees abroad - to Egypt or Stygia?? else into exile pool?
 		scope:scope_bellingham = { 
 			add_character_role = agitator
 			exile_character_with_martyrdom = yes

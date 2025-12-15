@@ -380,7 +380,7 @@ je_nda_cult_spreads_btn_purge = {
 				#kill_character = yes				
 			}
 			ELSE = {
-				kill_character = yes				
+				retire_character = yes				
 			}
 	
 		}

@@ -1,7 +1,7 @@
 ﻿nda_miskatonic_uni_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	building_university_throughput_add = 0.15
-	building_arts_academy_throughput_add = 0.15
+	building_art_academy_throughput_add = 0.15
 }
 
 nda_dagonic_state_modifier = {

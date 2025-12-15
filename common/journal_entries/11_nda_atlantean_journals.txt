@@ -269,6 +269,24 @@
 
 					}
 				}
+				1 = { # If host country is subject of non-african then boost liberty desire
+					modifier = {
+						if = {
+							limit = {
+								NOT = {
+									NOT = { is_country_type = decentralized }
+									is_subject = yes	
+									overlord = { coa_def_african_trigger = no }
+									coa_def_african_trigger = yes																		
+								}
+							}
+							subtract = 1
+						}
+					}
+					# If subject of non-local power then increase liberty desire
+					debug_log = "Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
+					add_liberty_desire = 20
+				}
 			}
 	
 		}
@@ -582,6 +600,30 @@ je_nda_atlantean_kathulos = {
 
 						add_liberty_desire = 20
 
+					}
+				}
+				1 = { # If host country is subject of non-african then boost liberty desire
+					modifier = {
+						if = {
+							limit = {
+								NOT = {
+									NOT = { is_country_type = decentralized }
+									is_subject = yes	
+									overlord = { coa_def_african_trigger = no }
+									coa_def_african_trigger = yes																		
+								}
+							}
+							subtract = 1
+						}
+					}
+					if = {
+						limit = {
+							is_subject = yes	
+							overlord = { coa_def_african_trigger = no }							
+						}
+						# If subject of non-local power then increase liberty desire
+						debug_log = "Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
+						add_liberty_desire = 20						
 					}
 				}
 			}
