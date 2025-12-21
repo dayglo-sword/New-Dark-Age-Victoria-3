@@ -84,6 +84,79 @@
 	}
 }
 
+nda_effect_surama_back_from_exile = {
+
+	if = {
+		limit = { any_character = { has_template = nda_surama_character_template } }
+
+		# find suitable country
+		ordered_country = {		
+
+			limit = {
+				NOT = { is_country_type = decentralized }
+				is_revolutionary = no	
+				is_adjacent_to_country = ROOT	
+				coa_def_african_trigger = 	yes
+				NOT = { has_law_or_variant = law_type:law_isolationism }
+			}
+
+			order_by = { 
+				subtract = global_country_ranking 
+				if = { limit = { has_law_or_variant = law_type:law_isolationism }
+					subtract = 10
+				}
+			}
+			max = 1	
+
+			# make room to add character
+			if= {
+				limit = { empty_agitator_slots = 0 }
+				
+				random_scope_character = {
+					limit = { 
+						has_role = agitator 
+						# is not existing Altantean
+					}
+					exile_character_with_martyrdom = yes
+				}
+			}
+
+			# add surama as agitator to country
+			if = {
+				limit = {
+					any_character = {
+						has_template = nda_surama_character_template
+					}
+				}
+
+				# # add atlantean acceptance else can be kicked staright away.			
+				# add_acceptance = {
+				# 	culture = cu:nda_cul_atlantean
+				# 	value = 70
+				# }
+
+				random_character = {
+					limit = { has_template = nda_surama_character_template }
+
+					add_character_role = agitator
+					transfer_character = PREV
+				}
+				debug_log = "Sumara returns as Agitator in [THIS.GetCountry.GetNameNoFormatting]"
+			}
+
+			add_journal_entry = {
+				type = je_nda_atlantean_surama
+			}
+
+			# if = {
+			# 	limit = { has_global_variable = nda_surama_revive }
+			# 	trigger_event = { id = nda_atlantean.11 days = 10 } # They're back! 	
+			# }
+			
+		}
+	}
+}
+
 nda_effect_home_for_kathulos = {
 
 	if = {
@@ -167,6 +240,81 @@ nda_effect_home_for_kathulos = {
 				limit = { has_global_variable = nda_kathulos_revive }
 				trigger_event = { id = nda_atlantean.21 days = 10 } # They're back! 	
 			}
+			
+		}
+	}
+}
+
+nda_effect_kathulos_back_from_exile = {
+
+	if = {
+		limit = { any_character = { has_template = nda_kathulos_character_template } }
+
+		# find suitable country
+		ordered_country = {		
+
+			limit = {
+				NOT = { is_country_type = decentralized }
+				is_revolutionary = no	
+				is_adjacent_to_country = ROOT	
+				any_primary_culture = {
+					has_discrimination_trait_group = heritage_group_middle_eastern
+				}	
+				NOT = { has_law_or_variant = law_type:law_isolationism }
+			}
+
+			order_by = { 
+				subtract = global_country_ranking 
+				if = { limit = { has_law_or_variant = law_type:law_isolationism }
+					subtract = 10
+				}
+			}
+			max = 1	
+
+			# make room to add character
+			if= {
+				limit = { empty_agitator_slots = 0 }
+				
+				random_scope_character = {
+					limit = { 
+						has_role = agitator 
+						# is not existing Altantean
+					}
+					exile_character_with_martyrdom = yes
+				}
+			}
+
+			# add surama as agitator to country
+			if = {
+				limit = {
+					any_character = {
+						has_template = nda_kathulos_character_template
+					}
+				}
+
+				# # add atlantean acceptance else can be kicked staright away.			
+				# add_acceptance = {
+				# 	culture = cu:nda_cul_atlantean
+				# 	value = 70
+				# }
+
+				random_character = {
+					limit = { has_template = nda_kathulos_character_template }
+
+					add_character_role = agitator
+					transfer_character = PREV
+				}
+				debug_log = "Kathulos returns as Agitator in [THIS.GetCountry.GetNameNoFormatting]"
+			}
+
+			add_journal_entry = {
+				type = je_nda_atlantean_kathulos
+			}
+
+			# if = {
+			# 	limit = { has_global_variable = nda_kathulos_revive }
+			# 	trigger_event = { id = nda_atlantean.21 days = 10 } # They're back! 	
+			# }
 			
 		}
 	}

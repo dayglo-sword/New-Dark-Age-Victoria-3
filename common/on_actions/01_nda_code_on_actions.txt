@@ -662,6 +662,36 @@ nda_on_half_yearly_pulse_character_on_action = {
 	}
 }
 
+# If character in exile then return to countries
+on_five_year_pulse_character = {
+	on_actions = {
+		nda_on_five_year_pulse_character_on_action	
+	}	
+}
+
+nda_on_five_year_pulse_character_on_action = {
+	effect = {
+		if = {
+			limit = {
+				has_template = nda_surama_character_template	
+				is_in_exile_pool = yes					
+			}
+
+			# use same country selection as create
+			nda_effect_surama_back_from_exile = yes
+		}
+		else_if = {
+			limit = {
+				has_template = nda_kathulos_character_template	
+				is_in_exile_pool = yes					
+			}
+
+			# use same country selection as create
+			nda_effect_kathulos_back_from_exile = yes
+		}
+	}
+}
+
 # Root = Country
 # scope:target = Uprising country
 on_revolution_start = { # need to copy over appropriate variables so at not to trigger journals

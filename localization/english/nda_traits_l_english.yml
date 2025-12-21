@@ -102,6 +102,7 @@ nda_sea_creatures_modifier_desc: "Unsafe shoreline and fishing due to the presen
 
 # Custom Triggers
 can_cult_infiltrate: "Cultists can infiltrate the country"
+nda_is_cultist_country: "Is a Cultist Country"
 #ADD_WAR_EXHAUSTION_NEG:0 "Inexhaustable Will"
 
 # Character interactions

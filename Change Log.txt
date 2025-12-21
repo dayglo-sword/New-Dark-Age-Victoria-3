@@ -10,6 +10,7 @@ Earthquake effect for Lost City reveal / removal
 
 
 Bug Fixes
+Prevent Revolutions starting Ritual
 
 
 ------Version v1.11.0

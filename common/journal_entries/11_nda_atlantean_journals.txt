@@ -599,7 +599,7 @@ je_nda_atlantean_kathulos = {
 						debug_log = "Increase Liberty Desire : [THIS.GetCountry.GetNameNoFormatting]"
 
 						add_liberty_desire = 20
-
+						change_relations = { country = ROOT value = 50 } # should be done by confirmation event if player
 					}
 				}
 				1 = { # If host country is subject of non-african then boost liberty desire

@@ -127,8 +127,12 @@ is_full_cult_country = {
 }
 
 is_cultist_country = {
-	# has cult in the open
-	has_variable = nda_cultists_in_open
+	custom_tooltip = {
+		text = nda_is_cultist_country
+		# has cult in the open
+		has_variable = nda_cultists_in_open
+	}
+
 }
 
 is_potentially_yigian = { 
