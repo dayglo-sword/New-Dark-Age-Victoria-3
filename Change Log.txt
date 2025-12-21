@@ -1,4 +1,4 @@
-Version v1.12.1
+Version v1.12.2
 
 Major Changes
 Upgrade to new Modding setup
@@ -13,7 +13,9 @@ Bug Fixes
 Prevent Revolutions starting Ritual
 
 
-------Version v1.11.0
+------
+
+Version v1.11.0
 
 Major Changes
 

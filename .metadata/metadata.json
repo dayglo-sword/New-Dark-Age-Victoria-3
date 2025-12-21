@@ -5,7 +5,7 @@
   "supported_game_version" : "1.12.*",
   "picture": "thumbnail.png",
   "short_description" : "A New Dark Age - An Eldritch Tales Mod",
-  "tags" : ["Events","Alternative History","New Nations"],
+  "tags" : ["Events","Alternative History","New Nations","1.12","Horror","Cthulhu","Lovecraft","Freemasons"],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true,
