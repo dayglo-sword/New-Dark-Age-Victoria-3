@@ -46,7 +46,7 @@
 
 
 
-INSERT:DEFAULT = {
+INJECT:DEFAULT = {
 
 	flag_definition = {
 		coa = colonial_southern_africa_cultist

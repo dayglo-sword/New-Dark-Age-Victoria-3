@@ -15,6 +15,7 @@
 			#NOT = { power_bloc ?= { has_identity = identity:identity_sovereign_empire} }
 
 		}
+		NOT = { has_variable = nda_eld_power_bloc_cooldown }
 	}
 	
 	when_taken = {
@@ -57,8 +58,13 @@
 
 			c:ELD.power_bloc ?= {
 				add_leverage = { target = PREV value = nda_cult_leverage_boost }  
-			}
+			}			
 		}
+
+		set_variable = {
+			name = nda_eld_power_bloc_cooldown
+			months = 12
+		}	
 	}
 
 	ai_chance = {
@@ -89,6 +95,7 @@ nda_yig_form_union_of_the_snake = {
 			#power_bloc ?= { has_identity = identity:identity_sovereign_empire}
 
 		}
+		NOT = { has_variable = nda_yig_power_bloc_cooldown }
 	}
 	
 	when_taken = {
@@ -116,6 +123,12 @@ nda_yig_form_union_of_the_snake = {
 
 				}
 			}
+
+			set_variable = {
+				name = nda_yig_power_bloc_cooldown
+				months = 12
+			}			
+
 		}
 	}
 
@@ -147,6 +160,7 @@ nda_dgn_form_cetacean_leagues = {
 			#power_bloc ?= { has_identity = identity:identity_sovereign_empire}
 
 		}
+		NOT = { has_variable = nda_dgn_power_bloc_cooldown }
 	}
 	
 	when_taken = {
@@ -174,7 +188,12 @@ nda_dgn_form_cetacean_leagues = {
 					}
 
 				}
-			}						
+			}	
+			
+			set_variable = {
+				name = nda_dgn_power_bloc_cooldown
+				months = 12
+			}			
 		}
 
 	}

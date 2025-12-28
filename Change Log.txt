@@ -1,3 +1,21 @@
+Version v1.12.2.1
+
+Major Changes
+
+Minor Changes
+Add timeouts to Cult Power Bloc decisions.
+Reduce Masonry Outlawed rate
+
+
+Bug Fixes
+Fix Coven flags
+Fix 'New America' naming.
+Fix harvest conditions sounds.
+Re-enable Cult Colonial Admin
+
+
+------
+
 Version v1.12.2
 
 Major Changes
@@ -11,7 +29,6 @@ Earthquake effect for Lost City reveal / removal
 
 Bug Fixes
 Prevent Revolutions starting Ritual
-
 
 ------
 
