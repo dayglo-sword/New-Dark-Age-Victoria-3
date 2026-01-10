@@ -61,6 +61,19 @@ full_lodge_name = {
 		trigger = {
 			AND = {
 				has_variable = nda_lodge_level
+				var:nda_lodge_level = 2			
+			}
+			AND = {
+				has_variable = nda_lodge_rite
+				var:nda_lodge_rite = 2				
+			}
+		}
+		localization_key = nda_grand_oriental_lodge
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
 				var:nda_lodge_level > 1				
 			}
 			state_region = s:STATE_CEYLON
@@ -88,8 +101,7 @@ lodge_rite_name = {
 	text = {
 		trigger = {
 			AND = {
-				has_variable = nda_lodge_rite
-				var:nda_lodge_rite = 1				
+				has_variable = nda_lodge_rite	
 			}
 			owner = { religion = rel:nda_rel_cultist }
 		}
@@ -115,7 +127,7 @@ lodge_rite_name = {
 
 		}
 
-		localization_key = nda_rite_scottish # as used by the French!
+		localization_key = nda_rite_scottish # as used by the French! use for more Liberal Freemasonry??
 	}
 	text = {
 		trigger = {

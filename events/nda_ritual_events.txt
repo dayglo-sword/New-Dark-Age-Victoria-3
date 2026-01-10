@@ -180,6 +180,7 @@ nda_ritual.1890 = { # Cthulhu Early Return
 	hidden = yes
 
 	trigger = { # limit to eldritch cult ELD ? Called Only?
+		
 		has_global_variable = nda_ritual_completed	
 		game_date >= 1890.8.20  # HPL's Birthday
 		game_date < 1891.1.1 
@@ -189,76 +190,118 @@ nda_ritual.1890 = { # Cthulhu Early Return
 	}
 
 	immediate = {
-		set_global_variable = nda_cthulhu_arrives	
-		set_global_variable = nda_cthulhu_arrives_early	
-		every_country = {
-			limit = {
-				OR = { 
-					is_full_cult = yes	
-					is_player = yes
+
+		if ={
+			limit = { has_game_rule = return_on_ritual } # Cthuhlu is willing to return
+
+			set_global_variable = nda_cthulhu_arrives	
+			set_global_variable = nda_cthulhu_arrives_early	
+			every_country = {
+				limit = {
+					OR = { 
+						is_full_cult = yes	
+						is_player = yes
+					}
 				}
-			}
-			set_variable = nda_cthulhu_timer_active
-			set_variable = {
-				name = nda_cthulhu_timer
-				days = 7300
-				value = yes
-			}	
-			# Timer for final war - should still have plenty of time to complete
-			set_variable = nda_ritual_last_war_timer_active
-			set_variable = {
-				name = nda_ritual_last_war_timer
-				days = 2000
-				value = yes
-			}	
-
-			trigger_event = { id = nda_ritual.2 popup = yes}				
-		}
-		
-		nda_effect_cthulhu_arrives = yes
-		debug_log = "Ritual - Stars are Right Early"
-
-		every_country = {
-			post_notification = nda_ritual_cthulhu_returns
-		}
-		
-		IF = {
-			limit = { NOT = { has_global_variable =  nda_lostcity_rlyeh_exists}}
-			# add cosmetic rlyeh to map
-			p:xA000B0 = {
-				state = {
-					# state level
-					create_building={
-						building="building_nda_lostcity_rlyeh" 
-						level = 1
-					}	
-
-					set_global_variable = nda_lostcity_rlyeh_exists								
+				set_variable = nda_cthulhu_timer_active
+				set_variable = {
+					name = nda_cthulhu_timer
+					days = 7300
+					value = yes
 				}	
-			}			
-		}
+				# Timer for final war - should still have plenty of time to complete
+				set_variable = nda_ritual_last_war_timer_active
+				set_variable = {
+					name = nda_ritual_last_war_timer
+					days = 2000
+					value = yes
+				}	
 
-		c:ELD ?= {
-			# if bloc leader do increased leverage on minor Cult countries
-			if = {
-				limit = { is_power_bloc_leader = yes }
-				power_bloc = { 
-					save_temporary_scope_as = target_bloc 
-					add_cohesion_number = 100 # Keep happy
-				}
+				trigger_event = { id = nda_ritual.2 popup = yes}				
+			}
+			
+			nda_effect_cthulhu_arrives = yes
+			debug_log = "Ritual - Stars are Right Early"
 
-				every_country = {
-					limit = {
-						NOT = { ROOT = THIS }
-						country_has_primary_culture = cu:nda_cul_dagonic
+			every_country = {
+				post_notification = nda_ritual_cthulhu_returns
+			}
+			
+			IF = {
+				limit = { NOT = { has_global_variable =  nda_lostcity_rlyeh_exists}}
+				# add cosmetic rlyeh to map
+				p:xA000B0 = {
+					state = {
+						# state level
+						create_building={
+							building="building_nda_lostcity_rlyeh" 
+							level = 1
+						}	
+
+						set_global_variable = nda_lostcity_rlyeh_exists								
+					}	
+				}			
+			}
+
+			c:ELD ?= {
+				# if bloc leader do increased leverage on minor Cult countries
+				if = {
+					limit = { is_power_bloc_leader = yes }
+					power_bloc = { 
+						save_temporary_scope_as = target_bloc 
+						add_cohesion_number = 100 # Keep happy
 					}
 
-					scope:target_bloc = {
-						add_leverage = { target = PREV value = nda_cult_leverage_boost }  
+					every_country = {
+						limit = {
+							NOT = { ROOT = THIS }
+							country_has_primary_culture = cu:nda_cul_dagonic
+						}
+
+						scope:target_bloc = {
+							add_leverage = { target = PREV value = nda_cult_leverage_boost }  
+						}
 					}
 				}
 			}
 		}
+		else = {
+			# Cthulhu no show - agitate cultists in cult countries - convert some to other esoteric religions
+			every_country = {
+				limit = {
+					OR = { 
+						is_cultist_country = yes	
+						is_player = yes # include player country in effects
+					}
+				}
+
+				trigger_event = { id = nda_ritual.30 popup = yes}				
+			}
+		}
+	}	
+}
+
+nda_ritual.1891 = { # Cthulhu Failure to Return early
+	type = country_event
+	hidden = yes
+
+	trigger = { # limit to eldritch cult ELD ? Called Only?
+		has_game_rule = no_return # Cthuhlu is willing to return
+		has_global_variable = nda_ritual_completed	
+		game_date >= 1890.8.20  # HPL's Birthday
+		game_date < 1891.1.1 
+		NOT = {
+			has_global_variable = nda_cthulhu_arrives	# run once
+		 }
+	}
+
+	cooldown = { days = 120	}
+
+	immediate = {
+
+		set_global_variable = nda_cthulhu_no_show	
+	
+		debug_log = "Ritual - Stars are Right Early - Cthulhu No Show"
 	}	
 }
 
@@ -955,6 +998,41 @@ nda_ritual.20 = {
 
 }
 
+# Cthulhu early no show
+nda_ritual.30 = { 
+	type = country_event
+	placement = ROOT
+	title = nda_ritual.30.t
+	desc = nda_ritual.30.d
+	flavor =  nda_ritual.30.f
+	dlc = dlc_NDA
+	gui_window = nda_event_window_full 
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_devastation.bk2"	# need more appropriate
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect ="event:/SFX/Events/unspecific/devastation"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	trigger = { 
+	}
+	
+	immediate = {
+		# drop cultist religion - convert in part to Theosophy and Old Ways as they are partially right!
+		nda_effect_cultist_religious_decline = yes
+	}
+
+	option = { #What now?
+		name = nda_ritual.30.a
+		default_option = yes
+	}
+}
+
 # Call of Cthulhu story events
 # The Tale of Inspector Legrasse - November 1907 New Orleans
 # the American Archaeological Society held its annual meeting in St. Louis.
@@ -1118,7 +1196,11 @@ nda_ritual.1925 = { #April - The Vigilant - only if Ritual fails
 
 	trigger = { 
 		is_player = yes
-		NOT = { has_global_variable = nda_ritual_completed }
+		OR = {
+			has_game_rule = no_return # Cthuhlu is not willing to return, is annoyed at being awoken
+			NOT = { has_global_variable = nda_ritual_completed }			
+		}
+
 		game_date >= 1925.4.2 # the date the dreams stop	
 		NOT = {
 			has_global_variable = nda_ritual_cthulhu_visits	# run once

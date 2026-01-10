@@ -274,6 +274,13 @@ nda_masonic_potential =
 		}
 		add = -20	
 	}
+	# Garbaldi! Should limit to South America??
+	if = {
+		limit = {
+			has_template = garibaldi_character_template
+		}
+		add = 10
+	}
 }
 
 # ROOT scope is State - used to find senior lodge

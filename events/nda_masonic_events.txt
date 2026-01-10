@@ -110,7 +110,7 @@ nda_masonic.11 = { # Masonic Foundings - Called Event
 	cooldown = { days = 1740 } # does this work for called events
 
 	immediate = {
-		debug_log = "Masons Start in "
+		debug_log = "Masons Start in [THIS.GetNameNoFormatting]"
 
 		ordered_scope_character = {
 			limit = { 

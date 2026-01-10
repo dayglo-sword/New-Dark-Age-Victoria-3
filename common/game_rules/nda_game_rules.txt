@@ -1,4 +1,4 @@
-﻿cult_spread_speed = {
+﻿nda_cult_spread_speed = {
 	default = cult_spread_normal
 
 	cult_spread_slower = {
@@ -8,5 +8,17 @@
 	}
 
 	cult_spread_faster = {
+	}
+}
+
+nda_cthuhlu_can_return = {
+	default = return_on_ritual
+
+	return_on_ritual = {
+
+	}
+
+	no_return = {
+		
 	}
 }

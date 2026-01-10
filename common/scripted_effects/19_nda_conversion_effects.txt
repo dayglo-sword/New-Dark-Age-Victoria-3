@@ -87,3 +87,13 @@ nda_effect_fix_missing_primary_culture = {
 		add_primary_culture = cu:nda_cul_cultist # should work out largest local
 	}
 }
+
+# scope: country or state
+nda_effect_conversion_to_the_old_ways = {
+	every_scope_pop = {
+		limit = {
+			NOT = { religion = rel:nda_rel_old_ways	}
+		}
+		change_pop_religion = { target = rel:nda_rel_old_ways value = 0.05 }	# should use gradual conversion mechanism?
+	}
+}

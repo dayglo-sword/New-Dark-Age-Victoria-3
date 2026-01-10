@@ -825,9 +825,13 @@ nda_authors.50 = { # The Willows - written in 1907 push to earlier date? > 1887
 	duration = 3
 
 	trigger = { 
-		 is_player = yes	
-		 game_date >=  1887.4.2  
-		 game_date < 1889.1.1  
+		OR = {
+			is_player = yes		
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1887.4.2  
+		game_date < 1889.1.1  
 
 		# should not be a war zone as needs tourists.
 		OR = {
@@ -848,6 +852,192 @@ nda_authors.50 = { # The Willows - written in 1907 push to earlier date? > 1887
 
 	option = {
 		name = nda_authors.50.b
+
+		trigger = {
+			# player should not be same as owner
+			NOT = { 
+				p:xD06161 = { state = { owner = ROOT } }	
+			}
+		}
+
+		# diplomatic incident
+		change_relations = { country = ROOT value = -10 }
+	}
+
+	# option = {
+	# 	name = nda_authors.50.c
+
+	# 	trigger = {
+	# 		p:xD06161 = { state = { owner = ROOT } }
+	# 	}
+
+	# 	ai_chance = { # should be most likely
+	# 		base = 100		
+	# 	}
+		
+	# 	# convert to/ reveal Old Ways
+	# 	p:xD06161 = {
+	# 		state = {
+	# 			nda_effect_conversion_to_the_old_ways = yes
+	# 		}
+	# 	}
+	# }
+}
+
+# Algernon Blackwood - John Silence adventures (from collection 'Ancient Sorceries' )- if not already Agitator\Character give chance to be so? published 1908 so can do it yearly in run up to this??
+nda_authors.51 = { # A Psychical Invasion 
+	type = country_event
+	placement = p:xD06161 # this needs to be London (or Boston if relocated?)
+	title = nda_authors.51.t
+	desc = nda_authors.51.d
+	flavor =  nda_authors.51.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1908.6.1  
+		game_date < 1908.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "John Silence - A Psychical Invasion"
+	}
+	
+	option = {
+		name = nda_authors.51.a
+		default_option = yes	
+	}
+}
+
+nda_authors.52 = { # A Nemesis of Fire
+	type = country_event
+	placement = p:xD06161 # this needs to be West Country (or Miskaton if relocated?)
+	title = nda_authors.52.t
+	desc = nda_authors.52.d
+	flavor =  nda_authors.52.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1908.6.1  
+		game_date < 1908.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "John Silence - Nemesis of Fire"
+	}
+	
+	option = {
+		name = nda_authors.52.a
+		default_option = yes	
+	}
+}
+
+nda_authors.53 = { # Ancient Sorceries
+	type = country_event
+	placement = p:xD06161 # this needs to beNorthern france (or Quebec if relocated?)
+	title = nda_authors.53.t
+	desc = nda_authors.53.d
+	flavor =  nda_authors.53.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1908.6.1  
+		game_date < 1908.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "John Silence - Ancient Sorceries"
+	}
+	
+	option = {
+		name = nda_authors.53.a
+		default_option = yes	
+	}
+}
+
+nda_authors.54 = { # Secret Worship
+	type = country_event
+	placement = p:xD06161 # this needs to be Southern Germany / Saxony
+	title = nda_authors.54.t
+	desc = nda_authors.54.d
+	flavor =  nda_authors.54.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1908.6.1  
+		game_date < 1908.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "John Silence - Ancient Sorceries"
+	}
+	
+	option = {
+		name = nda_authors.54.a
+		default_option = yes	
 	}
 }
 
@@ -970,5 +1160,211 @@ nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
 
 	option = { # Poor Count Orlok
 		name = nda_authors.61.b
+	}
+}
+ 
+# Events based on Story collection "Return of the Ancients" 
+nda_authors.70 = { # Dionea: by Vernon Lee - The washed up child - Genoese coast June 1873
+	type = country_event
+	placement = p:xD06161 # this needs to be Genoese coast
+	title = nda_authors.70.t
+	desc = nda_authors.70.d
+	flavor =  nda_authors.70.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1873.6.1  
+		game_date < 1873.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "Dionea - washed ashore"
+	}
+	
+	option = {
+		name = nda_authors.70.a
+		default_option = yes	
+	}
+}
+
+nda_authors.71 = { # Dionea: by Vernon Lee - Death of Father Domenico - Genoese coast Jan 1886
+	type = country_event
+	placement = p:xD06161 # this needs to be Genoese coast
+	title = nda_authors.71.t
+	desc = nda_authors.71.d
+	flavor =  nda_authors.71.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1887.7.1  
+		game_date < 1887.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "Dionea - sculpturer death"
+	}
+	
+	option = {
+		name = nda_authors.71.a
+		default_option = yes	
+	}
+}
+
+nda_authors.72 = { # Dionea: by Vernon Lee - Horrific Death of Sculpturer - Genoese coast July 1887
+	type = country_event
+	placement = p:xD06161 # this needs to be Genoese coast
+	title = nda_authors.72.t
+	desc = nda_authors.72.d
+	flavor =  nda_authors.72.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1887.7.1  
+		game_date < 1887.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "Dionea - sculpturer death"
+	}
+	
+	option = {
+		name = nda_authors.72.a
+		default_option = yes	
+	}
+}
+
+nda_authors.73 = { # The Ring: by Thomas Graham Jackson - British antiquarians in Tuscany nr Corneto - published 1919 but push earlier
+	type = country_event
+	placement = p:xD06161 # this needs to be Tuscany 
+	title = nda_authors.73.t
+	desc = nda_authors.73.d
+	flavor =  nda_authors.73.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1887.7.1  
+		game_date < 1887.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "The Ring"
+	}
+	
+	option = {
+		name = nda_authors.73.a
+		default_option = yes	
+	}
+
+		option = {
+		name = nda_authors.73.b
+		# boost old ways in Tuscany	
+	}
+}
+
+nda_authors.74 = { # The Great Mother: by R Ellis Roberts - British student near Oxford - spring 1899
+	type = country_event
+	placement = p:xD06161 # this needs to be Oxford 
+	title = nda_authors.74.t
+	desc = nda_authors.74.d
+	flavor =  nda_authors.74.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xD06161 = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1887.7.1  
+		game_date < 1887.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "The Ring"
+	}
+	
+	option = {
+		name = nda_authors.74.a
+		default_option = yes	
+	}
+
+	option = {
+		name = nda_authors.74.b
+		# boost old ways in Oxford	
 	}
 }

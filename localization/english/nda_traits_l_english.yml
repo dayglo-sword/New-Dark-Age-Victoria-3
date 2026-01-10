@@ -138,6 +138,8 @@ nda_rel_spiritualism_standard_of_living_modifier_positive: ""
 nda_rel_spiritualism_standard_of_living_modifier_negative: ""
 nda_rel_theosophic_standard_of_living_modifier_positive: ""
 nda_rel_theosophic_standard_of_living_modifier_negative: ""
+nda_rel_old_ways_standard_of_living_modifier_positive: ""
+nda_rel_old_ways_standard_of_living_modifier_negative: ""
 
 # Harvest Conditions
 nda_putrid_skies: "Putrid Skies"

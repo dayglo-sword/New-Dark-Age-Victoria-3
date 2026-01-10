@@ -61,12 +61,34 @@ nda_authors.43.f: "'He is a genius, a philosopher, an abstract thinker. He has a
 nda_authors.43.a: "What can we do?"
 
 nda_authors.50.t: "Missing amongst the Willows"
-nda_authors.50.d: "A couple of our citizens, who were on a canoe trip down the Danube, have been detained after coming across a dead body while camped on a Willow covered island."
-nda_authors.50.f: "''"
+nda_authors.50.d: "A couple of our citizens, who were on a canoe trip down the Danube, have been detained by the local authorities after coming across a dead body while camped upon a Willow covered island.\n\nBoth are said to be in a state of shock and of poor nerves."
+nda_authors.50.f: "...long before you come to Budapest, the Danube enters a region of singular loneliness and desolation, where its waters spread away on all sides regardless of a main channel, and the country becomes a swamp for miles upon miles, covered by a vast sea of low willow-bushes.\n\n'...it is the spirit of the elements, and I thought perhaps it was the old gods. But I tell you now it is neither. These would be comprehensible entities, for they have relations with men, depending upon them for worship or sacrifice, whereas these beings who are now about us have absolutely nothing to do with mankind, and it is mere chance that their space happens just at this spot to touch our own.'"
 nda_authors.50.a: "The hazards of travel"
 nda_authors.50.b: "We should protest."
 
+nda_authors.51.t: "A Psychical Invasion"
+nda_authors.51.d: "."
+nda_authors.51.f: ".'"
+nda_authors.51.a: "The hazards of travel"
+nda_authors.51.b: "We should protest."
 
+nda_authors.52.t: "A Nemesis of Fire"
+nda_authors.52.d: "."
+nda_authors.52.f: "..'"
+nda_authors.52.a: "The hazards of travel"
+nda_authors.52.b: "We should protest."
+
+nda_authors.53.t: "Ancient Sorceries"
+nda_authors.53.d: "."
+nda_authors.53.f: "...'"
+nda_authors.53.a: "The hazards of travel"
+nda_authors.53.b: "We should protest."
+
+nda_authors.54.t: "Secret Worship"
+nda_authors.54.d: "."
+nda_authors.54.f: "...'"
+nda_authors.54.a: "The hazards of travel"
+nda_authors.54.b: "We should protest."
 
 nda_authors.60.t: "Mysterious Plague"
 nda_authors.60.d: "A plague has hit the town of Wisburg, near Wismar. If was apparently started when rats came streaming off the schooner #BLUE Empusa#!, which had recently docked in the port.\n\n"
@@ -79,6 +101,36 @@ nda_authors.61.d: "The film director #GREEN F W Murnau#! is being sued for defam
 nda_authors.61.f: "'Already, however, the legal tongues are wagging, and one young law student is loudly asserting that the rights of the owner are already completely sacrificed,...\n\n...were at first loud in their threats of actions for damages, and promised to rain all the penalties of the law on us'"
 nda_authors.61.a: "Obviously not the same person!"
 nda_authors.61.b: "Poor Count Orlok."
+
+nda_authors.70.t: "A Washed Up Child"
+nda_authors.70.d: "."
+nda_authors.70.f: ".'"
+nda_authors.70.a: "The hazards of travel"
+nda_authors.70.b: "We should protest."
+
+nda_authors.71.t: "Death of Father Domenico"
+nda_authors.71.d: "."
+nda_authors.71.f: ".'"
+nda_authors.71.a: "The hazards of travel"
+nda_authors.71.b: "We should protest."
+
+nda_authors.72.t: "Horrific Death of Sculpturer"
+nda_authors.72.d: "."
+nda_authors.72.f: ".'"
+nda_authors.72.a: "The hazards of travel"
+nda_authors.72.b: "We should protest."
+
+nda_authors.73.t: "A Ring"
+nda_authors.73.d: "."
+nda_authors.73.f: ".'"
+nda_authors.73.a: "The hazards of travel"
+nda_authors.73.b: "We should protest."
+
+nda_authors.74.t: "The Great Mother"
+nda_authors.74.d: "."
+nda_authors.74.f: ".'"
+nda_authors.74.a: "The hazards of travel"
+nda_authors.74.b: "We should protest."
 
 nda_titanic.2.t: "A Mournful Disaster"
 nda_titanic.2.d: "After the monumental Titanic left the shipyards of [SCOPE.sState('titanic_state').GetName], it wasn't long until tragedy reached her, as part of her hull collided with an equally imposing iceberg.\n\nThe ice enveloped the ship and it soon became apparent this was no ordinary iceberg.\n\nA number of crew and passengers appeared to suffer from some form of Mesmerism and wandered from the entrapped ship onto the Iceberg, where they waited in line to be devoured by a #BLUE Great White Worm#!.\n\nOnly a handful of survivors managed to escape via the lifeboats.\n\nNo trace of the iceberg can now be found."

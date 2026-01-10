@@ -288,3 +288,19 @@ nda_effect_rite_cultist_movement_boost = {
 		}		
 	}
 }
+
+# Country scope - erosion of Eldritch religions
+nda_effect_cultist_religious_decline = {
+	every_scope_pop = {
+		limit = {
+			OR = {
+				religion = rel:nda_rel_cultist	
+				religion = rel:nda_rel_yigian					
+			}
+
+		}
+		change_pop_religion = { target = rel:nda_rel_theosophic value = 0.05 }	
+		change_pop_religion = { target = rel:nda_rel_old_ways value = 0.05 }	
+		change_pop_religion = { target = rel:atheist value = 0.05 }		
+	}
+}

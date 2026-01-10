@@ -1,18 +1,22 @@
 Version v1.12.2.1
 
 Major Changes
+Game rule to turn off 'The Return'
+Add the 'Old Ways' religion, and events to boost it.
 
 Minor Changes
 Add timeouts to Cult Power Bloc decisions.
 Reduce Masonry Outlawed rate
-
+Add Masonic Lodge to Uraguary ready for Garibaldi
+Boost chance of Masonic Garibaldi.
+Add Iberian and Cuban Lodges if Iberian Twilight DLC enabled.
 
 Bug Fixes
 Fix Coven flags
 Fix 'New America' naming.
 Fix harvest conditions sounds.
 Re-enable Cult Colonial Admin
-
+Fix Esoteric Lodge naming
 
 ------
 
@@ -25,7 +29,6 @@ Atlanteans added as custom characters
 Minor Changes
 'Named' characters have more chance of becoming coven leaders
 Earthquake effect for Lost City reveal / removal
-
 
 Bug Fixes
 Prevent Revolutions starting Ritual

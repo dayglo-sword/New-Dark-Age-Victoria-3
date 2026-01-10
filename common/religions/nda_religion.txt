@@ -27,3 +27,10 @@ nda_rel_theosophic = {
 	heritage = heritage_nda_esoteric
 	color =  { 142 36 70 } #{ 0.33 0.15 0.01 }
 }
+
+# The Old Ways
+nda_rel_old_ways = {
+	icon = "gfx/interface/icons/religion_icons/animist.dds"
+	heritage = heritage_nda_esoteric
+	color =  { 242 236 170 }
+}
