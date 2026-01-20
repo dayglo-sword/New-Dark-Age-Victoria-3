@@ -1058,7 +1058,7 @@ nda_create_leng_on_action = {
 # scope:duration = duration of the harvest condition in days
 # scope:num_states = the number of affected states in the country
 # scope:intensity = the highest intensity of the affected states
-on_harvest_condition_started_in_country = {
+REPLACE_OR_CREATE:on_harvest_condition_started_in_country = {
 	effect = {
 		#debug_log_scopes = yes
 		if = {
@@ -1085,6 +1085,62 @@ on_harvest_condition_started_in_country = {
 				limit = { NOT = { scope:area = { type = harvest_condition_type:nda_red_death }}} # stop spam
 				post_notification = nda_disaster_condition_started_in_country	
 			}
+
+			if = {
+				limit = {
+					scope:state.state_region = {
+						has_harvest_condition = earthquake
+					}
+				}
+				scope:state.state_region = {
+					start_earthquake_effect = yes
+					spawn_entity_effect = {
+						name = "earthquake_event_entity"
+						duration = 10
+					}
+				}
+				if = {
+					limit = {
+						has_dlc_feature = ip4_content
+						scope:state = {
+							has_building = building_manila_cathedral_original
+						}
+					}
+					scope:state = {
+						remove_building = building_manila_cathedral_original
+						create_building={
+							building="building_manila_cathedral_ruins"
+							level=1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_dlc_feature = ip4_content
+						scope:state = {
+							has_building = building_manila_cathedral_monument
+						}
+						root = {
+							NOT = {
+								has_variable = manila_cathedral_cooldown_var
+							}
+						}
+					}
+					scope:state = {
+						remove_building = building_manila_cathedral_monument
+						create_building={
+							building="building_manila_cathedral_ruins"
+							level=1
+						}
+					}
+					root = {
+						trigger_event = {
+							id = manila_cathedral.3
+							days = 3
+						}
+					}
+				}	
+			}		
 		}
 	}
 }

@@ -97,6 +97,16 @@ full_lodge_name = {
 lodge_rite_name = {
 	type = state
 	random_valid = no
+	# Possible to not have nda_lodge_rite??
+	text = {
+		trigger = {
+			NOT = {
+				has_variable = nda_lodge_rite	
+			}
+		}
+
+		localization_key = nda_rite_unified
+	}
 	# Cultist Rites auto overwrite historic
 	text = {
 		trigger = {
@@ -110,10 +120,10 @@ lodge_rite_name = {
 	}
 	text = {
 		trigger = {
-			AND = {
+
 				has_variable = nda_lodge_rite
-				var:nda_lodge_rite = 1				
-			}
+				var:nda_lodge_rite ?= 1				
+
 		}
 
 		localization_key = nda_rite_unified
@@ -122,7 +132,7 @@ lodge_rite_name = {
 		trigger = {
 			AND = {
 				has_variable = nda_lodge_rite
-				var:nda_lodge_rite = 2				
+				var:nda_lodge_rite ?= 2				
 			}
 
 		}
@@ -133,11 +143,21 @@ lodge_rite_name = {
 		trigger = {
 			AND = {
 				has_variable = nda_lodge_rite
-				var:nda_lodge_rite = 3				
+				var:nda_lodge_rite ?= 3				
 			}
 		}
 
 		localization_key = nda_rite_york # as used by the Americans!
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_rite
+				var:nda_lodge_rite ?= 4				
+			}
+		}
+
+		localization_key = nda_rite_humain # as used by the Co-Masons! Women included.
 	}
 	text = { # default to just unified
 

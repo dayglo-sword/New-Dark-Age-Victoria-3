@@ -110,7 +110,7 @@ nda_masonic.11 = { # Masonic Foundings - Called Event
 	cooldown = { days = 1740 } # does this work for called events
 
 	immediate = {
-		debug_log = "Masons Start in [THIS.GetNameNoFormatting]"
+		debug_log = "Masons Start in [THIS.GetCountry.GetNameNoFormatting]"
 
 		ordered_scope_character = {
 			limit = { 
@@ -136,7 +136,34 @@ nda_masonic.11 = { # Masonic Foundings - Called Event
 			limit = { is_capital = yes }
 			# minor lodge
 			set_variable = { name = nda_lodge_level value = 3 }	
-			set_variable = { name = nda_lodge_rite value = {1 3} }		
+			if = {
+				limit = { 
+					is_subject = yes
+					owner.overlord ?= { 
+						has_masonic_lodge = yes 
+						NOT = { has_variable = nda_masonry_outlawed }
+					}
+				}
+
+				owner.overlord = {
+					ordered_scope_state = {
+						limit = {
+							has_variable = nda_lodge_level
+						}
+
+						order_by = nda_masonic_lodge_rank
+						max = 1
+
+						save_scope_as = nda_lodge_parent_loc							
+					}					
+				}
+
+				set_variable = { name = nda_lodge_rite value = scope:nda_lodge_parent_loc.var:nda_lodge_rite }	# copy rite of parent country
+			}
+			else = {
+				set_variable = { name = nda_lodge_rite value = {1 3} }			
+			}
+	
 			save_scope_as = nda_lodge_loc
 		}
 
@@ -145,7 +172,7 @@ nda_masonic.11 = { # Masonic Foundings - Called Event
 			random_scope_state = {				
 				# minor lodge
 				set_variable = { name = nda_lodge_level value = 3 }	
-				set_variable = { name = nda_lodge_rite value = {1 3} }		
+				set_variable = { name = nda_lodge_rite value = scope:scope_master_mason.var:nda_masonic_rite }		
 				save_scope_as = nda_lodge_loc
 			}
 		}

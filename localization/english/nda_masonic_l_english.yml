@@ -4,7 +4,7 @@ nda_lodge: "Lodge"
 nda_unified_lodge: "The Unified Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
 nda_scottish_grand_lodge: "The Scottish Grand Lodge"
 nda_irish_grand_lodge: "The Irish Grand Lodge"
-nda_grand_oriental_lodge:  "The Grand Orient Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
+nda_grand_oriental_lodge:  "The Grand Orient of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
 nda_grand_lodge: "The Grand Lodge of [ROOT.GetState.GetNameNoFormatting]"
 nda_union_lodge: "The Union Lodge of [ROOT.GetState.GetNameNoFormatting]"
 nda_provincial_lodge: "The Provincial Lodge of [ROOT.GetState.GetCityHubName]"
@@ -14,6 +14,7 @@ nda_rite_scottish: "Scottish Rite"
 nda_rite_york: "York Rite"
 nda_rite_esoteric: "Twilight Rite"
 nda_rite_templars: "Knights Templar"
+nda_rite_humain: "Le Droit Humain"
 
 # Titles
 nda_masonic_title_basic: "Mason"
@@ -25,6 +26,7 @@ nda_masonic_title_scottish: "Brother"
 nda_masonic_title_york_master: "Grand Master"
 nda_masonic_title_york_past_master: "Grand Steward"
 nda_masonic_title_york: "Mason"
+nda_masonic_title_humain_master: "Grand Commander"
 
 
 

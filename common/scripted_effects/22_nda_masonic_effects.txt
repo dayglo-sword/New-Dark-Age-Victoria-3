@@ -62,7 +62,7 @@
 	s:STATE_NEW_YORK = {
 		region_state:USA={
 			set_variable = { name = nda_lodge_level value = 2 }	
-			set_variable = { name = nda_lodge_rite value = 2 }	
+			set_variable = { name = nda_lodge_rite value = 3 }	
 
 			add_modifier = { name = nda_lodge_modifier }
 
@@ -137,7 +137,7 @@
 
 		debug_log = "Create Iberian Lodges"
 		# The Grand Orient of Portugal (Grande Oriente Lusitano) is a symbolic Masonic Obedience founded in 1802, 
-		c:POR = { # Empire of Brazil is a Senior Scotch Rite
+		c:POR = { # 
 			random_state ={
 				limit = { is_capital = yes }
 				set_variable = { name = nda_lodge_level value = 2 }	
@@ -206,7 +206,7 @@
 
 	s:STATE_HOLLAND = {
 		region_state:NET={
-			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_level value = 2 }	
 			set_variable = { name = nda_lodge_rite value = 2 }	
 			
 			add_modifier = { name = nda_lodge_modifier }
@@ -305,6 +305,52 @@
 		}		
 	}
 
+	## Germany should have three historic lodges - all 'Ubified Rite'
+	# Berlin -  Old Prussian Grand Lodges
+	s:STATE_BRANDENBURG = {
+		region_state:PRU = {
+			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_rite value = 1 }	
+			
+			add_modifier = { name = nda_lodge_modifier }
+
+						# initial masons - are any historic characters assoiciated?
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}
+	}
+	# # Hamburg
+	# c:HAM = { 
+	# 	random_state ={
+	# 		limit = { is_capital = yes }
+	# 		set_variable = { name = nda_lodge_level value = 2 }	
+	# 		set_variable = { name = nda_lodge_rite value = 2 }	
+
+	# 		add_modifier = { name = nda_lodge_modifier }	
+	# 	}
+
+	# 	nda_effect_recruit_mason = yes
+	# 	nda_effect_lodge_leader = yes
+	# 	nda_effect_recruit_mason = yes # always two there is (at start)
+	# }
+	# # Saxony
+	# c:SAX = { 
+	# 	random_state ={
+	# 		limit = { is_capital = yes }
+	# 		set_variable = { name = nda_lodge_level value = 2 }	
+	# 		set_variable = { name = nda_lodge_rite value = 2 }	
+
+	# 		add_modifier = { name = nda_lodge_modifier }	
+	# 	}
+
+	# 	nda_effect_recruit_mason = yes
+	# 	nda_effect_lodge_leader = yes
+	# 	nda_effect_recruit_mason = yes # always two there is (at start)
+	# }
+
 	c:RUS = { # Outlawed in Russia due to trying to overthrow government!
 		set_variable = nda_masonry_outlawed
 	}
@@ -385,7 +431,11 @@ nda_effect_lodge_leader = { # running half-yearly
 					EXISTS = scope:scope_master_mason
 				}
 
-				debug_log = "New Lodge Master : [ROOT.GetCountry.GetNameNoFormatting] : [THIS.GetCharacter.GetFullNameNoFormatting]"
+				debug_log = "New Lodge Master : [THIS.GetCountry.GetNameNoFormatting]"
+				scope:scope_master_mason = {
+					debug_log = "New Lodge Master : [THIS.GetCharacter.GetFullNameNoFormatting]"	
+				}
+
 				# send notification
 				every_country = {
 					limit = { game_date >= 1837.6.1 } # Don't notify till after initial Mason event
@@ -393,7 +443,7 @@ nda_effect_lodge_leader = { # running half-yearly
 				}				
 			}
 			else = {
-				debug_log = "No Lodge Master [ROOT.GetCountry.GetNameNoFormatting]"
+				debug_log = "No Lodge Master [THIS.GetCountry.GetNameNoFormatting]"
 			}
 
 		}
@@ -433,7 +483,11 @@ nda_effect_recruit_mason = {
 			set_variable = nda_is_mason
 			if = {
 				limit = { culture = cu:nda_cul_cultist }
-				set_variable = { name = nda_masonic_rite value= 4 }
+				set_variable = { name = nda_masonic_rite value = 5 }
+			}
+			else_if = {
+				limit = { is_female = yes }
+				set_variable = { name = nda_masonic_rite value = 4 }	# females are either Humain or Cultists			
 			}
 			else = {
 				# should tend towards existing rite of main lodge

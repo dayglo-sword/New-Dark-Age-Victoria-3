@@ -14,9 +14,11 @@ Add Iberian and Cuban Lodges if Iberian Twilight DLC enabled.
 Bug Fixes
 Fix Coven flags
 Fix 'New America' naming.
-Fix harvest conditions sounds.
+Harvest conditions sounds.
+Harvest / Disaster conditons for Manila
 Re-enable Cult Colonial Admin
 Fix Esoteric Lodge naming
+
 
 ------
 

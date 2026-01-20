@@ -887,7 +887,7 @@ nda_authors.50 = { # The Willows - written in 1907 push to earlier date? > 1887
 # Algernon Blackwood - John Silence adventures (from collection 'Ancient Sorceries' )- if not already Agitator\Character give chance to be so? published 1908 so can do it yearly in run up to this??
 nda_authors.51 = { # A Psychical Invasion 
 	type = country_event
-	placement = p:xD06161 # this needs to be London (or Boston if relocated?)
+	placement = p:x7543C8 # London # this needs to be London (or Boston if relocated?)
 	title = nda_authors.51.t
 	desc = nda_authors.51.d
 	flavor =  nda_authors.51.f
@@ -905,11 +905,13 @@ nda_authors.51 = { # A Psychical Invasion
 	trigger = { 
 		OR = {
 			# regional interest ?
-			p:xD06161 = { state = { owner = ROOT } }	
+			p:x7543C8 = { state = { owner = ROOT } }	
+			# should not be if cult country?
+			is_full_cult_country = no
 		}
 
-		game_date >=  1908.6.1  
-		game_date < 1908.12.1  	
+		game_date >=  1905.6.1  
+		game_date < 1905.12.1  	
     }
 
 	cooldown = { days = 180 }
@@ -921,6 +923,12 @@ nda_authors.51 = { # A Psychical Invasion
 	option = {
 		name = nda_authors.51.a
 		default_option = yes	
+
+		# boost Spiritualists??
+	}
+
+	option = {
+		name = nda_authors.51.b	
 	}
 }
 
@@ -947,8 +955,8 @@ nda_authors.52 = { # A Nemesis of Fire
 			p:xD06161 = { state = { owner = ROOT } }	
 		}
 
-		game_date >=  1908.6.1  
-		game_date < 1908.12.1  	
+		game_date >=  1906.6.1  
+		game_date < 1906.12.1  	
     }
 
 	cooldown = { days = 180 }
@@ -986,8 +994,8 @@ nda_authors.53 = { # Ancient Sorceries
 			p:xD06161 = { state = { owner = ROOT } }	
 		}
 
-		game_date >=  1908.6.1  
-		game_date < 1908.12.1  	
+		game_date >=  1907.6.1  
+		game_date < 1907.12.1  	
     }
 
 	cooldown = { days = 180 }
