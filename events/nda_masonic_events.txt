@@ -24,7 +24,7 @@ nda_masonic.10 = { # A Question of Leadership - Called Event
 	cooldown = { days = 1740 } # does this work for called events
 
 	immediate = {
-		debug_log = "Masonic Leadership"
+		debug_log = " [THIS.GetCountry.GetNameNoFormatting] : Masonic Leadership"
 
 		random_scope_character = { 
 			limit = { has_variable = nda_lodge_master } 
@@ -39,8 +39,9 @@ nda_masonic.10 = { # A Question of Leadership - Called Event
 			save_scope_as = nda_lodge_master_candidate_2
 		}
 
-		random_scope_state = { # Must have a Major Grand Lodge - turn conditions into trigger??
-			limit = { has_variable = nda_lodge_level var:nda_lodge_level > 1 }
+		ordered_scope_state = { # Must have a Major Grand Lodge - turn conditions into trigger??
+			limit = { has_variable = nda_lodge_level }
+			order_by = nda_masonic_lodge_rank
 			save_scope_as = nda_lodge_loc
 		}
 	}
@@ -496,7 +497,7 @@ nda_masonic.30 = { # Change Rite if Grand Master is different
 	}
 
 	immediate = {
-		debug_log = "Switch Rites?"
+		debug_log = " [THIS.GetCountry.GetNameNoFormatting] :Switch Rites?"
 
 		random_scope_character = {
 			limit = {
@@ -519,7 +520,7 @@ nda_masonic.30 = { # Change Rite if Grand Master is different
 	option = {
 		name = nda_masonic.30.a # Switch Rite
 		default_option = yes	
-
+		debug_log = " [THIS.GetCountry.GetNameNoFormatting] : Switch Rite"
 		ai_chance = { 
 			base = 50	
 		}
@@ -531,7 +532,7 @@ nda_masonic.30 = { # Change Rite if Grand Master is different
 
 	option = {
 		name = nda_masonic.30.b	 # Keep Existing
-
+		debug_log = " [THIS.GetCountry.GetNameNoFormatting] : Keeps existing Rite"
 		ai_chance = { 
 			base = 50	
 		}

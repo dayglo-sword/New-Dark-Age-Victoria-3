@@ -100,12 +100,13 @@
 						OR = {
 							has_role = politician
 							has_role = agitator
+							has_role = executive
 						}
 						is_busy = no
 					}
 					change_global_variable = {
 						name = je_nda_ritual_proceeds_tracker
-						subtract = 1
+						subtract = 2
 					}						
 				}	
 

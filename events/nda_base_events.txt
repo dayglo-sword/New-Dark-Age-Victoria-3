@@ -226,9 +226,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 
 		# redundant to spread to cult country
 		is_full_cult = no
-		# NOT = {			
-		# 	is_full_cult_country = { COUNTRY="ROOT" }				
-		# }
+
 	}
 	
 	immediate = {
@@ -422,7 +420,6 @@ nda_base.5 = { # First Cultist in Country
 			limit = {
 				can_cult_infiltrate = yes
 				is_full_cult = no
-				#NOT = {is_full_cult_country = { COUNTRY="ROOT"}} # don't do for existing bad guys
 			}
 			add_journal_entry = { type = je_nda_cult_spreads }		
 		}
@@ -736,7 +733,6 @@ nda_base.9 = { # Is there some non-conformists within the cult
 
 	trigger = {
 		is_full_cult = yes
-		#is_full_cult_country = { COUNTRY="ROOT" }
 
 		any_interest_group = {
 			leader ?= { 
@@ -1190,9 +1186,7 @@ nda_base.20 = { # Request from the devout
 
 		# redundant to spread to cult country
 		is_full_cult = no
-		# NOT = {
-		# 	is_full_cult_country = { COUNTRY="ROOT" }				
-		# }	
+
 		NOT = { has_variable = nda_devout_offer }
 
 		AND = {

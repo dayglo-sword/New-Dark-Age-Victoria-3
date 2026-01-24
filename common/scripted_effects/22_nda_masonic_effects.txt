@@ -1,5 +1,4 @@
 ﻿nda_effect_initial_lodges = {
-	# Once taken over by cultist try and direct where migrations go
 
 	# Country 'Unified Lodges' 
 	# London 
@@ -20,7 +19,7 @@
 	}
 
 	# Paris 'Oriental'
-	s:STATE_FRANCHE_COMTE = {
+	s:STATE_ILE_DE_FRANCE = {
 		region_state:FRA={
 			set_variable = { name = nda_lodge_level value = 1 }	
 			set_variable = { name = nda_lodge_rite value = 2 }	
@@ -103,86 +102,115 @@
 	}
 
 	#Lodges around the World
-	c:BRZ = { # Empire of Brazil is a Senior Scotch Rite
-		random_state ={
-			limit = { is_capital = yes }
+	# Empire of Brazil is a Senior Scotch Rite
+	s:STATE_RIO_DE_JANEIRO = {
+		region_state:BRZ = {
 			set_variable = { name = nda_lodge_level value = 2 }	
 			set_variable = { name = nda_lodge_rite value = 2 }	
 
 			add_modifier = { name = nda_lodge_modifier }	
-		}
 
-		nda_effect_recruit_mason = yes
-		nda_effect_lodge_leader = yes
-		nda_effect_recruit_mason = yes # always two there is (at start)
+			owner = {
+				nda_effect_recruit_mason = yes
+				nda_effect_lodge_leader = yes
+				nda_effect_recruit_mason = yes # always two there is (at start)
+			}
+		}
+	
 	}
 
-	c:URU = { # Needed for Garibaldi to join! Lodges associated with French Rite but also American. 
-		random_state ={
-			limit = { is_capital = yes }
-			set_variable = { name = nda_lodge_level value = 2 }	
-			set_variable = { name = nda_lodge_rite value = 2 }	
+	# Needed for Garibaldi to join! Lodges associated with French Rite but also American. 
+	s:STATE_URUGUAY = {
+	 	region_state:URU = {
+	 		set_variable = { name = nda_lodge_level value = 2 }	
+	 		set_variable = { name = nda_lodge_rite value = 2 }	
 
-			add_modifier = { name = nda_lodge_modifier }	
-		}
+	 		add_modifier = { name = nda_lodge_modifier }	
 
-		nda_effect_recruit_mason = yes
-		nda_effect_lodge_leader = yes
-		nda_effect_recruit_mason = yes # always two there is (at start)
+	 		owner = {
+	 			nda_effect_recruit_mason = yes
+	 			nda_effect_lodge_leader = yes
+	 			nda_effect_recruit_mason = yes # always two there is (at start)
+	 		}
+		}	
 	}
 
+	# if = { #DLC only content
+	# 	limit = { has_dlc_feature = ip4_content } # Iberian Twilight
+
+	# 	# Peru lodge was founded by Bolivar - can it even exist?
+	# 	s:STATE_LA_PAZ = {
+	# 		region_state:BOL = {
+	# 			set_variable = { name = nda_lodge_level value = 2 }	
+	# 			set_variable = { name = nda_lodge_rite value = 2 }	
+
+	# 			add_modifier = { name = nda_lodge_modifier }	
+
+	# 			owner = {
+	# 				nda_effect_recruit_mason = yes
+	# 				nda_effect_lodge_leader = yes
+	# 				nda_effect_recruit_mason = yes # always two there is (at start)
+
+	# 				# but also banned
+	# 				nda_effect_ban_masons = yes
+	# 			}
+	# 		}	
+	# 	}
+	# }
 
 	if = { #DLC only content
 		limit = { has_dlc_feature = ip4_content } # Iberian Twilight
 
 		debug_log = "Create Iberian Lodges"
 		# The Grand Orient of Portugal (Grande Oriente Lusitano) is a symbolic Masonic Obedience founded in 1802, 
-		c:POR = { # 
-			random_state ={
-				limit = { is_capital = yes }
+		s:STATE_ESTREMADURA = {
+			region_state:POR = {
 				set_variable = { name = nda_lodge_level value = 2 }	
 				set_variable = { name = nda_lodge_rite value = 2 }	
 
 				add_modifier = { name = nda_lodge_modifier }	
-			}
 
-			nda_effect_recruit_mason = yes
-			nda_effect_lodge_leader = yes
-			nda_effect_recruit_mason = yes # always two there is (at start)
+				owner = {
+					nda_effect_recruit_mason = yes
+					nda_effect_lodge_leader = yes
+					nda_effect_recruit_mason = yes # always two there is (at start)
+				}
+			}	
 		}
-
 		# Spain has lodges and members (due to amnesty) but stil banned 'Grand Orient'
-		c:SPA = {
-			random_state ={
-				limit = { is_capital = yes }
+		s:STATE_NEW_CASTILE = {
+			region_state:SPA = {
 				set_variable = { name = nda_lodge_level value = 2 }	
 				set_variable = { name = nda_lodge_rite value = 2 }	
 
 				add_modifier = { name = nda_lodge_modifier }	
-			}
 
-			nda_effect_recruit_mason = yes
-			nda_effect_lodge_leader = yes
-			nda_effect_recruit_mason = yes # always two there is (at start)
+				owner = {
+					nda_effect_recruit_mason = yes
+					nda_effect_lodge_leader = yes
+					nda_effect_recruit_mason = yes # always two there is (at start)
 
-			# but also banned
-			nda_effect_ban_masons = yes
+					# but also banned
+					nda_effect_ban_masons = yes
+				}
+			}	
 		}
 
 		# Cuba still has liberal lodges	despite spanish ban
-		c:CUB = { # 
-			random_state ={
-				limit = { is_capital = yes }
+		s:STATE_WESTERN_CUBA = {
+			region_state:CUB = {
 				set_variable = { name = nda_lodge_level value = 2 }	
 				set_variable = { name = nda_lodge_rite value = 2 }	
 
 				add_modifier = { name = nda_lodge_modifier }	
-			}
 
-			nda_effect_recruit_mason = yes
-			nda_effect_lodge_leader = yes
-			nda_effect_recruit_mason = yes # always two there is (at start)
-		}			
+				owner = {
+					nda_effect_recruit_mason = yes
+					nda_effect_lodge_leader = yes
+					nda_effect_recruit_mason = yes # always two there is (at start)
+				}
+			}				
+		}		
 	}
 
 
@@ -309,7 +337,7 @@
 	# Berlin -  Old Prussian Grand Lodges
 	s:STATE_BRANDENBURG = {
 		region_state:PRU = {
-			set_variable = { name = nda_lodge_level value = 3 }	
+			set_variable = { name = nda_lodge_level value = 2 }	
 			set_variable = { name = nda_lodge_rite value = 1 }	
 			
 			add_modifier = { name = nda_lodge_modifier }
@@ -353,6 +381,24 @@
 
 	c:RUS = { # Outlawed in Russia due to trying to overthrow government!
 		set_variable = nda_masonry_outlawed
+	}
+}
+
+nda_effect_initial_masons = {
+	any_character = {
+		limit = {
+			OR = {
+				has_template = gbr_william_hanover_template # Starting character should override template instead??
+				has_template = usa_andrew_jackson_template # or set at start up
+			}
+		}
+
+		set_variable = nda_is_mason
+		set_variable = { name = nda_masonic_rite value = owner.capital.var:nda_lodge_rite } # need to get from country
+
+		add_modifier = { name = nda_mason_modifier }
+		debug_log = "Mason Assigned : [THIS.GetCharacter.GetFullNameNoFormatting]"
+
 	}
 }
 
@@ -717,6 +763,28 @@ nda_effect_generate_mason_list = {
 				name = nda_mason_list
 				target = prev
 			}
+		}
+	}
+}
+
+nda_effect_generate_global_mason_list = {
+	clear_variable_list = nda_mason_list
+	ordered_character = {
+		limit = {
+			is_mason = yes
+			#owner = { NOT = { has_variable = nda_masonry_outlawed }}
+		}
+
+		order_by = nda_masonic_ranking
+
+		#min = 1	
+		max = 20 			
+        
+		check_range_bounds = no
+
+		add_to_global_variable_list = {
+			name = nda_global_mason_list
+			target = THIS
 		}
 	}
 }

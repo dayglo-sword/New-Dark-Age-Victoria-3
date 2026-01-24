@@ -52,7 +52,6 @@ je_nda_eldritch_colonial_administration = {
 			has_interest_marker_in_region = sr:region_congo
 		}
 		# is cultist break up effect - normally ELD has base colonial_admin je disabled or removed
-		#is_full_cult_country = { COUNTRY="ROOT" }	
 		is_full_cult = yes
 
 	}

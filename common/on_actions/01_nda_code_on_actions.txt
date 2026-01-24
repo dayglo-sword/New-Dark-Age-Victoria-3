@@ -18,6 +18,8 @@ nda_game_started_on_action = {
 
 		#Set up initial Lodges
 		nda_effect_initial_lodges = yes
+		# Add initial masons if not already randomly assigned
+		nda_effect_initial_masons = yes
 	}
 }
 

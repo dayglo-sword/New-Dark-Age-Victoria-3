@@ -1,4 +1,4 @@
-Version v1.12.2.1
+Version v1.12.3
 
 Major Changes
 Game rule to turn off 'The Return'
@@ -10,6 +10,8 @@ Reduce Masonry Outlawed rate
 Add Masonic Lodge to Uraguary ready for Garibaldi
 Boost chance of Masonic Garibaldi.
 Add Iberian and Cuban Lodges if Iberian Twilight DLC enabled.
+Allow Executives to become Investigators.
+Minor boost to Oppose the Ritual for Investigators present.
 
 Bug Fixes
 Fix Coven flags
@@ -18,6 +20,7 @@ Harvest conditions sounds.
 Harvest / Disaster conditons for Manila
 Re-enable Cult Colonial Admin
 Fix Esoteric Lodge naming
+Correct Stratergy conditions.
 
 
 ------

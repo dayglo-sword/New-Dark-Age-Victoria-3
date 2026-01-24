@@ -50,7 +50,7 @@
 							}
 						}
 
-						debug_log = "Spread Support to neighbour cultures: [THIS.GetCountry.GetNameNoFormatting]"
+						debug_log = "Atlantean - Sumara : Spread Support to neighbour cultures: [THIS.GetCountry.GetNameNoFormatting]"
 						random_neighbouring_state = {
 							limit = {				
 								NOT = { OWNER = ROOT }
@@ -91,7 +91,7 @@
 								}
 							}
 
-							debug_log = "Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
+							debug_log = "Atlantean - Sumara : Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
 							random_primary_culture = {
 								limit = { 
 									has_discrimination_trait_group = heritage_group_african
@@ -127,7 +127,7 @@
 								}
 							}
 							scope:target_country = {	# spread to cultures in neighbouring country
-								debug_log = "Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
+								debug_log = "Atlantean - Sumara : Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
 								random_primary_culture = {
 									limit = { 
 										has_discrimination_trait_group = heritage_group_african
@@ -164,7 +164,7 @@
 								}
 							}
 
-							debug_log = "Supress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
+							debug_log = "Atlantean - Sumara : Supress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
 
 							every_political_movement = {
 								limit = {
@@ -226,7 +226,7 @@
 							coa_def_african_trigger = yes
 						}
 
-						debug_log = "Boost Lobbies : [THIS.GetCountry.GetNameNoFormatting]"
+						debug_log = "Atlantean - Sumara : Boost Lobbies : [THIS.GetCountry.GetNameNoFormatting]"
 
 						change_relations = { country = ROOT value = 50 } # should be done by confirmation event if player
 						# Boost in favour of Surama host
@@ -263,7 +263,7 @@
 							coa_def_african_trigger = yes
 						}
 
-						debug_log = "Increase Liberty Desire : [THIS.GetCountry.GetNameNoFormatting]"
+						debug_log = "Atlantean - Sumara : Increase Liberty Desire : [THIS.GetCountry.GetNameNoFormatting]"
 
 						add_liberty_desire = 20
 
@@ -284,7 +284,7 @@
 						}
 					}
 					# If subject of non-local power then increase liberty desire
-					debug_log = "Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
+					debug_log = "Atlantean - Sumara : Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
 					add_liberty_desire = 20
 				}
 			}
@@ -418,7 +418,7 @@ je_nda_atlantean_kathulos = {
 								}
 							}
 
-							debug_log = "Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
+							debug_log = "Atlantean - Kathulos : Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
 							random_primary_culture = {
 								limit = { 
 									has_discrimination_trait_group = heritage_group_middle_eastern
@@ -454,7 +454,7 @@ je_nda_atlantean_kathulos = {
 								}
 							}
 							scope:target_country = {	# spread to cultures in neighbouring country
-								debug_log = "Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
+								debug_log = "Atlantean - Kathulos : Spread Grand Union tradition : [THIS.GetCountry.GetNameNoFormatting]"
 								random_primary_culture = {
 									limit = { 
 										has_discrimination_trait_group = heritage_group_middle_eastern
@@ -491,7 +491,7 @@ je_nda_atlantean_kathulos = {
 								}
 							}
 
-							debug_log = "Supress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
+							debug_log = "Atlantean - Kathulos : Supress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
 
 							every_political_movement = {
 								limit = {
@@ -555,7 +555,7 @@ je_nda_atlantean_kathulos = {
 							coa_def_african_trigger = yes
 						}
 
-						debug_log = "Boost Lobbies : [THIS.GetCountry.GetNameNoFormatting]"
+						debug_log = "Atlantean - Kathulos : Boost Lobbies : [THIS.GetCountry.GetNameNoFormatting]"
 
 						change_relations = { country = ROOT value = 50 } # should be done by confirmation event if player
 						# Boost in favour of Surama host
@@ -596,7 +596,7 @@ je_nda_atlantean_kathulos = {
 							}	
 						}
 
-						debug_log = "Increase Liberty Desire : [THIS.GetCountry.GetNameNoFormatting]"
+						debug_log = "Atlantean - Kathulos : Increase Liberty Desire : [THIS.GetCountry.GetNameNoFormatting]"
 
 						add_liberty_desire = 20
 						change_relations = { country = ROOT value = 50 } # should be done by confirmation event if player
@@ -622,7 +622,7 @@ je_nda_atlantean_kathulos = {
 							overlord = { coa_def_african_trigger = no }							
 						}
 						# If subject of non-local power then increase liberty desire
-						debug_log = "Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
+						debug_log = "Atlantean - Kathulos : Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
 						add_liberty_desire = 20						
 					}
 				}

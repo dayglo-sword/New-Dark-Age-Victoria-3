@@ -907,7 +907,7 @@ nda_authors.51 = { # A Psychical Invasion
 			# regional interest ?
 			p:x7543C8 = { state = { owner = ROOT } }	
 			# should not be if cult country?
-			is_full_cult_country = no
+			is_full_cult = no
 		}
 
 		game_date >=  1905.6.1  

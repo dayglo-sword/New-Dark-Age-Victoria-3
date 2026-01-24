@@ -101,31 +101,6 @@ is_full_cult = {
 	}
 }
 
-is_full_cult_country = {
-	OR ={
-		AND = {
-			exists = c:ELD
-			owner = { c:ELD = $COUNTRY$ }				
-		}
-		AND = {
-			exists = c:YIG
-			owner = { c:YIG = $COUNTRY$ }				
-		}
-		AND = {
-			exists = c:DGN
-			owner = { c:DGN = $COUNTRY$ }				
-		}	
-		AND = {
-			exists = c:LEN
-			owner = { c:LEN = $COUNTRY$ }				
-		}
-		AND = {
-			exists = c:STY
-			owner = { c:STY = $COUNTRY$ }				
-		}		
-	}
-}
-
 is_cultist_country = {
 	custom_tooltip = {
 		text = nda_is_cultist_country

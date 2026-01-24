@@ -24,7 +24,7 @@ full_lodge_name = {
 				var:nda_lodge_rite = 2				
 			}
 
-			state_region = s:STATE_FRANCHE_COMTE
+			#state_region = s:STATE_FRANCHE_COMTE
 		}
 		localization_key = nda_grand_oriental_lodge
 	}
@@ -54,21 +54,21 @@ full_lodge_name = {
 				has_variable = nda_lodge_level
 				var:nda_lodge_level = 2			
 			}
-		}
-		localization_key = nda_grand_lodge
-	}
-	text = {
-		trigger = {
-			AND = {
-				has_variable = nda_lodge_level
-				var:nda_lodge_level = 2			
-			}
 			AND = {
 				has_variable = nda_lodge_rite
 				var:nda_lodge_rite = 2				
 			}
 		}
 		localization_key = nda_grand_oriental_lodge
+	}	
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_lodge_level
+				var:nda_lodge_level = 2			
+			}
+		}
+		localization_key = nda_grand_lodge
 	}
 	text = {
 		trigger = {

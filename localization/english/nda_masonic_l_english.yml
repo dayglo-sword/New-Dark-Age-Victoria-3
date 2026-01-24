@@ -1,7 +1,7 @@
 ﻿l_english:
 
 nda_lodge: "Lodge"
-nda_unified_lodge: "The Unified Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
+nda_unified_lodge: "The United Grand Lodge of [ROOT.GetState.GetCountry.GetNameNoFormatting]"
 nda_scottish_grand_lodge: "The Scottish Grand Lodge"
 nda_irish_grand_lodge: "The Irish Grand Lodge"
 nda_grand_oriental_lodge:  "The Grand Orient of [ROOT.GetState.GetCountry.GetNameNoFormatting]"

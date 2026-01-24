@@ -34,7 +34,8 @@
 
 
 	possible = {
-		always = yes
+		# for primary cult countries only? - should be default
+		is_full_cult = yes
 	}
 
 	weight = {

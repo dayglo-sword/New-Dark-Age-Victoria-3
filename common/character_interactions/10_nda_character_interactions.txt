@@ -506,7 +506,7 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 	potential = {
 		owner ?= scope:actor	
 		
-		interest_group.leader ?= THIS
+		# interest_group.leader ?= THIS # remove constraint as stops executives being selected
 		# has_role = politician	 # not needed due to IG leader check
 		scope:actor ?= {
 			# has cult spread journal or Ritual in progress, also include completed but nothing for them to do yepast this point yet
@@ -517,13 +517,20 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 			}
 				
 			any_scope_character = {
-				has_role = politician			
+				OR = {
+					has_role = politician		
+					has_role = executive	
+				}		
 				has_any_cultist_trait = yes					
 			}
 
 			NOT = { # Not already an Investigator active
 				any_scope_character = {
-					has_role = politician			
+					OR = {
+						has_role = politician		
+						has_role = executive					
+					}
+		
 					has_trait = nda_investigator 					
 				}				
 			}

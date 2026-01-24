@@ -277,9 +277,80 @@ nda_masonic_potential =
 	# Garbaldi! Should limit to South America??
 	if = {
 		limit = {
-			has_template = garibaldi_character_template
+			OR = {
+				has_template = garibaldi_character_template	
+				# has_template = usa_roosevelt_character_template
+				#has_template = usa_jp_morgan_character_template		
+				#has_template = usa_carnegie_character_template
+				#has_template = usa_rockefeller_character_template
+				#has_template = usa_thomas_edison_character_template # is athetist and potential feminist in template??
+				#has_template = gbr_albert_edward_template # Edward VII
+				#has_template = gbr_george_v_template 
+				#has_template = gbr_disraeli_character_template
+				#has+template = gbr_general_kitchener
+				##has_template = gbr_william_hanover_template # Starting character should override template instead??
+				##has_template = usa_andrew_jackson_template # or set at start up
+			}
+
 		}
 		add = 10
+	}
+}
+
+# ROOT scope is Character - used to find important masons
+nda_masonic_ranking =
+{
+	value = 0 # does this actually do random amount?
+	if = {
+		limit = {
+			has_variable = nda_lodge_master # used to promote masters 
+		}
+		add = 30
+	}
+	if = {
+		limit = {
+			has_variable = nda_past_master # used to find former masters
+		}
+		add = 10
+	}
+
+	if = {
+		limit = {
+			is_ruler = yes # 
+		}
+		add = 10
+	}		
+
+	# Garbaldi! Should limit to South America??
+	if = {
+		limit = {
+			OR = {
+				has_template = garibaldi_character_template	
+				# has_template = usa_roosevelt_character_template
+				#has_template = usa_jp_morgan_character_template		
+				#has_template = usa_carnegie_character_template
+				#has_template = usa_rockefeller_character_template
+				#has_template = usa_thomas_edison_character_template # is athetist and potential feminist in template??
+				#has_template = gbr_albert_edward_template # Edward VII
+				#has_template = gbr_george_v_template 
+				#has_template = gbr_disraeli_character_template
+				#has+template = gbr_general_kitchener
+				##has_template = gbr_william_hanover_template # Starting character should override template instead??
+				##has_template = usa_andrew_jackson_template # or set at start up
+			}
+
+		}
+		add = 10
+	}
+
+	if = {
+		limit = {
+			exists = owner
+		}
+		subtract = owner.global_country_ranking
+	}
+	else = {
+		subtract = 10
 	}
 }
 
