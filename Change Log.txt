@@ -2,7 +2,7 @@ Version v1.12.3
 
 Major Changes
 Game rule to turn off 'The Return'
-Add the 'Old Ways' religion, and events to boost it.
+Add the 'Old Ways' religion.
 
 Minor Changes
 Add timeouts to Cult Power Bloc decisions.
@@ -17,10 +17,10 @@ Bug Fixes
 Fix Coven flags
 Fix 'New America' naming.
 Harvest conditions sounds.
-Harvest / Disaster conditons for Manila
+Harvest / Disaster conditions for Manila
 Re-enable Cult Colonial Admin
 Fix Esoteric Lodge naming
-Correct Stratergy conditions.
+Correct Strategy conditions.
 
 
 ------
