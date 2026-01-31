@@ -266,7 +266,8 @@
 						debug_log = "Atlantean - Sumara : Increase Liberty Desire : [THIS.GetCountry.GetNameNoFormatting]"
 
 						add_liberty_desire = 20
-
+						change_relations = { country = overlord value = -50 } # should be done by confirmation event if player	
+						change_relations = { country = ROOT value = 50 } # should be done by confirmation event if player
 					}
 				}
 				1 = { # If host country is subject of non-african then boost liberty desire
@@ -286,11 +287,13 @@
 					# If subject of non-local power then increase liberty desire
 					debug_log = "Atlantean - Sumara : Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
 					add_liberty_desire = 20
+					change_relations = { country = overlord value = -50 } # should be done by confirmation event if player		
 				}
 			}
 	
 		}
 	
+		# Migo Warning to Player
 	}
 
 	on_yearly_pulse = {
@@ -552,7 +555,9 @@ je_nda_atlantean_kathulos = {
 							NOT = { is_country_type = decentralized }
 							is_revolutionary = no	
 							is_adjacent_to_country = ROOT	
-							coa_def_african_trigger = yes
+							any_primary_culture = {
+								has_discrimination_trait_group = heritage_group_middle_eastern
+							}	
 						}
 
 						debug_log = "Atlantean - Kathulos : Boost Lobbies : [THIS.GetCountry.GetNameNoFormatting]"
@@ -599,6 +604,7 @@ je_nda_atlantean_kathulos = {
 						debug_log = "Atlantean - Kathulos : Increase Liberty Desire : [THIS.GetCountry.GetNameNoFormatting]"
 
 						add_liberty_desire = 20
+						change_relations = { country = overlord value = -50 } # should be done by confirmation event if player							
 						change_relations = { country = ROOT value = 50 } # should be done by confirmation event if player
 					}
 				}
@@ -610,7 +616,9 @@ je_nda_atlantean_kathulos = {
 									NOT = { is_country_type = decentralized }
 									is_subject = yes	
 									overlord = { coa_def_african_trigger = no }
-									coa_def_african_trigger = yes																		
+									any_primary_culture = {
+										has_discrimination_trait_group = heritage_group_middle_eastern
+									}																		
 								}
 							}
 							subtract = 1
@@ -623,7 +631,8 @@ je_nda_atlantean_kathulos = {
 						}
 						# If subject of non-local power then increase liberty desire
 						debug_log = "Atlantean - Kathulos : Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
-						add_liberty_desire = 20						
+						add_liberty_desire = 20	
+						change_relations = { country = overlord value = -50 } # should be done by confirmation event if player					
 					}
 				}
 			}

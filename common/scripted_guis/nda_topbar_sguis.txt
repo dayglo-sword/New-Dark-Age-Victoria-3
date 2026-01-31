@@ -49,3 +49,20 @@ nda_topbar_element_masonic_lodges = {
 
     }
 }
+
+nda_topbar_element_global_masons = {
+    scope = country
+
+    is_shown = {
+        has_global_variable = nda_topbar_global_mason_count
+        # don't show till first masonic event
+        has_global_variable = nda_masons_activate
+        global_var:nda_topbar_global_mason_count > 0
+        #always = yes
+    }
+
+    effect = {        
+
+    }
+}
+

@@ -117,6 +117,7 @@ nda_effect_yigian_annex = {
 			any_country = { 			
 				is_player = no		
 				is_full_cult = no
+				is_revolutionary = no
 				has_variable = nda_yig_in_open		
 				country_has_primary_culture = cu:nda_cul_yigian # needed to stop strange results after revolutions remove culture
 			}
@@ -126,6 +127,7 @@ nda_effect_yigian_annex = {
 			limit = {
 				is_player = no		
 				is_full_cult = no
+				is_revolutionary = no
 				has_variable = nda_yig_in_open	
 				country_has_primary_culture = cu:nda_cul_yigian # needed to stop strange results after revolutions remove culture	
 				# capital should be in americas?

@@ -385,7 +385,7 @@
 }
 
 nda_effect_initial_masons = {
-	any_character = {
+	every_character = {
 		limit = {
 			OR = {
 				has_template = gbr_william_hanover_template # Starting character should override template instead??
@@ -537,7 +537,23 @@ nda_effect_recruit_mason = {
 			}
 			else = {
 				# should tend towards existing rite of main lodge
-				set_variable = { name = nda_masonic_rite value= {1 3} }			
+				ordered_scope_state = {
+					limit = {
+						has_variable = nda_lodge_level
+					}
+
+					order_by = nda_masonic_lodge_rank
+					max = 1
+
+					save_temporary_scope_as = nda_lodge							
+				}	
+
+				random_list = {
+					1 = { set_variable = { name = nda_masonic_rite value = scope:nda_lodge.var:nda_lodge_rite }}
+					1 = { set_variable = { name = nda_masonic_rite value = 1 }}
+					1 = { set_variable = { name = nda_masonic_rite value = 2 }}
+					1 = { set_variable = { name = nda_masonic_rite value = 3 }}
+				}			
 			}
 
 			add_modifier = { name = nda_mason_modifier }
@@ -768,7 +784,7 @@ nda_effect_generate_mason_list = {
 }
 
 nda_effect_generate_global_mason_list = {
-	clear_variable_list = nda_mason_list
+	clear_global_variable_list = nda_global_mason_list
 	ordered_character = {
 		limit = {
 			is_mason = yes
@@ -786,5 +802,39 @@ nda_effect_generate_global_mason_list = {
 			name = nda_global_mason_list
 			target = THIS
 		}
+	}
+}
+
+nda_effect_generate_global_mason_count = {
+	set_global_variable = {
+        name = nda_topbar_global_mason_count
+        value = {
+            value = 0
+			every_character = {
+				limit = {
+					is_mason = yes
+					#owner = { NOT = { has_variable = nda_masonry_outlawed }}
+				}
+				add = 1
+			}
+        }
+    }	
+}
+
+nda_effect_convert_to_twilight_rite = {
+	random_character = {
+		limit = {
+			is_mason = yes
+			owner ?= {
+				is_cultist_country = yes
+			}
+			var:nda_masonic_rite < 5
+		}
+
+		set_variable = { name = nda_masonic_rite value = 5 }
+
+		debug_log = "Mason Converted to Twilight : [THIS.GetCharacter.GetFullNameNoFormatting]"
+
+		# Notify of change?
 	}
 }

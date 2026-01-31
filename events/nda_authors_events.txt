@@ -121,6 +121,114 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 	}
 }
 
+nda_authors.11 = { # Witch / Lamia in Averoigne - The End of the Story
+	type = country_event
+	placement = p:xA27EFD # this needs to be Averoigne
+	title = nda_authors.11.t
+	desc = nda_authors.11.d
+	flavor =  nda_authors.11.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xA27EFD = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1848.7.1  # original story set in 1798 - have return of witch
+		game_date < 1848.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "Witch in Averoigne"
+	}
+	
+	option = {
+		name = nda_authors.11.a
+		default_option = yes	
+	}
+
+		option = {
+		name = nda_authors.11.b
+
+		# boost old ways in Averoigne	
+		p:xD06161 = { 
+			state = {
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_old_ways						
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+		}
+	}
+}
+
+nda_authors.12 = { # Witch / Lamia in Averoigne - The End of the Story - could go in Pan events?
+	type = country_event
+	placement = p:xA27EFD # this needs to be Averoigne
+	title = nda_authors.12.t
+	desc = nda_authors.12.d
+	flavor =  nda_authors.12.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_nda_pan.dds"
+
+	duration = 3
+
+	trigger = { 
+		OR = {
+			# regional interest ?
+			p:xA27EFD = { state = { owner = ROOT } }	
+		}
+
+		game_date >=  1858.7.1  # original story set in unknown time
+		game_date < 1858.12.1  	
+    }
+
+	cooldown = { days = 180 }
+
+	immediate = {
+		debug_log = "Satyr in Averoigne"
+	}
+	
+	option = {
+		name = nda_authors.11.a
+		default_option = yes	
+	}
+
+		option = {
+		name = nda_authors.11.b
+
+		# boost old ways in Averoigne	
+		p:xD06161 = { 
+			state = {
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_old_ways						
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+		}
+	}
+}
+
 # Bram Stoker - Lair of the White Worm
 # https://en.wikipedia.org/wiki/The_Lair_of_the_White_Worm
 nda_authors.20 = { # Lair of the White Worm - Character event
@@ -934,7 +1042,7 @@ nda_authors.51 = { # A Psychical Invasion
 
 nda_authors.52 = { # A Nemesis of Fire
 	type = country_event
-	placement = p:xD06161 # this needs to be West Country (or Miskaton if relocated?)
+	placement = p:xE0E040 # Tauton, this needs to be West Country (or Miskaton if relocated?)
 	title = nda_authors.52.t
 	desc = nda_authors.52.d
 	flavor =  nda_authors.52.f
@@ -952,7 +1060,7 @@ nda_authors.52 = { # A Nemesis of Fire
 	trigger = { 
 		OR = {
 			# regional interest ?
-			p:xD06161 = { state = { owner = ROOT } }	
+			p:xE0E040 = { state = { owner = ROOT } }	
 		}
 
 		game_date >=  1906.6.1  
@@ -968,12 +1076,14 @@ nda_authors.52 = { # A Nemesis of Fire
 	option = {
 		name = nda_authors.52.a
 		default_option = yes	
+
+		# boost cultists - Yigians as Egyptian based.
 	}
 }
 
 nda_authors.53 = { # Ancient Sorceries
 	type = country_event
-	placement = p:xD06161 # this needs to beNorthern france (or Quebec if relocated?)
+	placement = p:x4899A2 #Metz this needs to be Northern france (or Quebec if relocated?)
 	title = nda_authors.53.t
 	desc = nda_authors.53.d
 	flavor =  nda_authors.53.f
@@ -991,7 +1101,7 @@ nda_authors.53 = { # Ancient Sorceries
 	trigger = { 
 		OR = {
 			# regional interest ?
-			p:xD06161 = { state = { owner = ROOT } }	
+			p:x4899A2 = { state = { owner = ROOT } }	
 		}
 
 		game_date >=  1907.6.1  
@@ -1007,12 +1117,28 @@ nda_authors.53 = { # Ancient Sorceries
 	option = {
 		name = nda_authors.53.a
 		default_option = yes	
+
+	}
+
+	option = {
+		name = nda_authors.53.b
+
+		# boost old ways in Metz	
+		p:x4899A2 = { 
+			state = {
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_old_ways						
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+		}
 	}
 }
 
 nda_authors.54 = { # Secret Worship
 	type = country_event
-	placement = p:xD06161 # this needs to be Southern Germany / Saxony
+	placement = p:xB08061 # Freiburg Baden 
 	title = nda_authors.54.t
 	desc = nda_authors.54.d
 	flavor =  nda_authors.54.f
@@ -1030,7 +1156,7 @@ nda_authors.54 = { # Secret Worship
 	trigger = { 
 		OR = {
 			# regional interest ?
-			p:xD06161 = { state = { owner = ROOT } }	
+			p:xB08061 = { state = { owner = ROOT } }	
 		}
 
 		game_date >=  1908.6.1  
@@ -1046,6 +1172,21 @@ nda_authors.54 = { # Secret Worship
 	option = {
 		name = nda_authors.54.a
 		default_option = yes	
+	}
+
+		option = {
+		name = nda_authors.54.b
+
+		# boost old ways in Freiburg	
+		p:xB08061 = { 
+			state = {
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_old_ways						
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+		}
 	}
 }
 
@@ -1174,7 +1315,7 @@ nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
 # Events based on Story collection "Return of the Ancients" 
 nda_authors.70 = { # Dionea: by Vernon Lee - The washed up child - Genoese coast June 1873
 	type = country_event
-	placement = p:xD06161 # this needs to be Genoese coast
+	placement = p:xF08021 # this needs to be Genoese coast - Modena
 	title = nda_authors.70.t
 	desc = nda_authors.70.d
 	flavor =  nda_authors.70.f
@@ -1213,7 +1354,7 @@ nda_authors.70 = { # Dionea: by Vernon Lee - The washed up child - Genoese coast
 
 nda_authors.71 = { # Dionea: by Vernon Lee - Death of Father Domenico - Genoese coast Jan 1886
 	type = country_event
-	placement = p:xD06161 # this needs to be Genoese coast
+	placement = p:xF08021 # this needs to be Genoese coast - Modena
 	title = nda_authors.71.t
 	desc = nda_authors.71.d
 	flavor =  nda_authors.71.f
@@ -1241,18 +1382,33 @@ nda_authors.71 = { # Dionea: by Vernon Lee - Death of Father Domenico - Genoese 
 	cooldown = { days = 180 }
 
 	immediate = {
-		debug_log = "Dionea - sculpturer death"
+		debug_log = "Dionea - domenico death"
 	}
 	
 	option = {
 		name = nda_authors.71.a
 		default_option = yes	
 	}
+
+		option = {
+		name = nda_authors.71.b
+
+		# boost old ways in Modena	
+		p:xF08021 = { 
+			state = {
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_old_ways						
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+		}
+	}
 }
 
 nda_authors.72 = { # Dionea: by Vernon Lee - Horrific Death of Sculpturer - Genoese coast July 1887
 	type = country_event
-	placement = p:xD06161 # this needs to be Genoese coast
+	placement = p:xF08021 # this needs to be Genoese coast - Modena
 	title = nda_authors.72.t
 	desc = nda_authors.72.d
 	flavor =  nda_authors.72.f
@@ -1287,11 +1443,26 @@ nda_authors.72 = { # Dionea: by Vernon Lee - Horrific Death of Sculpturer - Geno
 		name = nda_authors.72.a
 		default_option = yes	
 	}
+
+		option = {
+		name = nda_authors.72.b
+
+		# boost old ways in Tuscany	
+		p:xF08021 = { 
+			state = {
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_old_ways						
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+		}
+	}
 }
 
 nda_authors.73 = { # The Ring: by Thomas Graham Jackson - British antiquarians in Tuscany nr Corneto - published 1919 but push earlier
 	type = country_event
-	placement = p:xD06161 # this needs to be Tuscany 
+	placement = p:xB04020 # this needs to be Tuscany 
 	title = nda_authors.73.t
 	desc = nda_authors.73.d
 	flavor =  nda_authors.73.f
@@ -1309,7 +1480,7 @@ nda_authors.73 = { # The Ring: by Thomas Graham Jackson - British antiquarians i
 	trigger = { 
 		OR = {
 			# regional interest ?
-			p:xD06161 = { state = { owner = ROOT } }	
+			p:xB04020 = { state = { owner = ROOT } }	
 		}
 
 		game_date >=  1887.7.1  
@@ -1327,15 +1498,25 @@ nda_authors.73 = { # The Ring: by Thomas Graham Jackson - British antiquarians i
 		default_option = yes	
 	}
 
-		option = {
+	option = {
 		name = nda_authors.73.b
+
 		# boost old ways in Tuscany	
+		p:xB04020 = { 
+			state = {
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_old_ways						
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+		}
 	}
 }
 
 nda_authors.74 = { # The Great Mother: by R Ellis Roberts - British student near Oxford - spring 1899
 	type = country_event
-	placement = p:xD06161 # this needs to be Oxford 
+	placement = p:x60E0C0 # this needs to be Oxford 
 	title = nda_authors.74.t
 	desc = nda_authors.74.d
 	flavor =  nda_authors.74.f
@@ -1353,17 +1534,17 @@ nda_authors.74 = { # The Great Mother: by R Ellis Roberts - British student near
 	trigger = { 
 		OR = {
 			# regional interest ?
-			p:xD06161 = { state = { owner = ROOT } }	
+			p:x60E0C0 = { state = { owner = ROOT } }	
 		}
 
-		game_date >=  1887.7.1  
-		game_date < 1887.12.1  	
+		game_date >=  1899.2.1  
+		game_date < 1899.6.1  	
     }
 
 	cooldown = { days = 180 }
 
 	immediate = {
-		debug_log = "The Ring"
+		debug_log = "The Great Mother"
 	}
 	
 	option = {
@@ -1374,5 +1555,14 @@ nda_authors.74 = { # The Great Mother: by R Ellis Roberts - British student near
 	option = {
 		name = nda_authors.74.b
 		# boost old ways in Oxford	
+		p:x60E0C0 = { 
+			state = {
+				set_variable = { # ongoing conversion
+					name = nda_rel_boost_old_ways						
+					months = 12
+					value = nda_small_conversion
+				}
+			}
+		}
 	}
 }

@@ -35,7 +35,7 @@ nda_yigian.1893.a: "Accept the demand."
 nda_yigian.1893.b: "The impertinence!"
 
 nda_yigian.1894.t: "Return of the Queen"
-nda_yigian.1894.d: "In an elaborate cerimony held in front of thousands in the capital, the recently aquired Mirror of Nitocris was displayed for all to see.\n\nWhat was unexpected was the surface of the mirror seeminly becoming fluid and a silver tendril appearing to drag [SCOPE.sCharacter('sacrificial_ruler').GetFullName] in to it.\n\nThen from the shimmer of the mirror out stepped a female attired in the clothing and regalia of ancient [concept_nda_stygia].\n\nQueen Nitocris has returned to lead the snake peoples to glory!"
+nda_yigian.1894.d: "In an elaborate ceremony held in front of thousands in the capital, the recently aquired Mirror of Nitocris was displayed for all to see.\n\nWhat was unexpected was the surface of the mirror seeminly becoming fluid and a silver tendril appearing to drag [SCOPE.sCharacter('sacrificial_ruler').GetFullName] into it.\n\nThen from the shimmer of the mirror out stepped a female attired in the clothing and regalia of ancient [concept_nda_stygia].\n\nQueen Nitocris has returned to lead the snake peoples to glory!"
 nda_yigian.1894.f: ""
 nda_yigian.1894.a: "Hail Nitocris!"
 

@@ -407,6 +407,12 @@ nda_monthly_state_conversion_on_action = {
 			}
 			convert_population = { target = rel:atheist value = var:nda_rel_boost_atheism }	
 		}
+		else_if = {
+			limit = { # Boost 'The Old Ways''
+				has_variable = nda_rel_boost_old_ways	
+			}
+			convert_population = { target = rel:nda_rel_old_ways value = var:nda_rel_boost_old_ways }	
+		}
 
 		if = {
 			limit = { # Boost Eldritch Cult
@@ -505,6 +511,8 @@ nda_half_yearly_on_action = {
 	effect = {
 		nda_effect_lodge_leader = yes
 		nda_effect_masonic_exiles = yes
+		nda_effect_clean_masons = yes
+		nda_effect_convert_to_twilight_rite = yes
 		random = {
 			chance = 20 # Approx one recruit every 5 years - too few? don't want to swarm game. - is this enough to cause spread abroad? or force on subjects?
 			nda_effect_recruit_mason = yes

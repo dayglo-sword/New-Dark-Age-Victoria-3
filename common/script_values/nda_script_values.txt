@@ -238,6 +238,12 @@ nda_masonic_potential =
 	}
 	if = {
 		limit = {
+			has_role = politician
+		}
+		add = 1 # was getting too many generals
+	}
+	if = {
+		limit = {
 			age > 40 # old duffers rule
 		}
 		add = 2
@@ -279,15 +285,15 @@ nda_masonic_potential =
 		limit = {
 			OR = {
 				has_template = garibaldi_character_template	
-				# has_template = usa_roosevelt_character_template
-				#has_template = usa_jp_morgan_character_template		
-				#has_template = usa_carnegie_character_template
-				#has_template = usa_rockefeller_character_template
-				#has_template = usa_thomas_edison_character_template # is athetist and potential feminist in template??
-				#has_template = gbr_albert_edward_template # Edward VII
-				#has_template = gbr_george_v_template 
-				#has_template = gbr_disraeli_character_template
-				#has+template = gbr_general_kitchener
+				has_template = usa_roosevelt_character_template
+				has_template = usa_jp_morgan_character_template		
+				has_template = usa_carnegie_character_template
+				has_template = usa_rockefeller_character_template
+				has_template = usa_thomas_edison_character_template # is athetist and potential feminist in template??
+				has_template = gbr_albert_edward_template # Edward VII
+				has_template = gbr_george_v_template 
+				has_template = gbr_disraeli_character_template
+				has_template = gbr_general_kitchener
 				##has_template = gbr_william_hanover_template # Starting character should override template instead??
 				##has_template = usa_andrew_jackson_template # or set at start up
 			}
@@ -307,7 +313,7 @@ nda_masonic_ranking =
 		}
 		add = 30
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_variable = nda_past_master # used to find former masters
 		}
@@ -318,7 +324,7 @@ nda_masonic_ranking =
 		limit = {
 			is_ruler = yes # 
 		}
-		add = 10
+		add = 5
 	}		
 
 	# Garbaldi! Should limit to South America??
@@ -326,21 +332,21 @@ nda_masonic_ranking =
 		limit = {
 			OR = {
 				has_template = garibaldi_character_template	
-				# has_template = usa_roosevelt_character_template
-				#has_template = usa_jp_morgan_character_template		
-				#has_template = usa_carnegie_character_template
-				#has_template = usa_rockefeller_character_template
-				#has_template = usa_thomas_edison_character_template # is athetist and potential feminist in template??
-				#has_template = gbr_albert_edward_template # Edward VII
-				#has_template = gbr_george_v_template 
-				#has_template = gbr_disraeli_character_template
-				#has+template = gbr_general_kitchener
-				##has_template = gbr_william_hanover_template # Starting character should override template instead??
-				##has_template = usa_andrew_jackson_template # or set at start up
+				has_template = usa_roosevelt_character_template
+				has_template = usa_jp_morgan_character_template		
+				has_template = usa_carnegie_character_template
+				has_template = usa_rockefeller_character_template
+				has_template = usa_thomas_edison_character_template # is athetist and potential feminist in template??
+				has_template = gbr_albert_edward_template # Edward VII
+				has_template = gbr_george_v_template 
+				has_template = gbr_disraeli_character_template
+				has_template = gbr_general_kitchener
+				has_template = gbr_william_hanover_template # Starting character should override template instead??
+				has_template = usa_andrew_jackson_template # or set at start up
 			}
 
 		}
-		add = 10
+		add = 5
 	}
 
 	if = {

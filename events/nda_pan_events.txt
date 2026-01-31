@@ -12,7 +12,7 @@ nda_pan.1 = { # Great God Pan- The Experiment - warm up event
 	duration = 3
 
 	event_image = {
-		video = "unspecific_sick_in_hospital"
+		texture = "gfx/event_pictures/nda_PanEvents.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

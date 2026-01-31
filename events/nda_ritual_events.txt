@@ -281,29 +281,29 @@ nda_ritual.1890 = { # Cthulhu Early Return
 	}	
 }
 
-nda_ritual.1891 = { # Cthulhu Failure to Return early
-	type = country_event
-	hidden = yes
+# nda_ritual.1891 = { # Cthulhu Failure to Return early
+# 	type = country_event
+# 	hidden = yes
 
-	trigger = { # limit to eldritch cult ELD ? Called Only?
-		has_game_rule = no_return # Cthuhlu is willing to return
-		has_global_variable = nda_ritual_completed	
-		game_date >= 1890.8.20  # HPL's Birthday
-		game_date < 1891.1.1 
-		NOT = {
-			has_global_variable = nda_cthulhu_arrives	# run once
-		 }
-	}
+# 	trigger = { # limit to eldritch cult ELD ? Called Only?
+# 		has_game_rule = no_return # Cthuhlu is willing to return
+# 		has_global_variable = nda_ritual_completed	
+# 		game_date >= 1890.8.20  # HPL's Birthday
+# 		game_date < 1891.1.1 
+# 		NOT = {
+# 			has_global_variable = nda_cthulhu_arrives	# run once
+# 		 }
+# 	}
 
-	cooldown = { days = 120	}
+# 	cooldown = { days = 120	}
 
-	immediate = {
+# 	immediate = {
 
-		set_global_variable = nda_cthulhu_no_show	
+# 		set_global_variable = nda_cthulhu_no_show	
 	
-		debug_log = "Ritual - Stars are Right Early - Cthulhu No Show"
-	}	
-}
+# 		debug_log = "Ritual - Stars are Right Early - Cthulhu No Show"
+# 	}	
+# }
 
 nda_ritual.2 = { # Cthulhu Early Return
 	type = country_event

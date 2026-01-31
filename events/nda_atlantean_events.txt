@@ -93,6 +93,36 @@ nda_atlantean.11 = {
 	}
 }
 
+# Surama recognises Migo inteference
+nda_atlantean.12 = {
+	type = country_event
+	placement = ROOT
+	
+	title = nda_atlantean.12.t
+	desc = nda_atlantean.12.d
+	flavor = nda_atlantean.12.f
+	dlc = dlc_NDA
+
+	duration = 3
+	
+    event_image = {
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+
+	immediate = {
+		debug_log = "Sumara Warning in [THIS.GetCountry.GetNameNoFormatting]"	
+		set_variable = nda_migo_surama_warn
+ 	}	
+
+	option = {
+		name = nda_atlantean.12.a # 
+	}
+}
+
  # Kathulos Washed up in Africa, should favour egypt as base - Robert Howard
  nda_atlantean.20 = { #
 	type = country_event
@@ -153,7 +183,7 @@ nda_atlantean.11 = {
 	}
  }
 
- # The return of Surama - one off pulp style revival from certain death
+ # The return of Kathulos - one off pulp style revival from certain death
 nda_atlantean.21 = {
 	type = country_event
 	placement = ROOT
@@ -178,6 +208,39 @@ nda_atlantean.21 = {
 	}
 }
 
+# Kathulos recognises Migo inteference
+nda_atlantean.22 = {
+	type = country_event
+	placement = ROOT
+	
+	title = nda_atlantean.22.t
+	desc = nda_atlantean.22.d
+	flavor = nda_atlantean.22.f
+	dlc = dlc_NDA
+
+	duration = 3
+	
+    event_image = {
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
+	
+	trigger = {		
+
+	}
+
+	immediate = {
+		debug_log = "Kathulos Warning in [THIS.GetCountry.GetNameNoFormatting]"	
+		set_variable = nda_migo_kathulos_warn
+ 	}
+
+	option = {
+		name = nda_atlantean.22.a # 
+	}
+}
 # nda_atlantean.30 = { } # Washed up in Pacific - Lovecraft
 
 # atlanteans boost native rebel movements in location and neighbourhood

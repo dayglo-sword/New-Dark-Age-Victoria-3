@@ -89,3 +89,12 @@ texticon = {
 		fontsize = 80
 	}
 }
+
+texticon = {
+	icon = nda_masonic_eye
+	iconsize = {
+		offset = { 0 22 }
+		texture = "gfx/interface/icons/topbar/nda_providence_eye.dds"
+		fontsize = 80
+	}
+}

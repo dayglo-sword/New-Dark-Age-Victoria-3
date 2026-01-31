@@ -136,6 +136,7 @@ nda_effect_dagonic_annex = {
 			any_country = { 	
 				is_player = no			
 				is_full_cult = no
+				is_revolutionary = no
 				has_variable = nda_dagon_in_open
 				country_has_primary_culture = cu:nda_cul_dagonic # needed to stop strange results after revolutions remove culture
 			}
@@ -145,6 +146,7 @@ nda_effect_dagonic_annex = {
 			limit = {
 				is_player = no			
 				is_full_cult = no
+				is_revolutionary = no
 				has_variable = nda_dagon_in_open	
 				country_has_primary_culture = cu:nda_cul_dagonic # needed to stop strange results after revolutions remove culture	
 			}

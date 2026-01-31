@@ -171,9 +171,17 @@ rite_name = {
 	# Cultist Rites auto overwrite historic
 	text = {
 		trigger = {
+			NOT = {
+				has_variable = nda_masonic_rite	
+			}
+		}
+
+		localization_key = nda_rite_unified
+	}
+	text = {
+		trigger = {
 			AND = {
-				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 1				
+				has_variable = nda_masonic_rite		
 			}
 			religion = rel:nda_rel_cultist
 		}
@@ -184,7 +192,7 @@ rite_name = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 1				
+				var:nda_masonic_rite ?= 1				
 			}
 		}
 
@@ -194,7 +202,7 @@ rite_name = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 2				
+				var:nda_masonic_rite ?= 2				
 			}
 
 		}
@@ -205,11 +213,21 @@ rite_name = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 3				
+				var:nda_masonic_rite ?= 3				
 			}
 		}
 
 		localization_key = nda_rite_york # as used by the Americans!
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_variable = nda_masonic_rite
+				var:nda_masonic_rite ?= 4			
+			}
+		}
+
+		localization_key = nda_rite_humain # as used by the Co-Masons! Women included.
 	}
 	text = { # default to just unified
 
@@ -220,6 +238,15 @@ rite_name = {
 masonic_title = {
 	type = character
 	random_valid = no
+	text = {
+		trigger = {
+			NOT = {
+				has_variable = nda_masonic_rite	
+			}
+		}
+
+		localization_key = nda_masonic_title_basic
+	}
 	# Cultist Rites auto overwrite historic
 	text = {
 		trigger = {

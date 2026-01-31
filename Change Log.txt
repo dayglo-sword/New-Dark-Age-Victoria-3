@@ -1,3 +1,21 @@
+------
+
+Version v1.12.4
+
+Major Changes
+Add Global Mason tooltip
+Add localised events for Old Ways spread.
+
+Minor Changes
+Add Eye of Providence icon.
+Boost Altantean relationship effect.
+Boost chance of Historical US and GB Masons.
+
+Bug Fixes
+Coorect Kathulos cultural scope.
+
+------
+
 Version v1.12.3
 
 Major Changes
@@ -21,7 +39,6 @@ Harvest / Disaster conditions for Manila
 Re-enable Cult Colonial Admin
 Fix Esoteric Lodge naming
 Correct Strategy conditions.
-
 
 ------
 

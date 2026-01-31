@@ -168,16 +168,17 @@ nda_effect_eldritch_annex = {
 	if = {
 		limit = {
 			any_country = { 
-				is_player = no				
+				is_player = no	
+				is_revolutionary = no
+				is_full_cult = no										
 				NOT = {
-					OR = {
-						is_full_cult = yes					
+					OR = {				
 						any_scope_state = { 
 							OR = {
 								is_potentially_dagonic = yes
 								is_potentially_yigian = yes								
 							}						
-						}						
+						}							
 					}	
 				}
 
@@ -691,7 +692,7 @@ nda_effect_release_eld_isolated = {
 		}	
 		
 		if = { 
-			limit = { exists = scope:nda_releasable_state.owner }
+			limit = { exists = ROOTscope:nda_releasable_state.owner }
 			hidden_effect = {
 				create_diplomatic_pact = {
 					country = scope:nda_releasable_state.owner

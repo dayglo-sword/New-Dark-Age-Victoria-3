@@ -70,6 +70,13 @@ nda_mason_list_title_tt: "#BOLD Prominent Local Freemasons #!"
 nda_mason_list_item_tt: "[SCOPE.sCharacter('nda_mason').GetPrimaryRoleTitle] [SCOPE.sCharacter('nda_mason').GetFullName]"
 nda_mason_list_empty_tt: "No Freemasons in the Country #!"
 
+nda_global_mason_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],nda_global_mason_list_tt $nda_global_mason_list_title_tt$ #!"
+nda_global_mason_list_tt: "[GetScriptedGui('nda_global_mason_list_sgui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+nda_global_mason_list_title_tt: "#BOLD Prominent Freemasons #!"
+nda_global_mason_list_item_tt: "[SCOPE.sCharacter('nda_global_mason').GetCountry.GetFlagTextIcon] [SCOPE.sCharacter('nda_global_mason').GetPrimaryRoleTitle] [SCOPE.sCharacter('nda_global_mason').GetFullName] ( [SCOPE.sCharacter('nda_global_mason').GetCustom('rite_name')] )"
+nda_global_mason_list_empty_tt: "No Freemasons in the World #!"
+
 nda_mason_lodges_tt: "#tooltippable;tooltip:[GetPlayer.GetTooltipTag],nda_mason_lodges_list_tt $nda_mason_lodge_list_title_tt$ #!"
 nda_mason_lodges_list_tt: "[GetScriptedGui('nda_global_lodge_list_sgui').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 nda_mason_lodge_list_title_tt: "Major International Lodges"

@@ -45,6 +45,28 @@ nda_country_mason_list_sgui = {
     }
 }
 
+nda_global_mason_list_sgui = {
+    scope = country
+
+    effect = {
+        #custom_label = nda_mason_list_title_tt
+
+        if = {
+            limit = {
+                has_global_variable_list = nda_global_mason_list
+            }
+            every_in_global_list = {
+                variable = nda_global_mason_list
+                save_temporary_scope_as = nda_global_mason
+                custom_tooltip = nda_global_mason_list_item_tt # for each print a line
+            }
+        }
+        else = {
+            custom_tooltip = nda_global_mason_list_empty_tt # no masons
+        }
+    }
+}
+
 nda_global_cult_country_list_sgui = {
     scope = country
 

@@ -73,7 +73,7 @@
 
  notification_nda_lostcity_yhanthlei_reveal_tooltip: "#header $notification_nda_lostcity_yhanthlei_reveal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_yhanthlei_reveal_desc$"
  notification_nda_lostcity_yhanthlei_reveal_name: "Y'han-thlei Rises"
- notification_nda_lostcity_yhanthlei_reveal_desc: "From the depths pinacles of coral have breached the surface allowing access to [concept_nda_yhanthlei], the city of the [concept_nda_deep_ones]!"
+ notification_nda_lostcity_yhanthlei_reveal_desc: "From the depths of the Atlantic coast, pinacles of coral have breached the surface allowing access to [concept_nda_yhanthlei], the city of the [concept_nda_deep_ones]!"
 
  notification_nda_lostcity_yhanthlei_hidden_tooltip: "#header $notification_nda_lostcity_yhanthlei_hidden_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_lostcity_yhanthlei_hidden_desc$"
  notification_nda_lostcity_yhanthlei_hidden_name: "Y'han-thlei Recedes"
