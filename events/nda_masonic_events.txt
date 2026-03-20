@@ -139,7 +139,7 @@ nda_masonic.11 = { # Masonic Foundings - Called Event
 			set_variable = { name = nda_lodge_level value = 3 }	
 			if = {
 				limit = { 
-					is_subject = yes
+					owner = { is_subject = yes }
 					owner.overlord ?= { 
 						has_masonic_lodge = yes 
 						NOT = { has_variable = nda_masonry_outlawed }

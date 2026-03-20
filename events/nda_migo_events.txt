@@ -3,6 +3,7 @@
 #TODO
 #94181 - The Brotherhood Visits
 #94182 - The Brotherhood Investigates
+# other MiGo related events - nda_atlantean.12 nda_atlantean.22
 
 nda_migo.1 = { #  Migo Intro - In The Night
 

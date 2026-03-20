@@ -537,17 +537,19 @@ nda_effect_recruit_mason = {
 			}
 			else = {
 				# should tend towards existing rite of main lodge
-				ordered_scope_state = {
-					limit = {
-						has_variable = nda_lodge_level
-					}
+				PREV = {
+					ordered_scope_state = {
+						limit = {
+							has_variable = nda_lodge_level
+						}
 
-					order_by = nda_masonic_lodge_rank
-					max = 1
+						order_by = nda_masonic_lodge_rank
+						max = 1
 
-					save_temporary_scope_as = nda_lodge							
-				}	
-
+						save_temporary_scope_as = nda_lodge							
+					}					
+				}
+	
 				random_list = {
 					1 = { set_variable = { name = nda_masonic_rite value = scope:nda_lodge.var:nda_lodge_rite }}
 					1 = { set_variable = { name = nda_masonic_rite value = 1 }}
@@ -828,12 +830,32 @@ nda_effect_convert_to_twilight_rite = {
 			owner ?= {
 				is_cultist_country = yes
 			}
+			#has_variable = nda_masonic_rite
+			exists = var:nda_masonic_rite
 			var:nda_masonic_rite < 5
 		}
 
 		set_variable = { name = nda_masonic_rite value = 5 }
 
 		debug_log = "Mason Converted to Twilight : [THIS.GetCharacter.GetFullNameNoFormatting]"
+
+		# Notify of change?
+	}
+
+	random_character = { # fix for missing value
+		limit = {
+			is_mason = yes
+			owner ?= {
+				is_cultist_country = yes
+			}
+			has_variable = nda_masonic_rite
+			NOT = { exists = var:nda_masonic_rite }
+
+		}
+
+		set_variable = { name = nda_masonic_rite value = 5 }
+
+		debug_log = "Mason Corrected to Twilight : [THIS.GetCharacter.GetFullNameNoFormatting]"
 
 		# Notify of change?
 	}

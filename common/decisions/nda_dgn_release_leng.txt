@@ -513,6 +513,7 @@
 
 			c:TIB = {					
 				change_tag = LEN # now change to Leng
+				nda_effect_leng_setup = yes	
 			}
 
 			# send out notification		

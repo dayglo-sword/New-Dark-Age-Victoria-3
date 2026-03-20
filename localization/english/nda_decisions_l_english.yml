@@ -86,3 +86,7 @@ nda_yig_form_union_of_the_snake_tooltip: "Form The Union of the Snake Power Bloc
 nda_dgn_form_cetacean_leagues: "Form The Cetacean Leagues"
 nda_dgn_form_cetacean_leagues_desc: "Form The Cetacean Leagues Power Bloc to consolidate the power of [concept_nda_dagon]"
 nda_dgn_form_cetacean_leagues_tooltip: "Form The Cetacean Leagues Power Bloc"
+
+nda_eld_splinter_rejoin: "Rejoin The Eldritch Cult"
+nda_eld_splinter_rejoin_desc: "End the schism and rejoin with our masters the Eldritch Cult"
+nda_eld_splinter_rejoin_tooltip: "End the schism and rejoin with our masters the Eldritch Cult"

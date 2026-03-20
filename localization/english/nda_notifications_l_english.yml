@@ -16,7 +16,7 @@
 
  notification_nda_yigian_lands_proclaimed_tooltip: "#header $notification_nda_yigian_lands_proclaimed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_yigian_lands_proclaimed_desc$"
  notification_nda_yigian_lands_proclaimed_name: "Hail The Yigian Lands"
- notification_nda_yigian_lands_proclaimed_desc: "The Snake Cult has found a homeland as the existence of the #BOLD Yigian Lands#! is proclaimed.\nThe Snake People and their now have total and open control of the Nation."
+ notification_nda_yigian_lands_proclaimed_desc: "The Snake Cult has found a homeland as the existence of the #BOLD Yigian Lands#! is proclaimed.\nThe Snake People and their followers now have total and open control of the Nation."
 
  notification_nda_yigian_lands_expand_tooltip: "#header $notification_nda_yigian_lands_expand_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_yigian_lands_expand_desc$"
  notification_nda_yigian_lands_expand_name: "The Yigian Lands Expands"

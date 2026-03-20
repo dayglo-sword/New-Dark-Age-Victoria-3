@@ -2,6 +2,7 @@
 	usage = game
 	selection_behavior = weighted_random
 	fallback = no_cultist_mask
+    priority = 5
 
     no_cultist_mask = {
         # no stuff needed
@@ -17,13 +18,13 @@
                 range = { 0.0 1.0 } 
             }
             accessory = {
-                mode = replace
+                mode = add
                 gene = hairstyles
                 template = no_hairstyles # needed for none strange clipping
                 range = { 0 1 } # For the randomness to work correctly
             }
             accessory = {
-                mode = replace
+                mode = add
                 gene = headgear
                 template = no_headgear # needed for none strange clipping
                 range = { 0 1 } # For the randomness to work correctly
@@ -33,7 +34,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 500
+                add = 15000
                 scope:character ?= {
                     is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
                     has_variable = nda_coven_leader # leader only
@@ -69,7 +70,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 500
+                add = 15000
                 scope:character ?= {
                     is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
                     has_variable = nda_coven_leader
@@ -114,7 +115,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 500
+                add = 15000
                 scope:character ?= {
                     is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
                     has_variable = nda_coven_leader
@@ -150,7 +151,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 200
+                add = 12000
                 scope:character ?= {
                     is_in_exile_pool = no # stop error spam on viewing exiles - need to clean the exile pool of coven leaders?
                     has_variable = nda_coven_leader

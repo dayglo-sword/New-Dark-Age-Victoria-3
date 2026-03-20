@@ -113,9 +113,15 @@ nda_atlantean.12 = {
 	
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
+	trigger = {
+		is_player = yes # player only obviously		
+		NOT = { has_global_variable = nda_migo_surama_warn}
+		has_variable = nda_migo_visited
+	}
+
 	immediate = {
 		debug_log = "Sumara Warning in [THIS.GetCountry.GetNameNoFormatting]"	
-		set_variable = nda_migo_surama_warn
+		set_global_variable = nda_migo_surama_warn
  	}	
 
 	option = {
@@ -228,13 +234,15 @@ nda_atlantean.22 = {
 	
 	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 	
-	trigger = {		
-
+	trigger = {
+		is_player = yes # player only obviously		
+		NOT = { has_global_variable = nda_migo_kathulos_warn}
+		has_variable = nda_migo_visited
 	}
 
 	immediate = {
 		debug_log = "Kathulos Warning in [THIS.GetCountry.GetNameNoFormatting]"	
-		set_variable = nda_migo_kathulos_warn
+		set_global_variable = nda_migo_kathulos_warn
  	}
 
 	option = {

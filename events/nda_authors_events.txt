@@ -121,6 +121,8 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 	}
 }
 
+# For untold years, men say, they have been the haunt of unholy spirits, of witches and demons; and festivals not to be described or even named are held within their walls. 
+# No weapon known to man, no exorcism or holy water, has ever prevailed against these demons; many brave cavaliers and monks have disappeared amid the shadows of Faussesflammes
 nda_authors.11 = { # Witch / Lamia in Averoigne - The End of the Story
 	type = country_event
 	placement = p:xA27EFD # this needs to be Averoigne
@@ -152,18 +154,35 @@ nda_authors.11 = { # Witch / Lamia in Averoigne - The End of the Story
 
 	immediate = {
 		debug_log = "Witch in Averoigne"
+		# select victim
+		p:xA27EFD = { 
+			state = { 
+				owner = { 
+					random_scope_character = {
+						limit = { 
+							is_busy = no
+							has_any_cultist_trait = no
+						}
+						save_scope_as = nda_lamia_victim
+					}
+				} 
+			} 
+		}
 	}
 	
 	option = {
 		name = nda_authors.11.a
 		default_option = yes	
+		scope:nda_lamia_victim = { kill_character = yes }
 	}
 
-		option = {
+	option = {
 		name = nda_authors.11.b
 
+		scope:nda_lamia_victim = { kill_character = yes }
+
 		# boost old ways in Averoigne	
-		p:xD06161 = { 
+		p:xA27EFD = { 
 			state = {
 				set_variable = { # ongoing conversion
 					name = nda_rel_boost_old_ways						
@@ -175,7 +194,10 @@ nda_authors.11 = { # Witch / Lamia in Averoigne - The End of the Story
 	}
 }
 
-nda_authors.12 = { # Witch / Lamia in Averoigne - The End of the Story - could go in Pan events?
+# The apparition was incredible; and, for the space of a long breath, they could not believe they had really seen it.
+# There were two horns in a matted mass of coarse, animal-like hair above the semi-human face with its obliquely slitted eyes and fang-revealing mouth and beard of wild-boar bristles. The face was old - incomputably old; and its lines and wrinkles were those of unreckoned years of lust; and its look was filled with the slow, unceasing increment of all the malignity and corruption and cruelty of elder ages. 
+# It was the face of Pan, as he glared from his, secret wood upon travellers taken unaware.
+nda_authors.12 = { # The Satyr could go in Pan events?
 	type = country_event
 	placement = p:xA27EFD # this needs to be Averoigne
 	title = nda_authors.12.t
@@ -183,7 +205,7 @@ nda_authors.12 = { # Witch / Lamia in Averoigne - The End of the Story - could g
 	flavor =  nda_authors.12.f
 
 	event_image = {
-		video = "unspecific_sick_in_hospital"
+		texture = "gfx/event_pictures/nda_PanEvents.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -198,26 +220,44 @@ nda_authors.12 = { # Witch / Lamia in Averoigne - The End of the Story - could g
 			p:xA27EFD = { state = { owner = ROOT } }	
 		}
 
-		game_date >=  1858.7.1  # original story set in unknown time
-		game_date < 1858.12.1  	
+		game_date >=  1858.5.1  # original story set in unknown time
+		game_date < 1858.10.1  	
     }
 
 	cooldown = { days = 180 }
 
 	immediate = {
 		debug_log = "Satyr in Averoigne"
+		p:xA27EFD = { 
+			state = { 
+				owner = { 
+					random_scope_character = {
+						limit = { 
+							is_busy = no
+						}
+						save_scope_as = nda_satyr_victim
+					}
+				} 
+			} 
+		}
 	}
 	
 	option = {
-		name = nda_authors.11.a
-		default_option = yes	
+		name = nda_authors.12.a
+		default_option = yes
+		
+		scope:nda_satyr_victim = { kill_character = yes }
 	}
 
-		option = {
-		name = nda_authors.11.b
+	option = {
+		name = nda_authors.12.b	
+	}
+
+	option = {
+		name = nda_authors.12.c
 
 		# boost old ways in Averoigne	
-		p:xD06161 = { 
+		p:xA27EFD = { 
 			state = {
 				set_variable = { # ongoing conversion
 					name = nda_rel_boost_old_ways						

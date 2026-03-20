@@ -692,7 +692,7 @@ nda_effect_release_eld_isolated = {
 		}	
 		
 		if = { 
-			limit = { exists = ROOTscope:nda_releasable_state.owner }
+			limit = { exists = scope:nda_releasable_state.owner }
 			hidden_effect = {
 				create_diplomatic_pact = {
 					country = scope:nda_releasable_state.owner

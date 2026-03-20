@@ -17,12 +17,39 @@
 
 	immediate = {
 		debug_log = "Atlantean - Sumara target country [THIS.GetCountry.GetNameNoFormatting]"
+		every_scope_character = {
+			limit = {
+				has_template = nda_surama_character_template
+			}
+
+			save_scope_as = nda_surama
+		}
 	}
 
 	modifiers_while_active = {
 		# Reduce movements over all
 	}
 
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_nda_atlantean_status_1
+				trigger = {
+					has_global_variable = nda_atlantean_unity_count
+					has_global_variable = nda_atlantean_movements_count
+				}
+			}
+			# triggered_desc = {
+			# 	desc = je_nda_atlantean_status_2
+			# 	trigger = {
+			# 		has_variable = industrial_strike
+			# 	}
+			# }
+			triggered_desc = {
+				desc = je_nda_atlantean_status_2
+			}
+		}
+	}
 
 	on_weekly_pulse = {		
 	}
@@ -76,6 +103,13 @@
 
 								# fire event to notify owner
 								trigger_event = { id = nda_atlantean.40 days=7 }
+
+								if = {
+									limit = { is_subject = yes }
+									overlord = {
+										trigger_event = { id = nda_atlantean.40 days=7 }
+									}
+								}
 							}
 						}							
 					}
@@ -98,7 +132,7 @@
 									not = { has_discrimination_trait = tradition_nda_grand_union }								
 								}
 								add_tradition_trait = tradition_nda_grand_union		
-								save_scope_as = converted_culture					
+								save_scope_as = nda_converted_culture					
 							}
 
 							# fire event to notify owner
@@ -106,7 +140,7 @@
 								limit= {
 									is_player = yes
 									any_scope_pop = {
-										culture = scope:converted_culture
+										culture = scope:nda_converted_culture
 									}
 								}
 								trigger_event = { id = nda_atlantean.41 days=7 }								
@@ -143,7 +177,7 @@
 								limit= {
 									is_player = yes
 									any_scope_pop = {
-										culture = scope:converted_culture
+										culture = scope:nda_converted_culture
 									}
 								}
 								trigger_event = { id = nda_atlantean.41 days=7 }								
@@ -271,12 +305,12 @@
 					}
 				}
 				1 = { # If host country is subject of non-african then boost liberty desire
-					modifier = {
+					modifier = {						
 						if = {
 							limit = {
+								is_subject = no								
 								NOT = {
-									NOT = { is_country_type = decentralized }
-									is_subject = yes	
+									NOT = { is_country_type = decentralized }	
 									overlord = { coa_def_african_trigger = no }
 									coa_def_african_trigger = yes																		
 								}
@@ -286,20 +320,33 @@
 					}
 					# If subject of non-local power then increase liberty desire
 					debug_log = "Atlantean - Sumara : Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
-					add_liberty_desire = 20
-					change_relations = { country = overlord value = -50 } # should be done by confirmation event if player		
+					if = {
+						limit = {
+							is_subject = yes
+							overlord = { coa_def_african_trigger = no }	
+						}
+						add_liberty_desire = 20
+						change_relations = { country = overlord value = -50 } # should be done by confirmation event if player							
+					}
 				}
 			}
 	
+
 		}
 	
-		# Migo Warning to Player
+		#  Warning to MiGo Player
+		random_events = {
+ 			50 = 0
+ 			10 = nda_atlantean.12
+ 		}
 	}
 
 	on_yearly_pulse = {
 		effect = {
 			# update counts so we can see how much progress has been made
+			nda_effect_atlantean_influence_counts = yes
 			# Count of Cultures with trait
+			#
 			# Count of movements with modifier
 		}
     }
@@ -347,6 +394,13 @@ je_nda_atlantean_kathulos = {
 
 	immediate = {
 		debug_log = "Atlantean - Kathulos target country [THIS.GetCountry.GetNameNoFormatting]"
+		every_scope_character = {
+			limit = {
+				has_template = nda_kathulos_character_template
+			}
+
+			save_scope_as = nda_kathulos
+		}
 	}
 
 	modifiers_while_active = {
@@ -406,6 +460,13 @@ je_nda_atlantean_kathulos = {
 
 								# fire event to notify owner
 								trigger_event = { id = nda_atlantean.40 days=7 }
+
+								if = {
+									limit = { is_subject = yes }
+									overlord = {
+										trigger_event = { id = nda_atlantean.40 days=7 }
+									}
+								}
 							}
 						}							
 					}
@@ -436,7 +497,7 @@ je_nda_atlantean_kathulos = {
 								limit= {
 									is_player = yes
 									any_scope_pop = {
-										culture = scope:converted_culture
+										culture = scope:nda_converted_culture
 									}
 								}
 								trigger_event = { id = nda_atlantean.41 days=7 }								
@@ -473,7 +534,7 @@ je_nda_atlantean_kathulos = {
 								limit= {
 									is_player = yes
 									any_scope_pop = {
-										culture = scope:converted_culture
+										culture = scope:nda_converted_culture
 									}
 								}
 								trigger_event = { id = nda_atlantean.41 days=7 }								
@@ -612,9 +673,9 @@ je_nda_atlantean_kathulos = {
 					modifier = {
 						if = {
 							limit = {
+								is_subject = no									
 								NOT = {
 									NOT = { is_country_type = decentralized }
-									is_subject = yes	
 									overlord = { coa_def_african_trigger = no }
 									any_primary_culture = {
 										has_discrimination_trait_group = heritage_group_middle_eastern
@@ -631,6 +692,7 @@ je_nda_atlantean_kathulos = {
 						}
 						# If subject of non-local power then increase liberty desire
 						debug_log = "Atlantean - Kathulos : Increase Liberty Desire in Host : [THIS.GetCountry.GetNameNoFormatting]"
+						
 						add_liberty_desire = 20	
 						change_relations = { country = overlord value = -50 } # should be done by confirmation event if player					
 					}
@@ -639,12 +701,19 @@ je_nda_atlantean_kathulos = {
 	
 		}
 	
+		#  Warning to MiGo Player
+		random_events = {
+ 			50 = 0
+ 			10 = nda_atlantean.22
+ 		}
 	}
 
 	on_yearly_pulse = {
 		effect = {
 			# update counts so we can see how much progress has been made
+			nda_effect_atlantean_influence_counts = yes
 			# Count of Cultures with trait
+			#nda_effect_count_of_atlantean_unity = yes
 			# Count of movements with modifier
 		}
     }

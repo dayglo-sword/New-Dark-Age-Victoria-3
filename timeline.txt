@@ -17,6 +17,7 @@ Timeline of events in mod
 1846.3      nda_nen.1846        Plague in Innsmouth
 1848.3		nda_ regional		Great Serpent Mound
 1848.4      nda_historic.1848   Founding of Spiritualist Movement
+1848.7		nda_authors.11		Averoigne - The End of the Story
 1849.10     nda_historic.1849   Death of Poe
 
 1852.1      nda_historic.1852   An American Medium in London
@@ -25,6 +26,7 @@ Timeline of events in mod
 1855.2		nda_ regional		Devil's Footprints
 1857.4		nda_historic.1857	Spiritualism - The Banner of Light
 1857.8		nda_historic.1858	Allen Kardec - Le Livre des Esprits Spiritism - offshoot of Spiritualism
+1858.5		nda_authors.12		Averoigne - The Satyr
 1858.7      nda_astro.1858      Great Comet 1
 1860.3		nda_authors.20		The White Worm
 1861.10     nda_astro.1861      Conjunction 2

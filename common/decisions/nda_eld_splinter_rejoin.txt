@@ -1,0 +1,41 @@
+﻿nda_eld_splinter_rejoin = {
+	is_shown = {
+		exists = c:ELD
+		this = { 
+			is_cultist_country = yes
+			has_variable = nda_eldritch_splinter
+			is_player = no
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		c:ELD = { 			 	
+			is_at_war = no
+			relations:root >= relations_threshold:amicable 
+		}
+	}
+	
+	when_taken = {
+		c:ELD = { annex = ROOT }
+	}
+
+	ai_chance = {
+		value = 10
+		if = {
+			limit = {
+				bureaucracy > 0 
+			}
+			add = 5
+		}
+		if = {
+			limit = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			}
+			add = -10
+		}
+	}
+}

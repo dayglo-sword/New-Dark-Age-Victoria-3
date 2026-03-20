@@ -45,11 +45,13 @@
 					}
 				}
 
-				# add atlantean acceptance else can be kicked staright away.			
-				add_acceptance = {
-					culture = cu:nda_cul_atlantean
-					value = 70
-				}
+				# # add atlantean acceptance else can be kicked straight away. Not sure this does anything.	
+				# capital = {
+				# 	add_acceptance = {
+				# 		culture = cu:nda_cul_atlantean
+				# 		value = 70
+				# 	}					
+				# }		
 
 				create_character = {
 					template = nda_surama_character_template
@@ -206,11 +208,13 @@ nda_effect_home_for_kathulos = {
 					}
 				}
 
-				# add atlantean acceptance else can be kicked staright away.			
-				add_acceptance = {
-					culture = cu:nda_cul_atlantean
-					value = 70
-				}
+				# # add atlantean acceptance else can be kicked straight away. Not sure this does anything.	
+				# capital = {
+				# 	add_acceptance = {
+				# 		culture = cu:nda_cul_atlantean
+				# 		value = 70
+				# 	}					
+				# }	
 
 				create_character = {
 					template = nda_kathulos_character_template
@@ -316,6 +320,81 @@ nda_effect_kathulos_back_from_exile = {
 			# 	trigger_event = { id = nda_atlantean.21 days = 10 } # They're back! 	
 			# }
 			
+		}
+	}
+}
+
+# Count of Cultures that have 'Unity of Atlantis' modifier
+nda_effect_atlantean_unity_list = 
+{
+	#set_variable = { name = nda_unity_cultures_count value = 0 }
+	clear_global_variable_list = nda_unity_cultures_list
+
+	every_country = {
+		every_scope_culture = {
+			limit = {
+				has_discrimination_trait = tradition_nda_grand_union
+			}
+
+			add_to_global_variable_list = {
+				name = nda_unity_cultures_list
+				target = this
+			}
+		}
+	}
+}
+
+# Count of Movements that are being boosted by Atlanteans
+nda_effect_atlantean_movements_list = 
+{
+	#set_variable = { name = nda_unity_cultures_count value = 0 }
+	clear_global_variable_list = nda_atlantean_movements_list
+
+	every_country = {
+		every_political_movement = {
+			limit = {
+				is_political_movement_type = movement_cultural_minority	
+				#culture = { has_discrimination_trait_group =  heritage_group_african }
+				has_modifier = nda_covert_support_modifier 
+			}
+
+			add_to_global_variable_list = {
+				name = nda_atlantean_movements_list
+				target = PREV # try adding country, not movement, to list
+			}
+		}
+	}
+
+	
+}
+
+nda_effect_atlantean_influence_counts = {
+
+	set_global_variable = { name = nda_atlantean_unity_count value = 0 }
+	set_global_variable = { name = nda_atlantean_movements_count value = 0 }
+	
+	nda_effect_atlantean_unity_list = yes
+	nda_effect_atlantean_movements_list = yes
+
+	set_global_variable = {
+		name = nda_atlantean_unity_count
+		value = {
+			value = 0
+			every_in_global_list = {
+				variable = nda_unity_cultures_list
+				add = 1
+			}			
+		}
+	}
+
+	set_global_variable = {
+		name = nda_atlantean_movements_count
+		value = {
+			value = 0
+			every_in_global_list = {
+				variable = nda_atlantean_movements_list
+				add = 1
+			}			
 		}
 	}
 }

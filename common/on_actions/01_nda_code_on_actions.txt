@@ -158,6 +158,8 @@ nda_monthly_on_action = {
 		nda_random.2 # Theosophy spread
 
 		nda_authors.10 # Holiness of Azedarac
+		nda_authors.11 # Lamia in Averoigne - The End of the Story
+		nda_authors.12 # The Satyr - in Averoigne
 		nda_authors.20 # White Worm
 		nda_authors.30 # Casting the Runes
 		nda_authors.60 # Event from Nosferatu
