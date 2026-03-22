@@ -297,6 +297,7 @@ nda_astro.1881 = { # 1881 conjunction
 
 nda_astro.3 = { # 1881 conjunction
 	type = country_event
+	gui_window = nda_event_window_full 
 	placement = ROOT
 	title = nda_astro.2.t
 	desc = nda_astro.2.d
@@ -353,7 +354,7 @@ nda_astro.3 = { # 1881 conjunction
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	 
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
 	immediate = {
 		set_variable = nda_conjunction_3
@@ -436,6 +437,7 @@ nda_astro.1901 = {  # 1901 conjunction
 
 nda_astro.4 = { # 1901 conjunction
 	type = country_event
+	gui_window = nda_event_window_full 
 	placement = ROOT
 	title = nda_astro.2.t
 	desc = nda_astro.2.d
@@ -497,7 +499,7 @@ nda_astro.4 = { # 1901 conjunction
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	 
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 
 	immediate = {
 		set_variable = nda_conjunction_4
@@ -576,6 +578,7 @@ nda_astro.1921 = { # 1921 conjunction
 
 nda_astro.5 = { # 1921 conjunction
 	type = country_event
+	gui_window = nda_event_window_full 
 	placement = ROOT
 	title = nda_astro.2.t
 	desc = nda_astro.2.d
@@ -632,7 +635,7 @@ nda_astro.5 = { # 1921 conjunction
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	 
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 	
 	trigger = { 	
 		NOT = { has_variable = nda_conjunction_5 }		
@@ -773,6 +776,7 @@ nda_astro.1910 = { #  Great January Comet of 1910
 # invites to conclave for cultist players!
 nda_astro.10 = { 
 	type = country_event
+	gui_window = nda_event_window_full 
 	placement = ROOT
 	title = nda_astro.10.t
 	desc = nda_astro.10.d
@@ -788,7 +792,7 @@ nda_astro.10 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	 
 
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	icon = "gfx/interface/icons/event_icons/event_nda_cthulhu.dds"
 	
 	trigger = { 	
 		is_player = yes # is player choice only

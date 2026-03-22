@@ -5,7 +5,7 @@
  nda_ritual.1.f: "'The Thing of the idols, the green, sticky spawn of the stars, has awaked to claim his own...\n\n The stars are right again...\n\n After vigintillions of years [concept_nda_cthulhu] is loose again, and ravening for delight.'"
  nda_ritual.1.a: "'The End has Begun...'"
  nda_ritual.2.t: "Cthulhu Has Returned"
- nda_ritual.2.d: "So it has come to pass. The Cultist greatest dream and the Worlds worst nightmare.\n\nArtists and Poets go insane, as a mania grips the countries of the World.\n\nBut why does [concept_nda_cthulhu] wait pacifically on its island throne when it can easily take the world?"
+ nda_ritual.2.d: "So it has come to pass... The Cultist greatest dream and the Worlds worst nightmare.\n\nArtists and Poets are driven insane, as a mania grips the peoples of the World. No country goes unaffected.\n\nBut why does [concept_nda_cthulhu] wait pacifically on its island throne when it could easily take the world?"
  nda_ritual.2.f: "'The Thing of the idols, the green, sticky spawn of the stars, has awaked to claim his own...\n\n The stars are right again...\n\n After vigintillions of years [concept_nda_cthulhu]  is loose again, and ravening for delight.'"
  nda_ritual.2.a: "'The End has Begun...'"
  nda_ritual.3.t: "The Ritual Completed"
@@ -76,7 +76,7 @@
  nda_ritual.1907.a: "'A Strange Tale'"
 
  nda_ritual.1925.t: "Mystery Derelict Found At Sea"
- nda_ritual.1925.d: "The freighter Vigilant arrived this morning at its wharf, having in tow the battled and disabled but heavily armed steam lauch Alert.\n\n The sole survivor found onboard was the former second mate of the schooner Emma.\n\nHe was found clutching a foot high stone idol and telling a tale of how the original crew of the Alert had attacked the Emma after ordering the vessel to turn back, but were succesfully overpowered.\n\nThe survivors of the Emma had then continued onwards to an island that their opponents had obviously been trying to deny them access to."
+ nda_ritual.1925.d: "The freighter #BLUE Vigilant#! arrived this morning at its wharf, having in tow the battled and disabled but heavily armed steam lauch #BLUE Alert#!.\n\n The sole survivor found onboard was the former second mate of the schooner #BLUE Emma#!.\n\nHe was found clutching a foot high stone idol and telling a tale of how the original crew of the Alert had attacked the Emma after ordering the vessel to turn back, but were succesfully overpowered.\n\nThe survivors of the Emma had then continued onwards to an island that their opponents had obviously been trying to deny them access to."
  nda_ritual.1925.f: "'...the hideous monolith-crowned citadel whereon great Cthulhu was buried, actually emerged from the waters... Johansen and his men were awed by the cosmic majesty of this dripping Babylon of elder demons, and must have guessed without guidance that it was nothing of this or of any sane planet...\n\n...The Thing of the idols, the green, sticky spawn of the stars, had awaked to claim his own. The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident...\n\nHis accursed city is sunken once more... He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy...\n\n#ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
  nda_ritual.1925.a: "'A Weird Tale'"
 

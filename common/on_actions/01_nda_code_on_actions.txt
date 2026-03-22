@@ -320,7 +320,8 @@ nda_monthly_pan_on_action = {
 		nda_authors.42 # A C Doyle Character
 		nda_authors.43
 		nda_authors.50 # The Willows
-		# nda_nen.1894 # Mor-rison Warning
+
+		nda_authors.70 # Dionea - Washed up child		
 
 		nda_pan.1 
 		# nda_pan.2 

@@ -37,4 +37,4 @@ nda_whh.15.a: "Must have annoyed someone!"
 # The Decision
 nda_whh_carnacki_lights: "Protective Lights"
 nda_whh_carnacki_lights_desc: "The lights developed by Carnacki appear to have an adverse effect on Cultists. We should distribute them widely."
-nda_whh_carnacki_lights_tooltip: "Carnaki Protective Lighting."
+nda_whh_carnacki_lights_effect_tt: "The Carnaki Protective Lighting will help surpress any Cultist IG."

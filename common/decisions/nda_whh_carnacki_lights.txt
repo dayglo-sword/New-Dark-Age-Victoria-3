@@ -10,6 +10,10 @@
 	}
   	
 	when_taken = {
+		custom_tooltip = {
+			text = nda_whh_carnacki_lights_effect_tt
+		}
+		# supresses any
 		set_variable = nda_carnacki_lights
 		
 		every_interest_group = {

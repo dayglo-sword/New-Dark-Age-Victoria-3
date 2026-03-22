@@ -6,6 +6,7 @@ nda_ritual.1924 = { # Cthulhu Return - 1925 already used below
 
 	trigger = { 
 		has_global_variable = nda_ritual_completed	
+		has_game_rule = return_on_ritual
 		game_date >= 1925.3.23	
 		NOT = {
 			has_global_variable = nda_cthulhu_arrives	# run once

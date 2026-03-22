@@ -1373,7 +1373,7 @@ nda_authors.70 = { # Dionea: by Vernon Lee - The washed up child - Genoese coast
 	trigger = { 
 		OR = {
 			# regional interest ?
-			p:xD06161 = { state = { owner = ROOT } }	
+			p:xF08021 = { state = { owner = ROOT } }	
 		}
 
 		game_date >=  1873.6.1  
@@ -1430,7 +1430,7 @@ nda_authors.71 = { # Dionea: by Vernon Lee - Death of Father Domenico - Genoese 
 		default_option = yes	
 	}
 
-		option = {
+	option = {
 		name = nda_authors.71.b
 
 		# boost old ways in Modena	
@@ -1466,7 +1466,7 @@ nda_authors.72 = { # Dionea: by Vernon Lee - Horrific Death of Sculpturer - Geno
 	trigger = { 
 		OR = {
 			# regional interest ?
-			p:xD06161 = { state = { owner = ROOT } }	
+			p:xF08021 = { state = { owner = ROOT } }	
 		}
 
 		game_date >=  1887.7.1  

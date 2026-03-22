@@ -1,18 +1,23 @@
 ------
 
-Version v1.12.4
+Version v1.12.5
 
 Major Changes
 Add Global Mason tooltip
 Add localised events for Old Ways spread.
+Notifications for Atlantean activity.
 
 Minor Changes
+Post Cthulhu Liberty desire boost.
 Add Eye of Providence icon.
 Boost Altantean relationship effect.
 Boost chance of Historical US and GB Masons.
+Upgrade late game Planetary Alignment to major event.
+Tooltip for 'Protective Lights' decision.
 
 Bug Fixes
-Coorect Kathulos cultural scope.
+Correct Kathulos cultural scope.
+Fix Game rule for return.
 
 ------
 
