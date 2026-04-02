@@ -1,7 +1,7 @@
 ﻿l_english:
   
  nda_astro.1.t: "The Planets Align"
- nda_astro.1.d: "Astronomers and Astrologers both study a natural phenomenon that only occurs approximately every twenty years - #RED The Great Conjunction#!"
+ nda_astro.1.d: "Astronomers and Astrologers both study a natural phenomenon that only occurs approximately every twenty years - #RED The Great Conjunction#! of Jupiter and Saturn."
  nda_astro.1.f: "The Great Conjunction is a conjunction of the planets Jupiter and Saturn and is visible to the naked eye. In more primitive times it was widely supposed to herald apocalyptic changes.\n\nThankfully we live in a more enlightened one."
  nda_astro.1.a: "Nothing of importance..."
 
@@ -25,7 +25,7 @@
 
  nda_astro.10.t: "A Long Expected Party"
  nda_astro.10.d: "You have been invited, as the leader of a nation of cultists, to take part in the next [concept_nda_conclave].\n\nThis is to be held, as tradition dictates, at the time of the upcoming [concept_nda_conjunction]."
- nda_astro.10.f: ""
+ nda_astro.10.f: "'The man who had brought me now squirmed to a point directly beside the hideous flame, and made stiff ceremonial motions to the semicircle he faced. At certain stages of the ritual they did grovelling obeisance, especially when he held above his head that abhorrent Necronomicon he had taken with him; and I shared all the obeisances because I had been summoned to this festival by the writings of my forefathers.'"
  nda_astro.10.a: "We accept the Invite."
  nda_astro.10.b: "We are too busy."
 
@@ -36,7 +36,7 @@
 
  nda_astro.12.t: "Cultist Unrest"
  nda_astro.12.d: "The Cultists in the country are showing great concern that you did not attend the [concept_nda_conclave]. They strongly suspect that you do not truely have the interests of the Cult at heart."
- nda_astro.12.f: ""
+ nda_astro.12.f: "'Besides, no one will believe the facts when they are finally told. That is the curious thing about the multitude. When their yellow press makes hints, they are ready to swallow anything; but when a stupendous and abnormal revelation is actually made, they laugh it aside as a lie. For the sake of general sanity it is probably better so.'"
  nda_astro.12.a: "We could not attend!"
 
  nda_conclave_no_ritual.f: "The Cultists held a [concept_nda_conclave], where, along with more bacchanalian activites, they atttempt to chart the future course of the Cult.\n\nThe representatives of [ROOT.Var('nda_conclave_count').GetValue] chapters attended the Conclave, but with no apparent overall leadership, concern was expressed that [concept_nda_ritual] had yet to be started."

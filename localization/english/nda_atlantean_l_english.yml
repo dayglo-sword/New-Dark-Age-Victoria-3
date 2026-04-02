@@ -61,8 +61,8 @@ nda_atlantean.11.f: "The charred skull, oddly enough, was very human, and remind
 nda_atlantean.11.a: "Somehow they returned!"
 
 nda_atlantean.12.t: "They know the truth!"
-nda_atlantean.12.d: "Rather surprisingly [SCOPE.sCharacter('nda_surama').GetFullName] has appeared before you, bypassing all of your security arrangements\n\nThey then procede to reveal that they know all about your ongoing arrangements with the Migo."
-nda_atlantean.12.f: "Migo."
+nda_atlantean.12.d: "Rather surprisingly [SCOPE.sCharacter('nda_surama').GetFullName] has appeared before you, bypassing all of your security arrangements.\n\nThey then procede to reveal that they know all about your ongoing arrangements with the Migo.\n\nIt appears they have no pressing interest in these entities, or in you, their agent. But they do warn you not to interfere in the affairs of the Atlanteans."
+nda_atlantean.12.f: "' They did not live here, said the myths, but merely maintained outposts and flew back with vast cargoes of stone to their own stars in the north. They harmed only those earth-people who got too near them or spied upon them. Animals shunned them through instinctive hatred, not because of being hunted. They could not eat the things and animals of earth, but brought their own food from the stars.'"
 nda_atlantean.12.a: "They Know!"
 
 #'Surama, a man of great intelligence and seemingly inexhaustible erudition, was as morbidly lean as the Thibetan servants; with swarthy, parchment-like skin drawn so tightly over his bald pate and hairless face that every line of the skull stood out in ghastly prominence...'
@@ -79,8 +79,8 @@ nda_atlantean.21.f: "'...nothing is stable or certain, and mankind hovers at the
 nda_atlantean.21.a: "Somehow they returned!"
 
 nda_atlantean.22.t: "They know the truth!"
-nda_atlantean.22.d: "Rather surprisingly [SCOPE.sCharacter('nda_kathulos').GetFullName] Kathulos of Atlantis has appeared before you, bypassing all of your security arrangements\n\nThey then procede to reveal that they know all about your ongoing arrangements with the Migo."
-nda_atlantean.22.f: "Migo."
+nda_atlantean.22.d: "Rather surprisingly [SCOPE.sCharacter('nda_kathulos').GetFullName] Kathulos of Atlantis has appeared before you, bypassing all of your security arrangements.\n\nThey then procede to reveal that they know all about your ongoing arrangements with the Migo.\n\nIt appears they have no pressing interest in these entities, or in you, their agent. But they do warn you not to interfere in the affairs of the Atlanteans."
+nda_atlantean.22.f: "'...had given only outlines before, he now entered into minute details; presenting long transcripts of words overheard in the woods at night, long accounts of monstrous pinkish forms spied in thickets at twilight on the hills, and a terrible cosmic narrative derived from the application of profound and varied scholarship to the endless bygone discourses...'."
 nda_atlantean.22.a: "They Know!"
 
 nda_atlantean.40.t: "A Malignant Influence"
