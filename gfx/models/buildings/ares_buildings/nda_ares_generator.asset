@@ -1,0 +1,43 @@
+# based on original 'building_special_prambanan_temple' from 'MMJM SEA Holding Models' for CK3
+# by Matt Alexi
+pdxmesh = {
+	name = "nda_ares_generator_mesh"
+	file = "nda_ares_generator.mesh"
+	scale = 0.2
+
+	meshsettings = {
+		name = "building_special_prambanan_temple"
+		index = 0
+		texture_diffuse = "nda_ares_generator_diffuse.dds"
+		texture_normal = "nda_ares_generator_normal.dds"
+		texture_specular = "nda_ares_generator_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "nda_ares_generator_entity"
+	pdxmesh = "nda_ares_generator_mesh"
+}
+
+pdxmesh = {
+	name = "nda_ares_generator_ruin_mesh"
+	file = "nda_ares_generator.mesh"
+	scale = 0.2
+
+	meshsettings = {
+		name = "building_special_prambanan_temple"
+		index = 0
+		texture_diffuse = "nda_ares_generator_ruin_diffuse.dds"
+		texture_normal = "nda_ares_generator_normal.dds"
+		texture_specular = "nda_ares_generator_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "nda_ares_generator_ruin_entity"
+	pdxmesh = "nda_ares_generator_ruin_mesh"
+}

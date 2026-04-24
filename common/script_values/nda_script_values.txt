@@ -301,6 +301,13 @@ nda_masonic_potential =
 		}
 		add = 10
 	}
+	# No Martians
+		if = {
+		limit = {
+			culture = cu:nda_cul_aresian
+		}
+		add = -50
+	}
 }
 
 # ROOT scope is Character - used to find important masons
@@ -354,6 +361,11 @@ nda_masonic_ranking =
 			exists = owner
 		}
 		subtract = owner.global_country_ranking
+
+		if = { 
+			limit = { owner = c:NDA_ARES }
+			subtract = 200
+		}
 	}
 	else = {
 		subtract = 10

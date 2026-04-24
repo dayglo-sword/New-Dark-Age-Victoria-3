@@ -1,0 +1,21 @@
+﻿
+#####################################
+#									#
+# 			Martian					#
+#									#
+#####################################
+
+# nda_ares_eyes_normal = {
+# 	entity = { entity = "nda_ares_eyes_entity"		shared_pose_entity = head }
+# }
+
+
+#####################################
+#									#
+# 			Female					#
+#									#
+#####################################
+
+#female_eyes_normal = {
+#	entity = { entity = "female_eyes_entity" 	shared_pose_entity = head }
+#}

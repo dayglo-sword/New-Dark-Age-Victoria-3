@@ -105,7 +105,7 @@
 			beards={ "european_beards" 66 "no_beard" 192 }
 			mustaches={ "european_mustaches" 107 "european_mustaches" 194 }
 			props={ "no_prop" 0 "no_prop" 0 }
-			eye_accessory={ "normal_eyes" 0 "normal_eyes" 0 }
+			eye_accessory={ "serpent_eyes" 0 "serpent_eyes" 0 }
 			eye_lashes_accessory={ "normal_eyelashes" 0 "normal_eyelashes" 0 }
 			teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
 		}

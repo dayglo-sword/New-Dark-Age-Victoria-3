@@ -1,0 +1,59 @@
+﻿###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Infantry
+
+combat_unit_type_nda_ares_war_machine = {
+	group = combat_unit_group_infantry
+	max_manpower = 100
+
+	battle_modifier = {
+        unit_offense_add = 750
+        unit_defense_add = 750
+		#unit_morale_loss_add = 0.5
+        unit_devastation_mult = 4
+        unit_morale_damage_mult = 10   
+        unit_kill_rate_add = 10 
+        unit_occupation_mult = 4   
+
+        #unit_recovery_rate_add = 0.5
+        #unit_morale_loss_mult = -0.5
+        battle_combat_width_mult = -0.5 # 10
+	}
+
+    # unit_modifier = {
+	# 	unit_recovery_rate_add = 0.5
+	# 	unit_morale_loss_mult = -0.5		
+	# }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = 8
+        military_formation_movement_speed_mult = 2
+    }
+
+
+    upkeep_modifier = {
+    	goods_input_small_arms_add = 0.3
+        goods_input_vril_add = 2.0
+    }
+
+    # scope = country
+    can_build = {
+        c:NDA_ARES ?= THIS
+    }
+
+    conscript_peasant_levies = yes
+
+    # can_build_conscript = {
+    #     always = yes
+    # }    
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/nda_ares_war_machine.dds"
+    }
+}

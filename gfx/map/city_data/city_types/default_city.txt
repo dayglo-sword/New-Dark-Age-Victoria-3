@@ -77,5 +77,9 @@ default_city = {
 	building_company_headquarter = {"generic_companyhq_01_mesh"}
 	building_company_regional_headquarter = {"generic_regionalcompanyhq_01_mesh"}
 
-	building_nda_miskatonic_university = {"miskatonic_university_mesh"}
+	building_nda_miskatonic_university = {"miskatonic_university_mesh"} #needed for NDA
+
+	building_nda_ares_generators = {"nda_ares_generator_mesh"}
+	building_nda_ares_generator_ruins = {"nda_ares_generator_ruin_mesh"}
+
 }

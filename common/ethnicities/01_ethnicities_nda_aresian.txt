@@ -1,0 +1,151 @@
+﻿aresian_base = {
+    template = "ethnicity_template"
+    using = "saxon"
+    visible = no
+}
+
+
+aresian_standard = {
+    template = "aresian_base"
+    
+    skin_color = {
+       10 = { 0.0 0.05 0.05 0.05 }
+    }
+    
+    eye_color = {
+        # # Black
+        30 = { 0.0 0.9 0.9 1.0 }
+    }
+    
+    hair_color = {
+        # Custom Light
+        10 = { 0.0 0.1 0.0 0.1 }
+    }
+
+    hairstyles = {
+         1 = { name = no_hairstyles   range = { 0.0 1.0 } }
+    }
+
+    # gene_shrink_body = {
+    #      1 = { name = shrink_all   range = { 0.95 0.99 } }
+    # }
+
+    gene_eyebrows_shape = {
+        1 = {  name = close_spacing_low_thickness             range = { 0.35 0.75 }    }
+        1 = {  name = close_spacing_lower_thickness             range = { 0.35 0.75 }    }
+    }
+
+    gene_eyebrows_fullness = {
+        10 = {  name = layer_2_low_thickness             range = { 0.25 0.75 }     }
+        10 = {  name = layer_2_lower_thickness             range = { 0.25 0.75 }     }
+    }
+
+    gene_eye_size = {
+        15 = { name = eye_size    range = { 0.9 0.99 } }
+    }
+
+    gene_eye_distance = {
+        15 = { name = eye_distance   range = { 0.75 0.95 } }
+    }
+
+    gene_eye_shut = {
+        15 = { name = eye_shut   range = { 0.1 0.2 } }
+    }
+
+    gene_eye_height = {
+
+        10 = { name = eye_height    range = { 0.65 0.85 } }   
+    }
+
+    gene_eye_corner_depth_min= {
+        15 = { name = eye_corner_depth_min   range = { 0.1 0.2 } }
+    }
+
+    gene_head_height = {
+        1 = { name = head_height   range = { 0.9 1.0 }      }
+    }
+
+    gene_head_width = {
+        64 = { name = head_width   range = { 0.9 1.0 }      }     
+    }
+
+    gene_head_top_width = {
+        64 = { name = head_top_width   range = { 0.9 1.0 }      }    
+    }
+
+    gene_head_top_height = {
+        64 = { name = head_top_height   range = { 0.9 1.0 }      }     
+    }
+
+    gene_forehead_height = {
+        1 = { name = forehead_height   range = { 0.9 1.0 }      }
+    }
+
+    gene_forehead_roundness = {
+        1 = { name = forehead_roundness   range = { 0.9 1.0 }      }
+    }
+
+    gene_forehead_width = {
+        1 = { name = forehead_width   range = { 0.9 1.0 }      }
+    }
+
+    gene_cheek_fat = {
+        15 = {  name = cheek_fat     range = { 0.1 0.1 } }
+    }
+
+    gene_nose_forward = {       
+        20 = { name = nose_forward    range = { 0.1 0.2  } }      
+    }
+
+    gene_nose_nostril_width= {
+        15 = {  name = nose_nostril_width   range = { 0.9 1.0 } }   
+    }
+
+    gene_chin_width = {
+        1 = { name = chin_width   range = { 0.0 0.1 }      }
+    }
+
+    gene_jaw_forward = {
+        1 = { name = jaw_forward   range = { 0.1 0.2 }      }
+    }
+
+    gene_jaw_height = {
+        1 = { name = jaw_height   range = { 0.1 0.2 }      }
+    }
+
+    gene_jaw_width = {
+        1 = { name = jaw_width   range = { 0.1 0.2 }      }     
+    }
+
+    gene_mouth_width={
+         15 = {  name = mouth_width range = { 0.0 0.1 } }  
+    }
+
+    gene_mouth_open = {
+	    10 = { name = mouth_open    range = { 0.05 0.15 } }
+    }
+
+    gene_neck_length = {
+        1 = { name = neck_length   range = { 0.9 1.0 }      }
+    }
+
+    gene_neck_width = {
+        1 = { name = neck_width   range = { 0.0 0.05 }      }
+    }
+
+    beards = {
+        15 = { name = no_beard  range = { 0.0 1.0 } }
+	}
+
+	mustaches = {
+        10 = { name = no_mustache   range = { 0.0 1.0 } }
+	}
+} 
+
+
+
+
+
+ 
+
+

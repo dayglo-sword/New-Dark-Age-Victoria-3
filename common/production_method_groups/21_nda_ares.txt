@@ -1,0 +1,44 @@
+﻿pmg_nda_ares_generator = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	is_hidden_when_unavailable = yes	
+
+	production_methods = {
+		pm_nda_ares_generator
+	}
+}
+
+pmg_nda_ares_generator_goods = {
+	texture = "gfx/interface/icons/generic_icons/literacy.dds"
+	ai_selection = most_productive
+
+	is_hidden_when_unavailable = yes	
+
+	production_methods = {
+		pm_nda_ares_generator_goods
+	}
+}
+
+# override lighting to allow for Martian lights
+REPLACE_OR_CREATE:pmg_street_lighting = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_street_lighting
+		pm_gas_streetlights
+		pm_electric_streetlights
+		pm_nda_ares_streetlights
+	}
+}
+
+# if generator destroyed allow for scavenging of ruins
+pmg_nda_ares_generator_ruins = {
+	texture = "gfx/interface/icons/generic_icons/literacy.dds"
+	ai_selection = most_productive
+
+	is_hidden_when_unavailable = yes	
+
+	production_methods = {
+		pm_nda_ares_generator_scavenger
+	}
+}

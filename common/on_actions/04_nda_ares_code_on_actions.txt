@@ -1,0 +1,778 @@
+﻿# For custom on_actions launched by the code itself.
+# have used seperate on_actions in case we ever need to use 'effects'
+
+# Fires after everyone enters the game from the lobby for the first time for each campaign
+# At this point we DO know who the players are
+# No root scope set
+on_game_started_after_lobby = {
+	on_actions = {
+		nda_ares_game_started_after_lobby_on_action
+	}
+}
+
+nda_ares_game_started_after_lobby_on_action = {
+		effect = {
+		set_global_variable = { # mod compatibility flag
+			name = nda_ares_is_loaded
+			value = yes
+		}
+
+		# NDA start up event / screen
+		every_country = {
+			limit = {
+				is_player = yes 
+			}
+			trigger_event = {
+				id = nda_ares.1
+				#days = 1
+				popup = yes
+			}
+		}
+	}
+}
+
+# Root = Country
+on_monthly_pulse_country = {
+	on_actions = {
+		nda_ares_monthly_on_action	
+		nda_ares_monthly_hostile_on_action 
+		nda_ares_monthly_ares_exiles
+
+	}
+}
+
+nda_ares_monthly_on_action = {
+	events = {
+		nda_ares.2 # Crystal Egg
+		nda_ares.3 # In Opposition
+		nda_ares.6 # Invasion event watcher
+		#nda_ares.10 # 1842
+		#nda_ares.11 # 1901
+		#nda_ares.12 # 1936
+		#nda_ares.13 # 1836
+		#nda_ares.20
+		nda_ares.31 # Exile option watcher
+	}
+	random_events = {
+	
+	}
+	effect = {
+		# add a new homeland - add generator
+		if = {
+			limit = {
+				c:NDA_ARES ?= THIS			
+			}
+
+			random_list = {
+				1 = {}
+				1 = {
+					# add generator - do before 'convert state' to slow things down a bit
+					random_scope_state = {
+						limit = {
+							NOT = { 
+								OR = { 
+									has_building = building_nda_ares_generator_ruins # don't rebuild if ruined???
+									has_building = building_nda_ares_generators 
+								}
+							}
+							has_modifier = 	nda_ares_state_red_lands_modifier	
+							total_urbanization > 150 # urbanised only - must be city to show generator model?
+							is_incorporated = yes
+							culture_percent_state = {  
+								target = cu:nda_cul_aresian  
+								value >= 0.5 # at least 50% Martians  
+							}  
+						}
+
+						# add generator building 
+						create_building={
+							building = "building_nda_ares_generators" 
+							level=1
+						}	
+						
+						debug_log = "New Generator"
+						save_scope_as = nda_ares_generator_location
+
+					}
+
+					if = {
+						limit = { exists = scope:nda_ares_generator_location }
+
+						debug_log = "New Generator Notification"
+						every_country = {
+							post_notification = nda_ares_generator_built
+						}				
+					}					
+				}
+			}
+
+
+			# convert state
+			random_scope_state = {
+				limit = {
+					NOT = { has_building = building_nda_ares_generators }
+					NOT = { has_modifier = nda_ares_state_red_lands_modifier }
+				}
+
+				if = {
+					limit = {
+						state_region = { NOT = { is_homeland = cu:nda_cul_aresian } }
+					}
+					state_region = {
+						add_homeland = cu:nda_cul_aresian						
+					}					
+				}
+
+				add_modifier = { name = nda_ares_state_red_lands_modifier }
+				remove_modifier = nda_ares_state_martian_terror_modifier
+			}			
+
+			# reduce infamy as can balloon - always pariah so wars can never be for territory
+			change_infamy = -10
+
+			add_radicals = { value = -0.4 } # dampen radicals - should be for Martians only??
+			add_loyalists = { value = 0.2 }
+
+			# money problems? 
+			add_treasury = 50000
+			add_investment_pool = 10000
+
+			# release puppets or just add lots of radicals? - can be loyal due to strategy? - need to do quicker
+			every_subject_or_below = {
+				limit = { 					
+					is_subject_of = ROOT
+					is_player = no
+					is_at_war = no
+					NOT = { country_has_primary_culture = cu:nda_cul_aresian }
+				}	
+
+				# breakaway
+				make_independent = yes
+				change_relations = { country = c:NDA_ARES value = -200 }
+
+				# Diplo Catalyst - try and create anti-invasion lobbies
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:NDA_ARES
+				}
+				
+				debug_log = "Country Freedom"
+
+				# save_scope_as = nda_ares_freedom
+				# # send notification
+				# every_country = {
+				# 	post_notification = nda_ares_country_freedom
+				# }
+				
+			}
+
+			random_country = {
+				limit = {
+					NOT = { c:NDA_ARES ?= THIS }
+					has_strategic_adjacency =  c:NDA_ARES
+				}
+				change_relations = { country = c:NDA_ARES value = -200 } # annoy someone else
+
+				# Diplo Catalyst - try and create anti-invasion lobbies
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:NDA_ARES
+				}
+			}
+
+			random_country = {
+				limit = {
+					NOT = { c:NDA_ARES ?= THIS }
+				}
+				change_relations = { country = c:NDA_ARES value = -200 } # annoy someone else
+
+				# Diplo Catalyst - try and create anti-invasion lobbies
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:NDA_ARES
+				}
+			}
+
+			# lay claim to neighbouring state
+			random_neighbouring_state = {
+				limit = { 
+					NOT = { has_claim_by = c:NDA_ARES }
+				}
+				state_region = {
+					add_homeland = cu:nda_cul_aresian		
+					add_claim = c:NDA_ARES
+				}
+				# annoy them
+				owner = { 
+					change_relations = { country = c:NDA_ARES value = -50 } 					
+				}
+
+				add_radicals_in_state = { value = 0.2 } # make residents scared					
+
+				add_modifier = {
+					name = nda_ares_state_martian_terror_modifier
+				}
+			}
+		}
+		else = {
+			every_scope_state = {
+				limit = {
+					has_building = building_nda_ares_generators
+					NOT = { owner = { country_has_primary_culture = cu:nda_cul_aresian } } # Splinter Martian Countries can keep Generators but not build
+				}
+
+				# remove generator building 
+				remove_building = "building_nda_ares_generators" 	
+
+				# add ruin as replacement
+				create_building={
+					building = "building_nda_ares_generator_ruins" 
+					level=1
+				}
+
+				remove_modifier = nda_ares_state_red_lands_modifier
+			}	
+		}
+	}
+}
+
+nda_ares_monthly_hostile_on_action = {
+	effect = {
+		if = {
+			limit = { 
+				c:NDA_ARES ?= THIS				
+				is_at_war = no
+				is_diplomatic_play_committed_participant = no
+				# should have healthy finances?				
+				has_healthy_economy = yes
+			}
+
+			random = {
+				chance = 20
+
+				debug_log = "nda_ares_monthly_hostile_on_action"
+				random_country = {
+					limit = { 					
+						has_strategic_land_adjacency = c:NDA_ARES 
+						country_rank >= rank_value:unrecognized_major_power
+						NOT = { c:NDA_ARES ?= THIS }	
+					}
+					# # need weighting to take out power countries?
+					# weight = { 
+					# 	value = 100
+					# 	subtract = global_country_ranking 
+					# 	IF = {	
+					# 		limit = { is_adjacent_to_country = c:NDA_ARES }
+					# 		add = 5
+					# 	}
+					# }
+					save_scope_as = nda_ares_victim
+				}
+
+				if = {
+					limit = { exists = scope:nda_ares_victim }
+					create_diplomatic_play = {
+						name = nda_ares_dp_martian_invasion
+					
+						target_country = scope:nda_ares_victim
+						
+						type = dp_annex_war # dp_conquer_state - can't be done ??
+
+					} 
+					
+					# should not be liked by any one near them
+					every_country = {
+						limit = {
+							NOT = { c:NDA_ARES ?= THIS }
+							has_strategic_adjacency =  c:NDA_ARES
+						}
+						change_relations = { country = c:NDA_ARES value = -100 } # is this too much ?	
+
+						# Diplo Catalyst - try and create anti-invasion lobbies
+						create_diplomatic_catalyst = {  
+							type = catalyst_event_negative
+							target = c:NDA_ARES
+						}
+					}
+
+					# sympathy for the victim
+					every_country = {
+						limit = {
+							NOT = { c:NDA_ARES ?= THIS }
+							NOT = { scope:nda_ares_victim ?= THIS }
+							has_strategic_adjacency = scope:nda_ares_victim
+						}
+						change_relations = { country = scope:nda_ares_victim value = 100 } 
+					}
+
+					debug_log = "nda_ares_monthly_hostile_on_action - WAR!"
+					# it's what Martians like to do
+					add_radicals = { value = -0.3 } 
+					add_loyalists = { value = 0.3 } 
+				}				
+			}
+
+			random_country = {
+				limit = {
+					NOT = { c:NDA_ARES ?= THIS }
+					has_strategic_adjacency =  c:NDA_ARES
+				}
+				change_relations = { country = c:NDA_ARES value = -100 } # annoy someone else
+
+				# Diplo Catalyst - try and create anti-invasion lobbies
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:NDA_ARES
+				}				
+			}
+
+			random_country = {
+				limit = {
+					NOT = { c:NDA_ARES ?= THIS }
+				}
+				change_relations = { country = c:NDA_ARES value = -100 } # annoy someone else
+
+				# Diplo Catalyst - try and create anti-invasion lobbies
+				create_diplomatic_catalyst = {  
+					type = catalyst_event_negative
+					target = c:NDA_ARES
+				}				
+			}				
+	
+		}
+	}
+}
+
+nda_ares_monthly_ares_exiles = {
+	# state level agitation of Martian exiles - they really shouldn't like this
+	effect = {
+		if = {
+			limit = { 
+				NOT = { c:NDA_ARES ?= owner	}
+				any_scope_pop = {
+					culture =  cu:nda_cul_aresian
+				}
+			}
+
+			if = {
+				limit = { country_has_primary_culture = cu:nda_cul_aresian } # Other Martian based countries should have chance to survive??
+
+				owner = {
+					add_radicals = {
+						culture =  cu:nda_cul_aresian
+						value = 0.2
+					}					
+				}
+			}
+			else = {
+				owner = {
+					add_radicals = {
+						culture =  cu:nda_cul_aresian
+						value = 1
+					}					
+				}				
+			}
+	
+		}
+	}
+}
+
+nda_ares_monthly_first_victim_exiles = {
+	# Government in exile for firsat victim - doesn't work when 'on_wargoal_enforced'
+	effect = {
+		# if = {
+		# 	limit = { 
+		# 		NOT = { c:NDA_ARES ?= owner	}
+		# 		any_scope_pop = {
+		# 			culture =  cu:nda_cul_aresian
+		# 		}
+		# 	}
+
+		# 	if = {
+		# 		limit = { country_has_primary_culture = cu:nda_cul_aresian }
+
+		# 		owner = {
+		# 			add_radicals = {
+		# 				culture =  cu:nda_cul_aresian
+		# 				value = 0.2
+		# 			}					
+		# 		}
+		# 	}
+		# 	else = {
+		# 		owner = {
+		# 			add_radicals = {
+		# 				culture =  cu:nda_cul_aresian
+		# 				value = 1
+		# 			}					
+		# 		}				
+		# 	}
+	
+		# }
+	}
+}
+
+on_monthly_pulse_state = {
+	on_actions = {
+		nda_ares_monthly_state_conversion_on_action			
+		nda_ares_monthly_plague_on_action
+		nda_ares_monthly_cull_on_action
+	}
+}
+
+nda_ares_monthly_state_conversion_on_action = {
+	# state level ongoing religious and population conversions
+	effect = {
+		if = {
+			limit = { 
+				c:NDA_ARES ?= owner				
+				c:NDA_ARES ?= controller # must be controller as well - allows conversion to stall if immediately reconquered - does not effect eventual control.
+			}
+			if = {
+				limit = {
+					culture_percent_state = {
+						target = cu:nda_cul_aresian
+						value < 0.5
+					}				  
+				}
+				kill_population_percent_in_state = {  percent = 0.10 }	# can't fine tune it to non-martian, but conversion below should ensure Martain levels remain increasing			
+			}
+
+			if = { # very recently conquered, or Martians are in decline - use timer so only works for limited period??
+				limit = {
+					culture_percent_state = {
+						target = cu:nda_cul_aresian
+						value < 0.1
+					  }
+					  NOT = { has_variable =  nda_martian_supremacy } # state was formally Martian stronghold
+				}
+				kill_population_percent_in_state = {  percent = 0.50 }				
+			}
+
+			every_scope_pop = {
+				limit = {
+					NOT = { culture = cu:nda_cul_aresian }
+					NOT = { culture = cu:promethean }
+					NOT = { is_pop_type = slaves  } # keep slaves
+				}
+
+				change_pop_culture = { target = cu:nda_cul_aresian value = 0.10 }	
+				
+				# do everywhere or just at 'generator' sites?
+				change_pop_culture = { target = cu:promethean value = 0.02 } # increase value to .02 as still importing large quanties of slaves
+			}
+
+			every_scope_pop = {
+				limit = {
+					OR = {
+						culture = cu:nda_cul_aresian	
+						culture = cu:promethean					
+					}
+
+				}
+				change_pop_religion = { target = rel:atheist value = 1 }						
+			}
+
+			if = { # Need to flag it now properly Martian so we can tell if decline is happening.
+				limit = {
+					culture_percent_state = {
+						target = cu:nda_cul_aresian
+						value > 0.5
+					  }
+					   NOT = { has_variable =  nda_martian_supremacy }
+				}
+				set_variable = nda_martian_supremacy			
+			}
+		}
+	}
+}
+
+nda_ares_monthly_plague_on_action = {
+	# bad things should happen to Martians if 'Spanish Flu' or NDA 'Red Death' around - in addition to the usual
+	effect = {
+		if = {
+			limit = { 
+				c:NDA_ARES ?= owner		
+				OR = {
+					has_modifier = plague_modifier
+					state_region = { has_harvest_condition = nda_red_death } # Only available from main NDA mod					
+				}		
+			}
+
+			kill_population_percent_in_state = {
+				culture = cu:nda_cul_aresian
+				percent = 0.15 	
+			}
+
+			state_region = {
+				add_devastation = 10
+			}
+		}
+	}
+}
+
+nda_ares_monthly_cull_on_action = {
+	effect = {
+		if = {
+			limit = {
+				c:NDA_ARES ?= controller
+				NOT = { c:NDA_ARES ?= owner }
+
+
+			}
+
+			if = {
+				limit = {
+					culture_percent_state = { # don't kill off Martians
+						target = cu:nda_cul_aresian
+						value < 0.5
+					}
+				}
+
+				kill_population_percent_in_state = {  percent = 0.20 }				
+			}
+
+			state_region = {
+					add_devastation = 20
+			}
+		
+			if = {
+				limit = { devastation > 0.70 } # is a % !!
+				set_state_owner = c:NDA_ARES				
+			}
+
+		}
+	}
+}
+
+# on_half_yearly_pulse_country = {
+# 	on_actions = {
+# 		nda_ares_half_yearly_on_action	
+# 	}
+# }
+
+
+
+on_character_creation = {
+	on_actions = {
+		nda_ares_character_creation_on_action	
+	}
+}
+
+nda_ares_character_creation_on_action = {
+	effect = {
+		# do not duplicate cult trait from char definition, also do not change ideology as presume deliberately not set
+		if = {
+			limit = {
+				has_culture = cu:nda_cul_aresian					
+			}
+			# give martian ideology
+			nda_effect_ensure_aresian_ideology = yes	
+		}
+
+		# remove as investigator if auto generated
+		remove_trait = nda_investigator # does cause 'post validate' error in logs if NDA not loaded
+	}
+}
+# check that characters such as those in exile have appropriate ideology - does it work on agitators and generals?? renders conversion events obsolete?
+on_half_yearly_pulse_character = {
+	on_actions = {
+		nda_ares_half_yearly_pulse_character_on_action	
+	}
+}
+
+nda_ares_half_yearly_pulse_character_on_action = {
+	effect = {
+		if = {
+			limit = {
+				has_culture = cu:nda_cul_aresian
+				has_non_aresian_ideology = yes			
+			}
+			# give martian ideology
+			nda_effect_ensure_aresian_ideology = yes		
+		}
+	}	
+}
+
+# on_war_end = {
+# 	on_actions = {
+# 		nda_ares_conquest_on_action	
+# 	}
+# }
+
+# # Root = Diplomatic Play
+# # scope:actor = Initiator country
+# # scope:target = Target country
+# nda_ares_conquest_on_action = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				c:NDA_ARES ?= scope:actor # Martians have won
+# 				# goal was to annex
+# 				scope:target = { has_variable = nda_ares_first_victim_var }
+# 				ROOT = { type = play_type:dp_annex_war }
+# 			}
+			
+# 			debug_log = "Initial Invasion Ended"
+
+# 			# release largest puppet if it exists and rename 'New <Country>'
+# 			# release puppets or just add lots of radicals? - can be loyal due to strategy? - need to do quicker
+# 			scope:target = { # does this still exist? - have exile event instead that triggers when negative war score.
+# 				debug_log = "Target Country : [THIS.GetCountry.GetNameNoFormatting]"
+
+# 				ruler = { save_scope_as = nda_ares_exiled_ruler }
+# 				if = { limit = { exists = heir }
+# 					heir = { save_scope_as = nda_ares_exiled_heir }
+# 				}
+				
+# 				ordered_subject_or_below = {
+# 					limit = { 					
+# 						is_subject_of = PREV
+# 						is_player = no
+# 					}
+# 					position = 0
+# 					order_by =  { subtract = global_country_ranking }
+
+# 					debug_log = "New Home Country : [THIS.GetCountry.GetNameNoFormatting]"
+# 					# breakaway
+# 					make_independent = yes
+# 					change_relations = { country = c:NDA_ARES value = -200 }
+
+# 					# Diplo Catalyst - try and create anti-invasion lobbies
+# 					create_diplomatic_catalyst = {  
+# 						type = catalyst_event_negative
+# 						target = c:NDA_ARES
+# 					}
+					
+# 					set_variable = nda_ares_country_in_exile
+
+# 					# only do if monarcy??
+
+# 					# transfer rulers and heirs
+# 					if = { 
+# 						limit = { exists = scope:nda_ares_exiled_ruler }
+# 						scope:nda_ares_exiled_ruler = {
+# 							transfer_character = PREV
+# 							set_character_as_ruler = yes							
+# 						}
+# 					}
+
+# 					if = { 
+# 						limit = { exists = scope:nda_ares_exiled_heir }
+# 						scope:nda_ares_exiled_heir = { transfer_character = PREV }
+# 						PREV = { set_heir =  scope:nda_ares_exiled_heir }
+# 					}
+
+# 					# transfer or exile government
+# 					change_tag = NEN # Have new Tag for Exile
+
+# 					# save_scope_as = nda_ares_freedom
+# 					# # send notification
+# 					# every_country = {
+# 					# 	post_notification = nda_ares_country_freedom
+# 					# }
+
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# # following 'defenses' based on https://github.com/1230james/vic3-forts-and-engineers/blob/master/common/on_actions/FAE_on_actions.txt
+# # but vastly simplified to be non dynamic
+
+# # Root = attacker or defender country
+# # scope:battle = battle
+# # scope:attacker = attacking commander
+# # scope:defender = defending commander
+# # scope:state = location state
+# # on_battle_started = {
+# #     on_actions = {
+# #         nda_ares_on_battle_started
+# #     }
+# # }
+
+# nda_ares_on_battle_started = {
+#    effect = {
+#     #    if = {
+# 	# 		limit = {
+#     #            scope:state ?= {
+# 	# 				has_building = building_nda_ares_generators
+# 	# 				c:NDA_ARES ?= owner 
+#     #             #    OR = {
+#     #             #        owner = scope:defender.owner
+# 	# 			# 	   c:NDA_ARES ?= owner # captured/bugged genrators don't count
+#     #             #    }
+#     #            }
+				
+# 	# 			scope:defender = {
+# 	# 				NOT = {
+# 	# 					has_modifier = nda_ares_generator_defense_modifier
+# 	# 				}
+# 	# 				c:NDA_ARES ?= owner 
+# 	# 			}
+# 	# 		}
+
+# 	# 		debug_log = "Generator Boost to Defenders"			
+# 	# 		scope:defender = {
+# 	# 			add_modifier = { name = nda_ares_generator_defense_modifier }
+# 	# 		}
+
+# 	# 		scope:attacker ?= {
+# 	# 			if = {
+# 	# 				limit = {
+# 	# 					NOT = { has_modifier = nda_ares_generator_occupation_speed }
+# 	# 					NOT = { c:NDA_ARES ?= owner }
+# 	# 				}
+# 	# 				add_modifier = {
+# 	# 					name       = nda_ares_generator_occupation_speed
+# 	# 				}
+# 	# 			}
+# 	# 		}			
+# 	# 	}
+# 	}
+# }
+
+# # Root = attacker or defender country
+# # scope:battle = battle
+# # scope:attacker = attacking commander
+# # scope:defender = defending commander
+# # scope:state = location state
+# on_battle_ended = {
+#     on_actions = {
+#         nda_ares_on_battle_ended
+# 		delay = { days = 1 } # lets see if this works rather than event delay	
+# 		nda_ares_on_battle_aftermath
+#     }
+# }
+
+# nda_ares_on_battle_ended = {
+#     effect = {        
+#         scope:defender ?= {
+#             if = {
+#                 limit = {
+#                     has_modifier = nda_ares_generator_defense_modifier
+#                 }
+#                 remove_modifier = nda_ares_generator_defense_modifier
+#             }
+#         }
+#     }
+# }
+
+# nda_ares_on_battle_aftermath = {
+#     effect = {
+# 		scope:attacker ?= {
+#             if = {
+#                 limit = {
+#                     is_in_battle = no
+#                 }
+                
+#                 if = {
+#                     limit = {
+#                         has_modifier = nda_ares_generator_occupation_speed
+#                     }
+#                     remove_modifier = nda_ares_generator_occupation_speed
+#                 }
+#             }
+#         }
+#     }
+# }

@@ -521,6 +521,7 @@ nda_effect_recruit_mason = {
 		ordered_scope_character = {
 			limit = { 
 				NOT = { has_variable = nda_is_mason } 
+				NOT = { has_culture = cu:nda_cul_aresian } # No Martians
 			}
 
 			order_by = nda_masonic_potential
@@ -710,6 +711,27 @@ nda_effect_clean_masons = {
 		}
 	}
 
+}
+
+nda_effect_remove_lodges = { # Used to remove Martian Lodges
+	if = {
+		limit = { has_masonic_lodge = yes }
+
+		every_scope_state = {
+			if = { 
+				limit = { 
+					has_variable = nda_lodge_level
+				}
+
+				if = { 
+					limit = { has_modifier = nda_lodge_modifier } 
+					remove_modifier = nda_lodge_modifier
+				}
+
+				remove_variable = nda_lodge_level
+			}
+		}
+	}
 }
 
 # Generate Lists for scripted_sguis

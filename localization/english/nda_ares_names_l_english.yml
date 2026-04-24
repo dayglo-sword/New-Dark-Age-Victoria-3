@@ -1,0 +1,102 @@
+﻿l_english:  
+NDA_ARES: "Martian Terra"
+NDA_ARES_ADJ: "Martian"
+NDA_ARES_FLAVOR_TEXT: "The chances of anything manlike on Mars?"
+
+# Culture
+nda_cul_aresian: "Martian"
+heritage_group_nda_aresian: "Martian"
+language_group_nda_aresian: "Martian"
+heritage_nda_aresian: "Martian"
+language_nda_aresian: "Martian"
+
+# Buildings and production
+building_nda_ares_generators: "Martian Generator"
+building_nda_ares_generator_ruins: "Martian Ruins"
+
+pmg_nda_ares_generator: "Martian Generator"
+pmg_nda_ares_generator_goods: "Martian Goods"
+pmg_nda_ares_generator_ruins: "Martian Ruins"
+
+pm_nda_ares_generator: "Martian Generator"
+pm_nda_ares_generator_goods: "Martian Goods"
+pm_nda_ares_generator_scavenger: "Scavenger Goods" 
+
+pm_nda_ares_streetlights: "Vril Powered Lights"
+
+# character names
+ak: "Ak" 
+ack: "Ack" 
+ark: "Ark"
+ak_ark: "Ak ark" 
+ack_ak: "Ack ak" 
+ark_ack: "Ark ack"
+akak: "Ak-ak"
+ak_ack: "Ak ack" 
+ack_ka: "Ack ka"
+akka: "Ak-ka"
+
+# units
+combat_unit_type_nda_ares_war_machine: "Martian War Machines"
+combat_unit_type_nda_ares_war_machine_desc: "...with a ringing metallic pace, and long, flexible, glittering tentacles swinging and rattling about its strange body."
+
+mobilization_option_nda_ares_black_smoke: "Martian Black Smoke"
+mobilization_option_nda_ares_black_smoke_desc: "''...heavy, inky vapour, coiling and pouring upward in a huge and ebony cumulus cloud, a gaseous hill that sank and spread itself slowly over the surrounding country'"
+mobilization_option_nda_ares_death_ray: "Martian Heat Ray"
+mobilization_option_nda_ares_death_ray_desc: "...its impact was marked by flashes of incandescent white, that gave place at once to a smoky dance of lurid flames."
+
+# IGs
+ig_ares_landowners: "Eloi"
+ig_ares_landowners_desc: "Eloi"
+ig_ares_trade_unions: "Morlocks"
+ig_ares_trade_unions_desc: "Morlocks"
+ig_ares_rural_folk: "Harvesters"
+ig_ares_rural_folk_desc: "Harvesters"
+ig_ares_intelligentsia: "The Great Minds"
+ig_ares_intelligentsia_desc: "The Great Minds"
+ig_ares_petty_bourgeoisie: "The Small Minds"
+ig_ares_petty_bourgeoisie_desc: "The Small Minds"
+ig_ares_devout: "Heretics"
+ig_ares_devout_desc: "Heretics"
+ig_ares_armed_forces: "Warriors"
+ig_ares_armed_forces_desc: "Warriors"
+ig_ares_industrialists: "Mechanists"
+ig_ares_industrialists_desc: "Mechanists"
+
+# Strategies
+ai_strategy_nda_ares_administrative_agenda: "Martian Admin"
+ai_strategy_nda_ares_diplomatic_agenda: "Martian Diplomacy"
+ai_strategy_nda_ares_political_agenda: "Martian Politics"
+
+# diplomatic plays
+nda_ares_dp_martian_invasion: "Martian Invasion"
+
+# modifiers
+nda_ares_ig_martian_unity_modifier: "Martian Unity"
+nda_ares_state_martian_terror_modifier: "Martian Terror"
+nda_ares_country_martian_terror_modifier: "Martian Terror"
+
+nda_ares_state_red_lands_modifier: "Red Lands"
+nda_ares_generator_defense_modifier: "Generator Defenses"
+nda_ares_generator_occupation_speed: "Generator Defenses"
+nda_ares_first_landing_modifier: "Mars Attacks"
+
+# location renames
+nda_ARES_CAPITAL_state: "Ack Ak Tak"
+nda_ARES_CAPITAL_city: "Ack Tak Ak"
+
+# Exiled GBR
+NDA_GBR_EXILE: "New Britannia"
+NDA_GBR_EXILE_ADJ: "Britannian"
+NDA_GBR_EXILE_TEXT: "Forced into exile by the Martians the former inhabitants of Great Britain intend to rebuild and maybe one day liberate their homeland."
+
+nda_GBR_EXILE_CAPITAL_state: "New Britain"
+nda_GBR_EXILE_CAPITAL_city: "New London"
+nda_GBR_EXILE_CAPITAL_mine: "Newydd Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch"
+nda_GBR_EXILE_CAPITAL_farm: "New Trumpton"
+nda_GBR_EXILE_CAPITAL_wood: "New Midsomer"
+nda_GBR_EXILE_CAPITAL_port: "New Walmington"
+
+nda_ares_ig_exile_unity_modifier: "Together against the Red Menace"
+nda_ares_ig_exile_unity_tt: "IG's Unity against the Red Menace"
+nda_ares_ig_exiles_arrive_tt: "Exiles arrive in [SCOPE.sState('nda_ares_generator_location').GetName]"

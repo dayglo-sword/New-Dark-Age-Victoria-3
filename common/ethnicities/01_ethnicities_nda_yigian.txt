@@ -86,4 +86,8 @@ yigian_hybrid = {
 	mustaches = {
         10 = { name = no_mustache       range = { 0.0 1.0 } }
 	}
+
+    eye_accessory = {
+        10 = { name = serpent_eyes       range = { 0.0 1.0 } }
+	}
 } 

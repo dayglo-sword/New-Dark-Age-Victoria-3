@@ -398,10 +398,11 @@ nda_masonic.22 = { # Masonic Unbaning
 			has_law_or_variant = law_type:law_right_of_assembly	
 			has_law_or_variant = law_type:law_protected_speech	
 		}
+		NOT = { ROOT = c:NDA_ARES } # not for martians - once gone it's gone
 	}
 
 	immediate = {
-		debug_log = "Masonry ban?"
+		debug_log = "Masonry unban?"
 	}
 
 	# options need AI weightings based on conditions
@@ -445,6 +446,52 @@ nda_masonic.22 = { # Masonic Unbaning
 		}
 
 		nda_effect_ban_masons = yes
+	}
+}
+
+nda_masonic.23 = { # Masonic Banning by Martians
+	type = country_event
+	placement = ROOT
+	title = nda_masonic.20.t
+	desc = nda_masonic.20.d
+	flavor = nda_masonic.20.f
+	dlc = dlc_NDA
+
+	duration = 3
+
+	event_image = {
+		video = "middleeast_police_breaking_door"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds" # book
+
+	cooldown = { days = 360 } 
+
+	trigger = {
+		game_date >= 1837.6.1 # Don't do till after initial Mason event
+		has_masonic_lodge = yes
+		c:NDA_ARES ?= ROOT
+	}
+
+	immediate = {
+		debug_log = "Masonry ban?"
+	}
+
+	# options need AI weightings based on conditions
+	option = {
+		name = nda_masonic.20.a # Ban Masonry
+		default_option = yes	
+
+		save_scope_as = nda_outlawed
+
+		# every mason modfier in country gets flipped
+		nda_effect_ban_masons = yes
+		# remove all lodges in Martian Terra
+		nda_effect_remove_lodges = yes
+
+		every_country = {
+			post_notification = nda_masonic_martian_destroyed_masonry
+		}
 	}
 }
 

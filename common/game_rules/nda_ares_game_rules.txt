@@ -1,0 +1,15 @@
+﻿landing_time = {
+	default = immediate_landing
+
+	immediate_landing = { # 1836
+	}
+
+	early_landing = {
+	}
+
+	hg_wells_landing = {
+	}
+
+	orson_wells_landing = {
+	}
+}

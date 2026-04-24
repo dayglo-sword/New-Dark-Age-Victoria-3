@@ -1,0 +1,25 @@
+﻿#####################################
+#									#
+# Serpent Eyes - Stygian and Yigian #
+#									#
+#####################################
+nda_serpent_eyes_female = {
+	entity = { entity =  "nda_serpent_eyes_female_entity" shared_pose_entity = head }
+}
+
+nda_serpent_eyes_male = {
+	entity = { entity = "nda_serpent_eyes_male_entity"  shared_pose_entity = head }
+}
+
+#####################################
+#									#
+# Martian Eyes - Aresian #
+#									#
+#####################################
+nda_aresian_eyes_female = {
+	entity = { entity =  "nda_aresian_eyes_female_entity" shared_pose_entity = head }
+}
+
+nda_aresian_eyes_male = {
+	entity = { entity = "nda_aresian_eyes_male_entity"  shared_pose_entity = head } 
+}

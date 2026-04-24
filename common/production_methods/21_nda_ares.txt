@@ -1,0 +1,113 @@
+﻿
+# ares pms - in effect are free goods as minimal population needed - have both goods available in all methods to try and kickstart demand
+pm_nda_ares_generator = { #
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	#city_lights_color_index = 3	# Needs to match city_graphics_data.settings color array - does not work?
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 40
+			country_bureaucracy_add = 60
+			country_prestige_add = 15
+			country_weekly_innovation_add = 20
+		}
+	}
+}
+
+pm_nda_ares_generator_goods = { # supernatural energy - can power advanced tech and prolong life - should be own good with substitutions for existing
+	texture = "gfx/interface/icons/production_method_icons/percussion_caps.dds"
+
+	#city_lights_color_index = 3	# Needs to match city_graphics_data.settings color array - does not work?
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 200
+		}
+	}
+
+	building_modifiers = {
+
+		level_scaled = {	
+			building_employment_laborers_add = 200	
+			building_employment_machinists_add = 50	
+			building_employment_engineers_add = 20
+		}
+
+		unscaled = {
+			goods_output_electricity_add = 20
+			goods_output_vril_add = 80	
+			goods_output_black_lotus_add = 80	
+			goods_output_fertilizer_add = 30	
+			building_laborers_mortality_mult = 0.5
+			goods_output_steel_add = 10
+			goods_output_engines_add = 10			
+			goods_output_automobiles_add = 10
+			goods_output_radios_add = 10
+		}
+	}
+}
+
+pm_nda_ares_generator_scavenger = { # Scavenging the ruins
+	texture = "gfx/interface/icons/production_method_icons/percussion_caps.dds"
+
+	#city_lights_color_index = 3	# Needs to match city_graphics_data.settings color array - does not work?
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+
+	building_modifiers = {
+
+		level_scaled = {	
+			building_employment_laborers_add = 50
+			building_employment_machinists_add = 20	
+			building_employment_engineers_add = 10		
+		}
+
+		unscaled = {
+			goods_output_electricity_add = 4
+			goods_output_vril_add = 10	
+			goods_output_black_lotus_add = 10	
+			goods_output_fertilizer_add = 5	
+			building_laborers_mortality_mult = 0.5
+			goods_output_automobiles_add = 1
+			goods_output_radios_add = 1
+			goods_output_steel_add = 1
+			goods_output_engines_add = 1
+		}
+	}
+}
+
+pm_nda_ares_streetlights = {
+	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
+
+	city_lights_color_index = 3	# Needs to match city_graphics_data.settings color array
+
+    unlocking_production_methods = {		# optional list of required pm's to be able to activate this pm
+		#pm_nda_ares_generator # list of pm keys					# these must refer to pm keys on the same building
+    }
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_vril_add = 1
+			goods_output_services_add = 20
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 100
+			building_employment_engineers_add = 50
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 2
+			state_pollution_generation_add = 50
+		}
+	}
+	# not needed as not state based
+	#required_input_goods = vril
+}

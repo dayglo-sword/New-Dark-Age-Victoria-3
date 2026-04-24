@@ -128,6 +128,8 @@ nda_yankee_reconcile_bad_relations_tt: "Bad relations"
 nda_yankee_reconcile_new_york_tt: "Owns New York"
 nda_yankee_reconcile_new_jersey_tt: "Owns New Jersey"
 nda_yankee_reconcile_gradual_decline_tt: "Gradual decline with time."
+nda_yankee_reconcile_pro_lobby_tt: "Pro Yankee Lobbies"
+nda_yankee_reconcile_anti_lobby_tt: "Anti Yankee Lobbies"
 # for scripted button when negative progressevent
 nda_yankee_reconcile_negative_tt: "Damage hopes of Yankee Reconciliation"
 

@@ -507,6 +507,7 @@ nda_half_yearly_on_action = {
 
 		nda_masonic.20 # Masonic Banning
 		nda_masonic.22 # Masonic Unbanning
+		nda_masonic.23 # Martian Mason Mash
 
 		nda_atlantean.10 # Surama Returns
 		nda_atlantean.20 # Kathulos Returns

@@ -1,0 +1,10 @@
+﻿nda_cul_aresian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_nda_cul_aresian_add = 1
+}
+
+nda_cul_aresian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_nda_cul_aresian_add = 1
+}
+

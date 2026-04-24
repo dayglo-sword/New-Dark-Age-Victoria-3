@@ -1,38 +1,149 @@
-﻿# override existing eye accessories
+﻿#override existing eye accessories
 
-# accessory_genes = {
-# 	eye_accessory = {
-# 		inheritable = no
+accessory_genes = {
+REPLACE_OR_CREATE:eye_accessory = {
+		inheritable = no
+	
+		normal_eyes = {
+			index = 0
+			male = { 1 = "male_eyes_normal" }
+			female = { 1 = "female_eyes_normal" }
+			boy = male
+			girl = female
+		}
 
-# 		serpent_eyes = {
-# 			index = 0
-# 			# male = {	1 = "male_eyes_normal"		}
-# 			female = {	1 = "female_eyes_normal"	}
-# 			male = {	1 = "nda_serpent_eyes_male"		}
-# 			#female = {	1 = "nda_serpent_eyes_female"	}
-# 			boy = male
-# 			girl = female			
-# 		}		
+		no_eyes = {
+			index = 1
+			male = {}
+			female = {}
+			boy = male
+			girl = female
+		}
 
-# 		normal_normal_eyes = {
-# 			index = 2
-# 			male = {	1 = "male_eyes_normal"		}
-# 			female = {	1 = "female_eyes_normal"	}
-# 			boy = male
-# 			girl = female
-# 		}
+		serpent_eyes = {
+			index = 2
+			male = { 1 = "nda_serpent_eyes_male" }
+			female = { 1 = "nda_serpent_eyes_female" }
+			boy = male
+			girl = female			
+		}
 
-# 		no_eyes = {
-# 			index = 1
-# 			male = {}
-# 			female = {}
-# 			boy = male
-# 			girl = female
-# 		}
+		aresian_eyes = {
+			index = 3
+			male = { 1 = "nda_aresian_eyes_male" }
+			female = { 1 = "nda_aresian_eyes_female" }
+			boy = male
+			girl = female			
+		}
+	}
+}
 
+special_genes = {
+	morph_genes = {
+		NDA_gene_skin_color = { # based on POD_splat_gene_skin_color
+			
+			normal_skin = { 
+				index = 0
+				male = {}
+				female = male
+				boy = male
+				girl = male
+			}
 
-# 	}
-# }
+			blue_skin = {
+				index = 1
+				male = {
+					skin_hsv_shift_curve = {
+						curve = {
+							#{ 0.0 	{ 0.54 0.3 0.0 } }
+							#{ 1.0   { 0.58 0.4 0.0 } }
+							{ 0.0 	{ 0.5 0.1 0.8 } }
+							{ 1.0   { 0.5 0.3 0.9 } }
+						}
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+			grey_skin = {
+				index = 2
+				male = {
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0 	{ 0.5 0.0 0 } }
+							{ 1.0   { 0.5 0.0 0 } }
+						}
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+			red_skin = {
+				index = 3
+				male = {
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0 	{ 0.98 0.3 0.0 } }
+							{ 1.0   { 0.99 0.4 0.0 } }
+						}
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+					
+			green_skin = {
+				index = 4
+				male = {
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0 	{ 0.2 0.3 0.0 } }
+							{ 1.0   { 0.25 0.4 0.0 } }
+						}
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+
+			yellow_skin = {
+				index = 5
+				male = {
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0 	{ 0.10 0.3 0.0 } }
+							{ 1.0   { 0.11 0.4 0.0 } }
+						}
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}		
+			
+			random_skin = {
+				index = 6
+				male = {
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0 	{ 0.10 0.10 0.10 } }
+							{ 1.0   { 0.20 0.20 0.20 } }
+						}
+					}
+				}
+				female = male
+				boy = male
+				girl = male
+			}
+		}
+	}
+}
 
 special_genes = {
 	accessory_genes = {
@@ -111,6 +222,19 @@ special_genes = {
 
 				female = {
 					1 = female_robe_cultist_master
+				}
+				boy = male
+				girl = male
+			} 
+
+			martian_top_layer = {
+				index = 104
+				male = {
+					1 = male_robe_martian #male_top_layer_ethiopian_royal_01 #male_top_layer_south_american_bandit_lampiao_01 #
+				}
+
+				female = {
+					1 = female_robe_martian
 				}
 				boy = male
 				girl = male

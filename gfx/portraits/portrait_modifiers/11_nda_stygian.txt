@@ -11,6 +11,13 @@
 
 		dna_modifiers = {
 			accessory = {
+                mode = replace
+                gene = eye_accessory
+                template = serpent_eyes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+			accessory = {
 				mode = add
 				gene = nda_headgear
 				template = egyptian_headgear_high
@@ -101,6 +108,12 @@
 
 		dna_modifiers = {
 			accessory = {
+                mode = replace
+                gene = eye_accessory
+                template = serpent_eyes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+			accessory = {
 				mode = add
 				gene = nda_headgear
 				template = egyptian_headgear_high
@@ -118,22 +131,6 @@
                 template = no_headgear # needed for none strange clipping
                 range = { 0 1 } # For the randomness to work correctly
             }
-
-            # can add other stuff here
-            # accessory = {
-            #     mode = replace
-            #     gene = outfits
-            #     template = no_outfit # needed for none strange clipping
-            #     range = { 0 1 } # For the randomness to work correctly
-            # }
-
-            # # remove any cult robes
-            # accessory = {
-            #     mode = replace
-            #     gene = nda_cultist_robe
-            #     template = no_cultist_robe # needed for none strange clipping
-            #     range = { 0 1 } # For the randomness to work correctly
-            # }
 
             accessory = {
 				mode = add
@@ -279,34 +276,35 @@
 	}
 }
 
-# nda_eyes = {
-# 	usage = game
-# 	selection_behavior = weighted_random
-# 	fallback = nda_normal_eyes
+nda_snake_eyes = {
+	usage = game
+	selection_behavior = weighted_random
+	fallback = nda_normal_eyes
 
-# 	nda_normal_eyes = {
+	nda_normal_eyes = {
 
-# 	}
+	}
 
-# 	nda_serpentine_eyes = {
+	nda_serpentine_eyes = {
 
-# 		dna_modifiers = {
-# 			accessory = {
-# 				mode = modify				
-# 				gene = eye_accessory
-# 				template = serpent_eyes
-# 				value = 1.0
-# 			}			
-# 		}
+		dna_modifiers = {
+			accessory = {
+				mode = modify				
+				gene = eye_accessory
+				template = serpent_eyes
+				value = 1.0
+			}			
+		}
 		
-# 		weight = {
-# 			base = 0
-# 			modifier = {
-# 				add = 1000
-# 				scope:character ?= {
-# 					has_variable = is_nephren
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				scope:character ?= {
+					has_yigian_trait = yes
+					#has_variable = is_nephren
+				}
+			}
+		}
+	}
+}

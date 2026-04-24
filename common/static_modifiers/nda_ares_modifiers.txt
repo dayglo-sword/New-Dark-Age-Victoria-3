@@ -1,0 +1,60 @@
+﻿nda_ares_ig_martian_unity_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 6
+}
+
+nda_ares_country_martian_terror_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_migration_pull_mult = -0.2
+	state_standard_of_living_add = -2
+}
+
+nda_ares_state_martian_terror_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	state_migration_pull_mult = -1
+	#state_migration_push_mult = 0.8
+	state_standard_of_living_add = -2
+}
+
+nda_ares_state_red_lands_modifier= {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_mortality_mult = 0.5 # martians shouldn't out breed monkey people
+	state_standard_of_living_add = 5
+	state_nda_cul_aresian_standard_of_living_add = 2
+	state_migration_pull_mult = -0.5 # really shouldn't want to live here
+}
+
+nda_ares_generator_defense_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_defense_add = 500 # are these sufficient?
+	unit_kill_rate_add = 2
+	unit_morale_recovery_mult = 0.4
+}
+
+nda_ares_generator_occupation_speed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	unit_occupation_mult = -0.8 # slow occupation
+}
+
+nda_ares_first_landing_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_morale_recovery_mult = 3.0
+	unit_recovery_rate_add = 5.0
+	unit_defense_add = 500 
+	unit_offense_add = 360 
+	military_formation_mobilization_speed_mult = 3
+	military_formation_movement_speed_mult = 1.2
+	character_battle_condition_surprise_maneuver_mult = 1
+	character_battle_condition_lost_mult = -0.5
+	character_battle_condition_dug_in_mult = 1
+	character_battle_condition_camouflaged_mult = 1
+	character_battle_condition_poor_visibility_mult = -0.5
+	character_battle_condition_blunder_mult = -0.5
+	character_battle_condition_exhausted_mult = -0.5
+	battle_combat_width_mult = -0.5
+}
+
+nda_ares_ig_exile_unity_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_approval_add = 8
+}

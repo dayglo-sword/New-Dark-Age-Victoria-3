@@ -1,0 +1,8 @@
+﻿
+heritage_group_nda_aresian = {
+	type = heritage
+}
+
+language_group_nda_aresian = {
+	type = language
+}

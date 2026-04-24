@@ -1,0 +1,37 @@
+﻿
+building_nda_ares_generators = {
+	building_group = bg_monuments
+
+	icon = "gfx/interface/icons/building_icons/building_nda_ares_generator.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"	
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	
+	enable_air_connection = yes
+	
+	city_type = city
+	
+	production_method_groups = {		
+		pmg_nda_ares_generator
+		pmg_nda_ares_generator_goods
+	}
+}
+
+building_nda_ares_generator_ruins = {
+	building_group = bg_monuments
+
+	icon = "gfx/interface/icons/building_icons/building_nda_ares_generator_ruins.dds"
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"	
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	
+	city_type = city
+	
+	production_method_groups = {		
+		pmg_nda_ares_generator_ruins
+	}
+}

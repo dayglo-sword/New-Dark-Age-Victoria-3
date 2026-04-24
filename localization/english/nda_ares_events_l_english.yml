@@ -1,0 +1,66 @@
+﻿l_english:
+
+nda_ares.1.t: "The Chances of..."
+nda_ares.1.d: "...anything manlike on Mars?\n\n'No one gave a thought to the older worlds of space as sources of human danger, or thought of them only to dismiss the idea of life upon them as impossible or improbable.'\n\nWelcome to something that's nearly the #yellow 'War of the Worlds'#!, but with a bit of #yellow 'Mars Attacks'#! thrown in.\n\nWe recommend not playing the initial victims of the landings as it's quite easy to 'cheese' victory while the Martians are gaining their initial footings.\n\nThe four options for landing dates can be set via the Game Rules."
+nda_ares.1.f: "'It is curious to recall some of the mental habits of those departed days. At most terrestrial men fancied there might be other men upon Mars, perhaps inferior to themselves and ready to welcome a missionary enterprise.\n\nYet across the gulf of space, minds that are to our minds as ours are to those of the beasts that perish, intellects vast and cool and unsympathetic, regarded this earth with envious eyes, and slowly and surely drew their plans against us.'"
+nda_ares.1.a: "A Certainty"
+nda_ares.1.a.tt: "On the date selected via the Games Rule"
+#nda_ares.1.b: "A Million to One!"
+nda_ares.1.b.tt: "1900's England"
+#nda_ares.1.c: "Just Scaremongering."
+nda_ares.1.c.tt: "1930's New York State"
+#nda_ares.1.e: "Any Time Now."
+nda_ares.1.e.tt: "1836 England"
+
+nda_ares.2.t: "The Crystal Egg"
+nda_ares.2.d: "An unusual artifact had surfaced in a shop in the capital, but has now been lost again.\n\nThe owner claimed that it was possible to view what appeared to be the surface of Mars in the depths of the crystal.\n\nWith the recent demise of the shopkeeper, who appears to have become obsessed with the 'egg', this crystal has apparently been sold to unknown purchasers. That is, if it ever existed at all."
+nda_ares.2.f: "'...There was also a mass of crystal, worked into the shape of an egg and brilliantly polished...\n\nthe crystal was in two worlds at once, and that, while it was carried about in one, it remained stationary in the other...\n\n ...what was seen in the interior of the one in this world was, under suitable conditions, visible to an observer in the corresponding crystal in the other world; and vice versa...\n\n The moons were never high in the sky, but vanished as they rose; that is, every time they revolved they were eclipsed because they were so near their primary planet.\n\nAnd all this answers quite completely to what must be the condition of things on Mars.'"
+nda_ares.2.a: "Just a Story"
+
+nda_ares.3.t: "In Opposition"
+nda_ares.3.d: "Astronomers look to the skies to observer Mars, the Red planet, in all it's glory as it reaches 'opposition' - the closest approach in two years."
+nda_ares.3.f: "'The first opposition of Mars in the twentieth century occured on 1901 February 22, and was not a favourable one.\n\nAt the time the planet was very close to the aphelion of its orbit, the immediate result of that vicinity being to remove our ruddy neighbour almost to its greatest apparitional distance from the earth.'\n\n- Memoirs of the British Astronomical Association, July 31, 1903."
+nda_ares.3.a: "A fine sight!"
+
+nda_ares.5.t: "Invasion!!!"
+nda_ares.5.d: "In an event that has shaken the World to the core, objects from the Red planet have descended to Earth and a War has begun for the world's future.\n\nIt appears that [SCOPE.sC('nda_ares_first_victim').GetName ] are to be their first victims!"
+nda_ares.5.f: "'The Martians seem to have calculated their descent with amazing subtlety — their mathematical learning is evidently far in excess of ours — and to have carried out their preparations with a well-nigh perfect unanimity.\n\nHad our instruments permitted it, we might have seen the gathering trouble far back...'"
+nda_ares.5.a: "What were the chances!"
+
+nda_ares.10.t: "Invasion!!!"
+nda_ares.10.d: "In an event that has shaken the World to the core, objects from the Red planet have descended to Earth and a War has begun for the world's future.\n\nIt appears that we are their first victims!"
+nda_ares.10.f: "'The Martians seem to have calculated their descent with amazing subtlety — their mathematical learning is evidently far in excess of ours — and to have carried out their preparations with a well-nigh perfect unanimity.\n\nHad our instruments permitted it, we might have seen the gathering trouble far back...'"
+nda_ares.10.a: "What were the chances!"
+
+nda_ares.20.t: "The Exodus"
+nda_ares.20.d: "SCOPE.sCulture('nda_exileCulture').GetName are fleeing in terror from the Martians.\n\nThey hope to seek sanctury abroad, heading to the perceived safety of [SCOPE.sState('nda_exileState').GetName]"
+nda_ares.20.f: "'There were fear and pain on their faces, and fear behind them. A tumult up the road, a quarrel for a place in a waggon, sent the whole host of them quickening their pace; even a man so scared and broken that his knees bent under him was galvanised for a moment into renewed activity.\n\nThe heat and dust had already been at work upon this multitude. Their skins were dry, their lips black and cracked. They were all thirsty, weary, and footsore. And amid the various cries one heard disputes, reproaches, groans of weariness and fatigue; the voices of most of them were hoarse and weak. Through it all ran a refrain:\n\n'Way! Way! The Martians are coming!'"
+nda_ares.20.a: "The Martians are coming!"
+
+nda_ares.30.t: "Into Exile?"
+nda_ares.30.d: "The situation has become critical!\n\nIt looks like the unthinkable is about to happen - that we will lose this War!\n\nMaybe it would be prudent to organise ourselves oveseas away from the immediate danger?"
+nda_ares.30.f: "'There were fear and pain on their faces, and fear behind them. A tumult up the road, a quarrel for a place in a waggon, sent the whole host of them quickening their pace; even a man so scared and broken that his knees bent under him was galvanised for a moment into renewed activity. The heat and dust had already been at work upon this multitude. Their skins were dry, their lips black and cracked. They were all thirsty, weary, and footsore. And amid the various cries one heard disputes, reproaches, groans of weariness and fatigue; the voices of most of them were hoarse and weak. Through it all ran a refrain:\n\n'Way! Way! The Martians are coming!'"
+nda_ares.30.a: "Depart for [SCOPE.sC('nda_ares_first_exile_loc').GetName]"
+nda_ares.30.b: "[SCOPE.sC('nda_ares_second_exile_loc').GetName] might be better!"
+nda_ares.30.c: "but [SCOPE.sC('nda_ares_third_exile_loc').GetName] is a possibility!"
+nda_ares.30.dd: "We should stand our ground!"
+
+nda_ares.32.t: "A New Brittania?"
+nda_ares.32.d: "With our exile to this place maybe we can make a new start of it, and rename this place to something more fitting for our government in Exile!\n\nEventually we can build our strength and make plans to strike back at the Martians!"
+nda_ares.32.f: "''"
+nda_ares.32.a: "A New Start! A New Brittania!"
+nda_ares.32.b: "We will adapt."
+
+
+# Notification types
+nda_ares_notifications: "Martian Activity"
+
+# Notifications
+notification_nda_ares_country_freedom_tooltip: "#header $notification_nda_ares_country_freedom_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ares_country_freedom_desc$"
+notification_nda_ares_country_freedom_name: "Freedom for [SCOPE.sC('nda_ares_freedom').GetName ]"
+notification_nda_ares_country_freedom_desc: "They have declared independance from their Martian Overlords!"
+
+notification_nda_ares_generator_built_tooltip: "#header $notification_nda_ares_generator_built_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nda_ares_generator_built_desc$"
+notification_nda_ares_generator_built_name: "Generator Constructed in [SCOPE.sState('nda_ares_generator_location').GetName]"
+notification_nda_ares_generator_built_desc: "The Martians have completed construction of another Generator Complex."
+

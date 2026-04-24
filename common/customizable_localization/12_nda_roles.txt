@@ -1,0 +1,141 @@
+﻿
+# character_role_cultist_custom_loc = {
+#     type = character
+#     random_valid = yes
+        
+#     text = {
+#         trigger = {
+#             is_female = no
+#             is_noble = yes
+#         }    
+#         localization_key = character_title_lord
+#     }
+#     text = {
+#         trigger = {
+#             is_female = no
+#             is_noble = yes
+#         }    
+#         localization_key = character_title_baron
+#     }
+#     text = {
+#         trigger = {
+#             is_female = no
+#             is_noble = yes
+#         }    
+#         localization_key = character_title_count
+#     }
+#     text = {
+#         trigger = {
+#             is_female = no
+#             is_noble = yes
+#         }    
+#         localization_key = character_title_marquis
+#     }
+#     text = {
+#         trigger = {
+#             is_female = no
+#             is_noble = no
+#         }    
+#         localization_key = character_title_gentleman
+#     }
+# }
+
+# character_role_masonic_custom_loc = {
+	# type = character
+	# random_valid = no
+	# text = {
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_variable = nda_masonic_rite	
+	# 		}
+	# 	}
+
+	# 	localization_key = nda_masonic_title_basic
+	# }
+	# # Cultist Rites auto overwrite historic
+	# text = {
+	# 	trigger = {
+	# 		AND = {
+	# 			has_variable = nda_masonic_rite
+	# 			var:nda_masonic_rite = 1		# unified		
+	# 		}
+	# 		religion = rel:nda_rel_cultist
+	# 	}
+
+	# 	localization_key = nda_rite_esoteric
+	# }
+	# text = {
+	# 	trigger = {
+	# 		AND = {
+	# 			has_variable = nda_masonic_rite
+	# 			var:nda_masonic_rite = 1		# unified		
+	# 			has_variable = nda_lodge_master			
+	# 		}
+	# 	}
+
+	# 	localization_key = nda_masonic_title_unified_master
+	# }
+	# text = {
+	# 	trigger = {
+	# 		AND = {
+	# 			has_variable = nda_masonic_rite
+	# 			var:nda_masonic_rite = 1		# unified		
+	# 			has_variable = nda_is_mason			
+	# 		}
+	# 	}
+
+	# 	localization_key = nda_masonic_title_unified
+	# }
+	# text = {
+	# 	trigger = {
+	# 		AND = {
+	# 			has_variable = nda_masonic_rite
+	# 			var:nda_masonic_rite = 2
+	# 			has_variable = nda_lodge_master					
+	# 		}
+
+	# 	}
+
+	# 	localization_key = nda_masonic_title_scottish_master # as used by the French!
+	# }
+	# text = {
+	# 	trigger = {
+	# 		AND = {
+	# 			has_variable = nda_masonic_rite
+	# 			var:nda_masonic_rite = 2
+	# 			has_variable = nda_is_mason					
+	# 		}
+
+	# 	}
+
+	# 	localization_key = nda_masonic_title_scottish # as used by the French!
+	# }
+	# text = {
+	# 	trigger = {
+	# 		AND = {
+	# 			has_variable = nda_masonic_rite
+	# 			var:nda_masonic_rite = 3
+	# 			has_variable = nda_lodge_master					
+	# 		}
+
+	# 	}
+
+	# 	localization_key = nda_masonic_title_york_master # as used by the French!
+	# }
+	# text = {
+	# 	trigger = {
+	# 		AND = {
+	# 			has_variable = nda_masonic_rite
+	# 			var:nda_masonic_rite = 3
+	# 			has_variable = nda_is_mason					
+	# 		}
+
+	# 	}
+
+	# 	localization_key = nda_masonic_title_york # as used by the French!
+	# }
+	# text = { # default to just unified
+
+	# 	localization_key = nda_masonic_title_basic
+	# }
+# }

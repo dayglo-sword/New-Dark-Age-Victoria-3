@@ -1,0 +1,1468 @@
+﻿namespace = nda_ares # Ares
+
+nda_ares.1 = { # The chances of anything manlike on Mars
+	type = country_event
+	placement = ROOT
+	title = nda_ares.1.t
+	desc = nda_ares.1.d
+	flavor =  nda_ares.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	# is called from Global
+
+	# trigger = {
+	# 	exists = c:NDA_ARES
+	# 	c:NDA_ARES = { is_at_war = no } # need to try and provoke
+	# }
+
+	immediate = {
+		#set_global_variable = nda_ares_invasion_choice
+	}	
+
+	option = {
+		name = nda_ares.1.a
+		default_option = yes
+		# set_global_variable = nda_ares_early_invasion
+		# ai_chance = { 
+		# 	base = 50
+		# }
+		custom_tooltip = nda_ares.1.a.tt
+
+	}
+
+	# option = { 
+	# 	name = nda_ares.1.b
+
+	# 	set_global_variable = nda_ares_wells_hg_invasion
+	# 	ai_chance = { 
+	# 		base = 25
+	# 	}
+	# 	custom_tooltip = nda_ares.1.b.tt
+	# }
+
+	# option = { 
+	# 	name = nda_ares.1.c
+
+	# 	set_global_variable = nda_ares_wells_orson_invasion
+	# 	ai_chance = { 
+	# 		base = 25
+	# 	}
+	# 	custom_tooltip = nda_ares.1.c.tt
+	# }
+
+	# option = {
+	# 	name = nda_ares.1.e
+	# 	default_option = yes
+	# 	set_global_variable = nda_ares_immediate_invasion
+	# 	ai_chance = { 
+	# 		base = 0
+	# 	}
+	# 	custom_tooltip = nda_ares.1.e.tt
+
+	# }
+}
+
+nda_ares.2 = { # The Crystal Egg
+	type = country_event
+	placement = ROOT
+	title = nda_ares.2.t
+	desc = nda_ares.2.d
+	flavor =  nda_ares.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+		is_player = yes
+		has_global_variable = nda_ares_is_loaded
+		#has_global_variable = nda_ares_invasion_choice
+		OR = {
+			AND = {
+				# year before early invasion
+				has_game_rule = early_landing
+				#has_global_variable = nda_ares_early_invasion
+				game_date >= 1841.3.1 
+				game_date < 1842.1.1			
+			}
+			AND = {
+				# year before HG Wells invasion
+				has_game_rule = hg_wells_landing
+				#has_global_variable = nda_ares_wells_hg_invasion
+				game_date >= 1897.3.1 
+				game_date < 1898.1.1			
+			}
+			AND = {
+				# year before Orson Wells invasion
+				has_game_rule = orson_wells_landing
+				#has_global_variable = nda_ares_wells_orson_invasion
+				game_date >= 1935.3.1 
+				game_date < 1936.1.1			
+			}
+			AND = {
+				# before immediate invasion
+				has_game_rule = immediate_landing
+				#has_global_variable = nda_ares_immediate_invasion				
+				game_date >= 1836.2.1 
+				game_date < 1837.1.1			
+			}
+		}
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		
+		debug_log = "Ares - Early Warning"
+	}	
+	
+	option = {
+		name = nda_ares.2.a
+		default_option = yes
+	}
+
+}	
+
+nda_ares.3 = { # Opposition of 1894 - August 2nd - two further oppositions (1896, 1899)
+	type = country_event
+	placement = ROOT
+	title = nda_ares.3.t
+	desc = nda_ares.3.d
+	flavor =  nda_ares.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_christianity.bk2"		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+		is_player = yes # only info so player only
+		OR = {
+			AND = {
+				# year before early invasion
+				has_game_rule = early_landing
+				#has_global_variable = nda_ares_early_invasion
+				game_date >= 1841.3.1 
+				game_date < 1842.1.1			
+			}
+			AND = {
+				# year before HG Wells invasion
+				has_game_rule = hg_wells_landing
+				#has_global_variable = nda_ares_wells_hg_invasion
+				game_date >= 1897.3.1 
+				game_date < 1898.1.1			
+			}
+			AND = {
+				# year before Orson Wells invasion
+				has_game_rule = orson_wells_landing
+				#has_global_variable = nda_ares_wells_orson_invasion
+				game_date >= 1935.3.1 
+				game_date < 1936.1.1			
+			}
+		}
+	}
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		
+		debug_log = "Ares - Opposition of Mars flavour"
+	}	
+	
+	option = {
+		name = nda_ares.3.a
+		default_option = yes
+	}
+
+}
+
+nda_ares.5 = { # Main Invasion Notification
+	type = country_event
+	placement = ROOT
+	title = nda_ares.5.t
+	desc = nda_ares.5.d
+	flavor =  nda_ares.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+
+	immediate = {
+		
+		debug_log = "Ares -Global Notification of Invasion"
+	}	
+	
+	option = {
+		name = nda_ares.5.a
+		default_option = yes
+	}
+
+}
+
+nda_ares.6 = { # Invasion watcher event - use this to launch main event as popup
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				# 1836 and owner of East Anglia 
+				game_date >= 1836.6.1 
+				game_date < 1837.1.1
+				has_game_rule = immediate_landing
+				p:x60A040 = { state = { owner = ROOT } }
+				NOT = { has_global_variable = nda_ares_invasion }
+				#has_global_variable = nda_ares_immediate_invasion
+			}
+			AND = {
+				# 1842 and owner of East Anglia 
+				game_date >= 1842.3.1 
+				game_date < 1843.1.1
+				p:x60A040 = { state = { owner = ROOT } }
+				NOT = { has_global_variable = nda_ares_invasion }
+				has_game_rule = early_landing				
+			}
+			AND = {
+				# 1901 and owner of East Anglia 
+				game_date >= 1901.3.1 
+				game_date < 1902.1.1
+				p:x60A040 = { state = { owner = ROOT } }
+				NOT = { has_global_variable = nda_ares_invasion }
+				has_game_rule = hg_wells_landing			
+			}
+			AND = {
+				# 1936 (post standard end!) and owner of Upper New York 
+				game_date >= 1936.3.1 
+				game_date < 1937.1.1
+				p:xB00080 = { state = { owner = ROOT } }
+				NOT = { has_global_variable = nda_ares_invasion }
+				has_game_rule = orson_wells_landing		
+			}
+		}
+
+	}
+
+	cooldown = { months = 24 } # should only ever run once per invasion - game rules can be adjusted during game?
+
+	immediate = {
+		debug_log = "Invasion Launch: [THIS.GetCountry.GetNameNoFormatting]" 
+
+		if = {
+			limit = { has_game_rule = immediate_landing }
+			trigger_event = { id = nda_ares.13 popup = yes }			
+		}
+		else_if = {
+			limit = { has_game_rule = early_landing }
+			trigger_event = { id = nda_ares.10 popup = yes }			
+		}
+		else_if = {
+			limit = { has_game_rule = hg_wells_landing }
+			trigger_event = { id = nda_ares.11 popup = yes }			
+		}
+		else_if = {
+			limit = { has_game_rule = orson_wells_landing }
+			trigger_event = { id = nda_ares.12 popup = yes }			
+		}
+	}
+
+}
+
+nda_ares.10 = { # Early Landing
+	type = country_event
+	placement = p:x60A040 #East Anglia
+	title = nda_ares.10.t
+	desc = nda_ares.10.d
+	flavor =  nda_ares.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	# trigger = {
+ 	# 	# 1842 and owner of East Anglia 
+	# 	game_date >= 1842.3.1 
+	# 	game_date < 1843.1.1
+	# 	p:x60A040 = { state = { owner = ROOT } }
+	# 	NOT = { has_global_variable = nda_ares_invasion }
+	# 	has_game_rule = early_landing
+	# }
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		
+		set_global_variable = nda_ares_invasion
+
+		# record target country ready to start war later
+		p:x60A040.state.owner = {
+			save_scope_as = nda_ares_first_victim
+		}
+
+		add_modifier = {
+			name = nda_ares_country_martian_terror_modifier
+		}
+
+		# create country
+		create_country = {
+			tag = NDA_ARES
+			origin = this
+
+			state = p:x60A040.state 
+			province = p:x60E0C0
+			province = p:x19CECD
+			province = p:x58D3AE
+			province = p:x800020
+			province = p:xA0A0C0
+			province = p:x60E080
+			province = p:x2482B4
+			province = p:x528DEE
+
+			on_created = {
+				nda_effect_martian_setup = yes
+
+				# lay claim to neighbouring states
+				every_neighbouring_state = {
+					limit = { NOT = { owner = c:NDA_ARES } }
+					state_region = {
+						add_homeland = cu:nda_cul_aresian		
+						add_claim = c:NDA_ARES
+					}
+					add_radicals_in_state = { value = 0.6 } # Panic in the streets of London...
+
+					add_modifier = {
+						name = nda_ares_state_martian_terror_modifier
+					}
+				}	
+				
+				# Force Migrations? - via delayed events?
+				trigger_event = { id = nda_ares.20 days=7 }
+
+				IF = {
+					limit = {
+						exists = c:FRA
+					}
+					set_secret_goal = {
+						country = c:FRA
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:USA
+					}
+					set_secret_goal = {
+						country = c:USA
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:PRU
+					}
+					set_secret_goal = {
+						country = c:PRU
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:RUS
+					}
+					set_secret_goal = {
+						country = c:RUS
+						secret_goal = conquer
+					}			
+				}
+			}
+			
+		}
+
+		# should not be liked by any one
+		every_country = {
+			limit = {
+				NOT = { c:NDA_ARES ?= THIS }
+			}
+			change_relations = { country = c:NDA_ARES value = -150 } # is this too much ?
+
+			# notify the world
+
+			# panic stations
+			add_radicals = { 
+				value = 0.3 
+			}
+			add_loyalists = {
+				value = -0.2
+			}
+
+			# Diplo Catalyst - try and create anti-invasion lobbies
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = c:NDA_ARES
+			}
+			
+		}
+
+		#go to war
+		c:NDA_ARES = {
+			create_diplomatic_play = {
+				name = nda_ares_dp_martian_invasion
+			
+				target_country = scope:nda_ares_first_victim
+
+				war = yes 
+				
+				type = dp_annex_war # dp_conquer_state - can't be done ??
+
+				# add_war_goal = {
+				# 	holder = c:NDA_ARES
+				# 	type = conquer_state
+				# 	target_state = p:x7543C8.state #  London
+				# }
+			}
+			
+			# every_scope_war = {
+			# 	limit = { 
+			# 		is_war_participant =  scope:nda_ares_first_victim 
+			# 	} 
+			# 	add_war_exhaustion = { target = scope:nda_ares_first_victim value = 0.25 } 
+			# 	debug_log = "Ares Victim - War Exhaustion"
+			# }
+			
+		}
+
+		# targets allies should have increased radicalism to try and knock them out of war
+		scope:nda_ares_first_victim = {
+			every_subject_or_below = {
+				# panic stations
+				add_radicals = { 
+					value = 0.2 
+				}
+				add_loyalists = {
+					value = -0.2
+				}				
+			}
+			# every_scope_cobelligerent = {
+			# 	# panic stations
+			# 	add_radicals = { 
+			# 		value = 0.3 
+			# 	}
+			# 	add_loyalists = {
+			# 		value = -0.2
+			# 	}
+			# }
+		}
+
+		debug_log = "Ares - Start Completed"
+	}	
+	
+	option = {
+		name = nda_ares.10.a
+		default_option = yes
+	}
+
+}	
+
+nda_ares.11 = { # 1900's Landing - same location and logic as earlier
+	type = country_event
+	placement = p:x60A040 #East Anglia
+	title = nda_ares.10.t
+	desc = nda_ares.10.d
+	flavor =  nda_ares.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	# trigger = {
+ 	# 	# 1901 and owner of East Anglia 
+	# 	game_date >= 1901.3.1 
+	# 	game_date < 1902.1.1
+	# 	p:x60A040 = { state = { owner = ROOT } }
+	# 	NOT = { has_global_variable = nda_ares_invasion }
+	# 	has_game_rule = hg_wells_landing
+	# }
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		
+		set_global_variable = nda_ares_invasion
+
+		# record target country ready to start war later
+		p:x60A040.state.owner = {
+			save_scope_as = nda_ares_first_victim
+		}
+
+		add_modifier = {
+			name = nda_ares_country_martian_terror_modifier
+		}
+
+		# create country
+		create_country = {
+			tag = NDA_ARES
+			origin = this
+
+			state = p:x60A040.state 
+			province = p:x60E0C0
+			province = p:x19CECD
+			province = p:x58D3AE
+			province = p:x800020
+			province = p:xA0A0C0
+			province = p:x60E080
+			province = p:x2482B4
+			province = p:x528DEE
+
+			on_created = {
+				nda_effect_martian_setup = yes
+
+				# lay claim to neighbouring states
+				every_neighbouring_state = {
+					limit = { NOT = { owner = c:NDA_ARES } }
+					state_region = {
+						add_homeland = cu:nda_cul_aresian		
+						add_claim = c:NDA_ARES
+					}
+					add_radicals_in_state = { value = 0.6 } # Panic in the streets of London...
+
+					add_modifier = {
+						name = nda_ares_state_martian_terror_modifier
+					}
+				}	
+				
+				# Force Migrations? - via delayed events?
+				trigger_event = { id = nda_ares.20 days=7 }
+
+				IF = {
+					limit = {
+						exists = c:FRA
+					}
+					set_secret_goal = {
+						country = c:FRA
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:USA
+					}
+					set_secret_goal = {
+						country = c:USA
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:PRU
+					}
+					set_secret_goal = {
+						country = c:PRU
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:RUS
+					}
+					set_secret_goal = {
+						country = c:RUS
+						secret_goal = conquer
+					}			
+				}
+			}
+			
+		}
+
+		# should not be liked by any one
+		every_country = {
+			limit = {
+				NOT = { c:NDA_ARES ?= THIS }
+			}
+			change_relations = { country = c:NDA_ARES value = -150 } # is this too much ?
+
+			# notify the world
+
+			# panic stations
+			add_radicals = { 
+				value = 0.3 
+			}
+			add_loyalists = {
+				value = -0.2
+			}
+		}
+
+		#go to war
+		c:NDA_ARES = {
+			create_diplomatic_play = {
+				name = nda_ares_dp_martian_invasion
+			
+				target_country = scope:nda_ares_first_victim
+
+				war = yes 
+				
+				type = dp_annex_war # dp_conquer_state - can't be done ??
+
+				# add_war_goal = {
+				# 	holder = c:NDA_ARES
+				# 	type = conquer_state
+				# 	target_state = p:x7543C8.state #  London
+				# }
+			}
+			
+			# every_scope_war = {
+			# 	limit = { 
+			# 		is_war_participant =  scope:nda_ares_first_victim 
+			# 	} 
+			# 	add_war_exhaustion = { target = scope:nda_ares_first_victim value = 0.25 } 
+			# 	debug_log = "Ares Victim - War Exhaustion"
+			# }
+			
+		}
+
+		# targets allies should have increased radicalism to try and knock them out of war
+		scope:nda_ares_first_victim = {
+			every_subject_or_below = {
+				# panic stations
+				add_radicals = { 
+					value = 0.2 
+				}
+				add_loyalists = {
+					value = -0.2
+				}				
+			}
+			# every_scope_cobelligerent = {
+			# 	# panic stations
+			# 	add_radicals = { 
+			# 		value = 0.3 
+			# 	}
+			# 	add_loyalists = {
+			# 		value = -0.2
+			# 	}
+			# }
+		}
+
+		debug_log = "Ares - Start Completed"
+	}	
+	
+	option = {
+		name = nda_ares.10.a
+		default_option = yes
+	}
+
+}	
+
+nda_ares.12 = { # 1936's Landing - Upper New York
+	type = country_event
+	placement = p:xB00080 
+	title = nda_ares.10.t
+	desc = nda_ares.10.d
+	flavor =  nda_ares.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	# trigger = {
+ 	# 	# 1936 (post standard!) and owner of Upper New York 
+	# 	game_date >= 1936.3.1 
+	# 	game_date < 1937.1.1
+	# 	p:xB00080 = { state = { owner = ROOT } }
+	# 	NOT = { has_global_variable = nda_ares_invasion }
+	# 	has_game_rule = orson_wells_landing
+	# }
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		
+		set_global_variable = nda_ares_invasion
+
+		# record target country ready to start war later
+		p:xB00080.state.owner = {
+			save_scope_as = nda_ares_first_victim
+		}
+
+		add_modifier = {
+			name = nda_ares_country_martian_terror_modifier
+		}
+
+		# create country
+		create_country = {
+			tag = NDA_ARES
+			origin = this
+
+			state = p:xB00080.state # ny
+			# province = p:x9CC56A
+			# province = p:xE7BE2D
+			# province = p:xB343E6
+			# province = p:x2CA754
+			# province = p:xA6BED5
+			# province = p:xB00080
+			# province = p:x260926
+			# province = p:x42D496
+
+			# province = p:xA7B5FE
+			# province = p:xEDC7DA
+			# province = p:xFCF1BE
+			# province = p:xD534B1
+			# province = p:x70C080
+			# province = p:x4B0747
+			# province = p:xFC18F1
+			# province = p:x300080
+
+			# province = p:x99CB10
+			# province = p:xBA53D0
+			# province = p:xACC198
+			# province = p:x308080
+
+			# province = p:x38C881
+			# province = p:xAF1AEE
+			# province = p:x01D042
+			# province = p:x75F2A6
+			# province = p:xB7EDCF			
+
+			on_created = {
+				nda_effect_martian_setup = yes
+
+				# lay claim to neighbouring states
+				every_neighbouring_state = {
+					limit = { NOT = { owner = c:NDA_ARES } }
+					state_region = {
+						add_homeland = cu:nda_cul_aresian		
+						add_claim = c:NDA_ARES
+					}
+					add_radicals_in_state = { value = 0.6 } # Panic in the streets of London...
+
+					add_modifier = {
+						name = nda_ares_state_martian_terror_modifier
+					}
+				}	
+				
+				# Force Migrations? - via delayed events?
+				trigger_event = { id = nda_ares.20 days=7 }
+
+				IF = {
+					limit = {
+						exists = c:FRA
+					}
+					set_secret_goal = {
+						country = c:FRA
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:GBR
+					}
+					set_secret_goal = {
+						country = c:GBR
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:PRU
+					}
+					set_secret_goal = {
+						country = c:PRU
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:RUS
+					}
+					set_secret_goal = {
+						country = c:RUS
+						secret_goal = conquer
+					}			
+				}
+			}
+			
+		}
+
+		# should not be liked by any one
+		every_country = {
+			limit = {
+				NOT = { c:NDA_ARES ?= THIS }
+			}
+			change_relations = { country = c:NDA_ARES value = -150 } # is this too much ?
+
+			# notify the world
+
+			# panic stations
+			add_radicals = { 
+				value = 0.3 
+			}
+			add_loyalists = {
+				value = -0.2
+			}
+		}
+
+		#go to war
+		c:NDA_ARES = {
+			create_diplomatic_play = {
+				name = nda_ares_dp_martian_invasion
+			
+				target_country = scope:nda_ares_first_victim
+
+				war = yes 
+				
+				type = dp_annex_war # dp_conquer_state - can't be done ??
+
+				# add_war_goal = {
+				# 	holder = c:NDA_ARES
+				# 	type = conquer_state
+				# 	target_state = p:x7543C8.state #  London
+				# }
+			}
+			
+			# every_scope_war = {
+			# 	limit = { 
+			# 		is_war_participant =  scope:nda_ares_first_victim 
+			# 	} 
+			# 	add_war_exhaustion = { target = scope:nda_ares_first_victim value = 0.25 } 
+			# 	debug_log = "Ares Victim - War Exhaustion"
+			# }
+			
+		}
+
+		# targets allies should have increased radicalism to try and knock them out of war
+		scope:nda_ares_first_victim = {
+			every_subject_or_below = {
+				# panic stations
+				add_radicals = { 
+					value = 0.2 
+				}
+				add_loyalists = {
+					value = -0.2
+				}				
+			}
+			# every_scope_cobelligerent = {
+			# 	# panic stations
+			# 	add_radicals = { 
+			# 		value = 0.3 
+			# 	}
+			# 	add_loyalists = {
+			# 		value = -0.2
+			# 	}
+			# }
+		}
+
+		debug_log = "Ares - 1936 Start Completed"
+	}	
+	
+	option = {
+		name = nda_ares.10.a
+		default_option = yes
+	}
+
+}	
+
+nda_ares.13 = { # Immediate Landing (1836)
+	type = country_event
+	placement = p:x60A040 #East Anglia
+	title = nda_ares.10.t
+	desc = nda_ares.10.d
+	flavor =  nda_ares.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"	
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = 12 }
+
+	immediate = {
+		
+		set_global_variable = nda_ares_invasion
+
+		# record target country ready to start war later
+		p:x60A040.state.owner = {
+			save_scope_as = nda_ares_first_victim
+		}
+
+		add_modifier = {
+			name = nda_ares_country_martian_terror_modifier
+		}
+
+		# create country
+		create_country = {
+			tag = NDA_ARES
+			origin = this
+
+			state = p:x60A040.state 
+			province = p:x60E0C0
+			province = p:x19CECD
+			province = p:x58D3AE
+			province = p:x800020
+			province = p:xA0A0C0
+			province = p:x60E080
+			province = p:x2482B4
+			province = p:x528DEE
+
+			on_created = {
+				nda_effect_martian_setup = yes
+
+				# lay claim to neighbouring states
+				every_neighbouring_state = {
+					limit = { NOT = { owner = c:NDA_ARES } }
+					state_region = {
+						add_homeland = cu:nda_cul_aresian		
+						add_claim = c:NDA_ARES
+					}
+					add_radicals_in_state = { value = 0.6 } # Panic in the streets of London...
+
+					add_modifier = {
+						name = nda_ares_state_martian_terror_modifier
+					}
+				}	
+				
+				# Force Migrations? - via delayed events?
+				trigger_event = { id = nda_ares.20 days=7 }
+
+				IF = {
+					limit = {
+						exists = c:FRA
+					}
+					set_secret_goal = {
+						country = c:FRA
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:USA
+					}
+					set_secret_goal = {
+						country = c:USA
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:PRU
+					}
+					set_secret_goal = {
+						country = c:PRU
+						secret_goal = conquer
+					}			
+				}
+				IF = {
+					limit = {
+						exists = c:RUS
+					}
+					set_secret_goal = {
+						country = c:RUS
+						secret_goal = conquer
+					}			
+				}
+			}
+			
+		}
+
+		# should not be liked by any one
+		every_country = {
+			limit = {
+				NOT = { c:NDA_ARES ?= THIS }
+			}
+			change_relations = { country = c:NDA_ARES value = -150 } # is this too much ?
+
+			# notify the world - use event
+			IF = { 
+				limit = { NOT = { THIS ?= scope:nda_ares_first_victim } is_player = yes} 
+				trigger_event = { id = nda_ares.5 } 
+			}
+
+			# panic stations
+			add_radicals = { 
+				value = 0.3 
+			}
+			add_loyalists = {
+				value = -0.2
+			}
+
+			# Diplo Catalyst - try and create anti-invasion lobbies
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = c:NDA_ARES
+			}
+			
+		}
+
+		#go to war
+		c:NDA_ARES = {
+			create_diplomatic_play = {
+				name = nda_ares_dp_martian_invasion
+			
+				target_country = scope:nda_ares_first_victim
+
+				war = yes 
+				
+				type = dp_annex_war # dp_conquer_state - can't be done ??
+			}
+			
+			# every_scope_war = {
+			# 	limit = { 
+			# 		is_war_participant =  scope:nda_ares_first_victim 
+			# 	} 
+			# 	add_war_exhaustion = { target = scope:nda_ares_first_victim value = 0.25 } 
+			# 	debug_log = "Ares Victim - War Exhaustion"
+			# }
+			
+		}
+
+		# targets allies should have increased radicalism to try and knock them out of war
+		scope:nda_ares_first_victim = {
+			every_subject_or_below = {
+				# panic stations
+				add_radicals = { 
+					value = 0.2 
+				}
+				add_loyalists = {
+					value = -0.2
+				}				
+			}
+
+			set_variable = nda_ares_first_victim_var
+			# every_scope_cobelligerent = {
+			# 	# panic stations
+			# 	add_radicals = { 
+			# 		value = 0.3 
+			# 	}
+			# 	add_loyalists = {
+			# 		value = -0.2
+			# 	}
+			# }
+		}
+
+		debug_log = "Ares - Immediate Start Completed"
+	}	
+	
+	option = {
+		name = nda_ares.10.a
+		default_option = yes
+	}
+
+}
+
+nda_ares.20 = { # Mass Migration if at war with Martians - is this needed with modifiers already affecting migration?
+	type = country_event
+	placement = ROOT
+	title = nda_ares.20.t
+	desc = nda_ares.20.d
+	flavor =  nda_ares.20.f
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	trigger = {
+		exists = c:NDA_ARES
+		has_war_with = c:NDA_ARES
+		#any_scope_state = {
+		#	has_modifier = nda_ares_state_martian_terror_modifier
+		#}
+		any_valid_mass_migration_culture = {
+			is_primary_culture_of = ROOT 
+		}
+	}
+
+	immediate = {
+		#debug_log = "Migrations : [ROOT.GetCountry.GetNameNoFormatting]" 
+		every_primary_culture = {
+			save_scope_as = nda_exileCulture
+
+			ROOT = {
+				random_state = {
+					limit = {
+						NOT = { owner = ROOT }
+						state_is_eligible_as_mass_migration_target = yes
+
+					}
+
+					#can_have_mass_migration_to_country = c:countryTraits
+					save_scope_as = nda_exileState
+					
+					debug_log_scopes = yes
+
+					create_mass_migration = {  
+						origin = ROOT  
+						culture = scope:nda_exileCulture 
+					} 					
+				}			
+			}		
+		}
+		
+	}
+
+	option = {
+		name = nda_ares.20.a
+		default_option = yes
+
+	}
+
+}
+
+nda_ares.21 = { # Hidden event to add generals to ARES after landing - must be done after initial invasion as can't be allocated to non-existant armies.
+	type = country_event
+	hidden = yes
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	trigger = {
+	}
+
+	immediate = {
+		# add generals as shortage at start? - no armies yet exist so disappears? Do as delayed event.
+		create_character = {
+			first_name = ark_ack
+			last_name = ack_ka
+			age = 30
+			culture = cu:nda_cul_aresian
+			religion = atheist		
+			interest_group = ig:ig_armed_forces
+			commander_rank = default
+			traits = {
+				experienced_defensive_strategist
+				innovative
+				direct
+			}
+			on_created = {
+				add_character_role = general
+			}
+		}
+
+		create_character = {
+			first_name = ack_ka
+			last_name = ark_ack
+			age = 30
+			culture = cu:nda_cul_aresian
+			religion = atheist		
+			interest_group = ig:ig_armed_forces
+			commander_rank = default
+			traits = {
+				experienced_offensive_planner
+				expert_defensive_strategist
+				brave
+			}
+			on_created = {
+				add_character_role = general
+			}
+		}
+ 
+	}
+}
+
+nda_ares.30 = { # Exile government of first victim - change tag of largest subject. Is British specific - need version for late game America
+	type = country_event
+	placement = ROOT
+	title = nda_ares.30.t
+	desc = nda_ares.30.d
+	flavor =  nda_ares.30.f
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	duration = 3
+
+	cooldown = { months = 24 } # should only ever run once
+
+	immediate = {
+		debug_log = "Make Exile Choice: [THIS.GetCountry.GetNameNoFormatting]" 
+
+		ordered_subject_or_below = {
+			limit = { 					
+				is_subject_of = PREV
+				is_player = no
+			}
+			position = 0
+			order_by =  { subtract = global_country_ranking }
+		
+			save_scope_as = nda_ares_first_exile_loc
+		}
+
+		# optional exile location
+		ordered_subject_or_below = {
+			limit = { 					
+				is_subject_of = PREV
+				is_player = no
+			}
+			position = 1
+			#max = 2
+	
+			order_by =  { subtract = global_country_ranking }
+
+			save_scope_as = nda_ares_second_exile_loc
+		}
+
+		# optional exile location
+		ordered_subject_or_below = {
+			limit = { 					
+				is_subject_of = PREV
+				is_player = no
+			}
+			position = 2
+			#max = 2
+	
+			order_by =  { subtract = global_country_ranking }
+
+			save_scope_as = nda_ares_third_exile_loc
+		}
+	}
+
+	option = { # Form Government in exile
+		name = nda_ares.30.a
+
+		# turn into effect if it works!
+		if = { limit = { exists = heir }
+			heir = { save_scope_as = nda_ares_exiled_heir }
+		}
+				
+		ruler = { save_scope_as = nda_ares_exiled_ruler }
+
+		debug_log_scopes = yes
+
+		scope:nda_ares_first_exile_loc ?= {
+
+			nda_effect_british_exile_setup = yes
+
+		}		
+
+	}
+
+	option = { # Form Government in exile - 2nd option
+		name = nda_ares.30.b
+		default_option = yes
+
+		# turn into effect if it works!
+		if = { limit = { exists = heir }
+			heir = { save_scope_as = nda_ares_exiled_heir }
+		}
+				
+		ruler = { save_scope_as = nda_ares_exiled_ruler }
+
+		debug_log_scopes = yes
+
+		scope:nda_ares_second_exile_loc ?= {
+
+			nda_effect_british_exile_setup = yes
+
+		}		
+
+	}
+
+	option = { # Form Government in exile - 3rd option
+		name = nda_ares.30.c
+		default_option = yes
+
+		# turn into effect if it works!
+		if = { limit = { exists = heir }
+			heir = { save_scope_as = nda_ares_exiled_heir }
+		}
+				
+		ruler = { save_scope_as = nda_ares_exiled_ruler }
+
+		debug_log_scopes = yes
+
+		scope:nda_ares_third_exile_loc ?= {
+
+			nda_effect_british_exile_setup = yes
+
+		}		
+
+	}
+
+	option = { # Stand our ground
+		name = nda_ares.30.dd
+		debug_log = "Make Exile Choice: Stand our ground!" 
+
+		# need option for release of territories - or just accept Martian control will happen?
+	}
+}
+
+nda_ares.31 = { # Offer to Exile government of first victim - use this to launch as popup
+	type = country_event
+	hidden = yes
+	trigger = {
+		exists = c:NDA_ARES
+		has_war_with = c:NDA_ARES
+		# is first victim
+		has_variable = nda_ares_first_victim_var
+		#scope:nda_ares_first_victim ?= ROOT
+		# war score is close to capitulation
+		any_scope_war = {
+			has_war_support = {
+				target = ROOT
+				value < 0 # less than 0
+			}
+		}
+	}
+
+	cooldown = { months = 24 } # should only ever run once
+
+	immediate = {
+		debug_log = "Hidden Exile Launch: [THIS.GetCountry.GetNameNoFormatting]" 
+
+		# need to sort out EIC and HBC - company controlled lands transfer to Martians on conquest.
+		# raj.7 is template
+
+		# Remove the East India Company's ownership of the BIC country and then disband the company - will removal still allow for option of gov exile to it?
+		c:BIC ?= {
+			owning_company ?= {
+				if = {
+					limit = {
+						is_company_type = company_type:company_east_india_company
+					}
+					remove_owned_country = c:BIC
+					owner ?= {
+						remove_company = prev.type
+					}
+				}
+			}
+		}
+
+		# Same for Hudson's Bay Co
+		c:HBC ?= {
+			owning_company ?= {
+				if = {
+					limit = {
+						is_company_type = company_type:company_hbc
+					}
+					remove_owned_country = c:HBC
+					owner ?= {
+						remove_company = prev.type
+					}
+				}
+			}
+		}
+
+		trigger_event = { id = nda_ares.30 popup = yes }
+	}
+
+}
+
+nda_ares.32 = { # Exile government renames to New Britannia!
+	type = country_event
+	placement = ROOT
+	title = nda_ares.32.t
+	desc = nda_ares.32.d
+	flavor =  nda_ares.32.f
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+		
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	duration = 3
+	
+	cooldown = { months = 24 } # should only ever run once
+
+	immediate = {
+		debug_log = "Exile Choice: [THIS.GetCountry.GetNameNoFormatting]" 
+
+		change_tag = NDA_GBR_EXILE # Have new Tag for Exile	
+		
+		nda_effect_remove_colony_status_for_exile = yes
+
+		if = { # Old habits - Start the explotation
+			limit = { has_law_or_variant = law_type:law_no_colonial_affairs}
+			activate_law = law_type:law_colonial_exploitation
+		}
+	}
+
+	option = { # Rename
+		name = nda_ares.32.a
+
+		debug_log_scopes = yes
+
+		THIS = {
+			debug_log = "Rename Capital: [THIS.GetCountry.GetNameNoFormatting]" 
+			# Change Names
+			nda_effect_map_name_new_brit_capital = yes			
+		}
+
+	}
+
+	# option = { # Leave as is
+	# 	name = nda_ares.32.b
+	
+
+	# }
+}

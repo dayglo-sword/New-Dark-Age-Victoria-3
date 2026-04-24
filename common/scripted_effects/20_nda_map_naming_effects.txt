@@ -51,8 +51,6 @@ nda_effect_map_name_leng_yian = { # Yian - oriental city from Robert Chambers
 		random_scope_state = {
 			limit = { is_capital = yes }
 
-			#set_state_name = nda_NEW_CARCOSA
-
 			set_hub_name = { type = city name = nda_LENG_YIAN_city }
 		}
 	}
@@ -96,7 +94,7 @@ nda_effect_map_name_stygia = { # Rename to Hyborian equivalents
 }
 
 # If Treaty Port for DGN in Miskaton
-nda_effect_map_name_dagonic_yhanthlei = { # Yian - oriental city from Robert Chambers
+nda_effect_map_name_dagonic_yhanthlei = { 
 	c:DGN ?= {
 		random_scope_state = {
 			limit = { state_region = s:STATE_NEW_HAMPSHIRE }
@@ -104,4 +102,35 @@ nda_effect_map_name_dagonic_yhanthlei = { # Yian - oriental city from Robert Cha
 			set_state_name = nda_YHANTHLEI
 		}
 	}
+}
+
+# Martian Invasion names
+nda_effect_map_name_ares_capital = { # Rename Cambridge
+	c:NDA_ARES = {
+		random_scope_state = {
+			limit = { is_capital = yes }
+
+			set_state_name = nda_ARES_CAPITAL_state
+
+			set_hub_name = { type = city name = nda_ARES_CAPITAL_city }
+		}	
+	}
+}
+
+nda_effect_map_name_new_brit_capital = { # Rename for New britannia
+	random_scope_state = {
+		limit = { is_capital = yes }
+
+		set_state_name = nda_GBR_EXILE_CAPITAL_state
+
+		set_hub_name = { type = city name = nda_GBR_EXILE_CAPITAL_city }
+		
+		set_hub_name = { type = mine name = nda_GBR_EXILE_CAPITAL_mine }
+
+		set_hub_name = { type = farm name = nda_GBR_EXILE_CAPITAL_farm }
+
+		set_hub_name = { type = wood name = nda_GBR_EXILE_CAPITAL_wood }
+
+		set_hub_name = { type = port name = nda_GBR_EXILE_CAPITAL_port }
+	}	
 }

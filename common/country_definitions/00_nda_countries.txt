@@ -108,8 +108,23 @@ NDA_ARES = {
 
 	tier = empire
 	
-	cultures = { nda_cul_cultist } # will be changed
-	capital = STATE_HOME_COUNTIES # not really needed
+	cultures = { nda_cul_aresian }
+	#capital = STATE_HOME_COUNTIES # not really needed
+
+	primary_unit_color = { 252 106 240 }
+	secondary_unit_color  = { 232 86 220 }
+	tertiary_unit_color = { 212 66 200 }
+}
+
+NDA_GBR_EXILE = {
+	color = hsv{ 0.99  0.7  0.9 }
+
+	country_type = recognized
+
+	tier = empire	
+	
+	cultures = { british scottish welsh }
+	#capital = STATE_HOME_COUNTIES # not really needed
 }
 
 

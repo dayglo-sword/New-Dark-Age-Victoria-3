@@ -37,3 +37,11 @@ country_nda_cul_atlantean_cultural_acceptance_add={
 		ai_value=0
 	}
 }
+
+country_nda_cul_aresian_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

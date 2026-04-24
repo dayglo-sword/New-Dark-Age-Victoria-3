@@ -1,5 +1,19 @@
 ------
 
+Version v1.13.0
+
+Major Changes
+Include all Martian content from 'Forever Autumn' mod.
+Add eyes, Serpent for Yigians, Solid for Martians.
+
+Minor Changes
+Include pro and anti american lobbies in Reconcile journal progress
+
+Bug Fixes
+
+
+------
+
 Version v1.12.5
 
 Major Changes

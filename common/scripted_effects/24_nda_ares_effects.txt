@@ -1,0 +1,280 @@
+﻿nda_effect_ensure_aresian_ideology = { # character should have an appropriate ideology
+	if = {
+		limit = { has_non_aresian_ideology = yes } # should work for martian as well
+		random_list = {	
+			20 = { set_ideology = ideology:ideology_jingoist_leader }
+			15 = { set_ideology = ideology:ideology_fascist }
+			20 = { set_ideology = ideology:ideology_slaver }
+			10 = { set_ideology = ideology:ideology_authoritarian }
+			#10 = { set_ideology = ideology:ideology_luddite }			
+		}
+	}
+}
+
+# Country Level
+nda_effect_martian_setup = {
+	# use the no revolutions flag
+	set_immune_to_revolutions = yes
+
+	# set government to be technocratic - change laws as appropriate
+	activate_law = law_type:law_monarchy
+	activate_law = law_type:law_technocracy
+	activate_law = law_type:law_ethnostate
+	activate_law = law_type:law_slave_trade
+	activate_law = law_type:law_state_atheism
+	activate_law = law_type:law_closed_borders
+
+	# activate tech
+	add_era_researched = era_4
+
+	# Stop NDA Cult Spread before it can start
+	set_variable = nda_cult_spread_failed
+
+	# set flag to not use 'Colonial Admin' to split empire
+	set_variable = nda_anti_colonial_admin
+	
+	ig:ig_devout = {
+		set_interest_group_name = ig_ares_devout
+	}
+	
+	ig:ig_armed_forces = {
+		set_interest_group_name = ig_armed_forces #ig_ares_armed_forces
+	}
+
+	ig:ig_rural_folk = {
+		set_interest_group_name = ig_ares_rural_folk
+	}
+
+	ig:ig_intelligentsia = {
+		set_interest_group_name = ig_ares_intelligentsia
+		remove_ideology = ideology_liberal
+		add_ideology = ideology_plutocratic
+	}
+
+	ig:ig_landowners = {
+		set_interest_group_name = ig_ares_landowners
+	}
+
+	ig:ig_petty_bourgeoisie = {
+		set_interest_group_name = ig_ares_petty_bourgeoisie
+	}
+
+	ig:ig_trade_unions = {
+		set_interest_group_name = ig_ares_trade_unions
+	}
+
+	ig:ig_industrialists = {
+		set_interest_group_name = ig_industrialists #ig_ares_industrialists
+	}
+	# remove anti-slavery from intel and trade unions 
+	every_interest_group = {
+		limit = { has_ideology = ideology:ideology_anti_slavery }
+		remove_ideology = ideology_anti_slavery
+		add_ideology = ideology_colonialist
+	}
+
+	# martian unity
+	every_interest_group = {
+		add_modifier = nda_ares_ig_martian_unity_modifier
+	}
+
+	set_strategy = ai_strategy_nda_ares_administrative_agenda
+	set_strategy = ai_strategy_nda_ares_diplomatic_agenda
+	set_strategy = ai_strategy_nda_ares_political_agenda
+
+	# Initial fund boost
+	add_treasury = 2000000
+
+	# Rename Capital state and city - or wait till after intial conquest??
+	nda_effect_map_name_ares_capital = yes
+
+	# add generals as shortage at start? - no armies yet exist so disappears? Do as delayed event.
+	trigger_event = { id = nda_ares.21 days = 2 }
+
+	# add morale modifier for intial landing
+	add_modifier = {
+		name = nda_ares_first_landing_modifier
+		months = 24
+	}
+
+	# Initial Pop setup / conversion
+	every_scope_state = {
+
+		# convert large chunk of remaining to give them a start
+		convert_population = { target = rel:atheist value = 0.95  }
+
+		every_scope_pop = {
+			 limit = { religion = rel:atheist }
+			 change_pop_culture = { target = cu:nda_cul_aresian value = 1 }		
+		}
+
+		# add generator building - should be landing sites then upgrade to generators?
+		create_building={
+			 building = "building_nda_ares_generators" 
+			 level=1
+		}	
+
+		state_region = {
+			add_homeland = cu:nda_cul_aresian						
+		}
+
+		add_modifier = { name = nda_ares_state_red_lands_modifier }
+
+	}
+}
+
+# Country Level
+nda_effect_british_exile_setup = {
+	debug_log = "New Home Country : [THIS.GetCountry.GetNameNoFormatting]"
+	debug_log_scopes = yes
+
+	# Diplo Catalyst - try and create anti-invasion lobbies
+	create_diplomatic_catalyst = {  
+		type = catalyst_event_negative
+		target = c:NDA_ARES
+	}
+		
+	set_variable = nda_ares_country_in_exile
+
+	# only do if monarchy??			
+	# change to absolute Monarchy
+	activate_law = law_type:law_monarchy
+	activate_law = law_type:law_autocracy
+	activate_law = law_type:law_colonial_exploitation
+
+	if = {
+		limit = { NOT = { country_has_primary_culture = cu:british } }
+		add_primary_culture = cu:british					
+	}
+	if = {
+		limit = { NOT = { country_has_primary_culture = cu:scottish } }
+		add_primary_culture = cu:scottish					
+	}
+
+	# breakaway
+	if = { 
+		limit = { is_subject = yes }
+		make_independent = yes # only if actual	
+	}
+
+	change_relations = { country = c:NDA_ARES value = -200 }
+
+	ROOT = {
+		if = { 
+			limit = { is_player = yes }
+			play_as = PREV		
+		}		
+	}
+	
+	# transfer rulers and heirs
+	if = { 
+		limit = { exists = scope:nda_ares_exiled_ruler }
+		scope:nda_ares_exiled_ruler = {
+			transfer_character = PREV
+			set_character_as_ruler = yes							
+		}
+	}
+
+	if = { 
+		limit = { exists = scope:nda_ares_exiled_heir }
+		scope:nda_ares_exiled_heir = { transfer_character = PREV }
+		set_heir =  scope:nda_ares_exiled_heir
+	}
+
+	debug_log = "New Country : [THIS.GetCountry.GetNameNoFormatting]"
+
+	# # Change Names
+	# nda_effect_map_name_new_brit_capital = yes
+
+	# Add temp IG boost as could already be chaos (in EIC)
+	custom_tooltip = {
+		text = nda_ares_ig_exile_unity_tt
+		every_interest_group = {
+			add_modifier = { name = nda_ares_ig_exile_unity_modifier months = 12 is_decaying = yes } 
+		}		
+	}
+
+
+	random_scope_state = {
+		limit = { is_capital = yes }
+
+		custom_tooltip = {
+			text = nda_ares_ig_exiles_arrive_tt
+			# Add British pops ?? just create as the martians will 'balance out' the source ones.
+			create_pop = {
+				culture = british
+				pop_type = aristocrats
+				size = 1000
+			}
+
+			create_pop = {
+				culture = scottish
+				pop_type = aristocrats
+				size = 100
+			}
+
+			create_pop = {
+				culture = british
+				pop_type = bureaucrats
+				size = 2000
+			}
+
+			create_pop = {
+				culture = scottish
+				pop_type = bureaucrats
+				size = 200
+			}
+
+			create_pop = {
+				culture = british
+				pop_type = soldiers
+				size = 3000
+			}
+
+			create_pop = {
+				culture = scottish
+				pop_type = soldiers
+				size = 1000
+			}
+
+		}
+	}
+
+	# transfer overseas territories - state is state region	
+	save_scope_as = nda_taker	
+	transfer_state = { STATE = s:STATE_NEWFOUNDLAND GIVER = c:GBR TAKER = scope:nda_taker }
+	transfer_state = { STATE = s:STATE_GUAYANA GIVER = c:GBR TAKER = scope:nda_taker }
+	transfer_state = { STATE = s:STATE_WEST_INDIES GIVER = c:GBR TAKER = scope:nda_taker }
+	transfer_state = { STATE = s:STATE_JAMAICA GIVER = c:GBR TAKER = scope:nda_taker }
+	transfer_state = { STATE = s:STATE_BAHAMAS GIVER = c:GBR TAKER = scope:nda_taker }
+	transfer_state = { STATE = s:STATE_BERMUDA GIVER = c:GBR TAKER = scope:nda_taker }
+	transfer_state = { STATE = s:STATE_GUATEMALA GIVER = c:GBR TAKER = scope:nda_taker }
+
+	trigger_event = { id = nda_ares.32 days = 2 popup = yes }
+
+	# every_subject_or_below = {
+	# 	# loyalty boost to stop immediate breakaways
+
+	# }
+
+	# save_scope_as = nda_ares_freedom
+	# # send notification
+	# every_country = {
+	# 	post_notification = nda_ares_country_freedom
+	# }
+
+	# # do after all effects
+	# transfer or exile government
+	change_tag = NDA_GBR_EXILE # Have new Tag for Exile
+
+}
+
+nda_effect_remove_colony_status_for_exile = {
+	if = {
+		limit = { 
+			has_variable = nda_ares_country_in_exile
+			has_modifier = colony_alone_modifier 
+		}
+		remove_modifier = colony_alone_modifier
+	}
+}

@@ -349,3 +349,33 @@ nda_masonic_resume_masonry = {
 	notification_type = toast
  
 }
+
+nda_masonic_martian_destroyed_masonry = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 	
+}
+
+nda_ares_country_freedom = {
+	type = country
+	group = "nda_ares_notifications"
+
+	texture = "gfx/interface/icons/notification_icons/secession.dds"
+
+	notification_type = toast
+ 
+}
+
+### Generator Built
+nda_ares_generator_built = {
+	type = country
+	group = "nda_ares_notifications"
+
+	texture = "gfx/interface/icons/notification_icons/buildings.dds"
+
+	notification_type = toast
+ 
+}

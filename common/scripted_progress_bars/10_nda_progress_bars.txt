@@ -25,6 +25,37 @@
 
 		}
 
+		if = {
+			limit = { any_political_lobby = { target = c:USA is_political_lobby_type = lobby_pro_country  } }	
+			
+			add = {
+				desc = "nda_yankee_reconcile_pro_lobby_tt"				
+				value = 0
+				every_political_lobby = {
+					limit = { target = c:USA  is_political_lobby_type = lobby_pro_country}
+
+						add = { value = lobby_clout }
+							#multiply = 0.01
+					}
+				}				
+			}
+
+		if = {
+			limit = { any_political_lobby = { target = c:USA is_political_lobby_type = lobby_anti_country  } }	
+
+			subtract = {
+				desc = "nda_yankee_reconcile_anti_lobby_tt"				
+				value = 0
+				every_political_lobby = {
+					limit = { target = c:USA  is_political_lobby_type = lobby_anti_country}
+
+						add = { value = lobby_clout }
+							#multiply = 0.01
+				}
+
+			}				
+		}
+
 		# if they don't exist is that a plus or minus??
 		# else_if = {
 		# 	limit = { NOT = { EXISTS = c:USA }}
