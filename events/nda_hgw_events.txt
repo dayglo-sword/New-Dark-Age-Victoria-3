@@ -191,8 +191,8 @@ nda_hgw.20 = { # In the Abyss - Intro
 		random_scope_character = {
 			limit = {
 				is_busy = no
-				is_ruler = no
-				has_role = admiral
+				is_ruler_of_own_country = no
+				has_role_of_type = admiral
 				has_negative_trait = no
 				#has_trait = explorer
 			}

@@ -239,6 +239,10 @@
 		value = 1.0
 	}	
 	
+	magnate_weight = {
+		value = 1.0
+	}
+
 	executive_weight = {
 		value = 1.0
 	}
@@ -248,11 +252,11 @@
 	}
 	
 	female_commander_chance = {	
-		value = 0.5
+		value = 0.25
 	}
 	
 	female_executive_chance = {
-		value = 0.5
+		value = 0.25
 	}
 
 	female_politician_chance = {
@@ -334,18 +338,22 @@
 			}
 		}
 	}
-
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
-	commander_leader_chance = {
+	
+	female_monarch_chance = {
 		value = 0.25
-		multiply = ig_commander_leader_chance_mult
+	}
+
+	# Multiplier applied to the weight for an appropriate commander will be selected from the character pool to lead the IG
+	# root = interest group
+	commander_leader_weight = {
+		value = 0.25
+		#multiply = ig_commander_leader_chance_mult
 		# also mod by cult traits? or is their effect on popularity enough? - do commanders ever get these traits
 	}
 
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
-	executive_leader_chance = {
+	# Multiplier applied to the weight for an appropriate executive will be selected from the character pool to lead the IG
+	# root = interest group
+	executive_leader_weight = {
 		value = 0.25
 	}
 }

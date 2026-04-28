@@ -51,7 +51,7 @@
 # 			# 		is_powerful = yes			
 # 			# 	}	
 # 			# 	any_scope_character = {
-# 			# 		is_ruler = yes
+# 			# 		is_ruler_of_own_country = yes
 # 			# 		has_eldritch_trait = yes
 # 			# 	}			
 # 			# }
@@ -131,5 +131,5 @@
 # 	#inheritable = yes
 # 	#progress_desc = "journal_entry_goal_progress_integer"
 
-# 	should_be_pinned_by_default = yes
+# 	should_be_pinned_by_default_uninvolved_or_context = yes
 # }

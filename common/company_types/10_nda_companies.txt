@@ -15,13 +15,14 @@ company_nda_bovril = {
 	
 	potential = {
 		country_has_primary_culture = cu:nda_cul_cultist
-		has_interest_marker_in_region = region_north_sea_coast				
+		has_interest_marker_in_region = region_western_europe
+				
 	}
 	
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				region = sr:region_north_sea_coast	
+				region = sr:region_western_europe
 			}
 		}
 	}
@@ -29,7 +30,7 @@ company_nda_bovril = {
 	possible = { 
 		AND = {
 			any_scope_state = {
-				region = sr:region_north_sea_coast	 # Canada or Britain?
+				region = sr:region_western_europe	 # Canada or Britain?
 
 				any_scope_building = {
 					is_building_type = building_food_industry
@@ -108,7 +109,7 @@ company_nda_marsh_fishing = {
 	}
 	
 	prosperity_modifier = {
-		country_convoys_capacity_mult = 0.2
+		country_ship_group_supply_ships_construction_efficiency_add = 0.2
 		building_shipyard_throughput_add = 0.05
 	}	
 

@@ -68,6 +68,8 @@
 	building_eiffel_tower = {"wonder_eiffel_tower_01_mesh"}
 	
 	building_urban_center = {}
+	building_naval_administration = {"arabic_port_navalbase_01_mesh"}
+
 	 
 	building_government_administration = {"arabic_city_govadmin_01_mesh"}
 	building_trade_center = {"arabic_city_tradecenter_01_mesh"}
@@ -77,8 +79,8 @@
 	building_financial_district = {"arabic_city_tradecenter_01_mesh"}
 	building_company_headquarter = {"generic_companyhq_01_mesh"}
 	building_company_regional_headquarter = {"generic_regionalcompanyhq_01_mesh"}
+	building_land_logistics_center = {"generic_logisticscenter_01_mesh"}
 
 	building_nda_ares_generators = {"nda_ares_generator_mesh"}
 	building_nda_ares_generator_ruins = {"nda_ares_generator_ruin_mesh"}
-
 }

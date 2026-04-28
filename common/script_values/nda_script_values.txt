@@ -170,8 +170,8 @@ nda_active_investigators =
 		limit = {
 			has_trait = nda_investigator
 			OR = {
-				has_role = politician
-				has_role = agitator
+				has_role_of_type = politician
+				has_role_of_type = agitator
 			}
 			is_busy = no
 		}
@@ -191,8 +191,8 @@ nda_purge_infamy =
 	every_scope_character = { # and ruler as well!
 		limit = { 
 			OR = {
-				has_role = politician
-				is_ruler = yes 					
+				has_role_of_type = politician
+				is_ruler_of_own_country = yes 					
 			}
 
 			has_eldritch_trait = yes
@@ -238,7 +238,7 @@ nda_masonic_potential =
 	}
 	if = {
 		limit = {
-			has_role = politician
+			has_role_of_type = politician
 		}
 		add = 1 # was getting too many generals
 	}
@@ -269,7 +269,7 @@ nda_masonic_potential =
 	}
 	if = {
 		limit = {
-			is_ruler = yes # No Active rulers (but can be prior - like British Royals)
+			is_ruler_of_own_country = yes # No Active rulers (but can be prior - like British Royals)
 		}
 		add = -10
 	}		
@@ -329,7 +329,7 @@ nda_masonic_ranking =
 
 	if = {
 		limit = {
-			is_ruler = yes # 
+			is_ruler_of_own_country = yes # 
 		}
 		add = 5
 	}		

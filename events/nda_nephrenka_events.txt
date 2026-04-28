@@ -238,7 +238,7 @@ nda_nephrenka.21 = { #Choose commander
 
 	# trigger = {
 	# 	any_scope_character = {
-	# 		has_role = admiral
+	# 		has_role_of_type = admiral
 	# 		is_busy = no
 	# 	}
 	# }
@@ -248,9 +248,9 @@ nda_nephrenka.21 = { #Choose commander
 		random_scope_character = {
 			limit = {
 				is_busy = no
-				#has_role = admiral
+				#has_role_of_type = admiral
 				has_trait = nda_investigator
-				is_ruler = no
+				is_ruler_of_own_country = no
 			}
 			save_scope_as = expedition_leader_1
 		}
@@ -258,8 +258,8 @@ nda_nephrenka.21 = { #Choose commander
 		random_scope_character = {
 			limit = {
 				is_busy = no
-				is_ruler = no
-				#has_role = admiral
+				is_ruler_of_own_country = no
+				#has_role_of_type = admiral
 				has_trait = explorer
 				NOT = {
 					this = scope:expedition_leader_1
@@ -271,8 +271,8 @@ nda_nephrenka.21 = { #Choose commander
 		random_scope_character = {
 			limit = {
 				is_busy = no
-				is_ruler = no
-				#has_role = admiral
+				is_ruler_of_own_country = no
+				#has_role_of_type = admiral
 				NOR = {
 					this = scope:expedition_leader_1
 					this = scope:expedition_leader_2
@@ -284,8 +284,8 @@ nda_nephrenka.21 = { #Choose commander
 		random_scope_character = {
 			limit = {
 				is_busy = no
-				is_ruler = no
-				#has_role = admiral
+				is_ruler_of_own_country = no
+				#has_role_of_type = admiral
 				NOR = {
 					this = scope:expedition_leader_1
 					this = scope:expedition_leader_2
@@ -932,7 +932,7 @@ nda_nephrenka.28 = { # Knife in the Dark - only if cult in opposition  - can hap
 					if = {
 						limit = {
 							scope:nda_nile_expedition_leader = {
-								has_role = general
+								has_role_of_type = general
 							}
 						}
 						add = -10

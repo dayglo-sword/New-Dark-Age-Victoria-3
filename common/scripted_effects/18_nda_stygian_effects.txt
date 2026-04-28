@@ -3,7 +3,7 @@ nda_effect_stygian_setup = {
 	# Set Country Leader as Cultist if not already
 	every_scope_character = {
 		limit = { 
-			is_ruler = yes 
+			is_ruler_of_own_country = yes 
 			has_yigian_trait = no 
 		}
 		add_trait = nda_yig_master # need to add to heirs as well?

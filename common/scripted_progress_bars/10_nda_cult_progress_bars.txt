@@ -158,8 +158,8 @@
 				any_scope_character = {
 					has_trait = nda_investigator
 					OR = {
-						has_role = politician
-						has_role = agitator
+						has_role_of_type = politician
+						has_role_of_type = agitator
 					}
 					is_busy = no		
 				} 

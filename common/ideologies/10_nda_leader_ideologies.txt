@@ -70,7 +70,7 @@
 	}
 
 	non_interest_group_leader_trigger = {
-		NOT = { has_role = agitator }
+		NOT = { has_role_of_type = agitator }
 		always = no
 	}
 

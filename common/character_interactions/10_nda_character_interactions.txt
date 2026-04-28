@@ -31,10 +31,10 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		}	
 		OR = {
 			interest_group.leader ?= THIS	
-			is_ruler = yes	
+			is_ruler_of_own_country = yes	
 		}
 
-		has_role = politician
+		has_role_of_type = politician
 		custom_tooltip = {
 			text = nda_not_senior_cultist_tt
 			has_any_cultist_trait = yes
@@ -97,7 +97,7 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		value = 5
 		if = {
 			limit = {
-				is_ruler = yes # boost for ruler, chance to be 'Grand Archon'			
+				is_ruler_of_own_country = yes # boost for ruler, chance to be 'Grand Archon'			
 			}
 			add = 20
 		}	
@@ -204,7 +204,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
 	potential = {
-		has_role = politician
+		has_role_of_type = politician
 
 		owner ?= scope:actor
 
@@ -312,7 +312,7 @@ convert_to_dagon = { # If not already give character eldritch trait
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
 	potential = {
-		has_role = politician
+		has_role_of_type = politician
 
 		owner ?= scope:actor
 
@@ -408,7 +408,7 @@ convert_to_yig = { # If not already give character eldritch trait
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
 	potential = {
-		has_role = politician
+		has_role_of_type = politician
 
 		owner ?= scope:actor
 
@@ -507,7 +507,7 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 		owner ?= scope:actor	
 		
 		# interest_group.leader ?= THIS # remove constraint as stops executives being selected
-		# has_role = politician	 # not needed due to IG leader check
+		# has_role_of_type = politician	 # not needed due to IG leader check
 		scope:actor ?= {
 			# has cult spread journal or Ritual in progress, also include completed but nothing for them to do yepast this point yet
 			OR = {
@@ -518,8 +518,8 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 				
 			any_scope_character = {
 				OR = {
-					has_role = politician		
-					has_role = executive	
+					has_role_of_type = politician		
+					has_role_of_type = executive	
 				}		
 				has_any_cultist_trait = yes					
 			}
@@ -527,8 +527,8 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 			NOT = { # Not already an Investigator active
 				any_scope_character = {
 					OR = {
-						has_role = politician		
-						has_role = executive					
+						has_role_of_type = politician		
+						has_role_of_type = executive					
 					}
 		
 					has_trait = nda_investigator 					
@@ -590,7 +590,7 @@ adopt_cult_culture = {
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
 	potential = {
-		#has_role = politician
+		#has_role_of_type = politician
 
 		owner ?= scope:actor
 

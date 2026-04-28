@@ -82,19 +82,19 @@ INJECT:DEFAULT = {
 		}
 	}
 
-	flag_definition = {
-		coa = colonial_niger_cultist
+	# flag_definition = {
+	# 	coa = colonial_niger_cultist
 
-		priority = 110
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = niger_subject_var
-				is_subject = no
-				country_has_primary_culture = cu:nda_cul_cultist
-			}
-		}
-	}
+	# 	priority = 110
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = niger_subject_var
+	# 			is_subject = no
+	# 			country_has_primary_culture = cu:nda_cul_cultist
+	# 		}
+	# 	}
+	# }
 
 	flag_definition = {
 		coa = colonial_senegal_cultist
@@ -124,19 +124,19 @@ INJECT:DEFAULT = {
 		}
 	}
 
-	flag_definition = {
-		coa = colonial_ethiopia_cultist
+	# flag_definition = {
+	# 	coa = colonial_ethiopia_cultist
 
-		priority = 110
-		trigger = {
-			exists = scope:actor
-			scope:actor ?= {
-				has_variable = ethiopia_subject_var
-				is_subject = no
-				country_has_primary_culture = cu:nda_cul_cultist
-			}
-		}
-	}
+	# 	priority = 110
+	# 	trigger = {
+	# 		exists = scope:actor
+	# 		scope:actor ?= {
+	# 			has_variable = ethiopia_subject_var
+	# 			is_subject = no
+	# 			country_has_primary_culture = cu:nda_cul_cultist
+	# 		}
+	# 	}
+	# }
 
 	# Eldritch Splinter State
 	flag_definition = {

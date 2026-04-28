@@ -176,6 +176,7 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 	}
 
 	wargoal_weights = {
+		annex_country = 1.5
 		conquer_state = 1.5
 		return_state = 1.5
 		reduce_autonomy = 1.5	
@@ -332,6 +333,12 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 		}	
 
 		conquer = {
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= root.country_rank
+			}
 			score = {
 				if = {
 					limit = {
@@ -360,11 +367,9 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 					add = 200
 				}				
 			}
-	
 		}
 	}
-	
-		
+
 	possible = {
 		# for primary cult countries only? - should be default
 		is_full_cult = yes
@@ -385,7 +390,29 @@ ai_strategy_nda_eldritch_diplomatic_agenda = { # based on ai_strategy_territoria
 			limit = { has_global_variable = nda_ritual_cthulhu_leaves }
 			multiply = 0.25
 		}
+
+		# AI implications for Power Blocs: 'Territorial Expansion' strategy is more likely for Blocs with Aggressive Coordination
+		if = {
+			limit = {
+				power_bloc ?= {
+					has_principle_group = principle_group:principle_group_aggressive_coordination
+				}
+			}
+			add = 5
+		}
+
+		# High-fervour AI is inclined to take its homelands
+		if = {
+			limit = {
+				country_fervor_primary_culture > 10
+			}
+			add = {
+				value = country_fervor_primary_culture
+				divide = 2
+			}
+		}
 	}
+
 }
 
 
@@ -399,7 +426,7 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 	}
 
 	min_law_chance_to_pass = {
-		value = 30
+		value = 20
 		if = {
 			limit = { ai_has_reasons_to_not_oppose_law = yes }
 			multiply = 0.5
@@ -454,16 +481,14 @@ ai_strategy_nda_eldritch_political_agenda = { # based on conservative agenda
 		movement_royalist_absolutist
 		movement_religious_majority
 		movement_cultural_majority
-		movement_german_national
-		movement_italian_national
 		movement_utilitarian
 		movement_corporatist
+		movement_modernizer
 		movement_orleanist
 		movement_bonapartist
 	}
 
 	anti_movements = {
-		movement_modernizer		
 		movement_socialist
 		movement_labor
 		movement_communist

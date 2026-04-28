@@ -10,6 +10,7 @@
 combat_unit_type_cultist_infantry = {
 	group = combat_unit_group_infantry
 	max_manpower = 1000
+    supply_capacity = 8
 
 	battle_modifier = {
         unit_offense_add = 15
@@ -23,11 +24,7 @@ combat_unit_type_cultist_infantry = {
 
     # scope = country
     can_build = {
-        OR = {
-            c:ELD ?= THIS
-            c:DGN ?= THIS
-            c:YIG ?= THIS
-        }
+        is_full_cult = yes
     }
 
     conscript_peasant_levies = yes
@@ -43,28 +40,28 @@ combat_unit_type_cultist_infantry = {
 }
 
 
-combat_unit_type_leviathan = {
-    group = combat_unit_group_capital_ship
-	max_manpower = 1000
+# combat_unit_type_leviathan = {
+#     group = combat_unit_group_capital_ship
+# 	max_manpower = 1000
     
-    upkeep_modifier = {
-        goods_input_fish_add = 50
-    }
+#     upkeep_modifier = {
+#         goods_input_fish_add = 50
+#     }
 
-    battle_modifier = {
-        unit_offense_add = 200
-        unit_defense_add = 200
-		unit_morale_loss_add = 4
-    }
+#     battle_modifier = {
+#         unit_offense_add = 200
+#         unit_defense_add = 200
+# 		unit_morale_loss_add = 4
+#     }
 
-    can_build = {
-       c:DGN ?= THIS
-        #has_technology_researched = battleship_tech
-        nda_coa_def_cthulhu_trigger = yes
-    }
+#     can_build = {
+#        c:DGN ?= THIS
+#         #has_technology_researched = battleship_tech
+#         nda_coa_def_cthulhu_trigger = yes
+#     }
 
-    # Fallback if nothing else matches
-    combat_unit_image = {
-        texture = "gfx/unit_illustrations/nda_leviathan.dds"
-    }
-}
+#     # Fallback if nothing else matches
+#     combat_unit_image = {
+#         texture = "gfx/unit_illustrations/nda_leviathan.dds"
+#     }
+# }

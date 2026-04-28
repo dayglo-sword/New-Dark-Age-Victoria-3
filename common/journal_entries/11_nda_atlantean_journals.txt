@@ -372,7 +372,7 @@
 	can_deactivate = yes
 	#inheritable = yes
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_nda_atlantean_kathulos = {
@@ -739,5 +739,5 @@ je_nda_atlantean_kathulos = {
 	can_deactivate = yes
 	#inheritable = yes
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

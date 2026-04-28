@@ -3,7 +3,7 @@
 		# Set Country Leader as Cultist if not already
 		every_scope_character = {
 			limit = { 
-				is_ruler = yes 
+				is_ruler_of_own_country = yes 
 				has_dagonic_trait = no 
 			}
 			add_trait = nda_dagon_master # need to add to heirs as well?
@@ -182,8 +182,8 @@ nda_effect_dagonic_annex = {
 				# transfer a leading character to DGN (preferably an historic one)
 				ordered_scope_character = {
 					limit = { 
-						is_ruler = no
-						has_role = politician
+						is_ruler_of_own_country = no
+						has_role_of_type = politician
 						has_any_cultist_trait = yes
 					}
 					order_by = { 
@@ -218,25 +218,25 @@ nda_effect_dagonic_annex = {
 						hidden_effect = {
 							if = {
 								limit = {
-									NOT = { has_role = agitator }
+									NOT = { has_role_of_type = agitator }
 								}
 								add_character_role = agitator
 							}
 							if = {
 								limit = {
-									has_role = general
+									has_role_of_type = general
 								}
 								remove_character_role = general
 							}
 							if = {
 								limit = {
-									has_role = admiral
+									has_role_of_type = admiral
 								}
 								remove_character_role = admiral
 							}
 							# if = {
 							# 	limit = {
-							# 		has_role = politician
+							# 		has_role_of_type = politician
 							# 	}
 							# 	set_as_interest_group_leader = no
 							# 	remove_character_role = politician
@@ -468,7 +468,7 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 		# Set Country Leader as Cultist if not already
 		every_scope_character = {
 			limit = { 
-				is_ruler = yes 
+				is_ruler_of_own_country = yes 
 				has_eldritch_trait = no 
 			}
 			add_trait = nda_master # need to add to heirs as well?

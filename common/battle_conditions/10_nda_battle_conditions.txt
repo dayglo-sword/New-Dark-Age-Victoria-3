@@ -11,7 +11,7 @@ battle_condition_nda_darks_magics = {
 	possible = {
 		exists = scope:character
 		scope:character = {
-			has_role = general
+			has_role_of_type = general
 			has_trait = nda_atlantean_trait
 		}
 		NOT = { has_battle_condition = battle_condition_blunder }

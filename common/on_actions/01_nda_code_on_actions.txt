@@ -221,7 +221,7 @@ nda_monthly_on_action = {
 			limit = {
 				OR = {
 					any_scope_character = {
-						is_ruler = yes
+						is_ruler_of_own_country = yes
 						has_any_cultist_trait = yes
 					}	
 					# any_interest_group = { leader = { has_any_cultist_trait = yes } }					
@@ -533,7 +533,7 @@ nda_half_yearly_heirs_on_action = {
 			limit = { 
 				any_scope_character = {
 					has_variable = is_nitocris
-					is_ruler = yes
+					is_ruler_of_own_country = yes
 				}	
 				NOT = {
 					any_character = {
@@ -556,7 +556,7 @@ nda_half_yearly_heirs_on_action = {
 			limit = { 
 				any_scope_character = {
 					has_variable = is_nephren 
-					is_ruler = yes
+					is_ruler_of_own_country = yes
 				}	
 				NOT = {
 					any_character = {

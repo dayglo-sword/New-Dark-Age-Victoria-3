@@ -236,7 +236,7 @@ je_nda_cult_spreads_btn_purge = {
 				is_powerful = yes			
 			}	
 			any_scope_character = {
-				is_ruler = yes
+				is_ruler_of_own_country = yes
 				custom_tooltip = {
 					text = je_nda_cult_spreads_btn_purge_is_cultist_tooltip
 					has_eldritch_trait = yes					
@@ -309,7 +309,7 @@ je_nda_cult_spreads_btn_purge = {
 			order_by = { 
 				add = 1
 				if = {
-					limit = { is_ruler = yes }
+					limit = { is_ruler_of_own_country = yes }
 					add = 1
 				}
 				if = {
@@ -337,8 +337,8 @@ je_nda_cult_spreads_btn_purge = {
 		every_scope_character = { # and ruler as well!
 			limit = { 
 				OR = {
-					has_role = politician
-					is_ruler = yes 					
+					has_role_of_type = politician
+					is_ruler_of_own_country = yes 					
 				}
 				has_variable = nda_purge_victim
 				has_eldritch_trait = yes
@@ -352,25 +352,25 @@ je_nda_cult_spreads_btn_purge = {
 				hidden_effect = {
 					if = {
 						limit = {
-							NOT = { has_role = agitator }
+							NOT = { has_role_of_type = agitator }
 						}
 						add_character_role = agitator
 					}
 					if = {
 						limit = {
-							has_role = general
+							has_role_of_type = general
 						}
 						remove_character_role = general
 					}
 					if = {
 						limit = {
-							has_role = admiral
+							has_role_of_type = admiral
 						}
 						remove_character_role = admiral
 					}
 					if = {
 						limit = {
-							has_role = politician
+							has_role_of_type = politician
 						}
 						set_as_interest_group_leader = no
 						remove_character_role = politician

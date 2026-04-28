@@ -10,6 +10,7 @@
 combat_unit_type_nda_ares_war_machine = {
 	group = combat_unit_group_infantry
 	max_manpower = 100
+    supply_capacity = 10
 
 	battle_modifier = {
         unit_offense_add = 750
@@ -32,7 +33,7 @@ combat_unit_type_nda_ares_war_machine = {
 
     formation_modifier = {
         military_formation_mobilization_speed_mult = 8
-        military_formation_movement_speed_mult = 2
+        #military_formation_movement_speed_mult = 2
     }
 
 

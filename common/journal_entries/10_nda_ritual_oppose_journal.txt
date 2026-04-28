@@ -98,9 +98,9 @@
 					limit = {
 						has_trait = nda_investigator
 						OR = {
-							has_role = politician
-							has_role = agitator
-							has_role = executive
+							has_role_of_type = politician
+							has_role_of_type = agitator
+							has_role_of_type = executive
 						}
 						is_busy = no
 					}
@@ -142,5 +142,5 @@
 
 	#inheritable = yes
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

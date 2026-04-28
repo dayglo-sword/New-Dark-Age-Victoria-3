@@ -730,12 +730,12 @@ spooky_halloween_events.5 = {
 		if = {
 			limit = {
 				any_scope_character = {
-					has_role = general
+					has_role_of_type = general
 				}
 			}
 			random_scope_character = {
 				limit = {
-					has_role = general
+					has_role_of_type = general
 				}
 				random_list = {
 					1 = {

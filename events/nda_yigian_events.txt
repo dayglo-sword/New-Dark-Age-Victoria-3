@@ -476,7 +476,7 @@ nda_yigian.1894 = {
 		# remove/sacrifice current leader - replace with Nitocris
 		# scope current leader
 		every_scope_character = {
-			limit = { is_ruler = yes }
+			limit = { is_ruler_of_own_country = yes }
 			save_scope_as = sacrificial_ruler
 		}
 		# add Nitocris - same method as Castiagne
@@ -560,7 +560,7 @@ nda_yigian.1894 = {
 # 		# remove/sacrifice current leader - replace with Nitocris
 # 		# scope current leader
 # 		every_scope_character = {
-# 			limit = { is_ruler = yes }
+# 			limit = { is_ruler_of_own_country = yes }
 # 			save_scope_as = sacrificial_ruler
 # 		}
 # 		# add Nitocris - same method as Castiagne

@@ -205,7 +205,7 @@ je_nda_ritual_assist = { # other countries should be able to help - launched via
 
 	#inheritable = yes
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 
@@ -352,7 +352,7 @@ je_nda_ritual_proceeds = {
 
 	#inheritable = yes
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 # je_nda_ritual_assist_global = {
@@ -523,5 +523,5 @@ je_nda_ritual_proceeds = {
 
 # 	#inheritable = yes
 
-# 	should_be_pinned_by_default = yes
+# 	should_be_pinned_by_default_uninvolved_or_context = yes
 # }

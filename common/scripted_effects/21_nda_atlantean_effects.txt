@@ -28,7 +28,7 @@
 				
 				random_scope_character = {
 					limit = { 
-						has_role = agitator 
+						has_role_of_type = agitator 
 						# is not existing Altantean
 					}
 					exile_character_with_martyrdom = yes
@@ -116,7 +116,7 @@ nda_effect_surama_back_from_exile = {
 				
 				random_scope_character = {
 					limit = { 
-						has_role = agitator 
+						has_role_of_type = agitator 
 						# is not existing Altantean
 					}
 					exile_character_with_martyrdom = yes
@@ -191,7 +191,7 @@ nda_effect_home_for_kathulos = {
 				
 				random_scope_character = {
 					limit = { 
-						has_role = agitator 
+						has_role_of_type = agitator 
 						# is not existing Altantean
 					}
 					exile_character_with_martyrdom = yes
@@ -281,7 +281,7 @@ nda_effect_kathulos_back_from_exile = {
 				
 				random_scope_character = {
 					limit = { 
-						has_role = agitator 
+						has_role_of_type = agitator 
 						# is not existing Altantean
 					}
 					exile_character_with_martyrdom = yes

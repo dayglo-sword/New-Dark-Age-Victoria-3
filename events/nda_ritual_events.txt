@@ -630,7 +630,7 @@ nda_ritual.8 = { # The Last war
 					change_relations = { country = c:ELD value = 100 } 
 					change_relations = { country = c:NEN value = -100 }
 					# add interest in area
-					add_declared_interest = region_new_england
+					#add_declared_interest = region_new_england
 				}
 				add_initiator_backers = { c:YIG }
 				add_diplomatic_play_war_support = { target = c:YIG value = 100 }	
@@ -642,7 +642,7 @@ nda_ritual.8 = { # The Last war
 					change_relations = { country = c:ELD value = 100 }
 					change_relations = { country = c:NEN value = -100 }
 					# add interest in area
-					add_declared_interest = region_new_england
+					#add_declared_interest = region_new_england
 				}				
 				add_initiator_backers = { c:DGN }	
 				add_diplomatic_play_war_support = { target = c:DGN value = 100 }			
@@ -653,7 +653,7 @@ nda_ritual.8 = { # The Last war
 					change_relations = { country = c:ELD value = 100 } 
 					change_relations = { country = c:NEN value = -100 }
 					# add interest in area
-					add_declared_interest = region_new_england
+					#add_declared_interest = region_new_england
 				}
 				add_initiator_backers = { c:LEN }
 				add_diplomatic_play_war_support = { target = c:LEN value = 100 }				
@@ -678,7 +678,7 @@ nda_ritual.8 = { # The Last war
 				change_relations = { country = c:ELD value = -100 }
 				change_relations = { country = c:NEN value = 100 }
 				# add interest in area
-				add_declared_interest = region_new_england
+				#add_declared_interest = region_new_england
 
 				scope:nda_dp_final_war_scope = {
 					add_target_backers = { PREV }	
@@ -952,7 +952,7 @@ nda_ritual.20 = {
 
 		random_scope_character = {
 			limit = {
-				is_ruler = no
+				is_ruler_of_own_country = no
 				has_negative_trait = no
 			}
 			# should use weighting based on existing afflictions.
@@ -963,8 +963,8 @@ nda_ritual.20 = {
 
 		random_scope_character = {
 			limit = {
-				is_ruler = no
-				has_role = politician
+				is_ruler_of_own_country = no
+				has_role_of_type = politician
 				has_negative_trait = no
 			}
 
@@ -973,8 +973,8 @@ nda_ritual.20 = {
 
 		random_scope_character = {
 			limit = {
-				is_ruler = no
-				has_role = general
+				is_ruler_of_own_country = no
+				has_role_of_type = general
 				has_negative_trait = no
 			}
 
@@ -983,8 +983,8 @@ nda_ritual.20 = {
 
 		random_scope_character = {
 			limit = {
-				is_ruler = no
-				has_role = admiral
+				is_ruler_of_own_country = no
+				has_role_of_type = admiral
 				has_negative_trait = no
 			}
 

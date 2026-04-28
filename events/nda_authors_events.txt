@@ -421,12 +421,12 @@ nda_authors.30 = { # A complaint
 		exists = ig:ig_nda_cult_worshippers
 		# must have non-ruler intelligentsia
 		any_scope_character = { 
-			is_ruler = no  			
+			is_ruler_of_own_country = no  			
 			interest_group = ig:ig_intelligentsia
 		}
 		# potentially expendable cultist
 		any_scope_character = { 
-				is_ruler = no  
+				is_ruler_of_own_country = no  
 				interest_group = ig:ig_nda_cult_worshippers
 		}
 	}
@@ -439,7 +439,7 @@ nda_authors.30 = { # A complaint
 		# get a random Intellectual as victim
 		ig:ig_intelligentsia = {
 			random_scope_character = {
-				limit = { is_ruler = no  }
+				limit = { is_ruler_of_own_country = no  }
 				save_scope_as = nda_rune_victim_1
 				add_trait = psychological_affliction
 			}
@@ -448,7 +448,7 @@ nda_authors.30 = { # A complaint
 		# get the cultists responsible
 		ig:ig_nda_cult_worshippers = {
 			random_scope_character = {
-				limit = { is_ruler = no  }
+				limit = { is_ruler_of_own_country = no  }
 				save_scope_as = nda_rune_antagonist
 			}
 		}
@@ -524,7 +524,7 @@ nda_authors.32 = { #  A Worried Intellectual
 		}
 		#random_scope_character = { 
 		#	limit = { 
-		#		is_ruler = no  
+		#		is_ruler_of_own_country = no  
 		#		interest_group = ig:ig_intelligentsia
 		#	} 
 		#	save_scope_as = nda_rune_potential_victim			
