@@ -72,6 +72,7 @@ nda_effect_generate_global_cult_list = {
 	ordered_country = {
 		limit = {
 			is_cultist_country = yes
+			
 			NOT = { # Hastur does not surrender to a giant cat with squid on its head
 				has_variable = nda_king_in_yellow_rules						
 			}

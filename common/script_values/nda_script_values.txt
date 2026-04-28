@@ -363,7 +363,7 @@ nda_masonic_ranking =
 		subtract = owner.global_country_ranking
 
 		if = { 
-			limit = { owner = c:NDA_ARES }
+			limit = { owner = { c:NDA_ARES ?= THIS } }
 			subtract = 200
 		}
 	}

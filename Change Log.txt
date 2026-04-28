@@ -10,7 +10,7 @@ Minor Changes
 Include pro and anti american lobbies in Reconcile journal progress
 
 Bug Fixes
-
+Fix 'Disaster Conditions' Notifications
 
 ------
 

@@ -119,6 +119,8 @@ is_cultist_country = {
 		text = nda_is_cultist_country
 		# has cult in the open
 		has_variable = nda_cultists_in_open
+		# has cultist culture
+		has_cult_culture = yes
 	}
 
 }

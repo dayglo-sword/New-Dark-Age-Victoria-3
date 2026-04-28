@@ -2,6 +2,7 @@
 ecchi_gbr_dickens_character_template = {
     first_name = Charles
     last_name = ecchi_Dickens
+	historical = yes # most certainly!
     culture = cu:british
     female = no
     religion = protestant
