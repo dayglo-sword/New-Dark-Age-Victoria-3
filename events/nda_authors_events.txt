@@ -35,7 +35,7 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 			template = protagonist_azedarac 
 			on_created = {
 				set_variable = is_azedarac
-				set_variable = memento_mori_immunity									
+				# set_variable = memento_mori_immunity									
 			}
 		}
 
@@ -60,7 +60,7 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 			scope:scope_azedarac = { 
 				add_trait = nda_master 
 				set_character_immortal = yes	
-				set_variable = memento_mori_immunity
+				# set_variable = memento_mori_immunity
 			}			
 		}
 
@@ -79,7 +79,7 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 			scope:scope_azedarac = { 
 				add_trait = nda_master 
 				set_character_immortal = yes	
-				set_variable = memento_mori_immunity
+				# set_variable = memento_mori_immunity
 			}			
 		}
 
@@ -113,7 +113,7 @@ nda_authors.10 = { # The Holiness of Azedarac - Character event
 			scope:scope_azedarac = { 
 				add_trait = nda_master 
 				add_character_role = agitator
-				set_variable = memento_mori_immunity
+				# set_variable = memento_mori_immunity
 			}			
 		}
 
@@ -307,7 +307,7 @@ nda_authors.20 = { # Lair of the White Worm - Character event
 			template = protagonist_arabella_march
 			on_created = {
 				set_variable = is_arabella_march	
-				set_variable = memento_mori_immunity								
+				# set_variable = memento_mori_immunity								
 			}
 		}
 
@@ -627,7 +627,7 @@ nda_authors.40 = {
 				template = protagonist_bellingham 
 				on_created = {
 					set_variable = is_bellingham
-					set_variable = memento_mori_immunity						
+					# set_variable = memento_mori_immunity						
 				}
 			}
 						
@@ -738,7 +738,7 @@ nda_authors.41 = { # Professor Challenger returns
 				template = investigator_professor_challenger 
 				on_created = {
 					set_variable = is_challenger
-					set_variable = memento_mori_immunity						
+					# set_variable = memento_mori_immunity						
 				}
 			}
 						
@@ -1326,7 +1326,7 @@ nda_authors.61 = { # Joke event for Nosferatu - Orlok sueing F. W. Murnau
 							template = nda_count_orlok 
 							on_created = {
 								set_variable = orlok_var	
-								set_variable = memento_mori_immunity					
+								# set_variable = memento_mori_immunity					
 							}
 						}						
 					}

@@ -7,6 +7,7 @@
 				has_dagonic_trait = no 
 			}
 			add_trait = nda_dagon_master # need to add to heirs as well?
+			add_character_role = character_role_nda_cultist
 			change_character_religion = rel:nda_rel_cultist # no nda_rel_dagonic as yet
 			change_character_culture = cu:nda_cul_dagonic
 			nda_effect_ensure_cult_ideology = yes	
@@ -52,6 +53,7 @@
 						has_any_cultist_trait = no 
 					}
 					add_trait = nda_dagon_acolyte		
+					add_character_role = character_role_nda_cultist
 				}
 
 				nda_effect_ensure_cult_ideology = yes			
@@ -78,7 +80,8 @@
 					limit = { 
 						has_any_cultist_trait = no 
 					}
-					add_trait = nda_dagon_cultist		
+					add_trait = nda_dagon_cultist	
+					add_character_role = character_role_nda_cultist	
 				}
 			}
 		}
@@ -530,6 +533,7 @@ nda_effect_leng_setup = { # Dagon releases Leng lands
 			
 			leader = {
 				add_trait = nda_cultist
+				add_character_role = character_role_nda_cultist
 			}
 		}	
 

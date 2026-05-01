@@ -96,12 +96,13 @@
 				# reduce if Investigators are around
 				every_scope_character = {
 					limit = {
-						has_trait = nda_investigator
-						OR = {
-							has_role_of_type = politician
-							has_role_of_type = agitator
-							has_role_of_type = executive
-						}
+						has_role = character_role_nda_investigator
+						# has_trait = nda_investigator
+						# OR = {
+						# 	has_role_of_type = politician
+						# 	has_role_of_type = agitator
+						# 	has_role_of_type = executive
+						# }
 						is_busy = no
 					}
 					change_global_variable = {

@@ -58,6 +58,7 @@
 					}
 					add_trait = nda_cultist	
 					remove_trait = nda_investigator 
+					remove_character_role = character_role_nda_investigator
 				}
 
 				nda_effect_ensure_cult_ideology = yes			
@@ -120,6 +121,7 @@
 			}
 			add_trait = nda_cultist	
 			remove_trait = nda_investigator 
+			remove_character_role = character_role_nda_investigator
 		}
 
 		nda_effect_ensure_cult_ideology = yes	

@@ -34,10 +34,11 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 			is_ruler_of_own_country = yes	
 		}
 
-		has_role_of_type = politician
+			#has_role_of_type = politician
 		custom_tooltip = {
 			text = nda_not_senior_cultist_tt
 			has_any_cultist_trait = yes
+			has_role = character_role_nda_cultist
 			#has_any_cultist_master_trait = no
 
 		}
@@ -49,10 +50,12 @@ set_head_of_coven = { # If no coven leader exists this button 'promotes' charact
 		custom_tooltip = {
 			text = nda_not_senior_cultist_tt
 			has_any_cultist_trait = yes
+			has_role = character_role_nda_cultist
 		}
 		custom_tooltip = {
 			text = nda_no_senior_cultist_IG_leaders_tt
 		}	
+		is_busy = no
 	}
 
 	effect = {
@@ -204,7 +207,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 	clicksound = "event:/SFX/UI/Military/command_grant"
 
 	potential = {
-		has_role_of_type = politician
+		#has_role_of_type = politician
 
 		owner ?= scope:actor
 
@@ -215,8 +218,10 @@ initiate_into_coven = { # If not already give character eldritch trait
 		custom_tooltip = {
 			text = nda_not_cultist_tt
 			has_any_cultist_trait = no
+			NOT = { has_role = character_role_nda_cultist }
 		}
 		NOT = { has_trait = nda_investigator } # investigators are immune
+		NOT = { has_role = character_role_nda_investigator }	
 	}		
 
 	possible = {
@@ -234,7 +239,8 @@ initiate_into_coven = { # If not already give character eldritch trait
 					country_has_primary_culture = cu:nda_cul_cultist 
 				} 				
 			}
-			add_trait = nda_cultist			
+			add_trait = nda_cultist	
+			add_character_role = character_role_nda_cultist		
 		}
 		else_if = {
 			limit = { 
@@ -242,7 +248,8 @@ initiate_into_coven = { # If not already give character eldritch trait
 					country_has_primary_culture = cu:nda_cul_dagonic 
 				} 				
 			}
-			add_trait = nda_dagon_cultist			
+			add_trait = nda_dagon_cultist	
+			add_character_role = character_role_nda_cultist				
 		}
 		else_if = {
 			limit = { 
@@ -250,7 +257,8 @@ initiate_into_coven = { # If not already give character eldritch trait
 					country_has_primary_culture = cu:nda_cul_yigian 
 				} 				
 			}
-			add_trait =  nda_yig_cultist			
+			add_trait =  nda_yig_cultist
+			add_character_role = character_role_nda_cultist					
 		}
 	}
 
@@ -516,21 +524,21 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 				has_global_variable = nda_ritual_completed			
 			}
 				
-			any_scope_character = {
-				OR = {
-					has_role_of_type = politician		
-					has_role_of_type = executive	
-				}		
-				has_any_cultist_trait = yes					
-			}
+			# any_scope_character = {
+			# 	OR = {
+			# 		has_role_of_type = politician		
+			# 		has_role_of_type = executive	
+			# 	}		
+			# 	has_any_cultist_trait = yes					
+			# }
 
 			NOT = { # Not already an Investigator active
 				any_scope_character = {
-					OR = {
-						has_role_of_type = politician		
-						has_role_of_type = executive					
-					}
-		
+					# OR = {
+					# 	has_role_of_type = politician		
+					# 	has_role_of_type = executive					
+					# }
+					has_role = character_role_nda_investigator
 					has_trait = nda_investigator 					
 				}				
 			}
@@ -539,7 +547,7 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 		custom_tooltip = {
 			text = nda_not_investigator_tt
 			has_any_cultist_trait = no
-			NOT = { has_trait = nda_investigator }
+			NOT = { has_role = character_role_nda_investigator }
 		}
 		
 	}		
@@ -605,7 +613,7 @@ adopt_cult_culture = {
 			has_any_cultist_trait = yes
 		}
 
-		NOT = { has_trait = nda_investigator } # investigators are immune
+		NOT = { has_role = character_role_nda_investigator } # investigators are immune
 	}		
 
 	possible = {

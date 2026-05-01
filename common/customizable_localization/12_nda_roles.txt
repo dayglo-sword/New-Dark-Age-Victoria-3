@@ -1,46 +1,64 @@
-﻿
-character_role_cultist_custom_loc = {
+﻿character_role_nda_cultist_custom_loc = {
     type = character
-    random_valid = yes
-        
-    text = {
+    random_valid = no
+       
+	text = {
         trigger = {
-            is_female = no
-            is_noble = yes
+			has_trait = nda_cultist	
         }    
-        localization_key = character_title_lord
+        localization_key = nda_rank_cultist
     }
     text = {
         trigger = {
-            is_female = no
-            is_noble = yes
+			has_trait = nda_yig_cultist
         }    
-        localization_key = character_title_baron
+        localization_key = nda_rank_neophyte
     }
     text = {
         trigger = {
-            is_female = no
-            is_noble = yes
+			has_trait = nda_dagon_cultist
         }    
-        localization_key = character_title_count
+        localization_key = nda_rank_hierophant
     }
     text = {
         trigger = {
-            is_female = no
-            is_noble = yes
+			has_trait = nda_acolyte	
         }    
-        localization_key = character_title_marquis
+        localization_key = nda_rank_acolyte
     }
     text = {
         trigger = {
-            is_female = no
-            is_noble = no
+			has_trait = nda_yig_acolyte
         }    
-        localization_key = character_title_gentleman
+        localization_key = nda_rank_epigone
+    }
+    text = {
+        trigger = {
+			has_trait = nda_dagon_acolyte
+        }    
+        localization_key = nda_rank_apostle
+    }
+    text = {
+        trigger = {
+			has_trait = nda_master	
+        }    
+        localization_key = nda_rank_master
+    }
+    text = {
+        trigger = {
+			has_trait = nda_yig_master
+        }    
+        localization_key = nda_rank_master
+    }
+    text = {
+        trigger = {
+			has_trait = nda_dagon_master
+        }    
+        localization_key = nda_rank_master
     }
 }
 
-character_role_masonic_custom_loc = {
+character_role_nda_masonic_custom_loc = {
 	type = character
 	random_valid = no
 	text = {

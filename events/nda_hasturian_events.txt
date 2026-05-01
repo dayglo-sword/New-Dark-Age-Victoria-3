@@ -406,7 +406,7 @@ nda_hasturian.5 = { # Create Imperial America
 					set_variable = is_castaigne		
 					set_variable = THE_NEFARIOUS_TOP_HAT	
 					set_character_immortal = yes	
-					set_variable = memento_mori_immunity					
+					# set_variable = memento_mori_immunity					
 				}
 			}
 
@@ -656,7 +656,7 @@ nda_hasturian.10 = { # If he dies bring him back.
 					set_variable = is_castaigne	
 					set_variable = THE_NEFARIOUS_TOP_HAT	
 					set_character_immortal = yes
-					set_variable = memento_mori_immunity							
+					# set_variable = memento_mori_immunity							
 				}
 			}
 

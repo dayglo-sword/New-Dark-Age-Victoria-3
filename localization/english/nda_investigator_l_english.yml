@@ -1,5 +1,8 @@
 ﻿l_english:
 
+# Role
+character_role_nda_investigator: "[concept_nda_investigator]"
+
 # character command
 set_as_investigator: "Investigate Cult"
 nda_not_investigator_tt: "Not a member of the Cult"

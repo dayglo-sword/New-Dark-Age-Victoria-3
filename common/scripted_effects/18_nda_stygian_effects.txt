@@ -58,7 +58,8 @@ nda_effect_stygian_setup = {
 				limit = { 
 					has_any_cultist_trait = no 
 				}
-				add_trait = nda_yig_cultist		
+				add_trait = nda_yig_cultist	
+				add_character_role = character_role_nda_cultist	
 			}
 		}
 	}

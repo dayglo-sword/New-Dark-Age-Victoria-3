@@ -13,6 +13,10 @@ concept_nda_dagon: "Dagon, the Lord of the Seas"
 concept_nda_dagon_short: "Dagon"
 concept_nda_dagon_desc: "Son of the [concept_nda_cthulhu] itself. Sibling of Hydra.\n\nDagon resides in his realm beneath the waves, awaiting the day when he and his followers, the [concept_nda_deep_ones], can once more rule the Shores as well as the Seas.\n\n#ITALIC ...the thing slid into view above the dark waters. Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares...\n\n...it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds.#!"
 
+concept_nda_cultist: "Cultist"
+concept_nda_cultist_short: "Cultist"
+concept_nda_cultist_desc: "Follower of the [concept_nda_old_ones].\n\nThey await the day when the Stars are Right so [concept_nda_cthulhu] can arise from their deathless slumber.\n\nIn R'lyeh they shall sleep no more.\n\n #ITALIC Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn#!."
+
 concept_nda_deep_ones: "Deep Ones"
 concept_nda_deep_ones_short: "Deep Ones"
 concept_nda_deep_ones_desc: "Inhabitants of the Seas who occasionally make their home on land, but always near the shores.\n\n#ITALIC ...they were damnably human in general outline despite webbed hands and feet, shockingly wide and flabby lips, glassy, bulging eyes, and other features less pleasant to recall...#!"
@@ -103,3 +107,9 @@ concept_esoteric_orders_desc: "An organisation, normally of a spiritual or relig
 concept_spiritualism: "Spiritualism"
 concept_spiritualism_adj: "Spiritualist"
 concept_spiritualism_desc: "A belief that individuals survive the deaths of their bodies by ascending into a spirit existence. The condition after death is directly related to the moral quality of a person's existence.\n\nAt first being organised and maintained by small groups and travelling Mediums, it later develops into a more centralised Church with major proponents around the world."
+
+# Character Roles
+#concept_nda_investigator
+concept_nda_mason: "Mason"
+concept_nda_mason_short: "Mason"
+concept_nda_mason_desc: "Members of a Masonic Order.\n\nThere are multiple Rites that can be studied beyond the Three Levels."

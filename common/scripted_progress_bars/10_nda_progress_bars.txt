@@ -26,7 +26,10 @@
 		}
 
 		if = {
-			limit = { any_political_lobby = { target = c:USA is_political_lobby_type = lobby_pro_country  } }	
+			limit = { 
+				exists = c:USA
+				any_political_lobby = { target = c:USA is_political_lobby_type = lobby_pro_country  } 
+			}	
 			
 			add = {
 				desc = "nda_yankee_reconcile_pro_lobby_tt"				
@@ -41,7 +44,10 @@
 			}
 
 		if = {
-			limit = { any_political_lobby = { target = c:USA is_political_lobby_type = lobby_anti_country  } }	
+			limit = { 
+				exists = c:USA
+				any_political_lobby = { target = c:USA is_political_lobby_type = lobby_anti_country  } 
+			}	
 
 			subtract = {
 				desc = "nda_yankee_reconcile_anti_lobby_tt"				

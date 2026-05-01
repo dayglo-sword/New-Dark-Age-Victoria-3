@@ -1,5 +1,7 @@
 ﻿l_english:
 
+
+
 nda_cultist: "Eldritch Cultist"
 nda_cultist_desc: "This person is a Cultist, the most junior level of the Eldritch Cult."
 nda_acolyte: "Eldritch Acolyte"
@@ -21,6 +23,18 @@ nda_dagon_master_desc: "This person has become a Master of the Dagonic Cult."
 
 nda_investigator: "Occult Investigator"
 nda_investigator_desc: "This person has the habit of poking their nose where it doesn't belong."
+
+# Role
+character_role_nda_cultist: "[concept_nda_cultist]"
+
+# Role Ranks
+nda_rank_cultist: "Cultist"
+nda_rank_acolyte: "Acolyte"
+nda_rank_master: "Master"
+nda_rank_neophyte: "Neophyte"
+nda_rank_epigone: "Epigone"
+nda_rank_hierophant: "Hierophant"
+nda_rank_apostle: Apostle"
 
 # Rank based
 nda_grand_master: "Archon"

@@ -65,7 +65,7 @@ nda_leader_cult_potential =
 		add = -2
 	}
 	if = {
-		limit = { leader = { has_trait = nda_investigator } } # should never be candidate
+		limit = { leader = { has_role = character_role_nda_investigator } } # should never be candidate
 		add = -20
 	}
 }
@@ -143,7 +143,8 @@ nda_active_investigator_IGs =
 		limit = { 
 			is_marginal = no 
 			leader = { 
-				has_trait = nda_investigator
+				has_role = character_role_nda_investigator
+				#has_trait = nda_investigator
 			}
 		}
 
@@ -168,11 +169,12 @@ nda_active_investigators =
 
 	every_scope_character = {
 		limit = {
-			has_trait = nda_investigator
-			OR = {
-				has_role_of_type = politician
-				has_role_of_type = agitator
-			}
+			has_role = character_role_nda_investigator
+			# has_trait = nda_investigator
+			# OR = {
+			# 	has_role_of_type = politician
+			# 	has_role_of_type = agitator
+			# }
 			is_busy = no
 		}
 
@@ -314,6 +316,11 @@ nda_masonic_potential =
 nda_masonic_ranking =
 {
 	value = 0 # does this actually do random amount?
+
+	add = prominence
+
+	divide = 10
+
 	if = {
 		limit = {
 			has_variable = nda_lodge_master # used to promote masters 
@@ -365,6 +372,11 @@ nda_masonic_ranking =
 		if = { 
 			limit = { owner = { c:NDA_ARES ?= THIS } }
 			subtract = 200
+		}
+
+		if = {
+			limit = { owner = { has_variable = nda_masonry_outlawed } }
+			subtract = 20
 		}
 	}
 	else = {

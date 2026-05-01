@@ -116,7 +116,7 @@ nda_historic_regional.1860 = {  # Angkor discovered by Henri Mouhot 'the works o
 		OR = {
 			p:xFB565E = { state = { owner = ROOT } }
 			has_interest_marker_in_region = p:xFB565E.region	
-			has_interest_marker_in_region = region_france # Also in France as French explorer
+			has_interest_marker_in_region = p:x71DA2E.region # paris should be region_france # Also in France as French explorer
 		}
 	}
 

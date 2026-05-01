@@ -1,0 +1,43 @@
+﻿## United States
+ship_names_historical_nen_capital_ships = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = NEN
+
+	allowed_ship_types = {
+		ship_type_ship_of_the_line
+		ship_type_early_ironclad
+		ship_type_modern_ironclad
+		ship_type_pre_dreadnought
+		ship_type_dreadnought
+		ship_type_super_dreadnought
+		ship_type_frigate
+		ship_type_iron_frigate
+		ship_type_light_cruiser
+		ship_type_protected_cruiser
+		ship_type_armored_cruiser
+		ship_type_monitor
+		ship_type_coastal_defense_ship	
+		ship_type_torpedo_boat_destroyer
+		ship_type_destroyer	
+		ship_type_supply_ship
+		ship_type_troop_ship
+	}
+
+	properties = {
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_nen" # Due to USA dynamic naming format this should be used by all iterations of the US, regardless of laws
+		}
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				nen_ship_miskatonic nen_ship_arkham nen_ship_innsmouth nen_ship_kingsport  nen_ship_providence nen_ship_boston nen_ship_new_haven
+				nen_ship_maine nen_ship_vermont nen_ship_connecticut nen_ship_rhode_island nen_ship_massachusetts
+			}
+		}
+	}
+}
+

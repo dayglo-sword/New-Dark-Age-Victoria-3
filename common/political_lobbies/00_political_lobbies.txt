@@ -961,7 +961,8 @@
 		if = {
 			limit = { 
 				leader ?= {
-					has_trait = nda_investigator
+					has_role = character_role_nda_investigator
+					#has_trait = nda_investigator
 				}
 				scope:target_country = {
 					has_cult_culture = yes
@@ -1765,7 +1766,8 @@ lobby_anti_country = {
 		if = {
 			limit = { 
 				leader ?= {
-					has_trait = nda_investigator
+					has_role = character_role_nda_investigator
+					#has_trait = nda_investigator
 				}
 				scope:target_country = {
 					has_cult_culture = yes
@@ -2691,7 +2693,8 @@ lobby_anti_overlord = {
 		if = {
 			limit = { 
 				leader ?= {
-					has_trait = nda_investigator
+					has_role = character_role_nda_investigator
+					#has_trait = nda_investigator
 				}
 				scope:target_country = {
 					has_cult_culture = yes

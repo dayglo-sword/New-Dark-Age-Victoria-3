@@ -93,7 +93,7 @@ nda_ares.2 = { # The Crystal Egg
 
 	trigger = {
 		is_player = yes
-		has_global_variable = nda_ares_is_loaded
+		#has_global_variable = nda_ares_is_loaded
 		#has_global_variable = nda_ares_invasion_choice
 		OR = {
 			AND = {

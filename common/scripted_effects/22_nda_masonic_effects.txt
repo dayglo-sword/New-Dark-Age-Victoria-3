@@ -560,6 +560,10 @@ nda_effect_recruit_mason = {
 			}
 
 			add_modifier = { name = nda_mason_modifier }
+
+			add_character_role = character_role_nda_masonic
+			#add_character_role = nda_masonic
+
 			debug_log = "Mason Recruited : [THIS.GetCharacter.GetFullNameNoFormatting]"
 		}
 	}

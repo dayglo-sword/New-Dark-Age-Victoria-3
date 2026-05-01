@@ -58,7 +58,7 @@
 					interest_group = ig_landowners
 
 					on_created = {					
-						set_variable = memento_mori_immunity
+						# set_variable = memento_mori_immunity
 						set_character_immortal = yes
 						#save_scope_as = scope_sumara
 
@@ -221,7 +221,7 @@ nda_effect_home_for_kathulos = {
 					interest_group = ig_landowners
 
 					on_created = {					
-						set_variable = memento_mori_immunity
+						# set_variable = memento_mori_immunity
 						set_character_immortal = yes
 						#save_scope_as = scope_sumara
 

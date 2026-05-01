@@ -156,11 +156,7 @@
 		if = {
 			limit = { 
 				any_scope_character = {
-					has_trait = nda_investigator
-					OR = {
-						has_role_of_type = politician
-						has_role_of_type = agitator
-					}
+					has_role = character_role_nda_investigator
 					is_busy = no		
 				} 
 			}
@@ -177,8 +173,8 @@
 			limit = { 
 				any_interest_group = {
 					is_marginal = no 
-					leader = { 
-						has_trait = nda_investigator
+					leader ?= { 
+						has_role = character_role_nda_investigator
 					}			
 				} 
 			}

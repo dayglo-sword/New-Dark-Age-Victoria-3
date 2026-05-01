@@ -113,8 +113,32 @@ je_nda_ritual_oppose_btn_start = {
 			limit = {
 				has_investigators = yes
 			}
-			add = 40
+			add = 30
+		}
+		if = {
+			limit = {
+				bureaucracy > 100 
+			}
+			add = 10
 		}	
+		if = {
+			limit = {
+				influence > 100 
+			}
+			add = 10
+		}	
+		if = {
+			limit = {
+				bureaucracy < 0 
+			}
+			subtract = 10
+		}	
+		if = {
+			limit = {
+				influence < 0
+			}
+			subtract = 10
+		}
 	}
 
 	possible = {
@@ -158,12 +182,25 @@ je_nda_ritual_oppose_btn_halt = {
 	}
 
 	ai_chance = {
-		value = 10
+		value = 0
 		if = {
 			limit = {
 				has_investigators = no
 			}
-			add = 40
+			add = 15
+		}
+
+		if = {
+			limit = {
+				bureaucracy < 0 
+			}
+			add = 5
+		}	
+		if = {
+			limit = {
+				influence < 0
+			}
+			add = 5
 		}
 	}
 

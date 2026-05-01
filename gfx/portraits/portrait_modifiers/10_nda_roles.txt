@@ -1,0 +1,67 @@
+﻿nda_role_clothes = {
+	usage = game
+	selection_behavior = weighted_random
+	fallback = no_role
+    priority = 5
+
+    no_role = {
+        # no stuff needed
+    }
+
+    default_role_clothes = { # For Mason and Investigators without standard roles
+        dna_modifiers = {
+
+            # remove default clothes
+            accessory = {
+                mode = add
+                gene = outfits
+                template = no_outfit
+                range = { 0 1 } # For the randomness to work correctly
+            }
+
+           accessory = {
+               mode = add
+               gene = waistcoats
+               template = european_waistcoats
+               range = { 0 1 } # For the randomness to work correctly
+            }
+
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                scope:character ?= {
+                    OR = {
+                        has_role = character_role_nda_investigator
+                        has_role = character_role_nda_masonic
+                    }
+                }
+            }
+            modifier = {
+                subtract = 200
+                scope:character ?= {
+                    OR = {
+                        has_role_of_type = politician
+                        has_role_of_type = general
+                        has_role_of_type = executive
+                        has_role_of_type = agitator
+                    }
+                }
+            }
+        }
+    }
+}
+

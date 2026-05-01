@@ -60,7 +60,7 @@ nda_marsh_obed_character_template = { # should have Obed Marsh for founder
 	}
 	on_created = {
         set_variable = is_marsh
-		set_variable = memento_mori_immunity
+		# set_variable = memento_mori_immunity
     }
 }
 
@@ -90,7 +90,7 @@ nda_marsh_onesiphorus_character_template = { # Onesiphorus Marsh
 	}
 	on_created = {
         set_variable = is_marsh
-		set_variable = memento_mori_immunity
+		# set_variable = memento_mori_immunity
     }
 }
 
@@ -119,7 +119,7 @@ nda_marsh_barnabas_character_template = { # Barnabas Marsh at time of Innsmouth 
 	}
 	on_created = {
         set_variable = is_marsh
-		set_variable = memento_mori_immunity
+		# set_variable = memento_mori_immunity
     }
 }
 
@@ -148,7 +148,7 @@ nda_generic_curwen_character_template = { # Should be same character that is per
 	}
 	on_created = {
         set_variable = is_curwen
-		set_variable = memento_mori_immunity
+		# set_variable = memento_mori_immunity
     }
 }
 
@@ -177,6 +177,6 @@ nda_generic_whatley_character_template = { #
 	#}
 	on_created = {
         set_variable = is_whatley
-		set_variable = memento_mori_immunity
+		# set_variable = memento_mori_immunity
     }
 }

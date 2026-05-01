@@ -9,15 +9,12 @@ nda_dagonic.10 = { # need to check if a leader is available to convert
 	}
 
 	immediate = {
-		debug_log = "Convert Leader for DGN"
+		debug_log = "Convert Character for DGN"
 				# set ig leader Cultist to be dagonic
-		random_interest_group = {
-			limit = { 
-				leader = { 
+		random_scope_character = {
+				limit = {
 					has_eldritch_trait = yes
-				} 
-			}
-			leader = {
+				}
 				if = { limit = {  has_trait = nda_cultist } 
 					add_trait = nda_dagon_cultist # should override existing
 					remove_trait = nda_cultist
@@ -31,11 +28,38 @@ nda_dagonic.10 = { # need to check if a leader is available to convert
 					remove_trait = nda_master
 				}
 				save_scope_as = converted_ig_leader
-			}
-			owner = {
-				trigger_event = { id = nda_dagonic.1 }			
-			}		
-		}
+
+				owner = {
+					trigger_event = { id = nda_dagonic.1 }			
+				}
+		}				
+
+
+		# random_interest_group = {
+		# 	limit = { 
+		# 		leader = { 
+		# 			has_eldritch_trait = yes
+		# 		} 
+		# 	}
+		# 	leader = {
+		# 		if = { limit = {  has_trait = nda_cultist } 
+		# 			add_trait = nda_dagon_cultist # should override existing
+		# 			remove_trait = nda_cultist
+		# 		}
+		# 		else_if = { limit = { has_trait = nda_acolyte }
+		# 			add_trait = nda_dagon_acolyte # should override existing
+		# 			remove_trait = nda_acolyte
+		# 		}
+		# 		else_if = { limit = { has_trait = nda_master }
+		# 			add_trait = nda_dagon_master # should override existing
+		# 			remove_trait = nda_master
+		# 		}
+		# 		save_scope_as = converted_ig_leader
+		# 	}
+		# 	owner = {
+		# 		trigger_event = { id = nda_dagonic.1 }			
+		# 	}		
+		# }
 	}
 }
 

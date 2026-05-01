@@ -5,7 +5,7 @@
 # No root scope set
 on_game_started = {
 	on_actions = {
-		nda_game_started_on_action
+		nda_game_started_on_action		
 	}
 }
 
@@ -23,12 +23,14 @@ nda_game_started_on_action = {
 	}
 }
 
+
 # Fires after everyone enters the game from the lobby for the first time for each campaign
 # At this point we DO know who the players are
 # No root scope set
 on_game_started_after_lobby = {
 	on_actions = {
 		nda_game_started_after_lobby_on_action
+		nda_ares_game_started_after_lobby_on_action		
 	}
 }
 
@@ -46,6 +48,24 @@ nda_game_started_after_lobby_on_action = {
 			}
 			trigger_event = {
 				id = nda_base.1
+				#days = 1
+				popup = yes
+			}
+		}
+	}
+}
+
+nda_ares_game_started_after_lobby_on_action = {
+		effect = {
+
+		# NDA start up event / screen
+		every_country = {
+			limit = {
+				is_player = yes 
+				NOT = { has_game_rule = orson_wells_landing }
+			}
+			trigger_event = {
+				id = nda_ares.1
 				#days = 1
 				popup = yes
 			}
@@ -594,6 +614,7 @@ nda_on_character_creation_on_action = {
 				has_any_cultist_trait = no								
 			}
 			add_trait = nda_cultist
+			add_character_role = character_role_nda_cultist
 			change_character_religion = rel:nda_rel_cultist
 			# give cultist ideology
 			nda_effect_ensure_cult_ideology = yes	
@@ -604,6 +625,7 @@ nda_on_character_creation_on_action = {
 				has_any_cultist_trait = no			
 			}
 			add_trait = nda_dagon_cultist
+			add_character_role = character_role_nda_cultist
 			change_character_religion = rel:nda_rel_cultist
 			# give cultist ideology
 			nda_effect_ensure_cult_ideology = yes	
@@ -614,6 +636,7 @@ nda_on_character_creation_on_action = {
 				has_any_cultist_trait = no
 			}
 			add_trait = nda_yig_cultist
+			add_character_role = character_role_nda_cultist
 			change_character_religion = rel:nda_rel_yigian
 			# give cultist ideology
 			nda_effect_ensure_cult_ideology = yes	

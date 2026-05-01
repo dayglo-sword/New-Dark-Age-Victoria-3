@@ -10,7 +10,7 @@
 			has_interest_marker_in_region = sr:region_west_africa
 			has_interest_marker_in_region = sr:region_east_africa
 			has_interest_marker_in_region = sr:region_southern_africa
-			has_interest_marker_in_region = sr:region_congo
+			has_interest_marker_in_region = sr:region_equatorial_africa
 		}
 		# don't include for cultists
 		NOT = {
