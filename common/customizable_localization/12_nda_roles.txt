@@ -58,7 +58,7 @@
     }
 }
 
-character_role_nda_masonic_custom_loc = {
+character_role_nda_mason_custom_loc = {
 	type = character
 	random_valid = no
 	text = {

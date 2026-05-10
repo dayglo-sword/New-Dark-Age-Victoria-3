@@ -131,7 +131,7 @@ nda_effect_generate_global_cult_leader_list = {
 			limit = { any_scope_character = {  has_variable = nda_coven_leader } }
 
 			random_scope_character = {
-				limit =  {  has_variable = nda_coven_leader }
+				limit =  {  has_variable = nda_coven_leader is_in_void = no }
 				add_to_global_variable_list = {
 					name = nda_global_cult_leader_list
 					target = THIS
@@ -210,11 +210,12 @@ nda_effect_generate_global_coven_leader_list = {
 			is_cultist_country = yes
 			any_scope_character = {
 				has_variable = nda_coven_leader
+				is_in_void = no
 			}
 		}
 
 		random_scope_character = {
-			limit = { has_variable = nda_coven_leader }
+			limit = { has_variable = nda_coven_leader is_in_void = no }
 			add_to_global_variable_list = {
 				name = nda_global_cult_list
 				target = THIS

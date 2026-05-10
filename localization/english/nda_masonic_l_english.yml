@@ -17,7 +17,7 @@ nda_rite_templars: "Knights Templar"
 nda_rite_humain: "Le Droit Humain"
 
 # Role
-character_role_nda_masonic: "[concept_nda_mason]"
+character_role_nda_mason: "[concept_nda_mason]"
 
 # Titles
 nda_masonic_title_basic: "Mason"

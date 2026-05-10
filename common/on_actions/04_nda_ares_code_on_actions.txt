@@ -112,6 +112,16 @@ nda_ares_monthly_on_action = {
 			add_treasury = 50000
 			add_investment_pool = 10000
 
+			# # can have far too much bureacracy
+			# if = {
+			# 	limit = {
+			# 		relative_bureaucracy > 1
+			# 	}
+			# 	every_scope_state = {
+			# 		if (
+			# 	}
+			# }
+
 			# release puppets or just add lots of radicals? - can be loyal due to strategy? - need to do quicker
 			every_subject_or_below = {
 				limit = { 					

@@ -9,7 +9,7 @@
             morph = {
                 mode = add
                 gene = NDA_gene_skin_color
-                template = blue_skin
+                template = green_skin
                 range = { 0 1 } # For the randomness to work correctly
             }
         }

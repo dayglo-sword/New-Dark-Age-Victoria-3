@@ -34,7 +34,7 @@ nda_rank_master: "Master"
 nda_rank_neophyte: "Neophyte"
 nda_rank_epigone: "Epigone"
 nda_rank_hierophant: "Hierophant"
-nda_rank_apostle: Apostle"
+nda_rank_apostle: "Apostle"
 
 # Rank based
 nda_grand_master: "Archon"
@@ -162,3 +162,11 @@ nda_fury_of_dagon: "Fury of Dagon"
 nda_fury_of_dagon_desc: "An attack from the Sea by the undersea God! Devasting and flooding the land."
 nda_red_death: "The Red Death"
 nda_red_death_desc: "A horrid desease with a high mortality"
+nda_sea_monsters: "Sea Monsters"
+nda_sea_monsters_desc: "Creatures from the Depths harass those who belong on land."
+
+# Battle Modifiers
+naval_condition_nda_sea_monsters: "Sea Monsters Attack"
+naval_condition_nda_sea_monsters_desc: "Attacking Sea Monsters makes an admiral's life difficult."
+battle_naval_condition_nda_sea_monsters_chance_mult: "[GetNavalBattleCondition('naval_condition_nda_sea_monsters').GetName]$modifier_character_battle_condition_suffix$"
+battle_naval_condition_nda_sea_monsters_chance_mult_desc: "$modifier_character_battle_condition_desc_prefix$[GetNavalBattleCondition('naval_condition_nda_sea_monsters').GetName]$modifier_character_battle_condition_desc_suffix$"

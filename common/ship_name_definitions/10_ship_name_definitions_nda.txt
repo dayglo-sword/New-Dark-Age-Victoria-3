@@ -41,3 +41,90 @@ ship_names_historical_nen_capital_ships = {
 	}
 }
 
+ship_names_historical_yig_capital_ships = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = YIG
+
+	allowed_ship_types = {
+		ship_type_ship_of_the_line
+		ship_type_early_ironclad
+		ship_type_modern_ironclad
+		ship_type_pre_dreadnought
+		ship_type_dreadnought
+		ship_type_super_dreadnought
+		ship_type_frigate
+		ship_type_iron_frigate
+		ship_type_light_cruiser
+		ship_type_protected_cruiser
+		ship_type_armored_cruiser
+		ship_type_monitor
+		ship_type_coastal_defense_ship	
+		ship_type_torpedo_boat_destroyer
+		ship_type_destroyer	
+		ship_type_supply_ship
+		ship_type_troop_ship
+	}
+
+	properties = {
+		# {
+		# 	type = custom_text
+		# 	key = "PREFIX"
+		# 	custom_text = "ship_prefix_nen" # Due to USA dynamic naming format this should be used by all iterations of the US, regardless of laws
+		# }
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				yig the_snake the_serpent the_viper the_cobra the_blackadder the_ophidia yidhra ayi'ig k'baa hastur ithaqua nyarlathotep zhar lloigor cyäegha nyogtha shub-niggurath tsathoggua aphoom-zhah cthugha ghatanothoa zoth-ommog
+				lotan typhaon tulu the_stygian nephren-ka 
+				# Hyperborian version of names from CAS - Yigians are ancient race
+				yok-zothoth kthulhut zhothaqquah ubbo-satha
+			}
+		}
+	}
+}
+
+ship_names_historical_dagon_capital_ships = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = DGN
+
+	allowed_ship_types = {
+		ship_type_ship_of_the_line
+		ship_type_early_ironclad
+		ship_type_modern_ironclad
+		ship_type_pre_dreadnought
+		ship_type_dreadnought
+		ship_type_super_dreadnought
+		ship_type_frigate
+		ship_type_iron_frigate
+		ship_type_light_cruiser
+		ship_type_protected_cruiser
+		ship_type_armored_cruiser
+		ship_type_monitor
+		ship_type_coastal_defense_ship	
+		ship_type_torpedo_boat_destroyer
+		ship_type_destroyer	
+		ship_type_supply_ship
+		ship_type_troop_ship
+	}
+
+	properties = {
+		# {
+		# 	type = custom_text
+		# 	key = "PREFIX"
+		# 	custom_text = "ship_prefix_nen" # Due to USA dynamic naming format this should be used by all iterations of the US, regardless of laws
+		# }
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				the_deep the_abyss the_storm the_waves the_pelagic the_cetacen the_kraken nyarlathotep zhar lloigor cyäegha nyogtha tsathoggua aphoom-zhah cthugha cthulhu ghatanothoa hydra zoth-ommog 
+				gobogeg khal'kru chaugnar_faugn bokrug juk-shabb shaurash-ho ghoth
+				scylla charybdis adaro 
+				dagon hydra zoth-ommog ceto the_leviathan
+			}
+		}
+	}
+}

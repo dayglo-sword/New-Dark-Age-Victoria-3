@@ -1,0 +1,52 @@
+﻿# Mirrors of sea harvest condition types
+naval_condition_nda_sea_monsters = {
+	icon = "gfx/interface/icons/harvest_condition_icons/nda_disaster_fury_of_dagon.dds" # reuse dagon icon
+
+	possible = {
+		always = yes
+	}
+
+	weight = {
+		value = 0
+
+		if = {
+			limit = {
+				scope:region = {
+					has_harvest_condition = nda_sea_monsters
+				}
+			}
+			add = 10
+		}
+	}
+
+	period = {
+		value = 0
+	}
+
+	max_hull_damage = {
+		value = 30
+	}
+
+	max_crew_damage = {
+		value = 10
+	}
+
+	period = {
+		value = 8
+	}
+
+	intensity = {
+		fixed_range = {
+			min = 0.3
+			max = 0.6
+		}
+	}
+
+	modifier = {
+		ship_accuracy_mult = -0.3
+		ship_movement_speed_mult = -0.3
+		ship_readiness_gain_mult = -0.3
+		ship_screening_mult = -0.3
+	}
+
+}

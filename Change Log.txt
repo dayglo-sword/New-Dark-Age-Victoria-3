@@ -1,6 +1,6 @@
 ------
 
-Version v1.13.3
+Version v1.13.4
 
 Major Changes
 Include all Martian content from 'Forever Autumn' mod.
@@ -11,6 +11,7 @@ Minor Changes
 Include pro and anti american lobbies in Reconcile journal progress.
 Adjust weightings for AI Oppose the Ritual.
 Include Prominence in Mason List order.
+Add 'Sea Monsters' harvest condition.
 
 Bug Fixes
 Fix 'Disaster Conditions' Notifications

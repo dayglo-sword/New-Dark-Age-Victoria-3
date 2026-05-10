@@ -46,7 +46,7 @@
                 scope:character ?= {
                     OR = {
                         has_role = character_role_nda_investigator
-                        has_role = character_role_nda_masonic
+                        has_role = character_role_nda_mason
                     }
                 }
             }

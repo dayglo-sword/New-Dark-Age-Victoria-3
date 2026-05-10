@@ -428,9 +428,9 @@ nda_effect_lodge_leader = { # running half-yearly
 			}
 
 			ordered_scope_character = {
-				# limit = { 
-				# 	NOT = { has_variable = nda_is_mason } 
-				# }
+				limit = { 
+					is_in_void = no
+				}
 
 				order_by = nda_masonic_potential
 				max = 1
@@ -495,7 +495,7 @@ nda_effect_lodge_leader = { # running half-yearly
 		}
 		else_if = {
 			limit = {	
-				any_scope_character = { has_variable = nda_lodge_master count > 1 }
+				any_scope_character = { has_variable = nda_is_mason has_variable = nda_lodge_master count > 1 }
 				game_date >= 1837.6.1  # Don't trigger till after initial Mason event
 			}
 			trigger_event = { id = nda_masonic.10 days = { 3 7 } } # A question of Leadership
@@ -521,7 +521,9 @@ nda_effect_recruit_mason = {
 		ordered_scope_character = {
 			limit = { 
 				NOT = { has_variable = nda_is_mason } 
+				NOT = { has_variable = nda_is_former_mason }
 				NOT = { has_culture = cu:nda_cul_aresian } # No Martians
+				is_in_void = no
 			}
 
 			order_by = nda_masonic_potential
@@ -561,7 +563,7 @@ nda_effect_recruit_mason = {
 
 			add_modifier = { name = nda_mason_modifier }
 
-			add_character_role = character_role_nda_masonic
+			add_character_role = character_role_nda_mason
 			#add_character_role = nda_masonic
 
 			debug_log = "Mason Recruited : [THIS.GetCharacter.GetFullNameNoFormatting]"
@@ -713,6 +715,21 @@ nda_effect_clean_masons = {
 		else = {
 			nda_effect_unban_masons = yes # should correct any rogue negatives
 		}
+
+		
+	}
+
+	# if no longer has role - set as pariah and remove masonic modifier		
+	every_character = {
+		limit = { 
+			has_variable = nda_is_mason
+			NOT = { has_role = character_role_nda_mason }
+		}
+		remove_modifier = nda_mason_modifier
+		remove_modifier = nda_master_mason_pariah_modifier
+		remove_variable = nda_is_mason
+		remove_variable = nda_masonic_rite
+		set_variable = nda_is_former_mason
 	}
 
 }
@@ -800,6 +817,7 @@ nda_effect_generate_mason_list = {
 	every_scope_character = {
 		limit = {
 			is_mason = yes
+			is_in_void = no
 			#owner = { NOT = { has_variable = nda_masonry_outlawed }}
 		}
 		owner = {
@@ -816,6 +834,7 @@ nda_effect_generate_global_mason_list = {
 	ordered_character = {
 		limit = {
 			is_mason = yes
+			is_in_void = no
 			#owner = { NOT = { has_variable = nda_masonry_outlawed }}
 		}
 
@@ -841,6 +860,7 @@ nda_effect_generate_global_mason_count = {
 			every_character = {
 				limit = {
 					is_mason = yes
+					is_in_void = no
 					#owner = { NOT = { has_variable = nda_masonry_outlawed }}
 				}
 				add = 1

@@ -94,10 +94,7 @@ has_negative_trait = {
 is_mason = {
 	custom_tooltip = {
 		text = nda_is_mason
-		OR = {
-			has_variable = nda_is_mason
-			has_variable = nda_lodge_master
-		}	
+		has_role = character_role_nda_mason	
 	}
 
 }
@@ -212,12 +209,8 @@ lost_cities_exist = {
 has_investigators = {
 	any_scope_character = {
 		has_role = character_role_nda_investigator
-		# has_trait = nda_investigator
-		# OR = {
-		# 	has_role_of_type = politician
-		# 	has_role_of_type = agitator
-		# }
 		is_busy = no
+		is_in_void = no
 	}
 }
 
@@ -232,6 +225,7 @@ has_masons = {
 		text = nda_eldritch_cultist_tt
 		any_scope_character = {
 			is_mason = yes
+			is_in_void = no
 		}
 	}
 }
@@ -239,6 +233,8 @@ has_masons = {
 has_masonic_master = {
 	any_scope_character = { 
 		has_variable = nda_lodge_master
+		is_mason = yes
+		is_in_void = no
 	}
 }
 
