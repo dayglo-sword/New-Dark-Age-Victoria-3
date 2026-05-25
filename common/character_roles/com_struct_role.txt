@@ -1,10 +1,10 @@
-﻿﻿com_struct_role = {
-	spawn_characters_to_pool = no
+﻿﻿character_role_com_struct = {
+	#spawn_characters_to_pool = no
 
-	priority = 99999
+	priority = 10
 
 	career_length = {
-		99999
-		99999
+		100
+		1000
 	}
 }

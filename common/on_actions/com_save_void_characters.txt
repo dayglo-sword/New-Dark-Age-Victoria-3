@@ -26,7 +26,15 @@ on_com_save_structs = {
 					}
 				}
 				transfer_character = scope:com_internal_prestige_leader
-				# set_variable = memento_mori_immunity
+				set_career_length = {
+					years = 10000
+				}
+				# replace_character_roles = {
+				# 	remove_all = yes
+				# 	add = {
+				# 		character_role_com_struct
+				# 	}
+				# }
 				if = {
 					limit = {
 						is_in_void = no

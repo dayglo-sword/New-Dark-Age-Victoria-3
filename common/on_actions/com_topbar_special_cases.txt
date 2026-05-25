@@ -1,0 +1,30 @@
+﻿# Root = Country
+# scope:target = Uprising country
+on_revolution_start = {
+	on_actions = {
+		on_com_revolution_copt_topbar
+	}
+}
+
+on_com_revolution_copt_topbar = {
+	effect = {
+		every_in_list = {
+			variable = com_topbar_first_line
+			scope:target = {
+				add_to_variable_list = {
+					name = com_topbar_first_line
+					target = prev
+				}
+			}
+		}
+		every_in_list = {
+			variable = com_topbar_second_line
+			scope:target = {
+				add_to_variable_list = {
+					name = com_topbar_second_line
+					target = prev
+				}
+			}
+		}
+	}
+}
