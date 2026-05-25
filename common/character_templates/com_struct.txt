@@ -1,4 +1,4 @@
-﻿﻿struct_template = {
+﻿struct_template = {
 	# I am building my own struct system
 	# with Blackjack and Hookers
 	first_name = Blackjack
@@ -13,7 +13,7 @@
 		set_career_length = {
 			years = 10000
 		}
-		add_character_role = character_role_com_struct
+		#add_character_role = character_role_com_struct
 		# replace_character_roles = {
 		# 	remove_all = yes
 		# 	add = {

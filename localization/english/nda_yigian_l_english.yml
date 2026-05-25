@@ -42,3 +42,4 @@ nda_yigian.1894.a: "Hail Nitocris!"
 ## triggers
 is_potentially_yigian: "The ancestrial lands of the worshipers of [concept_nda_yig]."
 is_potentially_yigian_lands: "The ancestrial lands of the Serpent worshipers."
+is_potentially_yigian_location: "Capital is in the ancestrial lands of the worshipers of [concept_nda_yig]."

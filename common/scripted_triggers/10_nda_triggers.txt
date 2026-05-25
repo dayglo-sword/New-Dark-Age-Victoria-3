@@ -124,17 +124,21 @@ is_cultist_country = {
 
 is_potentially_yigian = { 
 	# has capital in certain american lands
-	is_capital = yes
-	OR = {
-		# the Yigian realms
-		region = sr:region_brazil
-		region = sr:region_andes
-		region = sr:region_la_plata
-		region = sr:region_gran_colombia
-		#region = sr:region_great_plains # original home in books - should be oklahoma which is dixie!
-		#region = sr:region_mexico
-		region = sr:region_central_america
+	custom_tooltip = {
+		text = is_potentially_yigian_location
+		is_capital = yes
+		OR = {
+			# the Yigian realms
+			region = sr:region_brazil
+			region = sr:region_andes
+			region = sr:region_la_plata
+			region = sr:region_gran_colombia
+			#region = sr:region_great_plains # original home in books - should be oklahoma which is dixie!
+			#region = sr:region_mexico
+			region = sr:region_central_america
+		}			
 	}
+
 }
 
 is_potentially_yigian_lands = { 

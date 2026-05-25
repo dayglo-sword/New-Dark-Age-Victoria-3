@@ -319,7 +319,7 @@ nda_masonic_ranking =
 
 	add = prominence
 
-	divide = 10
+	divide = 5
 
 	if = {
 		limit = {

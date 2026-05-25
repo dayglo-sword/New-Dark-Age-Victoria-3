@@ -75,7 +75,7 @@ character_role_nda_mason_custom_loc = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 1		# unified		
+				var:nda_masonic_rite ?= 1		# unified		
 			}
 			religion = rel:nda_rel_cultist
 		}
@@ -86,7 +86,7 @@ character_role_nda_mason_custom_loc = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 1		# unified		
+				var:nda_masonic_rite ?= 1		# unified		
 				has_variable = nda_lodge_master			
 			}
 		}
@@ -97,7 +97,7 @@ character_role_nda_mason_custom_loc = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 1		# unified		
+				var:nda_masonic_rite ?= 1		# unified		
 				has_variable = nda_is_mason			
 			}
 		}
@@ -108,7 +108,7 @@ character_role_nda_mason_custom_loc = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 2
+				var:nda_masonic_rite ?= 2
 				has_variable = nda_lodge_master					
 			}
 
@@ -120,7 +120,7 @@ character_role_nda_mason_custom_loc = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 2
+				var:nda_masonic_rite ?= 2
 				has_variable = nda_is_mason					
 			}
 
@@ -132,7 +132,7 @@ character_role_nda_mason_custom_loc = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 3
+				var:nda_masonic_rite ?= 3
 				has_variable = nda_lodge_master					
 			}
 
@@ -144,7 +144,7 @@ character_role_nda_mason_custom_loc = {
 		trigger = {
 			AND = {
 				has_variable = nda_masonic_rite
-				var:nda_masonic_rite = 3
+				var:nda_masonic_rite ?= 3
 				has_variable = nda_is_mason					
 			}
 

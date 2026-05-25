@@ -162,14 +162,6 @@ nda_lostcity_defense_modifier = {
 	unit_kill_rate_add = 5
 }
 
-# replaced by condition
-# nda_red_death_modifier = {
-# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_skull_negative.dds
-# 	state_mortality_mult = 1.7 # needs to be more? or scaled like plague?
-# 	state_migration_pull_mult = -0.3
-# 	state_migration_push_mult = 0.3
-# }
-
 nda_hastur_critics_choice_ig_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_approval_add = 5
@@ -196,11 +188,6 @@ nda_sea_creatures_modifier = {
 	state_standard_of_living_add = -1
 	state_mortality_mult = 0.05
 }
-
-# nda_country_persecute_cultists = {
-# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-# 	country_nda_cul_cultist_cultural_acceptance_add = -10
-#}
 
 nda_new_dark_age_country_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_nda_skull_negative.dds
