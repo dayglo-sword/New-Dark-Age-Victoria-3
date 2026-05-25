@@ -522,6 +522,7 @@ nda_effect_recruit_mason = {
 			limit = { 
 				NOT = { has_variable = nda_is_mason } 
 				NOT = { has_culture = cu:nda_cul_aresian } # No Martians
+				NOT = { has_template = struct_template } # No Toolbar Structs
 			}
 
 			order_by = nda_masonic_potential

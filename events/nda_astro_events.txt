@@ -297,7 +297,7 @@ nda_astro.1881 = { # 1881 conjunction
 
 nda_astro.3 = { # 1881 conjunction
 	type = country_event
-	gui_window = nda_event_window_full 
+	gui_window = nda_event_window_conjunction_full 
 	placement = ROOT
 	title = nda_astro.2.t
 	desc = nda_astro.2.d
@@ -385,6 +385,10 @@ nda_astro.3 = { # 1881 conjunction
 				nda_effect_boost_unification = yes						
 			}			
 		}
+		if = {
+			limit = { is_player = yes }
+			nda_effect_generate_global_cult_leader_list = yes		
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -437,7 +441,7 @@ nda_astro.1901 = {  # 1901 conjunction
 
 nda_astro.4 = { # 1901 conjunction
 	type = country_event
-	gui_window = nda_event_window_full 
+	gui_window = nda_event_window_conjunction_full 
 	placement = ROOT
 	title = nda_astro.2.t
 	desc = nda_astro.2.d
@@ -529,6 +533,10 @@ nda_astro.4 = { # 1901 conjunction
 				nda_effect_boost_unification = yes						
 			}			
 		}
+		if = {
+			limit = { is_player = yes }
+			nda_effect_generate_global_cult_leader_list = yes		
+		}
 	}	
 			
 	option = { #"A bit worrying..." # Nothing you can do
@@ -578,7 +586,7 @@ nda_astro.1921 = { # 1921 conjunction
 
 nda_astro.5 = { # 1921 conjunction
 	type = country_event
-	gui_window = nda_event_window_full 
+	gui_window = nda_event_window_conjunction_full 
 	placement = ROOT
 	title = nda_astro.2.t
 	desc = nda_astro.2.d
@@ -672,6 +680,10 @@ nda_astro.5 = { # 1921 conjunction
 				nda_effect_rite_conversion = yes
 				nda_effect_boost_unification = yes						
 			}			
+		}
+		if = {
+			limit = { is_player = yes }
+			nda_effect_generate_global_cult_leader_list = yes		
 		}
 	}	
 			

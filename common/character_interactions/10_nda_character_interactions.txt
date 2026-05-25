@@ -219,9 +219,11 @@ initiate_into_coven = { # If not already give character eldritch trait
 			text = nda_not_cultist_tt
 			has_any_cultist_trait = no
 			NOT = { has_role = character_role_nda_cultist }
+
 		}
 		NOT = { has_trait = nda_investigator } # investigators are immune
 		NOT = { has_role = character_role_nda_investigator }	
+		NOT = { has_template = struct_template } # No Toolbar Structs
 	}		
 
 	possible = {

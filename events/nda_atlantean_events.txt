@@ -51,9 +51,14 @@ nda_atlantean.10 = { # Tomb of Surama found in North Africa - remanant of atlant
 		default_option = yes
 
 		trigger = {
-			p:xC46661 = { state = { owner = ROOT } }
+			NOT = { any_character = { has_template = nda_surama_character_template } }
+			#p:xC46661 = { state = { owner = ROOT } }
+			NOT = { is_country_type = decentralized }
+			coa_def_african_trigger = 	yes
+			NOT = { has_law_or_variant = law_type:law_isolationism }
 		}
 
+		debug_log = "Find Sumara Home : [THIS.GetCountry.GetNameNoFormatting]"	
 		# find suitable country
 		nda_effect_home_for_surama = yes
 

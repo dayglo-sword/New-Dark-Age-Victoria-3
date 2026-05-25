@@ -51,7 +51,7 @@
                 }
             }
             modifier = {
-                subtract = 200
+                add = -200
                 scope:character ?= {
                     OR = {
                         has_role_of_type = politician
