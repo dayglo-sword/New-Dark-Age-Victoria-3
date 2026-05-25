@@ -612,7 +612,8 @@ nda_on_character_creation_on_action = {
 			limit = {
 				has_culture = cu:nda_cul_cultist
 				has_any_cultist_trait = no	
-				NOT = { has_template = struct_template } # No Toolbar Structs							
+				NOT = { has_template = struct_template } # No Toolbar Structs	
+				is_in_void = no						
 			}
 			add_trait = nda_cultist
 			add_character_role = character_role_nda_cultist
@@ -624,7 +625,8 @@ nda_on_character_creation_on_action = {
 			limit = {
 				has_culture = cu:nda_cul_dagonic
 				has_any_cultist_trait = no	
-				NOT = { has_template = struct_template } # No Toolbar Structs		
+				NOT = { has_template = struct_template } # No Toolbar Structs	
+				is_in_void = no	
 			}
 			add_trait = nda_dagon_cultist
 			add_character_role = character_role_nda_cultist
@@ -637,6 +639,7 @@ nda_on_character_creation_on_action = {
 				has_culture = cu:nda_cul_yigian
 				has_any_cultist_trait = no
 				NOT = { has_template = struct_template } # No Toolbar Structs
+				is_in_void = no
 			}
 			add_trait = nda_yig_cultist
 			add_character_role = character_role_nda_cultist

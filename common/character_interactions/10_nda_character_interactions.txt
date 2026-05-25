@@ -224,6 +224,7 @@ initiate_into_coven = { # If not already give character eldritch trait
 		NOT = { has_trait = nda_investigator } # investigators are immune
 		NOT = { has_role = character_role_nda_investigator }	
 		NOT = { has_template = struct_template } # No Toolbar Structs
+		is_in_void = no
 	}		
 
 	possible = {
