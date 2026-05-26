@@ -3,6 +3,7 @@
 Primarily a RP mod - where you can play an independent New England as the world goes strange(r). 
 Will you sit by and let the Old Ones take over the world? 
 Not limited to Lovecraft - Contains content from other Horror writers from the era and the historical events that helped inspire them.
+Now include Martians after merging the 'Forever Autumn' mod into it.
 
 Paradox Plaza:
 https://mods.paradoxplaza.com/mods/60846/Any
