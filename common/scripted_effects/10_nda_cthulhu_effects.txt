@@ -140,7 +140,7 @@
 				set_variable = nda_nameless_cults_selected
 			}
 
-			# supress nationalist movements - new ones are done by half-yearly effect
+			# suppress nationalist movements - new ones are done by half-yearly effect
 			
 		}
 
@@ -472,7 +472,7 @@ nda_effect_movement_noncultist_mofifiers = {
 				nda_coa_def_cthulhu_trigger = yes 
 				NOT = { has_modifier = nda_reign_of_cthulhu_modifier }
 			}
-			# modifier to supress movement
+			# modifier to suppress movement
 			add_modifier = nda_reign_of_cthulhu_modifier				
 		}
 		else_if = {

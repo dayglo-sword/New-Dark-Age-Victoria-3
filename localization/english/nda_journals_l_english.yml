@@ -28,7 +28,7 @@
 nda_cult_spread_progress_bar_name: "Cult Spread"
 nda_cult_spread_progress_bar_desc: "How far the Cult has expanded its influence"
 nda_cult_spread_force_cult_tt: "Force Cult on Eldricth Nation"
-nda_cult_spread_nameless_cults_supressed_tt: "The book #i Nameless Cults#! being supressed"
+nda_cult_spread_nameless_cults_suppressed_tt: "The book #i Nameless Cults#! being suppressed"
 nda_cult_spread_interest_group_tt: "Non-marginalised [Concept('concept_interest_group','$concept_interest_groups$')] controlled by Cultists"
 nda_cult_spread_interest_group_powerful_tt: "[concept_powerful] Interest Groups controlled by Cultists"
 nda_cult_spread_interest_group_government_tt: "Interest Groups [concept_in_government] controlled by Cultists"

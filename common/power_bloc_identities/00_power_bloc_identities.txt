@@ -184,7 +184,7 @@ identity_sovereign_empire = {
 	}
 
 	possible = {
-		has_law = law_type:law_monarchy
+		country_has_monarchy_law = yes
 	}
 
 	can_leave = {
@@ -309,7 +309,7 @@ identity_ideological_union = {
 	}
 
 	leader_modifier = {
-		country_law_enactment_time_mult = -0.1
+		country_law_enactment_speed_mult = 0.15
 		country_can_impose_same_lawgroup_governance_principles_in_power_bloc_bool = yes
 		country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
 	}
@@ -971,7 +971,7 @@ identity_cultural = {
 	}
 
 	ai_weight = {
-		value = 50
+		value = 25
 
 		if = {
 			limit = {
@@ -980,7 +980,7 @@ identity_cultural = {
 					ig:ig_petty_bourgeoisie ?= { is_in_government = yes }
 				}
 			}
-			add = 100
+			add = 25
 		}
 
 		if = {
@@ -1168,12 +1168,7 @@ identity_nda_cultist = {
 		if = {
 			limit = {
 				religion = {
-					NOT = { has_discrimination_trait = heritage_nda_esoteric }
-					# NOR = { 
-						
-					# 	#has_discrimination_trait = abomination
-					# 	#has_discrimination_trait = esoteric
-					# }					
+					NOT = { has_discrimination_trait = heritage_nda_esoteric }				
 				}			
 			}
 			multiply = 0.1		

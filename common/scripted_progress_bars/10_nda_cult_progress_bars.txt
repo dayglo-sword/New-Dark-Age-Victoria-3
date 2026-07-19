@@ -144,10 +144,10 @@
 
 		# use ban on 'nameless Cults' to throtle back
 		if = {
-			limit = { has_variable = nda_nameless_cults_supressed}
+			limit = { has_variable = nda_nameless_cults_suppressed}
 			
 			subtract = {
-				desc = "nda_cult_spread_nameless_cults_supressed_tt"
+				desc = "nda_cult_spread_nameless_cults_suppressed_tt"
 				add = 1
 			}					
 		}

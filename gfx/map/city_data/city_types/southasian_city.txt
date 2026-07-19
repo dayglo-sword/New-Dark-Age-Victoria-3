@@ -79,7 +79,7 @@
 	building_financial_district = {"arabic_city_tradecenter_01_mesh"}
 	building_company_headquarter = {"generic_companyhq_01_mesh"}
 	building_company_regional_headquarter = {"generic_regionalcompanyhq_01_mesh"}
-	building_land_logistics_center = {"generic_logisticscenter_01_mesh"}
+	building_army_logistics_center = {"generic_logisticscenter_01_mesh"}
 
 	building_nda_ares_generators = {"nda_ares_generator_mesh"}
 	building_nda_ares_generator_ruins = {"nda_ares_generator_ruin_mesh"}

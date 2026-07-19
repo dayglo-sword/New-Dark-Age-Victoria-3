@@ -28,6 +28,8 @@
 
 	modifiers_while_active = {
 		# Reduce movements over all
+		#country_tax_income_add = 0.5
+		nda_atlantean_support_modifier
 	}
 
 	status_desc = {
@@ -188,7 +190,7 @@
 
 				}
 				1 = {
-					# modifier to supress local movements to stop revolts, supress liberal
+					# modifier to suppress local movements to stop revolts, suppress liberal
 					ROOT = {
 						if = {
 							limit = { 
@@ -198,7 +200,7 @@
 								}
 							}
 
-							debug_log = "Atlantean - Sumara : Supress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
+							debug_log = "Atlantean - Sumara : suppress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
 
 							every_political_movement = {
 								limit = {
@@ -405,6 +407,8 @@ je_nda_atlantean_kathulos = {
 
 	modifiers_while_active = {
 		# Reduce movements over all
+		#country_tax_income_add = 0.5
+		nda_atlantean_support_modifier
 	}
 
 	on_weekly_pulse = {		
@@ -545,7 +549,7 @@ je_nda_atlantean_kathulos = {
 
 				}
 				1 = {
-					# modifier to supress local movements to stop revolts, supress liberal
+					# modifier to suppress local movements to stop revolts, suppress liberal
 					ROOT = {
 						if = {
 							limit = { 
@@ -555,7 +559,7 @@ je_nda_atlantean_kathulos = {
 								}
 							}
 
-							debug_log = "Atlantean - Kathulos : Supress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
+							debug_log = "Atlantean - Kathulos : suppress Local Movements : [THIS.GetCountry.GetNameNoFormatting]"
 
 							every_political_movement = {
 								limit = {

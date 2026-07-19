@@ -360,7 +360,7 @@ nda_eap.14 = { # Red Death Redemption - post Red Death Spiritualist boost
 		}
 	}
 
-	option = { # supress
+	option = { # suppress
 		name = nda_eap.14.c
 
 	}

@@ -1,5 +1,19 @@
 ------
 
+Version v1.13.9
+
+Major Changes
+
+
+Minor Changes
+Increased priority of NDA Roles
+
+Bug Fixes
+Fix changed/removed modifer ig_placated
+Fix spelling of supress
+
+------
+
 Version v1.13.6
 
 Major Changes

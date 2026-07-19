@@ -397,6 +397,8 @@ nda_effect_initial_masons = {
 		set_variable = { name = nda_masonic_rite value = owner.capital.var:nda_lodge_rite } # need to get from country
 
 		add_modifier = { name = nda_mason_modifier }
+		add_character_role = character_role_nda_mason
+
 		debug_log = "Mason Assigned : [THIS.GetCharacter.GetFullNameNoFormatting]"
 
 	}
@@ -905,5 +907,19 @@ nda_effect_convert_to_twilight_rite = {
 		debug_log = "Mason Corrected to Twilight : [THIS.GetCharacter.GetFullNameNoFormatting]"
 
 		# Notify of change?
+	}
+}
+
+# Clear off excessive unused lonely masons
+nda_effect_clean_unwanted_mason = {
+	if = {
+		limit = {
+			is_mason = yes
+			NOT = { has_variable = nda_lodge_master } # don't get rid of lodge master
+			any_character_role = { count=1 } # is only mason
+		}
+
+		kill_character = yes
+
 	}
 }

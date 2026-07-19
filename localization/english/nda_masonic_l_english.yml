@@ -65,6 +65,7 @@ nda_lodge_modifier: "Masonic Lodge"
 nda_mason_pariah_modifier: "Masonic Pariah"
 nda_master_mason_pariah_modifier: "Pariah Master Mason"
 nda_masonic_law_opposition: "Masons Oppose This Law"
+nda_ig_mason_modifier: "Masonic Influence"
 
 # tooltips
 nda_is_mason: "Is a Freemason"

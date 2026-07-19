@@ -161,7 +161,7 @@ nda_base.2 = { # Nameless Cults published
 		set_variable = nda_nameless_cults
 	}
 
-	option = { #"Such writings must be supressed!"
+	option = { #"Such writings must be suppressed!"
 		name = nda_base.2.b
 
 		ai_chance = { # will -ve effect conversion rate
@@ -182,7 +182,7 @@ nda_base.2 = { # Nameless Cults published
 	            months = 36
 	        }
 		}
-		set_variable = nda_nameless_cults_supressed
+		set_variable = nda_nameless_cults_suppressed
 	}
 }
 
@@ -268,7 +268,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 		set_variable = nda_nameless_cults
 	}
 
-	option = { #"Such writings must be supressed!"
+	option = { #"Such writings must be suppressed!"
 		name = nda_base.3.b
 
 		ai_chance = { # will -ve effect conversion rate
@@ -305,7 +305,7 @@ nda_base.3 = { # Imprint of Nameless Cults - as above but for other major countr
 	        }
 		}
 
-		set_variable = nda_nameless_cults_supressed
+		set_variable = nda_nameless_cults_suppressed
 	}
 }
 
@@ -387,7 +387,7 @@ nda_base.5 = { # First Cultist in Country
 		OR = {
 			has_variable = nda_nameless_cults
 			AND = {
-				has_variable = nda_nameless_cults_supressed 		
+				has_variable = nda_nameless_cults_suppressed 		
 				has_global_variable = nda_cultists_in_open	# delay till a country is converted
 			}
 		}
@@ -400,7 +400,7 @@ nda_base.5 = { # First Cultist in Country
 		ordered_interest_group = {
 			limit = { 
 				NOT = { is_interest_group_type = ig_devout } 
-				NOT = { leader = { has_trait = nda_investigator } }
+				NOT = { leader ?= { has_trait = nda_investigator } }
 			}	
 			order_by = nda_leader_cult_potential
 			max = 1

@@ -1,7 +1,7 @@
 ﻿character_role_nda_cultist = {
 	texture = "gfx/interface/icons/character_role_icons/nda_cultist.dds"
-    #type = other       # Archetype for this role, valid archetypes are politician/general/admiral/executive/agitator/ruler/heir/magnate. Roles do not need to have archetypes if they are fully controlled by script.
-    priority = 1            # Used to select the primary title for a character, higher priority gets selected over lower
+    type = other       # Archetype for this role, valid archetypes are politician/general/admiral/executive/agitator/ruler/heir/magnate. Roles do not need to have archetypes if they are fully controlled by script.
+    priority = 5            # Used to select the primary title for a character, higher priority gets selected over lower
 
     #auto_assigned = yes      # If this is set to yes, then all characters of this role's archetype will receive this role when created
    
@@ -21,8 +21,8 @@
 
 character_role_nda_investigator = {
     texture = "gfx/interface/icons/character_role_icons/nda_investigator.dds"
-    #type = other       # Archetype for this role, valid archetypes are politician/general/admiral/executive/agitator/ruler/heir/magnate. Roles do not need to have archetypes if they are fully controlled by script.
-    priority = 1            # Used to select the primary title for a character, higher priority gets selected over lower
+    type = other       # Archetype for this role, valid archetypes are politician/general/admiral/executive/agitator/ruler/heir/magnate. Roles do not need to have archetypes if they are fully controlled by script.
+    priority = 5            # Used to select the primary title for a character, higher priority gets selected over lower
 
     #auto_assigned = yes      # If this is set to yes, then all characters of this role's archetype will receive this role when created
    
@@ -38,8 +38,8 @@ character_role_nda_investigator = {
 
 character_role_nda_mason = {
     texture = "gfx/interface/icons/character_role_icons/nda_masonic.dds"
-    #type = other       # Archetype for this role, valid archetypes are politician/general/admiral/executive/agitator/ruler/heir/magnate. Roles do not need to have archetypes if they are fully controlled by script.
-    priority = 1            # Used to select the primary title for a character, higher priority gets selected over lower
+    type = other       # Archetype for this role, valid archetypes are politician/general/admiral/executive/agitator/ruler/heir/magnate. Roles do not need to have archetypes if they are fully controlled by script.
+    priority = 5            # Used to select the primary title for a character, higher priority gets selected over lower
 
     #auto_assigned = yes      # If this is set to yes, then all characters of this role's archetype will receive this role when created
    

@@ -228,3 +228,17 @@ nda_effect_generate_global_coven_leader_list = {
 		
 	}
 }
+
+# Clear off excessive unused lonely cultists
+nda_effect_clean_unwanted_cultist = {
+	if = {
+		limit = {
+			has_role  = character_role_nda_cultist
+			has_any_cultist_master_trait = no # don't get rid of masters
+			any_character_role = { count=1 } # is only cultist - might need to tweak for if cultist and mason
+		}
+
+		kill_character = yes
+
+	}
+}

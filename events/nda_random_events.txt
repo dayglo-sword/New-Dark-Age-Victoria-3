@@ -87,7 +87,7 @@ nda_random.1 = { # Random Spread of Spiritualism to other major country - do aft
 		if = {
 			limit = { has_law_or_variant = law_type:law_state_religion }
 			add_modifier = {
-				name =  ig_not_placated
+				name =  ig_power_challenged
 				months = 24
 			}
 		}
@@ -191,7 +191,7 @@ nda_random.2 = { # Random Spread of Theosophy to other major country - do after 
 		if = {
 			limit = { has_law_or_variant = law_type:law_state_religion }
 			add_modifier = {
-				name =  ig_not_placated
+				name =  ig_power_challenged
 				months = 24
 			}
 		}

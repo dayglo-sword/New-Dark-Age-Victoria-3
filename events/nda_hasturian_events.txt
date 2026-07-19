@@ -56,7 +56,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 		set_variable = nda_king_in_yellow
 	}
 
-	option = { #"Such writings must be supressed!"
+	option = { #"Such writings must be suppressed!"
 		name = nda_hasturian.2.b
 
 		ai_chance = { # will -ve effect conversion rate
@@ -77,7 +77,7 @@ nda_hasturian.1 = { # The King in Yellow - deja vu 'Nameless Cults'
 	            months = 36
 	        }
 		}
-		#set_variable = nda_king_in_yellow_supressed # no current use
+		#set_variable = nda_king_in_yellow_suppressed # no current use
 	}
 }
 
@@ -151,12 +151,12 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 		set_variable = nda_king_in_yellow
 	}
 
-	option = { #"Such writings must be supressed!"
+	option = { #"Such writings must be suppressed!"
 		name = nda_hasturian.2.b
 
 		ai_chance = { # will -ve effect conversion rate
 			base = 20
-			# If Mi-Go in play need to guarantee Hastur will also be, so don't supress in NY
+			# If Mi-Go in play need to guarantee Hastur will also be, so don't suppress in NY
 			modifier = {
 				trigger = {
 					has_global_variable =  nda_migo_experiment
@@ -182,7 +182,7 @@ nda_hasturian.2 = { # The King In Yellow Spreads - as above but for other major 
 	        }
 		}
 
-		#set_variable = nda_king_in_yellow_supressed # no current use
+		#set_variable = nda_king_in_yellow_suppressed # no current use
 	}
 }
 

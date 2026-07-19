@@ -142,12 +142,12 @@ nda_nephrenka.15 = {
 	}
 
 	option = {
-		name = nda_nephrenka.15.b # supress the cultists - but will fail anyway
+		name = nda_nephrenka.15.b # suppress the cultists - but will fail anyway
 		trigger = {
 			p:x44702D = { state = { owner = ROOT } }
 		}
 
-		set_variable = nda_nameless_cults_supressed 	
+		set_variable = nda_nameless_cults_suppressed 	
 	}
 
 	option = { # Default for non-owner 'news'

@@ -64,7 +64,7 @@ nda_ig_secret_masters_modifier = {
 	interest_group_pol_str_mult = 0.25
 }
 
-nda_ig_cult_supression_modifier = {
+nda_ig_cult_suppression_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	interest_group_approval_add = -5
 	interest_group_pol_str_mult = -0.2
@@ -201,4 +201,11 @@ nda_purge_aftermath_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_authority_mult = -0.25
 	country_legitimacy_base_add = -10
+}
+
+nda_atlantean_support_modifier = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
+	country_tax_income_add = 5000
+	country_minting_add = 10000
+
 }

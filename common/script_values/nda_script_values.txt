@@ -25,47 +25,47 @@ nda_leader_cult_potential =
 {
 	value = 1
 	if = {
-		limit = { leader = { has_trait = cruel } }
+		limit = { leader ?= { has_trait = cruel } }
 		add = 5
 	}		
 	if = {
-		limit = { leader = { has_trait = bigoted } }
+		limit = { leader ?= { has_trait = bigoted } }
 		add = 5
 	}
 	if = {
-		limit = { leader = { has_trait = hedonist } }
+		limit = { leader ?= { has_trait = hedonist } }
 		add = 3
 	}
 	if = {
-		limit = { leader = { has_trait = reckless } }
+		limit = { leader ?= { has_trait = reckless } }
 		add = 2
 	}
 	if = {
-		limit = { leader = { has_trait = expensive_tastes } }
+		limit = { leader ?= { has_trait = expensive_tastes } }
 		add = 2
 	}	
 	if = {
-		limit = { leader = { has_trait = psychological_affliction } }
+		limit = { leader ?= { has_trait = psychological_affliction } }
 		add = 2
 	}	
 	if = {
-		limit = { leader = { has_trait = syphilis } }
+		limit = { leader ?= { has_trait = syphilis } }
 		add = 3
 	}	
 	if = {
-		limit = { leader = { has_trait = cancer } }
+		limit = { leader ?= { has_trait = cancer } }
 		add = 2
 	}	
 	if = {
-		limit = { leader = { has_trait = sickly } }
+		limit = { leader ?= { has_trait = sickly } }
 		add = 2
 	}
 	if = {
-		limit = { leader = { has_trait = brave } }
+		limit = { leader ?= { has_trait = brave } }
 		add = -2
 	}
 	if = {
-		limit = { leader = { has_role = character_role_nda_investigator } } # should never be candidate
+		limit = { leader ?= { has_role = character_role_nda_investigator } } # should never be candidate
 		add = -20
 	}
 }

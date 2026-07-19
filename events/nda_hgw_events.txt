@@ -326,7 +326,12 @@ nda_hgw.25 = { # THE SEA RAIDERS - from same collection of short stories as Abys
 				p:xC900EF = { state = { owner = ROOT } }
 			}
 
-			p:xC900EF = { state = {  add_modifier = { name = nda_sea_creatures_modifier months = 3 } } }
+			p:xC900EF = { 
+				state = {  
+					add_modifier = { name = nda_sea_creatures_modifier months = 3 } 
+			
+				}
+			}
 		}
 
 		p:xC900EF = { state = { owner = { save_scope_as = location_country } } }	

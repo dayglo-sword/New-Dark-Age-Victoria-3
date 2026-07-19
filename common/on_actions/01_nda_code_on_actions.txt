@@ -732,6 +732,10 @@ nda_on_five_year_pulse_character_on_action = {
 			# use same country selection as create
 			nda_effect_kathulos_back_from_exile = yes
 		}
+		else = {
+			nda_effect_clean_unwanted_mason = yes
+			nda_effect_clean_unwanted_cultist = yes
+		}
 	}
 }
 
