@@ -1327,6 +1327,8 @@ nda_base.22 = { # A Cultist converted
 			remove_trait = nda_acolyte
 
 			set_variable = { name = nda_repented }
+
+			remove_character_role = character_role_nda_cultist
 		}
 
 		debug_log = "Inquisition - Cult Traits Removed" 
@@ -1341,6 +1343,13 @@ nda_base.22 = { # A Cultist converted
 		name = nda_base.22.b
 		scope:targeted_ig_leader = {
 				kill_character = yes
+		}
+	}
+
+	option = { #"must quit"
+		name = nda_base.22.c
+		scope:targeted_ig_leader = {
+			set_as_interest_group_leader = no
 		}
 	}
 }

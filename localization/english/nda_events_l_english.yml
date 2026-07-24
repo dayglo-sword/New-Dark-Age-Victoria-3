@@ -96,6 +96,7 @@
  nda_base.22.f: "'I wish to apologise for my daliance with certain secretive organisations. I did not realise the harm that it could do to our country. Please forgive me and allow me to continue my works.'"
  nda_base.22.a: "Glad you saw sense!"
  nda_base.22.b: "No forgiveness!"
+ nda_base.22.b: "You must quit!"
 
  nda_base.23.t: "A Cultist Refuses"
  nda_base.23.d: "[SCOPE.sCharacter('targeted_ig_leader').GetFullName], of the [SCOPE.sCharacter('targeted_ig_leader').GetInterestGroup.GetNameNoIcon], defiantly stands before you."

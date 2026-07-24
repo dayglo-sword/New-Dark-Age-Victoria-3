@@ -571,7 +571,17 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 
 		# 3 possible results at random - gain Investigator trait, join cult, or assasinated		
 		random_list = {
-			40 = { scope:actor = { trigger_event = { id = nda_investigator.1 popup = yes days = 10 } } }
+			40 = { 
+				modifier = {
+					if = {
+						limit = {
+							has_trait = nda_investigator
+						}
+						add = 50
+					}
+				}	
+				scope:actor = { trigger_event = { id = nda_investigator.1 popup = yes days = 10 } }
+			}
 			10 = { 
 				modifier = {
 					if = {
@@ -579,6 +589,12 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 							nda_cult_potential > 0								
 						}
 						add = 10							
+					}
+					if = {
+						limit = {
+							has_trait = nda_investigator # has trait but not role
+						}
+						add = -10
 					}
 				}
 				scope:actor = { trigger_event = { id = nda_investigator.2 popup = yes days = 10 } } 
@@ -593,6 +609,16 @@ set_as_investigator = { # If no investigator exists as IG leader this button 'pr
 
 	ai_chance = {
 		value = 0 # for player only
+
+		# but need to clean up rogue investigators with trait not no role
+		if = {
+			limit = {
+				has_trait = nda_investigator	 
+				NOT = { has_role = character_role_nda_investigator }
+			}
+
+			add = 100
+		}
 	}
 }
 
